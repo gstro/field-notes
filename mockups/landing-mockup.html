@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Long Way Home — Portland → Austin → Philadelphia</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  .mock-tag {
+    position: fixed; top: 10px; right: 10px; z-index: 50;
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); border: 1px solid var(--border);
+    padding: 3px 8px; border-radius: 3px; background: rgba(17,16,9,0.85);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem 2rem;
+    max-width: 1100px; margin: 0 auto;
+    position: relative;
+  }
+  .hero .eyebrow {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--burnt-light); margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    font-weight: 700; line-height: 1.02; margin-bottom: 1.25rem;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero .sub {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    color: var(--muted); letter-spacing: 0.08em; line-height: 2;
+    max-width: 560px;
+  }
+
+  /* ---------- CONSTELLATION MAP ---------- */
+  .map-wrap { margin: 2.5rem 0 1rem; }
+  .constellation { width: 100%; height: auto; display: block; }
+  .route-line {
+    fill: none; stroke-width: 1.5;
+    stroke-dasharray: 2200; stroke-dashoffset: 2200;
+    animation: draw 3.2s ease-out forwards;
+  }
+  .route-west { stroke: var(--gold); animation-delay: 0.4s; }
+  .route-south { stroke: var(--burnt-light); animation-delay: 2.2s; }
+  .route-nola {
+    stroke: var(--gold); stroke-dasharray: 5 5; opacity: 0.55;
+    animation: fadeIn 1s ease-out 3.4s forwards; stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fadeIn { to { opacity: 0.55; } }
+  @media (prefers-reduced-motion: reduce) {
+    .route-line, .route-nola { animation: none; stroke-dashoffset: 0; opacity: 0.55; }
+    .route-west, .route-south { opacity: 1; }
+  }
+  .city-dot { fill: var(--dark3); stroke: var(--gold); stroke-width: 1.5; }
+  .city-dot.anchor { fill: rgba(200,90,0,0.25); stroke: var(--burnt-light); stroke-width: 2; }
+  .city-dot.home { fill: rgba(212,168,67,0.3); stroke: var(--gold); stroke-width: 2.5; }
+  .city-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    fill: var(--muted); letter-spacing: 0.05em;
+  }
+  .city-label.major { fill: var(--cream); font-size: 11px; }
+  .map-legend {
+    display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.75rem;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 18px; height: 2px; display: inline-block; }
+  .sw-gold { background: var(--gold); }
+  .sw-burnt { background: var(--burnt-light); }
+  .sw-dash { background: repeating-linear-gradient(90deg, var(--gold) 0 4px, transparent 4px 8px); opacity: 0.6; }
+
+  /* ---------- STATS STRIP ---------- */
+  .stats {
+    max-width: 1100px; margin: 0 auto; padding: 3rem 2rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1px; background: var(--border);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .stat { background: var(--dark); padding: 1.75rem 1rem; text-align: center; }
+  .stat .n {
+    font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700;
+    color: var(--gold); line-height: 1; display: block;
+  }
+  .stat .l {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9.5px;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+    margin-top: 8px; display: block;
+  }
+  .stat.wry .n { color: var(--burnt-light); }
+
+  /* ---------- CHAPTERS ---------- */
+  .chapters { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--burnt-light);
+    margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+  }
+  .chapter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .chapter {
+    display: block; text-decoration: none;
+    background: var(--dark2); border: 1px solid var(--border); border-radius: 4px;
+    padding: 2rem 1.75rem; transition: border-color 0.2s, transform 0.2s;
+  }
+  .chapter:hover { border-color: rgba(196,160,80,0.45); transform: translateY(-2px); }
+  .chapter .ch-num {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase;
+  }
+  .chapter h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700;
+    margin: 0.5rem 0 0.25rem; color: var(--cream);
+  }
+  .chapter h3 em { font-style: italic; color: var(--gold); }
+  .chapter .ch-sub {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted);
+    letter-spacing: 0.06em; margin-bottom: 1rem;
+  }
+  .chapter p { font-size: 14px; color: var(--cream); opacity: 0.85; }
+  .chapter .ch-cities {
+    margin-top: 1.25rem; font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--muted); line-height: 1.9; letter-spacing: 0.04em;
+  }
+  .chapter.interlude { border-style: dashed; }
+
+  /* ---------- TEASERS ---------- */
+  .teasers { max-width: 1100px; margin: 0 auto; padding: 0 2rem 5rem; }
+  .teaser-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .teaser {
+    background: var(--dark2); border: 1px solid var(--border); border-radius: 4px;
+    padding: 1.5rem; text-decoration: none; display: block;
+    transition: border-color 0.2s;
+  }
+  .teaser:hover { border-color: rgba(196,160,80,0.45); }
+  .teaser .t-title {
+    font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700;
+    color: var(--cream); margin-bottom: 0.4rem;
+  }
+  .teaser p { font-size: 13px; color: var(--muted); }
+
+  footer {
+    max-width: 1100px; margin: 0 auto; padding: 2rem;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--muted); letter-spacing: 0.05em; line-height: 2;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding-top: 3rem; }
+    .city-label { font-size: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<span class="mock-tag">Mockup · Sample Data</span>
+
+<section class="hero">
+  <p class="eyebrow">Oct 2025 — May 2026 · One Arc, Two Migrations</p>
+  <h1>The Long Way <em>Home</em></h1>
+  <p class="sub">
+    Portland → Austin → Philadelphia<br>
+    18 cities · 242 days · ~4,800 miles · 21 state lines<br>
+    The interstate West, a Mardi Gras interlude, and the civil rights corridor
+  </p>
+
+  <div class="map-wrap">
+    <svg class="constellation" viewBox="0 0 1000 600" role="img" aria-label="Route map: Portland to Austin (October 2025), New Orleans spur (February 2026), Austin to Philadelphia (May 2026). Dot size shows nights spent in each city.">
+      <!-- Trip 1: West -->
+      <path class="route-line route-west" d="M 80 81 L 193 133 L 267 210 L 212 336 L 264 412 L 359 366 L 517 355 L 530 429 L 514 497" />
+      <!-- NOLA spur -->
+      <path class="route-nola" d="M 514 497 Q 580 530 646 505 Q 580 470 514 497" />
+      <!-- Trip 2: South -->
+      <path class="route-line route-south" d="M 514 497 L 583 437 L 644 442 L 703 409 L 745 404 L 807 363 L 866 300 L 873 262 L 905 233" />
+
+      <!-- City dots (r ~ 4 + 2*sqrt(nights), Austin capped) -->
+      <circle class="city-dot" cx="80" cy="81" r="5"/>
+      <circle class="city-dot" cx="193" cy="133" r="7.5"/>
+      <circle class="city-dot" cx="267" cy="210" r="7.5"/>
+      <circle class="city-dot" cx="212" cy="336" r="8.5"/>
+      <circle class="city-dot" cx="264" cy="412" r="7.5"/>
+      <circle class="city-dot" cx="359" cy="366" r="7.5"/>
+      <circle class="city-dot" cx="517" cy="355" r="7.5"/>
+      <circle class="city-dot" cx="530" cy="429" r="7.5"/>
+      <circle class="city-dot anchor" cx="514" cy="497" r="20"/>
+      <circle class="city-dot" cx="646" cy="505" r="10.5"/>
+      <circle class="city-dot" cx="583" cy="437" r="7.5"/>
+      <circle class="city-dot" cx="644" cy="442" r="7.5"/>
+      <circle class="city-dot" cx="703" cy="409" r="7.5"/>
+      <circle class="city-dot" cx="745" cy="404" r="8.5"/>
+      <circle class="city-dot" cx="807" cy="363" r="8"/>
+      <circle class="city-dot" cx="866" cy="300" r="7.5"/>
+      <circle class="city-dot" cx="873" cy="262" r="9.5"/>
+      <circle class="city-dot home" cx="905" cy="233" r="11"/>
+
+      <!-- Labels -->
+      <text class="city-label major" x="70" y="65">Portland</text>
+      <text class="city-label" x="205" y="128">Boise</text>
+      <text class="city-label" x="280" y="207">Salt Lake City</text>
+      <text class="city-label" x="130" y="345">Las Vegas</text>
+      <text class="city-label" x="215" y="435">Phoenix</text>
+      <text class="city-label" x="330" y="350">Albuquerque</text>
+      <text class="city-label" x="490" y="338">Okla. City</text>
+      <text class="city-label" x="545" y="435">Dallas</text>
+      <text class="city-label major" x="440" y="512">Austin</text>
+      <text class="city-label" x="640" y="535">New Orleans</text>
+      <text class="city-label" x="520" y="425">Shreveport</text>
+      <text class="city-label" x="620" y="470">Jackson</text>
+      <text class="city-label" x="640" y="392">Birmingham</text>
+      <text class="city-label" x="752" y="425">Atlanta</text>
+      <text class="city-label" x="820" y="360">Charlotte</text>
+      <text class="city-label" x="800" y="290">Richmond</text>
+      <text class="city-label" x="886" y="270">DC</text>
+      <text class="city-label major" x="830" y="215">Philadelphia</text>
+    </svg>
+    <div class="map-legend">
+      <span><i class="swatch sw-gold"></i>Trip 1 · The West (Oct 2025)</span>
+      <span><i class="swatch sw-dash"></i>Mardi Gras spur (Feb 2026)</span>
+      <span><i class="swatch sw-burnt"></i>Trip 2 · The Corridor (May 2026)</span>
+      <span>◉ dot size = nights</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Trip totals">
+  <div class="stat"><span class="n">4,812</span><span class="l">Miles Driven</span></div>
+  <div class="stat"><span class="n">242</span><span class="l">Days</span></div>
+  <div class="stat"><span class="n">18</span><span class="l">Cities</span></div>
+  <div class="stat"><span class="n">61</span><span class="l">Records Bought</span></div>
+  <div class="stat"><span class="n">38 lbs</span><span class="l">Of Books</span></div>
+  <div class="stat wry"><span class="n">243</span><span class="l">CPAP Setups</span></div>
+</section>
+
+<section class="chapters">
+  <p class="section-label">Three Chapters</p>
+  <div class="chapter-grid">
+    <a class="chapter" href="#">
+      <span class="ch-num">Chapter I</span>
+      <h3>The Interstate <em>West</em></h3>
+      <p class="ch-sub">Oct 2 – 26, 2025 · 8 stops · ~2,300 mi</p>
+      <p>Leaving home the long way: high desert, two mountain systems, and the loneliest stretches of the whole arc.</p>
+      <p class="ch-cities">Portland · Boise · Salt Lake City · Las Vegas · Phoenix · Albuquerque · Oklahoma City · Dallas → Austin</p>
+    </a>
+    <a class="chapter interlude" href="#">
+      <span class="ch-num">Interlude</span>
+      <h3>Mardi <em>Gras</em></h3>
+      <p class="ch-sub">Feb 9 – 19, 2026 · New Orleans</p>
+      <p>Eleven days in the one American city that is entirely its own country. A festival, not a stop.</p>
+      <p class="ch-cities">New Orleans</p>
+    </a>
+    <a class="chapter" href="#">
+      <span class="ch-num">Chapter II</span>
+      <h3>The Civil Rights <em>Corridor</em></h3>
+      <p class="ch-sub">May 3 – 31, 2026 · 8 stops · ~1,900 mi</p>
+      <p>Austin to Philadelphia through the geography of the movement: Jackson, Birmingham, Atlanta, and the road between.</p>
+      <p class="ch-cities">Shreveport · Jackson · Birmingham · Atlanta · Charlotte · Richmond · Washington DC → Philadelphia</p>
+    </a>
+  </div>
+</section>
+
+<section class="teasers">
+  <p class="section-label">Deep Dives</p>
+  <div class="teaser-grid">
+    <a class="teaser" href="#"><p class="t-title">The Data</p><p>Prices as a time capsule, spend by city, driving vs. exploring, the full chart gallery.</p></a>
+    <a class="teaser" href="#"><p class="t-title">Superlatives</p><p>Best meal. Worst meal. Biggest letdown. The weirdest thing encountered anywhere.</p></a>
+    <a class="teaser" href="#"><p class="t-title">Instinct vs. Curation</p><p>Trip 2 had guides. Trip 1 didn't. What percentage of the recommendations did I hit anyway?</p></a>
+    <a class="teaser" href="#"><p class="t-title">Serial Photography</p><p>The same seven subjects, photographed in every city: marquees, front pages, the view from bed.</p></a>
+  </div>
+</section>
+
+<footer>
+  Built in Philadelphia · Data reconstructed &amp; logged Oct 2025 – Jun 2026 · SvelteKit / Vercel / ImageKit<br>
+  Colophon → methodology, sources, and everything I wish I'd captured
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "trips": [
+    {
+      "id": "west",
+      "title": "Portland → Austin",
+      "subtitle": "The Interstate West",
+      "dates": { "start": "2025-10-02", "end": "2025-10-26" },
+      "type": "relocation",
+      "cityIds": ["portland-or", "boise-id", "salt-lake-city-ut", "las-vegas-nv", "phoenix-az", "albuquerque-nm", "oklahoma-city-ok", "dallas-tx", "austin-tx"]
+    },
+    {
+      "id": "nola",
+      "title": "New Orleans",
+      "subtitle": "Mardi Gras Interlude",
+      "dates": { "start": "2026-02-09", "end": "2026-02-19" },
+      "type": "interlude",
+      "cityIds": ["new-orleans-la"]
+    },
+    {
+      "id": "south",
+      "title": "Austin → Philadelphia",
+      "subtitle": "The Civil Rights Corridor",
+      "dates": { "start": "2026-05-03", "end": "2026-05-31" },
+      "type": "relocation",
+      "cityIds": ["shreveport-la", "jackson-ms", "birmingham-al", "atlanta-ga", "charlotte-nc", "richmond-va", "washington-dc", "philadelphia-pa"]
+    }
+  ]
+}

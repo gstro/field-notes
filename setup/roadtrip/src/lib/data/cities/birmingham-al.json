@@ -1,0 +1,410 @@
+{
+  "id": "birmingham-al",
+  "name": "Birmingham",
+  "state": "AL",
+  "tripId": "south",
+  "stay": {
+    "arrive": "2026-05-09",
+    "depart": "2026-05-12",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 33.5186,
+    "lng": -86.8104
+  },
+  "elevationFt": 644,
+  "population": {
+    "cityProper": 197000,
+    "metro": 1100000
+  },
+  "vibeWord": "SAMPLE-VIBE",
+  "tagline": "SAMPLE — one-sentence characterization goes here.",
+  "wouldILiveHere": {
+    "verdict": "Sample verdict",
+    "note": "SAMPLE — two to three sentences of honest reflection."
+  },
+  "fingerprint": {
+    "food": 4,
+    "musicScene": 3,
+    "weirdness": 3,
+    "politicalEnergy": 5,
+    "cost": 4,
+    "interestCoverage": 4
+  },
+  "recommendations": [
+    {
+      "name": "Sample Bookstore (radical/infoshop)",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "$20-40",
+      "bestTimeOfDay": "afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Bookstore 2",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "timeout",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "planned-skipped",
+      "interestTags": [],
+      "estCost": "$0-20",
+      "bestTimeOfDay": "morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Record Store",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "$20-50",
+      "bestTimeOfDay": "afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Coffee Shop",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "eater",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "$5-10",
+      "bestTimeOfDay": "morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "eater",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "closed-on-arrival",
+      "interestTags": [],
+      "estCost": "$10",
+      "bestTimeOfDay": "morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "SAMPLE — demonstrates the closure ledger",
+      "verifiedOpen": false
+    },
+    {
+      "name": "Sample Regional Dish @ Sample Spot",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "$15-25",
+      "bestTimeOfDay": "lunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Mailable Gift Source",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "planned-skipped",
+      "interestTags": [],
+      "estCost": "$15-30",
+      "bestTimeOfDay": "any",
+      "durationMin": 20,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sloss Furnaces",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "dusk",
+      "durationMin": 90,
+      "rating": null,
+      "note": "SAMPLE ENTRY — the citable-source shape",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Civil Rights Site",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": null,
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "$15",
+      "bestTimeOfDay": "morning",
+      "durationMin": 120,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Must-See Popular Site",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "timeout",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "$10",
+      "bestTimeOfDay": "afternoon",
+      "durationMin": 90,
+      "rating": null,
+      "note": "SAMPLE — well-known pick per the balance rule",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Natural Attraction",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "planned-skipped",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "morning",
+      "durationMin": 180,
+      "rating": null,
+      "note": "SAMPLE — natural attraction per the balance rule",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample DIY Venue",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "local-tip",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "off-guide-discovery",
+      "interestTags": [],
+      "estCost": "$10 cover",
+      "bestTimeOfDay": "night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "SAMPLE — found via local tip, cited as such",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Souvenir Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "planned-skipped",
+      "interestTags": [],
+      "estCost": "$5-15",
+      "bestTimeOfDay": "any",
+      "durationMin": 20,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    },
+    {
+      "name": "Sample Makerspace",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": null,
+            "url": null
+          }
+        ]
+      },
+      "status": "planned-skipped",
+      "interestTags": [],
+      "estCost": "Free tour",
+      "bestTimeOfDay": "afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "SAMPLE",
+      "verifiedOpen": true
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Sample Film A",
+        "year": 1999,
+        "locationVisited": true,
+        "visitNote": "SAMPLE — filming location visit note.",
+        "photoId": null
+      },
+      {
+        "title": "Sample Film B",
+        "year": 2015,
+        "locationVisited": false,
+        "visitNote": "",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Sample Person",
+        "relevance": "punk",
+        "note": "SAMPLE relevance note"
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "Sample dish",
+      "where": "Sample restaurant",
+      "note": "SAMPLE note"
+    },
+    "coffee": {
+      "what": "Sample order",
+      "where": "Sample shop"
+    },
+    "site": {
+      "what": "Sample site",
+      "note": "SAMPLE note"
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": 3.75,
+    "eggsDozenUsd": 4.29,
+    "parkingEase": 4,
+    "tapWater": 3,
+    "strangerFriendliness": 5,
+    "bartenderAskedWhereFrom": true,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  },
+  "spend": null
+}

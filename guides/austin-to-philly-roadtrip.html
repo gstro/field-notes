@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austin → Philadelphia — Driving Companion</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #0E0D09;
+    --dark2: #181610;
+    --dark3: #201E14;
+    --muted: #7A7464;
+    --border: rgba(196,160,80,0.13);
+    --border-strong: rgba(196,160,80,0.28);
+
+    /* city spine colors */
+    --austin:     #E8722A;
+    --shreveport: #60C8D0;
+    --jackson:    #B07AE8;
+    --birmingham: #E87070;
+    --atlanta:    #5DBF82;
+    --charlotte:  #E07898;
+    --richmond:   #D4A843;
+    --dc:         #5AAFE0;
+
+    /* category tag colors */
+    --tag-cr:      #E87070; /* civil rights */
+    --tag-music:   #B07AE8; /* blues / music */
+    --tag-nature:  #5DBF82; /* natural */
+    --tag-history: #D4A843; /* historic */
+    --tag-food:    #E8722A; /* food / drink */
+    --tag-film:    #5AAFE0; /* film */
+    --tag-atlas:   #60C8D0; /* atlas obscura */
+    --tag-detour:  #D4A843; /* detour flag */
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.72;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ──────────────────────────────────────────── */
+  .site-header {
+    max-width: 920px; margin: 0 auto;
+    padding: 3.5rem 2rem 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--burnt-light);
+    margin-bottom: 0.85rem;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700; line-height: 1.08;
+    color: var(--cream); margin-bottom: 0.9rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px; color: var(--muted);
+    letter-spacing: 0.08em; line-height: 2.1;
+  }
+
+  /* ── ROUTE RIBBON ────────────────────────────────────── */
+  .ribbon {
+    max-width: 920px; margin: 0 auto;
+    padding: 1.1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; flex-wrap: wrap;
+    gap: 0.3rem 0;
+    align-items: center;
+  }
+  .ribbon-city {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 2px;
+    white-space: nowrap;
+  }
+  .ribbon-arrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; color: var(--muted);
+    padding: 0 3px;
+  }
+
+  /* ── LEGEND ──────────────────────────────────────────── */
+  .legend {
+    max-width: 920px; margin: 0 auto;
+    padding: 1.1rem 2rem 1.4rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; flex-wrap: wrap; gap: 0.45rem 1.2rem;
+  }
+  .legend-label {
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+  .ltag {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 1px 7px; border-radius: 2px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px; font-weight: 500;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ── MAIN ────────────────────────────────────────────── */
+  .main { max-width: 920px; margin: 0 auto; padding: 0 2rem 5rem; }
+
+  /* ── CITY ANCHOR ─────────────────────────────────────── */
+  .city-anchor {
+    margin-top: 3rem;
+    padding: 0.9rem 1.25rem 0.9rem 1.4rem;
+    border-left: 3px solid;
+    background: var(--dark2);
+    border-radius: 0 4px 4px 0;
+    display: flex; align-items: baseline;
+    justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .city-anchor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+    font-weight: 700; color: var(--cream);
+  }
+  .city-anchor-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; color: var(--muted);
+    letter-spacing: 0.09em; line-height: 1.8;
+    text-align: right;
+  }
+  .city-anchor-note {
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; color: var(--muted);
+    letter-spacing: 0.04em; line-height: 1.75;
+    font-style: italic; margin-top: 0.25rem;
+  }
+
+  /* ── DRIVE SEGMENT ───────────────────────────────────── */
+  .drive-segment {
+    margin-top: 1.5rem;
+    border-left: 2px dashed rgba(120,112,100,0.28);
+    padding-left: 1.25rem;
+  }
+  .drive-header {
+    display: flex; align-items: center;
+    gap: 0.75rem; flex-wrap: wrap;
+    margin-bottom: 0.6rem;
+  }
+  .drive-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; letter-spacing: 0.1em;
+    color: var(--muted); white-space: nowrap;
+  }
+  .drive-stats {
+    display: flex; gap: 0.75rem; flex-wrap: wrap;
+  }
+  .drive-stat {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; letter-spacing: 0.06em;
+    color: rgba(245,237,216,0.5);
+  }
+  .drive-route {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; color: rgba(122,116,100,0.7);
+    letter-spacing: 0.04em; line-height: 1.7;
+    margin-bottom: 1rem; font-style: italic;
+  }
+
+  /* ── STOP CARDS ──────────────────────────────────────── */
+  .stops { display: flex; flex-direction: column; gap: 8px; }
+
+  .stop-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px; overflow: hidden;
+    transition: border-color 0.18s;
+  }
+  .stop-card:hover { border-color: var(--border-strong); }
+  .stop-card.is-detour { border-left: 3px solid rgba(212,168,67,0.45); }
+  .stop-card.is-cr     { border-left: 3px solid rgba(232,112,112,0.45); }
+
+  .stop-top {
+    padding: 0.85rem 1.2rem 0;
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .stop-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.02rem; font-weight: 700;
+    color: var(--cream); line-height: 1.2;
+    flex: 1; min-width: 180px;
+  }
+  .stop-tags {
+    display: flex; flex-wrap: wrap; gap: 4px;
+    margin-top: 4px;
+  }
+  .tag {
+    display: inline-flex; align-items: center;
+    padding: 1px 6px; border-radius: 2px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8px; font-weight: 500;
+    letter-spacing: 0.07em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .t-cr      { color: var(--tag-cr);      background: rgba(232,112,112,0.10); border: 1px solid rgba(232,112,112,0.28); }
+  .t-music   { color: var(--tag-music);   background: rgba(176,122,232,0.10); border: 1px solid rgba(176,122,232,0.28); }
+  .t-nature  { color: var(--tag-nature);  background: rgba(93,191,130,0.10);  border: 1px solid rgba(93,191,130,0.28); }
+  .t-history { color: var(--tag-history); background: rgba(212,168,67,0.10);  border: 1px solid rgba(212,168,67,0.28); }
+  .t-food    { color: var(--tag-food);    background: rgba(232,114,42,0.10);  border: 1px solid rgba(232,114,42,0.28); }
+  .t-film    { color: var(--tag-film);    background: rgba(90,175,224,0.10);  border: 1px solid rgba(90,175,224,0.28); }
+  .t-atlas   { color: var(--tag-atlas);   background: rgba(96,200,208,0.10);  border: 1px solid rgba(96,200,208,0.28); }
+  .t-detour  { color: var(--tag-detour);  background: rgba(212,168,67,0.08);  border: 1px solid rgba(212,168,67,0.25); }
+
+  .stop-body { padding: 0.55rem 1.2rem 0.95rem; }
+  .stop-text {
+    font-size: 13px; line-height: 1.7;
+    color: rgba(245,237,216,0.8); margin-bottom: 0.65rem;
+  }
+  .stop-text strong { color: var(--cream); font-weight: 500; }
+  .stop-text em { font-style: italic; color: rgba(245,237,216,0.65); }
+
+  .stop-practical {
+    display: flex; flex-wrap: wrap;
+    gap: 0.3rem 1.1rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--border);
+  }
+  .pr {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px; letter-spacing: 0.04em;
+    display: flex; gap: 4px;
+  }
+  .pr-l { color: var(--muted); text-transform: uppercase; }
+  .pr-v { color: rgba(245,237,216,0.72); }
+
+  .detour-note {
+    margin-top: 0.55rem;
+    padding: 0.4rem 0.7rem;
+    background: rgba(212,168,67,0.07);
+    border-left: 2px solid rgba(212,168,67,0.35);
+    border-radius: 0 2px 2px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; color: rgba(245,237,216,0.5);
+    letter-spacing: 0.04em; line-height: 1.65;
+  }
+  .cr-note {
+    margin-top: 0.55rem;
+    padding: 0.4rem 0.7rem;
+    background: rgba(232,112,112,0.06);
+    border-left: 2px solid rgba(232,112,112,0.35);
+    border-radius: 0 2px 2px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; color: rgba(245,237,216,0.5);
+    letter-spacing: 0.04em; line-height: 1.65;
+  }
+
+  .no-stops {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; color: rgba(122,116,100,0.55);
+    letter-spacing: 0.05em; padding: 0.25rem 0 0.75rem;
+    font-style: italic;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────────── */
+  footer {
+    max-width: 920px; margin: 2rem auto 0;
+    padding: 1.5rem 2rem 4rem;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; color: var(--muted);
+    letter-spacing: 0.05em; line-height: 2.2;
+  }
+
+  @media (max-width: 560px) {
+    .stop-top { flex-direction: column; }
+    .city-anchor-meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Complete Driving Companion · All Stops, All Legs</p>
+  <h1>Austin <em>→</em> Philadelphia</h1>
+  <p class="subtitle">
+    Between-Cities Route · Civil Rights Corridor · Hidden Gems · Natural Stops<br>
+    ~2,100 miles · 7 cities · May 3–30, 2026
+  </p>
+</header>
+
+<div class="ribbon" id="ribbon"></div>
+
+<div class="legend">
+  <p class="legend-label">Stop Categories</p>
+  <span class="ltag" style="color:#E87070;background:rgba(232,112,112,0.10);border:1px solid rgba(232,112,112,0.28)">Civil Rights</span>
+  <span class="ltag" style="color:#B07AE8;background:rgba(176,122,232,0.10);border:1px solid rgba(176,122,232,0.28)">Blues / Music</span>
+  <span class="ltag" style="color:#5DBF82;background:rgba(93,191,130,0.10);border:1px solid rgba(93,191,130,0.28)">Nature / Scenic</span>
+  <span class="ltag" style="color:#D4A843;background:rgba(212,168,67,0.10);border:1px solid rgba(212,168,67,0.28)">Historic</span>
+  <span class="ltag" style="color:#E8722A;background:rgba(232,114,42,0.10);border:1px solid rgba(232,114,42,0.28)">Food / Drink</span>
+  <span class="ltag" style="color:#5AAFE0;background:rgba(90,175,224,0.10);border:1px solid rgba(90,175,224,0.28)">Film</span>
+  <span class="ltag" style="color:#60C8D0;background:rgba(96,200,208,0.10);border:1px solid rgba(96,200,208,0.28)">Atlas Obscura</span>
+  <span class="ltag" style="color:#D4A843;background:rgba(212,168,67,0.08);border:1px solid rgba(212,168,67,0.25)">↗ Detour</span>
+</div>
+
+<main class="main" id="route"></main>
+
+<footer>
+  Austin → Philadelphia Driving Companion · May 2026<br>
+  Cross-reference: civil-rights-corridor.html (era-based thematic guide) · individual city guides<br>
+  US Civil Rights Trail: civilrightstrail.com · Atlas Obscura: atlasobscura.com
+</footer>
+
+<script>
+// ── CITY CONFIG ───────────────────────────────────────────────────
+const CITIES = [
+  { key:"austin",     label:"Austin",     color:"#E8722A" },
+  { key:"shreveport", label:"Shreveport", color:"#60C8D0" },
+  { key:"jackson",    label:"Jackson",    color:"#B07AE8" },
+  { key:"birmingham", label:"Birmingham", color:"#E87070" },
+  { key:"atlanta",    label:"Atlanta",    color:"#5DBF82" },
+  { key:"charlotte",  label:"Charlotte",  color:"#E07898" },
+  { key:"richmond",   label:"Richmond",   color:"#D4A843" },
+  { key:"dc",         label:"DC",         color:"#5AAFE0" },
+];
+
+// ── TAGS SHORTHAND ────────────────────────────────────────────────
+const T = {
+  cr:      '<span class="tag t-cr">Civil Rights</span>',
+  music:   '<span class="tag t-music">Blues / Music</span>',
+  nature:  '<span class="tag t-nature">Nature</span>',
+  scenic:  '<span class="tag t-nature">Scenic</span>',
+  history: '<span class="tag t-history">Historic</span>',
+  food:    '<span class="tag t-food">Food / Drink</span>',
+  film:    '<span class="tag t-film">Film</span>',
+  atlas:   '<span class="tag t-atlas">Atlas Obscura</span>',
+  detour:  '<span class="tag t-detour">↗ Detour</span>',
+  cwild:   '<span class="tag t-nature">Civil War</span>',
+  rev:     '<span class="tag t-history">Revolution</span>',
+};
+
+// ── ROUTE DATA ────────────────────────────────────────────────────
+const route = [
+
+  // ══════════════════════════════════════════════════════════════
+  // AUSTIN
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"austin", label:"Austin, TX",
+    dates:"Departure city",
+    guide:"austin-itinerary.html · austin-work-itinerary.html",
+    note:"Full 32-day Austin guides cover everything in the city. One civil rights site merits a flag here before departing.",
+    stops:[
+      {
+        name:"LBJ Presidential Library",
+        tags:[T.cr, T.history],
+        isCR:true,
+        text:"<strong>Civil Rights Act (1964) and Voting Rights Act (1965)</strong> — the legislative culmination of the movement, signed by a Texas politician who calculated the cost precisely. The library is unusually honest about both the achievement and the compromises. The phone call recordings in the reading room are primary documents of how power actually moves. The Voting Rights Act he signed was gutted by <em>Shelby County v. Holder</em> in 2013. Cross-reference: <em>civil-rights-corridor.html</em>",
+        cost:"Free", hours:"Daily 9am–5pm", duration:"1.5–2 hrs",
+        address:"2313 Red River St, Austin TX 78705",
+        detour:false, detourNote:"",
+        crNote:"Last civil rights site before entering the movement's core geography. Everything that follows is downstream of this legislation."
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // DRIVE: AUSTIN → SHREVEPORT
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"drive",
+    from:"Austin", to:"Shreveport",
+    distance:"~320 mi", time:"~5 hrs",
+    route:"US-290 E to Bastrop · TX-21 E through piney woods · US-79 E to Marshall · US-59 N to Shreveport",
+    stops:[
+      {
+        name:"Caddo Lake State Park",
+        tags:[T.nature, T.atlas, T.music],
+        isCR:false,
+        text:"The only naturally formed lake in Texas — an ancient bald cypress swamp draped in Spanish moss, surface opaque and black-green, alligators visible from canoe trails. It is the landscape that shaped <strong>Lead Belly's</strong> musical imagination: he grew up near Mooringsport on the far bank. Paddle the cypress corridors through morning mist. Captain Ron tours offer guided history alongside the paddling. Arrive by 9am to get on the water before afternoon heat.",
+        cost:"$7 park entry + canoe rental ~$15/hr", hours:"Daily sunrise–sunset", duration:"2–3 hrs",
+        address:"Caddo Lake State Park, Karnack TX 75661 · ~3 hrs from Austin, ~1 hr from Shreveport",
+        detour:false, detourNote:"",
+        crNote:""
+      },
+      {
+        name:"Nacogdoches — The Oldest Town in Texas",
+        tags:[T.history],
+        isCR:false,
+        text:"A 300-year-old city equidistant between Dallas, Houston, and Shreveport, nestled between three national forests. The <strong>Stone Fort Museum</strong> on the SFA campus is a 1936 replica of an 18th-century Spanish colonial structure — free, 45 minutes, odd and interesting. <strong>Oak Grove Cemetery</strong> holds signers of the Texas Declaration of Independence. A reasonable coffee and stretch stop if you're ahead of schedule; not essential if you're not.",
+        cost:"Stone Fort Museum free; cemetery free", hours:"Stone Fort: Tue–Sat 9am–5pm", duration:"30–45 min",
+        address:"Stone Fort Museum, SFA Campus, Nacogdoches TX 75962",
+        detour:false, detourNote:"",
+        crNote:""
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // SHREVEPORT
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"shreveport", label:"Shreveport, LA",
+    dates:"May 3–5",
+    guide:"shreveport.html",
+    note:"Lead Belly's country. The Louisiana Hayride launched Elvis, Hank Williams, and Johnny Cash — all downstream of the Black musical tradition Shreveport absorbed and transmitted. Full city guide covers the Municipal Auditorium, Orlandeaux's Café, the Touchstone taxidermy museum."
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // DRIVE: SHREVEPORT → JACKSON
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"drive",
+    from:"Shreveport", to:"Jackson",
+    distance:"~190 mi", time:"~3 hrs",
+    route:"I-20 E through western Louisiana into Mississippi · Vicksburg is the dominant stop, ~1 hr east of the Louisiana border · Windsor Ruins requires a 30-min south detour via US-61 near Port Gibson",
+    stops:[
+      {
+        name:"Vicksburg National Military Park + USS Cairo",
+        tags:[T.cwild, T.history, T.music],
+        isCR:false,
+        text:"The 47-day Union siege of Vicksburg (1863) split the Confederacy and gave the Union control of the Mississippi River — the western theater's decisive campaign. The ironclad <strong>USS Cairo</strong>, sunk by a Confederate torpedo in 1862 and raised from the river a century later, is displayed with 36,000 artifacts still aboard: an eerie, perfectly preserved time capsule of 1862 military life. Walk the earthworks and cannon positions on the self-guided drive. On Levee Street afterward, the <strong>Riverfront Murals</strong> — painted directly on the Mississippi River flood wall by artist Robert Dafford — give Vicksburg's history from the ground up. The Blues Highway (Hwy 61) runs through town.",
+        cost:"$20/car (NPS) or free with America the Beautiful pass", hours:"Daily 8am–5pm", duration:"2–3 hrs",
+        address:"3201 Clay St, Vicksburg MS 39183",
+        detour:false, detourNote:"",
+        crNote:""
+      },
+      {
+        name:"Biedenharn Coca-Cola Museum",
+        tags:[T.history, T.atlas],
+        isCR:false,
+        text:"The original Coca-Cola bottling operation — the first in the world — was run by Joseph Biedenharn in Vicksburg in 1894. The candy store and bottling equipment are preserved intact in the building where it happened. Slight kitsch, genuine history, $5, 20 minutes.",
+        cost:"$5", hours:"Mon–Sat 9am–5pm, Sun 1:30–4:30pm", duration:"20 min",
+        address:"1107 Washington St, Vicksburg MS 39180",
+        detour:false, detourNote:"",
+        crNote:""
+      },
+      {
+        name:"Windsor Ruins",
+        tags:[T.history, T.atlas, T.film],
+        isCR:false,
+        text:"Twenty-three Corinthian columns standing alone in a pasture — the remains of an 1861 Greek Revival plantation mansion that burned in 1890, no building left, no interpretive center, no explanation offered. Just columns. The absence is the statement. One of the most charged and gothic landscapes in the American South. Mark Twain wrote about seeing Windsor intact from a steamboat in <em>Life on the Mississippi</em> (1883). The ruins appeared in the 1994 film <em>Naturally Native</em> and have been used in multiple productions since. Come in early morning for low light and mist off the fields.",
+        cost:"Free, open access", hours:"Daily dawn–dusk", duration:"30–45 min",
+        address:"Windsor Ruins Rd, Port Gibson MS 39150",
+        detour:true, detourNote:"Detour: Exit I-20 at Vicksburg, take US-61 S approx. 30 min (23 miles) to Port Gibson. Add ~1 hr round trip. Strongly worth it — combine with the Vicksburg stop and plan the whole segment as 3–4 hrs total.",
+        crNote:""
+      },
+      {
+        name:"Mississippi Petrified Forest",
+        tags:[T.nature, T.atlas],
+        isCR:false,
+        text:"36-million-year-old logs embedded in a shaded nature trail — ancient trees turned entirely to stone, colors running from white to red. An Atlas Obscura listing that earns the designation. Brief, genuinely strange, worth the brief detour if the timing works between Vicksburg and Jackson.",
+        cost:"$7", hours:"Daily 9am–5pm (seasonal — call ahead)", duration:"45 min",
+        address:"124 Forest Park Rd, Flora MS 39071",
+        detour:true, detourNote:"Detour: ~20 min north of I-20 via US-49 N from Flora exit. Add ~45 min total.",
+        crNote:""
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // JACKSON
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"jackson", label:"Jackson, MS",
+    dates:"May 6–8",
+    guide:"jackson.html",
+    note:"The most concentrated civil rights geography on the route. Three days: Mississippi Civil Rights Museum, Medgar Evers Home, Big Apple Inn, Farish Street, Smith Robertson Museum, Eudora Welty House, Bully's Soul Food. Full guide covers all of it."
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // DRIVE: JACKSON → BIRMINGHAM
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"drive",
+    from:"Jackson", to:"Birmingham",
+    distance:"~240 mi", time:"~3.5 hrs",
+    route:"I-20 E across Mississippi into Alabama · Meridian is the one viable stop, roughly the midpoint · otherwise a straightforward run east",
+    stops:[
+      {
+        name:"Jimmie Rodgers Museum, Meridian, MS",
+        tags:[T.music, T.history],
+        isCR:false,
+        text:"<strong>Jimmie Rodgers</strong> was born in Meridian in 1897 and died of tuberculosis at 35, leaving a catalog that rewired American music. He learned the 12-bar blues form from Black railroad workers at Meridian's rail yards and recorded it for a white audience — a direct transmission across the color line that influenced Hank Williams, Elvis Presley, Bob Dylan, and Merle Haggard in documented, direct ways. The museum holds an original Rodgers guitar and period memorabilia. His legacy as a missing link between Delta blues and Nashville is underappreciated. Open Thursday–Saturday only — verify before counting on this stop.",
+        cost:"~$5", hours:"Thu–Sat only (limited hours — call to confirm: 601-485-1808)", duration:"45 min",
+        address:"1725 Jimmie Rodgers Dr, Meridian MS 39307",
+        detour:false, detourNote:"",
+        crNote:""
+      },
+      {
+        name:"Weidmann's Restaurant, Meridian",
+        tags:[T.food, T.history],
+        isCR:false,
+        text:"Established 1870 — reportedly the oldest continuously operating restaurant in Mississippi. Walls covered in photographs going back to the 1930s, booths worn in by a century of diners. The black-eyed pea soup and cornbread are the correct order. A useful lunch stop paired with the Rodgers Museum.",
+        cost:"$12–18", hours:"Mon–Sat 11am–9pm", duration:"45 min",
+        address:"208 22nd Ave, Meridian MS 39301",
+        detour:false, detourNote:"",
+        crNote:""
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // BIRMINGHAM
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"birmingham", label:"Birmingham, AL",
+    dates:"May 9–11",
+    guide:"birmingham.html",
+    note:"16th Street Baptist Church, Kelly Ingram Park, Birmingham Civil Rights Institute. Sloss Furnaces — site of Furnace Fest hardcore punk festival. Joe Minter's African Village in America. Angela Davis born here. Sun Ra born here. Full guide covers all of it."
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // DRIVE: BIRMINGHAM → ATLANTA
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"drive",
+    from:"Birmingham", to:"Atlanta",
+    distance:"~150 mi", time:"~2 hrs",
+    route:"I-20 E through Alabama into Georgia · one significant civil rights stop near Anniston · the drive is otherwise short enough to do straight through",
+    stops:[
+      {
+        name:"Anniston Freedom Rider Bus Firebombing Site",
+        tags:[T.cr, T.history],
+        isCR:true,
+        text:"On Mother's Day, May 14, 1961, approximately 200 KKK members — tipped off by an Alabama state police informant — attacked a Greyhound bus carrying Freedom Riders on US-431 outside Anniston. They slashed the tires, followed the bus six miles until it stopped, surrounded it, and threw an incendiary device inside. When the Freedom Riders escaped the burning bus, they were beaten with clubs and iron pipes in the road. Local hospitals initially refused treatment. The photographs — bus in flames, people being beaten in the road — were published worldwide and became definitive images of the movement's dangers. A historical marker stands at the site. <strong>The road you're on is the road the bus was driven down.</strong> Cross-reference: <em>civil-rights-corridor.html</em>",
+        cost:"Free (roadside marker)", hours:"Always accessible", duration:"15 min",
+        address:"US-431 approx. 6 miles S of Anniston AL, near Bynum",
+        detour:true, detourNote:"Detour: Exit I-20 at Anniston/US-431 (Exit 185), head south ~6 miles. Add ~25 min total. The FBI had prior warning of the planned attack and did not intervene.",
+        crNote:"The state police informant who tipped off the KKK traveled on the bus. He stepped off minutes before the attack."
+      },
+      {
+        name:"Talladega National Forest — Scenic Byway",
+        tags:[T.nature, T.scenic],
+        isCR:false,
+        text:"The Talladega National Forest Scenic Byway runs through the Talladega Mountains — the southernmost extension of the Appalachians. If you're ahead of schedule and want to break the Birmingham-Atlanta run, this is a genuine landscape change from the flatlands. Exit I-20 at Talladega, pick up AL-77 north into the forest. Not a must; the Birmingham-Atlanta leg is short enough to drive straight.",
+        cost:"Free", hours:"Always", duration:"1 hr scenic drive add-on",
+        address:"Talladega National Forest, AL — access via AL-77 N from Talladega",
+        detour:true, detourNote:"Detour: 15 min off I-20. Optional — only if you want to break the short drive.",
+        crNote:""
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // ATLANTA
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"atlanta", label:"Atlanta, GA",
+    dates:"May 12–16",
+    guide:"atlanta.html",
+    note:"MLK National Historic Site and Sweet Auburn. Little Five Points: Wax n' Facts, Criminal Records, Charis Books. Baby Driver filming locations. Oakland Cemetery — Margaret Mitchell, Walking Dead filming. Full guide covers all of it."
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // DRIVE: ATLANTA → CHARLOTTE
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"drive",
+    from:"Atlanta", to:"Charlotte",
+    distance:"~270 mi", time:"~4 hrs",
+    route:"I-85 N through South Carolina · optional scenic variant: SC-11 (Cherokee Foothills Scenic Highway) parallels I-85 along the Blue Ridge foothills and adds ~45 min but repays it",
+    stops:[
+      {
+        name:"Greenville, SC — Downtown & Falls Park on the Reedy",
+        tags:[T.nature, T.food, T.scenic],
+        isCR:false,
+        text:"The strongest mid-drive stop on the Atlanta–Charlotte leg. A genuine waterfall sits in the middle of a walkable downtown — <strong>Falls Park on the Reedy</strong> has a pedestrian suspension bridge over the gorge. The food scene is the best of any mid-drive city on the route: Soby's, Chicora Alley, Passerelle Bistro. Plan 60–90 minutes for lunch and a walk. Greenville has become one of the most successfully revitalized mid-sized Southern cities in the country without losing all its texture.",
+        cost:"Park free; lunch $15–25", hours:"Park always accessible", duration:"1–1.5 hrs",
+        address:"Falls Park on the Reedy, 601 S Main St, Greenville SC 29601",
+        detour:false, detourNote:"",
+        crNote:""
+      },
+      {
+        name:"Cowpens National Battlefield",
+        tags:[T.history, T.rev],
+        isCR:false,
+        text:"January 17, 1781. American Patriots routed a British force here in 45 minutes — a double envelopment maneuver still taught at West Point. Tactically it was one of the most brilliant American victories of the Revolutionary War; strategically it began the chain of events that led to Yorktown and British surrender eight months later. The battle receives a fraction of the historical attention of Gettysburg despite its strategic importance. Free, self-guided, 1.5-mile loop with downloadable audio tour.",
+        cost:"Free (NPS)", hours:"Daily 9am–5pm", duration:"45 min",
+        address:"4001 Chesnee Hwy, Gaffney SC 29341",
+        detour:true, detourNote:"Detour: 3 miles off I-85 at Exit 92 near Gaffney. Adds ~30 min total.",
+        crNote:""
+      },
+      {
+        name:"The Peachoid, Gaffney, SC",
+        tags:[T.atlas, T.film],
+        isCR:false,
+        text:"A 135-foot water tower shaped and painted to resemble a peach — specifically and unavoidably shaped like an enormous rear end. Built 1981. Visible from I-85. Featured prominently in <em>House of Cards</em> (2013). Pull off at Millwood Park on Floyd Baker Blvd to see it up close. Two minutes from the highway, zero regrets.",
+        cost:"Free", hours:"Always", duration:"10 min",
+        address:"Millwood Park, Floyd Baker Blvd, Gaffney SC 29341 · visible from I-85 NB",
+        detour:true, detourNote:"Detour: 2 min off I-85 at Exit 92. Mandatory.",
+        crNote:""
+      },
+      {
+        name:"SC-11 / Cherokee Foothills Scenic Highway",
+        tags:[T.nature, T.scenic],
+        isCR:false,
+        text:"An alternative to I-85 that runs along the Blue Ridge foothills from just north of the Georgia border up to Greenville — rolling terrain, farmland, apple orchards, the occasional vineyard. Passes near Table Rock State Park and Caesars Head State Park if you want a proper stop. Adds approximately 45 minutes to the drive but constitutes a genuine landscape shift from the interstate.",
+        cost:"Free", hours:"Always", duration:"~45 min add-on to drive",
+        address:"SC-11 begins near Gaffney SC, parallels I-85 to Greenville",
+        detour:true, detourNote:"Alternate route — not a detour off the path but a slower parallel road. Use instead of I-85 if you have the time.",
+        crNote:""
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // CHARLOTTE
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"charlotte", label:"Charlotte, NC",
+    dates:"May 17–20",
+    guide:"charlotte.html",
+    note:"NoDa arts district. Salud Cerveceria. Brooks' Sandwich House (Best Burger in NC since 1973). Evening Muse. Levine Museum of the New South. Greensboro is 90 minutes east on I-40/85 — the Woolworth's sit-in museum is one of the most important stops on the entire route and worth a half-day detour."
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // DRIVE: CHARLOTTE → RICHMOND
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"drive",
+    from:"Charlotte", to:"Richmond",
+    distance:"~380 mi", time:"~4.5 hrs",
+    route:"US-29 N through Greensboro and the Virginia Piedmont · Greensboro detour 30 min west of US-29 via I-40 W · Danville directly on US-29 N",
+    stops:[
+      {
+        name:"International Civil Rights Center & Museum — Greensboro, NC",
+        tags:[T.cr, T.history],
+        isCR:true,
+        text:"February 1, 1960. <strong>Ezell Blair Jr., Franklin McCain, Joseph McNeil, and David Richmond</strong> — four students from North Carolina A&T — sat at the Woolworth's whites-only lunch counter on South Elm Street and ordered coffee. Refused. They stayed until closing. The next morning they came back with more students. By day four there were 300. Within two months, coordinated sit-ins had spread to 54 cities across nine states and SNCC was founded as a direct organizational response. The museum is built inside the original Woolworth's building. <strong>The original lunch counter section is preserved and intact — you can sit at the same stools.</strong> This is the most directly touchable civil rights artifact on the entire route. Cross-reference: <em>civil-rights-corridor.html</em>",
+        cost:"$15", hours:"Tue–Sat 10am–6pm", duration:"1.5–2 hrs",
+        address:"134 S Elm St, Greensboro NC 27401",
+        detour:true, detourNote:"Detour: 30 min west of US-29 via I-40 W. Adds ~1 hr round trip. Do not rationalize skipping this.",
+        crNote:"The Greensboro Four: Ezell Blair Jr. (later Jibreel Khazan), Franklin McCain, Joseph McNeil, David Richmond. McCain died in 2014. Richmond died in 1990. Blair and McNeil are still alive."
+      },
+      {
+        name:"Danville, VA — Last Capital of the Confederacy",
+        tags:[T.history, T.cwild],
+        isCR:false,
+        text:"Jefferson Davis fled Richmond here in April 1865 and held court at the Sutherlin Mansion for eight days — issuing his final wartime proclamations, insisting the war was not lost — before Lee's surrender at Appomattox ended it for him. The Sutherlin Mansion is now the <strong>Danville Museum of Fine Arts & History</strong>. <strong>Millionaires' Row</strong> along Main Street preserves a long run of Victorian and Edwardian homes from the tobacco and textile wealth that built postwar Danville. A quiet, historically freighted city that sits with its history without dramatics.",
+        cost:"Museum $5", hours:"Tue–Fri 10am–5pm, Sat–Sun 1–5pm", duration:"45 min",
+        address:"975 Main St, Danville VA 24541 · directly on US-29 N",
+        detour:false, detourNote:"",
+        crNote:""
+      },
+      {
+        name:"Appomattox Court House National Historical Park",
+        tags:[T.history, T.cwild],
+        isCR:false,
+        text:"Where Lee surrendered to Grant on April 9, 1865, effectively ending the Civil War. The <strong>McLean House</strong> — where the surrender papers were signed — has been reconstructed on its original foundation; the village around it functions as a living historical site. The NPS manages it with rigor. One of the most historically weighted addresses in American history, and genuinely moving to walk through.",
+        cost:"Free (NPS)", hours:"Daily 9am–5pm", duration:"1–2 hrs",
+        address:"111 National Park Dr, Appomattox VA 24522",
+        detour:true, detourNote:"Detour: ~70 miles west of the direct US-29 N route via US-460 W. A substantial detour — treat as an optional full half-day addition if you have a flexible leg, not a casual stop.",
+        crNote:""
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // RICHMOND
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"richmond", label:"Richmond, VA",
+    dates:"May 21–23",
+    guide:"richmond.html",
+    note:"GWAR Bar. Edgar Allan Poe Museum. Maggie Lena Walker NHS — first woman to charter a bank in US history. Hollywood Cemetery. Vinyl Conflict records. L'Opossum. Full guide covers all of it."
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // DRIVE: RICHMOND → WASHINGTON DC
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"drive",
+    from:"Richmond", to:"Washington DC",
+    distance:"~110 mi", time:"~2 hrs",
+    route:"I-95 N · Fredericksburg is the natural mid-point, 5 min off the highway · Occoquan village is 30 min south of DC if you want a final quiet stop before hitting the city",
+    stops:[
+      {
+        name:"Fredericksburg & Spotsylvania National Military Park",
+        tags:[T.cwild, T.history],
+        isCR:false,
+        text:"Four Civil War battlefields in one park: Fredericksburg, Chancellorsville, the Wilderness, and Spotsylvania Court House. <strong>Chancellorsville</strong> (May 1863) is where Stonewall Jackson was accidentally shot by his own Confederate troops and later died — one of the war's pivotal moments, the victory that arguably cost the South more than any defeat. <strong>The Wilderness</strong> (May 1864) was Grant's first move in the Overland Campaign — a new kind of war, grinding and attritional, that neither side had attempted before. The <strong>Chatham Manor</strong> overlook across the Rappahannock gives a view of the terrain that shaped the Fredericksburg campaign. Free, self-guided, atmospheric.",
+        cost:"Free (NPS)", hours:"Battlefield always open; visitor center daily 9am–5pm", duration:"1–2 hrs",
+        address:"120 Chatham Ln, Fredericksburg VA 22405 — 5 min off I-95 at Exit 130A",
+        detour:true, detourNote:"Detour: 5 min off I-95 at Exit 130A. Strongly recommended — this is the halfway point of this leg and a real stop, not a rest area.",
+        crNote:""
+      },
+      {
+        name:"A. Smith Bowman Distillery, Fredericksburg",
+        tags:[T.food],
+        isCR:false,
+        text:"Named for Captain Isaac Bowman, a Revolutionary War soldier and ancestor of the founding family. Complimentary tour and tasting. Bowman Brothers Virginia Straight Bourbon is their flagship — honest Virginia whiskey, not overhyped. Pair with the Fredericksburg battlefield stop for a full mid-drive hour.",
+        cost:"Tour free; bottles from $35", hours:"Mon–Sat 10am–5pm, Sun 12–5pm", duration:"45 min",
+        address:"1 Bowman Dr, Fredericksburg VA 22408",
+        detour:true, detourNote:"Detour: 10 min from I-95. Combine with the battlefield stop.",
+        crNote:""
+      },
+      {
+        name:"Occoquan Historic Village",
+        tags:[T.history, T.scenic],
+        isCR:false,
+        text:"A small 18th-century mill village on the Occoquan River, about 30 minutes south of DC. Mill Street has working artist studios, galleries, and craft shops in restored historic buildings. The town was burned during the Civil War and rebuilt; the current mill dates to 1924. A genuinely quiet final stop before entering DC traffic — low-key, easily skipped if you're tired, but pleasant if you're early.",
+        cost:"Free to walk; galleries free", hours:"Shops typically 11am–5pm", duration:"30–45 min",
+        address:"Mill St, Occoquan VA 22125",
+        detour:true, detourNote:"Detour: 5 min off I-95 at Exit 156. 30 min south of DC.",
+        crNote:""
+      }
+    ]
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // WASHINGTON DC
+  // ══════════════════════════════════════════════════════════════
+  {
+    type:"city", key:"dc", label:"Washington, DC",
+    dates:"May 24–30",
+    guide:"washington-dc.html",
+    note:"Seven days. NMAAHC (book timed passes now at nmaahc.si.edu). Howard University and Shaw neighborhood. U Street corridor and Black Broadway. Frederick Douglass NHS in Anacostia. Dischord House exterior (3819 Beecher St NW, Arlington). 9:30 Club. Busboys and Poets. Full guide covers all of it."
+  }
+
+];
+
+// ── RENDER ────────────────────────────────────────────────────────
+
+// Route ribbon
+const ribbonEl = document.getElementById("ribbon");
+CITIES.forEach((c, i) => {
+  const span = document.createElement("span");
+  span.className = "ribbon-city";
+  span.style.cssText = `color:${c.color};background:${c.color}15;border:1px solid ${c.color}35`;
+  span.textContent = c.label;
+  ribbonEl.appendChild(span);
+  if (i < CITIES.length - 1) {
+    const arr = document.createElement("span");
+    arr.className = "ribbon-arrow";
+    arr.textContent = "→";
+    ribbonEl.appendChild(arr);
+  }
+});
+
+// Main route
+const routeEl = document.getElementById("route");
+
+function renderStop(s) {
+  const cardClass = ["stop-card"];
+  if (s.detour) cardClass.push("is-detour");
+  if (s.isCR)   cardClass.push("is-cr");
+
+  const noteHtml = s.crNote
+    ? `<div class="cr-note">${s.crNote}</div>`
+    : s.detourNote
+    ? `<div class="detour-note">${s.detourNote}</div>`
+    : "";
+
+  return `
+    <div class="${cardClass.join(" ")}">
+      <div class="stop-top">
+        <div>
+          <div class="stop-name">${s.name}</div>
+          <div class="stop-tags">${s.tags.join("")}${s.detour ? T.detour : ""}</div>
+        </div>
+      </div>
+      <div class="stop-body">
+        <p class="stop-text">${s.text}</p>
+        <div class="stop-practical">
+          <div class="pr"><span class="pr-l">Cost</span><span class="pr-v">${s.cost}</span></div>
+          <div class="pr"><span class="pr-l">Hours</span><span class="pr-v">${s.hours}</span></div>
+          <div class="pr"><span class="pr-l">Time</span><span class="pr-v">${s.duration}</span></div>
+          <div class="pr"><span class="pr-l">Address</span><span class="pr-v">${s.address}</span></div>
+        </div>
+        ${noteHtml}
+      </div>
+    </div>`;
+}
+
+route.forEach(item => {
+  const el = document.createElement("div");
+
+  if (item.type === "city") {
+    const color = CITIES.find(c => c.key === item.key)?.color || "#E8722A";
+    el.className = "city-anchor";
+    el.style.borderLeftColor = color;
+    el.innerHTML = `
+      <div>
+        <div class="city-anchor-name">${item.label}</div>
+        ${item.note ? `<div class="city-anchor-note">${item.note}</div>` : ""}
+      </div>
+      <div class="city-anchor-meta">
+        <div style="color:${color}">${item.dates}</div>
+        <div>${item.guide}</div>
+      </div>
+      ${item.stops ? `<div style="width:100%;margin-top:0.75rem"><div class="stops">${item.stops.map(renderStop).join("")}</div></div>` : ""}
+    `;
+  }
+
+  if (item.type === "drive") {
+    el.className = "drive-segment";
+    const stopsHtml = item.stops && item.stops.length
+      ? `<div class="stops">${item.stops.map(renderStop).join("")}</div>`
+      : `<p class="no-stops">No significant stops on the direct route for this leg.</p>`;
+    el.innerHTML = `
+      <div class="drive-header">
+        <span class="drive-label">${item.from} → ${item.to}</span>
+        <div class="drive-stats">
+          <span class="drive-stat">${item.distance}</span>
+          <span class="drive-stat">·</span>
+          <span class="drive-stat">${item.time}</span>
+        </div>
+      </div>
+      <p class="drive-route">${item.route}</p>
+      ${stopsHtml}
+    `;
+  }
+
+  routeEl.appendChild(el);
+});
+</script>
+</body>
+</html>

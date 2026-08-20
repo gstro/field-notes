@@ -1,0 +1,20 @@
+[
+  { "id": "portland-or",       "name": "Portland",       "state": "OR", "tripId": "west",  "nights": 0,   "coords": { "lat": 45.5152, "lng": -122.6784 }, "label": { "dx": -10, "dy": -16, "anchor": "start" }, "role": "origin" },
+  { "id": "boise-id",          "name": "Boise",          "state": "ID", "tripId": "west",  "nights": 3,   "coords": { "lat": 43.6150, "lng": -116.2023 }, "label": { "dx": 12,  "dy": -5,  "anchor": "start" } },
+  { "id": "salt-lake-city-ut", "name": "Salt Lake City", "state": "UT", "tripId": "west",  "nights": 3,   "coords": { "lat": 40.7608, "lng": -111.8910 }, "label": { "dx": 13,  "dy": -3,  "anchor": "start" } },
+  { "id": "las-vegas-nv",      "name": "Las Vegas",      "state": "NV", "tripId": "west",  "nights": 5,   "coords": { "lat": 36.1699, "lng": -115.1398 }, "label": { "dx": -12, "dy": 4,   "anchor": "end" } },
+  { "id": "phoenix-az",        "name": "Phoenix",        "state": "AZ", "tripId": "west",  "nights": 3,   "coords": { "lat": 33.4484, "lng": -112.0740 }, "label": { "dx": 0,   "dy": 24,  "anchor": "middle" } },
+  { "id": "albuquerque-nm",    "name": "Albuquerque",    "state": "NM", "tripId": "west",  "nights": 3,   "coords": { "lat": 35.0844, "lng": -106.6504 }, "label": { "dx": -10, "dy": -10, "anchor": "end" } },
+  { "id": "oklahoma-city-ok",  "name": "Okla. City",     "state": "OK", "tripId": "west",  "nights": 3,   "coords": { "lat": 35.4676, "lng": -97.5164 },  "label": { "dx": -8,  "dy": -12, "anchor": "end" } },
+  { "id": "dallas-tx",         "name": "Dallas",         "state": "TX", "tripId": "west",  "nights": 3,   "coords": { "lat": 32.7767, "lng": -96.7970 },  "label": { "dx": 14,  "dy": 6,   "anchor": "start" } },
+  { "id": "austin-tx",         "name": "Austin",         "state": "TX", "tripId": "west",  "nights": 177, "coords": { "lat": 30.2672, "lng": -97.7431 },  "label": { "dx": -26, "dy": 14,  "anchor": "end" }, "role": "anchor" },
+  { "id": "new-orleans-la",    "name": "New Orleans",    "state": "LA", "tripId": "nola",  "nights": 10,  "coords": { "lat": 29.9511, "lng": -90.0715 },  "label": { "dx": 0,   "dy": 28,  "anchor": "middle" } },
+  { "id": "shreveport-la",     "name": "Shreveport",     "state": "LA", "tripId": "south", "nights": 3,   "coords": { "lat": 32.5252, "lng": -93.7502 },  "label": { "dx": -12, "dy": -8,  "anchor": "end" } },
+  { "id": "jackson-ms",        "name": "Jackson",        "state": "MS", "tripId": "south", "nights": 3,   "coords": { "lat": 32.2988, "lng": -90.1848 },  "label": { "dx": -10, "dy": 26,  "anchor": "middle" } },
+  { "id": "birmingham-al",     "name": "Birmingham",     "state": "AL", "tripId": "south", "nights": 3,   "coords": { "lat": 33.5186, "lng": -86.8104 },  "label": { "dx": -12, "dy": -12, "anchor": "end" } },
+  { "id": "atlanta-ga",        "name": "Atlanta",        "state": "GA", "tripId": "south", "nights": 5,   "coords": { "lat": 33.7490, "lng": -84.3880 },  "label": { "dx": 4,   "dy": 22,  "anchor": "start" } },
+  { "id": "charlotte-nc",      "name": "Charlotte",      "state": "NC", "tripId": "south", "nights": 4,   "coords": { "lat": 35.2271, "lng": -80.8431 },  "label": { "dx": 12,  "dy": -4,  "anchor": "start" } },
+  { "id": "richmond-va",       "name": "Richmond",       "state": "VA", "tripId": "south", "nights": 3,   "coords": { "lat": 37.5407, "lng": -77.4360 },  "label": { "dx": -12, "dy": -6,  "anchor": "end" } },
+  { "id": "washington-dc",     "name": "Washington DC",  "state": "DC", "tripId": "south", "nights": 7,   "coords": { "lat": 38.9072, "lng": -77.0369 },  "label": { "dx": 14,  "dy": 6,   "anchor": "start" } },
+  { "id": "philadelphia-pa",   "name": "Philadelphia",   "state": "PA", "tripId": "south", "nights": 0,   "coords": { "lat": 39.9526, "lng": -75.1652 },  "label": { "dx": -14, "dy": -12, "anchor": "end" }, "role": "home" }
+]

@@ -1,0 +1,90 @@
+# Rejection Log
+
+Things considered and rejected, with why — so they don't get re-litigated. The index is for targeted lookup; fuller rationales follow. Accepted counterparts live in [`decision-log.md`](decision-log.md).
+
+## Index
+
+| # | Rejected | In favor of |
+|---|---|---|
+| [R1](#r1-cms-or-backend-of-any-kind) | CMS or backend of any kind | JSON in Git ([D7](decision-log.md#d7-static-only-database-is-git)) |
+| [R2](#r2-comments--social-features) | Comments / social features | Permanent personal artifact |
+| [R3](#r3-seo-ambitions) | SEO ambitions | — |
+| [R4](#r4-supporting-other-peoples-trips) | Supporting other people's trips | Single-arc site (Trip-3 slot exists structurally, see roadmap) |
+| [R5](#r5-real-time-anything) | Real-time anything | Full prerender |
+| [R6](#r6-two-trips-framing) | "Two trips" framing | Three-chapter arc ([D1](decision-log.md#d1-three-chapter-arc-framing)) |
+| [R7](#r7-photo-led-city-pages) | Photo-led city pages / travel-blog identity | Fingerprint-led ([D6](decision-log.md#d6-fingerprint-leads-the-city-page)) |
+| [R8](#r8-real-basemap-on-the-landing-page) | Real basemap on the landing page | Constellation ([D5](decision-log.md#d5-constellation-landing-map-no-basemap)) |
+| [R9](#r9-portland-in-the-hit-rate-analysis) | Portland in the hit-rate analysis | Excluded ([D2](decision-log.md#d2-retroactive-guides-for-trip-1-portland-excluded)) |
+| [R10](#r10-omitting-the-hit-rate-module-on-trip-1-pages) | Omitting the hit-rate module on trip-1 pages | Retroactive guides ([D2](decision-log.md#d2-retroactive-guides-for-trip-1-portland-excluded)) |
+| [R11](#r11-shared-status-colors-across-trips) | Shared status colors across trips | Distinct palettes ([D3](decision-log.md#d3-distinct-trip-1-status-enum), [D11](decision-log.md#d11-status-color-law)) |
+| [R12](#r12-sveltekit-config-in-svelteconfigjs) | SvelteKit config in `svelte.config.js` | `vite.config.ts` |
+| [R13](#r13-serverless-functions) | Serverless functions | Static-only ([D7](decision-log.md#d7-static-only-database-is-git)) |
+| [R14](#r14-git-ignored-overlay-for-sensitive-fields) | Git-ignored overlay for sensitive fields | Fully public ([D16](decision-log.md#d16-public-data-posture)) |
+| [R15](#r15-full-scrollytelling-as-the-initial-chapter-build) | Full MapLibre scrollytelling as the initial chapter build | Leg-ledger first ([D17](decision-log.md#d17-leg-ledger-chapter-pages-first)) |
+| [R16](#r16-15-rating-scale) | 1–5 rating scale | Binary rating ([D18](decision-log.md#d18-binary-recommendation-rating)) |
+
+## Rejections
+
+### R1 — CMS or backend of any kind
+
+Nothing to maintain, nothing to pay for, nothing to migrate. All content is typed JSON in the repo; Git is the CMS, PR diffs are the edit history.
+
+### R2 — Comments / social features
+
+The site is a permanent personal artifact, not a platform. No audience mechanics.
+
+### R3 — SEO ambitions
+
+Not a goal. No structured-data chasing, no content shaped for search.
+
+### R4 — Supporting other people's trips
+
+Generalizing the schema and templates for arbitrary trips would tax every design decision. A Trip-3 slot exists structurally (the `trips.json` array), but building for other users is out of scope.
+
+### R5 — Real-time anything
+
+Everything is known at build time; full prerender. No live data, no client fetching.
+
+### R6 — "Two trips" framing
+
+Rejected because the move is the story, not the driving. The relocation arc with a NOLA interlude is the narrative spine (see D1).
+
+### R7 — Photo-led city pages
+
+A photo-hero layout reads as a travel blog. The site's identity is analysis — the data fingerprint opens each city page; photos are texture, not lead (see D6).
+
+### R8 — Real basemap on the landing page
+
+A MapLibre/tile basemap adds a dependency and visual noise for a page whose job is atmosphere. The dependency-free SVG constellation is distinctive; real geography is deferred to chapter pages (see D5).
+
+### R9 — Portland in the hit-rate analysis
+
+Scoring a curated guide against one's own hometown is a category error — instinct vs. curation is meaningless where instinct had years of head start. Portland keeps a city page but is excluded from the comparison metric (see D2).
+
+### R10 — Omitting the hit-rate module on trip-1 pages
+
+The considered alternative to retroactive guides: trip-1 pages simply drop the waffle/hit-rate module via the nullable-field principle, and citations appear only on trip-2 pages. Rejected because it forfeits the site's signature question — the instinct-vs-curation comparison needs a control group spanning the full arc (see D2).
+
+### R11 — Shared status colors across trips
+
+Trip-1 and trip-2 statuses are semantically different (retro-guide epistemics vs. lived-guide epistemics). Rendering them in one palette would visually conflate guided and unguided data and quietly misrepresent the comparison thesis (see D3, D11).
+
+### R12 — SvelteKit config in `svelte.config.js`
+
+Obsolete in the current template; config lives in `vite.config.ts`. Recorded so nobody "fixes" it backward.
+
+### R13 — Serverless functions
+
+Even free-tier serverless breaks the portability and zero-maintenance guarantees. `adapter-static` output runs anywhere forever (see D7).
+
+### R14 — Git-ignored overlay for sensitive fields
+
+The considered alternative to a fully public repo: keep spend/lodging in a git-ignored file loaded at build time, so money stays out of Git history while the public repo carries only non-sensitive data. Rejected in favor of a single fully public data layer (D16) — the site is a permanent personal artifact (R2), and the overlay split adds build complexity and a two-tier schema for no benefit the owner wants.
+
+### R15 — Full scrollytelling as the initial chapter build
+
+Building the full MapLibre scroll-driven panning map as the first version of the chapter pages (~2–3 sessions). Not rejected as a feature — it remains the endorsed upgrade path on the roadmap — but rejected as the *initial* build in favor of the leg-ledger (D17). Leg data isn't reconstructed yet, and committing 2–3 sessions to a showpiece before seeing the legs rendered is premature; the ledger ships in ~1 session and is upgradeable.
+
+### R16 — 1–5 rating scale
+
+A five-point rating on every recommendation, for finer-grained superlatives (ranked bests, "top 5"). Rejected in favor of a binary would-return signal (D18): a 1–5 scale means scoring a number for every recommendation across 18 cities and invites calibration drift (the same failure mode D12 guards against for fingerprints). Binary is enough for "keepers"-style superlatives and is upgradeable to 1–5 later.

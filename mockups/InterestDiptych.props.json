@@ -1,0 +1,264 @@
+{
+ "trip1": {
+  "label": "Trip 1",
+  "cityDays": 45,
+  "uniqueTargets": 245,
+  "perDay": 5.4,
+  "mix": {
+   "film": 7,
+   "museums_history": 15,
+   "food": 51,
+   "outdoors": 14,
+   "books": 11,
+   "coffee": 50,
+   "horror_occult": 10
+  }
+ },
+ "trip2": {
+  "label": "Trip 2",
+  "cityDays": 56,
+  "uniqueTargets": 292,
+  "perDay": 5.2,
+  "mix": {
+   "food": 69,
+   "records_music": 24,
+   "museums_history": 44,
+   "books": 76,
+   "coffee": 31,
+   "horror_occult": 6,
+   "outdoors": 17
+  }
+ },
+ "places": {
+  "trip1": {
+   "film": [
+    {
+     "name": "The Flicks: Rick's Cafe Americain",
+     "count": 4
+    },
+    {
+     "name": "Flicks",
+     "count": 2
+    },
+    {
+     "name": "Texas Theatre",
+     "count": 1
+    }
+   ],
+   "museums_history": [
+    {
+     "name": "Museum of Illusions",
+     "count": 3
+    },
+    {
+     "name": "Navajo Code Talker Memorial",
+     "count": 3
+    },
+    {
+     "name": "Heard Museum",
+     "count": 2
+    },
+    {
+     "name": "The Sixth Floor Museum at Dealey Plaza",
+     "count": 1
+    }
+   ],
+   "food": [
+    {
+     "name": "Cindi's NY Deli & Restaurant",
+     "count": 6
+    },
+    {
+     "name": "Twisters Burgers and Burritos",
+     "count": 4
+    },
+    {
+     "name": "Alpha Coffee Cafe - Salt Lake City",
+     "count": 4
+    },
+    {
+     "name": "Caputo's Market & Deli",
+     "count": 4
+    }
+   ],
+   "outdoors": [
+    {
+     "name": "Memory Grove Park",
+     "count": 3
+    },
+    {
+     "name": "10250 Shady Trail",
+     "count": 2
+    },
+    {
+     "name": "The Dallas Arboretum and Botanical Garden",
+     "count": 2
+    },
+    {
+     "name": "Arizona Falls",
+     "count": 2
+    }
+   ],
+   "books": [
+    {
+     "name": "Commonplace Books",
+     "count": 2
+    },
+    {
+     "name": "Page 1 Books",
+     "count": 2
+    },
+    {
+     "name": "Under the Umbrella Bookstore and Cafe",
+     "count": 2
+    },
+    {
+     "name": "Once and Future Books",
+     "count": 2
+    }
+   ],
+   "coffee": [
+    {
+     "name": "The Coffee Builders",
+     "count": 7
+    },
+    {
+     "name": "Elemental Coffee",
+     "count": 4
+    },
+    {
+     "name": "Alpha Coffee Cafe - Salt Lake City",
+     "count": 4
+    },
+    {
+     "name": "The Flicks: Rick's Cafe Americain",
+     "count": 4
+    }
+   ],
+   "horror_occult": [
+    {
+     "name": "Summum",
+     "count": 10
+    }
+   ]
+  },
+  "trip2": {
+   "food": [
+    {
+     "name": "Kamayan ATL - Filipino Restaurant",
+     "count": 10
+    },
+    {
+     "name": "Fish Shop Restaurant",
+     "count": 7
+    },
+    {
+     "name": "Orlandeaux's Caf\u00e9",
+     "count": 5
+    },
+    {
+     "name": "New York Deli",
+     "count": 4
+    }
+   ],
+   "records_music": [
+    {
+     "name": "Criminal Records",
+     "count": 6
+    },
+    {
+     "name": "Seasick Records",
+     "count": 6
+    },
+    {
+     "name": "Vinyl Conflict Record Store",
+     "count": 3
+    },
+    {
+     "name": "Fantasyland Records",
+     "count": 3
+    }
+   ],
+   "museums_history": [
+    {
+     "name": "Smith Robertson Museum",
+     "count": 7
+    },
+    {
+     "name": "Frederick Douglass National Historic Site",
+     "count": 5
+    },
+    {
+     "name": "Library of Congress",
+     "count": 4
+    },
+    {
+     "name": "Thomas Jefferson Memorial",
+     "count": 4
+    }
+   ],
+   "books": [
+    {
+     "name": "Troubadour Booksellers",
+     "count": 22
+    },
+    {
+     "name": "Charis Books & More",
+     "count": 11
+    },
+    {
+     "name": "A Cappella Books",
+     "count": 6
+    },
+    {
+     "name": "Bookish Atlanta",
+     "count": 5
+    }
+   ],
+   "coffee": [
+    {
+     "name": "Irondale Cafe",
+     "count": 4
+    },
+    {
+     "name": "Haraz Coffee House",
+     "count": 3
+    },
+    {
+     "name": "Church Street Coffee & Books",
+     "count": 3
+    },
+    {
+     "name": "Broad Street Baking Company & Cafe",
+     "count": 3
+    }
+   ],
+   "horror_occult": [
+    {
+     "name": "McEwen Funerals & Cremations at Forest Lawn West",
+     "count": 6
+    }
+   ],
+   "outdoors": [
+    {
+     "name": "Doll's Head Trail",
+     "count": 8
+    },
+    {
+     "name": "Grant Park Farmers Market",
+     "count": 3
+    },
+    {
+     "name": "Doll Head Trail original starting point",
+     "count": 2
+    },
+    {
+     "name": "Vulcan Park and Museum",
+     "count": 2
+    }
+   ]
+  }
+ },
+ "verdict": "Both trips ran on lists \u2014 roughly half of all navigation went to saved places either way (47% self-curated vs 53% source-curated). What changed was content, not discipline: self-curation defaulted to sustenance \u2014 food and coffee dominate Trip 1 \u2014 while sourced guides surfaced the interest profile: books \u00d76.9 (11\u219276), museums & history \u00d72.9 (15\u219244), and record stores from zero in seven cities to 24. Outdoors was flat (14\u219217). Left to itself, curation feeds you; sourced, it takes you somewhere.",
+ "disclosure": "Categories are keyword-tagged from the business-name portion of direction requests \u2014 a rough instrument, not hand-curated. Adherence figures are directions-only; list-browsing matches are excluded as circular. Per-item save timestamps don't exist in the export, so pre-trip and in-situ saves can't be perfectly separated."
+}

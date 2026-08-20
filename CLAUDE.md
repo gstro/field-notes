@@ -1,0 +1,52 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## What this repo is
+
+"The Long Way Home" (working title) — a retrospective website for a Portland → Austin → New Orleans → Philadelphia relocation arc, plus everything around it. The site itself lives in `setup/roadtrip/`; the rest of the repo is design docs (`design/`), the original trip-2 HTML city guides that are source material for data entry (`Itineraries/`), static HTML mockups already ported to Svelte (`mockups/`), and raw reconstruction data (`data/`).
+
+## Commands
+
+All site work happens in `setup/roadtrip/`:
+
+```bash
+cd setup/roadtrip
+npm install
+npm run dev -- --open   # dev server
+npm run check           # svelte-check: validates pages AND city JSON against types.ts
+npm run build           # static build — prerenderer hard-fails on broken links
+```
+
+There are no tests or linters; `npm run check` and `npm run build` are the validation gates. Run both after touching data JSON or components — `check` catches schema violations, `build` catches broken link surfaces.
+
+## Site architecture
+
+SvelteKit 2 / Svelte 5 (runes mode is **forced** via `vite.config.ts` — all config lives there, there is deliberately no `svelte.config.js`) / TypeScript / `adapter-static` with full prerender. No backend, no CMS: **the database is Git** — all content is JSON in `src/lib/data/`.
+
+The data flow that takes multiple files to see:
+
+- `src/lib/data/cityIndex.json` — thin registry of all 18 cities (id/coords/nights/label). Drives the landing constellation map and nav for *every* city, built or not.
+- `src/lib/data/cities/*.json` — deep per-city files. `src/routes/city/[slug]/+page.ts` discovers them via `import.meta.glob` and generates prerender entries from whatever files exist. Adding a city = adding one JSON file; no route work.
+- `src/lib/types.ts` — the enforced schema. `npm run check` rejects malformed city JSON.
+- `src/lib/registry.ts` — display enums: the 10 guide categories, source labels, and status→chip-class mapping.
+- Cities in `cityIndex.json` with no `cities/*.json` file must render as non-linked "data pending" everywhere. This is load-bearing: the prerender crawler fails the build on links to unbuilt pages. Preserve this pattern on any new link surface.
+
+Design tokens are in `src/lib/tokens.css`; components in `src/lib/components/` are all runes-mode.
+
+## Non-negotiable design rules
+
+These are decided (see `design/decision-log.md` for rationale; don't re-litigate without the user):
+
+- **Trip-1 vs trip-2 data are never visually conflated.** Trip-1 statuses (`attended-anyway`, `retroactive-recommendation`) never share colors with trip-2 statuses. Status color law: attended = green, off-guide = blue, closed = burnt, skipped = muted, trip-1 instinct-hit = gold fill, trip-1 retro-pick = gold dashed outline. Applies to any chart touching status.
+- **Every field is nullable** and components render nothing (not placeholders, not errors) for missing data — this keeps the site publishable at every stage of data entry.
+- **Every recommendation carries `source.citedFrom`** (type-enforced); citation is a rendering requirement.
+- **All motion behind `prefers-reduced-motion`.**
+
+## Design docs
+
+`design/` holds five docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions D1–D15 + open questions O1–O5), `rejection-log.md` (rejected alternatives R1–R13), `implementation-plan.md` (milestones M0–M7), `roadmap.md` (unendorsed ideas). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan.
+
+## Current status
+
+Schema frozen; landing page and city template built; the only city JSON is sample Birmingham data — **all displayed numbers are sample data pending reconstruction**. Trip chapter pages, data deep-dive, superlatives, and colophon are unbuilt or stubs.

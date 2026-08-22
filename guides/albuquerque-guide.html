@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albuquerque, NM — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  .pc-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-style: italic;
+  }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+  }
+  .closure-inner strong { font-weight: 500; }
+  .closure-inner .cw-item { margin-bottom: 0.6rem; }
+  .closure-inner .cw-item:last-child { margin-bottom: 0; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 1 (Retroactive) &nbsp;·&nbsp; Portland → Boise → Salt Lake City → Las Vegas → Phoenix → <strong style="color:var(--cream)">Albuquerque</strong> → Oklahoma City → Dallas → Austin</p>
+  <h1>Road Trip Stop — <em>Albuquerque, NM</em></h1>
+  <p class="subtitle">
+    A high-desert city shaped by two federal projects it never asked for — the Manhattan Project's Sandia Labs and the interstate/Route 66 corridor — and increasingly defined by television: Breaking Bad and Better Call Saul turned its car washes and drive-ins into pilgrimage sites.<br>
+    10 categories · 5 picks each (Sights: 8, Electronics: 4) · Sources: Atlas Obscura, TasteAtlas, Eater, Timeout, Visit Albuquerque, Albuquerque Insider, local press
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Breaking Bad (2008–2013)</strong> — Vince Gilligan's Albuquerque-set-and-shot saga. The Whites' house (private, exterior only — please don't re-enact the pizza scene), Twisters (Los Pollos Hermanos), The Dog House Drive-In, and a real car wash all still stand; the Crossroads Motel's status is unconfirmed.</li>
+        <li><strong>Better Call Saul (2015–2022)</strong> — the prequel used the Alvarado Transportation Center for Mike Ehrmantraut's Rail Runner arrival; still a working transit hub, freely visitable.</li>
+        <li><strong>El Camino: A Breaking Bad Movie (2019)</strong> — Netflix's follow-up reused much of the parent series' ABQ location library.</li>
+        <li><strong>Terminator Salvation (2009)</strong> — large-scale action sequences shot in and around Albuquerque Studios, part of what built the city into a major production hub pre-Netflix.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Neil Patrick Harris</strong> (b. 1973) — actor, host, Broadway performer; born in ABQ, raised in Ruidoso, NM.</li>
+        <li><strong>Jeff Bezos</strong> (b. 1964) — born in Albuquerque; his grandfather ran the city's Atomic Energy Commission office, tying his birthplace to the same federal-land history as the Nuclear Science Museum below. Included as friction against this traveler's politics, not celebration.</li>
+        <li><strong>Jay Roach</strong> — director of the Austin Powers films and Meet the Parents; also directed <em>Trumbo</em> (2015), about blacklisted screenwriter Dalton Trumbo.</li>
+        <li><strong>Paula Gunn Allen</strong> (b. 1939, Cubero, NM) — Indigenous feminist poet and scholar (<em>The Sacred Hoop</em>, 1986); closely tied to Albuquerque/UNM's literary community though born just outside city limits.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="pc-note">Correction: Breaking Bad's pilot and several cook-site sequences were shot well outside city limits, near the To'hajiilee Indian Reservation and other Bernalillo County high-desert sites — not every "Breaking Bad location" a tour operator names is actually in Albuquerque proper. — Sources: breakingbad-locations.com, KRQE</p>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + 3 bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTE -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <div class="cw-item"><strong>⚠ Tannex closed:</strong> the beloved Barelas DIY space (music, lectures, zine library, since 2013) closed after its building was sold, reported 2019. Not in the Top 5 for that reason.</div>
+    <div class="cw-item"><strong>⚠ Crossroads Motel status unconfirmed:</strong> this recurring Breaking Bad location on Central Ave SE has an uncertain current status — redevelopment/demolition has been reported in past years. Verify before planning a stop.</div>
+    <div class="cw-item"><strong>ⓘ ATLAS-I access:</strong> sits on active Sandia National Labs-adjacent land — scheduled tour only, not a walk-up stop.</div>
+    <div class="cw-item"><strong>⚠ Fly Honey Warehouse:</strong> the least-documented current DIY space in the guide — confirm it's still active via social media before planning around it.</div>
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-note">
+  <div class="gap-inner">
+    <strong>Honest gap — Bookstores:</strong> Albuquerque has no fixed-address anarchist infoshop on the scale of Salt Lake City's Boing! Anarchist Collective. The mandatory secondary search surfaced The People's Library-ABQ (a pop-up/mutual-aid lending library) and Albuquerque DSA's reading groups (no physical space) rather than a storefront. The deeper infrastructure here is mutual aid, not infoshops — a pattern also seen in Oklahoma City.
+  </div>
+</div>
+<div class="gap-note" style="margin-top: 0.75rem;">
+  <div class="gap-inner">
+    <strong>Honest gap — DIY Electronics:</strong> no dedicated synth or guitar-pedal boutique retailer turned up for Albuquerque, unlike Salt Lake City's Squarewave Sound or Oklahoma City's Keeley Electronics. This category carries 4 picks, not 5 — two genuine makerspaces (Quelab, FUSE) plus a guitar-repair shop and a science-museum tinkering space, rather than gear-specific retail.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      The Manhattan Project/Sandia Labs land-use story behind the Museum of Nuclear Science, paired with Petroglyph National Monument's 1990s road fight, is rich enough for its own Field Notes entry connecting federal land seizure to Indigenous sacred-site preservation.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Albuquerque is the natural Western-leg anchor for the "radical-political-geography" thread introduced at Salt Lake City (Bill Haywood/IWW) — here it runs through Manhattan Project land requisition and the broader Hispano land-grant dispossession fights (Reies López Tijerina's Alianza Federal de Mercedes, the 1967 Tierra Amarilla courthouse raid) rather than labor organizing specifically.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Golden Crown Panaderia's in-house coffee roastery and 24/7 Cookie ATM pairs nicely with Oklahoma City's Harvey Bakery croissant queue two stops up the road — both are the "arrive before opening or wait" pastry stop in their respective cities.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 1 Retroactive Guide &nbsp;·&nbsp; Albuquerque, NM<br>
+  Control group entry: instinct-driven Trip 1 city, curated retroactively for comparison against Trip 2's guide-led stops<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Bookworks",
+      tags: [TAG('i-books','Since 1984'), TAG('i-horror','Horror Book Club')],
+      desc: "Independent since 1984 in the North Valley; runs a Horror Book Club alongside Sci-Fi/Fantasy, Romance and Queer book clubs, and has hosted Poet Laureate Joy Harjo for its Leopold Lecture series.",
+      meta: [["📍","4022 Rio Grande Blvd NW"],["💰","$0–30"],["⏱","45 min–1 hr"],["🕐","Daily 10am–6pm; evenings for events"]],
+      cite: "bkwrks.com, Visit Albuquerque"
+    },
+    {
+      name: "Organic Books",
+      tags: [TAG('i-books','Local Authors')],
+      desc: "New-and-used shop in Nob Hill with a curated emphasis on local New Mexico authors.",
+      meta: [["📍","Nob Hill"],["💰","$0–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Visit Albuquerque"
+    },
+    {
+      name: "Page 1 Books",
+      tags: [TAG('i-books','Since 1981')],
+      desc: "Operating since 1981; new and used books, magazines, cards and gifts — one of the city's longest-running independents.",
+      meta: [["📍","Eastside"],["💰","$0–25"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Visit Albuquerque, Tripadvisor"
+    },
+    {
+      name: "Title Wave Books",
+      tags: [TAG('i-books','Rare & Local')],
+      desc: "Carries local authors and New Mexico-focused titles alongside a strong rare/collectible case within its general used stock.",
+      meta: [["💰","$0–40"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "Visit Albuquerque"
+    },
+    {
+      name: "The People's Library-ABQ",
+      tags: [TAG('i-political','Mandatory Search Pick'), TAG('i-books','Mutual Aid')],
+      desc: "The mandatory secondary-search-pass find: an anarchist/mutual-aid free lending library project documented by the Anarres Project for Alternative Futures (UNM). Operates as a pop-up rather than a fixed storefront — itself the honest finding, see the gap note below.",
+      meta: [["💰","Free"],["⏱","Varies"],["🕐","Check socials for current pop-up"]],
+      cite: "anarresproject.org, Facebook"
+    }
+  ],
+  records: [
+    {
+      name: "Vinyl Consumption Record Shop",
+      tags: [TAG('i-diy','Best Selection')],
+      desc: "Widely cited as the city's best overall selection — near-mint originals across genres in a modest storefront.",
+      meta: [["📍","5017 Lomas Blvd NE"],["💰","$8–40"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "albuquerqueinsider.com"
+    },
+    {
+      name: "Astro-Zombies",
+      tags: [TAG('i-punk','Misfits Namesake'), TAG('i-horror','Horror-Punk')],
+      desc: "Named after the Misfits' horror-punk anthem \"Astro Zombies\" — the pedigree is built into the sign. Cool murals, knowledgeable staff, and a comic-book selection alongside the vinyl.",
+      meta: [["📍","3100 Central Ave SE"],["💰","$5–30"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "albuquerqueinsider.com"
+    },
+    {
+      name: "LongHair Records",
+      tags: [TAG('i-punk','In-Store Sets'), TAG('i-diy','Eclectic')],
+      desc: "Eclectic stock from classic rock to indie, and one of the few ABQ shops that hosts live in-store sets.",
+      meta: [["📍","1315 San Mateo Blvd NE"],["💰","$5–30"],["⏱","45 min"],["🕐","Afternoon/evening"]],
+      cite: "albuquerqueinsider.com"
+    },
+    {
+      name: "Charley's Records & CDs",
+      tags: [TAG('i-diy','Deep-Catalog Staff')],
+      desc: "Cozy listening area and staff who are genuinely enthusiastic about deep-catalog questions.",
+      meta: [["📍","7602 Menaul Blvd NE"],["💰","$5–25"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "albuquerqueinsider.com"
+    },
+    {
+      name: "SloLow Vinyl Records",
+      tags: [TAG('i-diy','Route 66 Antiques Mall')],
+      desc: "Booth-style vinyl nook inside a larger antiques mall on old Route 66 — easy to pair with a Nob Hill stroll.",
+      meta: [["📍","4710 Central Ave SE"],["💰","$5–25"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "albuquerqueinsider.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Cutbow Coffee Roasters",
+      tags: [TAG('i-food','F&W Best in NM 2022')],
+      desc: "Food & Wine named it New Mexico's best coffee shop in 2022; founder Paul Gallegos has roasted for nearly 30 years, and Friday cupping sessions are open to anyone.",
+      meta: [["📍","Near Old Town"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning; Fri for cupping"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Humble Coffee",
+      tags: [TAG('i-food','Direct Trade')],
+      desc: "Direct farmer relationships and single-origin espresso since 2014; the cold brew is widely called the city's best.",
+      meta: [["📍","Nob Hill & Downtown"],["💰","$4–7"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Zendo",
+      tags: [TAG('i-food','Red Chile Mocha'), TAG('i-political','Community Third Space')],
+      desc: "A bright, plant-filled community \"third space\" with rotating local art; the Red Chile Mocha and Aztec Latte both lean into New Mexico flavor instead of a generic syrup menu.",
+      meta: [["📍","Downtown"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Trifecta Coffee Company",
+      tags: [TAG('i-food','Roaster + Bakery'), TAG('i-drinks','Coffee Cocktails')],
+      desc: "Albuquerque's first combined roaster-cafe-bakery (2015); the coffee-and-cocktail-style menu (Coffee and Tonic) is worth the detour off the tourist core.",
+      meta: [["📍","North Valley"],["💰","$5–9"],["⏱","45 min"],["🕐","Morning/brunch"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Little Bear Coffee",
+      tags: [TAG('i-food','Traceable Sourcing'), TAG('i-drinks','Natural Wine Bar')],
+      desc: "Fully traceable, specialty-grade coffee by day; the same room converts into a natural wine bar Thursday through Monday nights.",
+      meta: [["📍","Nob Hill"],["💰","$4–8"],["⏱","45 min–1 hr"],["🕐","AM coffee / Thu–Mon PM wine"]],
+      cite: "mycoffeeexplorer.com"
+    }
+  ],
+  pastry: [
+    {
+      name: "Golden Crown Panaderia",
+      tags: [TAG('i-food','24/7 Cookie ATM')],
+      desc: "Fifty-plus years deep: biscochitos (the official state cookie), green chile bread, and an in-house coffee roastery. The 24/7 vending machine out front means there's no bad time to show up.",
+      meta: [["📍","1103 Mountain Rd NW"],["💰","$3–15"],["⏱","30–45 min"],["🕐","Anytime — ATM is 24/7"]],
+      cite: "goldencrown.biz"
+    },
+    {
+      name: "The Burque Bakehouse",
+      tags: [TAG('i-food','2x James Beard Nom.')],
+      desc: "Walk-up window bakery with two James Beard \"Outstanding Bakery\" nominations; the green chile croissant is the one to chase.",
+      meta: [["📍","640 Broadway Blvd SE"],["💰","$4–10"],["⏱","30 min"],["🕐","Morning, before sellout"]],
+      cite: "secretalbuquerque.com, Table Magazine"
+    },
+    {
+      name: "Ihatov Bread and Coffee",
+      tags: [TAG('i-food','James Beard Semifinalist')],
+      desc: "James Beard semi-finalist for Outstanding Bakery; a serious sourdough program in a cozy Nob Hill room.",
+      meta: [["📍","3400 Central Ave SE"],["💰","$4–10"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "Table Magazine, secretalbuquerque.com"
+    },
+    {
+      name: "Coda Bakery",
+      tags: [TAG('i-food','Vietnamese-French')],
+      desc: "Vietnamese-French bakery — pandan cake, sesame balls, pate chaud, banh mi — and a 2025 James Beard \"Outstanding Baker\" nominee.",
+      meta: [["📍","201 San Pedro Dr SE"],["💰","$2–10"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "Table Magazine"
+    },
+    {
+      name: "The Witching Flour Bakery",
+      tags: [TAG('i-food','Occult Name'), TAG('i-horror','Sells Out Fast')],
+      desc: "The name alone earns the occult tag. Limited weekend hours and a reputation for selling out fast, so arrive early.",
+      meta: [["📍","1431 Eubank Blvd NE"],["💰","$4–10"],["⏱","30 min"],["🕐","Weekend mornings only"]],
+      cite: "albuquerqueinsider.com"
+    }
+  ],
+  dishes: [
+    {
+      name: "Green Chile Cheeseburger",
+      tags: [TAG('i-food','NM Icon Since 1950s')],
+      desc: "New Mexico's defining sandwich since the 1950s — roasted green chile and melted American cheese on a charbroiled patty.",
+      meta: [["📍","Owl Cafe / Monte Carlo Liquors & Steak House"],["💰","$10–16"],["⏱","45 min"],["🕐","Lunch"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Breakfast Burrito @ Frontier Restaurant",
+      tags: [TAG('i-food','Open Late')],
+      desc: "Eggs, bacon, potato and chile in a flour tortilla, at a round-the-clock institution across from UNM.",
+      meta: [["📍","Frontier Restaurant"],["💰","$6–10"],["⏱","30 min"],["🕐","Any hour"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Green Chile Stew @ Frontier Restaurant",
+      tags: [TAG('i-food','Regional Classic')],
+      desc: "Pork-and-green-chile stew with fresh tortillas on the side; order it alongside the burrito to cover both Frontier classics in one stop.",
+      meta: [["📍","Frontier Restaurant"],["💰","$6–10"],["⏱","30–45 min"],["🕐","Lunch"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Sopapillas with Honey @ El Pinto",
+      tags: [TAG('i-food','Honey Crossover'), TAG('i-bees','Bees Interest')],
+      desc: "Fried-dough pillows drizzled with honey — the direct bees/food crossover pick, at the huge patio restaurant Bryan Cranston recommends to visiting fans.",
+      meta: [["📍","El Pinto"],["💰","$4–8"],["⏱","With a meal"],["🕐","Dinner"]],
+      cite: "TasteAtlas; Visit Albuquerque film tourism"
+    },
+    {
+      name: "Bizcochito @ Golden Crown Panaderia",
+      tags: [TAG('i-food','NM State Cookie')],
+      desc: "New Mexico's official state cookie — lard-based, anise-and-cinnamon — at the panaderia most locals point to first.",
+      meta: [["📍","Golden Crown Panaderia"],["💰","$2–6"],["🕐","Anytime"]],
+      cite: "TasteAtlas"
+    }
+  ],
+  gifts: [
+    {
+      name: "Lavender Honey & Green Chile Jam — Los Poblanos Farm Shop",
+      tags: [TAG('i-bees','Farm Honey'), TAG('i-food','Green Chile Jam')],
+      desc: "Farm-produced lavender honey (plain or creamed) and green chile jam — the strongest bees/food crossover gift in the metro, though technically in neighboring Los Ranchos.",
+      meta: [["📍","Los Ranchos"],["💰","$10–25"],["⏱","20–30 min"],["🕐","Daytime"]],
+      cite: "Albuquerque Journal"
+    },
+    {
+      name: "Eldora Chocolate",
+      tags: [TAG('i-food','Green Chile Biscochito Bar')],
+      desc: "Craft bean-to-bar chocolate with a genuinely New Mexican variety: a green chile biscochito bar alongside peppermint crunch.",
+      meta: [["💰","$3–70"],["⏱","20 min"],["🕐","Anytime"]],
+      cite: "Albuquerque Journal"
+    },
+    {
+      name: "Apple Canyon Gourmet",
+      tags: [TAG('i-food','Built for Mailing')],
+      desc: "Fire-roasted Hatch green chile, red chile sauce, and a Hatch green chile bloody mary mix — built specifically for mailing.",
+      meta: [["💰","$10–40 (baskets to $175)"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "Albuquerque Journal"
+    },
+    {
+      name: "New Mexico Piñon Coffee",
+      tags: [TAG('i-food','Shelf-Stable Gift Sets')],
+      desc: "Piñon and Mexican-spiced-chocolate flavored roasts in shelf-stable gift sets — the classic \"take New Mexico home in a bag\" pick.",
+      meta: [["💰","$10–25"],["⏱","15 min"],["🕐","Anytime"]],
+      cite: "Albuquerque Journal"
+    },
+    {
+      name: "Bottled Spirits — Left Turn Distilling",
+      tags: [TAG('i-drinks','ABQ\'s First Distillery')],
+      desc: "Albuquerque's first distillery; a bottle to go is the whiskey/bourbon-interest mailable pick, alongside on-site tastings and tours.",
+      meta: [["💰","$30–55/bottle"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "leftturndistilling.com"
+    }
+  ],
+  sights: [
+    {
+      name: "Petroglyph National Monument",
+      tags: [TAG('i-bees','Well-Known Natural Must-See')],
+      desc: "One of the largest petroglyph sites in North America — three main canyon trail systems carved by Ancestral Puebloans and early Spanish settlers 400–700 years ago. A 1990s fight over a proposed road through Piedras Marcadas/Boca Negra anchors this guide's radical-political-geography thread.",
+      meta: [["💰","Free (small vehicle fee at Boca Negra)"],["⏱","Half-day"],["🕐","Early morning, before heat"]],
+      cite: "nps.gov/petr"
+    },
+    {
+      name: "National Museum of Nuclear Science & History",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Manhattan Project')],
+      desc: "Sixteen indoor exhibit areas covering the Manhattan Project, the Cold War, and civilian nuclear power, plus a 9-acre outdoor Heritage Park with a B-29 and a submarine sail. The official atomic museum of the United States.",
+      meta: [["📍","601 Eubank Blvd SE"],["💰","~$18–24"],["⏱","2–3 hrs"],["🕐","Midday"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "ATLAS-I",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Wood-and-Glue Giant')],
+      desc: "A pseudo-steampunk electromagnetic-pulse weapons research facility, and the world's largest wood-and-glue structure. Sits on active Sandia Labs-adjacent land, so it's a scheduled-tour stop, not a walk-up one.",
+      meta: [["💰","Free (reservation)"],["⏱","1 hr"],["🕐","Weekday, advance reservation"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Grave of Walter White",
+      tags: [TAG('i-horror','Atlas Obscura')],
+      desc: "A genuine tombstone for the show's fictional protagonist, installed at a real Los Ranchos supper club — one of the odder pieces of Breaking Bad pilgrimage geography.",
+      meta: [["📍","Vernon's Speakeasy, Los Ranchos"],["💰","Free to view / dinner to dine"],["⏱","20–30 min"],["🕐","Evening"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "KiMo Theatre",
+      tags: [TAG('i-horror','Haunted')],
+      desc: "A 1927 Pueblo Deco downtown theater, said to be haunted by the ghost of a six-year-old boy killed in a 1951 boiler explosion — staff reportedly still leave donuts out for him.",
+      meta: [["📍","423 Central Ave NW"],["💰","Free lobby / ticketed shows"],["⏱","30 min–2 hrs"],["🕐","Evening for a show"]],
+      cite: "General knowledge — verify ghost-story detail"
+    },
+    {
+      name: "Center of the Universe",
+      tags: [TAG('i-diy','Atlas Obscura')],
+      desc: "An abstract, acoustically tuned walk-through sculpture on the UNM campus, with a plaque declaring it the literal center of the universe.",
+      meta: [["📍","UNM campus"],["💰","Free"],["⏱","15 min"],["🕐","Daylight/campus hours"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Sandia Peak Tramway",
+      tags: [TAG('i-bees','Well-Known Natural Must-See')],
+      desc: "The longest aerial tramway in the Americas and the world's third-longest single span; a 15-minute ride climbs 3,819 feet to a 10,378-foot summit with mountain-bike and ski access depending on season.",
+      meta: [["💰","~$35 round trip"],["⏱","Half-day"],["🕐","Late afternoon for sunset"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Left Turn Distilling — Tasting & Tour",
+      tags: [TAG('i-drinks','Whiskey/Bourbon Interest')],
+      desc: "Albuquerque's first distillery; book a tasting and tour for the whiskey/bourbon-interest activity pick.",
+      meta: [["💰","$10–20"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "leftturndistilling.com"
+    }
+  ],
+  venues: [
+    {
+      name: "Sunshine Theater",
+      tags: [TAG('i-punk','Well-Known Downtown Room')],
+      desc: "The city's best-known mid-size touring room downtown; punk, metal and indie routing regularly stops here.",
+      meta: [["📍","Downtown, Central Ave"],["💰","$20–45"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "General knowledge — verify current booking"
+    },
+    {
+      name: "Launchpad",
+      tags: [TAG('i-punk','DIY-Adjacent Stalwart')],
+      desc: "A longtime DIY-adjacent punk/indie stalwart; books a heavy local and touring punk/hardcore lineup.",
+      meta: [["📍","Downtown"],["💰","$10–25"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "launchpadrocks.com"
+    },
+    {
+      name: "Sister",
+      tags: [TAG('i-punk','Bar Venue')],
+      desc: "Bar venue with a steady punk/indie booking calendar.",
+      meta: [["📍","Downtown"],["💰","$10–20"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "Bandsintown"
+    },
+    {
+      name: "Corpus Arts",
+      tags: [TAG('i-punk','Queer DIY Space'), TAG('i-political','Community Education')],
+      desc: "Started 2016 as a library/gallery/queer-educational space explicitly conceived as \"a queer space that isn't a bar\"; expanded into live shows while keeping its community-education focus.",
+      meta: [["📍","Downtown storefront"],["💰","Free–$15"],["⏱","2–3 hrs"],["🕐","Evening"]],
+      cite: "New Mexico News Port"
+    },
+    {
+      name: "Fly Honey Warehouse",
+      tags: [TAG('i-punk','DIY Warehouse'), TAG('i-diy','Unconfirmed Status')],
+      desc: "A DIY warehouse space named alongside the (now-closed) Tannex and Corpus Arts as part of ABQ's underground circuit — the least documented of the three, so confirm it's still active before planning around it.",
+      meta: [["💰","Free–$10 donation"],["⏱","Varies"],["🕐","Check socials"]],
+      cite: "New Mexico News Port"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Kei & Molly Textiles",
+      tags: [TAG('i-diy','Hand Screen-Printed')],
+      desc: "Hand screen-printed Albuquerque and New Mexico designs on dish towels and totes — about as far from a mass-market magnet as a souvenir gets.",
+      meta: [["💰","$12–35"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "keiandmolly.com, Visit Albuquerque"
+    },
+    {
+      name: "The Candy Lady",
+      tags: [TAG('i-horror','Breaking Bad Landmark')],
+      desc: "An Old Town candy shop that became an accidental Breaking Bad landmark — sells the blue rock-candy \"meth\" the show's prop team commissioned from the real shop.",
+      meta: [["📍","Old Town"],["💰","$5–15"],["⏱","15–20 min"],["🕐","Anytime"]],
+      cite: "Visit Albuquerque, KRQE"
+    },
+    {
+      name: "Indian Pueblo Store",
+      tags: [TAG('i-political','Direct-from-Artist')],
+      desc: "Handcrafted jewelry, pottery and woven rugs bought directly from Native artists — pair with a walk through the Cultural Center itself.",
+      meta: [["📍","Indian Pueblo Cultural Center"],["💰","$10–200+"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Visit Albuquerque"
+    },
+    {
+      name: "Sumner & Dene Creations in Art",
+      tags: [TAG('i-diy','Punched-Tin Craft')],
+      desc: "Fine art and punched-tin craft — a traditional New Mexican technique applied to frames and candle holders you won't find at an airport gift shop.",
+      meta: [["💰","$10–100+"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "Visit Albuquerque"
+    },
+    {
+      name: "Puzzled",
+      tags: [TAG('i-diy','Handcrafted Puzzles')],
+      desc: "Handcrafted wooden puzzles, including Albuquerque-themed designs — a genuinely different souvenir category.",
+      meta: [["📍","Old Town"],["💰","$15–60"],["⏱","15–20 min"],["🕐","Afternoon"]],
+      cite: "Visit Albuquerque"
+    }
+  ],
+  electronics: [
+    {
+      name: "Quelab",
+      tags: [TAG('i-diy','Weekly Open House')],
+      desc: "Nonprofit 501(c)3 hackerspace with a weekly public open house; welding intro classes plus general tinkering and citizen-science projects.",
+      meta: [["📍","1511 Central Ave NE"],["💰","Free open house / membership"],["⏱","2 hrs"],["🕐","Wednesday 7–9pm"]],
+      cite: "quelab.net"
+    },
+    {
+      name: "FUSE Makerspace",
+      tags: [TAG('i-diy','CNM-Run')],
+      desc: "CNM Ingenuity-run makerspace: wood and metal shops, CNC, laser cutters, 3D printers, screen printing and wide-format digital printing, open to beginners.",
+      meta: [["💰","Membership tiers; workshops open to all"],["⏱","Half-day for a workshop"],["🕐","Mon–Thu 10–8:30, Fri–Sat 10–6"]],
+      cite: "fusemakerspace.org"
+    },
+    {
+      name: "Backroads Guitars",
+      tags: [TAG('i-diy','Gear Repair')],
+      desc: "Full-service guitar repair and customization shop — the closest ABQ gets to a dedicated gear-tinkering destination in the absence of a synth-specific boutique.",
+      meta: [["💰","Varies by repair"],["⏱","30–45 min"],["🕐","Weekday afternoon"]],
+      cite: "backroadsguitars.net"
+    },
+    {
+      name: "Explora Tinkering Studio",
+      tags: [TAG('i-diy','Hands-On, Family-Oriented')],
+      desc: "Hands-on science-museum tinkering space — more family-oriented than a true hackerspace, but it's where a lot of Albuquerque's maker culture starts.",
+      meta: [["💰","~$12 admission"],["⏱","1–2 hrs"],["🕐","Weekday midday"]],
+      cite: "General knowledge — verify pricing"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

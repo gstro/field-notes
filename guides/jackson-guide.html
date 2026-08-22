@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jackson, MS — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  .pc-note {
+    margin-top: 0.9rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border);
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-style: italic;
+  }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* THREAD NOTE */
+  .thread-note {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .thread-inner {
+    background: rgba(224,120,152,0.08);
+    border: 1px solid rgba(224,120,152,0.3);
+    border-left: 3px solid #E07898;
+    border-radius: 4px;
+    padding: 1.1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.85);
+    line-height: 1.7;
+  }
+  .thread-inner strong { color: #E07898; font-weight: 500; }
+  .thread-inner .thread-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #E07898;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 2 (Guide-Led) &nbsp;·&nbsp; Austin → … → Shreveport → <strong style="color:var(--cream)">Jackson</strong> → Birmingham → … → Philadelphia</p>
+  <h1>Road Trip Stop — <em>Jackson, MS</em></h1>
+  <p class="subtitle">
+    Mississippi's capital, where Farish Street's rise and stalled redevelopment sit a few blocks from Cooperation Jackson's worker-cooperative network building the same self-determination lineage forward.<br>
+    10 categories · 53 total picks · Sources: Atlas Obscura, TasteAtlas, Eater / The Local Palate, Timeout, Mississippi Free Press, Mississippi Today, Mississippi Encyclopedia, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Hotel Tehran (2026)</strong> — Liam Neeson and Zachary Levi heist-action production filmed at Millsaps College in September 2024; the biology/chemistry building doubled as a middle school.</li>
+        <li><strong>The Help (2011)</strong> — Brent's Drugs, Mayflower Cafe, and the New Capitol exterior are real Jackson locations, though most of the film used Greenwood, MS as a 1960s-Jackson stand-in.</li>
+        <li><strong>Get on Up (2014)</strong> — James Brown biopic; some scenes reported filmed in Jackson (locations unconfirmed).</li>
+        <li><strong>Speech &amp; Debate</strong> — reported as filmed entirely in Jackson (year/locations unconfirmed).</li>
+      </ul>
+      <p class="pc-note">Correction: The Help is commonly assumed to be a full Jackson production because of its setting, but most filming used Greenwood (plus Clarksdale and Greenville) — only a handful of scenes used real Jackson locations.</p>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born / Raised Here</h3>
+      <ul>
+        <li><strong>Eudora Welty</strong> (b. 1909) — Pulitzer Prize winner; her Belhaven home is now a National Historic Landmark museum.</li>
+        <li><strong>Richard Wright</strong> — raised in Jackson 1920–25; graduated valedictorian of Smith Robertson Junior High, now a museum.</li>
+        <li><strong>Cassandra Wilson</strong> (b. 1955) — Grammy-winning jazz vocalist, Jackson State class of 1980.</li>
+        <li><strong>David Banner</strong> (b. 1974) — rapper/producer; testified before Congress in 2007 on hip-hop and racism.</li>
+        <li><strong>Medgar Evers</strong> — based in Jackson as NAACP field secretary from 1954; assassinated here in 1963.</li>
+        <li><strong>Chokwe Lumumba Sr. &amp; Chokwe Antar Lumumba</strong> — father/son Jackson mayors rooted in Black-nationalist and Malcolm X Grassroots Movement organizing.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTES -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Farish Street status:</strong> Most of Farish Street is vacant storefronts following the 2014 collapse of the Performa Entertainment redevelopment deal. Big Apple Inn, Cathead Distillery, and F. Jones Corner are active; do not expect a bustling entertainment district.
+  </div>
+  <div class="closure-inner">
+    <strong>⚠ Sunflower Oven:</strong> named as an active all-ages DIY venue in an August 2025 Mississippi Today feature, but a separate bakery directory lists it as permanently closed (it operated as both bakery and show space). Call ahead or check socials.
+  </div>
+  <div class="closure-inner">
+    <strong>⚠ The Rotisserie:</strong> the restaurant Mayflower Cafe's own owner credits with inventing comeback sauce could not be confirmed as still operating. Order the sauce at Mayflower Cafe or Walker's Drive-In instead.
+  </div>
+</div>
+
+<!-- THREAD NOTE -->
+<div class="thread-note">
+  <div class="thread-inner">
+    <span class="thread-label">✦ Cross-Trip Analytical Thread — Black Business District Erasure</span>
+    <strong>Farish Street: CONFIRMED.</strong> By 1908 the street was roughly a third Black-owned and grew into one of the largest self-sufficient Black business districts in the country — blues labels, the Alamo Theatre, Black-owned hospitals, and Medgar Evers's NAACP field office at 507 N Farish St. It declined through the same desegregation-plus-urban-renewal mechanism as Beale Street and Deep Deuce, then suffered a second erasure when a 2002 redevelopment deal went dormant in 2014 after HUD found the project's federal funds misspent. Jackson also supplies a live counter-instance: Cooperation Jackson's worker-cooperative network, a few blocks away on W. Capitol St., explicitly builds Black economic self-determination on the same lineage. Linked instances: <strong>Oklahoma City</strong> (Deep Deuce) and <strong>Dallas</strong> (Freedman's Town).
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap — Bookstores:</strong> the mandatory anarchist/radical/infoshop search turned up no dedicated storefront in Jackson. As in Oklahoma City and Boise, Jackson's radical-left infrastructure runs through organizing and cooperative economics rather than a bookstore counterspace — Cooperation Jackson's Balagoon Center is the closest thing to a movement space, but it's a cooperative incubator, not a bookshop. This category carries 4 picks, not 5.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — Punk/Indie Venues:</strong> Jackson's own DIY press describes its punk/noise scene as small and largely informal — house shows, coffee-shop bills at Urban Foxes, and a handful of bar bookings, documented by the zine JXN Underground and Landmass Library's zine distro rather than a dedicated punk room. Two of the five picks below (Duling Hall, Hal &amp; Mal's) are general-audience live-music institutions, and F. Jones Corner is a blues club included for its Farish Street significance rather than genre fit.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — DIY Electronics:</strong> no dedicated synth shop or membership hackerspace with published public open-hours turned up for Jackson. What exists runs through nonprofits, worker cooperatives, and universities instead. This category carries 4 picks, not 5, rather than padding with a weak retail substitute.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Farish Street's full arc — H.C. Speir's talent-scouting shop, Trumpet Records, the 1995 endangered-places listing, and the 2014 collapse of the Performa redevelopment deal — is dense enough for a standalone Field Notes entry on its own, distinct from the broader civil-rights thread.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Cooperation Jackson's Jackson-Kush Plan (solidarity economy, people's assemblies, an independent Black political party) is the clearest "erasure met with active rebuilding" counter-instance found on the corridor so far — worth flagging for whichever future stop tests that framing next.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Duling Hall sitting in the same Fondren complex as Morningbell Records and Just Vanilla Bake Shop is a tight version of the venue/record-store/bakery cluster pattern already seen at Salt Lake City's 801 Labs/Crown Burgers pairing — worth checking whether Birmingham has a similar walkable node.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 2 Guide-Led Stop &nbsp;·&nbsp; Jackson, MS<br>
+  Leg 3 of Trip 2 (Austin → Philadelphia) &nbsp;·&nbsp; Full rebuild superseding a pre-skill 7-category guide<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Lemuria Books",
+      tags: [TAG('i-books','Well-Known')],
+      desc: "Widely called one of the best independent bookstores in the nation — deep Southern-lit and Mississippi-author focus, a First Edition Room, and a packed signings calendar.",
+      meta: [["📍","202 Banner Hall, 4465 I-55 North"],["💰","$0–40"],["⏱","1 hr"],["🕐","Afternoon; evening for a signing"]],
+      cite: "Tripadvisor, Deep South Magazine, msbookfestival.com"
+    },
+    {
+      name: "The Book Rack",
+      tags: [TAG('i-books','Used, 57+ Years')],
+      desc: "Jackson metro's premier used bookstore — 40,000+ titles, deep mystery/sci-fi/rare and out-of-print sections, book clubs and signings.",
+      meta: [["📍","1491 Canton Mart Rd, Suite 14"],["💰","$2–20"],["⏱","45 min"],["🕐","Anytime"]],
+      cite: "newpages.com"
+    },
+    {
+      name: "Coffee Prose",
+      tags: [TAG('i-books','Books + Cafe'), TAG('i-food','Coffee Hybrid')],
+      desc: "Used bookstore, coffee shop, and bistro under one roof in Midtown, with drive-thru specialty lattes and Mississippi-made beverages alongside the stacks.",
+      meta: [["📍","1619 N West St, Midtown"],["💰","$3–20"],["⏱","1 hr"],["🕐","Morning"]],
+      cite: "msbookfestival.com, mycoffeeexplorer.com"
+    },
+    {
+      name: "OffBeat",
+      tags: [TAG('i-political','Black-Owned'), TAG('i-diy','Records + Comics'), TAG('i-punk','Scene Ties')],
+      desc: "Mississippi's only Black-owned record and comic shop, run by DJ Young Venom — the closest thing Jackson has to an unusually-curated, politically-inflected bookstore.",
+      meta: [["📍","109 N State St, Downtown"],["💰","$3–40"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "msbookfestival.com, mississippifreepress.org"
+    }
+  ],
+  records: [
+    {
+      name: "End of All Music JXN",
+      tags: [TAG('i-diy','Well-Known'), TAG('i-punk','Central MS Anchor')],
+      desc: "Sibling shop to Oxford's celebrated End of All Music flagship; anchors the central-Mississippi record trade from Fondren.",
+      meta: [["📍","Fondren, North State St"],["💰","$10–40"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "recordstoredirectory.com"
+    },
+    {
+      name: "OffBeat",
+      tags: [TAG('i-political','Black-Owned'), TAG('i-diy','Records + Comics'), TAG('i-punk','Scene Ties')],
+      desc: "Mississippi's only Black-owned record and comic shop, run by DJ Young Venom.",
+      meta: [["📍","109 N State St, Downtown"],["💰","$3–40"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "msbookfestival.com, mississippifreepress.org"
+    },
+    {
+      name: "Morningbell Records & Studios",
+      tags: [TAG('i-diy','Since 2012'), TAG('i-punk','Live Shows')],
+      desc: "New and used LPs plus turntables and accessories, hosting live shows in the same Duling Ave complex as Duling Hall and Just Vanilla Bake Shop.",
+      meta: [["📍","622 Duling Ave, Suite 205A, Fondren"],["💰","$5–35"],["⏱","45 min"],["🕐","Afternoon; check for in-stores"]],
+      cite: "mississippifreepress.org record store guide"
+    },
+    {
+      name: "Bama Record Shop",
+      tags: [TAG('i-diy','Local Trade')],
+      desc: "One of Jackson's longstanding local record shops; thinner sourcing than the other picks here — call ahead to confirm hours.",
+      meta: [["📍","Jackson"],["💰","$5–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "recordstoredirectory.com"
+    },
+    {
+      name: "ReBop Record Shop",
+      tags: [TAG('i-diy','Newest Addition')],
+      desc: "Opened late 2024 — newest addition to the Jackson-metro vinyl scene, just north in Ridgeland.",
+      meta: [["📍","Odyssey North Shopping Center, Ridgeland"],["💰","$5–35"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "recordstoredirectory.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Native Coffee Co.",
+      tags: [TAG('i-food','Highest-Rated')],
+      desc: "Belhaven specialty shop in a former service station, opened 2020 by Matt and Anna Flinn; house biscuits and ties to the Soapbox Coffee Roasters project.",
+      meta: [["📍","Belhaven"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Cups Espresso Cafe",
+      tags: [TAG('i-food','Well-Known Since 1993')],
+      desc: "Long-running Mississippi coffee chain with its own in-house roastery and Mississippi-roasted blends — the closest thing Jackson has to a coffee institution.",
+      meta: [["📍","Fondren + multiple Jackson locations"],["💰","$3–7"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Urban Foxes",
+      tags: [TAG('i-food','Bakery-Cafe'), TAG('i-punk','DIY Shows')],
+      desc: "Bakery-coffeehouse in a restored 1940s house serving espresso, pies and quiche — and doubling as a small alt/DIY-music show space per Jackson's own scene coverage.",
+      meta: [["📍","Belhaven"],["💰","$4–10"],["⏱","45 min–1 hr"],["🕐","Morning; evening for a show"]],
+      cite: "mycoffeeexplorer.com, Mississippi Today"
+    },
+    {
+      name: "Coffee Prose",
+      tags: [TAG('i-food','Coffee + Books'), TAG('i-books','Bookstore Hybrid')],
+      desc: "Combined coffee shop, used bookstore and bistro with drive-thru service and specialty lattes.",
+      meta: [["📍","1619 N West St, Midtown"],["💰","$3–20"],["⏱","45 min"],["🕐","Morning"]],
+      cite: "msbookfestival.com, mycoffeeexplorer.com"
+    },
+    {
+      name: "Northshore Specialty Coffee",
+      tags: [TAG('i-food','In-House Roaster')],
+      desc: "Espresso, pour-overs, tea and light bites; runs its own roasting facility in Midtown Jackson and sells the beans retail.",
+      meta: [["📍","The District at Eastover"],["💰","$4–9"],["⏱","30–45 min"],["🕐","Anytime"]],
+      cite: "mycoffeeexplorer.com"
+    }
+  ],
+  pastry: [
+    {
+      name: "Sugaree's Bakery",
+      tags: [TAG('i-food','TasteAtlas Pick')],
+      desc: "TasteAtlas's named restaurant for Mississippi caramel cake — soft yellow sponge stacked with hand-cooked caramel icing, a Delta holiday tradition.",
+      meta: [["📍","Jackson"],["💰","$4–30 (whole cake)"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "TasteAtlas — Caramel Cake"
+    },
+    {
+      name: "Campbell's Bakery",
+      tags: [TAG('i-food','Since 1962')],
+      desc: "Fondren fixture known for signature tea cakes and custom event cakes.",
+      meta: [["📍","Fondren"],["💰","$3–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "Wanderlog Jackson bakeries"
+    },
+    {
+      name: "Just Vanilla Bake Shop",
+      tags: [TAG('i-food','Fondren Cluster')],
+      desc: "Flaky croissants, breads and cookies inside the Duling Hall complex — pair with a Morningbell Records browse and an evening show at Duling Hall itself.",
+      meta: [["📍","622 Duling Ave, Fondren"],["💰","$3–8"],["⏱","20 min"],["🕐","Morning"]],
+      cite: "Wanderlog Jackson bakeries"
+    },
+    {
+      name: "Broad Street Baking Company & Cafe",
+      tags: [TAG('i-food','Near Lemuria')],
+      desc: "Industrial-style bakery-cafe with homemade breads, desserts and espresso — steps from Lemuria Books.",
+      meta: [["📍","I-55 North"],["💰","$4–14"],["⏱","45 min"],["🕐","Morning"]],
+      cite: "Wanderlog, Deep South Magazine"
+    },
+    {
+      name: "Urban Foxes",
+      tags: [TAG('i-food','1940s House')],
+      desc: "Small-batch pies, pastries and quiche baked in a restored 1940s house.",
+      meta: [["📍","Belhaven"],["💰","$4–10"],["⏱","45 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    }
+  ],
+  dishes: [
+    {
+      name: "Comeback Sauce",
+      tags: [TAG('i-food','Well-Known & Regional')],
+      desc: "Mississippi's signature condiment, born in Jackson's Greek-owned restaurants in the late 1920s. Mayflower Cafe's own owner credits rival diner The Rotisserie with the actual invention — order it on the blue-plate special at Mayflower.",
+      meta: [["📍","Mayflower Cafe / Walker's Drive-In"],["💰","Usually free with an order"],["⏱","N/A"],["🕐","Any meal"]],
+      cite: "Wikipedia — Comeback sauce; TasteAtlas"
+    },
+    {
+      name: "Pig Ear Sliders & \"Smokes\" — Big Apple Inn",
+      tags: [TAG('i-food','Thread Anchor'), TAG('i-political','Civil Rights Ties')],
+      desc: "Open since 1939 and now fourth-generation owned — pig ear sliders and Red Rose sausage \"smokes\" a few doors from where Medgar Evers ran the NAACP's Mississippi field office.",
+      meta: [["📍","509 N Farish St"],["💰","$2–6"],["⏱","20–30 min"],["🕐","Lunch"]],
+      cite: "Atlas Obscura — Big Apple Inn; The Local Palate"
+    },
+    {
+      name: "Caramel Cake — Sugaree's Bakery",
+      tags: [TAG('i-food','TasteAtlas Pick')],
+      desc: "Southern layer cake with hand-cooked caramel frosting that hardens at room temperature — popular across the Delta for holidays.",
+      meta: [["📍","Sugaree's Bakery"],["💰","$4–30"],["⏱","N/A"],["🕐","Anytime"]],
+      cite: "TasteAtlas — Caramel Cake"
+    },
+    {
+      name: "Mississippi Mud Pie — Rowdy's Family Restaurant",
+      tags: [TAG('i-food','TasteAtlas Pick')],
+      desc: "Cookie-crust chocolate layer dessert believed to originate in the Vicksburg–Natchez region near Jackson.",
+      meta: [["📍","Rowdy's Family Restaurant"],["💰","$5–10"],["⏱","N/A"],["🕐","After a meal"]],
+      cite: "TasteAtlas — Mississippi Mud Pie"
+    },
+    {
+      name: "Delta Tamales — Walker's Drive-In",
+      tags: [TAG('i-food','Regional Specialty')],
+      desc: "Mississippi Delta hot tamales — a genuinely regional dish with contested origins — served alongside blue-plate specials at this Jackson institution.",
+      meta: [["📍","Walker's Drive-In"],["💰","$8–14"],["⏱","45 min"],["🕐","Lunch or dinner"]],
+      cite: "The Local Palate"
+    }
+  ],
+  gifts: [
+    {
+      name: "Bottled Comeback Sauce",
+      tags: [TAG('i-food','Well-Known')],
+      desc: "The Mississippi condiment that travels best — pick up a bottled version to mail or carry home.",
+      meta: [["📍","Mayflower Cafe / area grocers"],["💰","$6–10/bottle"],["⏱","N/A"]],
+      cite: "Wikipedia — Comeback sauce"
+    },
+    {
+      name: "Local Honey — Mississippi Farmers Market",
+      tags: [TAG('i-bees','Local Apiaries')],
+      desc: "State-run farmers market a few blocks from the New Capitol; honey from area apiaries sold alongside jams and produce.",
+      meta: [["📍","929 High St"],["💰","$8–18/jar"],["⏱","N/A"],["🕐","Saturday morning, in season"]],
+      cite: "MS Dept. of Agriculture & Commerce"
+    },
+    {
+      name: "Whole-Bean Coffee — Native Coffee Co. / Northshore",
+      tags: [TAG('i-food','Easy to Ship')],
+      desc: "Both roasters sell retail bags of Jackson- and Midtown-roasted beans — easy to ship or hand-carry.",
+      meta: [["📍","Native Coffee Co. / Northshore"],["💰","$14–20/bag"],["⏱","N/A"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Mississippi Gift Company — Sauces & Jams",
+      tags: [TAG('i-food','150+ MS Makers')],
+      desc: "\"Everything Made in Mississippi\" mail-order gift company — sauces, jams, honey, candies. Based in Greenwood, not Jackson, but offers next-day Jackson delivery and nationwide shipping.",
+      meta: [["📍","Greenwood, MS (ships to Jackson)"],["💰","$10–40"],["⏱","N/A"]],
+      cite: "themississippigiftcompany.com"
+    },
+    {
+      name: "Muscadine & Fig Preserves — Mississippi Farmers Market",
+      tags: [TAG('i-food','Fruit Pick')],
+      desc: "Jarred muscadine and fig preserves from area growers — a shelf-stable nod to the traveler's fruit interest.",
+      meta: [["📍","929 High St"],["💰","$6–12/jar"],["⏱","N/A"],["🕐","Saturday morning, in season"]],
+      cite: "local listings"
+    }
+  ],
+  sights: [
+    {
+      name: "Mississippi Civil Rights Museum",
+      tags: [TAG('i-political','Well-Known'), TAG('i-books','Archival Depth')],
+      desc: "Eight galleries in a circular layout around a central rotunda, including a memorial to 600+ Mississippians lynched, Bryant's Grocery doors (Emmett Till), and Vernon Dahmer's bullet-riddled truck.",
+      meta: [["📍","222 North St, Downtown"],["💰","~$8–15"],["⏱","2–3 hrs"],["🕐","Midday, allow real time"]],
+      cite: "Wikipedia — Mississippi Civil Rights Museum"
+    },
+    {
+      name: "Farish Street Historic District",
+      tags: [TAG('i-political','Thread Anchor'), TAG('i-books','Blues History'), TAG('i-drinks','Cathead Distillery')],
+      desc: "Once nearly a third Black-owned and one of the largest self-sufficient Black business districts in the country. Now largely vacant after a stalled 2002 redevelopment deal, but Big Apple Inn, Cathead Distillery and F. Jones Corner keep the block alive. See the thread callout above for the full history.",
+      meta: [["📍","N Farish St"],["💰","Free to walk"],["⏱","1–1.5 hrs"],["🕐","Daylight, then dinner at F. Jones Corner"]],
+      cite: "Mississippi Encyclopedia, Wikipedia — Farish Street"
+    },
+    {
+      name: "Mississippi River Basin Model",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Abandoned Engineering')],
+      desc: "A 200-acre scale model of 41% of the continental US, built 1943–66 by POW labor to simulate flood control. Abandoned and overgrown, concrete riverbanks reclaimed by the woods — genuinely eerie.",
+      meta: [["📍","Buddy Butts Park"],["💰","Free"],["⏱","30–45 min"],["🕐","Late afternoon light"]],
+      cite: "Atlas Obscura — The Mississippi River Basin Model"
+    },
+    {
+      name: "Eudora Welty House & Garden",
+      tags: [TAG('i-books','Literary Landmark')],
+      desc: "The restored home where Welty lived and wrote for nearly 80 years, original furnishings and library intact, plus a garden with plants she wrote about directly.",
+      meta: [["📍","1119 Pinehurst St, Belhaven"],["💰","~$5–10"],["⏱","1–1.5 hrs"],["🕐","Morning"]],
+      cite: "Wikipedia — Eudora Welty House"
+    },
+    {
+      name: "LeFleur's Bluff State Park",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "305 acres on the Pearl River inside city limits — five short trails, fishing on Mayes Lake, disc golf, and the adjoining Mississippi Museum of Natural Science. The balance-rule natural pick.",
+      meta: [["📍","3676 Lakeland Terrace"],["💰","Free–$4/vehicle"],["⏱","1–2 hrs"],["🕐","Morning"]],
+      cite: "Wikipedia — LeFleur's Bluff State Park"
+    },
+    {
+      name: "Smith Robertson Museum and Cultural Center",
+      tags: [TAG('i-books','Richard Wright'), TAG('i-political','First Black Public School')],
+      desc: "Jackson's first public school for Black children (1894); Richard Wright's alma mater, where he graduated valedictorian in 1925. Reopened as a history museum in 1984.",
+      meta: [["📍","500 Bloom St"],["💰","~$5"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "Wikipedia — Smith Robertson Museum"
+    },
+    {
+      name: "Medgar and Myrlie Evers Home National Monument",
+      tags: [TAG('i-political','Atlas Obscura')],
+      desc: "The ranch house where Medgar Evers was assassinated on his own driveway, June 12, 1963, hours after JFK's civil rights address. National Monument since 2019.",
+      meta: [["📍","Guynes St, Elraine"],["💰","Free (tours by appointment)"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "Atlas Obscura, Wikipedia — Medgar Evers"
+    },
+    {
+      name: "Mississippi Museum of Art",
+      tags: [TAG('i-horror','Outsider Art'), TAG('i-diy','Self-Taught Artists')],
+      desc: "The state's largest art museum, with a real self-taught/outsider-art vein: Howard Finster, Jimmy Lee Sudduth, Mose Tolliver, and Theora Hamblett's visionary, dream-derived religious paintings.",
+      meta: [["📍","380 S Lamar St, Downtown"],["💰","Free–$10 for special exhibits"],["⏱","1.5–2 hrs"],["🕐","Afternoon"]],
+      cite: "Wikipedia — Mississippi Museum of Art"
+    },
+    {
+      name: "Cooperation Jackson / Chokwe Lumumba Center",
+      tags: [TAG('i-political','Worker Cooperatives'), TAG('i-diy','Digital Fabrication')],
+      desc: "Worker-cooperative network built on the Jackson-Kush Plan — solidarity economy, people's assemblies, an independent Black political party — running Freedom Farms, the Green Team, and the Center for Community Production. Direct contemporary counterpoint to Farish Street's history a few blocks away.",
+      meta: [["📍","939 W Capitol St"],["💰","Free (check for open events)"],["⏱","Varies"],["🕐","Check event calendar"]],
+      cite: "Wikipedia — Cooperation Jackson, Chokwe Lumumba"
+    },
+    {
+      name: "Cathead Distillery",
+      tags: [TAG('i-drinks','Whiskey/Bourbon')],
+      desc: "The first legal distillery in Mississippi (founded 2010), sitting right on Farish Street. Makes Old Soul Bourbon alongside vodka and gin — one of the surviving businesses on an otherwise largely vacant street.",
+      meta: [["📍","422 S Farish St"],["💰","Tours/tastings vary"],["⏱","45 min–1.5 hrs"],["🕐","Afternoon"]],
+      cite: "catheaddistillery.com"
+    }
+  ],
+  venues: [
+    {
+      name: "Duling Hall",
+      tags: [TAG('i-punk','Well-Known')],
+      desc: "Restored school-auditorium-turned-venue with genuinely strong acoustics; part of the same Fondren complex as Morningbell Records and Just Vanilla Bake Shop. Books touring indie/roots/Americana more than punk specifically.",
+      meta: [["📍","622 Duling Ave, Fondren"],["💰","$15–40"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "dulinghall.com"
+    },
+    {
+      name: "Hal & Mal's",
+      tags: [TAG('i-punk','Since 1984'), TAG('i-food','Comeback and Crackers')],
+      desc: "Historic warehouse venue and restaurant running live music since 1984 — order \"Comeback and Crackers\" and tamale nachos between sets.",
+      meta: [["📍","Downtown"],["💰","$5–20"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "The Local Palate"
+    },
+    {
+      name: "F. Jones Corner",
+      tags: [TAG('i-political','Farish Street Survivor')],
+      desc: "Late-night blues club on Farish Street — one of the handful of businesses still operating on a block otherwise gutted by the stalled redevelopment. Not punk, but the strongest live-music tie to the analytical thread.",
+      meta: [["📍","Farish St & Amite St"],["💰","$5–15 cover"],["⏱","2–3 hrs"],["🕐","Late night, often after 10pm"]],
+      cite: "local press"
+    },
+    {
+      name: "Sunflower Oven",
+      tags: [TAG('i-punk','DIY All-Ages')],
+      desc: "Named as an active all-ages DIY venue in an August 2025 feature on Jackson's punk/noise scene, but a separate directory lists it as permanently closed — it doubled as a bakery. Confirm before planning around it.",
+      meta: [["📍","Jackson"],["💰","Donation/cover varies"],["⏱","2–3 hrs"],["🕐","Night; check socials"]],
+      cite: "Mississippi Today, Wanderlog"
+    },
+    {
+      name: "CS's",
+      tags: [TAG('i-punk','DIY Booking')],
+      desc: "Bar and restaurant that books local bands — named alongside Urban Foxes and Sunflower Oven as one of the few rooms carrying Jackson's small punk/noise scene, per JXN Underground's own coverage.",
+      meta: [["📍","Jackson"],["💰","$5–15"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "Mississippi Today DIY music scene feature"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Mississippi Crafts Center",
+      tags: [TAG('i-diy','Well-Known')],
+      desc: "Craftsmen's Guild of Mississippi shop on the Natchez Trace — pottery, quilts, baskets and jewelry made by Mississippi artisans, not mass-market tourist product.",
+      meta: [["📍","950 Rice Rd, Ridgeland"],["💰","$10–100+"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Tripadvisor"
+    },
+    {
+      name: "Eudora Welty House Gift Shop",
+      tags: [TAG('i-books','Literary')],
+      desc: "Small shop in the Education & Visitors Center — Welty's own books, literary-award materials, and Mississippi small-press titles.",
+      meta: [["📍","1109 Pinehurst St, Belhaven"],["💰","$5–30"],["⏱","15–20 min"],["🕐","Paired with the house tour"]],
+      cite: "Wikipedia — Eudora Welty House"
+    },
+    {
+      name: "Mississippi Civil Rights Museum Gift Shop",
+      tags: [TAG('i-political','Political Memory')],
+      desc: "Books, prints and civil-rights ephemera tied directly to the museum's collection — a souvenir that's also an act of political memory.",
+      meta: [["📍","222 North St, Downtown"],["💰","$5–40"],["⏱","15–20 min"],["🕐","After the museum"]],
+      cite: "Wikipedia — Mississippi Civil Rights Museum"
+    },
+    {
+      name: "OffBeat",
+      tags: [TAG('i-diy','Local Ephemera'), TAG('i-political','Black-Owned')],
+      desc: "Records, comics and local ephemera from Jackson's only Black-owned shop of its kind — a far more meaningful take-home than a mass-produced magnet.",
+      meta: [["📍","109 N State St, Downtown"],["💰","$5–40"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "msbookfestival.com"
+    },
+    {
+      name: "Cathead Distillery Gift & Bottle Shop",
+      tags: [TAG('i-drinks','Farish Street')],
+      desc: "Bottled Old Soul Bourbon, Cathead Vodka and Bristow Gin, plus Farish Street-branded merch — best hand-carried home given interstate alcohol-shipping restrictions.",
+      meta: [["📍","422 S Farish St"],["💰","$20–45/bottle"],["⏱","15–30 min"],["🕐","Weekday, 10am–5pm"]],
+      cite: "catheaddistillery.com"
+    }
+  ],
+  electronics: [
+    {
+      name: "The Bean Path",
+      tags: [TAG('i-diy','Well-Known')],
+      desc: "Jackson's premier STEAM hub and community workshop, 6,000+ sq ft, first phase of a planned 21-acre Bean Path Tech District. Black-led tech nonprofit running classes alongside open workshop time.",
+      meta: [["📍","451 N Gallatin St"],["💰","Free–membership varies"],["⏱","1–2 hrs for a class"],["🕐","Check class calendar"]],
+      cite: "beanpath.org, WLBT, Mississippi Free Press"
+    },
+    {
+      name: "Cooperation Jackson — Center for Community Production",
+      tags: [TAG('i-diy','Worker Cooperative'), TAG('i-political','Solidarity Economy')],
+      desc: "A worker-cooperative digital-fabrication shop (3D printing/manufacturing) inside Cooperation Jackson's broader solidarity-economy network — DIY electronics filtered through explicit cooperative-ownership politics.",
+      meta: [["📍","939 W Capitol St"],["💰","Free (check for open events)"],["⏱","Varies"],["🕐","Check event calendar"]],
+      cite: "Wikipedia — Cooperation Jackson"
+    },
+    {
+      name: "Jackson State University Makerspace",
+      tags: [TAG('i-diy','University-Affiliated')],
+      desc: "3D printers (Ultimaker, Markforged, Cube Trio), laser/vinyl cutting and a full Adobe/SketchUp/Blender suite. Primarily for JSU affiliates; outside access is unconfirmed — email ahead.",
+      meta: [["📍","1400 John R. Lynch St"],["💰","Free for affiliates"],["⏱","Varies"],["🕐","Weekday, contact ahead"]],
+      cite: "jsums.edu"
+    },
+    {
+      name: "The Collaborative Space (Mississippi LIGHT Collaborative)",
+      tags: [TAG('i-diy','STEAM Lab + Gallery')],
+      desc: "A Creative STEAM Lab and Studio doubling as a gallery, hosting the annual Mississippi LIGHT Festival plus workshops, talks and artist residencies.",
+      meta: [["📍","Jackson"],["💰","Varies by program"],["⏱","Varies"],["🕐","Check event calendar"]],
+      cite: "mslightcollaborative.com"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

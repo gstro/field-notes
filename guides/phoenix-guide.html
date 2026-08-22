@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoenix, AZ — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 1 (Retroactive) &nbsp;·&nbsp; Portland → Boise → Salt Lake City → Las Vegas → <strong style="color:var(--cream)">Phoenix</strong> → Albuquerque → Oklahoma City → Dallas → Austin</p>
+  <h1>Road Trip Stop — <em>Phoenix, AZ</em></h1>
+  <p class="subtitle">
+    The desert capital where the chimichanga's disputed invention, Cesar Chavez's 1972 hunger strike, and the birth of American skate-punk all happened within a few miles of each other.<br>
+    10 categories · 5 picks each · Sources: Atlas Obscura, TasteAtlas, Eater, Timeout, Phoenix New Times, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Psycho (1960)</strong> — Alfred Hitchcock's opening sequence, Marion Crane's office scene, was shot in downtown Phoenix.</li>
+        <li><strong>Raising Arizona (1987)</strong> — Coen Brothers classic shot around Phoenix and Tempe.</li>
+        <li><strong>Wayne's World (1992)</strong> — Partly shot in Phoenix, featuring a cameo from Phoenix-rooted Alice Cooper.</li>
+        <li><strong>The Nutty Professor (1963)</strong> — Prom scene shot at ASU's Frank Lloyd Wright–designed Gammage Auditorium in Tempe.</li>
+        <li><strong>Little Miss Sunshine (2006)</strong> — Arizona road-trip sequences.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born / Raised Here</h3>
+      <ul>
+        <li><strong>Alice Cooper</strong> — raised in Phoenix from childhood (born Detroit); godfather of shock/horror-rock, founded his original band here in 1964, still owns Alice Cooperstown restaurant downtown.</li>
+        <li><strong>Chester Bennington</strong> — born Phoenix, 1976; Linkin Park frontman, alt-metal.</li>
+        <li><strong>Stevie Nicks</strong> — born Phoenix, 1948; Fleetwood Mac.</li>
+        <li><strong>Brian Brannon / JFA</strong> — formed Jodie Foster's Army in Phoenix, 1981; foundational hardcore/skate-punk band; Brannon later became Thrasher magazine's music editor.</li>
+        <li><strong>Meat Puppets</strong> — formed in Phoenix/Tempe; underground rock pioneers famously covered by Nirvana on MTV Unplugged.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">2 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- CLOSURE WARNING: Mystery Castle -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>Status note:</strong> Mystery Castle's public tours have been suspended as of January 2025 — check mymysterycastle.com before visiting; the exterior is still viewable from the road.
+  </div>
+</div>
+
+<!-- CLOSURE WARNING: Trunk Space -->
+<div class="closure-warning" style="margin-top: 1rem;">
+  <div class="closure-inner">
+    <strong>Status note:</strong> The Trunk Space left its longtime home at Grace Lutheran Church in May 2024 after a 30% rent increase and new parking fees, and is actively searching for a new permanent location. Check trunkspace.org or their socials for the current address before visiting.
+  </div>
+</div>
+
+<!-- GAP NOTE: bookstores -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap (Bookstores):</strong> the mandatory anarchist/infoshop/worker-owned bookstore search found that both the Phoenix Infoshop and the Phoenix Anarchist Library are listed as defunct on the Slingshot Collective's directory. Wasted Ink Zine Distro is the closest living equivalent — a DIY zine distro, not a true infoshop — so it's included as the fifth bookstore pick with that caveat rather than presented as a direct replacement.
+  </div>
+</div>
+
+<!-- GAP NOTE: electronics -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap (DIY Electronics):</strong> Phoenix has two genuinely strong hackerspace/makerspace picks (HeatSync Labs, Phoenix Forge) but research turned up no dedicated synth, pedal, or gear-hacking storefront in the metro — only national chains like Guitar Center surfaced. Two honest picks instead of five padded ones.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      JFA (Jodie Foster's Army), formed in Phoenix in 1981, fused surf rock and hardcore into skate-punk — frontman Brian Brannon later became Thrasher magazine's music editor. Worth its own entry alongside Meat Puppets and Sun City Girls as Phoenix's underappreciated underground-music lineage.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Santa Rita Hall's 1972 Cesar Chavez fast and the coining of "Sí, se puede" is a direct Southwest labor-organizing counterpart to the civil-rights and surveillance-politics threads surfacing elsewhere on this trip — worth flagging for a cross-trip labor/organizing thread as the route continues into Albuquerque.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Xanadu Coffee's beans supply The Trunk Space's espresso bar — the same small-roaster-feeds-DIY-venue pattern worth watching for in Albuquerque and beyond.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 1 Retroactive Guide &nbsp;·&nbsp; Phoenix, AZ<br>
+  Control group entry: instinct-driven Trip 1 city, curated retroactively for comparison against Trip 2's guide-led stops<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Changing Hands Bookstore",
+      tags: [TAG('i-books','Since 1974'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Phoenix's flagship indie since 1974, with the First Draft Book Bar inside and 300+ author events a year — the anchor of the local book scene.",
+      meta: [["📍","300 W Camelback Rd"],["💰","$0–35"],["⏱","45 min–1 hr"],["🕐","Evening for an event"]],
+      cite: "secretphoenix.co, coppercourier.com"
+    },
+    {
+      name: "Palabras Bilingual Bookstore",
+      tags: [TAG('i-books','Bilingual'), TAG('i-political','Community Hub')],
+      desc: "English/Spanish bookstore on Roosevelt Row that's evolved into a gallery and workshop space as much as a bookstore — a genuine community and cultural hub.",
+      meta: [["📍","906 W Roosevelt St, Unit 2"],["💰","$5–30"],["⏱","30–45 min"]],
+      cite: "secretphoenix.co, azpbs.org"
+    },
+    {
+      name: "Grassrootz Bookstore",
+      tags: [TAG('i-books','Black & Activist-Owned'), TAG('i-political','Poetry/Jazz Events')],
+      desc: "Eastlake Park's Black- and activist-owned bookstore, café, and poetry/jazz events space — a direct hit for the leftist-politics and literature interests.",
+      meta: [["📍","1145 E Washington St #200"],["💰","$0–30"],["⏱","30–45 min"],["🕐","Open daily 9am–5pm"]],
+      cite: "grassrootzbookstore.com, kjzz.org"
+    },
+    {
+      name: "Wasted Ink Zine Distro",
+      tags: [TAG('i-punk','Zine Culture'), TAG('i-political','DIY Press')],
+      desc: "Phoenix's closest living equivalent to an infoshop: a zine distro carrying DIY punk and political zine culture, one of the few surviving pieces of the city's radical-space infrastructure.",
+      meta: [["📍","323 W McDowell Rd"],["💰","$2–15"],["⏱","20–30 min"]],
+      cite: "Slingshot Collective directory"
+    },
+    {
+      name: "The Poisoned Pen",
+      tags: [TAG('i-horror','Mystery/Thriller Specialist')],
+      desc: "Mystery, thriller, and horror-adjacent genre specialist operating since 1989, with autographed first editions and imports — the genre-fiction pick.",
+      meta: [["📍","4014 N Goldwater Blvd, Old Town Scottsdale"],["💰","$10–30"],["⏱","30–45 min"]],
+      cite: "secretphoenix.co"
+    }
+  ],
+  records: [
+    {
+      name: "Stinkweeds",
+      tags: [TAG('i-diy','Local Scene Ties'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "The well-known anchor of Phoenix vinyl, on Camelback for decades, with a dedicated Arizona-artists section and deep DIY-scene ties.",
+      meta: [["📍","12 W Camelback Rd"],["💰","$5–35"],["⏱","45 min"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "The Ghost of Eastside Records",
+      tags: [TAG('i-punk','Punk Specialty')],
+      desc: "Punk-specialty shop in Tempe with strong jazz, country, reggae, and rock depth alongside the punk bins.",
+      meta: [["📍","45 W Southern Ave, Tempe"],["💰","$5–25"],["⏱","30–45 min"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "Zia Records",
+      tags: [TAG('i-diy','Largest Selection')],
+      desc: "The largest new-and-used vinyl selection anywhere in the Valley.",
+      meta: [["📍","3201 S Mill Ave, Tempe"],["💰","$5–30"],["⏱","45 min"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "Grand Avenue Records",
+      tags: [TAG('i-diy','DJ-Oriented')],
+      desc: "DJ-oriented shop in the Grand Avenue arts corridor covering hip-hop, jazz, electronic, soul, indie rock, and international.",
+      meta: [["📍","1504 NW Grand Ave"],["💰","$5–30"],["⏱","30–45 min"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "Tracks in Wax",
+      tags: [TAG('i-diy','Since 1982')],
+      desc: "Used vinyl since 1982, with strong comedy, soundtrack, and international-record selections.",
+      meta: [["📍","4741 N Central Ave"],["💰","$4–25"],["⏱","30 min"]],
+      cite: "phoenixnewtimes.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Cartel Coffee Labs",
+      tags: [TAG('i-food','Seed to Cup'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "The well-known anchor of Phoenix specialty coffee, with a 'seed to cup' sourcing philosophy across six Valley locations.",
+      meta: [["📍","Multiple locations"],["💰","$4–8"],["⏱","30–45 min"]],
+      cite: "azbigmedia.com"
+    },
+    {
+      name: "Songbird Coffee & Tea House",
+      tags: [TAG('i-food','Roosevelt Row')],
+      desc: "Roosevelt Row institution — locally sourced coffee plus 25+ loose-leaf teas.",
+      meta: [["📍","Roosevelt Row, Downtown Phoenix"],["💰","$4–7"],["⏱","30 min"]],
+      cite: "azbigmedia.com"
+    },
+    {
+      name: "Xanadu Coffee",
+      tags: [TAG('i-food','Prickly Pear Tonic'), TAG('i-punk','Supplies The Trunk Space')],
+      desc: "Garfield District roaster known for its prickly-pear espresso tonic — also the bean supplier for The Trunk Space's espresso bar, a direct line into the DIY venue scene.",
+      meta: [["📍","Garfield District, Downtown Phoenix"],["💰","$4–8"],["⏱","30–45 min"]],
+      cite: "azbigmedia.com, Wikipedia — Trunk Space"
+    },
+    {
+      name: "Lola Coffee",
+      tags: [TAG('i-food','Family-Owned')],
+      desc: "Family-owned and -operated for 10+ years, with locations in Melrose and Arcadia.",
+      meta: [["📍","N 3rd Ave"],["💰","$4–7"],["⏱","30 min"]],
+      cite: "azbigmedia.com"
+    },
+    {
+      name: "Provision Coffee",
+      tags: [TAG('i-food','Prickly Pear Blend')],
+      desc: "Arcadia café known for its Prickly Pear Blend and Ponderosa Blend, plus a strong snacks-and-cocktails program.",
+      meta: [["📍","N 32nd St, Arcadia"],["💰","$4–8"],["⏱","30–45 min"]],
+      cite: "azbigmedia.com"
+    }
+  ],
+  pastry: [
+    {
+      name: "JL Patisserie",
+      tags: [TAG('i-food','French Technique'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "The well-known pick: classic French butter croissants laminated into 55 paper-thin layers.",
+      meta: [["📍","4700 N Central Ave"],["💰","$4–9"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "Valentine",
+      tags: [TAG('i-food','Sonora Heritage Wheat')],
+      desc: "Pine Nut Cream Croissant made with Sonora heritage wheat flour and piñon frangipane — the most locally-rooted pastry in the city.",
+      meta: [["📍","4130 N 7th Ave"],["💰","$5–9"],["⏱","20–30 min"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "Proof Bread",
+      tags: [TAG('i-food','Sourdough-Forward')],
+      desc: "Sourdough-forward bakery; the pain au chocolat runs dual chocolate batons through sourdough laminated dough.",
+      meta: [["📍","Multiple locations"],["💰","$4–8"],["⏱","20 min"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "Essence Bakery Café",
+      tags: [TAG('i-food','Classic Croissant Program')],
+      desc: "Butter, chocolate, and pistachio croissants on Indian School Road.",
+      meta: [["📍","3830 E Indian School Rd"],["💰","$4–8"],["⏱","20–30 min"]],
+      cite: "phoenixnewtimes.com"
+    },
+    {
+      name: "Chacónne Patisserie",
+      tags: [TAG('i-food','Valrhona Chocolate')],
+      desc: "Chocolate almond croissant built on browned butter, cognac syrup, almond cream, and Valrhona dark chocolate.",
+      meta: [["📍","Multiple locations"],["💰","$5–9"],["⏱","20 min"]],
+      cite: "phoenixnewtimes.com"
+    }
+  ],
+  dishes: [
+    {
+      name: "Chimichanga",
+      tags: [TAG('i-food','Disputed Phoenix Origin'), TAG('i-bees','Well-Known/Must-Eat')],
+      desc: "Phoenix's own origin claim: Woody Johnson says he accidentally invented it in 1946 at Woody's El Nido, which became Macayo's Mexican Kitchen by 1952 — Tucson's El Charro Café disputes the claim. Eat your way into the rivalry.",
+      meta: [["📍","Macayo's Mexican Kitchen"],["💰","$12–18"],["⏱","45 min"],["🕐","Lunch"]],
+      cite: "Wikipedia — Chimichanga"
+    },
+    {
+      name: "Frybread / Navajo Taco",
+      tags: [TAG('i-food','James Beard Award')],
+      desc: "James Beard Award–winning Fry Bread House, founded by Tohono O'odham Nation members, celebrated for exceptionally light fry bread.",
+      meta: [["📍","Fry Bread House"],["💰","$9–14"],["⏱","30–45 min"]],
+      cite: "atlasobscura.com"
+    },
+    {
+      name: "Chicken and Waffles",
+      tags: [TAG('i-food','Phoenix Institution')],
+      desc: "Lo Lo's Chicken and Waffles is a genuine Phoenix institution for the dish.",
+      meta: [["📍","Lo Lo's Chicken and Waffles"],["💰","$12–18"],["⏱","45 min–1 hr"],["🕐","Brunch"]],
+      cite: "tasteatlas.com"
+    },
+    {
+      name: "Snickerdoodle (Chino Bandido fusion)",
+      tags: [TAG('i-food','Phoenix-Only Fusion Oddity')],
+      desc: "Chino Bandido's Chinese/Mexican fusion menu turns up on TasteAtlas's Phoenix dish list — a genuine only-here oddity.",
+      meta: [["📍","Chino Bandido"],["💰","$10–15"],["⏱","30–45 min"]],
+      cite: "tasteatlas.com"
+    },
+    {
+      name: "Sonoran Hot Dog",
+      tags: [TAG('i-food','Street-Cart Classic')],
+      desc: "Bacon-wrapped, bean-and-tomato-topped hot dog on a bolillo bun; Phoenix reportedly had more vendors than Tucson at its 2009 peak, though no single restaurant dominates the way El Charro does for chimichangas — best hunted from a cart.",
+      meta: [["📍","Citywide carts"],["💰","$4–7"],["⏱","15–20 min"]],
+      cite: "Wikipedia — Sonoran hot dog"
+    }
+  ],
+  gifts: [
+    {
+      name: "Cactus Corn Popcorn",
+      tags: [TAG('i-food','Southwest Flavors')],
+      desc: "Handmade gourmet popcorn in Southwest-inspired flavors including prickly pear and jalapeño.",
+      meta: [["📍","cactuscorn.com, Chase Field"],["💰","$8–16"]],
+      cite: "cactuscorn.com"
+    },
+    {
+      name: "Queen Creek Olive Mill products",
+      tags: [TAG('i-food','AZ\'s Only Commercial Olive Mill')],
+      desc: "Olive oils, vinegars, and specialty items like jalapeño-stuffed olives and mesquite-smoked oil from the state's only commercial olive mill.",
+      meta: [["📍","Queen Creek (outer metro)"],["💰","$10–25"]],
+      cite: "localfirstaz.com"
+    },
+    {
+      name: "Prickly pear jam / syrup / candy",
+      tags: [TAG('i-food','Signature Desert Fruit'), TAG('i-bees','Fruit Interest Match')],
+      desc: "Jams, syrups, candies, and drinks made from the prickly pear cactus, with a distinctive berry-watermelon flavor — sold at farmers markets and specialty shops citywide.",
+      meta: [["📍","Farmers markets, specialty shops"],["💰","$8–18"]],
+      cite: "cactuscorn.com"
+    },
+    {
+      name: "Hayden Flour Mills heritage grains",
+      tags: [TAG('i-food','Heritage Wheat')],
+      desc: "Stone-milled flours from heritage wheat varieties grown in Buckeye, Arizona.",
+      meta: [["📍","Specialty grocers"],["💰","$8–14"]],
+      cite: "cactuscorn.com"
+    },
+    {
+      name: "Desert wildflower honey / mesquite flour",
+      tags: [TAG('i-bees','Desert Apiaries')],
+      desc: "Raw honey from desert wildflowers and mesquite flour with a caramel-like sweetness — a direct hit for the beekeeping interest.",
+      meta: [["📍","Farmers markets, Agritopia"],["💰","$8–16"]],
+      cite: "cactuscorn.com"
+    }
+  ],
+  sights: [
+    {
+      name: "Mystery Castle",
+      tags: [TAG('i-horror','Atlas Obscura')],
+      desc: "18-room fortress hand-built by Boyce Luther Gulley over 15 years from salvaged stone, adobe, and railroad ties, reportedly held together partly with goat milk. Tours are currently suspended (see status note below) but the exterior is viewable from the road.",
+      meta: [["📍","800 E Mineral Rd"],["💰","Free to view exterior"],["⏱","30–45 min"]],
+      cite: "atlasobscura.com"
+    },
+    {
+      name: "Sunnyslope Rock Garden",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Outsider Art')],
+      desc: "Grover Cleveland Thompson's outsider-art rock garden, built 1952–74 using shards of Fiestaware — a genuinely strange piece of self-taught folk art.",
+      meta: [["📍","10023 N 13th Pl"],["💰","Free"],["⏱","20 min"]],
+      cite: "atlasobscura.com"
+    },
+    {
+      name: "Phoenix Bat Cave",
+      tags: [TAG('i-horror','Seasonal Oddity')],
+      desc: "An abandoned storm drain along the Arizona Canal Trail hosting 10,000–20,000 Mexican free-tailed bats emerging at dusk, May through October.",
+      meta: [["📍","Arizona Canal Trail near 40th St & Camelback"],["💰","Free"],["⏱","45 min"],["🕐","Dusk"]],
+      cite: "atlasobscura.com"
+    },
+    {
+      name: "South Mountain Park/Preserve",
+      tags: [TAG('i-bees','Well-Known/Must-See Natural')],
+      desc: "One of the largest municipal parks in the US — the well-known natural-attraction pick, anchored by the Hidden Valley Trail.",
+      meta: [["📍","10919 S Central Ave"],["💰","Free"],["⏱","2+ hrs"],["🕐","Morning"]],
+      cite: "thescoutguide.com"
+    },
+    {
+      name: "Santa Rita Hall",
+      tags: [TAG('i-political','Cesar Chavez 1972 Fast')],
+      desc: "Where Cesar Chavez held his 24-day fast in 1972 protesting a bill restricting farmworker collective bargaining — and where Dolores Huerta coined \"Sí, se puede.\" A landmark of Southwest labor organizing that directly matches the leftist-politics interest.",
+      meta: [["📍","10th St & Hadley Rd"],["💰","Free (exterior; community space, not a museum)"],["⏱","20 min"]],
+      cite: "Wikipedia — Santa Rita Hall, Sí se puede"
+    }
+  ],
+  venues: [
+    {
+      name: "The Trunk Space",
+      tags: [TAG('i-punk','20+ Year DIY All-Ages Venue')],
+      desc: "All-ages DIY venue that launched Andrew Jackson Jihad — Sean Bonnette's tattooed street address inspired a dozen imitators among the venue's community. Currently in transition (see status note below).",
+      meta: [["📍","In transition — check current location"],["💰","$5–15"]],
+      cite: "Wikipedia — Trunk Space, phoenixnewtimes.com"
+    },
+    {
+      name: "Nile Theater",
+      tags: [TAG('i-punk','Punk/Hardcore Specialist')],
+      desc: "Punk and hardcore specialist with a dedicated basement 'Underground' room alongside the main floor.",
+      meta: [["📍","Mesa"],["💰","$10–25"]],
+      cite: "statepress.com"
+    },
+    {
+      name: "The Rebel Lounge",
+      tags: [TAG('i-punk','Well-Known/Must-See'), TAG('i-bees','Strong AZ-Band Support')],
+      desc: "Well-known/must-see indie/alt room with strong Arizona-band support; tickets rarely rise above $10.",
+      meta: [["📍","Phoenix"],["💰","$8–15"]],
+      cite: "statepress.com, phoenixnewtimes.com"
+    },
+    {
+      name: "Yucca Tap Room",
+      tags: [TAG('i-punk','Dive-Bar Rock Room')],
+      desc: "Tempe dive-bar rock room known for frequently free shows.",
+      meta: [["📍","Tempe"],["💰","Free–$10"]],
+      cite: "statepress.com"
+    },
+    {
+      name: "Crescent Ballroom",
+      tags: [TAG('i-punk','Gold Standard of AZ Venues')],
+      desc: "Described by local press as the 'gold standard' of Arizona venues — consistently low ticket prices, strong sound, outdoor event space.",
+      meta: [["📍","Downtown Phoenix"],["💰","$10–20"]],
+      cite: "statepress.com"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Practical Art",
+      tags: [TAG('i-diy','Well-Known/Must-See'), TAG('i-bees','Local Artisans')],
+      desc: "Well-known/must-see indie gift gallery stocking Arizona artisans working in wood, fiber, and ceramic.",
+      meta: [["📍","Central Ave"],["💰","$10–60"]],
+      cite: "visitphoenix.com"
+    },
+    {
+      name: "Cosanti Originals",
+      tags: [TAG('i-diy','Paolo Soleri / Arcosanti')],
+      desc: "Hand-cast bronze and ceramic wind-bells from architect Paolo Soleri's studio — a direct link to the utopian, outsider-architecture Arcosanti project in the desert north of the city.",
+      meta: [["📍","Paradise Valley"],["💰","$20–150"]],
+      cite: "visitphoenix.com"
+    },
+    {
+      name: "Phoenix General",
+      tags: [TAG('i-diy','Local Goods')],
+      desc: "Upscale downtown gift shop with a strong local-goods and design-object selection.",
+      meta: [["📍","Downtown Phoenix"],["💰","$8–40"]],
+      cite: "danielleoutdoors.com"
+    },
+    {
+      name: "State Forty Eight",
+      tags: [TAG('i-diy','Screen-Printed Local Design'), TAG('i-political','Charity Releases')],
+      desc: "Locally screen-printed Arizona-pride apparel; limited-release designs benefit local charities.",
+      meta: [["📍","Multiple locations"],["💰","$15–40"]],
+      cite: "visitphoenix.com"
+    },
+    {
+      name: "Heard Museum Shop",
+      tags: [TAG('i-diy','Indigenous Artist-Made')],
+      desc: "Authentic, handmade items directly supporting Indigenous artists — a souvenir that's also a direct economic contribution.",
+      meta: [["📍","Central Ave"],["💰","$10–100+"]],
+      cite: "visitphoenix.com"
+    }
+  ],
+  electronics: [
+    {
+      name: "HeatSync Labs",
+      tags: [TAG('i-diy','Arizona\'s Original Hackerspace')],
+      desc: "Arizona's original hackerspace, operating since 2009 on open-source principles — 3,200 sq ft with 3D printers, laser cutters, and electronics workbenches; membership runs on a donation model, not a subscription.",
+      meta: [["📍","108 W Main St, Mesa"],["💰","Donation-based membership"]],
+      cite: "heatsynclabs.org"
+    },
+    {
+      name: "Phoenix Forge",
+      tags: [TAG('i-diy','Downtown Community Makerspace')],
+      desc: "Downtown Phoenix community makerspace tied to GateWay Community College; general membership is $80/month plus a $25 initiation fee, with reservable equipment across textiles, wood, metal, and electronics.",
+      meta: [["📍","Downtown Phoenix"],["💰","$80/mo + $25 initiation"]],
+      cite: "phxforge.com"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

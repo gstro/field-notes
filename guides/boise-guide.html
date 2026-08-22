@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boise, ID — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 1 (Retroactive) &nbsp;·&nbsp; Portland → <strong style="color:var(--cream)">Boise</strong> → Salt Lake City → Las Vegas → Phoenix → Albuquerque → Oklahoma City → Dallas → Austin</p>
+  <h1>Road Trip Stop — <em>Boise, ID</em></h1>
+  <p class="subtitle">
+    A frontier capital built partly by its own inmates, home to the largest Basque diaspora community in the Americas and the unlikely birthplace of both foundational hardcore punk and '90s indie rock.<br>
+    10 categories · 5 picks each · Sources: Atlas Obscura, TasteAtlas, local press, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Bronco Billy (1980)</strong> — Clint Eastwood dark comedy-western, bar fights and a train robbery shot around town.</li>
+        <li><strong>Moving (1988)</strong> — Richard Pryor comedy shot on Boise streets, about a transport engineer relocating to the city.</li>
+        <li><strong>Always (1989)</strong> — Spielberg's aerial-firefighter romance, largely shot in Boise National Forest just outside the city.</li>
+        <li><strong>Ghost Dad (1990)</strong> — Bill Cosby comedy, partially filmed in Boise.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born / Based Here</h3>
+      <ul>
+        <li><strong>Frank Church</strong> — U.S. Senator born in Boise (1924); chaired the Church Committee that exposed CIA/FBI/NSA surveillance abuses, foundational to modern civil-liberties politics.</li>
+        <li><strong>Doug Martsch</strong> — formed Built to Spill in Boise in 1992; locals credit him with raising the city's whole music profile.</li>
+        <li><strong>Brian "Pushead" Schroeder</strong> — Septic Death's vocalist and a legendary hardcore/metal illustrator (Metallica, Misfits).</li>
+        <li><strong>Joëlle Jones</strong> — comics artist/writer (Lady Killer, Catwoman), born in Boise.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- GAP NOTE: bookstores -->
+<div class="gap-note">
+  <div class="gap-inner">
+    <strong>Honest gap (Bookstores):</strong> the mandatory anarchist/infoshop/worker-owned bookstore search found no storefront in Boise. Boise DSA is active and organizes locally, but it's a working group, not a physical space — the city's radical-left infrastructure runs through organizing rather than a retail counterspace, unlike Salt Lake City's Boing! Collective.
+  </div>
+</div>
+
+<!-- GAP NOTE: electronics -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap (DIY Electronics):</strong> Boise has no dedicated synth shop or hackerspace with published public open-hours, unlike Salt Lake City's Squarewave Sound and 801 Labs. Maker Shop Boise is an excellent 7,000 sq ft facility, but it's woodworking, not electronics — padding this category to five with it would misrepresent the city. Four honest picks instead of five.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Septic Death and Pushead deserve their own Field Notes entry — a Boise hardcore band whose singer's illustration work (Metallica, Misfits, Zorn) reached far beyond a scene most of the country never knew existed, all from a city known for potatoes.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Frank Church's Boise origins and the Anne Frank Human Rights Memorial's explicit anti-Aryan Nations framing could anchor a "surveillance and extremism, Western edition" thread alongside Salt Lake City's Bill Haywood/IWW labor thread — both distinct from the Southern corridor's Black-business-district-erasure thread.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      The Basque Block is architecturally and culturally the closest thing on Trip 1 to a single-block ethnic-enclave story — worth flagging as a comparison point once Trip 2 reaches Deep Deuce (OKC) and Freedman's Town (Dallas), its Southern-corridor counterparts.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 1 Retroactive Guide &nbsp;·&nbsp; Boise, ID<br>
+  Control group entry: instinct-driven Trip 1 city, curated retroactively for comparison against Trip 2's guide-led stops<br>
+  Generated with City Road Trip Guide v2.8 — August 12, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Rediscovered Books",
+      tags: [TAG('i-books','Since 2006'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Boise's flagship indie downtown, with a genuinely packed events calendar — author readings, \"Books & Booze After Hours\" with local breweries, audiobook walks. The anchor of the local book scene.",
+      meta: [["📍","Downtown Boise"],["💰","$0–35"],["⏱","45 min–1 hr"],["🕐","Evening for an event"]],
+      cite: "rdbooks.org, Yelp"
+    },
+    {
+      name: "Once and Future Books",
+      tags: [TAG('i-books','All-Used Sister Shop')],
+      desc: "Rediscovered's all-used sister store a few blocks away — same ownership, entirely secondhand stock, the better stop for something out of print.",
+      meta: [["📍","1310 W State St"],["💰","$3–25"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "rdbooks.org"
+    },
+    {
+      name: "The Lit Room",
+      tags: [TAG('i-books','Small-Press Focus')],
+      desc: "A \"cozy indie bookstore and book lounge\" in Garden City leaning into small and independent presses rather than the big-five backlist.",
+      meta: [["📍","3640 W Chinden Blvd, Garden City"],["💰","$0–30"],["⏱","30–45 min"]],
+      cite: "The Scout Guide"
+    },
+    {
+      name: "Bent Corners Used Books",
+      tags: [TAG('i-books','50,000+ Titles')],
+      desc: "Deep-shelf used and vintage stock — vintage classics and hard-to-find gems across two Treasure Valley locations.",
+      meta: [["📍","3343 N Five Mile Rd, Boise"],["💰","$2–20"],["⏱","1 hr"]],
+      cite: "The Scout Guide"
+    },
+    {
+      name: "Cooks & Books",
+      tags: [TAG('i-books','Cookbook Specialty'), TAG('i-food','Culinary Classes')],
+      desc: "A Meridian shop pairing curated cookbook selections with hands-on culinary classes — a direct hit for the food-and-literature overlap.",
+      meta: [["📍","2951 E Overland Rd #110, Meridian"],["💰","$0–40+"],["⏱","30–45 min"]],
+      cite: "The Scout Guide"
+    }
+  ],
+  records: [
+    {
+      name: "The Record Exchange",
+      tags: [TAG('i-diy','Idaho\'s Largest'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Idaho's largest independent record store, downtown since 1977, deep into vinyl, CDs, and Record Store Day culture.",
+      meta: [["📍","1105 W Idaho St"],["💰","$5–40"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "Record Exchange Boise"
+    },
+    {
+      name: "Wylie Records",
+      tags: [TAG('i-punk','In-Store Shows'), TAG('i-diy','LaserDiscs')],
+      desc: "Vinyl, LaserDiscs (one of the region's few remaining LD dealers), CDs and cassettes, plus roughly biweekly in-store live sets and consigned local-artist merch — the strongest DIY-scene tie here.",
+      meta: [["📍","4586 W Chinden Blvd"],["💰","$5–35"],["⏱","45 min"],["🕐","Check calendar for an in-store"]],
+      cite: "wylierecords.com"
+    },
+    {
+      name: "Modern Sounds Vinyl and Music",
+      tags: [TAG('i-diy','Sister Shop')],
+      desc: "Sister location to the Twin Falls shop of the same name — solid general vinyl inventory.",
+      meta: [["📍","Boise"],["💰","$5–30"],["⏱","30–45 min"]],
+      cite: "Record Store Directory"
+    },
+    {
+      name: "Jam Session Record Shop",
+      tags: [TAG('i-diy','Main Street')],
+      desc: "A Main Street storefront, smaller and more browsable than the Record Exchange.",
+      meta: [["📍","Main St, Boise"],["💰","$5–25"],["⏱","30 min"]],
+      cite: "Record Store Directory"
+    },
+    {
+      name: "Spin Records Boise",
+      tags: [TAG('i-diy','Vinyl + Instruments')],
+      desc: "Relocated from Petaluma, CA; carries used vinyl alongside musical instruments.",
+      meta: [["📍","Boise"],["💰","$5–30"],["⏱","30–45 min"]],
+      cite: "Record Store Directory"
+    }
+  ],
+  coffee: [
+    {
+      name: "Flying M Coffee",
+      tags: [TAG('i-drinks','Since 1992'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Downtown institution running since 1992, house-roasted — the anchor of Boise coffee culture.",
+      meta: [["📍","500 W Idaho St"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Momentum Roasting Co.",
+      tags: [TAG('i-drinks','Small Roaster')],
+      desc: "Small Boise roaster and café near Julia Davis Park with an art-and-outdoors community bent.",
+      meta: [["📍","508 S 5th St"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Primal Coffee",
+      tags: [TAG('i-drinks','Wood-Fired Roast'), TAG('i-food','Breakfast Sandwiches')],
+      desc: "Wood-fired and concentrated-sunlight roasting methods, easygoing patio-with-fire-pits vibe on The Bench, flips into Karuna Kava Bar at night.",
+      meta: [["📍","20 N Latah St"],["💰","$4–10"],["⏱","45 min"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Neckar Coffee",
+      tags: [TAG('i-drinks','Downtown Roaster')],
+      desc: "Downtown specialty roaster and café with a strong pour-over and pastry program.",
+      meta: [["📍","117 S 10th St"],["💰","$4–8"],["⏱","30 min"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Slow By Slow Coffee Bar",
+      tags: [TAG('i-drinks','Multi-Roaster Bar')],
+      desc: "A multi-roaster bar in BoDo rotating specialty coffees with hand-brewed pour-overs — taste several Boise roasters in one stop.",
+      meta: [["📍","405 S 8th St #155"],["💰","$4–9"],["⏱","30–45 min"]],
+      cite: "mycoffeeexplorer.com"
+    }
+  ],
+  pastry: [
+    {
+      name: "Janjou Pâtisserie",
+      tags: [TAG('i-food','French Technique'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "The city's French-technique benchmark since 2008 — butter croissants and specialty cakes in a deliberately small, unhurried space (staff cap it at six customers at a time).",
+      meta: [["📍","1754 W State St"],["💰","$4–12"],["⏱","30–45 min"],["🕐","Morning, before the case thins"]],
+      cite: "Wanderlog"
+    },
+    {
+      name: "Yeast & West Natural Bakery",
+      tags: [TAG('i-food','Organic Sourdough')],
+      desc: "Organic sourdough and ancient-grain baking, small-batch throughout the morning — the closest thing to a farmer-direct pastry program in Boise.",
+      meta: [["📍","600 S 9th St"],["💰","$4–10"],["⏱","20–30 min"]],
+      cite: "Wanderlog"
+    },
+    {
+      name: "Gaston's Bakery",
+      tags: [TAG('i-food','52-Year Starter')],
+      desc: "Handcrafted breads and croissants built on a 52-year-old sourdough starter and locally sourced Idaho wheat.",
+      meta: [["📍","3651 W Overland Rd"],["💰","$4–10"],["⏱","20–30 min"]],
+      cite: "Wanderlog"
+    },
+    {
+      name: "Guru Donuts",
+      tags: [TAG('i-food','Vegan/GF Options')],
+      desc: "Made-from-scratch donuts with genuinely good vegan and gluten-free (potato-based) options and playful flavors like \"hipsterberry.\"",
+      meta: [["📍","928 W Main St #100"],["💰","$3–7"],["⏱","20 min"]],
+      cite: "Wanderlog"
+    },
+    {
+      name: "Certified Kitchen and Bakery",
+      tags: [TAG('i-food','Hyde Park')],
+      desc: "Same 52-year sourdough starter lineage, known for English muffins and breakfast sandwiches — small, limited seating, arrive early.",
+      meta: [["📍","1511 N 13th St"],["💰","$4–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "Wanderlog"
+    }
+  ],
+  dishes: [
+    {
+      name: "Finger Steaks",
+      tags: [TAG('i-food','Invented in Boise, 1957'), TAG('i-bees','Well-Known/Must-Eat')],
+      desc: "Battered, deep-fried strips of beef steak, purportedly created by Milo Bybee in Boise in 1957, served with fry sauce or horseradish cocktail sauce.",
+      meta: [["📍","Westside Drive-In / Lindy's Steak House"],["💰","$8–14"],["⏱","30–45 min"],["🕐","Lunch"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Ice Cream Potato",
+      tags: [TAG('i-food','Visual Joke Dessert')],
+      desc: "Vanilla ice cream shaped and rolled in cocoa powder to look like a baked russet, topped with whipped-cream \"sour cream\" and candy garnish.",
+      meta: [["📍","Westside Drive-In"],["💰","$6–9"],["⏱","20 min"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Huckleberry Pie",
+      tags: [TAG('i-food','Regional Specialty')],
+      desc: "Idaho's signature wild-berry dessert, tart and purple — a genuine seasonal treat across the region.",
+      meta: [["📍","Pie Hut"],["💰","$6–10"],["⏱","20–30 min"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Idaho Hot Dog",
+      tags: [TAG('i-food','Regional Oddity')],
+      desc: "A skinless hot dog baked inside a hollowed-out potato, split and topped with chives, bacon, and sour cream.",
+      meta: [["📍","Various Boise diners"],["💰","$6–10"],["⏱","20 min"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Beef Tongue & Croquetas — Bar Gernika",
+      tags: [TAG('i-food','Basque Cuisine'), TAG('i-drinks','Basque Pub')],
+      desc: "Boise's Basque pub on the Basque Block, famous for beef tongue served Saturdays and a rotating croquetas menu.",
+      meta: [["📍","202 S Capitol Blvd"],["💰","$12–22"],["⏱","1 hr"],["🕐","Saturday for the tongue"]],
+      cite: "Roadfood, Atlas Obscura"
+    }
+  ],
+  gifts: [
+    {
+      name: "Boise Hot Sauce Co. (Kempature208)",
+      tags: [TAG('i-food','Local Hot Sauce'), TAG('i-bees','Honey-Based Flavor')],
+      desc: "David Kemp and Katii Blaser's Meridian-founded hot sauce line, born from a 2018 wing-off win — flavors include a \"Bee Stinger\" built on wildflower honey.",
+      meta: [["📍","The Shed / online"],["💰","$8–14/bottle"],["⏱","N/A"]],
+      cite: "BoiseDev"
+    },
+    {
+      name: "Idaho Huckleberry Products",
+      tags: [TAG('i-food','Idaho-Coded Gift')],
+      desc: "Jams, syrups, and candy from Weiser Classic Candy or Larchwood Farms gift trays — the single most Idaho-coded mailable gift there is.",
+      meta: [["📍","Weiser Classic Candy / Larchwood Farms"],["💰","$8–25"],["⏱","N/A"]],
+      cite: "Weiser Classic Candy, Larchwood Farms"
+    },
+    {
+      name: "Local Honey — Boise Farmers Market",
+      tags: [TAG('i-bees','Local Apiaries')],
+      desc: "Honey from area apiaries sold Saturdays at the Shoreline Drive market alongside jam, bread, and produce.",
+      meta: [["📍","1500 Shoreline Dr"],["💰","$8–18/jar"],["⏱","N/A"],["🕐","Sat 9am–1pm, Apr–Oct"]],
+      cite: "Boise Farmers Market"
+    },
+    {
+      name: "Boise Co-op Local Pantry Goods",
+      tags: [TAG('i-food','Since the 1970s')],
+      desc: "Hand-picked local and Idaho-made products under one roof — jarred condiments, dry goods, specialty foods from area producers.",
+      meta: [["📍","888 W Fort St"],["💰","$6–30"],["⏱","30–45 min"]],
+      cite: "KIVI-TV"
+    },
+    {
+      name: "8 Feathers Distillery Bourbon & Whiskey",
+      tags: [TAG('i-drinks','Small-Batch Bourbon')],
+      desc: "Small-batch bourbon, whiskey, and moonshine — including vanilla and cherry-flavored bourbon — made with locally sourced grain and an artesian well.",
+      meta: [["📍","272 N Maple Grove Rd"],["💰","$25–45/bottle"],["⏱","N/A"],["🕐","Tasting room Sat 12–5"]],
+      cite: "Our Travel Moments"
+    }
+  ],
+  sights: [
+    {
+      name: "Idaho Anne Frank Human Rights Memorial",
+      tags: [TAG('i-political','Anti-Extremism'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "A free outdoor memorial, the largest of its kind in the U.S. — built by the Wassmuth Center for Human Rights explicitly to confront Idaho's history as a haven for white-supremacist organizing (the Aryan Nations compound was in Hayden Lake).",
+      meta: [["📍","770 S 8th St"],["💰","Free"],["⏱","30–45 min"],["🕐","Any time; morning light for photos"]],
+      cite: "Wassmuth Center"
+    },
+    {
+      name: "Freak Alley Gallery",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Outdoor Street Art')],
+      desc: "The largest outdoor art gallery in the Northwest U.S. — a full alley of murals, legitimized street art rather than papered-over graffiti.",
+      meta: [["📍","Downtown Boise"],["💰","Free"],["⏱","20–30 min"],["🕐","Daylight"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Old Idaho Penitentiary",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-horror','Built by Inmates')],
+      desc: "A 19th-century prison literally built by its own inmates, operating until 1973; now a museum with cellblocks, a gallows, and a genuinely grim history — regular ghost tours run here.",
+      meta: [["📍","2445 Old Penitentiary Rd"],["💰","~$8"],["⏱","1.5–2 hrs"],["🕐","Midday"]],
+      cite: "Atlas Obscura, Idaho State Historical Society"
+    },
+    {
+      name: "The Basque Block",
+      tags: [TAG('i-food','Basque Culture'), TAG('i-diy','Largest Diaspora in Americas')],
+      desc: "A single downtown block sustaining the largest concentration of Basque culture in the Americas — cultural center, fronton court, museum, and Bar Gernika, direct continuity from 19th-century Basque sheepherders.",
+      meta: [["📍","Grove St, Downtown Boise"],["💰","Free / $5 museum"],["⏱","1–1.5 hrs"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "The Black Cliffs",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "Columnar volcanic basalt cliffs along the Boise River toward Lucky Peak Reservoir, climbed since the 1960s with hundreds of established routes today — the natural-attraction balance-rule pick.",
+      meta: [["📍","Highway 21, Boise River corridor"],["💰","Free"],["⏱","2+ hrs"],["🕐","Morning"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Boise River Greenbelt",
+      tags: [TAG('i-bees','Well-Known/Must-See Natural')],
+      desc: "25 miles of paved, tree-shaded path along the river connecting most of the city's parks — the anchor everyone in Boise actually uses daily.",
+      meta: [["📍","Along the Boise River"],["💰","Free"],["⏱","Any length"],["🕐","Golden hour"]],
+      cite: "City of Boise"
+    },
+    {
+      name: "Egyptian Theatre",
+      tags: [TAG('i-horror','1927 Movie Palace')],
+      desc: "A 1927 Egyptian Revival movie palace built on the Tutankhamun-discovery craze, nearly demolished, restored in 1999 — still runs classic film screenings, concerts, and comedy.",
+      meta: [["📍","700 W Main St"],["💰","Varies by show"],["⏱","2–3 hrs"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Cherie Buckner-Webb Park (\"Gentle Breeze\")",
+      tags: [TAG('i-political','Civic Memory')],
+      desc: "A park dedicated to Idaho's first Black legislator, anchored by Matthew Mazzotta's oversized pink tree sculpture — a small but pointed civic-memory stop.",
+      meta: [["📍","Boise"],["💰","Free"],["⏱","15–20 min"]],
+      cite: "Atlas Obscura"
+    }
+  ],
+  venues: [
+    {
+      name: "The Shredder",
+      tags: [TAG('i-punk','DIY Heart of the Scene')],
+      desc: "Self-described \"heaviest hitting venue in Boise,\" run for years by the city's most persistent underground promoter — metal, hardcore, and punk shows alongside pool tables and a skate half-pipe.",
+      meta: [["📍","Boise"],["💰","$10–20"],["⏱","3+ hrs"],["🕐","Night"]],
+      cite: "shredderboise.com"
+    },
+    {
+      name: "Treefort Music Hall",
+      tags: [TAG('i-punk','All-Ages'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "State-of-the-art all-ages venue tied to the Duck Club group and Treefort Music Fest — indie rock to hip-hop to punk.",
+      meta: [["📍","722 W Broad St"],["💰","$15–40"],["⏱","3 hrs"]],
+      cite: "treefortmusichall.com"
+    },
+    {
+      name: "Neurolux",
+      tags: [TAG('i-punk','Open 365 Days')],
+      desc: "Downtown lounge and long-running indie-rock room, open every day of the year — the room most closely tied to Boise's post-Built to Spill indie identity.",
+      meta: [["📍","111 N 11th St"],["💰","$10–25"],["⏱","3 hrs"]],
+      cite: "neurolux.com"
+    },
+    {
+      name: "Shrine Social Club (Ballroom & Basement)",
+      tags: [TAG('i-punk','Basement Punk/Hardcore')],
+      desc: "A two-room Duck Club venue with a dedicated basement space that leans into punk and hardcore bookings alongside the bigger ballroom upstairs.",
+      meta: [["📍","Boise"],["💰","$10–30"],["⏱","3 hrs"]],
+      cite: "shrinesocialclub.com"
+    },
+    {
+      name: "Boise Bomb Bunker",
+      tags: [TAG('i-punk','DIY Practice Space')],
+      desc: "A repurposed concrete building serving as practice and recording space for local bands — the community-collective side of the scene rather than a public venue.",
+      meta: [["📍","Boise"],["💰","N/A — not public-facing"],["⏱","N/A"]],
+      cite: "The Arbiter"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Re-POP Gifts",
+      tags: [TAG('i-diy','Pop-Culture Focus'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Downtown pop-culture and fandom shop with genuinely playful, non-generic merch.",
+      meta: [["📍","210 N 10th St"],["💰","$5–35"],["⏱","20–30 min"]],
+      cite: "repopgifts.com"
+    },
+    {
+      name: "Evermore Prints",
+      tags: [TAG('i-diy','Local Artist Prints')],
+      desc: "A local giclée print studio partnering directly with Boise artists and photographers on archival reproductions — hosts First Thursday gallery spotlights for local creators.",
+      meta: [["📍","5375 W Kendall St"],["💰","$15–80"],["⏱","20–30 min"]],
+      cite: "evermoreprints.com"
+    },
+    {
+      name: "Idaho Anne Frank Memorial Gift Shop",
+      tags: [TAG('i-political','Political Memory')],
+      desc: "Books and materials tied directly to the memorial's human-rights mission — a souvenir that's also a small act of political memory.",
+      meta: [["📍","770 S 8th St"],["💰","$5–25"],["⏱","10–15 min"]],
+      cite: "Wassmuth Center"
+    },
+    {
+      name: "Boise Co-op",
+      tags: [TAG('i-food','One-Stop Local Goods')],
+      desc: "Alongside groceries, stocks Idaho-made goods, local honey, and gift-worthy pantry items under one roof.",
+      meta: [["📍","888 W Fort St"],["💰","$6–30"],["⏱","20–30 min"]],
+      cite: "KIVI-TV"
+    },
+    {
+      name: "Idaho Vinyl Records — \"Strange & Cool Covers\"",
+      tags: [TAG('i-horror','Oddball Vintage Covers'), TAG('i-diy','Framable Wall Art')],
+      desc: "Inside the Antique World Mall; their oddball vintage record-cover stock doubles as genuinely weird, framable wall art if you want a souvenir with more edge than a magnet.",
+      meta: [["📍","4544 W Overland Rd"],["💰","$3–20"],["⏱","20–30 min"]],
+      cite: "idahovinylrecords.com"
+    }
+  ],
+  electronics: [
+    {
+      name: "UP MakerSpace",
+      tags: [TAG('i-diy','3D Printing/CNC/Robotics')],
+      desc: "Member-driven community makerspace in Garden City covering 3D printing, CNC cutting, laser engraving, robotics, and electronics, with member-led classes and events.",
+      meta: [["📍","Garden City"],["💰","Membership-based"],["⏱","Varies"]],
+      cite: "upmakerspace.com"
+    },
+    {
+      name: "Open Lab Idaho",
+      tags: [TAG('i-diy','Hackers & Circuit Benders')],
+      desc: "A community of \"hackers, computer geeks, engineers, circuit benders, crafters, tinkers, programmers, and artists\" running classes and outreach, with deep ties to Idaho's FIRST Robotics program.",
+      meta: [["📍","Boise"],["💰","Membership/class fees"],["⏱","Varies"]],
+      cite: "openlabidaho.org"
+    },
+    {
+      name: "Boise State MakerLab",
+      tags: [TAG('i-diy','Library Makerspace')],
+      desc: "A public library-adjacent makerspace on the ground floor of Albertsons Library — primarily for Boise State affiliates, but will field outside equipment inquiries by email.",
+      meta: [["📍","Albertsons Library, Boise State"],["💰","Free for affiliates"],["⏱","Varies"],["🕐","Weekdays 10am–5pm"]],
+      cite: "boisestate.edu"
+    },
+    {
+      name: "12th Fret Music",
+      tags: [TAG('i-diy','Gear Repair Bench')],
+      desc: "A guitar, amp, and pedal shop with a genuine repair bench and a recording studio/soundstage under construction — the closest thing Boise has to a gear-hacking hub.",
+      meta: [["📍","671 S Capitol Blvd"],["💰","Varies"],["⏱","30–45 min"]],
+      cite: "12thfretmusic.com"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

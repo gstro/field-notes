@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Washington, DC — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  .pc-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    font-style: italic;
+  }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-where {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--burnt-light);
+    margin-bottom: 4px;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+  .flag-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 1px solid rgba(220,60,60,0.35);
+    background: rgba(220,60,60,0.08);
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 4px;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .closure-inner:last-child { margin-bottom: 0; }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+  }
+  .gap-inner:last-child { margin-bottom: 0; }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 2 (Guide-Led) &nbsp;·&nbsp; Austin → … → Richmond → <strong style="color:var(--cream)">Washington, DC</strong> → Philadelphia → …</p>
+  <h1>Road Trip Stop — <em>Washington, DC</em></h1>
+  <p class="subtitle">
+    The federal capital and, structurally, its own case study in disenfranchisement -- taxation without representation on the license plates, U Street's "Black Broadway" gutted by the 1968 riots and gentrified since, and a hardcore-punk DIY ethic (Minor Threat, Fugazi, Bad Brains, Dischord Records, straight edge) as consequential as any city's. Six nights here, the longest stop of Trip 2.<br>
+    10 categories · 5 picks each (plus bonus picks where noted) · Sources: Atlas Obscura, Eater, TasteAtlas, Timeout, Wikipedia, Washingtonian, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>The Exorcist (1973)</strong> — the climactic death scene was shot on the steep Georgetown stairway now called the Exorcist Steps (Prospect St &amp; Canal Rd NW), a designated DC landmark since 2015. Georgetown University's Healy Hall and Dahlgren Chapel also appear.</li>
+        <li><strong>All the President's Men (1976)</strong> — DC shooting began May 1975; the Washington Post newsroom was meticulously recreated on a Burbank soundstage, but the story runs directly through the real Watergate complex in Foggy Bottom.</li>
+        <li><strong>St. Elmo's Fire (1985)</strong> — set at Georgetown University, but the school refused filming permission over the script's content, so campus scenes were shot instead at the University of Maryland.</li>
+        <li><em>Correction:</em> House of Cards, the most-cited "DC show" of the streaming era, was shot almost entirely in Baltimore, not DC — the District's restrictive permitting pushes most current production north.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Duke Ellington</strong> (b. 1899) — jazz composer/bandleader, came up on U Street; the Duke Ellington School of the Arts is named for him.</li>
+        <li><strong>Marvin Gaye</strong> (b. 1939) — soul icon, born at Freedmen's Hospital, raised in DC public housing before Motown.</li>
+        <li><strong>Ian MacKaye</strong> (b. 1962) — co-founder of Dischord Records (1980), frontman of Minor Threat and Fugazi; his lyric "Straight Edge" gave a whole hardcore subculture its name.</li>
+        <li><strong>Henry Rollins</strong> (b. 1961) — fronted DC's State of Alert before joining Black Flag in 1981.</li>
+        <li><strong>Eleanor Holmes Norton</strong> (b. 1937) — SNCC/Freedom Summer organizer, first woman to chair the EEOC, DC's non-voting House delegate since 1991, founding member of the Congressional Progressive Caucus.</li>
+        <li><strong>Bad Brains</strong> (formed DC, 1976) — Dr. Know, Darryl Jenifer, H.R. and Earl Hudson turned from jazz fusion to some of the fastest, most technically accomplished hardcore ever recorded, before relocating to NYC around 1980.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="pc-note">Note: visit window is late May 2026 — well after peak cherry blossom season (typically late March–early April). The Tidal Basin is still worth a stroll; the blossoms themselves will be gone.</p>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + 5 bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks + 1 bonus</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks (honest gap)</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTES -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Current Status Note:</strong><br>
+    <strong>The Potter's House</strong> (Adams Morgan) — Adams Morgan's oldest locally owned bookstore-cafe, a pay-what-you-can nonprofit space since 1960 with deep roots in DC's peace and civil-rights organizing — is currently closed "for the foreseeable future." Its online bookstore remains active. This was the guide's strongest lead on a true DC infoshop-style radical bookstore/cafe, and its closure is noted here rather than papered over.
+  </div>
+  <div class="closure-inner">
+    <strong>⚠ Correction:</strong><br>
+    <strong>Red Emma's</strong>, the worker-cooperative anarchist bookstore/cafe often mentally filed under "DC," is actually in Baltimore, MD (3128 Greenmount Ave) — excluded from this guide's DC-proper picks for that reason.
+  </div>
+  <div class="closure-inner">
+    <strong>⚠ Financial distress:</strong><br>
+    <strong>Compass Coffee</strong>, DC's best-known local roaster chain, filed for Chapter 11 bankruptcy in January 2026. Store footprint may be actively shrinking — call ahead before planning around a specific location.
+  </div>
+  <div class="closure-inner">
+    <strong>⚠ Relocating:</strong><br>
+    <strong>Crooked Beat Records</strong>, one of DC's longest-running vinyl shops, was mid-relocation from Adams Morgan to Del Ray in Alexandria, VA as of this guide's writing — still Metro-reachable but no longer a DC-proper stop.
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-note">
+  <div class="gap-inner">
+    <strong>Honest gap — Bookstores:</strong> the mandatory anarchist/radical/infoshop search found no active DC-proper worker-owned radical bookstore. The strongest historical candidate (The Potter's House) is closed; the closest true infoshop-model space (Red Emma's) is in Baltimore. DC's actual radical-left infrastructure runs instead through explicitly political community hubs that are commercial rather than cooperative — Busboys and Poets, Sankofa, Solid State Books — plus organizing groups like DSA DC with no public storefront. A federal capital with enormous nonprofit/advocacy-org density produces a different radical-bookselling ecosystem than a college town or port city — structurally different, not weaker.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — DIY Electronics:</strong> Category 10 carries four picks, not five, and two of the four (Rhizome's general-craft focus, Chuck Levin's location in Wheaton, MD) are adjacent rather than dead-center matches. DC has an excellent hackerspace (HacDC) and free public fab labs through the library system, but no dedicated synth shop or boutique pedal manufacturer on par with Keeley Electronics (Oklahoma City) or Squarewave Sound (Salt Lake City). Padding to five would misrepresent the city.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      The U Street "Black Broadway" walk deserves a standalone Field Notes entry of its own — Duke Ellington's and Marvin Gaye's neighborhood, gutted by the 1968 riots, slow-rebuilt over decades, now under a second wave of gentrification pressure. Ben's Chili Bowl, Busboys and Poets, and the 9:30 Club's current site all sit on the same few blocks.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      DC extends the "dispossession-and-precedence" thread first anchored at Oklahoma City's Deep Deuce and continued at Richmond's Jackson Ward/St. Luke Penny Savings Bank the leg before this one — U Street is DC's version of the same pattern: a self-sufficient Black business district disinvested, then reinvested-and-displaced.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Dischord Records' DIY, no-lawyers, five-dollar-show model is the direct ancestor of the all-ages ethic this guide series keeps finding in smaller cities (Boise's Shredder, OKC's The Sanctuary) — worth tracing forward to see how the model holds up in Philadelphia, the next stop.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 2 Guide-Led Stop &nbsp;·&nbsp; Washington, DC — Leg 8 of 13, Austin → Philadelphia<br>
+  Six-night stop, the longest of Trip 2 — full rebuild replacing a pre-v2.3 interactive-checklist guide that also lacked Category 10<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+const FLAG = (label) => `<span class="flag-tag">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Politics and Prose",
+      tags: [TAG('i-books','Unionized 2022'), TAG('i-political','Community')],
+      desc: "DC's flagship indie since 1984, and 'liberal Washington's most sacred space' — Clinton, Obama and Rowling have all done events here. Became the city's first unionized bookstore in 2022. Three locations now, including Union Market.",
+      meta: [["📍","Chevy Chase (+ Union Market, The Wharf)"],["💰","$0–35"],["⏱","1 hr"],["🕐","Weekday morning; evening for an event"]],
+      cite: "Wikipedia — Politics and Prose"
+    },
+    {
+      name: "Kramerbooks & Afterwords",
+      tags: [TAG('i-books','Since 1976')],
+      desc: "One of the first bookstore-cafes in the country. Gained a permanent footnote in political history in 1998 when it beat back a subpoena for Monica Lewinsky's purchase records, backed by the ACLU.",
+      meta: [["📍","1517 Connecticut Ave NW, Dupont Circle"],["💰","$0–30"],["⏱","45 min"],["🕐","Late night on weekends, historically"]],
+      cite: "Wikipedia — Kramerbooks"
+    },
+    {
+      name: "Solid State Books",
+      tags: [TAG('i-books','Black-Owned'), TAG('i-political','Community Hub')],
+      desc: "Two DC locations, 18 active book clubs including a horror club and a 'Community Building Book Club' — a genuine neighborhood hub rather than a browse-and-leave shop.",
+      meta: [["📍","600 H St NE (+ 14th &amp; S St NW)"],["💰","$0–30"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "solidstatebooksdc.com"
+    },
+    {
+      name: "Busboys and Poets",
+      tags: [TAG('i-books','Literary Events'), TAG('i-political','Activist Hub')],
+      desc: "Restaurant-bookstore-bar-events venue opened 2005 by activist Andy Shallal, named for Langston Hughes's stint bussing tables. A hub for DC's progressive organizing since day one — national press covered its opening as a political story, not a restaurant one.",
+      meta: [["📍","2021 14th St NW, U Street"],["💰","$5–25"],["⏱","1–1.5 hrs"],["🕐","Evening for a poetry/panel event"]],
+      cite: "Wikipedia — Busboys and Poets"
+    },
+    {
+      name: "Sankofa Video Books & Cafe",
+      tags: [TAG('i-books','Black-Owned'), TAG('i-political','Pan-African')],
+      desc: "Founded 1997 by filmmaker Haile Gerima and Shirikiana Gerima, named for their acclaimed 1993 film Sankofa. Black-owned 'liberated territory' for Pan-African literature and organizing — the strongest film/literature/political crossover pick in the city.",
+      meta: [["📍","2714 Georgia Ave NW"],["💰","$0–30"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "sankofa.com"
+    }
+  ],
+  records: [
+    {
+      name: "Som Records",
+      tags: [TAG('i-diy','Best in DC'), TAG('i-punk','All Genres')],
+      desc: "Widely called the best record shop in DC — go-go, soul, funk, punk, disco and everything between, dollar-bin to rare, with an in-store turntable to preview before you buy.",
+      meta: [["📍","1843 14th St NW"],["💰","$5–40"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "somrecordsdc.com"
+    },
+    {
+      name: "Byrdland Records",
+      tags: [TAG('i-diy','5,000+ Titles')],
+      desc: "New and used titles from the team behind Songbyrd Music House next door; runs the New Columbia Record Club membership program and Saturday DJ sessions.",
+      meta: [["📍","1264 5th St NE, Union Market"],["💰","$8–40"],["⏱","45 min"],["🕐","Saturday for 'The Saturday Spins'"]],
+      cite: "byrdlandrecords.com"
+    },
+    {
+      name: "Joint Custody",
+      tags: [TAG('i-punk','Hardcore Memorabilia'), TAG('i-diy','Vintage')],
+      desc: "Vintage-and-vinyl shop run by lifelong collectors — rare hardcore demo tapes from the DC/Baltimore scene, band tees, and press photos alongside the crates. In-house merch includes a pointed 'U.S. Out Of DC' tee.",
+      meta: [["📍","1530 U St NW (+ Takoma)"],["💰","$5–60"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "jointcustodydc.com"
+    },
+    {
+      name: "Songbyrd Music House",
+      tags: [TAG('i-punk','Record Lathe'), TAG('i-diy','Press Your Own')],
+      desc: "Venue, cafe and vinyl shop in one, with a working record-pressing lathe on-site so you can genuinely cut your own single. Relocated here from Adams Morgan during the pandemic.",
+      meta: [["📍","540 Penn St NE, Union Market"],["💰","$8–40"],["⏱","Evening for a show"],["🕐","Night"]],
+      cite: "songbyrddc.com"
+    },
+    {
+      name: "Crooked Beat Records",
+      tags: [TAG('i-punk','Dischord Specialist'), TAG('i-diy','Local Label')],
+      desc: "DC's longtime Dischord/Touch &amp; Go/Merge specialist and largest new-vinyl selection in the area was mid-relocation to Alexandria's Del Ray neighborhood as of this guide's writing — worth the Metro trip, but no longer strictly DC-proper. Runs its own local-tribute label, including a 30th-anniversary Insurgence DC punk comp.",
+      meta: [["📍","Relocating to Del Ray, Alexandria, VA"],["💰","$5–40"],["⏱","45 min"],["🕐","Afternoon"],["⚠","Relocated out of DC"]],
+      cite: "crookedbeat.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Qualia Coffee",
+      tags: [TAG('i-food','Direct-Trade'), TAG('i-political','Community-First')],
+      desc: "Roasting in DC since 2009, treating coffee explicitly as 'produce' — direct relationships with small-scale growers, beans delivered within days of roasting, distribution through farmers markets and local partners rather than mass retail.",
+      meta: [["📍","3917 Georgia Ave NW, Petworth"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "qualiacoffeeroasters.com"
+    },
+    {
+      name: "Compass Coffee",
+      tags: [TAG('i-food','DC-Founded Roaster')],
+      desc: "DC's best-known local roaster since 2014, credited by Mayor Bowser for 'jump-starting the Made in DC movement.' Filed for Chapter 11 bankruptcy in January 2026 — call ahead or check hours, as the store footprint may be actively shrinking.",
+      meta: [["📍","Shaw flagship + multiple DC/Arlington locations"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"],["⚠","Bankruptcy filed Jan 2026"]],
+      cite: "Wikipedia — Compass Coffee"
+    },
+    {
+      name: "Filter Coffeehouse",
+      tags: [TAG('i-food','DC\'s Original Third Wave')],
+      desc: "Opened 2008, generally credited as DC's original third-wave coffee shop — small, unfussy, still a neighborhood fixture rather than a chain footprint.",
+      meta: [["📍","Adams Morgan"],["💰","$4–7"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "local coffee-guide consensus"
+    },
+    {
+      name: "Little Wild Things Coffee",
+      tags: [TAG('i-food','Micro-Roaster'), TAG('i-political','Queer-Owned')],
+      desc: "Woman- and queer-owned DC micro-roaster — one of the smaller, more values-forward roasting operations in the city rather than a scaling chain.",
+      meta: [["📍","NoMa"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "littlewildthingscoffee.com"
+    },
+    {
+      name: "Big Bear Cafe",
+      tags: [TAG('i-food','Neighborhood Anchor')],
+      desc: "One of the anchor businesses that helped kick off Bloomingdale's 2000s revival — patio and herb garden, still a genuine neighborhood living room rather than a destination cafe.",
+      meta: [["📍","Bloomingdale"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "bigbearcafe-dc.com"
+    }
+  ],
+  pastry: [
+    {
+      name: "Bread Furst",
+      tags: [TAG('i-food','James Beard Award')],
+      desc: "James Beard Award-winning bakery from Mark Furstenberg, who previously built and sold both Marvelous Market and The Breadline — the closest thing DC has to a bread-and-pastry patriarch, still hand-shaping loaves at 80-plus.",
+      meta: [["📍","4434 Connecticut Ave NW, Van Ness"],["💰","$4–14"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "breadfurst.com"
+    },
+    {
+      name: "Seylou Bakery & Mill",
+      tags: [TAG('i-food','Mills Its Own Grain')],
+      desc: "Mills its own whole grains on-site rather than buying flour — a genuinely rare farmer-to-loaf approach among East Coast bakeries, with a James Beard semifinalist nod for it.",
+      meta: [["📍","Shaw"],["💰","$4–12"],["⏱","20–30 min"],["🕐","Morning, before the case thins"]],
+      cite: "local bakery-guide consensus"
+    },
+    {
+      name: "Buttercream Bakeshop",
+      tags: [TAG('i-food','Woman-Owned')],
+      desc: "Woman-owned Shaw bakeshop known for cupcakes and a rotating seasonal case that leans playful rather than strictly French-technique.",
+      meta: [["📍","Shaw"],["💰","$4–8"],["⏱","20 min"],["🕐","Anytime"]],
+      cite: "local bakery-guide consensus"
+    },
+    {
+      name: "Patisserie Poupon",
+      tags: [TAG('i-food','French, Since the 1980s')],
+      desc: "Old-school French patisserie that's held down a Georgetown storefront since the 1980s — croissants and classic French pastry when the rest of Wisconsin Ave has turned over several times since.",
+      meta: [["📍","Georgetown"],["💰","$4–12"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "local bakery-guide consensus"
+    },
+    {
+      name: "Dolcezza Gelato & Coffee",
+      tags: [TAG('i-food','Farmer-Direct Fruit')],
+      desc: "Argentine-rooted gelato maker that also roasts its own coffee — not a pastry counter in the strict sense, but the closest thing DC has to a farmer-direct dessert program, sourcing fruit for gelato flavors seasonally.",
+      meta: [["📍","Dupont Circle + multiple locations"],["💰","$6–10"],["⏱","20 min"],["🕐","Afternoon"]],
+      cite: "local dessert-guide consensus"
+    }
+  ],
+  dishes: [
+    {
+      name: "Half-Smoke — Ben's Chili Bowl",
+      tags: [TAG('i-food','DC Icon'), TAG('i-political','Civil Rights History')],
+      desc: "DC's signature sausage — half-pork, half-beef, smoked, chili-topped. Ben's opened 1958 in a former silent-movie theater and stayed open through the curfew during the April 1968 riots at Stokely Carmichael's request, feeding both police and activists; Ben wrote 'Soul Brother' on the window to keep it from being burned.",
+      meta: [["📍","1213 U St NW"],["💰","$8–12"],["⏱","30–45 min"],["🕐","Lunch, or late night"]],
+      cite: "Wikipedia — Ben's Chili Bowl"
+    },
+    {
+      name: "Mumbo Sauce",
+      tags: [TAG('i-food','DC/PG County Original')],
+      desc: "Sweet-sour-spicy red condiment served on wings, fries and fried rice across DC and Prince George's County carryouts. Origin is contested with a Chicago trademark holder, but the DC version has its own deep cultural footprint — a go-go band, a beer, a 2018 mayoral controversy.",
+      meta: [["📍","Wings-n-Things and most DC/PG carryouts"],["💰","$0–2 as an add-on"],["🕐","With fried wings or fries, anytime"]],
+      cite: "Wikipedia — Mumbo sauce"
+    },
+    {
+      name: "Doro Wat & Injera — Little Ethiopia",
+      tags: [TAG('i-food','Dense Ethiopian Corridor')],
+      desc: "DC has one of the largest Ethiopian communities outside Ethiopia; the U Street/Shaw corridor and Georgia Ave carry the country's densest concentration of Ethiopian restaurants, with injera and richly spiced stews eaten communally by hand.",
+      meta: [["📍","Dukem, Etete, Keren — U Street/Shaw"],["💰","$15–25"],["⏱","1–1.5 hrs"],["🕐","Dinner"]],
+      cite: "local press consensus"
+    },
+    {
+      name: "Chesapeake Blue Crab / Crab Cakes",
+      tags: [TAG('i-food','Regional Staple')],
+      desc: "Not DC-exclusive but the regional Mid-Atlantic dish that shows up on every serious DC menu — blue crab from the Chesapeake, either whole and steamed or as a lump crab cake with minimal filler.",
+      meta: [["📍","The Wharf, Eastern Market seafood counters"],["💰","$18–40"],["⏱","1 hr"],["🕐","Lunch or dinner, summer for peak season"]],
+      cite: "TasteAtlas — Mid-Atlantic seafood consensus"
+    },
+    {
+      name: "Jumbo Slice Pizza",
+      tags: [TAG('i-food','Late-Night Institution')],
+      desc: "Comically oversized, often folded-in-half-to-eat NY-style slices sold along 18th Street since the 1990s, tightly bound up with Adams Morgan's late-night bar-crawl culture.",
+      meta: [["📍","Pizza Mart, Duccini's — Adams Morgan"],["💰","$5–8/slice"],["⏱","15 min"],["🕐","Late night, post-bar"]],
+      cite: "local press consensus"
+    }
+  ],
+  gifts: [
+    {
+      name: "Bottled Mumbo Sauce",
+      tags: [TAG('i-food','Ships Well')],
+      desc: "Shelf-stable and the single most DC-coded condiment there is — several small local brands bottle it for retail.",
+      meta: [["📍","Various DC grocers, Eastern Market"],["💰","$6–10/bottle"]],
+      cite: "cross-referenced with dishes entry"
+    },
+    {
+      name: "Ben's Chili Bowl Jarred Chili",
+      tags: [TAG('i-food','Civil Rights History')],
+      desc: "Ben's sells its own chili to go in shelf-stable jars/cans — a mailable piece of the same civil-rights-era institution behind the half-smoke.",
+      meta: [["📍","1213 U St NW"],["💰","$10–15/jar"]],
+      cite: "cross-referenced with dishes entry"
+    },
+    {
+      name: "One Eight Distilling Spirits",
+      tags: [TAG('i-drinks','DC\'s First Since Prohibition')],
+      desc: "Generally credited as DC's first distillery since Prohibition (opened 2013); makes an Ivy City-branded whiskey alongside vodka, gin and rum, distilled in the Ivy City warehouse district.",
+      meta: [["📍","Ivy City"],["💰","$30–55/bottle"]],
+      cite: "local distillery-guide consensus"
+    },
+    {
+      name: "Republic Restoratives Bourbon",
+      tags: [TAG('i-drinks','Women-Owned'), TAG('i-political','Outspoken Branding')],
+      desc: "Women-owned small-batch distillery and tasting room; bottles travel well and the brand's own framing ('outspoken,' 'disruptive') leans into the same political-adjacent identity as the rest of Ivy City's newer businesses.",
+      meta: [["📍","1369 New York Ave NE, Ivy City"],["💰","$35–55/bottle"]],
+      cite: "republicrestoratives.com"
+    },
+    {
+      name: "Local DC Honey",
+      tags: [TAG('i-bees','Urban Apiaries')],
+      desc: "DC has an unusually active urban beekeeping culture for a dense city — the DC Beekeepers Alliance runs an annual beginner course, and rooftop and backyard hives across the District (including, historically, the White House garden) show up as jarred honey at Eastern Market and neighborhood farmers markets.",
+      meta: [["📍","Eastern Market, area farmers markets"],["💰","$8–18/jar"],["🕐","Weekend market hours"]],
+      cite: "dcbeekeepers.org"
+    }
+  ],
+  sights: [
+    {
+      name: "The Exorcist Steps",
+      tags: [TAG('i-horror','Landmark Since 2015')],
+      desc: "The steep, narrow stairway from the film's climax, designated a DC historic landmark in 2015. A genuinely creepy piece of architecture even without the movie's reputation.",
+      meta: [["📍","Prospect St &amp; Canal Rd NW, Georgetown"],["💰","Free"],["⏱","20–30 min"],["🕐","Any time; quieter at dusk"]],
+      cite: "Atlas Obscura — The Exorcist Steps"
+    },
+    {
+      name: "Catacombs of the Franciscan Monastery",
+      tags: [TAG('i-horror','Replica Catacombs'), TAG('i-diy','Turn-of-Century Build')],
+      desc: "Turn-of-the-20th-century cement-cast replica of Rome's early-Christian catacombs, built so American pilgrims who couldn't afford the trip to the Holy Land had somewhere local to go — complete with one genuine relic skeleton, reputedly a 2nd-century child martyr.",
+      meta: [["📍","1400 Quincy St NE"],["💰","Free (donation appreciated)"],["⏱","45 min–1 hr"],["🕐","Wed–Fri, 10am–3pm only"]],
+      cite: "Atlas Obscura — Catacombs of Washington, D.C."
+    },
+    {
+      name: "National Museum of Health and Medicine",
+      tags: [TAG('i-horror','Anatomical Collection')],
+      desc: "Fragments of Lincoln's skull, Civil War amputation kits, a preserved conjoined-twin specimen, and General Sickles's own amputated leg, which he reportedly visited for decades. Technically Silver Spring, MD, not DC proper.",
+      meta: [["📍","2500 Linden Ln, Silver Spring, MD"],["💰","Free"],["⏱","1.5–2 hrs"],["🕐","Wed–Sun, 10am–5pm"],["⚠","Outside DC proper"]],
+      cite: "Atlas Obscura — National Museum of Health and Medicine"
+    },
+    {
+      name: "Mary McLeod Bethune Council House",
+      tags: [TAG('i-political','Federal Agency First'), TAG('i-books','Only Its Kind')],
+      desc: "Home and archive of Mary McLeod Bethune — founder of the National Council of Negro Women, first Black woman to lead a federal agency — now houses the only archive in the US dedicated exclusively to African American women's history.",
+      meta: [["📍","1318 Vermont Ave NW"],["💰","Free"],["⏱","45 min"],["🕐","Weekday afternoon"]],
+      cite: "Atlas Obscura — Mary McLeod Bethune Council House"
+    },
+    {
+      name: "Congressional Cemetery",
+      tags: [TAG('i-horror','Cinematery Screenings'), TAG('i-diy','K9 Corps Funds Upkeep')],
+      desc: "70,000-plus burials since 1807, including J. Edgar Hoover and a long list of members of Congress. Runs genuinely odd programming — Cinematery outdoor horror screenings, Soul Strolls, and the K9 Corps, a paid off-leash dog-walking membership that literally funds the cemetery's upkeep.",
+      meta: [["📍","1801 E St SE"],["💰","Free (tours ticketed)"],["⏱","1–1.5 hrs"],["🕐","Morning or golden hour"]],
+      cite: "congressionalcemetery.org"
+    },
+    {
+      name: "Meridian Hill Park (\"Malcolm X Park\")",
+      tags: [TAG('i-political','Sunday Drum Circle')],
+      desc: "Italian Renaissance-style terraced park that's hosted a Sunday drum circle honoring Malcolm X since shortly after his 1965 assassination. Site of Black Panther and Black United Front rallies through the 1960s–80s, plus decades of anti-war and anti-apartheid organizing.",
+      meta: [["📍","16th St &amp; Euclid St NW"],["💰","Free"],["⏱","1–2 hrs"],["🕐","Sunday afternoon for the drum circle"],["✦","Bonus pick"]],
+      cite: "Wikipedia — Meridian Hill Park"
+    },
+    {
+      name: "Cedar Hill — Frederick Douglass National Historic Site",
+      tags: [TAG('i-political','First Black Federal Marshal'), TAG('i-books','Written Here')],
+      desc: "Douglass's home from 1877 until his 1895 death, bought after he became the first Black man confirmed by the Senate to a federal appointment. He wrote his final autobiography here. The 1922 restoration is believed to be the first US historic-preservation project led by a Black architect.",
+      meta: [["📍","1411 W St SE, Anacostia"],["💰","Free (timed entry)"],["⏱","1.5–2 hrs"],["🕐","Morning"],["✦","Bonus pick, well-known must-see"]],
+      cite: "Wikipedia — Cedar Hill / Frederick Douglass NHS"
+    },
+    {
+      name: "Rock Creek Park",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "1,754 acres, established 1890 — the oldest natural urban park in the National Park System, predated only by Yellowstone and Mackinac among all US national parks. Nature center, planetarium, a restored 1820s water-powered mill, and enough forest to genuinely disappear into a few blocks from downtown.",
+      meta: [["📍","NW DC, Georgetown to the MD line"],["💰","Free"],["⏱","2+ hrs"],["🕐","Morning"],["✦","Bonus pick, natural attraction"]],
+      cite: "Wikipedia — Rock Creek Park"
+    },
+    {
+      name: "The Watergate Complex",
+      tags: [TAG('i-political','Scandal Namesake')],
+      desc: "The building whose name became a permanent suffix for scandal, after five burglars were caught in the DNC's sixth-floor offices in June 1972. Exterior-only, but a five-minute walk from the Kennedy Center along the river.",
+      meta: [["📍","2650 Virginia Ave NW, Foggy Bottom"],["💰","Free to view exterior"],["⏱","20–30 min"],["🕐","Anytime"],["✦","Bonus pick"]],
+      cite: "Wikipedia — Watergate complex"
+    },
+    {
+      name: "U Street — \"Black Broadway\" Walk",
+      tags: [TAG('i-political','Thread Anchor'), TAG('i-punk','Same Blocks as 9:30 Club'), TAG('i-books','Ellison-Adjacent History')],
+      desc: "The corridor where Duke Ellington came up and Marvin Gaye later lived nearby — one of the country's most important Black cultural and business districts, devastated by the April 1968 riots after MLK's assassination, only fully rebuilt decades later, now under renewed gentrification pressure. Ben's Chili Bowl, Busboys and Poets, and the 9:30 Club's current location all sit on these same few blocks.",
+      meta: [["📍","U Street NW"],["💰","Free"],["⏱","1–1.5 hrs walking"],["🕐","Afternoon"],["✦","Bonus pick — analytical thread anchor"]],
+      cite: "cross-referenced across multiple entries in this guide"
+    }
+  ],
+  venues: [
+    {
+      name: "9:30 Club",
+      tags: [TAG('i-punk','DC Institution')],
+      desc: "Opened 1980 downtown, moved to its current 1,200-capacity V Street home in 1996. Rolling Stone-ranked among the best live venues in the country and Pollstar's most-decorated 'Nightclub of the Year' winner ever — the beating heart of DC's alternative scene as punk, hardcore and go-go all took shape in the early '80s.",
+      meta: [["📍","815 V St NW"],["💰","$25–60"],["⏱","3–4 hrs"],["🕐","Night"]],
+      cite: "Wikipedia — 9:30 Club"
+    },
+    {
+      name: "Black Cat",
+      tags: [TAG('i-punk','Dave Grohl-Backed')],
+      desc: "Opened 1993 by former Gray Matter drummer Dante Ferrando, with Dave Grohl among the original investors. Early stages for Radiohead, The Strokes, Foo Fighters and Yeah Yeah Yeahs; still runs the smaller Backstage/Red Room upstairs for club nights and DIY-scale bills.",
+      meta: [["📍","1811 14th St NW"],["💰","$15–35"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "Wikipedia — Black Cat (nightclub)"
+    },
+    {
+      name: "Songbyrd Music House",
+      tags: [TAG('i-punk','Venue + Label'), TAG('i-diy','Pressing Lathe')],
+      desc: "150-capacity room, NIVA member, with its own record shop (Byrdland) and a pressing lathe next door — the rare venue that's also functioning record-label infrastructure.",
+      meta: [["📍","540 Penn St NE, Union Market"],["💰","$10–30"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "songbyrddc.com"
+    },
+    {
+      name: "Comet Ping Pong",
+      tags: [TAG('i-punk','Back-Room Stage')],
+      desc: "A pizzeria with a genuinely well-booked indie/punk back-room stage — ping pong tables push right up against the low stage. Became internationally notorious in 2016–19 as ground zero for the 'Pizzagate' conspiracy theory, long since debunked and settled.",
+      meta: [["📍","5037 Connecticut Ave NW"],["💰","$10–20"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "Wikipedia — Comet Ping Pong"
+    },
+    {
+      name: "Rhizome DC",
+      tags: [TAG('i-punk','Collective House'), TAG('i-diy','Maker Workshops'), TAG('i-political','Mutual Aid-Adjacent')],
+      desc: "A residential-building-turned-collective arts space — 'Art Learning DIY Culture' — hosting experimental, punk, jazz and electronic shows alongside textile workshops, zine fairs and community events. The clearest analog in this guide to the anarchist-infoshop model.",
+      meta: [["📍","7733 Alaska Ave NW, Takoma"],["💰","Free–$15, sliding scale"],["⏱","2–3 hrs"],["🕐","Check socials for shows"]],
+      cite: "rhizomedc.org"
+    },
+    {
+      name: "Fort Reno Summer Concert Series",
+      tags: [TAG('i-punk','Free All-Ages Since 1968'), TAG('i-political','Born From 1968 Unrest')],
+      desc: "Free all-ages outdoor series running since 1968, launched amid the unrest following MLK's assassination — became a bedrock of DC's hardcore all-ages ethic for decades. Nearly killed in 2014 by an NPS fee dispute; a public petition and city intervention saved it.",
+      meta: [["📍","Fort Reno Park, Tenleytown"],["💰","Free"],["⏱","2–3 hrs"],["🕐","Summer evenings, schedule varies"],["✦","Bonus pick"]],
+      cite: "web-search consensus"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Shop Made in DC",
+      tags: [TAG('i-diy','DC-Made Only')],
+      desc: "Retail model built exclusively around DC-made goods — prints, ceramics, textiles, food — the most direct alternative to a generic magnet rack in the city.",
+      meta: [["📍","Multiple DC locations"],["💰","$8–60"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "shopmadeindc.com"
+    },
+    {
+      name: "Salt & Sundry",
+      tags: [TAG('i-diy','Curated Local Goods')],
+      desc: "Curated home-and-gift shop inside Union Market leaning heavily on small-batch and locally made goods, jarred condiments included.",
+      meta: [["📍","Union Market"],["💰","$10–50"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "web-search consensus"
+    },
+    {
+      name: "Eastern Market Weekend Artisans",
+      tags: [TAG('i-diy','100+ Vendors'), TAG('i-food','Since 1873')],
+      desc: "The last of DC's original public markets, open since 1873 and rebuilt after a 2007 fire; weekend flea and art markets outside the main hall bring in up to 100 vendors from artists to antiques dealers, alongside the produce and meat stalls inside.",
+      meta: [["📍","225 7th St SE, Capitol Hill"],["💰","$5–80"],["⏱","1 hr"],["🕐","Saturday or Sunday"]],
+      cite: "Wikipedia — Eastern Market"
+    },
+    {
+      name: "Sankofa Video Books & Cafe (gift shelf)",
+      tags: [TAG('i-books','Pan-African Print'), TAG('i-political','Meaningful Souvenir')],
+      desc: "Pan-African literature, Gerima's own films, and small-press titles make a far more meaningful souvenir than a District magnet.",
+      meta: [["📍","2714 Georgia Ave NW"],["💰","$10–40"],["⏱","15 min"],["🕐","Afternoon"]],
+      cite: "cross-referenced with bookstores entry"
+    },
+    {
+      name: "Joint Custody Vintage/Local Tees",
+      tags: [TAG('i-punk','Point of View'), TAG('i-diy','In-House Designs')],
+      desc: "In-house-designed tees (including the pointed 'U.S. Out Of DC') alongside genuine vintage band merch — a souvenir with an actual point of view.",
+      meta: [["📍","1530 U St NW"],["💰","$25–60"],["⏱","15 min"],["🕐","Afternoon"]],
+      cite: "cross-referenced with records entry"
+    }
+  ],
+  electronics: [
+    {
+      name: "HacDC",
+      tags: [TAG('i-diy','2nd-Oldest US Hackerspace')],
+      desc: "The nation's second-oldest hackerspace, a member-run 501(c)(3) a block off the Columbia Heights Metro. Runs software-defined-radio and Arduino/circuits workshops open to the public even though drop-in space access is members-only.",
+      meta: [["📍","3333 14th St NW, Suite M110"],["💰","Membership-based; public events low-cost/free"],["⏱","2+ hrs for an event"],["🕐","Check event calendar"]],
+      cite: "hacdc.org"
+    },
+    {
+      name: "DC Public Library Fab Labs",
+      tags: [TAG('i-diy','Free Public Access')],
+      desc: "Free public 3D-printing and laser-cutting fabrication labs built into the 2020 MLK Library renovation and select branches — genuinely open-access DIY-electronics infrastructure with no membership fee, a rarity among the cities in this guide series.",
+      meta: [["📍","MLK Library (901 G St NW) + branches"],["💰","Free"],["⏱","1–2 hrs"],["🕐","Weekday afternoon; book ahead where required"]],
+      cite: "dclibrary.org"
+    },
+    {
+      name: "Rhizome DC (maker/craft programming)",
+      tags: [TAG('i-diy','General Craft'), TAG('i-punk','Same Collective as Venue')],
+      desc: "Leans more textile/general-craft than electronics specifically, but it's the city's clearest DIY-collective maker space and shares its building and community with the venue listing above.",
+      meta: [["📍","7733 Alaska Ave NW, Takoma"],["💰","Free–$15, sliding scale"],["⏱","2 hrs for a workshop"],["🕐","Check event calendar"]],
+      cite: "rhizomedc.org"
+    },
+    {
+      name: "Chuck Levin's Washington Music Center",
+      tags: [TAG('i-diy','Est. 1958')],
+      desc: "One of the largest independent music-gear stores on the East Coast since 1958 — deep pedal, synth and amp-repair inventory for anyone doing hands-on gear hacking. Technically in Wheaton, MD, not DC proper, flagged as a scope exception given the thinness of DC's own electronics-retail options.",
+      meta: [["📍","Wheaton, MD (~20 min from downtown)"],["💰","Varies widely"],["⏱","45 min–1 hr"],["🕐","Weekday afternoon"],["⚠","Outside DC proper"]],
+      cite: "long-running regional reputation"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

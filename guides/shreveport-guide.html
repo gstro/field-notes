@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shreveport, LA — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+  .closure-inner + .closure-inner { margin-top: 0.75rem; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+    margin-bottom: 0.6rem;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 2 (Guide-Led) &nbsp;·&nbsp; Austin → <strong style="color:var(--cream)">Shreveport</strong> → Jackson → Birmingham → Atlanta → Charlotte → Richmond → Washington DC → Philadelphia</p>
+  <h1>Road Trip Stop — <em>Shreveport, LA</em></h1>
+  <p class="subtitle">
+    A Red River town where "Hollywood South" film-incentive money sits on top of a much older performance legacy — the Louisiana Hayride's Municipal Auditorium stage is where Elvis first broke, and Lead Belly worked out his style eight miles up the road.<br>
+    10 categories · sourced picks per category (some thinner than 5 by design — see honest-gap notes) · Sources: Atlas Obscura, Eater, TasteAtlas, Timeout, Visit Shreveport-Bossier, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Battle: Los Angeles (2011)</strong> — Jonathan Liebesman's alien-invasion film shot substantially at Shreveport's Millennium Studios.</li>
+        <li><strong>Olympus Has Fallen (2013)</strong> — Antoine Fuqua's White House thriller, also shot at Millennium Studios.</li>
+        <li><strong>Click (2006)</strong> and <strong>The Guardian (2006)</strong> — both filmed on location around the city.</li>
+        <li><strong>Premonition (2007)</strong> — Sandra Bullock thriller, filmed in Shreveport.</li>
+        <li><strong>True Blood (HBO, 2008–2014)</strong> — extensively shot in Shreveport-Bossier; the Ogilvie-Wiener Mansion appeared in the opening credits during its decay years.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Huddie "Lead Belly" Ledbetter</strong> — foundational blues/folk songster, raised in the district now renamed Ledbetter Heights in his honor.</li>
+        <li><strong>Jericho Brown</strong> — Pulitzer Prize-winning poet (The Tradition, 2020).</li>
+        <li><strong>William Joyce</strong> — children's author who founded Moonbot Studios here; its short film won the 2012 Best Animated Short Oscar.</li>
+        <li><strong>Johnnie Cochran</strong> — civil rights and criminal defense attorney.</li>
+        <li><strong>Mike Johnson</strong> — current U.S. Speaker of the House; included for completeness despite sitting at the opposite end of the spectrum from this guide's leftist framing.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">2 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTES -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Current Status Note:</strong><br>
+    The <strong>Shreveport Farmers Market</strong> (Festival Plaza) runs its 2026 season Saturdays May 30 – Aug 29 — it will be <strong>closed for the entire May 3–5 visit window</strong> of this stay. The two farmers-market picks below (Gifts, Souvenirs) are included for completeness and future reference, not as bookable stops on this particular trip.
+  </div>
+  <div class="closure-inner">
+    <strong>⚠ Correction:</strong><br>
+    <em>X-Men Origins: Wolverine</em> (2009) is commonly but incorrectly listed as filmed in Shreveport — its actual locations were New Zealand, Australia, and Canada.
+  </div>
+  <div class="closure-inner">
+    <strong>⚠ Live-source note:</strong><br>
+    <strong>Strawn's Eat Shop</strong>'s own site and several press write-ups returned fetch errors during this run. Its inclusion rests on well-established regional reputation plus the traveler's own May 2026 Maps ground-truth data (2 navigated visits), not a freshly re-verified live source. <strong>Vine Books &amp; Vinyl</strong> and <strong>Rick's Records</strong> likewise appear only in a regional vinyl directory with no independently confirmed address — call ahead.
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap — Bookstores/Records:</strong> the mandatory anarchist/radical/infoshop search turned up nothing specific to Shreveport — every relevant hit (Iron Rail Book Collective, Rank &amp; File Books) was in New Orleans instead. And every confirmed Shreveport bookstore this run found is used/rare/antique-mall-based rather than a flagship new-book independent — a real finding about the city's retail landscape, not a research shortfall.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — Venues:</strong> no dedicated all-ages punk/hardcore DIY venue or promoter collective could be confirmed in Shreveport-Bossier. The five picks are historic theaters and general live-music bars; whatever original/DIY scene exists here appears to run through house shows this run couldn't surface.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — DIY Electronics:</strong> no public-access makerspace or hackerspace could be confirmed. The well-funded Cyber Innovation Center in Bossier City is a K-12/workforce-development STEM institution, not an open drop-in maker space — padding it in here would misrepresent it, so this category carries 2 picks, not 5.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — Whiskey/Bourbon &amp; Bees:</strong> no craft whiskey or bourbon distillery, and no dedicated apiary or bee-specific honey vendor, could be confirmed in or near Shreveport. Great Raft Brewing (craft beer) and the American Rose Center's pollinator gardens are the nearest analogs, flagged as such rather than presented as substitutes.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      The Louisiana Hayride → Lead Belly → "Hollywood South" through-line is unusually rich for a two-night stop: three completely different eras of American performance history (1920s-40s blues, 1950s country radio, 2000s-10s film production) all anchored within a few miles of each other. Worth a standalone Field Notes entry.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Ledbetter Heights (formerly St. Paul's Bottoms) is proposed as this trip's first Southern-corridor instance of the black-business-district-erasure thread, but it's a partial match, not a clean one — the district declined through fires/crime/disinvestment rather than the highway-construction/urban-renewal mechanism that erased Deep Deuce and Freedman's Town. Worth a judgment call before Jackson's Farish Street entry locks the thread in further.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Orlandeaux's Cafe — the oldest continuously operating African-American family-owned restaurant in the U.S., still thriving since 1921 — is a direct counterpoint to the erasure thread rather than another casualty of it. Worth checking whether Jackson or Birmingham have a comparable still-operating institution to pair against their own instances of the thread.
+    </div>
+  </div>
+</div>
+
+<footer>
+  🚙 Travel &nbsp;·&nbsp; Trip 2, Leg 2 &nbsp;·&nbsp; Shreveport, LA &nbsp;·&nbsp; May 3–5, 2026<br>
+  Guide-led entry: sourced and curated ahead of the stay, first stop of Trip 2's Southern corridor after the Austin residency<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "The Thrifty Peanut",
+      tags: [TAG('i-books','Well-Known'), TAG('i-diy','Used Media Warehouse')],
+      desc: "A sprawling used book-and-media warehouse running trade-in credit since 2006 — towering shelves, a deliberately un-curated 'lose yourself for hours' layout, and a genuinely large vinyl/CD/DVD section alongside the books.",
+      meta: [["📍","7600 Youree Dr"],["💰","$3–25"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "familydestinationsguide.com, thethriftypeanut.com"
+    },
+    {
+      name: "Beth the Book Lady",
+      tags: [TAG('i-books','Rare & Used'), TAG('i-diy','Antique-Mall Hunt')],
+      desc: "A personally curated rare-and-used book dealer operating since 1991 out of two antique-mall booths rather than a standalone storefront — the hidden-gem hunt is half the appeal.",
+      meta: [["📍","133 Kings Hwy & 316 Ockley Dr"],["💰","$5–60"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "beththebooklady.com"
+    },
+    {
+      name: "Vine Books & Vinyl",
+      tags: [TAG('i-books','Books + Records'), TAG('i-diy','Combined Shop')],
+      desc: "A combined used-book and vinyl shop — exactly the dual-format independent this traveler's interests were built for. Address unconfirmed beyond the directory listing this run; call ahead.",
+      meta: [["📍","Address unconfirmed"],["💰","$3–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "vinylpackman.com"
+    },
+    {
+      name: "Centenary College Book Bazaar",
+      tags: [TAG('i-books','Annual Event')],
+      desc: "An annual used-and-collectible book sale run by the college, thousands of titles at deep discounts — a genuine literary event rather than a year-round shop, and outside this trip's May window (it runs each September). Worth flagging for a return visit.",
+      meta: [["📍","Centenary College of Louisiana"],["💰","$1–15/book"],["⏱","1–2 hrs"],["🕐","Each September"]],
+      cite: "shreveportbossieradvocate.com"
+    }
+  ],
+  records: [
+    {
+      name: "RPB Vinyl",
+      tags: [TAG('i-diy','Well-Known')],
+      desc: "New and pre-loved vinyl, CDs, and cassettes across rock, country, soul, jazz, and gospel, tucked inside an antiques mall — 'IT'S BETTER ON VINYL!' is the whole pitch.",
+      meta: [["📍","3323 Line Ave (inside Timeline Antiques)"],["💰","$8–40"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "rpbvinyl.com"
+    },
+    {
+      name: "The Little Shop of Music",
+      tags: [TAG('i-diy','Local Scene Hub'), TAG('i-punk','Community Ties')],
+      desc: "Owner Scott Auer describes it as 'a hang out spot, a record store and a place to connect to local music' — vinyl, CDs, used/vintage guitars, and a dedicated section for local and Louisiana artists. Some days are by appointment only, so call ahead.",
+      meta: [["📍","1055 Louisiana Ave"],["💰","$8–40"],["⏱","45 min"],["🕐","Afternoon — call ahead"]],
+      cite: "shreveportbossieradvocate.com"
+    },
+    {
+      name: "Rick's Records",
+      tags: [TAG('i-diy','Deep Bins')],
+      desc: "Described by a regional vinyl directory as 'a strong first stop if your priority is used vinyl, deeper bins, or harder-to-find stock' — address unconfirmed via live source this run.",
+      meta: [["📍","Address unconfirmed"],["💰","$5–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "vinylpackman.com"
+    },
+    {
+      name: "Vine Books & Vinyl",
+      tags: [TAG('i-diy','Blues & Jazz'), TAG('i-books','Books + Records')],
+      desc: "The vinyl half of the same combined book-and-record shop listed under Bookstores — blues and jazz stock notable per the directory description.",
+      meta: [["📍","Address unconfirmed"],["💰","$8–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "vinylpackman.com"
+    },
+    {
+      name: "The Thrifty Peanut (vinyl section)",
+      tags: [TAG('i-diy','Bonus Stop')],
+      desc: "The same used-media warehouse from Bookstores carries a genuinely large vinyl selection alongside its books — the easiest single stop to cover both categories in one visit.",
+      meta: [["📍","7600 Youree Dr"],["💰","$3–25"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "thethriftypeanut.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Rhino Coffee",
+      tags: [TAG('i-food','Ground-Truth Confirmed')],
+      desc: "Shreveport's longest-running specialty roaster (14+ years), Fairtrade-certified, sourcing direct from farms in Colombia and Ethiopia — the anchor of the city's coffee scene, and the traveler's own Maps data shows repeat visits to the Uptown location.",
+      meta: [["📍","Uptown, Downtown, Southern Loop"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "roastlocal.com, rhinocoffee.com"
+    },
+    {
+      name: "Jelks Coffee Roasters",
+      tags: [TAG('i-food','200+ Origins')],
+      desc: "A roasting operation with roots tracing back to 1896, now stocking 200+ origin and flavored coffees — the deepest bean selection in the city.",
+      meta: [["📍","456 W 61st St, Midtown"],["💰","$4–9"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "roastlocal.com, jelkscoffeeroasters.com"
+    },
+    {
+      name: "Lyons' Pride Coffee",
+      tags: [TAG('i-food','SCA-Certified'), TAG('i-political','Disability Employment')],
+      desc: "An SCA-certified roaster that runs employment programs for workers with disabilities — the strongest community/political-economy tie in the city's coffee scene.",
+      meta: [["📍","3809 Youree Dr"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "roastlocal.com"
+    },
+    {
+      name: "Kern Has Coffee",
+      tags: [TAG('i-food','Small-Batch Air-Roasted')],
+      desc: "An air-roasting specialist that began at farmers markets in 2011 and has stayed deliberately small-batch — owner Kern Courtney's name is on the tin.",
+      meta: [["📍","Shreveport"],["💰","$4–8"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "roastlocal.com"
+    },
+    {
+      name: "My Friend's Coffee Co",
+      tags: [TAG('i-food','Grassroots Origin')],
+      desc: "Started as a backyard roasting operation by owner Patty Cramer and still leans into that grassroots origin story in its branding.",
+      meta: [["📍","1202 Joseph St"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "roastlocal.com"
+    }
+  ],
+  pastry: [
+    {
+      name: "Julie Anne's Bakery & Cafe",
+      tags: [TAG('i-food','Well-Known Daily Scratch')],
+      desc: "Everything — cakes, pies, pastries, tarts, cookies, bread — baked fresh every morning; the closest thing in Shreveport to a full daily-scratch pastry case.",
+      meta: [["📍","825 Kings Hwy"],["💰","$4–12"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "threebestrated.com"
+    },
+    {
+      name: "Lowder Baking Company",
+      tags: [TAG('i-food','Ground-Truth Confirmed')],
+      desc: "Artisan breads, croissants, and cinnamon rolls, plus seasonal King Cakes — a repeat stop on the traveler's own May 2026 Maps data.",
+      meta: [["📍","4019 Fern Ave, Suite 500"],["💰","$4–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "threebestrated.com"
+    },
+    {
+      name: "Strawn's Eat Shop",
+      tags: [TAG('i-food','Ground-Truth Confirmed')],
+      desc: "A Shreveport institution built around one dish: strawberry icebox pie, running since the 1940s. Live-source re-confirmation was blocked this run (see status note above) — included on the strength of regional reputation plus two navigated visits in the traveler's own May 2026 Maps data.",
+      meta: [["📍","Fairfield Ave"],["💰","$4–8/slice"],["⏱","30–45 min"],["🕐","Late morning"]],
+      cite: "regional institution — live-source blocked this run"
+    },
+    {
+      name: "Prep Cakes Bakery",
+      tags: [TAG('i-food','GF / Vegan Options')],
+      desc: "Health-focused baking with genuine gluten-free, vegan, and dairy-free options — cinnamon rolls and bagels are the draw.",
+      meta: [["📍","504 E Kings Hwy, Suite B"],["💰","$3–8"],["⏱","20 min"],["🕐","Morning"]],
+      cite: "threebestrated.com"
+    }
+  ],
+  dishes: [
+    {
+      name: "Shrimp Buster — Herby-K's",
+      tags: [TAG('i-food','Well-Known · Ground-Truth Confirmed')],
+      desc: "Deep-fried, butterflied shrimp under a closely guarded spicy proprietary sauce, invented at this Shreveport institution — confirmed via two navigated visits on the traveler's own May 2026 Maps data.",
+      meta: [["📍","Herby-K's"],["💰","$14–20"],["⏱","45 min–1 hr"],["🕐","Lunch or dinner"]],
+      cite: "regional institution"
+    },
+    {
+      name: "Stuffed Shrimp & Gumbeaux — Orlandeaux's Cafe",
+      tags: [TAG('i-food','Signature Dish'), TAG('i-political','Oldest Black-Owned Restaurant in the US')],
+      desc: "Orlandeaux's is the oldest continuously operating African-American family-owned restaurant in the United States, running since 1921 under the Chapman family across five generations. The Chapman-original stuffed shrimp and the shrimp/chicken/crab/sausage gumbeaux are the dishes to order — a thriving counterpoint to this guide's erasure thread, not another casualty of it.",
+      meta: [["📍","5301 S Lakeshore Dr, Cross Lake"],["💰","$12–22"],["⏱","1 hr"],["🕐","Lunch"]],
+      cite: "orlandeauxscafe.com"
+    },
+    {
+      name: "Strawberry Icebox Pie — Strawn's Eat Shop",
+      tags: [TAG('i-food','Ground-Truth Confirmed')],
+      desc: "The single dish Strawn's is built around — see the Pastry entry above for the same institution's live-source caveat.",
+      meta: [["📍","Strawn's Eat Shop"],["💰","$4–8/slice"],["⏱","20–30 min"],["🕐","Late morning"]],
+      cite: "regional institution — live-source blocked this run"
+    },
+    {
+      name: "Crab Sandwich & Creole Classics — Jacquelyn's Cafe",
+      tags: [TAG('i-food','Ground-Truth Confirmed')],
+      desc: "Billed as 'Shreveport's iconic lunch hotspot' for Creole and American classics; the crab sandwich is the standout. Confirmed on the traveler's own May 2026 Maps data.",
+      meta: [["📍","Jacquelyn's Cafe"],["💰","$10–16"],["⏱","45 min"],["🕐","Lunch"]],
+      cite: "jacquelynscafe.com"
+    },
+    {
+      name: "Natchitoches Meat Pie — Lasyone's (day trip)",
+      tags: [TAG('i-food','TasteAtlas · Regional Icon')],
+      desc: "Small, fried, empanada-style hand pies of ground beef and pork — TasteAtlas-listed among Louisiana's best meat dishes and effectively the region's official meat pie. Originates ~70 mi south in Natchitoches rather than Shreveport proper; included as a deliberate scope exception since nothing in-city matches its regional distinctiveness.",
+      meta: [["📍","Natchitoches, LA (day trip)"],["💰","$5–10"],["⏱","Half-day round trip"],["🕐","Lunch"]],
+      cite: "TasteAtlas — Best Rated Meat Dishes in Louisiana"
+    }
+  ],
+  gifts: [
+    {
+      name: "Jelks Coffee Roasters bagged beans",
+      tags: [TAG('i-food','Shelf-Stable')],
+      desc: "Bagged roasted coffee from the 1896-rooted Midtown roaster — shelf-stable, easy to mail, and a more distinctive gift than a magnet.",
+      meta: [["📍","456 W 61st St"],["💰","$12–18/bag"]],
+      cite: "jelkscoffeeroasters.com"
+    },
+    {
+      name: "Great Raft Brewing cans & merch",
+      tags: [TAG('i-drinks','Closest Craft-Beverage Analog')],
+      desc: "No craft whiskey or bourbon distillery could be confirmed in or near Shreveport this run — Great Raft's canned beer and taproom merch is the closest craft-beverage souvenir the city offers. Beer isn't easily mailable across state lines, so treat this as bring-home rather than ship-home.",
+      meta: [["📍","1251 Dalzell St"],["💰","$10–20 (4-pack); $20–35 (merch)"]],
+      cite: "greatraftbrewing.com"
+    },
+    {
+      name: "Cane Syrup, Rice & Satsumas",
+      tags: [TAG('i-food','Closed During Visit')],
+      desc: "Traditional Louisiana growers-only staples — cane syrup, rice, Satsuma oranges — sold at the Shreveport Farmers Market. The 2026 season runs Saturdays May 30–Aug 29, so it's closed during this trip's window; included for completeness.",
+      meta: [["📍","Festival Plaza, 101 Crockett St"],["💰","$5–15"],["🕐","Sat mornings, in season"]],
+      cite: "redriverrevel.com"
+    },
+    {
+      name: "Frozen Natchitoches Meat Pies",
+      tags: [TAG('i-food','Genuinely Mailable')],
+      desc: "Lasyone's and other Natchitoches producers ship frozen meat pies — the same dish from the Dishes list, in a form that actually survives the mail.",
+      meta: [["📍","Natchitoches, LA / shipped direct"],["💰","$20–40/dozen"]],
+      cite: "TasteAtlas — Best Rated Meat Dishes in Louisiana"
+    },
+    {
+      name: "Lowder Baking Co. King Cake",
+      tags: [TAG('i-food','Seasonal')],
+      desc: "Lowder's seasonal King Cake, shippable in the right season — a more distinctive mail-home than a generic pastry box.",
+      meta: [["📍","4019 Fern Ave, Suite 500"],["💰","$25–40"]],
+      cite: "threebestrated.com"
+    }
+  ],
+  sights: [
+    {
+      name: "Shreveport Water Works Museum",
+      tags: [TAG('i-diy','Atlas Obscura')],
+      desc: "The McNeil Street Pump Station is the last steam-powered water treatment plant in the United States, with one of the world's largest intact collections of Victorian-era waterworks equipment — ask the guide to sound the historic steam whistle.",
+      meta: [["📍","142 N Common St"],["💰","Free"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Spring Street Museum",
+      tags: [TAG('i-books','Atlas Obscura'), TAG('i-diy','Oldest Surviving Building')],
+      desc: "Housed in what began life as Tally's Bank in 1866 — one of Shreveport's oldest surviving buildings. Caddo arrowheads and 1873 Yellow Fever Epidemic artifacts downstairs, a Victorian parlor recreation upstairs.",
+      meta: [["📍","525 N Spring St"],["💰","Free (donations)"],["⏱","30–45 min"],["🕐","Tue–Sat 10am–4pm"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Ogilvie-Wiener Mansion",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-horror','Film Location')],
+      desc: "A 9,000-sq-ft 1896 Queen Anne mansion that went from private home to a celebrity-magnet supper club (Perry Como, John Wayne) to Shreveport's first openly gay bar and nightclub in the early 1980s to a decaying shell that appeared in True Blood's opening credits — now a B&B run by a self-described 'doll hoarder' with roughly 2,000 ceramic dolls throughout the house.",
+      meta: [["📍","728 Austen Pl"],["💰","Varies — call ahead"],["⏱","30–45 min"],["🕐","Sat/Sun 3–5pm walk-in"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "R.W. Norton Art Gallery & Gardens",
+      tags: [TAG('i-books','Well-Known · Atlas Obscura')],
+      desc: "4,000 years of art — Mary Cassatt, Rodin, Remington, a Roman emperor bust, Paul Revere silver — inside, wrapped in a 40-acre botanical garden with 100 azalea varieties outside.",
+      meta: [["📍","4747 Creswell Ave"],["💰","Free (donations)"],["⏱","1.5–2 hrs"],["🕐","Fri–Sat 1–7pm, Sun 1–5pm"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "American Rose Center",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "The 118-acre headquarters garden of the American Rose Society, home to the largest collection of Rambler Roses in the United States — the natural-attraction balance-rule pick, and a reasonable (if unconfirmed) pollinator-friendly stand-in given no dedicated apiary was found in Shreveport itself.",
+      meta: [["📍","8877 Jefferson Paige Rd"],["💰","Varies by season"],["⏱","1.5–2 hrs"],["🕐","Morning"]],
+      cite: "rose.org"
+    },
+    {
+      name: "Shreveport Municipal Auditorium (Louisiana Hayride)",
+      tags: [TAG('i-books','Well-Known · Bonus'), TAG('i-political','Pop-Culture Landmark')],
+      desc: "Home of the Louisiana Hayride radio/TV show (1948–1960), second in country-music importance only to the Grand Ole Opry — Elvis Presley made his first major stage appearances here, Hank Williams played after his Grand Ole Opry rejection, and emcee Horace Logan coined 'Elvis has left the building' from this stage. The single most-navigated-to destination in the traveler's own May 2026 Shreveport Maps data.",
+      meta: [["📍","705 Elvis Presley Ave"],["💰","Free to view exterior"],["⏱","30–45 min"],["🕐","Evening for a show"]],
+      cite: "Wikipedia — Louisiana Hayride"
+    },
+    {
+      name: "Lead Belly Statue & Ledbetter Heights",
+      tags: [TAG('i-political','Thread Anchor'), TAG('i-books','Music History')],
+      desc: "A statue honoring Huddie 'Lead Belly' Ledbetter stands across from the courthouse; the surrounding neighborhood — once St. Paul's Bottoms, the red-light district where he developed his style on Fannin Street — is now renamed Ledbetter Heights in his honor. Proposed anchor for this trip's business-district-erasure thread (see Next Steps for the caveat).",
+      meta: [["📍","Across from Caddo Parish Courthouse"],["💰","Free"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "Wikipedia — Lead Belly; St. Paul's Bottoms"
+    },
+    {
+      name: "Robinson Film Center",
+      tags: [TAG('i-horror','Friday Night Freakout'), TAG('i-diy','Nonprofit Art House')],
+      desc: "A 501(c)(3) two-screen art house (35mm and digital) running independent, international, and classic film, including a recurring 'Friday Night Freakout' cult/horror series — attached to Abby Singer's Bistro. Opened May 3, 2008, so this trip's arrival date lands on its anniversary.",
+      meta: [["📍","617 Texas St, Downtown"],["💰","Standard ticket pricing"],["⏱","2–3 hrs"],["🕐","Evening"]],
+      cite: "robinsonfilmcenter.org"
+    }
+  ],
+  venues: [
+    {
+      name: "Shreveport Municipal Auditorium",
+      tags: [TAG('i-political','Well-Known'), TAG('i-books','Louisiana Hayride Legacy')],
+      desc: "Same building as the Sights entry — still an active event venue today, layered on top of its Louisiana Hayride legacy.",
+      meta: [["📍","705 Elvis Presley Ave"],["💰","Varies"],["⏱","2–3 hrs"],["🕐","Evening"]],
+      cite: "bandsintown.com"
+    },
+    {
+      name: "The Strand Theatre",
+      tags: [TAG('i-books','Historic 1925 Opera House')],
+      desc: "A 2,500-seat 1925 opera house, now the Official State Theatre of Louisiana, still booking concerts, comedy, and touring productions alongside ballet and musical theater.",
+      meta: [["📍","619 Louisiana Ave"],["💰","Varies by show"],["⏱","2–3 hrs"],["🕐","Evening"]],
+      cite: "thestrandtheatre.com"
+    },
+    {
+      name: "Bear's on Fairfield",
+      tags: [TAG('i-punk','Live Music Bar')],
+      desc: "A bar and live-music room that also runs pop-up restaurant/food events — the closest thing this run could confirm to a regular original-music room outside the historic theaters. Exact genre bookings weren't independently verifiable this run.",
+      meta: [["📍","Fairfield Ave"],["💰","$5–15 cover"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "visitshreveportbossier.org"
+    },
+    {
+      name: "Fatty Arbuckle's Pub",
+      tags: [TAG('i-punk','Live Music Bar')],
+      desc: "A live-music pub in the Red River District near the casinos — included for balance since no dedicated DIY infrastructure could be confirmed in this city (see honest-gap note above).",
+      meta: [["📍","Red River District"],["💰","$5–15 cover"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "visitshreveportbossier.org"
+    },
+    {
+      name: "Great Raft Brewing",
+      tags: [TAG('i-drinks','Community Taproom')],
+      desc: "Community-oriented taproom hosting trivia, game nights, and craft activities alongside a rotating Caltex Barbecue food truck — more community space than music venue, but the closest thing to a DIY-adjacent hangout this run could confirm.",
+      meta: [["📍","1251 Dalzell St"],["💰","Free entry; $6–9/pour"],["⏱","1–2 hrs"],["🕐","Evening"]],
+      cite: "greatraftbrewing.com"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Beth the Book Lady (antique-mall ephemera)",
+      tags: [TAG('i-books','Curated One Piece at a Time')],
+      desc: "Vintage books, ephemera, and prints curated one piece at a time — a genuinely non-mass-market souvenir source, sold inside two antique-mall booths.",
+      meta: [["📍","133 Kings Hwy & 316 Ockley Dr"],["💰","$5–40"],["⏱","20–30 min"]],
+      cite: "beththebooklady.com"
+    },
+    {
+      name: "Great Raft Brewing merch",
+      tags: [TAG('i-drinks','Local Business')],
+      desc: "Taproom shirts, glassware, and cans — locally designed rather than generic tourist merch, tied to a real local business.",
+      meta: [["📍","1251 Dalzell St"],["💰","$20–35"]],
+      cite: "greatraftbrewing.com"
+    },
+    {
+      name: "R.W. Norton Art Gallery gift shop",
+      tags: [TAG('i-books','Well-Known')],
+      desc: "An art-museum shop typically stocked with prints, art books, and garden-themed items; this run confirmed the museum itself thoroughly but not the shop's specific current inventory — worth a look while on-site regardless.",
+      meta: [["📍","4747 Creswell Ave"],["💰","$10–40"],["⏱","10–15 min"]],
+      cite: "Atlas Obscura (gift-shop inventory unconfirmed)"
+    },
+    {
+      name: "Spring Street & Water Works Museum shops",
+      tags: [TAG('i-diy','Local History')],
+      desc: "Both free downtown museums typically run small gift tables tied to local/railroad/waterworks history — a more specific souvenir than a generic magnet, though exact current stock wasn't independently confirmed this run.",
+      meta: [["📍","525 N Spring St & 142 N Common St"],["💰","$5–20"],["⏱","10–15 min"]],
+      cite: "Atlas Obscura (gift-shop inventory unconfirmed)"
+    },
+    {
+      name: "Shreveport Farmers Market vendor crafts",
+      tags: [TAG('i-food','Closed During Visit')],
+      desc: "Grower-direct produce and craft vendors — same closure caveat as the Gifts entry: the 2026 season runs May 30–Aug 29 and is closed during this trip's May 3–5 window.",
+      meta: [["📍","Festival Plaza, 101 Crockett St"],["💰","$5–30"],["🕐","Sat mornings, in season"]],
+      cite: "redriverrevel.com"
+    }
+  ],
+  electronics: [
+    {
+      name: "The String Shop",
+      tags: [TAG('i-diy','Well-Known · 41 Years')],
+      desc: "A 41-year-old instrument and amp repair shop with, per customer feedback, 'the BEST variety of stuff period, especially effect pedals' — the closest thing this run found to a gear-hacking hub in the Shreveport-Bossier area.",
+      meta: [["📍","601 Benton Rd, Bossier City"],["💰","Varies"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "yellowpages.com"
+    },
+    {
+      name: "Shreveport Music Co",
+      tags: [TAG('i-diy','In-City Alternative')],
+      desc: "An independent guitar/amp/piano shop — a smaller, in-city alternative to the Bossier City repair specialist above.",
+      meta: [["📍","306 Ockley Dr"],["💰","Varies"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "yellowpages.com"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

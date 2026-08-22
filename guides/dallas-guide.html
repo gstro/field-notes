@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallas, TX — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  .pc-note {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 0.9rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border);
+  }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+  .closure-inner ul { margin: 0.4rem 0 0 1.1rem; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 1 (Retroactive) &nbsp;·&nbsp; Portland → Boise → Salt Lake City → Las Vegas → Phoenix → Albuquerque → Oklahoma City → <strong style="color:var(--cream)">Dallas</strong> → Austin</p>
+  <h1>Road Trip Stop — <em>Dallas, TX</em></h1>
+  <p class="subtitle">
+    A city that rebuilt itself twice on erasure — Freedman's Town paved for a freeway, Deep Ellum's Black jazz corridor gutted by the same highway era, then re-grown decades later into a DIY punk scene in the same abandoned warehouses.<br>
+    10 categories · 5 picks each (8 for Sights, 4 for Electronics — see honest gap) · Sources: Atlas Obscura, TasteAtlas, Timeout, Dallas Observer, PaperCity Magazine, TSHA, Bisnow, Wikipedia, local press
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>RoboCop (1987)</strong> — Dallas City Hall's I.M. Pei inverted-pyramid building doubled as OCP Headquarters and the Detroit PD exterior. Free to view from the plaza, 1500 Marilla St.</li>
+        <li><strong>JFK (1991)</strong> — Oliver Stone shot on the actual Dealey Plaza assassination site (411 Elm St); the grassy knoll and the Texas School Book Depository are free to walk today.</li>
+        <li><strong>Dallas Buyers Club (2013)</strong> — Texas Theatre (231 W Jefferson Blvd, Oak Cliff), the same restored 1931 theater where Lee Harvey Oswald was captured hours after the assassination.</li>
+        <li><strong>Bottle Rocket (1996)</strong> — Wes Anderson's directorial debut, shot around Dallas where he grew up.</li>
+      </ul>
+      <div class="pc-note">⚠ Commonly misattributed: the TV series <em>Dallas</em> (1978–91)'s signature location, Southfork Ranch, is actually in Parker, TX — about 25 miles north of downtown, not within city limits.</div>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Stevie Ray Vaughan</strong> — blues guitar legend, raised in Oak Cliff; a statue stands in Kiest Park.</li>
+        <li><strong>Erykah Badu</strong> — neo-soul icon raised in South Dallas, in the shadow of Freedman's Town's former footprint; explicitly political lyrics, active local community ties.</li>
+        <li><strong>Dimebag Darrell</strong> — Pantera guitarist, DFW's biggest contribution to heavy/hardcore-adjacent music.</li>
+        <li><strong>Gibby Haynes</strong> — Butthole Surfers frontman, noise-punk provocateur from the Texas underground.</li>
+        <li><strong>Lee Harvey Oswald</strong> — included as unavoidable, load-bearing Dallas history, not an endorsement: assassinated JFK from the Book Depository, captured at the Texas Theatre.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + 3 bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks + honest gap</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTE -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Verify Before Visiting:</strong>
+    <ul>
+      <li>Knights of Pythias Temple (The Pittman Hotel) — address and current public-access policy were not independently confirmed via live fetch this run.</li>
+      <li>SoloDallas — walk-in showroom status is unconfirmed; likely online/appointment-only. Call ahead.</li>
+      <li>Southfork Ranch (see Pop-Culture note above) is in Parker, TX, not Dallas proper — don't plan it as an in-city stop.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-note">
+  <div class="gap-inner">
+    <strong>Honest gap — Bookstores:</strong> the mandatory anarchist/radical/infoshop search turned up a DFW Anarchist Bookfair (an annual event, not a storefront) and no permanent walk-in infoshop in Dallas proper. Pan-African Connection is the closest sustained political-bookstore anchor — a Black-nationalist community institution rather than an anarchist one. Compare against OKC's finding that red-state metros lean toward cooperative/community-institution infrastructure over infoshops; Dallas leans further still, toward a single legacy institution.
+  </div>
+</div>
+<div class="gap-note" style="margin-top: 0.6rem;">
+  <div class="gap-inner">
+    <strong>Honest gap — DIY Electronics:</strong> no dedicated synthesizer retailer exists in Dallas or the wider DFW metro — a Gearspace forum thread on the exact question confirms it, naming only Guitar Center locations and a now-closed local shop. Category 10 leans on a general-purpose makerspace, a guitar/pedal store, and a boutique pedal maker rather than padding in a synth shop that isn't there.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Freedman's Town and Tenth Street are two separate freedman's towns inside one city, erased by the same mechanism (highway construction) roughly two decades apart — that duplication is worth its own Field Notes entry, especially paired with Deep Ellum's opposite arc (Black jazz corridor gutted, then organically reborn as a DIY punk scene in the same buildings decades later).
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      This is the clearest Southern-corridor instance yet of <code>black-business-district-erasure</code> — Freedman's Town (anchor) plus a confirmed second in-city instance at Tenth Street. Cross-links to Deep Deuce (Oklahoma City, confirmed) and proposed forward to Farish Street (Jackson, MS) and St. Luke Bank (Richmond, VA), both unconfirmed until those cities are guided.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Half Price Books was founded in Dallas in 1972 out of a former laundromat and is now a national chain — worth checking whether any other Trip 1/Trip 2 stop city's "well-known bookstore" pick is actually a Half Price Books location tracing back to this exact flagship.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 1 Retroactive Guide &nbsp;·&nbsp; Dallas, TX<br>
+  Control group entry: instinct-driven Trip 1 city, curated retroactively for comparison against Trip 2's guide-led stops. Slug corrected from a historical, pre-v2.8 self-identification of <code>dallas-tx</code> to the canonical <code>dallas</code> per the Trip Route and Threads doc.<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Pan-African Connection",
+      tags: [TAG('i-political','Community Institution'), TAG('i-books','Banned Books')],
+      desc: "A 37-year Black-owned institution — gallery, resource center, and bookstore in one — stocking African and African-American history, art, and banned books. The closest thing Dallas has to the mandatory infoshop pick; see the honest gap below on why a true anarchist storefront doesn't exist here.",
+      meta: [["📍","4466 S Marsalis Ave, South Dallas / Oak Cliff"],["💰","$0–40"],["⏱","45 min–1 hr"],["🕐","Afternoon, closed Mondays"]],
+      cite: "Dallas Observer, panafricanconnection.com"
+    },
+    {
+      name: "Deep Vellum Books",
+      tags: [TAG('i-books','Small Press'), TAG('i-diy','Nonprofit Publisher')],
+      desc: "Indie bookstore attached to Deep Vellum's own nonprofit press, specializing in small-press works, translations, and authors of color. Coffee shop on site plus a steady calendar of readings and open mics.",
+      meta: [["📍","3000 Commerce St, Deep Ellum"],["💰","$0–35"],["⏱","45 min–1 hr"],["🕐","Afternoon; evening for events"]],
+      cite: "PaperCity Magazine, Dallas Observer"
+    },
+    {
+      name: "The Wild Detectives",
+      tags: [TAG('i-books','Bookstore + Bar')],
+      desc: "Bookstore-cafe-bar hybrid founded in 2014 by two Spanish civil engineers; hosts readings, music, tastings, and film screenings in the same room you're browsing in.",
+      meta: [["📍","314 W 8th St, Bishop Arts"],["💰","$0–30"],["⏱","1 hr"],["🕐","Evening, for the bar side"]],
+      cite: "PaperCity Magazine, Dallas Observer"
+    },
+    {
+      name: "Crow Hollow Bookshop",
+      tags: [TAG('i-horror','Genre Specialty'), TAG('i-books','DFW Metro')],
+      desc: "A genre-specialty shop built around horror, thriller, mystery, and science fiction — the sharpest horror-literature pick in the metro, though it's a DFW-suburb detour rather than an in-Dallas stop.",
+      meta: [["📍","Allen, TX — ~30 min north of downtown"],["💰","$0–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Community Impact"
+    },
+    {
+      name: "Half Price Books Flagship Store",
+      tags: [TAG('i-books','Since 1972'), TAG('i-diy','Founding Location')],
+      desc: "The founding store of the now-national used-book chain, launched in Dallas in 1972 out of a former laundromat; the flagship carries books, vinyl, and movies at a scale worth the detour on its own. Atlas Obscura listed.",
+      meta: [["📍","5803 E Northwest Hwy, Dallas"],["💰","$0–40"],["⏱","1–1.5 hrs"],["🕐","Anytime"]],
+      cite: "Atlas Obscura"
+    }
+  ],
+  records: [
+    {
+      name: "Good Records",
+      tags: [TAG('i-diy','East Dallas Institution'), TAG('i-punk','In-Store Series')],
+      desc: "A beloved East Dallas institution and hub for local musicians, running the long-standing 'Live From the Astroturf' in-store performance series that's hosted St. Vincent, They Might Be Giants, and Alice Cooper.",
+      meta: [["📍","9026 Garland Rd, East Dallas"],["💰","$8–40"],["⏱","45 min–1 hr"],["🕐","Afternoon; check for in-stores"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Top Ten Records",
+      tags: [TAG('i-diy','Oldest in Dallas'), TAG('i-books','Nonprofit Archive')],
+      desc: "Dallas's oldest record store, which formally became an arts and culture nonprofit in 2016 — now functions as a music library and archive where you can check out and listen to rare pressings in-store.",
+      meta: [["📍","338 W Jefferson Blvd, Oak Cliff"],["💰","Free browse"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Spinster Records",
+      tags: [TAG('i-punk','In-Store Shows'), TAG('i-diy','Community Room')],
+      desc: "Regularly hosts in-store performances, book signings, panels, and pop-up events — a working community room as much as a record shop.",
+      meta: [["📍","408 N Bishop Ave #102, Bishop Arts"],["💰","$5–30"],["⏱","30–45 min"],["🕐","Evening for in-stores"]],
+      cite: "Dallas Observer, do214.com"
+    },
+    {
+      name: "GROWL",
+      tags: [TAG('i-punk','Record Store + Venue'), TAG('i-diy','DFW Metro')],
+      desc: "Part record store, part comic shop, part live venue — a genuine haven for punk collectors who 'love their music loud and their culture raw.' Worth the drive out of Dallas proper.",
+      meta: [["📍","509 E Abram St, Arlington"],["💰","$5–30"],["⏱","1 hr"],["🕐","Check listings for shows"]],
+      cite: "do214.com"
+    },
+    {
+      name: "Josey Records",
+      tags: [TAG('i-diy','25,000 Sq Ft Warehouse')],
+      desc: "A 25,000-square-foot warehouse run by and for vinyl nerds — one of the largest single-location inventories in the region.",
+      meta: [["📍","2821 LBJ Fwy, Farmers Branch"],["💰","$5–40"],["⏱","1 hr+"],["🕐","Weekend afternoon"]],
+      cite: "Dallas Observer"
+    }
+  ],
+  coffee: [
+    {
+      name: "Full City Rooster",
+      tags: [TAG('i-food','Single-Origin Roaster')],
+      desc: "A local roasting studio doing small-batch, single-origin roasts out of a working roastery cafe, with almond croissants worth pairing.",
+      meta: [["📍","The Cedars"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "PaperCity Magazine"
+    },
+    {
+      name: "Noble Coyote Coffee Roasters",
+      tags: [TAG('i-food','Local Roaster')],
+      desc: "Local roaster with an on-site cafe near Fair Park — pairs naturally with a Sights-category stop at the fairgrounds.",
+      meta: [["📍","Fair Park"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "PaperCity Magazine"
+    },
+    {
+      name: "Be Kinder Coffee",
+      tags: [TAG('i-political','Nonprofit'), TAG('i-food','Refugee Job Training')],
+      desc: "Nonprofit cafe providing refugees with a safe space, job-skills training, and access to English classes — the strongest political-bent pick in Dallas coffee. Known for cold brew and homemade granola.",
+      meta: [["📍","Dallas"],["💰","$4–7"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Houndstooth Coffee",
+      tags: [TAG('i-food','Architectural Digest Pick')],
+      desc: "Named the 'most beautiful coffee shop in Texas' by Architectural Digest; serves Tweed Coffee Roasters in a striking minimalist space.",
+      meta: [["📍","Henderson Ave / Sylvan Thirty"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "PaperCity Magazine"
+    },
+    {
+      name: "Davis Street Espresso",
+      tags: [TAG('i-food','No WiFi, No To-Go')],
+      desc: "Deliberately no WiFi and no to-go cups — an Italian-espresso-bar ethos that asks you to sit down and actually drink the coffee.",
+      meta: [["📍","Bishop Arts"],["💰","$3–6"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "Dallas Observer"
+    }
+  ],
+  pastry: [
+    {
+      name: "Kessler Baking Studio",
+      tags: [TAG('i-food','James Beard Semifinalist')],
+      desc: "Owner is a James Beard semifinalist; 'Cinnamon Roll Saturdays' is a genuine local institution worth timing a visit around.",
+      meta: [["📍","1129 N Beckley Ave, Bishop Arts"],["💰","$4–10"],["⏱","30–45 min"],["🕐","Saturday morning for cinnamon rolls"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Empire Baking Co.",
+      tags: [TAG('i-food','Since 1992')],
+      desc: "One of Dallas's longest-standing craft bakeries, operating since 1992 — a benchmark for daily bread as much as pastry.",
+      meta: [["📍","3700 McKinney Ave + 2 more"],["💰","$3–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Oak Cliff Bread",
+      tags: [TAG('i-food','Rotating Weekly Menu'), TAG('i-diy','Genuinely Limited-Run')],
+      desc: "Small-batch, rotating weekly menu of sourdough, focaccia, and French baguettes; sandwiches served Thu–Fri at 11:30am only. Genuinely limited-run, not a padded pick.",
+      meta: [["📍","1300 S Polk St"],["💰","$4–12"],["⏱","20–30 min"],["🕐","Thursday–Saturday only"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "La Casita Bakeshop",
+      tags: [TAG('i-food','Sells Out Fast')],
+      desc: "Churro cruffins and a daily rotating case that reliably sells out. The Northwest Highway location flips into a tiki bar after 5pm.",
+      meta: [["📍","580 W Arapaho Rd / 5801 E Northwest Hwy"],["💰","$3–8"],["⏱","20 min"],["🕐","Early morning — sells out"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Chelles Macarons",
+      tags: [TAG('i-food','Unusual Flavors')],
+      desc: "Unusual flavor combinations, Raspberry Rose among the standouts — a good mailable-adjacent pick for boxed sets, though best eaten fresh.",
+      meta: [["📍","920 S Harwood St #191"],["💰","$3–3.50/macaron"],["⏱","20 min"],["🕐","Afternoon"]],
+      cite: "dallasnav.com"
+    }
+  ],
+  dishes: [
+    {
+      name: "Frozen Margarita @ Original Mariano's Hacienda Ranch",
+      tags: [TAG('i-drinks','Invented in Dallas'), TAG('i-food','Well-Known Must-See')],
+      desc: "Invented in Dallas in 1971 by Mariano Martinez, who adapted a 7-Eleven Slurpee machine to keep margaritas at pour-ready consistency — the original machine now lives in the Smithsonian. A genuine Dallas invention, not a borrowed Tex-Mex staple.",
+      meta: [["📍","Original Mariano's Hacienda Ranch"],["💰","$8–14"],["🕐","Happy-hour institution"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Fletcher's Original Corny Dog @ State Fair of Texas",
+      tags: [TAG('i-food','Date-Gated Invention')],
+      desc: "Invented by the Fletcher brothers in 1942, the corn dog on a stick was born at Fair Park and is still sold only during the fair's run — a genuinely date-gated regional invention.",
+      meta: [["📍","Fair Park"],["💰","$6–9"],["⏱","15 min"],["🕐","Late Sept–late Oct only — check dates"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Tex-Mex Combo Plate / Queso @ El Fenix",
+      tags: [TAG('i-food','Since 1918')],
+      desc: "El Fenix opened in 1918 and is credited as one of Texas's first Tex-Mex restaurants — the combo-plate-and-queso format most people now think of as generically 'Mexican food' has a specific Dallas commercial origin point here.",
+      meta: [["📍","Multiple Dallas locations"],["💰","$12–20"],["⏱","1 hr"],["🕐","Lunch or dinner"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Texas Brisket & Burnt Ends @ Pecan Lodge",
+      tags: [TAG('i-food','Deep Ellum'), TAG('i-drinks','Well-Known Must-See')],
+      desc: "Pecan Lodge is the highest-profile Deep Ellum barbecue stop, close enough to Deep Vellum Books and Three Links to chain into one afternoon in the neighborhood.",
+      meta: [["📍","Deep Ellum / also Lockhart Smokehouse"],["💰","$18–30"],["⏱","1–1.5 hrs, expect a line"],["🕐","Lunch, before 11:30am"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Chicken-Fried Steak @ Bubba's / Norma's Cafe",
+      tags: [TAG('i-food','Texas Diner Standard')],
+      desc: "The standard Texas diner order; Norma's Cafe has been serving it since 1956 out of the same Oak Lawn location.",
+      meta: [["📍","Bubba's Cooks Country / Norma's Cafe"],["💰","$14–20"],["⏱","1 hr"],["🕐","Lunch"]],
+      cite: "TasteAtlas"
+    }
+  ],
+  gifts: [
+    {
+      name: "Fxcking Hot Sauces",
+      tags: [TAG('i-food','Locally Sourced')],
+      desc: "Hand-made, locally sourced hot sauce; the Howlin' Wolf blend (smoked habanero, tomatillo) is the standout.",
+      meta: [["💰","$8–14"]],
+      cite: "DALtoday"
+    },
+    {
+      name: "Poor Vida 'Mixtape' Hot Sauce",
+      tags: [TAG('i-food','Hip-Hop Themed'), TAG('i-punk','Music-Scene Adjacent')],
+      desc: "A hip-hop-themed hot sauce line celebrating local Dallas rap culture — flavors include Texas Pebre and Lemon Pepper Garlic. The closest thing on this list to a music-scene-adjacent food gift.",
+      meta: [["💰","$8–12"]],
+      cite: "DALtoday"
+    },
+    {
+      name: "Local Honey — Dallas Farmers Market",
+      tags: [TAG('i-bees','North Texas Apiaries'), TAG('i-food','Well-Known Must-See')],
+      desc: "The market's Shed 2 vendor stalls regularly carry North Texas apiary honey alongside Eden Hill Vineyard wine and Mexican-artisan goods — a reliable one-stop for jarred, mailable gifts.",
+      meta: [["📍","920 S Harwood St"],["💰","$8–18/jar"],["⏱","30–45 min"],["🕐","Weekend morning"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Dude, Sweet Chocolate",
+      tags: [TAG('i-food','Bean-to-Bar')],
+      desc: "Chef Katherine Clapner's bean-to-bar chocolate operation — barks, truffles, and marshmallows that ship well and travel better than most bakery items.",
+      meta: [["📍","Bishop Arts / Trinity Groves"],["💰","$6–20"],["⏱","20 min"],["🕐","Afternoon"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Herman Marshall Bourbon / Rye",
+      tags: [TAG('i-drinks','Texas Straight Bourbon')],
+      desc: "A Texas straight bourbon and rye distillery with a proper tasting room (bingo Tuesdays, trivia Wednesdays, live music weekends) — worth the drive out for the whiskey/bourbon interest even though it's technically a Wylie address, not Dallas proper.",
+      meta: [["📍","Wylie, TX — ~30 min from downtown"],["💰","$35–60/bottle"],["⏱","1–2 hrs"],["🕐","Fri/Sat night for live music"]],
+      cite: "hermanmarshall.com"
+    }
+  ],
+  sights: [
+    {
+      name: "Sixth Floor Museum at Dealey Plaza",
+      tags: [TAG('i-horror','Film Location'), TAG('i-political','Well-Known Must-See')],
+      desc: "Housed in the former Texas School Book Depository, overlooking the actual assassination site. The plaza outside is free and permanently staffed by freelance conspiracy vendors and self-appointed tour guides — worth 20 minutes on its own before or instead of the paid museum.",
+      meta: [["📍","411 Elm St"],["💰","$18–22"],["⏱","1.5–2 hrs"],["🕐","Weekday morning"]],
+      cite: "Visit Dallas, Wikipedia — JFK (1991), Ruby (1992)"
+    },
+    {
+      name: "Freedman's Memorial Cemetery & Park",
+      tags: [TAG('i-political','Thread Anchor'), TAG('i-books','Historical Marker')],
+      desc: "The physical anchor of the Freedman's Town thread: the cemetery of the post-emancipation community founded here in 1869, discovered in the late 1980s to have been built over directly by the 1940s North Central Expressway. Bronze memorial sculptures and historical markers now sit steps from a Walmart — itself part of the story.",
+      meta: [["📍","Uptown, N Central Expwy at Lemmon Ave"],["💰","Free"],["⏱","30–45 min"],["🕐","Daylight hours"]],
+      cite: "Dallas Free Press, TSHA"
+    },
+    {
+      name: "Knights of Pythias Temple (The Pittman Hotel)",
+      tags: [TAG('i-political','Black-Owned Landmark'), TAG('i-books','1916')],
+      desc: "Designed in 1916 by William Sydney Pittman, the first professionally trained Black architect in Texas and Booker T. Washington's son-in-law — once among the only Black-owned commercial high-rises in the segregated South. Restored and reopened in 2021 as a boutique hotel bearing Pittman's name; verify current public-access policy before counting on an interior look.",
+      meta: [["📍","2551 Elm St, Deep Ellum edge"],["💰","Free to view exterior"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "General knowledge — verify before publishing"
+    },
+    {
+      name: "Texas Theatre",
+      tags: [TAG('i-horror','Repertory Cinema'), TAG('i-diy','Independent')],
+      desc: "Opened 1931, the first air-conditioned theater in Dallas; site of Lee Harvey Oswald's 1963 capture, now an independent two-screen repertory cinema under Aviation Cinemas with regular horror and cult programming.",
+      meta: [["📍","231 W Jefferson Blvd, Oak Cliff"],["💰","$10–14/screening"],["⏱","2 hrs"],["🕐","Evening — check horror calendar"]],
+      cite: "Wikipedia — Dallas Buyers Club (2013)"
+    },
+    {
+      name: "The Traveling Man",
+      tags: [TAG('i-diy','Outsider Art'), TAG('i-punk','Deep Ellum')],
+      desc: "Three enormous steel figures depicting 'the emergence of a giant robot born of a locomotive and spilled gin' — pure outsider-art strangeness planted right at a DART stop in the same neighborhood as most of this guide's punk venues.",
+      meta: [["📍","Deep Ellum, DART Green Line stop"],["💰","Free"],["⏱","15–20 min"],["🕐","Golden hour for photos"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Outlaw Graves — Bonnie Parker & Clyde Barrow",
+      tags: [TAG('i-horror','True Crime')],
+      desc: "Bonnie and Clyde are buried in two different Dallas cemeteries, not side by side as popular myth has it — Bonnie's family wouldn't allow it. Both Atlas Obscura listed and a genuinely strange true-crime pilgrimage.",
+      meta: [["📍","Crown Hill Memorial Park / Western Heights Cemetery"],["💰","Free"],["⏱","45 min combined"],["🕐","Daylight hours"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "White Rock Lake",
+      tags: [TAG('i-bees','Natural Attraction, In-City')],
+      desc: "A 1,254-acre lake and park entirely inside Dallas city limits — the natural-attraction balance-rule pick that doesn't require leaving the city, with a 9.3-mile trail loop, kayak rentals, and a bird sanctuary at its east end.",
+      meta: [["📍","East Dallas"],["💰","Free"],["⏱","Half-day"],["🕐","Morning or dusk"]],
+      cite: "Dallas Parks & Recreation"
+    },
+    {
+      name: "Meow Wolf Grapevine",
+      tags: [TAG('i-diy','Immersive Art'), TAG('i-horror','DFW Metro')],
+      desc: "A trippy, 30+ room immersive art installation about a missing suburban family, with portals to alternate dimensions built by working artists — the DIY-maker aesthetic scaled up to an attraction, though it's a DFW-suburb trip rather than in-city.",
+      meta: [["📍","Grapevine, TX — ~35 min from downtown"],["💰","$45–50"],["⏱","2–3 hrs"],["🕐","Afternoon"]],
+      cite: "Timeout Dallas"
+    }
+  ],
+  venues: [
+    {
+      name: "Three Links",
+      tags: [TAG('i-punk','Deep Ellum Standby')],
+      desc: "A perfectly sized DIY-scaled stage with cheap drink specials — the small-room punk-and-indie standby of Deep Ellum.",
+      meta: [["📍","2704 Elm St, Deep Ellum"],["💰","$8–20"],["⏱","2–3 hrs"],["🕐","Evening"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Club Dada",
+      tags: [TAG('i-punk','Well-Known Must-See')],
+      desc: "A long-standing Deep Ellum anchor venue with a low stage and a big multilevel back patio — sometimes runs two shows a night.",
+      meta: [["📍","2720 Elm St, Deep Ellum"],["💰","$10–25"],["⏱","3 hrs"],["🕐","Evening"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "Fabrication Yard",
+      tags: [TAG('i-punk','Underground DIY'), TAG('i-diy','Generator-Powered')],
+      desc: "A genuinely underground, generator-powered DIY venue down dirt roads among tagged industrial buildings — the least institutional pick in this category by design.",
+      meta: [["📍","611 Fabrication St"],["💰","$5–15 suggested donation"],["⏱","3–4 hrs"],["🕐","Night — check socials"]],
+      cite: "Dallas Observer"
+    },
+    {
+      name: "GROWL",
+      tags: [TAG('i-punk','All-Ages DIY'), TAG('i-diy','Record Store + Venue')],
+      desc: "The same record-store-slash-venue from Category 2, worth a second mention here as a genuine all-ages DIY show space.",
+      meta: [["📍","509 E Abram St, Arlington"],["💰","$5–20"],["⏱","2–3 hrs"],["🕐","Evening"]],
+      cite: "do214.com"
+    },
+    {
+      name: "Double Wide",
+      tags: [TAG('i-punk','Moshing Allowed')],
+      desc: "Trailer-themed dive bar that explicitly allows moshing, home of the Dallas-famous Yoohoo YeeHaw shot — unpretentious and loud.",
+      meta: [["📍","3510 Commerce St, Deep Ellum"],["💰","$0–15"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "Dallas Observer"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "We Are 1976",
+      tags: [TAG('i-diy','Letterpress'), TAG('i-books','Local Artists')],
+      desc: "A letterpress shop selling witty cards, posters, and art pieces designed by local artists — a real alternative to a mass-market magnet.",
+      meta: [["💰","$5–25"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Bullzerk",
+      tags: [TAG('i-diy','Hand-Printed'), TAG('i-punk','Dallas-Based')],
+      desc: "Dallas-based apparel brand doing hand-printed, original designs with a wry, DIY sensibility.",
+      meta: [["💰","$20–40"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Mosaic Makers Collective",
+      tags: [TAG('i-diy','Women Artisans')],
+      desc: "Apparel, home goods, accessories, and paper goods handmade entirely by Texan women artisans.",
+      meta: [["💰","$10–50"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "Visit Dallas"
+    },
+    {
+      name: "Half Price Books Flagship (books & vinyl as souvenirs)",
+      tags: [TAG('i-books','Well-Known Must-See'), TAG('i-diy','Founding Store')],
+      desc: "The Dallas-founded flagship again — a Texas-published book or a used vinyl find makes a more meaningful souvenir than a magnet.",
+      meta: [["📍","5803 E Northwest Hwy"],["💰","$5–40"],["🕐","Anytime"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Dallas Farmers Market",
+      tags: [TAG('i-bees','Local Honey'), TAG('i-food','One-Stop Edible Gifts')],
+      desc: "Local honey, Eden Hill Vineyard wine, and Mexican-artisan goods sit alongside produce stalls — a one-stop for edible souvenirs that also cross-lists with the gifts category.",
+      meta: [["📍","920 S Harwood St"],["💰","$8–40"],["⏱","45 min–1 hr"],["🕐","Weekend morning"]],
+      cite: "Visit Dallas"
+    }
+  ],
+  electronics: [
+    {
+      name: "Dallas Makerspace",
+      tags: [TAG('i-diy','36,000 Sq Ft Nonprofit'), TAG('i-diy','Well-Known Must-See')],
+      desc: "A 36,000-square-foot nonprofit community workshop with dedicated electronics, robotics, and laser/engraving areas — the region's flagship makerspace, with a standing Saturday-morning open house for non-members.",
+      meta: [["📍","1825 Monetary Ln #104, Carrollton"],["💰","Membership; free tours"],["⏱","1–2 hrs for a tour"],["🕐","Saturday 10am–noon"]],
+      cite: "dallasmakerspace.org"
+    },
+    {
+      name: "Tone Shop Guitars",
+      tags: [TAG('i-diy','Pedal Demos'), TAG('i-punk','DFW\'s Premier Guitar Store')],
+      desc: "Billed as DFW's premier guitar store — a solid stop for pedal demos and gear-hacking supplies even without a dedicated synth shop in the metro.",
+      meta: [["📍","3 DFW locations"],["💰","$50–500+"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "toneshopguitars.com"
+    },
+    {
+      name: "SoloDallas",
+      tags: [TAG('i-diy','Boutique Pedal Maker')],
+      desc: "A Dallas-based boutique effects-pedal manufacturer specializing in Uni-Vibe-style modulation circuits used by prog and classic-rock guitarists — primarily an online operation; confirm whether a walk-in showroom currently exists before planning around it.",
+      meta: [["💰","$200–500/pedal"],["⏱","Online / by appointment"],["🕐","Contact ahead"]],
+      cite: "solodallas.com"
+    },
+    {
+      name: "Mouser Electronics (HQ)",
+      tags: [TAG('i-diy','World-Scale Component Distributor')],
+      desc: "One of the largest electronic-component distributors in the world is headquartered in the DFW metro — not a place to visit, but a genuinely relevant fact for anyone doing hardware-hacking who's wondered where their parts orders ship from.",
+      meta: [["📍","Mansfield, TX"],["💰","N/A — not retail"]],
+      cite: "General knowledge"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

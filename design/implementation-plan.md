@@ -2,9 +2,9 @@
 
 High-level build plan for the design in [`design.md`](design.md), grouped by milestones. Each milestone gets its own detailed doc when it starts; this doc holds just enough to build accurately from later. Undecided questions that gate milestones are tracked as O-numbers in [`decision-log.md`](decision-log.md#open-questions-undecided).
 
-## Current state (as of design v1, Jul 2026)
+## Current state (as of M3 guide ingest, Aug 2026)
 
-Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · trip chapters, data deep-dive, superlatives, colophon unbuilt or stubs · **all displayed numbers are sample data pending reconstruction** · O1/O2/O3 resolved (D16 public posture, D17 leg-ledger, D18 binary rating); O4/O5 remain open.
+Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · trip chapters, data deep-dive, superlatives, colophon unbuilt or stubs · **14 of 18 cities built** (`portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending") — recommendation content is real (transcribed from `guides/*-guide.json`), but every rec's `status`/`rating` is provisional pending attendance reconciliation (D21, [m3-guide-ingest.md](m3-guide-ingest.md)) and all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null · O1/O2/O3 resolved (D16 public posture, D17 leg-ledger, D18 binary rating); O4/O5/O6 remain open.
 
 ## Milestone overview
 
@@ -55,10 +55,11 @@ Transcribed Washington DC end to end from `dc-city-guide.html` (the 9-category c
 
 ## M3 — Guide + city data buildout
 
-- Trip-1 retro guides: one city per session using the re-patched 10-category skill (D13). Portland excluded from hit-rate (D2).
-- Transcribe remaining trip-2 cities from the existing HTML guides. (Corrected per M0: the trip-2 guides' attended/planned checkboxes were never used, so there is no localStorage to harvest — attended status reconstructs from memory + photos + calendar/ticket emails instead.)
-- Birmingham (day-calendar format) and the five other per-city guides in that format still need transcribing — M2 validated the checklist-format path via DC; the day-calendar path was proven usable for citation cross-referencing but not yet transcribed as a primary source.
-- NOLA per the M0 finding (existing guide or retro backlog).
+- ~~Trip-1 retro guides: one city per session using the re-patched 10-category skill (D13).~~ **Done** — all 7 non-Portland trip-1 cities generated in bulk (`guides/*-guide.json`, Aug 2026). Portland stays excluded from hit-rate (D2).
+- ~~Transcribe remaining trip-2 cities~~ **Done for content** — 6 trip-2 cities (shreveport, jackson, birmingham, atlanta, charlotte, richmond) ingested via [`tools/ingest-guides.mjs`](../tools/ingest-guides.mjs); DC preserved from M2. Statuses are provisional (D21) — the checkbox/localStorage gap from M0 still means real attendance reconstructs from memory + photos + calendar/ticket emails, not yet done.
+- ~~Birmingham (day-calendar format)~~ **Done** — Birmingham's sample JSON, explicitly pending reconstruction per CLAUDE.md, is now real transcribed content from `guides/birmingham-guide.json`.
+- NOLA per the M0 finding: still backlogged, no guide exists.
+- **Follow-up, not yet done:** attendance reconciliation (real statuses from Takeout/photo/calendar data), the D2/D3 thesis question (O6), the two-DC-sources reconciliation, and schema proposals for the unmapped guide fields — all detailed in [m3-guide-ingest.md](m3-guide-ingest.md).
 
 Pace: incremental by design — the site is publishable at every stage (D9/D10).
 

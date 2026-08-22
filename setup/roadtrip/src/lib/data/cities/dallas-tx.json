@@ -1,0 +1,1437 @@
+{
+  "id": "dallas-tx",
+  "name": "Dallas",
+  "state": "TX",
+  "tripId": "west",
+  "stay": {
+    "arrive": "2025-10-23",
+    "depart": "2025-10-26",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 32.7767,
+    "lng": -96.797
+  },
+  "elevationFt": 430,
+  "population": {
+    "cityProper": 1304000,
+    "metro": 8100000
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Pan-African Connection",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "panafricanconnection.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "$0-40",
+      "bestTimeOfDay": "Afternoon (closed Mondays)",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A 37-year Black-owned institution -- gallery, resource center, and bookstore in one -- stocking African and African-American history, art, and banned books, with a stated mission that 'Black history did not start in slavery, but in Africa.' The closest thing Dallas has to the mandatory infoshop pick; see the honest gap below on why a true anarchist storefront doesn't exist here.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Deep Vellum Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "PaperCity Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "$0-35",
+      "bestTimeOfDay": "Afternoon; evening for events",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Indie bookstore attached to Deep Vellum's own nonprofit press, which specializes in small-press works, translations, and authors of color. Coffee shop on site plus a steady calendar of readings and open mics.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Wild Detectives",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "PaperCity Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-food"
+      ],
+      "estCost": "$0-30",
+      "bestTimeOfDay": "Evening, for the bar side",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Bookstore-cafe-bar hybrid founded in 2014 by two Spanish civil engineers; hosts readings, music, tastings, and film screenings in the same room you're browsing in.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Crow Hollow Bookshop",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Community Impact",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-books"
+      ],
+      "estCost": "$0-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A genre-specialty shop built around horror, thriller, mystery, and science fiction -- the sharpest horror-literature pick in the metro, though it's a DFW-suburb detour rather than an in-Dallas stop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Half Price Books Flagship Store",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Half Price Books Flagship Store",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "$0-40",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 90,
+      "rating": null,
+      "note": "The founding store of the now-national used-book chain, launched in Dallas in 1972 out of a former laundromat; the flagship carries books, vinyl, and movies at a scale worth the detour on its own. Atlas Obscura listed.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Good Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$8-40",
+      "bestTimeOfDay": "Afternoon; check for in-stores",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A beloved East Dallas institution and hub for local musicians, running the long-standing 'Live From the Astroturf' in-store performance series that's hosted St. Vincent, They Might Be Giants, and Alice Cooper.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Top Ten Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-books"
+      ],
+      "estCost": "Free browse / listening",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Dallas's oldest record store, which formally became an arts and culture nonprofit in 2016 -- now functions as a music library and archive where you can check out and listen to rare pressings in-store.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Spinster Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "do214.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Evening for in-stores",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Regularly hosts in-store performances, book signings, panels, and pop-up events -- a working community room as much as a record shop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "GROWL",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "do214.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Check listings for shows",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Part record store, part comic shop, part live venue -- a genuine haven for punk collectors who 'love their music loud and their culture raw.' Worth the drive out of Dallas proper.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Josey Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5-40",
+      "bestTimeOfDay": "Weekend afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A 25,000-square-foot warehouse run by and for vinyl nerds -- one of the largest single-location inventories in the region.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Full City Rooster",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "PaperCity Magazine",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A local roasting studio doing small-batch, single-origin roasts out of a working roastery cafe, with almond croissants worth pairing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Noble Coyote Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "PaperCity Magazine",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Local roaster with an on-site cafe near Fair Park -- pairs naturally with a Sights-category stop at the fairgrounds.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Be Kinder Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$4-7",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Nonprofit cafe providing refugees with a safe space, job-skills training, and access to English classes -- the strongest political-bent pick in Dallas coffee. Known for cold brew and homemade granola.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Houndstooth Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "PaperCity Magazine",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Named the 'most beautiful coffee shop in Texas' by Architectural Digest; serves Tweed Coffee Roasters in a striking minimalist space.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Davis Street Espresso",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-6",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Deliberately no WiFi and no to-go cups -- an Italian-espresso-bar ethos that asks you to sit down and actually drink the coffee.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Kessler Baking Studio",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-10",
+      "bestTimeOfDay": "Saturday morning for the cinnamon rolls",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Owner is a James Beard semifinalist; 'Cinnamon Roll Saturdays' is a genuine local institution worth timing a visit around.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Empire Baking Co.",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "One of Dallas's longest-standing craft bakeries, operating since 1992 -- a benchmark for daily bread as much as pastry.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Oak Cliff Bread",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-diy"
+      ],
+      "estCost": "$4-12",
+      "bestTimeOfDay": "Thursday-Saturday only",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Small-batch, rotating weekly menu of sourdough, focaccia, and French baguettes; sandwiches served Thu-Fri at 11:30am only. Genuinely limited-run, not a padded pick.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "La Casita Bakeshop",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-8",
+      "bestTimeOfDay": "Early morning -- items sell out",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Churro cruffins and a daily rotating case that reliably sells out. The Northwest Highway location flips into a tiki bar after 5pm.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Chelles Macarons",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "dallasnav.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-3.50/macaron",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Unusual flavor combinations, Raspberry Rose among the standouts -- a good mailable-adjacent pick for boxed sets, though best eaten fresh.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Frozen Margarita",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks",
+        "i-food"
+      ],
+      "estCost": "$8-14",
+      "bestTimeOfDay": "Any time, but it's a happy-hour institution",
+      "durationMin": null,
+      "rating": null,
+      "note": "Invented in Dallas in 1971 by Mariano Martinez, who adapted a 7-Eleven Slurpee machine to keep margaritas at pour-ready consistency -- the original machine now lives in the Smithsonian. A genuine Dallas invention, not a borrowed Tex-Mex staple.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fletcher's Original Corny Dog",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6-9",
+      "bestTimeOfDay": "During State Fair of Texas (late Sept-late Oct) -- check dates against your visit window",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Invented by the Fletcher brothers in 1942, the corn dog on a stick was born at Fair Park and is still sold only during the fair's run -- a genuinely date-gated regional invention.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Tex-Mex Combo Plate / Queso",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12-20",
+      "bestTimeOfDay": "Lunch or dinner",
+      "durationMin": 60,
+      "rating": null,
+      "note": "El Fenix opened in 1918 and is credited as one of Texas's first Tex-Mex restaurants -- the combo-plate-and-queso format most people now think of as generically 'Mexican food' has a specific Dallas commercial origin point here.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Texas Brisket & Burnt Ends",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Best Dishes in Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-drinks"
+      ],
+      "estCost": "$18-30",
+      "bestTimeOfDay": "Lunch, arrive before 11:30am",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Pecan Lodge is the highest-profile Deep Ellum barbecue stop, close enough to Deep Vellum Books and Three Links to chain into one afternoon in the neighborhood.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Chicken-Fried Steak",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Best Dishes in Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$14-20",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "The standard Texas diner order; Norma's Cafe has been serving it since 1956 out of the same Oak Lawn location.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fxcking Hot Sauces",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "DALtoday",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8-14",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Hand-made, locally sourced hot sauce; the Howlin' Wolf blend (smoked habanero, tomatillo) is the standout.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Poor Vida 'Mixtape' Hot Sauce",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "DALtoday",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-punk"
+      ],
+      "estCost": "$8-12",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "A hip-hop-themed hot sauce line celebrating local Dallas rap culture -- flavors include Texas Pebre and Lemon Pepper Garlic. The closest thing on this list to a music-scene-adjacent food gift.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Local Honey -- Dallas Farmers Market",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$8-18/jar",
+      "bestTimeOfDay": "Weekend morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The market's Shed 2 vendor stalls regularly carry North Texas apiary honey alongside Eden Hill Vineyard wine and Mexican-artisan goods -- a reliable one-stop for jarred, mailable gifts.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dude, Sweet Chocolate",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6-20",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Chef Katherine Clapner's bean-to-bar chocolate operation -- barks, truffles, and marshmallows that ship well and travel better than most bakery items.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Herman Marshall Bourbon / Rye",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "hermanmarshall.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$35-60/bottle",
+      "bestTimeOfDay": "Friday/Saturday night for live music, or any afternoon for a straightforward tasting",
+      "durationMin": 120,
+      "rating": null,
+      "note": "A Texas straight bourbon and rye distillery with a proper tasting room (bingo Tuesdays, trivia Wednesdays, live music weekends) -- worth the drive out for the whiskey/bourbon interest even though it's technically a Wylie address, not Dallas proper.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sixth Floor Museum at Dealey Plaza",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-political"
+      ],
+      "estCost": "$18-22",
+      "bestTimeOfDay": "Weekday morning to beat crowds",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Housed in the former Texas School Book Depository, overlooking the actual assassination site. The plaza outside is free and permanently staffed by freelance conspiracy vendors and self-appointed tour guides -- worth 20 minutes on its own before or instead of the paid museum.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Freedman's Memorial Cemetery & Park",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Free Press",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "TSHA",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Daylight hours",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The physical anchor of the Freedman's Town thread: the cemetery of the post-emancipation community founded here in 1869, discovered in the late 1980s to have been built over directly by the 1940s North Central Expressway. Bronze memorial sculptures and historical markers now sit steps from a Walmart -- itself part of the story.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Knights of Pythias Temple (The Pittman Hotel)",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "General knowledge -- verify address and current operator before publishing",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "Free to view exterior",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Designed in 1916 by William Sydney Pittman, the first professionally trained Black architect in Texas and Booker T. Washington's son-in-law -- once among the only Black-owned commercial high-rises in the segregated South. Restored and reopened in 2021 as a boutique hotel bearing Pittman's name; verify current public-access policy before counting on an interior look.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Texas Theatre",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$10-14/screening",
+      "bestTimeOfDay": "Evening -- check the repertory calendar for horror programming",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Opened 1931, the first air-conditioned theater in Dallas; site of Lee Harvey Oswald's 1963 capture, now an independent two-screen repertory cinema under Aviation Cinemas with regular horror and cult programming.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Traveling Man",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- The Traveling Man",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Anytime, but best photographed at golden hour",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Three enormous steel figures depicting 'the emergence of a giant robot born of a locomotive and spilled gin' -- pure outsider-art strangeness planted right at a DART stop in the same neighborhood as most of this guide's punk venues.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Outlaw Graves -- Bonnie Parker & Clyde Barrow",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Dallas guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Daylight hours",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Bonnie and Clyde are buried in two different Dallas cemeteries, not side by side as popular myth has it -- Bonnie's family wouldn't allow it. Both Atlas Obscura listed and a genuinely strange true-crime pilgrimage.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "White Rock Lake",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Parks & Recreation",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning or dusk",
+      "durationMin": null,
+      "rating": null,
+      "note": "A 1,254-acre lake and park entirely inside Dallas city limits -- the natural-attraction balance-rule pick that doesn't require leaving the city, with a 9.3-mile trail loop, kayak rentals, and a bird sanctuary at its east end.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Meow Wolf Grapevine",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Timeout Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-horror"
+      ],
+      "estCost": "$45-50",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A trippy, 30+ room immersive art installation about a missing suburban family, with portals to alternate dimensions built by working artists -- the DIY-maker aesthetic scaled up to an attraction, though it's a DFW-suburb trip rather than in-city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Three Links",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$8-20",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A perfectly sized DIY-scaled stage with cheap drink specials -- the small-room punk-and-indie standby of Deep Ellum.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Club Dada",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10-25",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A long-standing Deep Ellum anchor venue with a low stage and a big multilevel back patio -- sometimes runs two shows a night.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fabrication Yard",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5-15 suggested donation",
+      "bestTimeOfDay": "Night -- check socials for shows",
+      "durationMin": 240,
+      "rating": null,
+      "note": "A genuinely underground, generator-powered DIY venue down dirt roads among tagged industrial buildings -- the least institutional pick in this category by design.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "GROWL",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "do214.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5-20",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "The same record-store-slash-venue from Category 2, worth a second mention here as a genuine all-ages DIY show space.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Double Wide",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Dallas Observer",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$0-15",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Trailer-themed dive bar that explicitly allows moshing, home of the Dallas-famous Yoohoo YeeHaw shot -- unpretentious and loud.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "We Are 1976",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-books"
+      ],
+      "estCost": "$5-25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A letterpress shop selling witty cards, posters, and art pieces designed by local artists -- a real alternative to a mass-market magnet.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bullzerk",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$20-40",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Dallas-based apparel brand doing hand-printed, original designs with a wry, DIY sensibility.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mosaic Makers Collective",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10-50",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Apparel, home goods, accessories, and paper goods handmade entirely by Texan women artisans.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Half Price Books Flagship (books & vinyl as souvenirs)",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Half Price Books Flagship Store",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "$5-40",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": null,
+      "rating": null,
+      "note": "The Dallas-founded flagship again -- a Texas-published book or a used vinyl find makes a more meaningful souvenir than a magnet.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dallas Farmers Market",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Dallas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$8-40",
+      "bestTimeOfDay": "Weekend morning",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Local honey, Eden Hill Vineyard wine, and Mexican-artisan goods sit alongside produce stalls -- a one-stop for edible souvenirs that also cross-lists with the gifts category.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dallas Makerspace",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "dallasmakerspace.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership-based; free public tours",
+      "bestTimeOfDay": "Saturday 10am-noon (public tours)",
+      "durationMin": 120,
+      "rating": null,
+      "note": "A 36,000-square-foot nonprofit community workshop with dedicated electronics, robotics, and laser/engraving areas -- the region's flagship makerspace, with a standing Saturday-morning open house for non-members.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Tone Shop Guitars",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "toneshopguitars.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$50-500+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Billed as DFW's premier guitar store -- a solid stop for pedal demos and gear-hacking supplies even without a dedicated synth shop in the metro.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "SoloDallas",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "solodallas.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$200-500/pedal",
+      "bestTimeOfDay": "Contact ahead",
+      "durationMin": null,
+      "rating": null,
+      "note": "A Dallas-based boutique effects-pedal manufacturer specializing in Uni-Vibe-style modulation circuits used by prog and classic-rock guitarists -- primarily an online operation; confirm whether a walk-in showroom currently exists before planning around it.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mouser Electronics (HQ)",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "General knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "N/A -- not a retail storefront",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "One of the largest electronic-component distributors in the world is headquartered in the DFW metro -- not a place to visit, but a genuinely relevant fact for anyone doing hardware-hacking who's wondered where their parts orders ship from.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "RoboCop",
+        "year": 1987,
+        "locationVisited": null,
+        "visitNote": "I.M. Pei's inverted-pyramid municipal building doubled as OCP Headquarters and the Detroit police station exterior. Free to view from the plaza.",
+        "photoId": null
+      },
+      {
+        "title": "JFK",
+        "year": 1991,
+        "locationVisited": null,
+        "visitNote": "Shot on the actual assassination site. The grassy knoll, the X marks on Elm St, and the Texas School Book Depository (now the Sixth Floor Museum) are all still there and free to walk.",
+        "photoId": null
+      },
+      {
+        "title": "Dallas Buyers Club",
+        "year": 2013,
+        "locationVisited": null,
+        "visitNote": "Oak Cliff's restored 1931 theater, now an independent repertory cinema -- doubles as the film's title location and as the real site where Lee Harvey Oswald was arrested on Nov 22, 1963.",
+        "photoId": null
+      },
+      {
+        "title": "Bottle Rocket",
+        "year": 1996,
+        "locationVisited": null,
+        "visitNote": "Anderson's directorial debut, shot around Dallas where he grew up; an early template for the visual style he'd refine through his career.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Stevie Ray Vaughan",
+        "relevance": "music",
+        "note": "Blues guitar legend, raised in Oak Cliff; a statue of him stands in Kiest Park."
+      },
+      {
+        "name": "Erykah Badu",
+        "relevance": "music/leftist-politics",
+        "note": "Neo-soul icon raised in South Dallas (Roseland Homes area, itself built over part of Freedman's Town); explicitly political lyrics and community organizing ties to South Dallas remain active."
+      },
+      {
+        "name": "Dimebag Darrell",
+        "relevance": "music",
+        "note": "Pantera guitarist; DFW's most significant contribution to heavy/hardcore-adjacent music, murdered onstage in 2004."
+      },
+      {
+        "name": "Gibby Haynes",
+        "relevance": "music/punk",
+        "note": "Butthole Surfers frontman; noise-punk provocateur whose band became one of the defining acts of the Deep Ellum-adjacent Texas underground, though the band itself formed in San Antonio."
+      },
+      {
+        "name": "Terry Southern",
+        "relevance": "literature/film",
+        "note": "Screenwriter (Dr. Strangelove, Easy Rider) and novelist central to 1960s countercultural satire; birthplace attribution varies by source -- verify before publication."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

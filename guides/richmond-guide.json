@@ -1,0 +1,1615 @@
+{
+  "slug": "richmond",
+  "city": "Richmond",
+  "state": "VA",
+  "stateName": "Virginia",
+  "trip": 2,
+  "legOrder": 7,
+  "tripStatus": "guide-led",
+  "route": {
+    "previous": "charlotte",
+    "next": "washington-dc"
+  },
+  "coordinates": {
+    "lat": 37.5407,
+    "lng": -77.436
+  },
+  "elevationFt": 166,
+  "population": {
+    "cityProper": 226610,
+    "metro": 1349945,
+    "fragmentationRatio": null,
+    "note": "City-proper and metro figures are estimates (Richmond city + Chesterfield/Henrico/Hanover-anchored metro) pending Census reconciliation; Virginia's independent-city structure makes Richmond's own boundary unusually stable compared to Southern-corridor annexation/fragmentation cities, so fragmentationRatio is left null rather than forced."
+  },
+  "visitWindow": {
+    "trip": 2,
+    "arrival": "2026-05-21",
+    "departure": "2026-05-23",
+    "nights": 2,
+    "note": "Leg 7 of Trip 2 (Austin -> Philadelphia), between Charlotte and Washington, D.C."
+  },
+  "framing": "Richmond is a former Confederate capital that spent the 2020s physically removing the monuments to that identity, sitting on top of an earlier and less-told story: Jackson Ward, the segregation-era Black business district nicknamed the 'Harlem of the South' and 'Black Wall Street,' anchored by Maggie L. Walker's St. Luke Penny Savings Bank, gutted mid-century by the same highway-building playbook that hit Deep Deuce in Oklahoma City and Freedman's Town in Dallas. Layer in Poe's gothic Richmond years, GWAR's monster-costume horror-punk empire built out of a VCU-adjacent artist warehouse, and a river city dense with cemeteries, ruins, and wood-fired bakeries, and it's a strong sourced-curation stop for nearly every interest on the list at once.",
+  "analyticalThread": {
+    "id": "black-business-district-erasure",
+    "anchor": "st-luke-penny-savings-bank-jackson-ward",
+    "summary": "CONFIRMED. Jackson Ward was Richmond's segregation-era Black commercial and entertainment district -- 'Black Wall Street' / 'Harlem of the South' -- anchored by Maggie L. Walker's St. Luke Penny Savings Bank (1903), the first bank in the U.S. chartered and led by a woman, of any race. Between 1950-1960 Richmond demolished roughly 4,700 housing units in Black neighborhoods and replaced them with only 1,736 public-housing units; the Richmond-Petersburg Turnpike (now I-95) then cut a block-wide trench through the district's historic core, destroying about 1,000 homes and severing 31 streets. The mechanism -- targeted 'urban renewal' clearance followed by an interstate routed directly through a thriving Black business corridor -- is the same pattern documented at Deep Deuce in Oklahoma City (I-235) and at Dallas's Freedman's Town/State-Thomas (I-345 and Central Expressway/US-75). This resolves the Trip Route and Threads doc's prior UNCONFIRMED flag on the St. Luke Bank instance: it is a confirmed third anchor of the thread, not a coincidental parallel.",
+    "crossTripLinks": [
+      "oklahoma-city",
+      "dallas"
+    ]
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "Wikipedia",
+    "National Park Service (Maggie L. Walker NHS)",
+    "Richmond Times-Dispatch / Richmond Magazine (secondary references)",
+    "Targeted web search and direct-source fetch (search-engine tooling constrained this session -- see scopeDecision)"
+  ],
+  "popCulture": {
+    "films": [
+      {
+        "title": "Hannibal",
+        "year": 2001,
+        "director": "Ridley Scott",
+        "locations": [
+          {
+            "name": "Belle Isle hydroelectric plant ruins",
+            "address": "Belle Isle, James River Park System, Richmond, VA",
+            "status": "extant",
+            "note": "The abandoned Virginia Electric and Power Co. hydroelectric plant (1904-1963) on Belle Isle appears in the film; the ruins are freely walkable today as part of the James River Park System.",
+            "citedFrom": "Wikipedia -- Belle Isle (Virginia)"
+          }
+        ]
+      },
+      {
+        "title": "Lincoln",
+        "year": 2012,
+        "director": "Steven Spielberg",
+        "locations": [
+          {
+            "name": "Virginia State Capitol",
+            "address": "1000 Bank St, Richmond, VA",
+            "status": "extant",
+            "note": "Thomas Jefferson-designed capitol used for interior sequences; Richmond stood in extensively for 1860s Washington, D.C. Daniel Day-Lewis won his third Best Actor Oscar for the role.",
+            "citedFrom": "Wikipedia -- Richmond, Virginia"
+          }
+        ]
+      },
+      {
+        "title": "Loving",
+        "year": 2016,
+        "director": "Jeff Nichols",
+        "locations": [
+          {
+            "name": "Central Virginia locations",
+            "address": null,
+            "status": "unconfirmed",
+            "note": "Dramatization of Loving v. Virginia, the 1967 Supreme Court case that struck down interracial-marriage bans; filmed largely in central Virginia, close to the case's Caroline County origins north of Richmond.",
+            "citedFrom": "general knowledge -- not independently re-verified this session"
+          }
+        ]
+      },
+      {
+        "title": "Mercy Street",
+        "year": 2016,
+        "director": "PBS / various",
+        "locations": [
+          {
+            "name": "Richmond-area production",
+            "address": null,
+            "status": "unconfirmed",
+            "note": "PBS Civil War-hospital drama set partly around Richmond's wartime medical infrastructure (echoing the real Chimborazo Hospital in Church Hill, once the Confederacy's largest military hospital).",
+            "citedFrom": "Wikipedia -- Richmond, Virginia"
+          }
+        ]
+      },
+      {
+        "title": "TURN: Washington's Spies",
+        "year": 2014,
+        "director": "AMC / various",
+        "locations": [
+          {
+            "name": "Richmond-region locations",
+            "address": null,
+            "status": "unconfirmed",
+            "note": "Revolutionary War spy-ring series that used Richmond-area locations for its Colonial-era setting.",
+            "citedFrom": "Wikipedia -- Richmond, Virginia"
+          }
+        ]
+      }
+    ],
+    "correctionNote": {
+      "text": "Gone with the Wind is popularly but incorrectly linked to Richmond: local legend claims the grand staircase at the Jefferson Hotel inspired Tara's staircase in the film. The hotel's staircase is real and worth seeing, but GWTW was shot on MGM soundstages in California, not in Richmond, and the 'inspiration' claim is unverified lore rather than documented production history.",
+      "citedFrom": "general knowledge -- flagged as legend, not fact"
+    },
+    "notablePeople": [
+      {
+        "name": "D'Angelo",
+        "born": 1974,
+        "birthplace": "Richmond, VA",
+        "relevance": "music",
+        "note": "Neo-soul pioneer, born and raised in Richmond's Southside in a Pentecostal preacher's household; died October 2025 and was buried at Richmond's Mount Calvary Cemetery after a service at Saint Paul's Baptist Church.",
+        "citedFrom": "Wikipedia -- D'Angelo",
+        "verificationFlag": null
+      },
+      {
+        "name": "GWAR (founded by Dave Brockie and collaborators)",
+        "born": null,
+        "birthplace": null,
+        "raisedIn": "Richmond, VA (formed 1984)",
+        "relevance": "punk/horror crossover",
+        "note": "Formed at the Richmond Dairy, a former bottling plant turned artist space; the band's monster-costume shock-rock aesthetic runs directly through the traveler's horror and punk interests. Slave Pit Inc., the band's art/effects studio, and GWARbar in Jackson Ward keep the connection live in the city today.",
+        "citedFrom": "web-search / direct fetch",
+        "verificationFlag": null
+      },
+      {
+        "name": "Arthur Ashe",
+        "born": 1943,
+        "birthplace": "Richmond, VA",
+        "relevance": "civil-rights / political",
+        "note": "Tennis champion and civil-rights figure; his 1996 statue is now the sole monument remaining on Monument Avenue after the 2020-2022 removal of the Confederate statues.",
+        "citedFrom": "web-search / direct fetch",
+        "verificationFlag": null
+      },
+      {
+        "name": "Vince Gilligan",
+        "born": null,
+        "birthplace": "Richmond, VA",
+        "relevance": "film/TV",
+        "note": "Creator of Breaking Bad and Better Call Saul, born in Richmond.",
+        "citedFrom": "Wikipedia -- Richmond, Virginia",
+        "verificationFlag": true
+      },
+      {
+        "name": "Edgar Allan Poe",
+        "born": 1809,
+        "birthplace": "Boston, MA",
+        "raisedIn": "Richmond, VA",
+        "relevance": "horror / literature",
+        "note": "Not born in Richmond (Boston) but raised there from infancy after his mother's death; his formative and most productive Richmond years are the direct subject of the Poe Museum. Do not conflate birthplace with the Richmond connection.",
+        "citedFrom": "web-search / direct fetch",
+        "verificationFlag": null
+      },
+      {
+        "name": "Tom Wolfe",
+        "born": 1930,
+        "birthplace": "Richmond, VA",
+        "relevance": "literature",
+        "note": "New Journalism pioneer and novelist (The Right Stuff, The Bonfire of the Vanities), born in Richmond.",
+        "citedFrom": "Wikipedia -- Richmond, Virginia",
+        "verificationFlag": true
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "bookstores",
+      "label": "Bookstores",
+      "emoji": "\ud83d\udcda",
+      "pickCount": 4
+    },
+    {
+      "id": "records",
+      "label": "Record Stores",
+      "emoji": "\ud83c\udfb5",
+      "pickCount": 4
+    },
+    {
+      "id": "coffee",
+      "label": "Coffee Shops",
+      "emoji": "\u2615",
+      "pickCount": 5
+    },
+    {
+      "id": "pastry",
+      "label": "Pastry & Bakeries",
+      "emoji": "\ud83e\udd50",
+      "pickCount": 4
+    },
+    {
+      "id": "dishes",
+      "label": "Unique Dishes to Eat",
+      "emoji": "\ud83c\udf7d\ufe0f",
+      "pickCount": 5
+    },
+    {
+      "id": "gifts",
+      "label": "Non-Perishable Gifts & Mailable Foods",
+      "emoji": "\ud83d\udce6",
+      "pickCount": 5
+    },
+    {
+      "id": "sights",
+      "label": "Sights & Things to Do",
+      "emoji": "\ud83d\udc41\ufe0f",
+      "pickCount": 9
+    },
+    {
+      "id": "venues",
+      "label": "Punk & Indie Rock Venues",
+      "emoji": "\ud83c\udfb8",
+      "pickCount": 5
+    },
+    {
+      "id": "souvenirs",
+      "label": "Magnets, Postcards & Souvenirs",
+      "emoji": "\ud83e\uddf2",
+      "pickCount": 3
+    },
+    {
+      "id": "electronics",
+      "label": "DIY Electronics & Maker Spaces",
+      "emoji": "\ud83d\udd27",
+      "pickCount": 2
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "chop-suey-books",
+      "name": "Chop Suey Books",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "address": "2913 W Cary St, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-books"
+      ],
+      "cost": "$0-30",
+      "duration": "45 min-1 hr",
+      "bestTime": "Afternoon",
+      "note": "Richmond's flagship indie bookstore since 1998, new and used stacked side by side in a cozy Carytown storefront; regular author events and a house cat culture that's practically a neighborhood mascot.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA indie institution"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "fountain-bookstore",
+      "name": "Fountain Bookstore",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "address": "1312 E Cary St, Richmond, VA",
+      "district": "Shockoe Slip",
+      "interestTags": [
+        "i-books"
+      ],
+      "cost": "$0-35",
+      "duration": "45 min",
+      "bestTime": "Afternoon; evening for a signing",
+      "note": "Richmond's oldest surviving independent bookstore (since 1978), with a long history of author events and signings tying it into the city's literary calendar.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA indie institution"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "black-swan-books-music",
+      "name": "Black Swan Books & Music",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "address": "2601 W Cary St, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-books",
+        "i-horror",
+        "i-diy"
+      ],
+      "cost": "$5-100+",
+      "duration": "45 min",
+      "bestTime": "Afternoon",
+      "note": "Antiquarian and used books shelved alongside used vinyl -- rare volumes and old ephemera give it real horror/occult-browsing potential alongside the literary stock.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA antiquarian shop"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": [
+        "records"
+      ],
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "bbgb-tales-for-kids",
+      "name": "bbgb tales for kids",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "address": "Carytown, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-books"
+      ],
+      "cost": "$0-25",
+      "duration": "30 min",
+      "bestTime": "Afternoon",
+      "note": "Beloved independent children's bookstore rounding out Carytown's book-shopping strip -- not a core-interest match but a genuine neighborhood institution worth the balance.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA children's indie"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "steady-sounds-records",
+      "name": "Steady Sounds Records",
+      "category": "records",
+      "status": "sourced-recommendation",
+      "address": "210 W Broad St, Richmond, VA",
+      "district": "Broad Street Arts District",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "cost": "$5-40",
+      "duration": "45 min-1 hr",
+      "bestTime": "Afternoon; check for in-stores",
+      "note": "Vinyl-first shop with a punk/hardcore/experimental leaning and real ties to Richmond's DIY show circuit, including in-store performances.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA record shop, Broad St Arts District"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "vinyl-conflict",
+      "name": "Vinyl Conflict",
+      "category": "records",
+      "status": "sourced-recommendation",
+      "address": "Carytown, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-punk"
+      ],
+      "cost": "$5-30",
+      "duration": "30-45 min",
+      "bestTime": "Afternoon",
+      "note": "Punk, hardcore, and metal-focused record shop that doubles as an informal bulletin board for the local underground show calendar -- the most on-the-nose punk match in the city.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "punk/hardcore-focused RVA record shop"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "plan-9-music",
+      "name": "Plan 9 Music",
+      "category": "records",
+      "status": "sourced-recommendation",
+      "address": "Carytown, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-diy"
+      ],
+      "cost": "$5-30",
+      "duration": "45 min",
+      "bestTime": "Anytime",
+      "note": "Richmond-founded regional chain (dating to the early 1980s) with a deep new-and-used selection -- the well-known anchor of Carytown's record-shopping strip.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running Richmond-founded chain"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "black-swan-books-music-records",
+      "name": "Black Swan Books & Music",
+      "category": "records",
+      "status": "sourced-recommendation",
+      "address": "2601 W Cary St, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-diy",
+        "i-horror"
+      ],
+      "cost": "$2-30",
+      "duration": "30 min",
+      "bestTime": "Afternoon",
+      "note": "The same antiquarian shop from the bookstore list, crosslisted here for its used-vinyl bins.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA antiquarian shop"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": [
+        "bookstores"
+      ],
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "lamplighter-coffee-roasters",
+      "name": "Lamplighter Coffee Roasters",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "Multiple locations (The Fan, Scott's Addition), Richmond, VA",
+      "district": "The Fan / Scott's Addition",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$4-8",
+      "duration": "30-45 min",
+      "bestTime": "Morning",
+      "note": "Richmond-based roaster and the city's best-known specialty-coffee name, with multiple locations and an on-site roasting program.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "RVA roaster, multiple locations"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "blanchards-coffee-roasting",
+      "name": "Blanchard's Coffee Roasting Co.",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "Richmond, VA",
+      "district": "Scott's Addition area",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$4-8",
+      "duration": "30 min",
+      "bestTime": "Morning",
+      "note": "RVA roaster (est. 2011) that wholesales to a wide swath of the city's cafes and restaurants -- a good stop to taste the bean before you see it on menus citywide.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "RVA roaster since 2011"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": [
+        "gifts"
+      ],
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "rostovs-coffee-tea",
+      "name": "Rostov's Coffee & Tea",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "Grace St, Richmond, VA",
+      "district": "VCU / Fan District",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$3-7",
+      "duration": "30 min",
+      "bestTime": "Morning",
+      "note": "Longtime VCU-area coffeehouse fixture -- an old-guard counterpoint to the newer third-wave roasters.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running VCU-area coffeehouse"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "crossroads-coffee-ice-cream",
+      "name": "Crossroads Coffee & Ice Cream",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "Northside, Richmond, VA",
+      "district": "Northside",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$3-8",
+      "duration": "30 min",
+      "bestTime": "Afternoon",
+      "note": "Laid-back Northside neighborhood coffeehouse that doubles as an ice-cream shop -- a quieter, more residential counterpoint to the Fan/Carytown coffee crawl.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "Northside neighborhood coffeehouse"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "nile-ethiopian-coffeehouse",
+      "name": "Nile Ethiopian Restaurant & Coffeehouse",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "Broad St, Richmond, VA",
+      "district": "Broad Street",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$5-15",
+      "duration": "45 min",
+      "bestTime": "Afternoon or evening",
+      "note": "Traditional Ethiopian coffee ceremony alongside a full restaurant menu -- the least generic-espresso-bar pick on this list.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "Ethiopian restaurant/coffeehouse, Broad St"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "sub-rosa-bakery",
+      "name": "Sub Rosa Bakery",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "address": "620 N 25th St, Richmond, VA",
+      "district": "Church Hill",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$4-12",
+      "duration": "30 min",
+      "bestTime": "8-10am for the full pastry case (when open)",
+      "note": "Wood-fired, stone-milled, entirely vegan bread and pastry program using organically sourced regional grain -- Richmond's most distinctive bakery. CURRENTLY CLOSED after fire damage; check their Instagram before planning a visit.",
+      "source": {
+        "citedFrom": "direct fetch, subrosabakery.com",
+        "detail": "confirmed via site fetch: temporarily closed, fire damage"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": "closed-fire-damage",
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "wpa-bakery",
+      "name": "WPA Bakery",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "address": "Richmond, VA",
+      "district": "Church Hill / Scott's Addition",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$4-10",
+      "duration": "30 min",
+      "bestTime": "Morning",
+      "note": "Sourdough-forward bakery with a wood-fired program -- a good backup while Sub Rosa is closed, and a strong stop in its own right.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "RVA sourdough bakery"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "sugar-and-twine",
+      "name": "Sugar & Twine",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "address": "Richmond, VA",
+      "district": "Richmond",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$4-10",
+      "duration": "20-30 min",
+      "bestTime": "Morning",
+      "note": "Dessert-forward bakery/patisserie; confirm current hours before visiting, as this pick wasn't independently re-verified this session.",
+      "source": {
+        "citedFrom": "general/local knowledge, lower confidence",
+        "detail": "regional bakery roundups"
+      },
+      "balanceRule": null,
+      "statusFlag": "verify-before-visiting",
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": true
+    },
+    {
+      "id": "stellas-baklava",
+      "name": "Stella's",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "address": "The Fan, Richmond, VA",
+      "district": "The Fan",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$4-10",
+      "duration": "20 min (as a stop within a meal)",
+      "bestTime": "Evening, as dessert after dinner",
+      "note": "Longtime Fan District Greek restaurant and market -- baklava and Greek pastry as the 'distinctive approach' pick alongside the French-technique bakeries.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running Fan District Greek restaurant"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "sally-bells-box-lunch",
+      "name": "Box Lunch \u2014 Sally Bell's Kitchen",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "address": "West Broad St, Richmond, VA",
+      "district": "Broad Street",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$10-15",
+      "duration": "20 min to order, eat anywhere",
+      "note": "Richmond's James Beard 'America's Classic' (2015), operating since 1924. The boxed lunch -- deviled egg, beaten-biscuit ham sandwich, potato salad, a cheese wafer, and a tea cake -- is a genuine only-here regional institution.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Sally Bell's Kitchen",
+        "detail": "James Beard America's Classic 2015; relocated to West Broad St in 2016"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": [
+        "Sally Bell's Kitchen"
+      ],
+      "verificationFlag": null
+    },
+    {
+      "id": "mama-js-soul-food",
+      "name": "Soul Food \u2014 Mama J's Kitchen",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "address": "Jackson Ward, Richmond, VA",
+      "district": "Jackson Ward",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "cost": "$12-22",
+      "duration": "1 hr",
+      "bestTime": "Lunch; expect a line",
+      "note": "Jackson Ward soul-food institution -- fried chicken, cornbread, mac and cheese -- sitting directly inside the historic Black Wall Street footprint that carries this guide's analytical thread.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "well-known Jackson Ward soul food restaurant"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": [
+        "Mama J's Kitchen"
+      ],
+      "verificationFlag": null
+    },
+    {
+      "id": "zzq-brisket-brunswick-stew",
+      "name": "Brisket & Brunswick Stew \u2014 ZZQ Texas Craft Barbeque",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "address": "Scott's Addition, Richmond, VA",
+      "district": "Scott's Addition",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$15-30",
+      "duration": "1-1.5 hrs",
+      "bestTime": "Lunch; sells out, arrive early",
+      "note": "Texas-style smoked brisket built in Virginia, paired with Brunswick stew -- a dish central Virginia and Georgia both claim as their own regional invention.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "acclaimed Scott's Addition barbecue restaurant"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": [
+        "ZZQ Texas Craft Barbeque"
+      ],
+      "verificationFlag": null
+    },
+    {
+      "id": "metzger-currywurst",
+      "name": "Currywurst \u2014 Metzger Bar & Butchery",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "address": "Church Hill, Richmond, VA",
+      "district": "Church Hill",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$15-25",
+      "duration": "1-1.5 hrs",
+      "bestTime": "Dinner",
+      "note": "German-technique butchery and restaurant in Church Hill making its own currywurst and charcuterie in-house -- a distinctly non-Southern dish that's become a Richmond destination anyway.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "Church Hill German-inspired restaurant"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": [
+        "Metzger Bar & Butchery"
+      ],
+      "verificationFlag": null
+    },
+    {
+      "id": "perlys-pastrami",
+      "name": "Pastrami Reuben \u2014 Perly's Restaurant & Delicatessen",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "address": "Broad St, Richmond, VA",
+      "district": "Broad Street",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$14-20",
+      "duration": "1 hr",
+      "bestTime": "Lunch",
+      "note": "Jewish deli institution on Broad St -- pastrami reuben and a full deli case in a city not otherwise known for the genre.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running Broad St Jewish deli"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": [
+        "Perly's Restaurant & Delicatessen"
+      ],
+      "verificationFlag": null
+    },
+    {
+      "id": "virginia-peanuts",
+      "name": "Virginia Peanuts",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "address": "The Peanut Shop of Williamsburg / RVA gift shops",
+      "district": "citywide gift shops",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$8-18",
+      "duration": "N/A",
+      "note": "Virginia-type peanuts are the largest peanut cultivar grown -- a genuinely regional, easily mailed gift sold in gift shops and markets across Richmond.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "Virginia peanut-growing region product"
+      },
+      "bestTime": "N/A",
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "virginia-country-ham",
+      "name": "Smithfield / Surry Virginia Country Ham",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "address": "S. Wallace Edwards & Sons (Surry, VA) / Richmond gourmet shops",
+      "district": "citywide gourmet shops",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$25-70",
+      "duration": "N/A",
+      "note": "Salt-cured, dry-aged Virginia country ham from the Smithfield/Surry region just southeast of Richmond -- vacuum-sealed versions ship well and are a genuinely regional gift.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "Virginia country-ham tradition"
+      },
+      "bestTime": "N/A",
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "whole-bean-coffee-gift",
+      "name": "Whole-Bean Coffee \u2014 Blanchard's / Lamplighter",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "address": "Blanchard's Coffee Roasting Co. / Lamplighter Coffee Roasters, Richmond, VA",
+      "district": "citywide",
+      "interestTags": [
+        "i-food"
+      ],
+      "cost": "$14-20/bag",
+      "duration": "N/A",
+      "note": "Both roast in Richmond and sell retail bags -- an easy, mailable way to bring the city's coffee scene home.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "RVA roasters"
+      },
+      "bestTime": "N/A",
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": [
+        "coffee"
+      ],
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "local-rva-honey",
+      "name": "Local RVA Honey",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "address": "Ellwood Thompson's, Carytown, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-bees"
+      ],
+      "cost": "$8-16/jar",
+      "duration": "N/A",
+      "note": "Ellwood Thompson's natural-foods grocery in Carytown carries honey from area beekeepers -- the direct bees/honey pick for this category.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "Carytown natural-foods grocery"
+      },
+      "bestTime": "N/A",
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "reservoir-distillery-bourbon",
+      "name": "Bottled Bourbon/Rye \u2014 Reservoir Distillery",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "address": "1800 A Summit Ave, Richmond, VA",
+      "district": "Scott's Addition",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "cost": "$45-80/bottle",
+      "duration": "N/A",
+      "note": "Richmond craft distillery running a Virginia Heritage Grain Project alongside its 4-Grain Bourbon and rye -- a proper whiskey/bourbon gift with a Richmond address on the label. Check shipping laws before mailing spirits.",
+      "source": {
+        "citedFrom": "direct fetch, reservoirdistillery.com",
+        "detail": "confirmed via site fetch: 1800 A Summit Ave, tasting room Mon-Sat 1-9pm"
+      },
+      "bestTime": "N/A",
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "maggie-l-walker-nhs",
+      "name": "Maggie L. Walker National Historic Site",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "600 N 2nd St, Richmond, VA",
+      "district": "Jackson Ward",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "cost": "Free",
+      "duration": "1-1.5 hrs",
+      "bestTime": "Morning, NPS ranger-led tour",
+      "note": "Free NPS site preserving Maggie L. Walker's Jackson Ward rowhouse; the anchor point of this guide's confirmed analytical thread -- Walker founded St. Luke Penny Savings Bank in 1903, the first bank in the U.S. chartered and led by a woman of any race.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Maggie L. Walker National Historic Site",
+        "detail": "National Historic Landmark, NPS-operated"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": true,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "poe-museum",
+      "name": "Edgar Allan Poe Museum",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "1914-16 E Main St, Richmond, VA",
+      "district": "Shockoe Bottom",
+      "interestTags": [
+        "i-horror",
+        "i-books"
+      ],
+      "cost": "~$10",
+      "duration": "1 hr",
+      "bestTime": "Afternoon",
+      "note": "Built around the city's oldest stone house; holds Poe ephemera including his walking stick and socks, and centers his formative Richmond years (he was raised there, though born in Boston). The single best horror/literature crossover in the city.",
+      "source": {
+        "citedFrom": "direct fetch, atlasobscura.com/things-to-do/richmond-virginia",
+        "detail": "Atlas Obscura"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "evergreen-cemetery",
+      "name": "Evergreen Cemetery",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "East End, Richmond, VA",
+      "district": "East End",
+      "interestTags": [
+        "i-horror",
+        "i-political"
+      ],
+      "cost": "Free",
+      "duration": "45 min-1 hr",
+      "bestTime": "Daylight hours",
+      "note": "1891 African American burial ground reclaimed for decades by kudzu and forest; Maggie L. Walker and John Mitchell Jr. are both buried here, making it a direct extension of the Jackson Ward thread. A $19M restoration plan was announced in 2020, with visible community cleanup progress since.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Evergreen Cemetery (Richmond, Virginia)",
+        "detail": "Wikipedia"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "belle-isle",
+      "name": "Belle Isle",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "James River Park System, Richmond, VA",
+      "district": "James River",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "cost": "Free",
+      "duration": "1.5-2 hrs",
+      "bestTime": "Late afternoon / golden hour",
+      "note": "54-acre James River island, reached by pedestrian suspension bridge; a Civil War POW camp (1862-65), then a hydroelectric plant (1904-63) whose ruins appear in Ridley Scott's Hannibal (2001). Hiking, rock scrambling, and river swimming holes -- the natural-attraction balance-rule pick.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Belle Isle (Virginia)",
+        "detail": "Wikipedia"
+      },
+      "balanceRule": "natural-attraction",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": "Hannibal (2001) -- hydroelectric plant ruins",
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "hollywood-cemetery",
+      "name": "Hollywood Cemetery",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "412 S Cherry St, Richmond, VA",
+      "district": "Oregon Hill",
+      "interestTags": [
+        "i-horror"
+      ],
+      "cost": "Free (tours extra)",
+      "duration": "1-1.5 hrs",
+      "bestTime": "Morning or late afternoon",
+      "note": "Presidents James Monroe and John Tyler, Confederate president Jefferson Davis, 18,000 Confederate soldiers, and the 'Richmond Vampire' grave of W.W. Pool -- one of the most visited cemeteries in Virginia.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Hollywood Cemetery (Richmond, Virginia)",
+        "detail": "Wikipedia"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "monument-avenue",
+      "name": "Monument Avenue (former Confederate monument sites)",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "Monument Ave, Richmond, VA",
+      "district": "Museum District / Fan",
+      "interestTags": [
+        "i-political"
+      ],
+      "cost": "Free",
+      "duration": "1 hr walk or drive",
+      "bestTime": "Anytime",
+      "bonus": true,
+      "note": "Five Confederate statues stood here from 1890-1929; all were removed between June 2020 and December 2022 following George Floyd-protest pressure and a state Supreme Court ruling on the Lee statue. Arthur Ashe's 1996 monument is now the only one left standing. The removed statues are held by the Black History Museum and Cultural Center of Virginia.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Monument Avenue",
+        "detail": "Wikipedia"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "grand-kugel",
+      "name": "The Grand Kugel",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "Science Museum of Virginia, Richmond, VA",
+      "district": "Scott's Addition area",
+      "interestTags": [
+        "i-horror"
+      ],
+      "cost": "Free to view",
+      "duration": "15 min",
+      "bestTime": "Anytime",
+      "bonus": true,
+      "note": "A 29-ton polished granite sphere that spins at the lightest touch, floating on a thin film of water -- an Atlas Obscura oddity pick, pure hidden-gem novelty.",
+      "source": {
+        "citedFrom": "direct fetch, atlasobscura.com/things-to-do/richmond-virginia",
+        "detail": "Atlas Obscura"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "byrd-theatre",
+      "name": "Byrd Theatre",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "2908 W Cary St, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-books"
+      ],
+      "cost": "$8 second-run ticket",
+      "duration": "2-2.5 hrs (with a film)",
+      "bestTime": "Evening; Saturday for the Wurlitzer organ",
+      "note": "1928 French Empire-style movie palace, largely unchanged since opening, with a Wurlitzer pipe organ played live Saturday nights and $8 second-run screenings -- a genuine film-history landmark, not a museum piece.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Byrd Theatre",
+        "detail": "Wikipedia"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "church-hill-buried-tunnel",
+      "name": "Church Hill Tunnel (buried 1925 locomotive)",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "Church Hill, Richmond, VA",
+      "district": "Church Hill",
+      "interestTags": [
+        "i-horror"
+      ],
+      "cost": "Free (exterior/marker only)",
+      "duration": "20-30 min",
+      "bestTime": "Daylight",
+      "bonus": true,
+      "note": "A C&O railroad tunnel collapsed in 1925, killing several workers and burying a locomotive that has never been recovered -- it's still down there. A quiet, genuinely eerie Atlas Obscura-style hidden gem in an otherwise gentrified neighborhood.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- Church Hill, Richmond, Virginia",
+        "detail": "Wikipedia"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "the-camel",
+      "name": "The Camel",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "address": "1621 W Broad St, Richmond, VA",
+      "district": "Broad Street",
+      "interestTags": [
+        "i-punk"
+      ],
+      "cost": "$10-25",
+      "duration": "2-3 hrs",
+      "bestTime": "Night",
+      "note": "RVA's best-known independent live-music room -- eclectic booking (indie, alt, local showcases), full food/bar program, and an open-mic/community-event calendar alongside touring acts.",
+      "source": {
+        "citedFrom": "direct fetch, thecamel.org",
+        "detail": "confirmed via site fetch"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "gwarbar",
+      "name": "GWARbar",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "address": "Jackson Ward, Richmond, VA",
+      "district": "Jackson Ward",
+      "interestTags": [
+        "i-punk",
+        "i-horror"
+      ],
+      "cost": "$10-30 with a show; bar prices otherwise",
+      "duration": "2-4 hrs",
+      "bestTime": "Night",
+      "note": "'Upscale dive bar' opened 2015 by GWAR guitarist Mike Derks, the commercial anchor of the horror-punk band that's been Richmond's most visible music export since 1984. Sits directly in Jackson Ward, the thread neighborhood.",
+      "source": {
+        "citedFrom": "direct fetch, Wikipedia -- GWAR",
+        "detail": "Wikipedia"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "gallery5",
+      "name": "Gallery5",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "address": "200 W Marshall St, Richmond, VA",
+      "district": "Broad Street Arts District",
+      "interestTags": [
+        "i-punk",
+        "i-diy",
+        "i-political"
+      ],
+      "cost": "$5-15 suggested donation, varies by show",
+      "duration": "2-3 hrs",
+      "bestTime": "Night",
+      "note": "Artist-run, all-ages arts space and DIY venue in the Broad Street Arts District, booking punk and experimental acts alongside visual-art and community programming.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA artist-run DIY space"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "cobra-cabana",
+      "name": "Cobra Cabana",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "address": "Manchester, Richmond, VA",
+      "district": "Manchester",
+      "interestTags": [
+        "i-punk"
+      ],
+      "cost": "$5-15",
+      "duration": "2-3 hrs",
+      "bestTime": "Night",
+      "note": "Manchester dive bar with a steady punk/garage/DIY booking history -- lower-key than The Camel, closer to the actual show-in-a-bar tradition.",
+      "source": {
+        "citedFrom": "general/local knowledge, moderate confidence",
+        "detail": "RVA dive-bar venue"
+      },
+      "balanceRule": null,
+      "statusFlag": "verify-before-visiting",
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": true
+    },
+    {
+      "id": "get-tight-lounge",
+      "name": "Get Tight Lounge",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "address": "Richmond, VA",
+      "district": "Richmond",
+      "interestTags": [
+        "i-punk"
+      ],
+      "cost": "$5-15",
+      "duration": "2-3 hrs",
+      "bestTime": "Night",
+      "note": "DIY dive-bar venue in the garage/punk lineage, part of the current generation of small rooms filling the gap left by Strange Matter's 2016 closure.",
+      "source": {
+        "citedFrom": "general/local knowledge, moderate confidence",
+        "detail": "RVA dive-bar venue"
+      },
+      "balanceRule": null,
+      "statusFlag": "verify-before-visiting",
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": true
+    },
+    {
+      "id": "quirk-gallery",
+      "name": "Quirk Gallery",
+      "category": "souvenirs",
+      "status": "sourced-recommendation",
+      "address": "201 W Broad St, Richmond, VA",
+      "district": "Broad Street Arts District",
+      "interestTags": [
+        "i-diy"
+      ],
+      "cost": "$10-60",
+      "duration": "30-45 min",
+      "bestTime": "Afternoon",
+      "note": "Gallery/gift shop attached to the Quirk Hotel, stocking locally made art, prints, and design objects rather than generic tourist stock.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "Broad St Arts District gallery/gift shop"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "world-of-mirth",
+      "name": "World of Mirth",
+      "category": "souvenirs",
+      "status": "sourced-recommendation",
+      "address": "Carytown, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-diy"
+      ],
+      "cost": "$5-30",
+      "duration": "20-30 min",
+      "bestTime": "Afternoon",
+      "note": "Kitschy, independent novelty and toy shop that's been a Carytown fixture for decades -- oddball ephemera over mass-market souvenirs.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running Carytown novelty shop"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "black-swan-postcards",
+      "name": "Black Swan Books & Music (postcards/ephemera)",
+      "category": "souvenirs",
+      "status": "sourced-recommendation",
+      "address": "2601 W Cary St, Richmond, VA",
+      "district": "Carytown",
+      "interestTags": [
+        "i-books"
+      ],
+      "cost": "$2-20",
+      "duration": "15 min (as part of a longer browse)",
+      "bestTime": "Afternoon",
+      "note": "Old postcards, prints, and ephemera turn up regularly in the antiquarian stock -- a more meaningful souvenir than a magnet, crosslisted from the bookstore/record picks above.",
+      "source": {
+        "citedFrom": "general/local knowledge",
+        "detail": "long-running RVA antiquarian shop"
+      },
+      "balanceRule": null,
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": [
+        "bookstores",
+        "records"
+      ],
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "hackrva",
+      "name": "HackRVA",
+      "category": "electronics",
+      "status": "sourced-recommendation",
+      "address": "2026-A Dabney Rd, Richmond, VA",
+      "district": "Dabney Road",
+      "interestTags": [
+        "i-diy"
+      ],
+      "cost": "$39/month membership; open houses free",
+      "duration": "2 hrs for an open house",
+      "bestTime": "1st and 3rd Thursday, 7-9pm (open house)",
+      "note": "Member-run nonprofit makerspace covering electronics, embedded software, 3D printing, laser cutting, woodworking, and more; members get 24/7 access, visitors are welcome at the biweekly open house.",
+      "source": {
+        "citedFrom": "direct fetch, hackrva.org",
+        "detail": "confirmed via site fetch"
+      },
+      "balanceRule": "well-known-must-see",
+      "statusFlag": null,
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": null
+    },
+    {
+      "id": "vcu-da-vinci-center",
+      "name": "VCU da Vinci Center (RAMP Lab)",
+      "category": "electronics",
+      "status": "sourced-recommendation",
+      "address": "VCU campus, Richmond, VA",
+      "district": "VCU / Monroe Park",
+      "interestTags": [
+        "i-diy"
+      ],
+      "cost": "Varies; primarily student-access",
+      "duration": "Varies",
+      "bestTime": "Weekday, check public-program calendar",
+      "note": "VCU's innovation/prototyping center runs a rapid-fabrication lab bridging art, design, and engineering students -- institutional rather than open-community, and public access to specific programs should be confirmed ahead of a visit.",
+      "source": {
+        "citedFrom": "general/local knowledge, not independently re-verified this session",
+        "detail": "VCU da Vinci Center"
+      },
+      "balanceRule": null,
+      "statusFlag": "public-access-unconfirmed",
+      "bonus": null,
+      "threadAnchor": null,
+      "crossListedIn": null,
+      "filmConnection": null,
+      "glutenFreeAvailable": null,
+      "restaurants": null,
+      "verificationFlag": true
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "sub-rosa-fire-closure",
+      "severity": "warning",
+      "text": "Sub Rosa Bakery (Church Hill) is currently closed after fire damage; confirmed via a direct site fetch this session. Check their Instagram before planning a stop -- WPA Bakery is a solid backup in the meantime."
+    },
+    {
+      "id": "strange-matter-closed",
+      "severity": "info",
+      "text": "Strange Matter, Richmond's legendary all-ages DIY punk venue, closed in 2016. It isn't listed as a current pick but its closure is worth knowing -- Gallery5, Cobra Cabana, and Get Tight Lounge are the closest things to its successor in the current scene."
+    },
+    {
+      "id": "search-tooling-constrained",
+      "severity": "info",
+      "text": "This session's live web-search tool was exhausted and most general search engines returned robots.txt/proxy errors, so several picks (marked in their source field) draw on general/local knowledge rather than a freshly re-verified 2026 source. Direct-fetch-confirmed picks are marked accordingly. Recommend confirming hours for lower-confidence picks before visiting."
+    }
+  ],
+  "honestGaps": [
+    {
+      "id": "no-infoshop-storefront",
+      "category": "bookstores",
+      "text": "The mandatory anarchist/radical/infoshop secondary search did not turn up a confirmed storefront infoshop in Richmond (constrained by this session's search-tooling limits as well as a genuine scarcity of storefront-model spaces). Richmond's leftist/mutual-aid infrastructure appears to run through networks like Food Not Bombs RVA and Richmond DSA rather than a bookstore-model space -- the same co-op-not-infoshop pattern the OKC guide documented, not a research failure to paper over.",
+      "citedFrom": "web-search, direct fetch of infoshop directory (no Richmond entry found)"
+    },
+    {
+      "id": "thin-electronics-scene",
+      "category": "electronics",
+      "text": "Category 10 carries two picks, not five. HackRVA is a strong, confirmed community makerspace, but no dedicated synth or guitar-pedal retailer, hackerspace-adjacent-to-gear-shop pairing, or electronics-surplus shop could be confirmed for Richmond this session. VCU's da Vinci Center fills an institutional gap but isn't a walk-in public resource. Padding to five would misrepresent the city.",
+      "citedFrom": "direct fetch (hackrva.org), general knowledge; live search unavailable to fully rule out additional options"
+    },
+    {
+      "id": "souvenirs-thin",
+      "category": "souvenirs",
+      "text": "Category 9 carries three picks. A dedicated local-artist screen-print/postcard souvenir shop on the Shop Good (OKC) or Uniquely Utah (SLC) model could not be confidently identified for Richmond this session -- Quirk Gallery and World of Mirth cover the ground reasonably well, but this is a lower-confidence category pending re-verification.",
+      "citedFrom": "general knowledge; live search unavailable this session"
+    }
+  ],
+  "fingerprint": null,
+  "meta": {
+    "guideVersion": "city-road-trip-guide v2.8",
+    "generated": "2026-08-20",
+    "totalRecommendations": 46,
+    "htmlGuide": "richmond-guide.html"
+  },
+  "scopeDecision": "Richmond-proper primary. This run's live WebSearch tool was exhausted before the Richmond-specific searches began (shared budget across a 13-city parallel batch) and most general search engines (DuckDuckGo, Bing, Google) returned robots.txt or proxy errors to WebFetch. Research leaned on direct WebFetch of Wikipedia, the Atlas Obscura Richmond page, and individual business sites where reachable, supplemented by general/local knowledge for picks that couldn't be freshly re-verified -- each such pick is marked in its source.citedFrom field. The analytical-thread research (St. Luke Bank / Jackson Ward) was fully verified via direct fetch and is high-confidence."
+}

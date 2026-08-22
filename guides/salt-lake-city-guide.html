@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salt Lake City, UT — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 1 (Retroactive) &nbsp;·&nbsp; Portland → Boise → <strong style="color:var(--cream)">Salt Lake City</strong> → Las Vegas → Phoenix → Albuquerque → Oklahoma City → Dallas → Austin</p>
+  <h1>Road Trip Stop — <em>Salt Lake City, UT</em></h1>
+  <p class="subtitle">
+    A planned Mormon pioneer capital where coffee is culturally taboo yet the city seeded Western specialty roasting; the "Beehive State's" literal bee iconography; and a labor-history thread running from IWW founder Bill Haywood's birth here in 1869 through fellow Wobbly Joe Hill's 1915 execution at what's now Sugar House Park.<br>
+    10 categories · 5 picks each (Sights carries a bonus 6th, Electronics an honest 4) · Sources: Atlas Obscura, TasteAtlas, City Cast Salt Lake, SLUG Magazine, Visit Utah, local press, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>SLC Punk! (1998)</strong> — James Merendino's dramatization of the city's real 1980s punk scene; West High, U of U's Presidents Circle, and the Cathedral of the Madeleine are all still standing (Cottonwood Mall, sadly, is demolished).</li>
+        <li><strong>High School Musical (2006)</strong> — filmed at real, still-operating East High School; tours available if you call ahead.</li>
+        <li><strong>The Sandlot (1993)</strong> — the dirt lot on Glenrose Drive in the Glendale neighborhood is still there, on private property; view from the street.</li>
+        <li><strong>Dumb and Dumber (1994)</strong> — set in Aspen, CO, but almost entirely filmed around the Wasatch Front (Park City's Main Street stands in for Aspen).</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Bill Haywood</strong> — founding IWW member, born in Salt Lake City in 1869; see the Sights section for this guide's political-thread anchor.</li>
+        <li><strong>Neal Cassady</strong> — Beat Generation figure, born SLC 1926, inspired Dean Moriarty in Kerouac's On the Road.</li>
+        <li><strong>Natacha Rambova</strong> — silent-film costume/art director (and Valentino's wife) turned serious Egyptologist and occult writer — a genuine film-meets-esoterica crossover.</li>
+        <li><strong>Roseanne Barr</strong> — comedian and creator/star of Roseanne; the well-known/must-mention pop-culture name on this list.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- CLOSURE / STATUS WARNINGS -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>Status notes:</strong><br>
+    · Ken Sanders Rare Books' current street address could not be confirmed this session — the shop has relocated before. Check kensandersbooks.com or call ahead before visiting.<br>
+    · Squarewave Sound's Yelp listing was marked CLOSED as of a June 2025 snapshot, but the shop's own site still lists current part-time hours (Wed–Fri 12–6pm, Sat 12–5pm). Sources conflict — call or email ahead to confirm.<br>
+    · Cottonwood Mall, the SLC Punk! filming location for Stevo's monologue, has been demolished and redeveloped; it can no longer be visited as filmed.
+  </div>
+</div>
+
+<!-- GAP NOTE: electronics -->
+<div class="gap-note" style="margin-top: 1.5rem;">
+  <div class="gap-inner">
+    <strong>Honest gap (DIY Electronics):</strong> Category 10 carries four picks, not five. Beyond Make Salt Lake, 801 Labs, and Squarewave Sound, no additional standalone hackerspace or electronics-repair collective with published public hours turned up in research — Craft Lake City DIY Festival rounds the category out as an annual event rather than a fixed space. Notably, this is still a stronger showing than Boise's four picks in the same category on this trip, which lacked an equivalent to Squarewave Sound entirely.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Joe Hill's 1915 trial and execution deserves its own Field Notes entry — a labor-movement cause célèbre with an international "I Never Died, Says Joe Hill" afterlife in song (Woody Guthrie, Joan Baez, Bruce Springsteen), anchored to a real, still-being-marked site at Sugar House Park.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Confirms and strengthens the Boise → Salt Lake City "radical-political-geography" thread: this run's research recommends re-anchoring the Salt Lake City instance from Bill Haywood's birthplace alone to Sugar House Park's Joe Hill monument (2023), since Hill's execution site is a visitable, dated, physically marked location — and his final telegram was addressed directly to Haywood ("Goodbye Bill... Organize").
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Squarewave Sound and 801 Labs give Salt Lake City a materially deeper DIY-electronics scene than Boise had on this same trip — worth flagging as a comparison point once later legs (Trip 2's Richmond, Atlanta) are guided, to see whether that pattern holds for mid-size Western cities generally.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 1 Retroactive Guide &nbsp;·&nbsp; Salt Lake City, UT<br>
+  Control group entry: instinct-driven Trip 1 city, curated retroactively for comparison against Trip 2's guide-led stops. Reference-implementation city for the v2.8 visual system.<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Weller Book Works",
+      tags: [TAG('i-books','Since 1929'), TAG('i-political','Banned Books Case'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Running since 1929 (first as Zion's Bookstore, then Sam Weller's); Sam Weller stocked contraband Henry Miller and D.H. Lawrence for the customer who asked, and the store still runs a standing \"Banned! from Utah Schools\" display — literary-freedom politics built right into the shelving.",
+      meta: [["📍","607 Trolley Square"],["💰","$5–30"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "wellerbookworks.com, KSL"
+    },
+    {
+      name: "The King's English Bookshop",
+      tags: [TAG('i-books','Community Anchor')],
+      desc: "SLC's other long-running indie anchor in Sugar House / the East Bench — a packed events calendar and staff-pick culture that the Guardian has singled out for operating differently than a standard indie.",
+      meta: [["📍","1511 S 1500 E"],["💰","$5–30"],["⏱","45 min"],["🕐","Evening for a reading"]],
+      cite: "kingsenglish.com, Deseret News"
+    },
+    {
+      name: "Ken Sanders Rare Books",
+      tags: [TAG('i-books','ABAA Rare Books'), TAG('i-horror','Esoterica'), TAG('i-political','Counterculture')],
+      desc: "Ken Sanders co-owned the 1970s countercultural shop The Cosmic Aeroplane before opening this ABAA rare-book operation in 1997 — deep stock in Western Americana, rare and esoteric volumes, and counterculture ephemera; a magnet for collectors of the strange and the political alike.",
+      meta: [["📍","Salt Lake City — call ahead"],["💰","$10–500+"],["⏱","30–60 min"],["🕐","Afternoon"]],
+      cite: "kensandersbooks.com"
+    },
+    {
+      name: "The Legendarium",
+      tags: [TAG('i-horror','Genre Specialist'), TAG('i-books','SFF/Horror')],
+      desc: "A sci-fi, fantasy, and horror specialist with an on-site cafe — the direct hit for the horror-and-occult reading interest.",
+      meta: [["📍","Salt Lake City"],["💰","$5–25"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "City Cast Salt Lake"
+    },
+    {
+      name: "Boing! Anarchist Collective",
+      tags: [TAG('i-political','Infoshop Equivalent')],
+      desc: "Mandatory radical/infoshop search result: a nine-plus-year anarchist community space hosting radical dialog, readings, and performances. Not a retail bookstore, but the closest thing SLC has to an infoshop — explicitly welcomes LGBTQ+, anticapitalist, and countercultural community.",
+      meta: [["📍","608 S 500 E"],["💰","Free / donation"],["⏱","Varies by event"],["🕐","Evening for a reading"]],
+      cite: "radical-guide.com"
+    }
+  ],
+  records: [
+    {
+      name: "The Heavy Metal Shop",
+      tags: [TAG('i-punk','Since 1987'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Iconic metal-and-punk vinyl, patches, and merch shop operating since 1987 — the well-known/must-see anchor of SLC's heavy-music retail scene.",
+      meta: [["📍","156 E 900 S #103"],["💰","$10–40"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "recordstoredirectory.com"
+    },
+    {
+      name: "Diabolical Records",
+      tags: [TAG('i-punk','In-Store Shows'), TAG('i-diy','Psych/Garage/Local')],
+      desc: "Psych, punk, garage, electronic, and local pressings, plus a real DIY-scene tie: hosts Bandemonium (musicians randomly reshuffled into new bands) and touring acts like Soft Kill and Cool Ghouls.",
+      meta: [["📍","238 S Edison St"],["💰","$5–35"],["⏱","45 min"],["🕐","Check calendar for an in-store"]],
+      cite: "saltplatecity.com"
+    },
+    {
+      name: "Raunch Records & Skate",
+      tags: [TAG('i-punk','Since the 1980s')],
+      desc: "\"Raw, loud, and unapologetically punk\" since the 1980s — a hard-to-find-underground-music specialist that doubles as a skate shop and gathering point for the city's punk/hardcore community.",
+      meta: [["📍","1119 E 2100 S, Sugar House"],["💰","$5–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "recordstoredirectory.com"
+    },
+    {
+      name: "Randy's Record Shop",
+      tags: [TAG('i-diy','9th & 9th Institution')],
+      desc: "Deep breadth-and-depth general vinyl, CD, and tape stock spanning new releases and classics — a longstanding SLC institution.",
+      meta: [["📍","157 E 900 S"],["💰","$5–40"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "saltplatecity.com"
+    },
+    {
+      name: "Memento Mori",
+      tags: [TAG('i-horror','Name Says It All'), TAG('i-diy','Barbershop/Gallery Hybrid')],
+      desc: "Part barbershop, part art gallery, part record cave — an eclectic hybrid shop whose name alone is a direct hit for the horror/occult interest.",
+      meta: [["📍","255 N 400 W #1067"],["💰","$5–30"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "recordstoredirectory.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Salt Lake Roasting Co.",
+      tags: [TAG('i-food','Since 1981'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "Established 1981, the pioneer of specialty coffee in a state where coffee is culturally uncommon — Visit Utah compares its local role to Starbucks in Seattle. The single strongest \"unique because of the surrounding culture\" pick in this list.",
+      meta: [["📍","820 E 400 S"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "Visit Utah"
+    },
+    {
+      name: "Publik Coffee Roasters",
+      tags: [TAG('i-food','Warehouse Roaster')],
+      desc: "Major local roaster operating out of a renovated warehouse, emphasizing responsibly sourced beans across several SLC locations.",
+      meta: [["📍","975 S West Temple"],["💰","$4–9"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "Visit Utah, publikcoffee.com"
+    },
+    {
+      name: "La Barba",
+      tags: [TAG('i-food','Third-Wave Espresso')],
+      desc: "Third-wave espresso and pour-over pairing with fresh pastries in an atmospheric downtown space.",
+      meta: [["📍","Downtown Main St"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "Visit Utah"
+    },
+    {
+      name: "Alchemy Coffee",
+      tags: [TAG('i-food','Neighborhood Specialty')],
+      desc: "Neighborhood specialty spot with a community-oriented, no-frills vibe — a regular on locals' shortlists.",
+      meta: [["📍","390 E 1700 S"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "community lists"
+    },
+    {
+      name: "Coffee Garden",
+      tags: [TAG('i-food','9th & 9th Regulars')],
+      desc: "Long-running indie community hangout in the 9th & 9th district, the kind of shop with regulars who've been coming for decades.",
+      meta: [["📍","878 E 900 S"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning or late afternoon"]],
+      cite: "community lists"
+    }
+  ],
+  pastry: [
+    {
+      name: "Les Madeleines",
+      tags: [TAG('i-food','James Beard-Recognized'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "James Beard-recognized baker famous for kouign-amann (\"kouing aman\") — the well-known/must-eat pastry stop in the city, and it also ships nationwide via Goldbelly if you can't make it in person.",
+      meta: [["📍","Central Ninth"],["💰","$4–14"],["⏱","30–45 min"],["🕐","Morning, before the case sells out"]],
+      cite: "lesmadeleines.com, Goldbelly"
+    },
+    {
+      name: "Mrs. Backer's Pastry Shop",
+      tags: [TAG('i-food','Decades-Old Sugar House Institution')],
+      desc: "A decades-old Sugar House institution — handcrafted cakes, cookies, and eclairs, the kind of place locals order birthday cakes from generation after generation.",
+      meta: [["📍","Sugar House"],["💰","$4–12"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "tryperdiem.com"
+    },
+    {
+      name: "Tulie Bakery",
+      tags: [TAG('i-food','Croissant Specialist')],
+      desc: "Modern, minimalist bakery known for almond, bacon-and-egg, and ham-and-cheese croissants plus lemon tarts and morning buns.",
+      meta: [["📍","Salt Lake City"],["💰","$4–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "tryperdiem.com"
+    },
+    {
+      name: "Fillings & Emulsions",
+      tags: [TAG('i-food','Cuban-Inspired, GF Friendly')],
+      desc: "Cuban-inspired pastry program (guava, passion fruit, Opera cake) that's also notably gluten-free friendly — the most distinctive technique angle in this category.",
+      meta: [["📍","Salt Lake City"],["💰","$4–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "tryperdiem.com"
+    },
+    {
+      name: "Eva's Bakery",
+      tags: [TAG('i-food','Downtown French')],
+      desc: "French-leaning downtown bakery known for strawberry croissants in a photogenic blue-and-white space.",
+      meta: [["📍","Downtown"],["💰","$4–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "tryperdiem.com"
+    }
+  ],
+  dishes: [
+    {
+      name: "Fry Sauce",
+      tags: [TAG('i-food','Invented in SLC, 1950s'), TAG('i-bees','Well-Known/Must-Eat')],
+      desc: "The ketchup-and-mayo condiment invented in Salt Lake City in the 1950s — the single most SLC-coded thing to order, best tried at Hires Big H, a since-1959 drive-in institution.",
+      meta: [["📍","Hires Big H"],["💰","$1–4 add-on"],["⏱","20–30 min"],["🕐","Lunch"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Pastrami Burger",
+      tags: [TAG('i-food','Popularized at Crown Burgers')],
+      desc: "A beef patty topped with pastrami, cheese, and fry sauce on a sesame bun — popularized at Crown Burgers.",
+      meta: [["📍","Crown Burgers / Apollo Burger"],["💰","$8–13"],["⏱","20–30 min"],["🕐","Lunch"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Funeral Potatoes",
+      tags: [TAG('i-food','LDS Comfort Casserole')],
+      desc: "A cheesy potato casserole with a cornflake topping, traditionally served at LDS funeral luncheons and now a year-round comfort dish across Utah restaurants.",
+      meta: [["📍","Tradition / Garage on Beck"],["💰","$6–12"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Barely Buzzed Cheese",
+      tags: [TAG('i-food','Espresso-Rubbed'), TAG('i-bees','Beehive Cheese Co.')],
+      desc: "An award-winning espresso-and-lavender-rubbed cheddar from Beehive Cheese Co. — one of TasteAtlas's top-rated Utah cheeses, and a direct hit for both the coffee and bee interests via the maker's own name.",
+      meta: [["📍","Caputo's Market"],["💰","$12–20/lb"],["⏱","N/A — purchase"],["🕐","Anytime"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Frog Eye Salad",
+      tags: [TAG('i-food','Divisive Regional Classic')],
+      desc: "A whimsically named pasta salad (acini di pepe, egg yolks, whipped cream, optional pineapple/marshmallow) that TasteAtlas rates among the region's most divisive dishes — worth trying purely for the novelty.",
+      meta: [["📍","Chuck-A-Rama"],["💰","$4–8"],["⏱","10–15 min"],["🕐","Anytime"]],
+      cite: "TasteAtlas"
+    }
+  ],
+  gifts: [
+    {
+      name: "Caputo's Market Gift Boxes",
+      tags: [TAG('i-food','One-Stop Local Gourmet'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "SLC's essential gourmet deli/market ships curated boxes of cheeses, oils, vinegars, and specialty meats — the well-known/must-see one-stop for mailable local flavor.",
+      meta: [["📍","Downtown & Sugar House"],["💰","$30+"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "gastronomicslc.com"
+    },
+    {
+      name: "Local Honey — BEEZ Hives N Honey",
+      tags: [TAG('i-bees','Wasatch Front Apiaries')],
+      desc: "Beekeeper-owned shop selling truly local raw honey from backyard and small-batch Wasatch Front apiaries, plus propolis, pollen, beeswax, and miniature gift-favor jars — the most literal bee-interest pick in the whole guide.",
+      meta: [["📍","2607 S State St"],["💰","$8–20/jar"],["⏱","15–20 min"],["🕐","Anytime"]],
+      cite: "beezslc.com"
+    },
+    {
+      name: "Barely Buzzed Cheese (to mail)",
+      tags: [TAG('i-food','Vacuum-Sealed, Ships Well'), TAG('i-bees','Beehive Cheese Co.')],
+      desc: "Same espresso-lavender cheddar as the dish pick above — shelf-stable enough (vacuum-sealed) to travel well as a mailed gift; Caputo's ships it.",
+      meta: [["📍","Caputo's Market"],["💰","$12–20/lb"],["⏱","N/A"],["🕐","N/A"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Z's Salsa & Hot Sauce",
+      tags: [TAG('i-food','Small-Batch, Four-Pepper')],
+      desc: "Small-batch four-pepper salsa and a spicy Bloody Mary mix, handcrafted locally and sold through farmers markets and Etsy — easy to mail.",
+      meta: [["📍","Etsy / SLC farmers markets"],["💰","$8–14/bottle"],["⏱","N/A"],["🕐","N/A"]],
+      cite: "gastronomicslc.com"
+    },
+    {
+      name: "Ritual Chocolate",
+      tags: [TAG('i-food','Bean-to-Bar Craft')],
+      desc: "Small-batch bean-to-bar craft chocolate from just outside the metro, with rotating single-origin bars including an El Salvadoran-espresso pairing — ships and mails well.",
+      meta: [["📍","Sold at Caputo's & SLC specialty shops"],["💰","$8–14/bar"],["⏱","N/A"],["🕐","N/A"]],
+      cite: "Visit Utah"
+    }
+  ],
+  sights: [
+    {
+      name: "Gilgal Sculpture Garden",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Outsider Art')],
+      desc: "A free outsider-art garden built mid-20th-century by Thomas Battersby Child Jr. — 12 sculptures and 70+ inscribed stones blending Mormon scripture, poetry, and literary texts, tucked behind a Chuck-a-Rama parking lot.",
+      meta: [["📍","749 E 500 S"],["💰","Free"],["⏱","30–45 min"],["🕐","Daylight"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Summum Pyramid",
+      tags: [TAG('i-horror','Atlas Obscura')],
+      desc: "A religious sect founded in 1975 blending science-fiction cosmology and Egyptian polytheism, practicing modern mummification, with public tours by appointment on Wednesday evenings — as strange and occult-adjacent a stop as this guide gets.",
+      meta: [["📍","707 Genesee Ave"],["💰","Free / donation"],["⏱","45–60 min"],["🕐","Wednesday evening (tour night)"]],
+      cite: "Atlas Obscura, City Cast Salt Lake"
+    },
+    {
+      name: "Lilly E. Gray's Grave — \"Victim of the Beast 666\"",
+      tags: [TAG('i-horror','Atlas Obscura')],
+      desc: "A tombstone inscribed \"Victim of the Beast 666\" in the largest municipally owned cemetery in the U.S. — Lilly died of natural causes, but her husband believed government conspiracy killed her.",
+      meta: [["📍","Salt Lake City Cemetery, 200 N Street"],["💰","Free"],["⏱","15–20 min"],["🕐","Daylight"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "This Is the Place Heritage Park",
+      tags: [TAG('i-bees','Well-Known/Must-See')],
+      desc: "The well-known/must-see anchor of SLC pioneer history — marks where Brigham Young reportedly declared \"this is the right place\" in 1847, with a living-history pioneer village on the grounds.",
+      meta: [["📍","2601 Sunnyside Ave"],["💰","~$16 (village); monument free"],["⏱","2–3 hrs"],["🕐","Midday"]],
+      cite: "Visit Utah"
+    },
+    {
+      name: "Antelope Island State Park",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "The natural-attraction balance pick: a free-roaming bison and pronghorn herd on an island in the Great Salt Lake, plus hiking, cycling, and internationally certified dark-sky stargazing, about 40 minutes from downtown.",
+      meta: [["📍","Via causeway, Syracuse, UT"],["💰","~$15/vehicle day-use"],["⏱","3+ hrs"],["🕐","Morning (bison) or sunset (lake)"]],
+      cite: "Visit Utah"
+    },
+    {
+      name: "Sugar House Park — Joe Hill Execution Site & 2023 Monument",
+      tags: [TAG('i-political','Thread Anchor')],
+      desc: "A public park built on the site of the former Sugar House Prison, where Wobbly songwriter Joe Hill was executed by firing squad in 1915 after a controversial trial. In 2023 the Central Utah Federation of Labor (AFL-CIO) unveiled a monument near the execution site — this guide's political-thread anchor, linking back to Boise's Idaho Anne Frank Human Rights Memorial.",
+      meta: [["📍","1330 E 2100 S, Sugar House"],["💰","Free"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "Wikipedia — Sugar House Park, Joe Hill"
+    }
+  ],
+  venues: [
+    {
+      name: "Kilby Court",
+      tags: [TAG('i-punk','Since 1999'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "SLC's longest-running all-ages venue, open since 1999 — a converted garage that's launched Death Cab for Cutie, Phoebe Bridgers, Mitski, and Japanese Breakfast on the way up.",
+      meta: [["📍","741 S Kilby Ct"],["💰","$12–25"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "kilbycourt.com"
+    },
+    {
+      name: "The Urban Lounge",
+      tags: [TAG('i-punk','Local & Touring Circuit')],
+      desc: "Long-running indie/punk-leaning bar venue, a core stop on SLC's local and touring circuit.",
+      meta: [["📍","Salt Lake City"],["💰","$10–25"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "Visit Utah — SLC subcultures"
+    },
+    {
+      name: "The Depot",
+      tags: [TAG('i-punk','Historic Rio Grande Area')],
+      desc: "A larger historic concert hall near the old Rio Grande railroad depot, booking rock, metal, and hardcore-adjacent touring acts alongside bigger indie names.",
+      meta: [["📍","Downtown, near Rio Grande Depot"],["💰","$15–35"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "bandsintown.com listings"
+    },
+    {
+      name: "Boing! Anarchist Collective (as a show space)",
+      tags: [TAG('i-political','Political DIY Space'), TAG('i-punk','Performances')],
+      desc: "Same space as the bookstores-category pick — its \"performances\" programming crosses into DIY show territory, making it SLC's clearest example of a venue doubling as explicit political community space.",
+      meta: [["📍","608 S 500 E"],["💰","Free / donation"],["⏱","Varies"],["🕐","Evening"]],
+      cite: "radical-guide.com"
+    },
+    {
+      name: "Diabolical Records In-Stores / Bandemonium",
+      tags: [TAG('i-punk','In-Store Shows'), TAG('i-diy','Record Store as Venue')],
+      desc: "Same shop as the records-category pick — its in-store sets and Bandemonium nights are the city's most direct record-store-as-venue tie.",
+      meta: [["📍","238 S Edison St"],["💰","Free (in-store)"],["⏱","1–2 hrs"],["🕐","Check calendar"]],
+      cite: "saltplatecity.com"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Visit Salt Lake Store (Ashley Collett Design)",
+      tags: [TAG('i-bees','Well-Known/Must-See')],
+      desc: "The official downtown visitor-center shop carries stickers, magnets, and pins designed by local Utah artist Ashley Collett — a locally-designed alternative to generic tourist-shop magnets.",
+      meta: [["📍","Downtown"],["💰","$5–20"],["⏱","15–20 min"],["🕐","Anytime"]],
+      cite: "visit-salt-lake.myshopify.com"
+    },
+    {
+      name: "Salt & Honey Market",
+      tags: [TAG('i-bees','Local Vendors'), TAG('i-food','Utah Gourmet')],
+      desc: "A curated Utah-themed gift shop (name notwithstanding) featuring local vendors and artists — postcards, prints, honey, and topographic-patch apparel emphasizing locally-designed goods over mass-produced tourist product.",
+      meta: [["📍","Salt Lake City"],["💰","$5–40"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "saltandhoneymarket.com"
+    },
+    {
+      name: "Memento Mori (prints & oddities)",
+      tags: [TAG('i-horror','Local Art & Prints'), TAG('i-diy','Gallery Hybrid')],
+      desc: "Same barbershop/gallery/record-cave hybrid as the records pick — its gallery side sells local art and prints with more edge than a standard magnet rack.",
+      meta: [["📍","255 N 400 W #1067"],["💰","$5–40"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "recordstoredirectory.com"
+    },
+    {
+      name: "Weller Book Works — \"Banned!\" Merch & Postcards",
+      tags: [TAG('i-books','Literary Freedom'), TAG('i-political','Banned Books')],
+      desc: "Same shop as the bookstores pick — postcards and totes tied to its \"Banned! from Utah Schools\" display make for a souvenir with a literal political statement attached.",
+      meta: [["📍","607 Trolley Square"],["💰","$5–20"],["⏱","10–15 min"],["🕐","Anytime"]],
+      cite: "wellerbookworks.com"
+    },
+    {
+      name: "BEEZ Hives N Honey (gift jars & candles)",
+      tags: [TAG('i-bees','Literal Bee Merch')],
+      desc: "Same shop as the mailable-gifts pick — miniature honey jars and beeswax candles double as the most literal bee-themed souvenir in the city.",
+      meta: [["📍","2607 S State St"],["💰","$4–20"],["⏱","15–20 min"],["🕐","Anytime"]],
+      cite: "beezslc.com"
+    }
+  ],
+  electronics: [
+    {
+      name: "Make Salt Lake",
+      tags: [TAG('i-diy','Flagship Community Makerspace'), TAG('i-bees','Well-Known/Must-See')],
+      desc: "The city's flagship community makerspace — 3D printing, laser cutting, woodworking, and electronics under one roof, with regular open houses and Meetup-listed events.",
+      meta: [["📍","Salt Lake City"],["💰","Membership-based"],["⏱","Varies"],["🕐","Check open hours / open house"]],
+      cite: "makesaltlake.org"
+    },
+    {
+      name: "801 Labs",
+      tags: [TAG('i-diy','Hackerspace')],
+      desc: "A hackerspace with a strong cybersecurity/electronics-hacking bent — meetups, workshops, and open lab nights for hardware and software tinkerers alike.",
+      meta: [["📍","Salt Lake City"],["💰","Membership-based"],["⏱","Varies"],["🕐","Check open hours"]],
+      cite: "801labs.org"
+    },
+    {
+      name: "Squarewave Sound",
+      tags: [TAG('i-diy','SLC\'s Only Synth Shop')],
+      desc: "Self-described \"SLC's only synth shop\" — Eurorack modular, drum machines, and effects pedals, authorized dealer for Moog/Korg/Novation, with occasional community meetups and classes.",
+      meta: [["📍","1321 E 3300 S #9"],["💰","Varies (gear purchase)"],["⏱","30–45 min"],["🕐","Wed–Fri 12–6pm, Sat 12–5pm (per shop site)"]],
+      cite: "squarewavesound.com"
+    },
+    {
+      name: "Craft Lake City DIY Festival",
+      tags: [TAG('i-diy','Annual Flagship Event')],
+      desc: "SLC's annual flagship maker event — 500+ local makers, food vendors, and performers; not a fixed space, but the clearest single snapshot of the city's DIY/maker culture in one place.",
+      meta: [["📍","Utah State Fairpark"],["💰","Ticketed"],["⏱","Full day"],["🕐","Early August (annual)"]],
+      cite: "craftlakecity.com"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

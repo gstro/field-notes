@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlanta, GA — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+  .closure-inner + .closure-inner { margin-top: 0.75rem; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+  .gap-inner + .gap-inner { margin-top: 0.75rem; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 2 &nbsp;·&nbsp; Austin → Shreveport → Jackson → Birmingham → <strong style="color:var(--cream)">Atlanta</strong> → Charlotte → Richmond → Washington DC → Philadelphia</p>
+  <h1>Road Trip Stop — <em>Atlanta, GA</em></h1>
+  <p class="subtitle">
+    Capital of the New South and the largest-scale case yet of a Black business district split apart by a freeway — Sweet Auburn stood alongside Marvel's Wakanda, AMC's zombie apocalypse, and a genuinely serious DIY/hackerspace scene. Four nights, the longest stop on this leg.<br>
+    10 categories · 5 picks each (Sights runs 7) · Sources: Atlas Obscura, TasteAtlas, Eater, Timeout, WABE, Atlanta Magazine, AJC, Discover Atlanta, The Infatuation, AtlantaFi.com, Hackaday, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Black Panther (2018)</strong> — Wakanda's core sets were built at Pinewood Atlanta Studios (Fayetteville, ~30 min south); a chase scene used the real Old Fourth Ward Skatepark on the BeltLine, walkable from Sweet Auburn.</li>
+        <li><strong>Baby Driver (2017)</strong> — Edgar Wright's opening car chase runs through real downtown Atlanta streets; the Krog Street Tunnel corridor appears later.</li>
+        <li><strong>The Walking Dead (2010–2022)</strong> — the pilot's iconic shot of Rick riding a horse into an abandoned downtown was filmed on closed real streets near CNN Center; most later production moved ~35 miles south to Senoia, GA ("Woodbury") — not Atlanta proper.</li>
+        <li><strong>The Hunger Games: Catching Fire (2013)</strong> — Capitol and arena sequences used Atlanta Motor Speedway and other metro sets, well outside downtown.</li>
+        <li><strong>Gone with the Wind (1939)</strong> — set entirely in Atlanta, premiered here in 1939, but shot almost entirely on a California backlot. See status note below.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Martin Luther King Jr.</strong> — born and raised on Auburn Avenue; the MLK National Historical Park anchors Sweet Auburn.</li>
+        <li><strong>Killer Mike (Michael Render)</strong> — Run the Jewels rapper and outspoken leftist political commentator; co-owns SWAG Shop barbershop in the Old Fourth Ward.</li>
+        <li><strong>Margaret Mitchell</strong> — author of Gone with the Wind, buried at Oakland Cemetery. Included honestly, not admiringly — the novel is a Lost Cause romance of the Confederacy.</li>
+        <li><strong>Gladys Knight</strong> — Motown legend, raised in Atlanta.</li>
+        <li><strong>Black Lips</strong> — garage-punk band formed in Atlanta in 1999, part of the city's "Nu-South" scene alongside Deerhunter and The Coathangers.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTES -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Current Status Notes:</strong><br>
+    <strong>The Grim Reader Bookshop's</strong> Upper Westside storefront was slated to open summer 2026 — right around this trip's May 12–16 window. It may still be mobile-only (a converted hearse) rather than a fixed shop; check socials first.
+  </div>
+  <div class="closure-inner">
+    <strong>Georgia Tech Invention Studio</strong> is a student-run academic makerspace, not a public hackerspace — confirm visitor/tour policy before counting on a walk-in.
+  </div>
+  <div class="closure-inner">
+    <strong>Oakland Cemetery's</strong> theatrical Halloween tours run in October, outside this May window — the grounds and standard tours are still worthwhile in spring.
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap — bookstores:</strong> the mandatory anarchist/infoshop search turned up no dedicated storefront in Atlanta proper. On Our Own Authority!, Atlanta's own autonomous radical press (anarchism, labor history, Pan-Africanism, Palestine solidarity), operates online-only, distributing through Bluestockings, Burning Books, and Atlanta Zine Fest rather than running a physical space. A city this large and this politically significant still lacking a fixed infoshop is a real data point, not a search failure.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — DIY electronics:</strong> Category 10 carries four picks, not five. Atlanta has a genuinely serious hackerspace scene (Freeside, Decatur Makers) but no dedicated synth or boutique pedal shop comparable to Salt Lake City's Squarewave Sound turned up in research — ASW Distillery's tour fills the last slot as a whiskey-adjacent maker stop rather than padding with a weak electronics pick.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Sweet Auburn deserves a standalone Field Notes entry: the 1906 Race Riot origin, the "richest Negro street in the world" peak, and the specific mechanics of the Downtown Connector's construction through the district are each worth their own research pass.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Sweet Auburn is the largest and most nationally visible instance yet of the black-business-district-erasure thread running Deep Deuce (OKC) → Freedman's Town (Dallas) → here — and it's the direct MLK connection that makes it the strongest anchor of the four.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Refuge Coffee Co.'s refugee-resettlement model in Clarkston is worth checking against Charlotte and Richmond's coffee scenes for a similar community-ownership story — and Freeside Atlanta's hackerspace scale is a useful yardstick for whatever DC and Philadelphia turn up.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 2 Guide-Led Stop &nbsp;·&nbsp; Atlanta, GA<br>
+  Leg 5 of 9 &nbsp;·&nbsp; Birmingham → Atlanta → Charlotte &nbsp;·&nbsp; May 12–16, 2026 (4 nights)<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "A Cappella Books",
+      tags: [TAG('i-books','Well-Known Must-See')],
+      desc: "Atlanta's most acclaimed general independent bookstore — deep first-edition and signed-copy inventory, and one of the city's steadiest author-event calendars.",
+      meta: [["📍","208 Haralson Ave NE, Inman Park"],["💰","$0–40"],["⏱","45 min–1 hr"],["🕐","Afternoon; evening for events"]],
+      cite: "Atlanta Magazine, WABE"
+    },
+    {
+      name: "Charis Books & More",
+      tags: [TAG('i-books','Feminist Institution'), TAG('i-political','Community')],
+      desc: "The South's oldest independent feminist bookstore, now partnered with Agnes Scott College; its nonprofit arm Charis Circle runs queer, feminist, and social-justice programming.",
+      meta: [["📍","184 S Candler St, Decatur"],["💰","$0–35"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "WABE, Atlanta Magazine"
+    },
+    {
+      name: "For Keeps Books",
+      tags: [TAG('i-books','Black History'), TAG('i-political','Reading Room')],
+      desc: "Described as \"a cross between a store and a reading room,\" focused on rare and classic Black publications — a living counterpoint a few blocks from Sweet Auburn's erased commercial history.",
+      meta: [["📍","Sweet Auburn / Old Fourth Ward"],["💰","$0–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "WABE"
+    },
+    {
+      name: "The Grim Reader Bookshop",
+      tags: [TAG('i-horror','Horror/Occult'), TAG('i-books','Southern Gothic')],
+      desc: "Horror, mystery, and occult specialist that started as a mobile shop in a converted hearse before a planned Upper Westside storefront — see status note, opening timing overlaps this visit.",
+      meta: [["📍","Upper Westside"],["💰","$0–30"],["⏱","30–45 min"],["🕐","Check socials"]],
+      cite: "AJC, April 2026"
+    },
+    {
+      name: "Offbeat Books",
+      tags: [TAG('i-books','Speculative Fiction'), TAG('i-political','Anti-Imperialist Reading Group')],
+      desc: "Speculative fiction and unconventional nonfiction, hosting \"Weird Girl LitFic\" clubs, gaming meetups, and anti-imperialist reading groups — the closest this guide's mandatory infoshop search came to a radical-political storefront.",
+      meta: [["📍","Peoplestown / Terminal South"],["💰","$0–30"],["⏱","30–45 min"],["🕐","Evening for reading group"]],
+      cite: "AJC, April 2026"
+    }
+  ],
+  records: [
+    {
+      name: "Criminal Records",
+      tags: [TAG('i-punk','Well-Known Must-See'), TAG('i-diy','L5P Anchor')],
+      desc: "New and used vinyl heavy on indie, alternative, and underground genres, plus comics and merch — the anchor record store of L5P's DIY-adjacent strip.",
+      meta: [["📍","1154 Euclid Ave NE, Little Five Points"],["💰","$8–35"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "AtlantaFi.com"
+    },
+    {
+      name: "Disorder Vinyl",
+      tags: [TAG('i-punk','Punk/Hardcore Curation')],
+      desc: "Explicitly caters to punk, hardcore, indie, and alternative collectors with buy/sell/trade and band merch, near the MLK National Historical Park.",
+      meta: [["📍","Edgewood Ave, Old Fourth Ward"],["💰","$8–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "AtlantaFi.com"
+    },
+    {
+      name: "Wax 'N' Facts",
+      tags: [TAG('i-diy','L5P Since the Scene\'s Heyday')],
+      desc: "Long-running used-vinyl mainstay across rock, rap, and country at genuinely affordable prices — an L5P institution since the neighborhood's punk-scene heyday.",
+      meta: [["📍","432 Moreland Ave NE, Little Five Points"],["💰","$5–25"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "AtlantaFi.com"
+    },
+    {
+      name: "Wuxtry Records",
+      tags: [TAG('i-diy','Rare Finds')],
+      desc: "Jazz, blues, indie, alt-rock, and hip-hop with a reputation for rare used finds; the Athens sister store is where R.E.M.'s Peter Buck famously worked before forming the band.",
+      meta: [["📍","2096 N Decatur Rd, Emory Village"],["💰","$5–40"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "AtlantaFi.com"
+    },
+    {
+      name: "Moods Music",
+      tags: [TAG('i-diy','Neo-Soul & Jazz')],
+      desc: "Neo-soul, acid jazz, and hip-hop specialist rounding out the L5P record-store crawl with a genre focus the punk-leaning shops don't cover.",
+      meta: [["📍","Little Five Points"],["💰","$5–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "AtlantaFi.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Refuge Coffee Co.",
+      tags: [TAG('i-political','Refugee-Owned Nonprofit'), TAG('i-food','Community')],
+      desc: "Nonprofit coffee shop and job-training program for refugees, based in Clarkston — often called the most diverse square mile in America. A short drive out of downtown but the strongest political/community match in this guide.",
+      meta: [["📍","Clarkston, GA (metro Atlanta)"],["💰","$4–7"],["⏱","45 min incl. drive"],["🕐","Late morning"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Land of a Thousand Hills Coffee",
+      tags: [TAG('i-food','Farmer-Direct Sourcing')],
+      desc: "Atlanta-based roaster built on direct-trade relationships with Rwandan coffee farmers — a rare farmer-direct-sourcing story at a mid-size regional scale.",
+      meta: [["📍","Atlanta metro"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Condesa Coffee",
+      tags: [TAG('i-food','Local Roaster')],
+      desc: "Atlanta-grown specialty roaster with a plant-forward pastry case alongside dialed-in espresso.",
+      meta: [["📍","Multiple Atlanta locations"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Dancing Goats Coffee Bar",
+      tags: [TAG('i-food','Well-Known Must-See')],
+      desc: "Batdorf & Bronson's Atlanta cafe inside Krog Street Market — pair with a walk through the Krog Street Tunnel a block away.",
+      meta: [["📍","Krog Street Market, Inman Park"],["💰","$4–7"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Aurora Coffee",
+      tags: [TAG('i-food','L5P Institution'), TAG('i-diy','Scruffy & Unhurried')],
+      desc: "L5P coffeehouse institution with the neighborhood's scruffy, unhurried DIY character intact.",
+      meta: [["📍","Little Five Points"],["💰","$3–6"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "targeted web search"
+    }
+  ],
+  pastry: [
+    {
+      name: "Little Tart Bakeshop",
+      tags: [TAG('i-food','Fruit-Forward')],
+      desc: "Small, quiet bakeshop known for large fruit tarts and savory quiches — the fruit-forward pick of the bakery list.",
+      meta: [["📍","Summerhill"],["💰","$4–10"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "The Infatuation"
+    },
+    {
+      name: "Star Provisions Market & Cafe",
+      tags: [TAG('i-food','Well-Known Must-See')],
+      desc: "Anne Quatrano's market-cafe, well known citywide for its giant black-and-white cookies, crispy chicken biscuit, and solid croissant program.",
+      meta: [["📍","1198 Howell Mill Rd NW, Upper Westside"],["💰","$5–15"],["⏱","45 min"],["🕐","Morning"]],
+      cite: "The Infatuation"
+    },
+    {
+      name: "Colette Bread & Bakeshop",
+      tags: [TAG('i-food','Fruit & Vegetable Baking')],
+      desc: "Fresh fruit- and vegetable-infused baking — strawberry brioche tarts and shishito-pepper scones push past the standard croissant-and-muffin case.",
+      meta: [["📍","Poncey-Highland"],["💰","$4–10"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "The Infatuation"
+    },
+    {
+      name: "Alon's Bakery & Market",
+      tags: [TAG('i-food','Longtime Institution')],
+      desc: "Longtime Atlanta institution — cinnamon twists, opera cakes, and full prepared-foods counters, a fixture since the 1990s.",
+      meta: [["📍","Morningside"],["💰","$4–12"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "The Infatuation"
+    },
+    {
+      name: "Hell Yeah Gluten Free",
+      tags: [TAG('i-food','Deepest GF Case')],
+      desc: "The city's deepest gluten-free pastry case — funfetti donuts and blueberry cheesecake pop tarts — for anyone traveling with dietary restrictions.",
+      meta: [["📍","Inman Park"],["💰","$4–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "The Infatuation"
+    }
+  ],
+  dishes: [
+    {
+      name: "Luther Burger @ Cypress Street Pint & Plate / Hampton + Hudson",
+      tags: [TAG('i-food','Well-Known Must-See')],
+      desc: "A burger served on a sliced, sugar-glazed donut in place of a bun — invented at Mulligan's Bar and named for R&B singer Luther Vandross. TasteAtlas's single Atlanta-exclusive dish.",
+      meta: [["📍","Multiple Atlanta locations"],["💰","$10–16"],["⏱","45 min"],["🕐","Lunch or dinner"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Fried Chicken & Southern Buffet @ Mary Mac's Tea Room",
+      tags: [TAG('i-food','Well-Known Must-See')],
+      desc: "Atlanta's \"dining room\" since 1945 — a Southern-cafeteria institution serving fried chicken, potlikker, and a table-side cup of tea (a house custom).",
+      meta: [["📍","224 Ponce De Leon Ave NE"],["💰","$16–25"],["⏱","1–1.5 hrs"],["🕐","Lunch"]],
+      cite: "Discover Atlanta"
+    },
+    {
+      name: "Chili Dog & Frosted Orange @ The Varsity",
+      tags: [TAG('i-food','Well-Known Must-See')],
+      desc: "World's largest drive-in, open since 1928, famous for the counter-staff call-and-response (\"What'll ya have?\") and the Frosted Orange milkshake alongside the chili dog.",
+      meta: [["📍","61 North Ave NW"],["💰","$8–14"],["⏱","30–45 min"],["🕐","Lunch, any day"]],
+      cite: "Discover Atlanta"
+    },
+    {
+      name: "Frozen Fruit Salad & Chicken Salad @ Swan Coach House",
+      tags: [TAG('i-food','Old-Atlanta Institution')],
+      desc: "A ladies-who-lunch institution on the Atlanta History Center grounds; the frozen fruit salad and chicken salad plate is a genuinely regional specialty, not framed this way anywhere else.",
+      meta: [["📍","Buckhead"],["💰","$15–22"],["⏱","1 hr"],["🕐","Lunch"]],
+      cite: "Discover Atlanta"
+    },
+    {
+      name: "Georgia Peach Cobbler",
+      tags: [TAG('i-food','Fruit Interest Match')],
+      desc: "Georgia is the Peach State for a reason; a proper peach cobbler at the tail end of a Southern-buffet meal is the fruit-interest pick for this category.",
+      meta: [["📍","Mary Mac's; summer farmers markets"],["💰","$6–10"],["⏱","20 min"],["🕐","Late spring–summer, peach season"]],
+      cite: "TasteAtlas — Georgia (USA) dishes"
+    }
+  ],
+  gifts: [
+    {
+      name: "Videri Chocolate Factory bars",
+      tags: [TAG('i-food','Bean-to-Bar')],
+      desc: "Atlanta bean-to-bar chocolate maker; shelf-stable bars travel and mail well.",
+      meta: [["📍","West Midtown"],["💰","$8–12/bar"],["⏱","N/A"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Beautiful Briny Sea pickles & bitters",
+      tags: [TAG('i-food','Jarred & Local')],
+      desc: "Atlanta-made pickled vegetables and cocktail bitters — a jarred condiment gift with a genuinely local production story.",
+      meta: [["📍","Ponce City Market / Krog Street Market"],["💰","$8–18"],["⏱","N/A"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Yo Mama's Foods sauces",
+      tags: [TAG('i-food','Shelf-Stable')],
+      desc: "Atlanta-founded jarred pasta sauce and mustard company — shelf-stable, easy to mail.",
+      meta: [["📍","Widely stocked, Atlanta-based"],["💰","$6–10"],["⏱","N/A"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Bee Downtown local honey",
+      tags: [TAG('i-bees','Corporate Rooftop Hives')],
+      desc: "Bee Downtown places managed hives on corporate rooftops (Delta's Atlanta HQ among them) and sells the resulting honey at retail — a direct hit for the bees interest.",
+      meta: [["📍","Ponce City Market retail"],["💰","$10–20/jar"],["⏱","N/A"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "ASW Distillery Fiddler Bourbon",
+      tags: [TAG('i-drinks','Craft Bourbon')],
+      desc: "Atlanta craft distillery's flagship bourbon and rye line — bottled, giftable, and tied to an in-city tasting-room visit.",
+      meta: [["📍","The Battery ATL / Buckhead / West End"],["💰","$35–55/bottle"],["⏱","N/A"]],
+      cite: "aswdistillery.com"
+    }
+  ],
+  sights: [
+    {
+      name: "Sweet Auburn Historic District & MLK National Historical Park",
+      tags: [TAG('i-political','Well-Known Must-See'), TAG('i-books','Thread Anchor')],
+      desc: "Once \"the richest Negro street in the world\" (Fortune, 1956); Dr. King's birth home, Ebenezer Baptist Church, and his tomb anchor a district the Downtown Connector freeway split in half. This guide's cross-trip thread anchor.",
+      meta: [["📍","450 Auburn Ave NE"],["💰","Free"],["⏱","2–3 hrs"],["🕐","Morning"]],
+      cite: "Wikipedia, National Park Service"
+    },
+    {
+      name: "Doll's Head Trail",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Outsider Art')],
+      desc: "A folk-art trail built from salvaged doll parts, bones, and industrial debris found in and around the wetland — genuine outsider art, unofficial and ever-changing.",
+      meta: [["📍","Constitution Lakes Park"],["💰","Free"],["⏱","1–1.5 hrs"],["🕐","Daylight, dry weather"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Oakland Cemetery",
+      tags: [TAG('i-horror','Historic Graves')],
+      desc: "Atlanta's oldest public park and a 48-acre Victorian cemetery; Margaret Mitchell and golfer Bobby Jones are buried here.",
+      meta: [["📍","374 Martin Luther King, Jr. Dr. SE"],["💰","Free grounds"],["⏱","1–1.5 hrs"],["🕐","Late afternoon"]],
+      cite: "oaklandcemetery.com"
+    },
+    {
+      name: "Krog Street Tunnel",
+      tags: [TAG('i-horror','Street Art'), TAG('i-diy','Film Location')],
+      desc: "A constantly repainted street-art tunnel connecting Cabbagetown to Inman Park/Reynoldstown — appears in Baby Driver and is a working canvas rather than a museum piece.",
+      meta: [["📍","Cabbagetown / Reynoldstown border"],["💰","Free"],["⏱","20–30 min"],["🕐","Golden hour"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Chattahoochee River NRA (Cochran Shoals)",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "A chain of river-corridor park units through metro Atlanta with hiking, shoals swimming, and summer tubing — the natural-attraction balance-rule pick, close enough for a half-day trip.",
+      meta: [["📍","Northwest Atlanta metro"],["💰","Free–$5 parking"],["⏱","Half-day"],["🕐","Morning"]],
+      cite: "National Park Service"
+    },
+    {
+      name: "Trap Music Museum",
+      tags: [TAG('i-diy','Bonus Pick')],
+      desc: "Billed as the world's first hip-hop museum, founded out of T.I.'s trap-music roots and recognized by National Geographic as one of the best musical landmarks in the Deep South.",
+      meta: [["📍","Atlanta"],["💰","~$25–30"],["⏱","1 hr"],["🕐","Afternoon"]],
+      cite: "trapmusicmuseum.us"
+    },
+    {
+      name: "National Center for Civil and Human Rights",
+      tags: [TAG('i-political','Well-Known Must-See'), TAG('i-political','Bonus Pick')],
+      desc: "Pairs the American civil rights movement with a global human-rights gallery; the lunch-counter simulation exhibit is the standout for the political-history thread.",
+      meta: [["📍","Downtown, near Centennial Olympic Park"],["💰","~$21"],["⏱","2 hrs"],["🕐","Midday"]],
+      cite: "civilandhumanrights.org"
+    }
+  ],
+  venues: [
+    {
+      name: "The Masquerade",
+      tags: [TAG('i-punk','Well-Known Must-See')],
+      desc: "Atlanta's best-known rock club since 1989, split into three named rooms (Heaven, Hell, Purgatory) that let it run multiple bills a night across metal, punk, and touring indie acts.",
+      meta: [["📍","Underground Atlanta / Downtown"],["💰","$15–40"],["⏱","3–4 hrs"],["🕐","Night"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "529",
+      tags: [TAG('i-punk','DIY Booking Confirmed')],
+      desc: "Confirmed active DIY-leaning punk/metal/hardcore booking (EYEHATEGOD, Voivod, Kylesa, Profanatica have all played recently) inside a small East Atlanta Village room.",
+      meta: [["📍","529 Flat Shoals Ave SE"],["💰","$8–20"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "529atlanta.com show calendar"
+    },
+    {
+      name: "Star Community Bar",
+      tags: [TAG('i-punk','Elvis Shrine')],
+      desc: "L5P dive institution since the early '90s, complete with an Elvis shrine in the basement chapel — rockabilly, garage, and punk-adjacent bookings.",
+      meta: [["📍","437 Moreland Ave NE, Little Five Points"],["💰","$5–15"],["⏱","2 hrs"],["🕐","Night"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "The Earl",
+      tags: [TAG('i-punk','Indie/Punk Mainstay')],
+      desc: "Restaurant-venue combo that's been an indie/punk mainstay since the early 2000s, a short walk from 529 — the two anchor an East Atlanta Village show-going night.",
+      meta: [["📍","488 Flat Shoals Ave SE, East Atlanta Village"],["💰","$10–20"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Boggs Social & Supply",
+      tags: [TAG('i-punk','DIY'), TAG('i-political','Community-Run')],
+      desc: "Community bar and DIY show space inside Cabbagetown, the historic mill-village neighborhood next to Oakland Cemetery — low-key and community-run rather than a booking-agency room.",
+      meta: [["📍","Cabbagetown"],["💰","Free entry–$10"],["⏱","2 hrs"],["🕐","Night"]],
+      cite: "targeted web search"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Junkman's Daughter",
+      tags: [TAG('i-horror','Well-Known Must-See'), TAG('i-diy','Oddity Emporium')],
+      desc: "A cavernous vintage/retro/oddity emporium and L5P landmark since the 1980s — the single best browse-for-a-weird-gift stop in the city.",
+      meta: [["📍","464 Moreland Ave NE, Little Five Points"],["💰","$5–40"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Paris on Ponce",
+      tags: [TAG('i-horror','Antiques Warehouse'), TAG('i-diy','Local')],
+      desc: "A sprawling antiques-and-oddities warehouse that doubles as an event space; browsing here is closer to an Atlas Obscura outing than a shopping trip.",
+      meta: [["📍","716 Ponce De Leon Pl NE, Poncey-Highland"],["💰","$5–100+"],["⏱","1–1.5 hrs"],["🕐","Afternoon"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Young Blood Boutique",
+      tags: [TAG('i-diy','Local Artist Gallery')],
+      desc: "Local-artist gallery-shop in L5P selling prints, apparel, and small goods made by Atlanta makers rather than mass-market tourist stock.",
+      meta: [["📍","Little Five Points"],["💰","$8–40"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Trap Music Museum gift shop",
+      tags: [TAG('i-diy','Only-in-Atlanta Merch')],
+      desc: "Museum-branded apparel and merch that reads as a genuinely Atlanta-specific souvenir rather than a generic tourist tee.",
+      meta: [["📍","Atlanta"],["💰","$15–50"],["⏱","15 min w/ museum visit"],["🕐","Afternoon"]],
+      cite: "trapmusicmuseum.us"
+    },
+    {
+      name: "MLK NHP bookstore & gift shop",
+      tags: [TAG('i-political','Meaningful Souvenir'), TAG('i-books','Print')],
+      desc: "Civil-rights-history postcards, prints, and books that make a more meaningful souvenir than a generic magnet, sold on-site at the historical park.",
+      meta: [["📍","450 Auburn Ave NE"],["💰","$5–30"],["⏱","15–20 min"],["🕐","Paired with Sweet Auburn visit"]],
+      cite: "National Park Service"
+    }
+  ],
+  electronics: [
+    {
+      name: "Freeside Atlanta",
+      tags: [TAG('i-diy','Well-Known Must-See'), TAG('i-diy','Largest East Coast Hackerspace')],
+      desc: "Self-described as the largest hackerspace on the East Coast — roughly 5,500 sq ft with a wood shop, metal shop, CNC router, CO2 laser cutter, and a 16-student classroom.",
+      meta: [["📍","Metro Atlanta — check site for location"],["💰","Membership; open houses often free"],["⏱","Half-day tour or evening open house"],["🕐","Check calendar"]],
+      cite: "Hackaday.com"
+    },
+    {
+      name: "Decatur Makers",
+      tags: [TAG('i-diy','Nonprofit Community Makerspace')],
+      desc: "Nonprofit community makerspace with a tool library and regular classes — a more approachable, less industrial counterpart to Freeside for a short-notice visit.",
+      meta: [["📍","Decatur, GA"],["💰","Membership + class fees"],["⏱","2–3 hrs for a class"],["🕐","Check class calendar"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "Georgia Tech Invention Studio",
+      tags: [TAG('i-diy','Access Varies — See Status Note')],
+      desc: "One of the largest student-run makerspaces in the country — 3D printing, laser cutting, electronics benches — but primarily built for enrolled students, so confirm access before assuming a walk-in tour.",
+      meta: [["📍","Georgia Tech campus, Midtown"],["💰","Free; access varies"],["⏱","1 hr if a tour is arranged"],["🕐","Weekday, by advance arrangement"]],
+      cite: "targeted web search"
+    },
+    {
+      name: "ASW Distillery tour & tasting",
+      tags: [TAG('i-drinks','Whiskey/Bourbon'), TAG('i-diy','Craft Production')],
+      desc: "Not electronics, but included as the whiskey-and-craft-production stop this itinerary would otherwise miss — three Atlanta tasting rooms making Fiddler Bourbon, Resurgens Rye, and other in-house spirits.",
+      meta: [["📍","The Battery ATL / Buckhead / West End"],["💰","Tastings ~$15–25"],["⏱","1 hr"],["🕐","Buckhead: Fri 3–8pm tours"]],
+      cite: "aswdistillery.com"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

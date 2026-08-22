@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oklahoma City, OK — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  .correction-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+  }
+  .correction-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.9rem 1.25rem;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.75);
+    font-style: italic;
+  }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.8;
+  }
+  .closure-inner strong { font-weight: 500; }
+  .closure-inner .item { margin-bottom: 0.6rem; }
+  .closure-inner .item:last-child { margin-bottom: 0; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+  .gap-inner:last-child { margin-bottom: 0; }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 1 (Retroactive) &nbsp;·&nbsp; Portland → Boise → Salt Lake City → Las Vegas → Phoenix → Albuquerque → <strong style="color:var(--cream)">Oklahoma City</strong> → Dallas → Austin</p>
+  <h1>Road Trip Stop — <em>Oklahoma City, OK</em></h1>
+  <p class="subtitle">
+    A city founded in a single afternoon by the 1889 land run and rebuilt twice since — once by urban renewal and the I-235 corridor that gutted Deep Deuce, the Black business and jazz district that produced Ralph Ellison and Charlie Christian, and once by the MAPS one-cent sales tax passed after the 1995 Murrah bombing. Clara Luper's 1958 Katz Drug Store sit-in predated Greensboro by eighteen months and is largely absent from the national account.<br>
+    10 categories · 5 picks each (sights runs 5+3 bonus) · Sources: Atlas Obscura, TasteAtlas, Eater / 405 Magazine, Timeout, Oklahoma Gazette, Oklahoma City Free Press, VisitOKC, BlackPast.org / Clio / Zinn Education Project, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Twisters (2024)</strong> — downtown Park Avenue doubled for New York City; streets closed 19 hrs in May 2023, dressed with scaffolding, subway signage and taxi cabs. Prairie Surf Studios (former convention center) housed interior sets; The Gilded Acorn played the NYC coffee shop where Kate meets Javi.</li>
+        <li><strong>Elizabethtown (2005)</strong> — the Survivor Tree at the OKC National Memorial appears; the elm that survived the 1995 bombing.</li>
+        <li><strong>Rain Man (1988)</strong> — pivotal sequences in El Reno (also home of the fried onion burger) and Guthrie's Victorian downtown.</li>
+        <li><strong>Bringing Up Bobby (2011)</strong> — Milla Jovovich, filmed partly in OKC and Arcadia.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born / Raised Here</h3>
+      <ul>
+        <li><strong>Ralph Ellison</strong> — author of Invisible Man, grew up in segregated Deep Deuce surrounded by jazz and blues, taught by bandleader Zelia N. Breaux.</li>
+        <li><strong>Charlie Christian</strong> — established the electric guitar as a lead instrument; also raised in Deep Deuce and taught by Breaux.</li>
+        <li><strong>Clara Luper</strong> — led the Aug 19–21, 1958 Katz Drug Store sit-in, eighteen months before Greensboro; arrested 26 times over her activist career.</li>
+        <li><strong>Wayne Coyne (The Flaming Lips)</strong> — founded The Womb, a psychedelic arts center whose building now houses Factory Obscura's Mix-Tape.</li>
+        <li><strong>Chat Pile</strong> — OKC sludge/noise-metal band named for NE Oklahoma mine tailings; played Tower Theatre in October 2025, inside this trip's visit window.</li>
+        <li><strong>Ed Ruscha</strong> — pop artist, raised in Oklahoma City.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="correction-note">
+    <div class="correction-inner">
+      <strong style="color:var(--gold); font-style:normal;">Correction / common misattribution:</strong> Twister (1996), August: Osage County (2013) and Killers of the Flower Moon (2023) are frequently credited to Oklahoma City but were shot elsewhere in the state — Wakita/Ponca City for the first, Pawhuska/Bartlesville/Osage County for the latter two. Only the 2024 Twisters sequel is genuinely an OKC production. <span class="cite-tag">— TravelOK, Tulsa City-County Library, WorldAtlas</span>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + 3 bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔧</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">4 picks</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTE -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <div class="item"><strong>⚠ Current Status Notes:</strong></div>
+    <div class="item"><strong>Clara Luper National Sit-In Plaza</strong> was dedicated November 3, 2025 — after this trip's Oct 20–22, 2025 visit window closed. The finished bronze installation would not yet have been standing during the actual stay.</div>
+    <div class="item"><strong>Nappy Roots Books</strong> has relocated; older directory listings show 3705 N Springlake Dr, the shop's own announcement gives 3621 N Lottie Ave.</div>
+    <div class="item"><strong>Split-T</strong>, the OKC restaurant credited with inventing the Theta burger, is closed — order at Johnnie's Charcoal Broiler or The Garage instead.</div>
+    <div class="item"><strong>39th Street Records</strong> (2131 NW 39th St) appears as permanently closed in at least one vinyl directory while still listed elsewhere — call ahead.</div>
+    <div class="item"><strong>Prototek OKC</strong>'s public web presence has been stale for roughly a decade despite active directory listings — confirm operation before visiting.</div>
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-note">
+  <div class="gap-inner">
+    <strong>Honest gap — Bookstores:</strong> the mandatory anarchist/radical/infoshop search returned no dedicated storefront in Oklahoma City; OKC doesn't appear in radical-guide.com's bookstore-collective directory. The nearest true infoshop is Red Scare Infoshop in Tulsa, ~100 miles east. OKC's equivalent infrastructure is cooperative rather than anarchist — Literati Press became Oklahoma's first community-owned bookshop when The Writers Co-op began taking ownership in 2025 — plus OKC DSA working groups, which organize but don't run a public space. A red-state capital produces co-ops and mutual-aid networks where a coastal city produces infoshops.
+  </div>
+  <div class="gap-inner">
+    <strong>Honest gap — DIY Electronics:</strong> Category 10 carries four picks, not five. OKC has a world-class boutique electronics manufacturer in Keeley Electronics but no dedicated synth shop, no hackerspace with published public open-hours, and at least one makerspace (Prototek) whose operating status couldn't be freshly confirmed this run. Padding to five would misrepresent the city.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Deep Deuce deserves a standalone Field Notes entry: Ellison and Christian's shared teacher Zelia N. Breaux, the district's postwar gutting by urban renewal and the I-235 corridor, and how little of the built environment survives versus how much the historical markers now do the remembering.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      The <em>black-business-district-erasure</em> thread anchors here at Deep Deuce and is now confirmed to extend forward to Dallas (Freedman's Town / State-Thomas, bisected by the 1962 Woodall Rodgers Freeway) and sideways to Jackson, MS (Farish Street) and Richmond, VA (Jackson Ward / St. Luke Penny Savings Bank, bisected by I-95 in the 1950s–60s) — three confirmed parallels to carry into the Trip Route and Threads doc.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Clarity Coffee's pastry case is supplied by Quincy Bake Shop — the same small-batch-supplier pattern worth checking for in Dallas, the next stop, where the same instinct to pair a coffee bar with an outside baker rather than build an in-house program tends to recur in Southern mid-size cities.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 1 Retroactive Guide &nbsp;·&nbsp; Oklahoma City, OK<br>
+  Control group entry: instinct-driven Trip 1 city, curated retroactively for comparison against Trip 2's guide-led stops<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Literati Press Comics & Novels",
+      tags: [TAG('i-books','Community-Owned'), TAG('i-political','Co-op'), TAG('i-diy','Publisher')],
+      desc: "Oklahoma's first community-owned bookshop — The Writers Co-op, founded as a legal cooperative in 2024, began taking ownership in 2025. Subculture publisher since 2010.",
+      meta: [["📍","3022 Paseo, Paseo Arts District"],["💰","$0–35"],["⏱","1 hr"],["🕐","10am–6pm daily; evening for events"]],
+      cite: "literatipressok.com, TravelOK, thepaseo.org"
+    },
+    {
+      name: "Nappy Roots Books",
+      tags: [TAG('i-books','Black-Owned'), TAG('i-political','Community Space')],
+      desc: "Black-owned bookstore expanding into gallery and performance space, with classes in visual arts, theatre and dance.",
+      meta: [["📍","3621 N Lottie Ave"],["💰","$0–30"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "Nappy Roots Books, Yelp OKC · ⚠ relocated, see status note"
+    },
+    {
+      name: "Full Circle Bookstore",
+      tags: [TAG('i-books','Since 1970s'), TAG('i-bees','Well-Known Must-See')],
+      desc: "Oklahoma's largest and oldest independent bookstore; 60,000+ titles, fireplaces, deep Oklahoma and Native American sections, publishes Oklahoma-centric nonfiction.",
+      meta: [["📍","1900 NW Expressway"],["💰","$0–40"],["⏱","1–2 hrs"],["🕐","Late morning"]],
+      cite: "fullcirclebooks.com, VisitOKC, NewPages"
+    },
+    {
+      name: "Second Story Books and Cafe",
+      tags: [TAG('i-books','Used & New'), TAG('i-food','Attached Cafe')],
+      desc: "Used-and-new stack with an attached working cafe.",
+      meta: [["📍","718 Culbertson Dr"],["💰","$3–20"],["⏱","1 hr"],["🕐","Afternoon"]],
+      cite: "OKC Insider, Yelp OKC"
+    },
+    {
+      name: "Commonplace Books",
+      tags: [TAG('i-books','Curated New Books'), TAG('i-food','Coffee Bar')],
+      desc: "Tightly curated new-book shop with coffee bar and a steady author-event calendar.",
+      meta: [["📍","Classen Curve"],["💰","$0–35"],["⏱","45 min"],["🕐","Morning or evening event"]],
+      cite: "Yelp OKC, OKC bookstore roundups"
+    }
+  ],
+  records: [
+    {
+      name: "Guestroom Records",
+      tags: [TAG('i-punk','Local Pressings'), TAG('i-diy','Stage Room'), TAG('i-bees','Well-Known Must-See')],
+      desc: "Founded by two OU students; presses and sells vinyl by Oklahoma artists and hosts local acts for release parties. High-ceilinged room doubles as a stage.",
+      meta: [["📍","3701 N Western Ave"],["💰","$5–40"],["⏱","1 hr"],["🕐","Afternoon; check for in-stores"]],
+      cite: "405 Magazine, VisitOKC, vinylvirgins.com"
+    },
+    {
+      name: "Trolley Stop Record Shop",
+      tags: [TAG('i-horror','Former Movie Theater'), TAG('i-diy','Deep Format Range')],
+      desc: "Housed in a historic landmark building that was formerly a movie theater. 78s, 45s, LPs, CDs, cassettes, 8-tracks, VHS.",
+      meta: [["📍","1212 N Pennsylvania Ave"],["💰","$2–30"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "vinylvirgins.com, keepthemspinning.com"
+    },
+    {
+      name: "39th Street Records",
+      tags: [TAG('i-punk','LGBTQ District'), TAG('i-political','Nightlife Anchor')],
+      desc: "Sits in OKC's long-standing LGBTQ nightlife district. At least one vinyl directory lists this address as permanently closed while other guides still carry it — call ahead.",
+      meta: [["📍","2131 NW 39th St, 39th Street District"],["💰","$5–30"],["⏱","30–45 min"],["🕐","Evening"]],
+      cite: "VisitOKC, vinylworld.org · ⚠ possibly closed, see status note"
+    },
+    {
+      name: "3 Dachshunds",
+      tags: [TAG('i-diy','Largest Metro Inventory'), TAG('i-horror','Collectibles')],
+      desc: "Claims the largest inventory in the OKC metro — 140+ crates plus graphic novels, posters and collectibles.",
+      meta: [["📍","OKC metro"],["💰","$1–25"],["⏱","1 hr+"],["🕐","Weekend afternoon"]],
+      cite: "bestlocalthings.com"
+    },
+    {
+      name: "Bad Granny's Bazaar",
+      tags: [TAG('i-horror','Vintage Booths'), TAG('i-diy','Local Vendors'), TAG('i-punk','Two Wings')],
+      desc: "Two wings of vintage booths with vinyl, cassettes, old cameras and collectibles; local vendors run rotating booths. Also crosses over into the souvenirs list.",
+      meta: [["📍","Plaza District"],["💰","$3–50"],["⏱","1 hr"],["🕐","Afternoon"]],
+      cite: "VisitOKC, Wanderlog"
+    }
+  ],
+  coffee: [
+    {
+      name: "Zero Tolerance Coffee & Siyo Chocolate",
+      tags: [TAG('i-food','Bean-to-Cup + Bean-to-Counter'), TAG('i-political','Veteran-Owned'), TAG('i-punk','Live Music')],
+      desc: "Veteran-owned bean-to-cup roastery and bean-to-counter chocolate maker sourcing directly from independent farmers to ensure fair compensation. Signature roast: Slippery Slope. Live music on select days.",
+      meta: [["📍","Britton District"],["💰","$4–7"],["⏱","45 min"],["🕐","Late morning / brunch"]],
+      cite: "Wanderlog OKC roasters, Yelp OKC"
+    },
+    {
+      name: "Elemental Coffee Roasters",
+      tags: [TAG('i-food','On-Site Roast'), TAG('i-bees','Well-Known Must-See')],
+      desc: "Roasts on site; pour-over and siphon alongside espresso, plus a full breakfast/lunch menu.",
+      meta: [["📍","815 N Hudson Ave, Midtown"],["💰","$4–14"],["⏱","1 hr"],["🕐","Morning"]],
+      cite: "Yelp OKC, Petry / FitCity OKC roundups"
+    },
+    {
+      name: "Clarity Coffee",
+      tags: [TAG('i-food','Single-Origin'), TAG('i-books','Local Art on Walls')],
+      desc: "Founded by Steve Willingham, one-time KLLR partner. Sustainably roasted single-origin; seasonal drinks made with fresh local produce; hangs work by local artists. Pastries from Quincy Bake Shop.",
+      meta: [["📍","431 W Main St, Downtown"],["💰","$4–8"],["⏱","45 min"],["🕐","Morning"]],
+      cite: "405 Magazine, VisitOKC"
+    },
+    {
+      name: "Coffee Slingers Roasters",
+      tags: [TAG('i-food','Sourcing-Focused'), TAG('i-diy','Retail Bags')],
+      desc: "Sourcing-and-sustainability roaster; whole-bean retail with subscription option. Also a mailable-gift pick.",
+      meta: [["📍","1015 N Broadway Ave, Automobile Alley"],["💰","$4–20 (retail bags)"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "405 Magazine, coffeespots.com"
+    },
+    {
+      name: "Prelude Coffee Roasters",
+      tags: [TAG('i-food','Fresh Roast + Tea Program')],
+      desc: "Roasts fresh in OKC; serious tea program alongside coffee.",
+      meta: [["📍","Downtown"],["💰","$4–8"],["⏱","30 min"],["🕐","Early morning"]],
+      cite: "preludecoffeeroasters.com, Yelp OKC"
+    }
+  ],
+  pastry: [
+    {
+      name: "The Gilded Acorn",
+      tags: [TAG('i-food','Patisserie'), TAG('i-horror','Film Location'), TAG('i-diy','Hidden Gem')],
+      desc: "Patisserie that stood in for the New York City coffee shop in Twisters during the May 2023 downtown Park Avenue shoot.",
+      meta: [["📍","Downtown"],["💰","$4–12"],["⏱","45 min"],["🕐","Morning"]],
+      cite: "The Oklahoman via AOL, VisitOKC, Yelp OKC"
+    },
+    {
+      name: "Harvey Bakery & Kitchen",
+      tags: [TAG('i-food','City Croissant Benchmark'), TAG('i-bees','Well-Known Must-See')],
+      desc: "The city's croissant benchmark; also cruffins, muffins and large sandwiches. Carries a gluten-free and vegan cinnamon roll.",
+      meta: [["📍","301 NW 13th St, Suite 100"],["💰","$4–15"],["⏱","45 min–1.5 hr with queue"],["🕐","Before 10am"]],
+      cite: "VisitOKC, OKC Insider, foodieflashpacker"
+    },
+    {
+      name: "Ganache Patisserie",
+      tags: [TAG('i-food','French Technique')],
+      desc: "Full French-technique patisserie: quiche, croissants, macarons, mousse cakes including champagne-apricot-Cointreau, pistachio frangipane–dark chocolate tarts.",
+      meta: [["📍","5840 N Classen Blvd #5, Chisholm Creek"],["💰","$5–18"],["⏱","1 hr"],["🕐","Late morning / brunch"]],
+      cite: "ganacheokc.com, Wanderlog OKC pastries"
+    },
+    {
+      name: "Quincy Bake Shop",
+      tags: [TAG('i-food','Supplies Clarity Coffee')],
+      desc: "Full-service bakery that supplies Clarity Coffee's pastry case.",
+      meta: [["📍","OKC"],["💰","$3–12"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "405 Magazine, Yelp OKC"
+    },
+    {
+      name: "Oaxaca Bakery",
+      tags: [TAG('i-food','Pan Dulce'), TAG('i-political','South OKC')],
+      desc: "Mexican-style pan dulce in south OKC, in the orbit of the Capitol Hill district.",
+      meta: [["📍","1117 SW 59th St"],["💰","$1–8"],["⏱","30 min"],["🕐","Early morning"]],
+      cite: "foodieflashpacker OKC bakeries"
+    }
+  ],
+  dishes: [
+    {
+      name: "Fried Onion Burger",
+      tags: [TAG('i-food','Regional Icon'), TAG('i-political','Labor History'), TAG('i-bees','Well-Known Must-See')],
+      desc: "Created in El Reno in the 1920s by a restaurateur stretching ground beef with cheap onions to feed striking railroad workers during the Great Railroad Strike of 1922. Paper-thin onions pressed into the patty on the griddle, flipped onion-side down, served with mustard, pickles and American cheese on a potato bun. Restaurants: Nic's Grill (1201 N Pennsylvania Ave), Tucker's Onion Burgers, Sid's Diner (El Reno).",
+      meta: [["📍","OKC + El Reno"],["💰","$8–14"],["⏱","45 min (Nic's has a wait)"],["🕐","Lunch, arrive early"]],
+      cite: "TasteAtlas — Fried Onion Burger; Wikipedia"
+    },
+    {
+      name: "Theta Burger",
+      tags: [TAG('i-food','Local Specialty')],
+      desc: "Hickory sauce, mayonnaise, dill pickle slices and shredded cheddar. Believed to have originated at OKC's Split-T (now closed), with a competing claim from the Town Tavern in Norman. Restaurants: Johnnie's Charcoal Broiler, The Garage Burgers & Beer, S&B's Burger Joint.",
+      meta: [["📍","Multiple OKC locations"],["💰","$9–14"],["⏱","45 min"],["🕐","Lunch"]],
+      cite: "TasteAtlas — Best Rated Burgers in Oklahoma"
+    },
+    {
+      name: "Chicken-Fried Steak & Lamb Fries — Cattlemen's Steakhouse",
+      tags: [TAG('i-food','Stockyards Institution'), TAG('i-horror','Regional Oddity'), TAG('i-bees','Well-Known Must-See')],
+      desc: "Open since 1910 in a working cattle district that still runs auctions. Chicken-fried steak and fried okra are the standard order; lamb fries are the regional oddity.",
+      meta: [["📍","1309 S Agnew Ave, Stockyards City"],["💰","$16–40"],["⏱","1.5 hrs"],["🕐","Early dinner, or breakfast"]],
+      cite: "TasteAtlas Oklahoma dishes, VisitOKC"
+    },
+    {
+      name: "Native Oklahoma Cooking — Thirty Nine Restaurant",
+      tags: [TAG('i-food','Indigenous Foodways'), TAG('i-political','Museum-Anchored'), TAG('i-horror','Atlas Obscura')],
+      desc: "Named for the 39 tribal nations headquartered in Oklahoma; menu builds from Indigenous ingredients and regional foodways.",
+      meta: [["📍","First Americans Museum"],["💰","$18–35"],["⏱","1.5 hrs"],["🕐","Lunch, paired with the museum"]],
+      cite: "Atlas Obscura — Oklahoma City"
+    },
+    {
+      name: "Phở & Bánh Mì — The Asian District",
+      tags: [TAG('i-food','Refugee Resettlement History'), TAG('i-political','Community Geography')],
+      desc: "Grew from Vietnamese refugee resettlement after 1975; now one of the densest concentrations of Vietnamese food per capita in the country, within a few blocks of Classen Boulevard.",
+      meta: [["📍","N Classen Blvd, Asian District"],["💰","$8–16"],["⏱","1 hr"],["🕐","Lunch"]],
+      cite: "Atlas Obscura city profile, local press"
+    }
+  ],
+  gifts: [
+    {
+      name: "Local Honey — OKC Farmers Public Market",
+      tags: [TAG('i-bees','Area Apiaries'), TAG('i-food','Since 1928')],
+      desc: "Operating since 1928. Saturday market on the first floor of the historic market hall: produce, meat, jams, canned goods and honey from area apiaries.",
+      meta: [["📍","311 S Klein Ave"],["💰","$8–20/jar"],["⏱","1 hr"],["🕐","Saturday 9am–2pm"]],
+      cite: "okcfmd.com, News9 OKC markets, LocalHarvest"
+    },
+    {
+      name: "Urban Agrarian",
+      tags: [TAG('i-food','60+ Farms'), TAG('i-bees','Honey & Jams')],
+      desc: "Gathers food from 60+ Oklahoma farms and makers, prioritizing sustainable and organic producers. Honey, jams, jarred condiments, shelf-stable specialty goods.",
+      meta: [["📍","Farmers Market District"],["💰","$6–30"],["⏱","30–45 min"],["🕐","Open daily"]],
+      cite: "VisitOKC, localhoneymap.com, okcfmd.com"
+    },
+    {
+      name: "Siyo Chocolate Single-Origin Bars",
+      tags: [TAG('i-food','Bean-to-Counter'), TAG('i-political','Direct Trade')],
+      desc: "Bean-to-counter chocolate made alongside the Zero Tolerance roastery, sourced directly from independent farmers.",
+      meta: [["📍","Britton District"],["💰","$8–14/bar"],["⏱","20 min"],["🕐","Morning"]],
+      cite: "Wanderlog OKC roasters"
+    },
+    {
+      name: "Made in Oklahoma Pantry — Tin Lizzie's",
+      tags: [TAG('i-food','Maker-Named Goods'), TAG('i-diy','Pop-Up Partnerships')],
+      desc: "Built on shop-in-shop and pop-up partnerships with smaller Oklahoma-owned makers, artisans and authors, so pantry goods carry maker names rather than a generic state label.",
+      meta: [["📍","OKC metro"],["💰","$6–25"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "okcmom.com Made in Oklahoma guide"
+    },
+    {
+      name: "Whole-Bean Coffee — Coffee Slingers / Elemental",
+      tags: [TAG('i-food','Ships Well')],
+      desc: "Both roast in OKC and sell retail bags with subscriptions available.",
+      meta: [["📍","1015 N Broadway Ave / 815 N Hudson Ave"],["💰","$16–24/bag"],["⏱","15 min"],["🕐","Morning"]],
+      cite: "405 Magazine, Petry OKC coffee guide"
+    }
+  ],
+  sights: [
+    {
+      name: "Clara Luper National Sit-In Plaza",
+      tags: [TAG('i-political','Thread Anchor'), TAG('i-bees','Well-Known Must-See'), TAG('i-books','Civil Rights History')],
+      desc: "Bronze lunch-counter installation on the site of the former Katz Drug Store, marking the Aug 19–21, 1958 sit-in led by Clara Luper and thirteen Black youth from the NAACP Youth Council — eighteen months before Greensboro. $3.6M monument with life-size bronze figures of all thirteen sit-inners. Confirmed dedicated November 3, 2025 — after this trip's Oct 20–22, 2025 window, so the finished piece wasn't standing during the actual stay.",
+      meta: [["📍","59 N Robinson Ave"],["💰","Free"],["⏱","30–45 min"],["🕐","Any time; morning light is better"]],
+      cite: "BlackPast.org, Clio, Zinn Education Project, KOSU, KGOU, KFOR · ⚠ dedicated after visit window"
+    },
+    {
+      name: "Oklahoma City Underground (the Conncourse)",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Hidden Infrastructure'), TAG('i-books','Gallery Wings')],
+      desc: "Opened 1974 as the 'Conncourse'. A mile of tunnels across 20+ downtown blocks, color-coded in neon with each colour a wing corresponding to a gallery of art and history exhibits. No single entrance — access points are scattered through basements and parking garages.",
+      meta: [["📍","Downtown, multiple entrances"],["💰","Free"],["⏱","1–1.5 hrs"],["🕐","Weekday business hours only"]],
+      cite: "Atlas Obscura — Oklahoma City Underground"
+    },
+    {
+      name: "Factory Obscura: Mix-Tape",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-punk','Flaming Lips Lineage'), TAG('i-diy','Immersive Art')],
+      desc: "Immersive walk-through installation built by the local Factory Obscura arts collective inside the building formerly known as The Womb, the psychedelic arts center founded by Wayne Coyne of the Flaming Lips.",
+      meta: [["📍","25 NW 9th St, Automobile Alley"],["💰","$18–25"],["⏱","1 hr"],["🕐","Afternoon or evening"]],
+      cite: "Atlas Obscura — Factory Obscura Mix-Tape"
+    },
+    {
+      name: "Oklahoma City National Memorial & Museum",
+      tags: [TAG('i-bees','Well-Known Must-See'), TAG('i-political','MAPS Rebuild'), TAG('i-horror','Film Location')],
+      desc: "168 empty chairs on the Murrah Building footprint; Gates of Time marking 9:01 and 9:03; the Survivor Tree elm. The MAPS one-cent sales tax that rebuilt downtown was the city's direct answer to the 1995 bombing.",
+      meta: [["📍","620 N Harvey Ave"],["💰","Memorial free / museum ~$18"],["⏱","2–3 hrs"],["🕐","Museum midday; memorial at night"]],
+      cite: "Atlas Obscura city profile, OKC National Memorial"
+    },
+    {
+      name: "Museum of Osteology (Skeletons)",
+      tags: [TAG('i-horror','450+ Skeletons'), TAG('i-diy','40 Years of Collecting')],
+      desc: "450+ articulated skeletons on display and 7,000+ in the collection — the largest privately held osteological collection in the world, assembled over 40 years by Jay Villemarette. An arm of Skulls Unlimited International.",
+      meta: [["📍","10301 S Sunnylane Rd"],["💰","~$12–15"],["⏱","1.5 hrs"],["🕐","Midday"]],
+      cite: "Wikipedia — Museum of Osteology, skeletonmuseum.com"
+    },
+    {
+      name: "Deep Deuce — Ellison & Christian Geography (bonus)",
+      tags: [TAG('i-books','Thread Anchor'), TAG('i-punk','Jazz District'), TAG('i-political','Erasure History')],
+      desc: "The segregated Black business and jazz district where Ralph Ellison grew up and Charlie Christian came up, both taught by bandleader Zelia N. Breaux. Gutted by 1960s-70s urban renewal and the I-235 corridor; largely new-build now, with historical markers standing in for the district itself. Anchor point for this guide's analytical thread on Black business-district erasure — confirmed parallels in Dallas (Freedman's Town), Jackson MS (Farish Street), and Richmond VA (Jackson Ward / St. Luke Bank).",
+      meta: [["📍","NE 2nd St, Deep Deuce"],["💰","Free"],["⏱","45 min walk"],["🕐","Morning"]],
+      cite: "BlackPast.org, KOSU, News9 'Deep Roots of Deep Deuce', Oklahoma Historical Society"
+    },
+    {
+      name: "Martin Park Nature Center (bonus)",
+      tags: [TAG('i-bees','Natural Attraction'), TAG('i-diy','Hands-On Museum')],
+      desc: "140 acres of grassland, woodland, rocky streams and ponds; 3.5 miles of trails, bird blinds, a viewing deck, and a staffed centre with a hands-on museum and browsing library — the balance-rule natural pick.",
+      meta: [["📍","5000 W Memorial Rd"],["💰","Free"],["⏱","1–2 hrs"],["🕐","Early morning (opens 8am)"]],
+      cite: "OKC Parks, OKC Audubon Society, News9"
+    },
+    {
+      name: "First Americans Museum (bonus)",
+      tags: [TAG('i-political','Removal History'), TAG('i-horror','Atlas Obscura'), TAG('i-books','Cultural Center')],
+      desc: "The largest single-building tribal cultural center in the United States, telling the collective histories of the 39 tribal nations now headquartered in Oklahoma — nearly all of them here because they were removed here.",
+      meta: [["📍","659 First Americans Blvd"],["💰","~$15"],["⏱","2–3 hrs"],["🕐","Midday; pair with Thirty Nine"]],
+      cite: "Atlas Obscura — Oklahoma City places"
+    }
+  ],
+  venues: [
+    {
+      name: "The Sanctuary",
+      tags: [TAG('i-punk','All-Ages DIY'), TAG('i-horror','Shares Space with Oddity Store'), TAG('i-political','Inclusive Mission')],
+      desc: "All-ages DIY venue and creative arts collective sharing a building with Beloved Bones, an oddity store known for taxidermy. Low-capacity main room plus back patio; explicit mission as a safe, inclusive space investing in the local underground. Punk, metal and fringe-genre bookings.",
+      meta: [["📍","NW 10th St & May Ave"],["💰","$10–20"],["⏱","3 hrs"],["🕐","Night; check socials for bills"]],
+      cite: "Oklahoma Gazette 'Subculture Sanctum', DoDIY.org"
+    },
+    {
+      name: "Tower Theatre",
+      tags: [TAG('i-punk','Chat Pile Played Here'), TAG('i-horror','Reborn Venue'), TAG('i-bees','Well-Known Must-See')],
+      desc: "Oklahoma's first air-conditioned theatre, abandoned for decades and reborn in the new century. Chat Pile played one of their highest-profile local gigs here in October 2025 — inside the Trip 1 visit window.",
+      meta: [["📍","425 NW 23rd St, Uptown"],["💰","$20–45"],["⏱","3–4 hrs"],["🕐","Night"]],
+      cite: "Atlas Obscura, Oklahoma City Free Press"
+    },
+    {
+      name: "Beer City Music Hall",
+      tags: [TAG('i-punk','Touring Packages'), TAG('i-drinks','Beer-Focused')],
+      desc: "Mid-size room for touring punk, hardcore and indie packages.",
+      meta: [["📍","Farmers Market District"],["💰","$15–35"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "Bandsintown, OKC listings"
+    },
+    {
+      name: "Diamond Ballroom",
+      tags: [TAG('i-punk','Since 1964'), TAG('i-horror','Heavy Room')],
+      desc: "Opened 1964 as the Diamond Theatre; still the city's heavy room for death metal, deathcore and hardcore packages. South-side, well outside the walkable core.",
+      meta: [["📍","8001 S Eastern Ave"],["💰","$25–45"],["⏱","4 hrs"],["🕐","Doors typically 6pm"]],
+      cite: "setlist.fm venue history"
+    },
+    {
+      name: "OK Underground Music Archive (UMA) — Downtown Library",
+      tags: [TAG('i-punk','Scene Archive'), TAG('i-books','Library-Housed'), TAG('i-political','Staff-Built'), TAG('i-diy','Zine Publisher')],
+      desc: "Not a venue — the archive that documents them. Built by library staff who are themselves members of the local music community; heavily DIY-spirited, and publishes UMAmi, a zine distributed to shops and businesses across the city.",
+      meta: [["📍","Downtown Library, 300 Park Ave"],["💰","Free"],["⏱","1 hr"],["🕐","Library hours"]],
+      cite: "Oklahoma City Free Press"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "DNA Galleries",
+      tags: [TAG('i-diy','Local Art'), TAG('i-books','Paper Goods')],
+      desc: "Local art, apparel, accessories, prints, pins and paper goods made in OKC, with frequently rotating inventory.",
+      meta: [["📍","Plaza District"],["💰","$4–40"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "okcmom.com Made in Oklahoma guide"
+    },
+    {
+      name: "Shop Good",
+      tags: [TAG('i-diy','Water-Based Screen Print'), TAG('i-political','Since 2009'), TAG('i-bees','Well-Known Must-See')],
+      desc: "Family-owned retail shop and screen-print studio printing since 2009; one of the only exclusively water-based print shops in the Midwest. Designs collaborate with local artists; printing happens on site.",
+      meta: [["📍","Automobile Alley"],["💰","$6–35"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "VisitOKC 'Only in OKC', okcmom.com, Wanderlog"
+    },
+    {
+      name: "Paseo Arts and Creativity Center Gift Shop",
+      tags: [TAG('i-diy','Local Vendors'), TAG('i-books','Same District as Literati')],
+      desc: "Large inventory of work by local artists and vendors, in the same district as Literati Press.",
+      meta: [["📍","Paseo Arts District"],["💰","$5–100+"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "okcmom.com, thepaseo.org"
+    },
+    {
+      name: "Bad Granny's Bazaar",
+      tags: [TAG('i-horror','Vintage & Oddities'), TAG('i-diy','Rotating Booths')],
+      desc: "Recycled, repurposed and vintage clothing, collectibles, jewelry, art and furnishings across two wings, with local vendors running rotating booths. Also a record-store pick.",
+      meta: [["📍","Plaza District"],["💰","$3–50"],["⏱","1 hr"],["🕐","Afternoon"]],
+      cite: "VisitOKC, Wanderlog"
+    },
+    {
+      name: "Plenty Mercantile",
+      tags: [TAG('i-diy','Sustainable Sourcing'), TAG('i-food','Pantry Items')],
+      desc: "Mindfully sourced homewares, pantry items and gifts with a stated sustainability and responsible-design position.",
+      meta: [["📍","Automobile Alley"],["💰","$8–60"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "okcmom.com Made in Oklahoma guide"
+    }
+  ],
+  electronics: [
+    {
+      name: "Keeley Electronics",
+      tags: [TAG('i-diy','World-Class Pedal Maker'), TAG('i-punk','Guitar Gear'), TAG('i-bees','Well-Known Must-See')],
+      desc: "One of the most respected boutique guitar-pedal manufacturers in the world, headquartered in OKC. Founded 2001 by Robert Keeley, an OU electrical engineering graduate who started at home rebuilding and modifying old effects units beginning with a Ross compressor. Not a walk-in retail store.",
+      meta: [["📍","Oklahoma City"],["💰","$100–300/pedal"],["⏱","Contact ahead"],["🕐","Weekday business hours"]],
+      cite: "Wikipedia — Keeley Electronics, RobertKeeley.com"
+    },
+    {
+      name: "Co-Laboratory Oklahoma (The Co-Lab)",
+      tags: [TAG('i-diy','Classes'), TAG('i-political','Community Center First')],
+      desc: "Makerspace that describes itself first as a community center. Regular classes in soldering, electronic circuit design, 3D printing, laser cutting/engraving and screen printing.",
+      meta: [["📍","Oklahoma City"],["💰","Membership / class fees"],["⏱","2–3 hrs for a class"],["🕐","Check class calendar"]],
+      cite: "colab-ok.com"
+    },
+    {
+      name: "Prototek OKC",
+      tags: [TAG('i-diy','11,000 sq ft Workshop'), TAG('i-horror','Status Unconfirmed')],
+      desc: "Founded 2013 by James Newman and Matt W. as an 11,000 sq ft workshop covering machining, electronics, woodworking, 3D printing, vinyl cutting and graphic design, with Arduino/hobby electronics and CAD classes. Public web presence stale for roughly a decade while directory listings persist.",
+      meta: [["📍","401 NW 10th St"],["💰","Membership"],["⏱","Varies"],["🕐","Verify first"]],
+      cite: "prototekokc.wordpress.com, Hackaday.io, makerspacedir.com · ⚠ status unconfirmed"
+    },
+    {
+      name: "Innovation Studio",
+      tags: [TAG('i-diy','Institutionally Hosted')],
+      desc: "Institutionally hosted makerspace rather than volunteer-run. Confirm visitor or day-use policy.",
+      meta: [["📍","Oklahoma City"],["💰","Varies"],["⏱","Varies"],["🕐","Weekday hours"]],
+      cite: "Yelp OKC makerspaces"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const whereHtml = item.where ? `<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--burnt-light);margin-bottom:4px;">📌 ${item.where}</div>` : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        ${whereHtml}
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las Vegas, NV — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 1 (Retroactive) &nbsp;·&nbsp; Portland → Boise → Salt Lake City → <strong style="color:var(--cream)">Las Vegas</strong> → Phoenix → Albuquerque → Oklahoma City → Dallas → Austin</p>
+  <h1>Road Trip Stop — <em>Las Vegas, NV</em></h1>
+  <p class="subtitle">
+    Underneath the Strip is a real desert city: a converted-warehouse arts district, the strongest union local in the country, a hackerspace, and a museum Fat Mike from NOFX built out of Kurt Cobain's couch. This guide routes around the casino floor.<br>
+    10 categories · 5 picks each (+ bonus sights) · Sources: Atlas Obscura, TasteAtlas, Wikipedia, Rebel Atlas, Vegas 411, local press
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Casino (1995)</strong> — Scorsese's crew used Atomic Liquors' garage as a production studio; the demolished Riviera and the La Concha Motel (now the Neon Museum's visitor center) both appear on screen.</li>
+        <li><strong>Fear and Loathing in Las Vegas (1998)</strong> — Graceland Wedding Chapel is a filming location; Circus Circus refused access so its "hotel" was built on a soundstage.</li>
+        <li><strong>Ocean's Eleven (2001)</strong> — the Bellagio's fountains, gallery, and Chihuly-glass lobby ceiling are the primary location.</li>
+        <li><strong>Anora (2024)</strong> — Palme d'Or and Best Picture winner (Sean Baker); filmed at the Palms Casino Resort and on Fremont Street.</li>
+        <li><strong>The Hangover (2009) / Mars Attacks! (1996)</strong> — both used Atomic Liquors and the Neon Museum boneyard, respectively.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born / Raised Here</h3>
+      <ul>
+        <li><strong>Jenna Jameson</strong> — born 1974, Las Vegas; daughter of a Folies Bergère showgirl, began dancing in Vegas clubs as a teenager.</li>
+        <li><strong>Brandon Flowers (The Killers)</strong> — born Henderson, NV, 1981; <em>Sam's Town</em> and <em>Battle Born</em> are explicit odes to Nevada.</li>
+        <li><strong>Brendon Urie (Panic! at the Disco)</strong> — born/raised Summerlin, Las Vegas; the band formed among Summerlin high schoolers.</li>
+        <li><strong>Dan Reynolds (Imagine Dragons)</strong> — born Las Vegas, 1987; the band relocated to and was based in his hometown.</li>
+        <li><strong>Pre-Killers Vegas scene</strong> — per Wikipedia, the local scene the Killers broke out of "was dominated by punk, nu metal, and rap bands."</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + 3 bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">2 picks (honest gap)</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTE -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Current Status Notes:</strong><br>
+    The Golden Gate Hotel's original 50¢ shrimp cocktail — the dish that made this a Vegas cliché — was discontinued in 2017 when Du-par's closed; owner Derek Stevens briefly revived it in 2019 and it now lives on at his Circa Resort instead. Cowtown Guitars, once a nationally known vintage-guitar shop in the downtown Arts District, closed in 2019 — it's listed below for context only, not as a visitable pick. Punk Rock Bowling festival falls in late May, well outside this trip's Oct 9–13 window — listed as a scene-context citation, not a bookable October activity.
+  </div>
+</div>
+
+<!-- GAP NOTE -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap:</strong> unlike Salt Lake City (Squarewave Sound) or Oklahoma City (Keeley Electronics), Las Vegas does not appear to have a currently operating dedicated synth/pedal boutique or electronics-surplus storefront — repeated searches surfaced only national chains. SYN Shop is the one genuine, verifiable DIY-electronics anchor in the city for a metro this size. Likewise, the mandatory anarchist/infoshop bookstore search turned up no Vegas storefront; the city's leftist political infrastructure runs through the Culinary Workers Union Local 226 instead of a bookstore-anchored infoshop scene.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      The Punk Rock Museum → Vinyl Threat → Triple Down bar → Double Down Saloon is a single connected punk-history thread across three categories inside about a mile of downtown — worth building as a standalone half-day itinerary.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Culinary Workers Union Local 226 is the strongest concrete leftist-politics anchor of any Trip 1 stop so far — distinct from Boise's civil-liberties thread (Frank Church) and Salt Lake City's IWW/Bill Haywood thread, this is contemporary, ongoing labor power rather than historical memory.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Atomic Liquors' role as a Casino production base and Vegas's atomic-testing-era cocktail culture pairs naturally with any future stop with its own Cold War/nuclear history — worth checking when Albuquerque's guide (tied to Los Alamos) gets built.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 1 Retroactive Guide &nbsp;·&nbsp; Las Vegas, NV<br>
+  Control group entry: instinct-driven Trip 1 city, curated retroactively for comparison against Trip 2's guide-led stops<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "The Writer's Block",
+      tags: [TAG('i-books','Las Vegas Weekly Best 2025')],
+      desc: "Downtown's flagship indie bookstore — literary fiction, poetry, deep Nevada-authors section, Onyx Coffee Lab built in, 2-4 events a week. The well-known/must-see pick.",
+      meta: [["📍","519 S 6th St, Downtown Arts District"],["💰","$0–35"],["⏱","45 min–1 hr"],["🕐","Evening if there's a reading"]],
+      cite: "Las Vegas Weekly, Smart Vegas Deals"
+    },
+    {
+      name: "Amber Unicorn Books",
+      tags: [TAG('i-books','60,000 Used Books')],
+      desc: "Warehouse-style used bookstore, 60,000+ books at $1–5, sourced through estate sales and a walk-in buying program — genuine treasure-hunt browsing.",
+      meta: [["📍","2202 W Charleston Blvd #5"],["💰","$1–20"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "Smart Vegas Deals"
+    },
+    {
+      name: "Dead Poet Books",
+      tags: [TAG('i-books','Rare & First Editions')],
+      desc: "Small, tightly curated used shop — literary fiction, poetry, rare and signed first editions, curatorial vision over quantity.",
+      meta: [["📍","937 S Rainbow Blvd #107"],["💰","$5–60+"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Smart Vegas Deals"
+    },
+    {
+      name: "Get Booked",
+      tags: [TAG('i-political','LGBTQ+ Community Hub'), TAG('i-books','Since 1993')],
+      desc: "Vegas's only gay-owned LGBTQ+ retail bookstore since 1993 — part bookshop, part community fixture, queer fiction alongside its adult-shop inventory.",
+      meta: [["📍","4640 Paradise Rd, Fruit Loop"],["💰","$5–30"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "GayCities Las Vegas"
+    },
+    {
+      name: "The Book Cellar",
+      tags: [TAG('i-books','Academic/Used')],
+      desc: "Academic used-book shop near UNLV — textbooks, scholarly presses, discount research texts. Modest but fills a real niche.",
+      meta: [["📍","Near UNLV"],["💰","$5–40"],["⏱","20 min"],["🕐","Weekday afternoon"]],
+      cite: "Smart Vegas Deals"
+    }
+  ],
+  records: [
+    {
+      name: "Vinyl Threat @ The Punk Rock Museum",
+      tags: [TAG('i-punk','Museum Record Shop'), TAG('i-diy','Exclusive Label')],
+      desc: "The museum's in-house record shop, punk vinyl tied to the archive, plus rare demos pressed exclusively on the shop's own TPRM ODs label.",
+      meta: [["📍","1422 Western Ave"],["💰","$10–50"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "The Punk Rock Museum, Rebel Atlas"
+    },
+    {
+      name: "11th Street Records",
+      tags: [TAG('i-punk','In-Store Studio')],
+      desc: "A working part of the local music ecosystem downtown, with an in-store studio hosting live sessions, tied into East Fremont's smaller venues.",
+      meta: [["📍","1023 E Fremont St"],["💰","$8–30"],["⏱","45 min"],["🕐","Evening"]],
+      cite: "Rebel Atlas"
+    },
+    {
+      name: "Cash 4 Chaos",
+      tags: [TAG('i-punk','Since 1998')],
+      desc: "Punk/metal specialist blending records with band shirts, patches, and scene ephemera — built by lifers, not trend forecasters.",
+      meta: [["📍","4110 S Maryland Pkwy #27-28"],["💰","$5–35"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "Rebel Atlas"
+    },
+    {
+      name: "Primitive Recordings",
+      tags: [TAG('i-horror','Metal/Horror/Sci-Fi')],
+      desc: "Metal/horror/sci-fi specialist carrying extreme metal, underground shirts, and tapes not always available online.",
+      meta: [["📍","3441 W Sahara Ave, Ste B-7"],["💰","$5–40"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Rebel Atlas"
+    },
+    {
+      name: "Wax Trax Records",
+      tags: [TAG('i-diy','Well-Known Must-See')],
+      desc: "A three-floor operation for serious crate-diggers — the broad, well-known pick alongside the punk/metal specialists above.",
+      meta: [["📍","2909 S Decatur Blvd"],["💰","$10–40"],["⏱","1 hr+"],["🕐","Afternoon"]],
+      cite: "Rebel Atlas"
+    }
+  ],
+  coffee: [
+    {
+      name: "PublicUs",
+      tags: [TAG('i-bees','Honey Toast'), TAG('i-food','Well-Known Must-See')],
+      desc: "Downtown/Fremont East's hybrid café-marketplace — pour-over and Japanese iced coffee, plus an honey toast and elevated brunch program.",
+      meta: [["📍","1126 Fremont St"],["💰","$5–14"],["⏱","45 min–1 hr"],["🕐","Morning"]],
+      cite: "Vegas 411"
+    },
+    {
+      name: "Vesta Coffee Roasters",
+      tags: [TAG('i-food','No-Pretense Roaster')],
+      desc: "A no-pretense specialty roaster with locations across the valley including the Arts District — smooth espresso, strong cold brew and cortado.",
+      meta: [["📍","Arts District + multiple"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "Vegas 411"
+    },
+    {
+      name: "Gäbi Coffee & Bakery",
+      tags: [TAG('i-food','Korean-Inspired')],
+      desc: "A discreet, minimally signed Korean-inspired café in Chinatown with vintage décor, a lavender latte and matcha affogato, and a real pastry program.",
+      meta: [["📍","5808 Spring Mountain Rd #104"],["💰","$5–10"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "Vegas 411"
+    },
+    {
+      name: "Sunrise Coffee",
+      tags: [TAG('i-food','Neighborhood Regular')],
+      desc: "Dog-friendly, mismatched-furniture neighborhood shop in East Vegas — house chai and vegan pastry case, the most 'regulars know your order' spot on this list.",
+      meta: [["📍","3130 E Sunset Rd"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "Vegas 411"
+    },
+    {
+      name: "Bad Owl Coffee",
+      tags: [TAG('i-horror','Novelty/Genre Fun')],
+      desc: "A themed South Vegas café (butterbeer latte, lavender latte) that leans into novelty without sacrificing the coffee.",
+      meta: [["📍","8035 S Rainbow Blvd #100"],["💰","$5–9"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "Vegas 411"
+    }
+  ],
+  pastry: [
+    {
+      name: "Freed's Bakery",
+      tags: [TAG('i-food','Since 1959, Well-Known')],
+      desc: "Cannoli filled to order, sfogliatelle, Italian cookies, and the city's default custom-cake maker. The well-known Vegas bakery institution — not casino-owned.",
+      meta: [["📍","Multiple, orig. West Charleston"],["💰","$2–8/item"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "Smart Vegas Deals"
+    },
+    {
+      name: "Chloé Patisserie",
+      tags: [TAG('i-food','Paris-Trained Chef')],
+      desc: "Off-Strip, Paris-trained pastry chef, kouign-amann/canelé/opera cake — reportedly where hotel pastry chefs go on their own days off.",
+      meta: [["📍","Off Las Vegas Blvd"],["💰","$3–8/item"],["⏱","30 min"],["🕐","Morning, Tue–Sun"]],
+      cite: "Smart Vegas Deals"
+    },
+    {
+      name: "Bread & Butter Bakery Cafe",
+      tags: [TAG('i-food','24-Hr Sourdough')],
+      desc: "Downtown, naturally leavened 24-hour sourdough with no commercial yeast, plus weekend sourdough cinnamon rolls — sells out by 1pm.",
+      meta: [["📍","Downtown"],["💰","$6–12/item"],["⏱","30–45 min"],["🕐","Early morning, 7am open"]],
+      cite: "Smart Vegas Deals"
+    },
+    {
+      name: "Great Buns Bakery",
+      tags: [TAG('i-food','Hong Kong-Style')],
+      desc: "Chinatown/Spring Mountain Road institution for Hong Kong-style BBQ pork buns, egg tarts, and pineapple buns — time it around the fresh-batch window.",
+      meta: [["📍","Chinatown / Spring Mountain Rd"],["💰","$2–4/item"],["⏱","20–30 min"],["🕐","~3pm fresh batches"]],
+      cite: "Vegas Vibin, Smart Vegas Deals"
+    },
+    {
+      name: "Kona Bakery",
+      tags: [TAG('i-food','Japanese Milk Bread')],
+      desc: "West Sahara, Japanese shokupan milk bread, curry buns, melon pan, matcha croissants. Closed Wednesdays.",
+      meta: [["📍","West Sahara"],["💰","$3–8/item"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "Smart Vegas Deals"
+    }
+  ],
+  dishes: [
+    {
+      name: "Shrimp Cocktail — originally Golden Gate Hotel, now Circa Resort",
+      tags: [TAG('i-food','Well-Known Must-See')],
+      desc: "Invented by Golden Gate owner Italo Ghelfi in 1959 as a 50¢ loss-leader inspired by San Francisco's Fisherman's Wharf. Became a genuine Vegas cliché before disappearing in 2017 and reviving at Circa Resort in 2020.",
+      meta: [["📍","Circa Resort"],["💰","$4–10"],["⏱","20 min"],["🕐","Anytime"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Filet Mignon — The Golden Steer",
+      tags: [TAG('i-food','Rat Pack Steakhouse')],
+      desc: "Open since 1958, the Rat Pack's steakhouse of choice, still serving aged prime filet in a mid-century dining room that hasn't chased trends since Sinatra ate there.",
+      meta: [["📍","The Golden Steer"],["💰","$60–90"],["⏱","1.5–2 hrs"],["🕐","Dinner, reservation recommended"]],
+      cite: "Tasting Table"
+    },
+    {
+      name: "French Toast Ambrosia — The Peppermill Fireside Lounge",
+      tags: [TAG('i-food','Since 1972, Retro Diner')],
+      desc: "A since-1972 retro Vegas diner landmark — vanilla-cinnamon French toast with fresh fruit, whipped cream, and blueberry syrup in a sunken fire-pit lounge.",
+      meta: [["📍","The Peppermill"],["💰","$12–18"],["⏱","45 min–1 hr"],["🕐","24 hrs — late night or brunch"]],
+      cite: "Tasting Table"
+    },
+    {
+      name: "Adobada Tacos — Tacos El Gordo",
+      tags: [TAG('i-food','Late-Night Standard')],
+      desc: "Tijuana-style al pastor tacos, hand-pressed tortillas, house salsas — the late-night Vegas standard for anyone who needs food after 2am that isn't a buffet.",
+      meta: [["📍","Tacos El Gordo"],["💰","$8–14"],["⏱","30 min"],["🕐","Late night"]],
+      cite: "Tasting Table"
+    },
+    {
+      name: "Filipino Food — Filipinotown",
+      tags: [TAG('i-food','250,000 Residents'), TAG('i-political','Officially Designated')],
+      desc: "Clark County's officially designated Filipinotown; supermarket food courts, Max's fried chicken and lumpia, Toto's Grill inihaw skewers, and Valerio's pan de sal — one of the densest, least-touristed food scenes in the city.",
+      meta: [["📍","Maryland Pkwy, Flamingo–Desert Inn"],["💰","$10–25"],["⏱","1–1.5 hrs"],["🕐","Lunch"]],
+      cite: "City Cast Las Vegas"
+    }
+  ],
+  gifts: [
+    {
+      name: "Ethel M Chocolates",
+      tags: [TAG('i-food','Well-Known Must-See')],
+      desc: "Handmade chocolates from a Henderson factory with an attached cactus garden — genuinely locally made, not a Strip gift-shop label.",
+      meta: [["📍","Henderson factory"],["💰","$12–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Ethel M"
+    },
+    {
+      name: "JoJo's Jerky",
+      tags: [TAG('i-food','Since 2004')],
+      desc: "Nevada jerky maker since 2004, no preservatives — an easy, genuinely shelf-stable mailable gift.",
+      meta: [["📍","Made in Nevada shops"],["💰","$8–15"],["⏱","N/A"]],
+      cite: "Made in Nevada"
+    },
+    {
+      name: "Al Bees Nevada Honey",
+      tags: [TAG('i-bees','Sierra Nevada Apiaries')],
+      desc: "Raw honey from Sierra Nevada apiaries — the direct bees-interest pick.",
+      meta: [["📍","Made in Nevada shops"],["💰","$8–18/jar"],["⏱","N/A"]],
+      cite: "Made in Nevada gift roundups"
+    },
+    {
+      name: "Savor Spice Co.",
+      tags: [TAG('i-food','Black Woman-Owned')],
+      desc: "Black woman-owned artisanal spice-blend maker — a genuinely distinctive mailable gift beyond the generic Vegas hot sauce.",
+      meta: [["📍","Made in Nevada shops"],["💰","$8–14"],["⏱","N/A"]],
+      cite: "Made in Nevada gift roundups"
+    },
+    {
+      name: "The Mob Museum's House Moonshine",
+      tags: [TAG('i-drinks','Prohibition-Era Story')],
+      desc: "100-proof corn moonshine distilled in-house at The Underground, the museum's working speakeasy/distillery exhibit, sold retail through local liquor stores since 2019.",
+      meta: [["📍","The Mob Museum"],["💰","$25–40/bottle"],["⏱","N/A"]],
+      cite: "Wikipedia — The Mob Museum"
+    }
+  ],
+  sights: [
+    {
+      name: "The Neon Museum",
+      tags: [TAG('i-horror','Atlas Obscura'), TAG('i-diy','Well-Known Must-See')],
+      desc: "A boneyard of ~250 vintage casino signs dating to the 1930s; the salvaged La Concha Motel lobby (itself a Casino/Mars Attacks!/Last Vegas filming location) is now the visitor center. 'Brilliant!' relights unlit signs after dark.",
+      meta: [["📍","770 N Las Vegas Blvd"],["💰","~$20–30"],["⏱","1–1.5 hrs"],["🕐","Evening for the light show"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Atomic Liquors",
+      tags: [TAG('i-horror','Twilight Zone'), TAG('i-diy','1954')],
+      desc: "Opened 1954, popularly claimed as the oldest freestanding bar in Vegas. Scorsese's Casino crew used the garage next door as a production studio; also appears in The Hangover and a Twilight Zone episode.",
+      meta: [["📍","Atomic Liquors"],["💰","$8–15/drink"],["⏱","45 min–1 hr"],["🕐","Early evening"]],
+      cite: "Wikipedia, On The Luce"
+    },
+    {
+      name: "Pinball Hall of Fame",
+      tags: [TAG('i-diy','Nonprofit'), TAG('i-horror','Atlas Obscura')],
+      desc: "Nonprofit, volunteer-run hands-on museum with 700+ playable machines at 25¢ a pop; excess revenue goes to the Salvation Army. Founder Tim Arnold has collected since 1972.",
+      meta: [["📍","Pinball Hall of Fame"],["💰","$5–20 in quarters"],["⏱","1–2 hrs"],["🕐","Afternoon"]],
+      cite: "Atlas Obscura, Wikipedia"
+    },
+    {
+      name: "Seven Magic Mountains",
+      tags: [TAG('i-diy','Land Art')],
+      desc: "Ugo Rondinone's Day-Glo stacked-boulder installation in the Ivanpah Valley — $3.5M, one of the largest US land-art works completed in the last 40 years, extended through May 2027.",
+      meta: [["📍","Ivanpah Valley, S. Las Vegas Blvd"],["💰","Free"],["⏱","30–45 min"],["🕐","Golden hour"]],
+      cite: "Wikipedia, Nevada Museum of Art"
+    },
+    {
+      name: "Red Rock Canyon National Conservation Area",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "Sandstone walls up to 3,000 ft, a 13-mile scenic loop, hiking and rock climbing, 15 miles west of downtown. The Killers publicly opposed development here in 2017 — the natural-attraction balance-rule pick.",
+      meta: [["📍","15 mi W of downtown"],["💰","~$20/vehicle"],["⏱","Half-day"],["🕐","Early morning"]],
+      cite: "Wikipedia, BLM"
+    },
+    {
+      name: "Springs Preserve",
+      tags: [TAG('i-bees','Desert Sustainability')],
+      desc: "180 acres on Las Vegas's original water source, run by the Valley Water District — desert-sustainability demonstration site, botanical gardens, wetland trails, opened 2007.",
+      meta: [["📍","Springs Preserve"],["💰","~$20"],["⏱","2–3 hrs"],["🕐","Morning"]],
+      cite: "Wikipedia",
+      where: "Bonus"
+    },
+    {
+      name: "Culinary Workers Union Local 226 (Headquarters)",
+      tags: [TAG('i-political','Labor Power Anchor')],
+      desc: "Founded 1935, now Nevada's largest union at 60,000 members — 'America's greatest modern labor success story' per The New Republic, and the single most concrete leftist political anchor in the city.",
+      meta: [["📍","Culinary Union HQ"],["💰","Free (context visit)"],["⏱","15–20 min"],["🕐","Anytime"]],
+      cite: "Wikipedia, Nevada Independent",
+      where: "Bonus · Thread anchor"
+    },
+    {
+      name: "The Mob Museum",
+      tags: [TAG('i-drinks','In-House Distillery'), TAG('i-horror','Well-Known')],
+      desc: "Housed in the city's actual 1933 federal courthouse, with the restored Kefauver hearing courtroom and a working in-house speakeasy/distillery — the well-known companion pick to Atomic Liquors.",
+      meta: [["📍","Downtown, Stewart Ave"],["💰","~$35 ($20 NV residents)"],["⏱","2–2.5 hrs"],["🕐","Midday"]],
+      cite: "Wikipedia",
+      where: "Bonus"
+    }
+  ],
+  venues: [
+    {
+      name: "Double Down Saloon",
+      tags: [TAG('i-punk','Well-Known Must-See'), TAG('i-diy','Since 1992')],
+      desc: "Founded 1992 by P Moss on Paradise Road in the old Fruit Loop district; no-cover punk, garage, ska, surf, and psychobilly every night, home of the 'Ass Juice' shot and a Bourdain favorite.",
+      meta: [["📍","4640 Paradise Rd"],["💰","Free entry, $5–10 drinks"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "The Punk Rock Museum / Triple Down",
+      tags: [TAG('i-punk','Fat Mike / NOFX')],
+      desc: "Founded 2023 by NOFX's Fat Mike and Lisa Brownlee, governed by a 10-person collective (incl. Pat Smear, Tony Hawk); 12,000 sq ft, 1,000+ artifacts, playable-instrument Jam Room, chapel, and the Triple Down dive bar built in.",
+      meta: [["📍","1422 Western Ave"],["💰","~$28–40"],["⏱","2–3 hrs"],["🕐","Afternoon; evening for the bar"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Backstage Bar & Billiards",
+      tags: [TAG('i-punk','DIY-Adjacent')],
+      desc: "Fremont St & 6th St, downtown — books electronic/glitch/experimental lineups alongside standard rock bills, and is one of Punk Rock Bowling's official venue stages.",
+      meta: [["📍","Fremont St & 6th St"],["💰","$10–25"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "Wikipedia (Punk Rock Bowling)"
+    },
+    {
+      name: "Fremont Country Club",
+      tags: [TAG('i-punk','PRB Core Venue')],
+      desc: "A mid-size downtown room, one of Punk Rock Bowling's core venues alongside Backstage Bar & Billiards — verify current booking calendar before visiting.",
+      meta: [["📍","Downtown Fremont"],["💰","$15–35"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "Wikipedia (Punk Rock Bowling)"
+    },
+    {
+      name: "Punk Rock Bowling & Music Festival",
+      tags: [TAG('i-punk','Well-Known Must-See'), TAG('i-political','Activist Roots')],
+      desc: "Founded 1999 by Youth Brigade's Stern brothers (BYO Records); Memorial Day weekend, 8,000-10,000/day across downtown venues (Social Distortion, Devo, Suicidal Tendencies). Falls in late May — outside this trip's Oct window; a scene-context citation, not a bookable activity.",
+      meta: [["📍","Downtown Las Vegas"],["💰","Festival passes vary"],["⏱","Weekend"],["🕐","Late May"]],
+      cite: "Wikipedia"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "The Neon Museum Gift Shop",
+      tags: [TAG('i-diy','Locally Sourced Imagery')],
+      desc: "Postcards and magnets designed from the museum's own vintage sign collection — genuinely tied to Vegas's specific visual heritage, not generic mass-market product.",
+      meta: [["📍","Neon Museum"],["💰","$5–25"],["⏱","15–20 min"]],
+      cite: "Neon Museum"
+    },
+    {
+      name: "The Arts Factory (18b Arts District)",
+      tags: [TAG('i-diy','Since 1998')],
+      desc: "Wes Myles's 1998 warehouse conversion that founded the Arts District; galleries inside sell local-artist prints and small-run goods, especially on First Friday.",
+      meta: [["📍","107 E Charleston Blvd"],["💰","$5–40"],["⏱","30–45 min"],["🕐","First Friday evening"]],
+      cite: "Wikipedia — 18b Arts District"
+    },
+    {
+      name: "The Punk Rock Museum Gift Shop",
+      tags: [TAG('i-punk','Archive-Tied Design')],
+      desc: "Patches, pins, and postcards designed in-house, tied to the museum's flyer-art aesthetic — crosslisted with Records and Venues above.",
+      meta: [["📍","1422 Western Ave"],["💰","$5–35"],["⏱","15–20 min"]],
+      cite: "The Punk Rock Museum"
+    },
+    {
+      name: "The Writer's Block",
+      tags: [TAG('i-books','Local Print')],
+      desc: "Nevada-author titles and small literary prints — a better souvenir than a shot glass, crosslisted with Bookstores above.",
+      meta: [["📍","519 S 6th St"],["💰","$10–30"],["⏱","15–20 min"]],
+      cite: "Smart Vegas Deals"
+    },
+    {
+      name: "Springs Preserve Gift Shop",
+      tags: [TAG('i-bees','Desert-Themed')],
+      desc: "Desert-themed, native-seed-packet, education-nonprofit-adjacent gifts tied to the preserve's sustainability mission.",
+      meta: [["📍","Springs Preserve"],["💰","$5–25"],["⏱","15–20 min"]],
+      cite: "Springs Preserve"
+    }
+  ],
+  electronics: [
+    {
+      name: "SYN Shop",
+      tags: [TAG('i-diy','Community Hackerspace')],
+      desc: "Las Vegas's community hackerspace/makerspace — member-run space for hackers, makers, and inventors with an explicit mentorship culture; check their Discord for current open hours.",
+      meta: [["📍","5967 Harrison Dr, Ste 1"],["💰","Membership-based; open houses often free"],["⏱","1–2 hrs"],["🕐","Check event calendar"]],
+      cite: "synshop.org"
+    },
+    {
+      name: "Cowtown Guitars (historical, closed 2019)",
+      tags: [TAG('i-diy','Historical Context Only')],
+      desc: "Not a current pick. A nationally known vintage guitar shop (an authenticated 1963 Hendrix Strat passed through here) that relocated to the Arts District in 2011 and closed in 2019 — flagged so a traveler doesn't go looking for it.",
+      meta: [["📍","Formerly 1331 S Commerce"],["💰","N/A — closed"],["⏱","N/A"]],
+      cite: "Wikipedia"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const whereHtml = item.where ? `<div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--burnt-light);margin-bottom:4px;">📌 ${item.where}</div>` : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        ${whereHtml}
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

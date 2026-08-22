@@ -1,0 +1,895 @@
+{
+  "slug": "birmingham",
+  "city": "Birmingham",
+  "state": "AL",
+  "stateName": "Alabama",
+  "trip": 2,
+  "legOrder": 4,
+  "tripStatus": "guide-led",
+  "route": {
+    "previous": "jackson",
+    "next": "atlanta"
+  },
+  "coordinates": {
+    "lat": 33.5186,
+    "lng": -86.8104
+  },
+  "elevationFt": 631,
+  "population": {
+    "cityProper": 196644,
+    "metro": 1120000,
+    "fragmentationRatio": null,
+    "note": "City-proper figure is a 2023-era estimate off a declining post-2020-Census base; metro figure (Birmingham-Hoover MSA) is rounded. Both should be reconciled against a single Census vintage before publication."
+  },
+  "visitWindow": {
+    "trip": 2,
+    "arrival": "2026-05-09",
+    "departure": "2026-05-11",
+    "nights": 2,
+    "note": "Leg 4 of Trip 2 (Austin → Philadelphia), between Jackson, MS and Atlanta, GA. Guide-led: built before the stay, not backfilled."
+  },
+  "framing": "Birmingham was built by the same 1871 iron-and-steel land rush that gave it the nickname 'the Magic City,' and it is the single most concentrated civil rights landscape on the entire Trip 2 corridor — 16th Street Baptist Church, Kelly Ingram Park, and the A.G. Gaston Motel sit within a five-minute walk of each other. Layer on Sun Ra's birth here, Angela Davis's childhood on Dynamite Hill, a genuinely strong DIY hardcore lineage running through Sloss Furnaces' Furnace Fest, and a food identity built on Alabama white sauce and Fannie Flagg's fried green tomatoes, and this stop rewards slowing down rather than checking boxes.",
+  "analyticalThread": {
+    "id": "black-business-district-erasure",
+    "anchor": "fourth-avenue-historic-district",
+    "summary": "The Fourth Avenue Historic District was Jim Crow-era Birmingham's Black commercial and cultural center (1908–1941) — the Colored Masonic Temple and Alabama Penny Savings Bank (Pythian Temple) still stand. Unlike Deep Deuce (OKC) or Freedman's Town (Dallas), its decline is attributed less to a single highway-construction event and more to integration-era population dispersal and unresolved demolition — a variant mechanism on the same thread, worth flagging rather than smoothing over. Notably, Red Mountain Makers (this guide's DIY-electronics pick) now occupies 810 4th Avenue North, literally inside the historic district footprint.",
+    "crossTripLinks": [
+      "jackson",
+      "oklahoma-city",
+      "dallas",
+      "richmond"
+    ]
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Wikipedia / BhamWiki",
+    "StyleBlueprint",
+    "Soul Grown",
+    "My Coffee Explorer",
+    "Bham Now",
+    "About Town / Big 7 Travel",
+    "Made in Alabama",
+    "Targeted web search"
+  ],
+  "popCulture": {
+    "films": [
+      {
+        "title": "42",
+        "year": 2013,
+        "director": "Brian Helgeland",
+        "locations": [
+          {
+            "name": "Rickwood Field",
+            "address": "1137 2nd Ave W, Birmingham, AL",
+            "status": "extant",
+            "note": "The oldest professional baseball park still standing in the US (1910) stood in for several historic ballfields in the Jackie Robinson biopic; also used for Cobb (1994) and the Willie Mays documentary Say Hey, Willie Mays!. Home of the Negro League's Birmingham Black Barons, where Willie Mays started his pro career in 1948.",
+            "citedFrom": "About Town, Big 7 Travel, Wikipedia — Rickwood Field"
+          },
+          {
+            "name": "Tutwiler Hotel",
+            "address": "Downtown Birmingham, AL",
+            "status": "extant",
+            "note": "Lent a scene to 42; also appears in Verne Miller (1987).",
+            "citedFrom": "About Town, Big 7 Travel"
+          }
+        ]
+      },
+      {
+        "title": "Stay Hungry",
+        "year": 1976,
+        "director": "Bob Rafelson",
+        "locations": [
+          {
+            "name": "Mountain Brook Parkway, Lyric Theatre, Bank for Savings Building",
+            "status": "unconfirmed",
+            "note": "Arnold Schwarzenegger's first starring dramatic role (with Jeff Bridges and Sally Field), adapted from a 1972 novel set in Birmingham's bodybuilding scene; captures 1970s downtown Birmingham on film.",
+            "citedFrom": "Big 7 Travel, About Town"
+          }
+        ]
+      },
+      {
+        "title": "4 Little Girls",
+        "year": 1997,
+        "director": "Spike Lee",
+        "locations": [
+          {
+            "name": "16th Street Baptist Church",
+            "address": "1530 6th Ave N, Birmingham, AL",
+            "status": "extant",
+            "note": "Spike Lee's Oscar-nominated documentary on the 1963 bombing and the lives of the four girls killed; helped renew the cold-case prosecutions of the early 2000s.",
+            "citedFrom": "About Town"
+          }
+        ]
+      },
+      {
+        "title": "Sword of Trust",
+        "year": 2019,
+        "director": "Lynn Shelton",
+        "locations": [
+          {
+            "name": "Southside and Irondale",
+            "status": "extant",
+            "note": "Marc Maron / Jon Bass comedy shot around Southside and Irondale for its Southern-noir tone.",
+            "citedFrom": "About Town"
+          }
+        ]
+      },
+      {
+        "title": "Ravagers",
+        "year": 1979,
+        "director": "Richard Compton",
+        "locations": [
+          {
+            "name": "Sloss Furnaces",
+            "address": "20 32nd St N, Birmingham, AL",
+            "status": "extant",
+            "note": "Post-apocalyptic sci-fi with Richard Harris and Ernest Borgnine staged a gunfight inside the then-recently-closed furnace complex, along with shots of a deserted late-1970s downtown.",
+            "citedFrom": "About Town"
+          }
+        ]
+      }
+    ],
+    "correctionNote": {
+      "text": "Two films with strong Alabama associations are commonly misattributed to Birmingham. Big Fish (2003, Tim Burton) was shot almost entirely in Wetumpka, Montgomery, Tallassee and on Jackson Lake Island — not Birmingham. Selma (2014) dramatizes events connected to the Birmingham civil rights struggle but was filmed around Atlanta, GA and in Selma and Montgomery, AL, not in Birmingham itself.",
+      "citedFrom": "Wikipedia — Big Fish (film), Selma (film)"
+    },
+    "notablePeople": [
+      {
+        "name": "Angela Davis",
+        "born": 1944,
+        "birthplace": "Birmingham, AL",
+        "relevance": "leftist-politics",
+        "note": "Grew up on Birmingham's Dynamite Hill, the west-side neighborhood targeted by roughly 40 unsolved Klan bombings (1940s–60s) aimed at Black families integrating the area; her mother's circle of communist organizers shaped her early political formation. As a Girl Scout she picketed segregation in Birmingham before becoming one of the 20th century's most significant Marxist-feminist political theorists.",
+        "citedFrom": "Wikipedia — Angela Davis, Dynamite Hill"
+      },
+      {
+        "name": "Sun Ra (Herman Poole Blount)",
+        "born": 1914,
+        "birthplace": "Birmingham, AL",
+        "relevance": "music-occult",
+        "note": "Avant-garde jazz bandleader and Afrofuturist cosmic philosopher, born in Birmingham and trained at the segregated Industrial High School (now Parker High) under bandleader John T. 'Fess' Whatley. Accessed esoteric and occult texts as a teenager through the city's Black Masonic Lodge library — one of the only places in segregated Birmingham where Black residents had unrestricted book access. Returned to Birmingham and died there in 1993.",
+        "citedFrom": "Wikipedia — Sun Ra"
+      },
+      {
+        "name": "Fannie Flagg (born Patricia Neal)",
+        "born": 1944,
+        "birthplace": "Birmingham, AL",
+        "relevance": "literature",
+        "note": "Author of Fried Green Tomatoes at the Whistle Stop Cafe (1987), which draws on her Birmingham roots — the present-day half of the novel is set in the city. Earned an Academy Award nomination for her own 1991 film adaptation screenplay.",
+        "citedFrom": "Wikipedia — Fannie Flagg"
+      },
+      {
+        "name": "Emmylou Harris",
+        "born": 1947,
+        "birthplace": "Birmingham, AL",
+        "relevance": "music",
+        "note": "Country/Americana singer-songwriter, 14-time Grammy winner, born in Birmingham before her family relocated with her Marine officer father's postings.",
+        "citedFrom": "Wikipedia — Emmylou Harris"
+      },
+      {
+        "name": "Louise Fletcher",
+        "born": 1934,
+        "birthplace": "Birmingham, AL",
+        "relevance": "film",
+        "note": "Oscar-winning actress (Nurse Ratched, One Flew Over the Cuckoo's Nest, 1975) — a performance frequently read alongside horror-adjacent institutional-menace cinema.",
+        "citedFrom": "FamousBirthdays.com"
+      },
+      {
+        "name": "Erskine Hawkins",
+        "born": 1908,
+        "birthplace": "Birmingham, AL",
+        "relevance": "music",
+        "note": "Big-band trumpeter and composer of 'Tuxedo Junction' (1939), named for a Birmingham streetcar/jazz intersection — later a hit for Glenn Miller and a jazz standard.",
+        "citedFrom": "web-search / general reference",
+        "verificationFlag": true
+      }
+    ]
+  },
+  "categories": [
+    { "id": "bookstores", "label": "Bookstores", "emoji": "📚", "pickCount": 5 },
+    { "id": "records", "label": "Record Stores", "emoji": "🎵", "pickCount": 2 },
+    { "id": "coffee", "label": "Coffee Shops", "emoji": "☕", "pickCount": 5 },
+    { "id": "pastry", "label": "Pastry & Bakeries", "emoji": "🥐", "pickCount": 5 },
+    { "id": "dishes", "label": "Unique Dishes to Eat", "emoji": "🍽️", "pickCount": 5 },
+    { "id": "gifts", "label": "Non-Perishable Gifts & Mailable Foods", "emoji": "📦", "pickCount": 5 },
+    { "id": "sights", "label": "Sights & Things to Do", "emoji": "👁️", "pickCount": 8 },
+    { "id": "venues", "label": "Punk & Indie Rock Venues", "emoji": "🎸", "pickCount": 5 },
+    { "id": "souvenirs", "label": "Magnets, Postcards & Souvenirs", "emoji": "🧲", "pickCount": 4 },
+    { "id": "electronics", "label": "DIY Electronics & Maker Spaces", "emoji": "🔌", "pickCount": 3 }
+  ],
+  "recommendations": [
+    {
+      "id": "burdock-book-collective",
+      "name": "Burdock Book Collective",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "district": "Forest Park",
+      "interestTags": ["i-political", "i-books"],
+      "cost": "$0–30",
+      "duration": "45 min",
+      "bestTime": "Afternoon; evening for Queer Lit Book Club",
+      "note": "An intersectional feminist bookstore running the Queer Lit Book Club and the Alabama Books to Prisons program — the closest thing Birmingham has to a politically-organized infoshop, which is the finding itself (see honest gap below).",
+      "source": { "citedFrom": "web-search", "detail": "StyleBlueprint" }
+    },
+    {
+      "id": "thank-you-books",
+      "name": "Thank You Books",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "district": "Crestwood",
+      "interestTags": ["i-books"],
+      "cost": "$0–30",
+      "duration": "45 min",
+      "bestTime": "Afternoon; evening for events",
+      "balanceRule": "well-known-must-see",
+      "note": "Opened December 2019 as a self-described 'community for authors and readers'; featured in the New York Times, Garden & Gun, and Book Riot, with a steady book-club and author-event calendar.",
+      "source": { "citedFrom": "web-search", "detail": "StyleBlueprint" }
+    },
+    {
+      "id": "jim-reed-books",
+      "name": "Jim Reed Books",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "district": "Downtown",
+      "interestTags": ["i-books", "i-horror"],
+      "cost": "$5–100+",
+      "duration": "45 min–1 hr",
+      "bestTime": "Afternoon",
+      "crossListedIn": ["souvenirs"],
+      "note": "Rare and antique books alongside the in-store 'Museum of Fond Memories' — vintage magazines, posters, and oddities. Owner Jim Reed hosts the Red Clay Diary podcast. Atlas Obscura-listed.",
+      "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura — Museum of Fond Memories at Jim Reed Books; StyleBlueprint" }
+    },
+    {
+      "id": "little-professor-bookshop",
+      "name": "Little Professor Bookshop",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "district": "Homewood",
+      "interestTags": ["i-books"],
+      "cost": "$0–30",
+      "duration": "45 min",
+      "bestTime": "Afternoon",
+      "note": "Established 1972, relocated into a larger two-story space on 18th Street; membership discount program, author talks, book clubs, and children's story time.",
+      "source": { "citedFrom": "web-search", "detail": "StyleBlueprint" }
+    },
+    {
+      "id": "alabama-booksmith",
+      "name": "The Alabama Booksmith",
+      "category": "bookstores",
+      "status": "sourced-recommendation",
+      "district": "Homewood",
+      "interestTags": ["i-books", "i-diy"],
+      "cost": "$15–40",
+      "duration": "30 min",
+      "bestTime": "Afternoon",
+      "note": "Every single book in the store is signed by its author; runs a Signed First Editions Club with a curated annual selection — an unusually specific curatorial identity.",
+      "source": { "citedFrom": "web-search", "detail": "StyleBlueprint" }
+    },
+    {
+      "id": "seasick-records",
+      "name": "Seasick Records",
+      "category": "records",
+      "status": "sourced-recommendation",
+      "address": "3131 5th Ave S, Birmingham, AL 35233",
+      "district": "Southside",
+      "interestTags": ["i-punk", "i-diy"],
+      "cost": "$5–40",
+      "duration": "45 min",
+      "bestTime": "Afternoon",
+      "balanceRule": "well-known-must-see",
+      "note": "New and used vinyl with an explicit punk/hardcore section alongside blues, funk, jazz, and metal; staff-picks culture and Seasick Exclusives limited variants give it real DIY-scene credibility.",
+      "source": { "citedFrom": "web-search", "detail": "seasickbham.com, keepthemspinning.com" }
+    },
+    {
+      "id": "renaissance-records",
+      "name": "Renaissance Records Inc",
+      "category": "records",
+      "status": "sourced-recommendation",
+      "address": "2020 11th Ave S, Birmingham, AL 35205",
+      "interestTags": ["i-diy"],
+      "cost": "$5–30",
+      "duration": "30–45 min",
+      "bestTime": "Afternoon",
+      "note": "Longstanding independent buy/sell/trade shop, a practical first stop if you're carrying records to sell as well as buy.",
+      "source": { "citedFrom": "web-search", "detail": "keepthemspinning.com, vinylpackman.com" }
+    },
+    {
+      "id": "prevail-union",
+      "name": "Prevail Union",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "420 20th St N, Suite 125, Birmingham, AL",
+      "district": "Downtown",
+      "interestTags": ["i-food"],
+      "cost": "$4–8",
+      "duration": "30 min",
+      "bestTime": "Morning",
+      "balanceRule": "well-known-must-see",
+      "note": "Polished downtown espresso/drip bar sourcing from Montgomery-based Prevail Coffee Roasters — the most consistently top-rated coffee stop in the city.",
+      "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }
+    },
+    {
+      "id": "punch-love-coffee",
+      "name": "Punch Love Coffee",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "4000 3rd Ave S, Suite 103, Birmingham, AL",
+      "district": "Avondale",
+      "interestTags": ["i-food"],
+      "cost": "$4–8",
+      "duration": "30–45 min",
+      "bestTime": "Morning",
+      "crossListedIn": ["pastry"],
+      "note": "Multi-roaster program (Proud Mary, Thankfully, Junto) with a pastry case supplied by Last Call Baking Co. — pairs naturally with the Avondale record/venue corridor.",
+      "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }
+    },
+    {
+      "id": "alicia-coffee-shop",
+      "name": "Alicia's Coffee Shop",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "1510 5th Ave N, Birmingham, AL",
+      "district": "Civil Rights District (A.G. Gaston Motel)",
+      "interestTags": ["i-political", "i-food"],
+      "cost": "$4–8",
+      "duration": "30–45 min",
+      "bestTime": "Morning, paired with Kelly Ingram Park and the Institute",
+      "crossListedIn": ["sights"],
+      "note": "Black-owned coffee shop operating inside the restored A.G. Gaston Motel; the signature Room 30 latte is named for the SCLC's operational headquarters room during the 1963 campaign, bombed by white supremacists on May 10, 1963.",
+      "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com, Wikipedia — A.G. Gaston Motel" }
+    },
+    {
+      "id": "june-coffee",
+      "name": "June Coffee",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "213 25th St N, Suite C, Birmingham, AL",
+      "district": "Downtown",
+      "interestTags": ["i-food"],
+      "cost": "$5–8",
+      "duration": "30 min",
+      "bestTime": "Morning",
+      "note": "Specialty roaster with a Black Sesame Date Latte as its signature order — opened its cafe in 2022.",
+      "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }
+    },
+    {
+      "id": "domestique-dawn-patrol",
+      "name": "Domestique Coffee – Dawn Patrol",
+      "category": "coffee",
+      "status": "sourced-recommendation",
+      "address": "1724 27th Ct S, Birmingham, AL",
+      "district": "Homewood",
+      "interestTags": ["i-food", "i-diy"],
+      "cost": "$4–7",
+      "duration": "30 min",
+      "bestTime": "Early morning",
+      "note": "Fluid-bed-roasted beans with a road-cycling community built into the shop's identity — the kind of independent, single-purpose roaster the traveler's coffee interest is built for.",
+      "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }
+    },
+    {
+      "id": "bandit-patisserie",
+      "name": "Bandit Pâtisserie",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "address": "2323 1st Ave N, Birmingham, AL",
+      "district": "Downtown",
+      "interestTags": ["i-food"],
+      "cost": "$4–10",
+      "duration": "30 min",
+      "bestTime": "Morning, before the almond croissants sell out",
+      "balanceRule": "well-known-must-see",
+      "note": "Founded 2013 by Kristen Hall; the almond croissant is the best-seller and widely cited as the city's benchmark. Also serves Domestique-roasted coffee.",
+      "source": { "citedFrom": "web-search", "detail": "soul-grown.com" }
+    },
+    {
+      "id": "last-call-baking",
+      "name": "Last Call Baking Co.",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "district": "25th Street area",
+      "interestTags": ["i-food"],
+      "cost": "$4–10",
+      "duration": "30 min",
+      "bestTime": "Morning",
+      "note": "Owner Chanah Willis calls the butter croissant 'the lifeblood' of the shop; the canelé is the other order worth the trip. Its work also supplies Punch Love Coffee's pastry case.",
+      "source": { "citedFrom": "web-search", "detail": "birminghamal.gov (Born Birmingham), soul-grown.com" }
+    },
+    {
+      "id": "continental-bakery",
+      "name": "Continental Bakery",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "district": "English Village",
+      "interestTags": ["i-food"],
+      "cost": "$4–10",
+      "duration": "30–45 min",
+      "bestTime": "Morning",
+      "note": "Operating since 1985, adjoining the Chez Lulu café; ham-and-cheese croissants, tartes, and decorated shortbread, plus made-to-order Lane Cakes.",
+      "source": { "citedFrom": "web-search", "detail": "soul-grown.com" }
+    },
+    {
+      "id": "hello-bakery",
+      "name": "Hello Bakery",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "district": "Crestline Gardens",
+      "interestTags": ["i-food"],
+      "cost": "$4–8",
+      "duration": "20–30 min",
+      "bestTime": "Morning — sells out",
+      "note": "Opened 2022 by Wim Miree (20+ years at Continental Bakery). The laminated cinnamon roll, built on croissant dough, is the reason to show up early.",
+      "source": { "citedFrom": "web-search", "detail": "soul-grown.com" }
+    },
+    {
+      "id": "church-street-coffee-books",
+      "name": "Church Street Coffee & Books",
+      "category": "pastry",
+      "status": "sourced-recommendation",
+      "district": "Mountain Brook",
+      "interestTags": ["i-food", "i-books"],
+      "cost": "$4–10",
+      "duration": "30–45 min",
+      "bestTime": "Morning",
+      "note": "A combined café and bookstore built around the 'Breakup Cookie,' with baristas doubling as informal reader's-advisory staff.",
+      "source": { "citedFrom": "web-search", "detail": "StyleBlueprint" }
+    },
+    {
+      "id": "alabama-white-sauce-chicken",
+      "name": "Alabama White Sauce Chicken",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "restaurants": ["Saw's BBQ (multiple Birmingham-area locations)"],
+      "interestTags": ["i-food"],
+      "cost": "$10–18",
+      "duration": "45 min",
+      "bestTime": "Lunch",
+      "balanceRule": "well-known-must-see",
+      "note": "A mayonnaise-and-vinegar-based barbecue sauce distinctive to north/central Alabama, applied to smoked chicken — the single most identifiable regional dish on this leg of the trip.",
+      "source": { "citedFrom": "tasteatlas", "detail": "TasteAtlas — Alabama White Wings / white barbecue sauce" }
+    },
+    {
+      "id": "lane-cake",
+      "name": "Lane Cake",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "restaurants": ["Continental Bakery (order-ahead whole cakes)", "Highlands Bar & Grill"],
+      "interestTags": ["i-food", "i-drinks", "i-books"],
+      "cost": "$6–12/slice; $45+ whole cake",
+      "duration": "N/A",
+      "bestTime": "Anytime; order ahead for a whole cake",
+      "note": "A bourbon-soaked coconut-custard layer cake invented by Emma Rylander Lane of Clayton, AL, and immortalized in Harper Lee's To Kill a Mockingbird — a literature/bourbon/pastry triple match.",
+      "source": { "citedFrom": "tasteatlas", "detail": "TasteAtlas — Lane Cake" }
+    },
+    {
+      "id": "fried-green-tomatoes-bright-star",
+      "name": "Fried Green Tomatoes",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "restaurants": ["The Bright Star (304 19th St N, Bessemer, AL)"],
+      "interestTags": ["i-food", "i-books"],
+      "cost": "$8–14",
+      "duration": "1 hr incl. short drive",
+      "bestTime": "Lunch or dinner",
+      "filmConnection": "Fried Green Tomatoes (1991) — adapted by Birmingham-born Fannie Flagg from her own novel, set partly in present-day Birmingham",
+      "note": "Alabama's oldest continuously operating restaurant (est. 1907, Bessemer, just southwest of Birmingham proper) serves a straightforwardly excellent version of the dish that gave Flagg's novel its title.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — Fannie Flagg, The Bright Star" }
+    },
+    {
+      "id": "fried-catfish",
+      "name": "Fried Catfish",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "restaurants": ["Johnny's Restaurant (Homewood)"],
+      "interestTags": ["i-food"],
+      "cost": "$14–22",
+      "duration": "1 hr",
+      "bestTime": "Dinner",
+      "note": "Buttermilk-soaked, cornmeal-dredged catfish is one of TasteAtlas's top-rated Alabama dishes, typically served with hush puppies and coleslaw.",
+      "source": { "citedFrom": "tasteatlas", "detail": "TasteAtlas — Fried Catfish" }
+    },
+    {
+      "id": "meat-and-three-nikis-west",
+      "name": "Meat-and-Three Tradition",
+      "category": "dishes",
+      "status": "sourced-recommendation",
+      "restaurants": ["Niki's West (since 1957)"],
+      "interestTags": ["i-food"],
+      "cost": "$10–15",
+      "duration": "45 min",
+      "bestTime": "Lunch",
+      "note": "The vegetable-forward Southern cafeteria format at its most iconic Birmingham address — a rotating steam-table of a dozen-plus vegetable sides against one meat, cash-and-carry.",
+      "source": { "citedFrom": "web-search", "detail": "local press / general reference" }
+    },
+    {
+      "id": "bee-creek-farm-honey",
+      "name": "Bee Creek Farm Honey",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "district": "Pepper Place Market / specialty shops",
+      "interestTags": ["i-bees"],
+      "cost": "$6–18",
+      "duration": "N/A",
+      "bestTime": "Saturday market morning",
+      "note": "Locally sourced honey from Vincent, AL, sold at Birmingham's Pepper Place Market and area specialty shops — the direct hit on the traveler's bee interest.",
+      "source": { "citedFrom": "web-search", "detail": "madeinalabama.com" }
+    },
+    {
+      "id": "match-chocolate",
+      "name": "Match Chocolate",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "district": "Birmingham-based; Pepper Place Market pop-ups",
+      "interestTags": ["i-food"],
+      "cost": "$8–14",
+      "duration": "N/A",
+      "bestTime": "Saturday market morning",
+      "note": "Small-batch bean-to-bar chocolate maker based in Birmingham; bars, pastries, and truffles sold at pop-up events.",
+      "source": { "citedFrom": "web-search", "detail": "StyleBlueprint" }
+    },
+    {
+      "id": "alabama-sunshine-sauces",
+      "name": "Alabama Sunshine White BBQ & Hot Sauces",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "district": "Sold in Birmingham specialty shops (produced in Fayette, AL)",
+      "interestTags": ["i-food"],
+      "cost": "$6–10",
+      "duration": "N/A",
+      "bestTime": "Anytime",
+      "note": "Farm-to-table white barbecue sauce and hot sauces made with locally sourced produce — a shelf-stable extension of the Alabama-white-sauce dish pick above.",
+      "source": { "citedFrom": "web-search", "detail": "styleblueprint.com" }
+    },
+    {
+      "id": "priesters-pecans",
+      "name": "Priester's Pecans",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "district": "Available at Alabama Goods and specialty shops",
+      "interestTags": ["i-food"],
+      "cost": "$8–20",
+      "duration": "N/A",
+      "bestTime": "Anytime",
+      "note": "Alabama-grown pecans — plain, roasted, salted, chocolate-covered, or brittle — the closest thing to a fruit/produce-native mailable gift the region offers.",
+      "source": { "citedFrom": "web-search", "detail": "madeinalabama.com" }
+    },
+    {
+      "id": "wickles-pickles",
+      "name": "Wickles Pickles",
+      "category": "gifts",
+      "status": "sourced-recommendation",
+      "district": "Widely stocked in Birmingham grocers/specialty shops (Dadeville, AL)",
+      "interestTags": ["i-food"],
+      "cost": "$5–8",
+      "duration": "N/A",
+      "bestTime": "Anytime",
+      "note": "Jarred, shelf-stable spicy pickle chips built on a 90-year-old Alabama recipe — an easy, sturdy thing to mail.",
+      "source": { "citedFrom": "web-search", "detail": "styleblueprint.com" }
+    },
+    {
+      "id": "16th-street-baptist-church",
+      "name": "16th Street Baptist Church",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "1530 6th Ave N, Birmingham, AL",
+      "interestTags": ["i-political"],
+      "cost": "Free (donations); guided tour ~$10",
+      "duration": "45 min–1 hr",
+      "bestTime": "Weekday mornings for guided tours",
+      "balanceRule": "well-known-must-see",
+      "filmConnection": "4 Little Girls (1997), Spike Lee",
+      "note": "The organizational headquarters of the Birmingham civil rights movement, where the September 15, 1963 Klan bombing killed Addie Mae Collins, Carole Robertson, Cynthia Wesley, and Denise McNair. National Historic Landmark, UNESCO tentative World Heritage list. Still an active congregation — confirm tour access doesn't conflict with services.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — 16th Street Baptist Church" }
+    },
+    {
+      "id": "kelly-ingram-park",
+      "name": "Kelly Ingram Park",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "Between 16th St Baptist Church and BCRI, Birmingham, AL",
+      "interestTags": ["i-political"],
+      "cost": "Free",
+      "duration": "30–45 min",
+      "bestTime": "Morning, paired with the church and Institute",
+      "threadAnchor": false,
+      "note": "The staging ground for the 1963 Children's Crusade, where Bull Connor's police turned firehoses and dogs on child demonstrators — images that helped force passage of the Civil Rights Act of 1964. The Four Spirits sculpture (2013) commemorates the bombing victims; a 'Freedom Walk' loop moves visitors through Kaskey and James Drake installations.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — Kelly Ingram Park" }
+    },
+    {
+      "id": "birmingham-civil-rights-institute",
+      "name": "Birmingham Civil Rights Institute",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "520 16th St N, Birmingham, AL",
+      "interestTags": ["i-political", "i-books"],
+      "cost": "~$15",
+      "duration": "2 hrs",
+      "bestTime": "Midday",
+      "crossListedIn": ["coffee"],
+      "note": "Smithsonian affiliate opened 1992; self-directed permanent exhibit walks a Birmingham-specific account of the 1963 campaign, including an Oral History Project and the Congressional Gold Medal awarded in 2013 for the bombing victims. Part of the Birmingham Civil Rights National Monument (designated 2017). Alicia's Coffee Shop, a few blocks away in the A.G. Gaston Motel, is the natural coffee pairing.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — Birmingham Civil Rights Institute, A.G. Gaston Motel" }
+    },
+    {
+      "id": "sloss-furnaces",
+      "name": "Sloss Furnaces National Historic Landmark",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "20 32nd St N, Birmingham, AL",
+      "interestTags": ["i-horror", "i-punk"],
+      "cost": "Free (museum); event tickets vary",
+      "duration": "1–1.5 hrs",
+      "bestTime": "Late afternoon / golden hour, or night for ghost tours",
+      "filmConnection": "Ravagers (1979) — gunfight scene",
+      "note": "Operating 1882–1971, the nation's only 20th-century blast-furnace site preserved as a museum; local ghost lore (a worker reportedly fell into a furnace, giving rise to 'The Ghost in the Sloss Furnaces,' 1987) plus night tours feed the horror/occult interest, while the site's role hosting Furnace Fest — a hardcore/metalcore festival — ties it directly to the punk interest too.",
+      "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura — Sloss Furnaces, Wikipedia — Sloss Furnaces, Furnace Fest" }
+    },
+    {
+      "id": "vulcan-park-museum",
+      "name": "Vulcan Park & Museum",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "1701 Valley View Dr, Birmingham, AL",
+      "interestTags": ["i-diy"],
+      "cost": "$6–9 (tower observation deck extra)",
+      "duration": "1–1.5 hrs",
+      "bestTime": "Sunset for the skyline view",
+      "balanceRule": "well-known-must-see",
+      "note": "The world's largest cast-iron statue, built for the 1904 St. Louis World's Fair to represent Birmingham's iron industry before being relocated home — the city's most recognizable icon and an observation-deck skyline view worth the ticket.",
+      "source": { "citedFrom": "web-search", "detail": "general reference" }
+    },
+    {
+      "id": "fourth-avenue-historic-district",
+      "name": "Fourth Avenue Historic District",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "district": "1600–1800 blocks of 4th Ave N and 17th/18th St N",
+      "interestTags": ["i-political"],
+      "cost": "Free (walking)",
+      "duration": "45 min walk",
+      "bestTime": "Morning",
+      "bonus": true,
+      "threadAnchor": true,
+      "note": "Birmingham's Jim Crow-era Black business, entertainment, and professional district (1908–1941), listed on the National Register in 1982. The Colored Masonic Temple (1922) and the Alabama Penny Savings Bank / Pythian Temple still stand as 'the only place left in the city which tells the story of the Jim Crow years in Birmingham.' Red Mountain Makers (this guide's Category 10 pick) now occupies 810 4th Ave N, inside the district's footprint.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — Fourth Avenue Historic District" }
+    },
+    {
+      "id": "ruffner-mountain-nature-preserve",
+      "name": "Ruffner Mountain Nature Preserve",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "district": "South East Lake",
+      "interestTags": ["i-bees"],
+      "cost": "Free",
+      "duration": "1–2 hrs",
+      "bestTime": "Morning",
+      "bonus": true,
+      "balanceRule": "natural-attraction",
+      "note": "1,038 acres of reclaimed iron-ore and limestone mining land with 14+ miles of trails, fossil beds, and a LEED-certified visitor center housing native raptors and reptiles — the natural-attraction balance pick, and genuinely in-city rather than a drive-out.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — Ruffner Mountain Nature Preserve" }
+    },
+    {
+      "id": "rickwood-field",
+      "name": "Rickwood Field",
+      "category": "sights",
+      "status": "sourced-recommendation",
+      "address": "1137 2nd Ave W, Birmingham, AL",
+      "interestTags": ["i-diy"],
+      "cost": "Free grounds access most days; game tickets vary",
+      "duration": "1 hr",
+      "bestTime": "Weekday, or the annual Rickwood Classic",
+      "bonus": true,
+      "filmConnection": "42 (2013), Cobb (1994)",
+      "note": "Opened 1910, the oldest professional baseball park still standing in the country; former home of the Negro League's Birmingham Black Barons (Willie Mays's first pro team, 1948). MLB played its first-ever regular-season Alabama game here in June 2024.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — Rickwood Field" }
+    },
+    {
+      "id": "the-nick",
+      "name": "The Nick",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "address": "2514 10th Ave S, Birmingham, AL 35205",
+      "interestTags": ["i-punk"],
+      "cost": "$5 annual membership + door",
+      "duration": "3 hrs",
+      "bestTime": "Late night (opens 2pm, music from ~10pm)",
+      "balanceRule": "well-known-must-see",
+      "note": "'Birmingham's Dirty Little Secret' — a 21+ private club running for over 30 years, booking blues, punk, emo, metal, and everything between, functionally the city's most durable DIY-adjacent stage.",
+      "source": { "citedFrom": "web-search", "detail": "thenickrocks.com" }
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "district": "Avondale",
+      "interestTags": ["i-punk"],
+      "cost": "$10–30",
+      "duration": "3 hrs",
+      "bestTime": "Night",
+      "note": "Larger-capacity Avondale room used by DIY Birmingham for bigger punk and dance-adjacent bills; anchors the Avondale nightlife corridor alongside Punch Love Coffee and Avondale Brewing.",
+      "source": { "citedFrom": "web-search", "detail": "diybirmingham.com" }
+    },
+    {
+      "id": "furnace-fest-sloss",
+      "name": "Furnace Fest @ Sloss Furnaces",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "district": "Sloss Furnaces",
+      "interestTags": ["i-punk", "i-horror"],
+      "cost": "Weekend pass varies",
+      "duration": "Full day",
+      "bestTime": "Fall (dates vary year to year)",
+      "crossListedIn": ["sights"],
+      "statusFlag": "schedule-varies",
+      "note": "Founded 2000 by Takehold Records' Chad Johnson, dormant 2004–2018, revived 2019 and running through 2024 with 2025 return announced; a hardcore/metalcore/post-hardcore festival staged inside the blast-furnace ruins. Confirm current-year dates before planning around it.",
+      "source": { "citedFrom": "web-search", "detail": "Wikipedia — Furnace Fest" }
+    },
+    {
+      "id": "diy-birmingham",
+      "name": "DIY Birmingham",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "interestTags": ["i-punk", "i-political"],
+      "cost": "Free–$10",
+      "duration": "Varies",
+      "bestTime": "Check socials for bills",
+      "note": "Grassroots collective explicitly organized to 'break out of the social and economic hierarchies of the traditional music industry,' booking punk, hardcore, emo, shoegaze, industrial/noise, EBM/techno, and metal shows at The Firehouse, Saturn, and house shows citywide.",
+      "source": { "citedFrom": "web-search", "detail": "diybirmingham.com" }
+    },
+    {
+      "id": "the-firehouse",
+      "name": "The Firehouse",
+      "category": "venues",
+      "status": "sourced-recommendation",
+      "interestTags": ["i-punk"],
+      "cost": "$5–15",
+      "duration": "Evening",
+      "bestTime": "Night, check DIY Birmingham calendar",
+      "note": "DIY Birmingham's primary all-ages show venue — the genuine house-show-adjacent stage underneath the bigger Saturn/Sloss bills.",
+      "source": { "citedFrom": "web-search", "detail": "diybirmingham.com" }
+    },
+    {
+      "id": "alabama-goods",
+      "name": "Alabama Goods",
+      "category": "souvenirs",
+      "status": "sourced-recommendation",
+      "address": "2933 18th St S, Homewood, AL 35209",
+      "interestTags": ["i-food", "i-diy"],
+      "cost": "$5–40",
+      "duration": "30 min",
+      "bestTime": "Afternoon",
+      "balanceRule": "well-known-must-see",
+      "note": "Vintage-style 'Greetings from Birmingham' postcards, a B-Ham magnet, and a Vulcan sticker alongside honey, BBQ sauces, pickles, pottery, and books — the closest thing Birmingham has to a one-stop mailable-souvenir shop.",
+      "source": { "citedFrom": "web-search", "detail": "alabamagoods.com" }
+    },
+    {
+      "id": "vulcan-park-gift-shop",
+      "name": "Vulcan Park & Museum Gift Shop",
+      "category": "souvenirs",
+      "status": "sourced-recommendation",
+      "address": "1701 Valley View Dr, Birmingham, AL",
+      "interestTags": ["i-diy"],
+      "cost": "$5–30",
+      "duration": "15–20 min",
+      "bestTime": "Paired with the tower visit",
+      "crossListedIn": ["sights"],
+      "note": "On-site shop for Birmingham's iron-statue icon — cast-iron-themed goods tie directly back to the city's founding industry.",
+      "source": { "citedFrom": "web-search", "detail": "general reference" }
+    },
+    {
+      "id": "jim-reed-books-ephemera",
+      "name": "Jim Reed Books — Museum of Fond Memories",
+      "category": "souvenirs",
+      "status": "sourced-recommendation",
+      "district": "Downtown",
+      "interestTags": ["i-books", "i-horror"],
+      "cost": "$5–50",
+      "duration": "30 min",
+      "bestTime": "Afternoon",
+      "crossListedIn": ["bookstores"],
+      "note": "Vintage Birmingham postcards, magazines, and ephemera inside the shop's in-house nostalgia museum — a more meaningful souvenir than a rack magnet.",
+      "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura" }
+    },
+    {
+      "id": "alabama-peanut-company",
+      "name": "Alabama Peanut Company",
+      "category": "souvenirs",
+      "status": "sourced-recommendation",
+      "district": "Morris Avenue, Downtown",
+      "interestTags": ["i-food"],
+      "cost": "$5–15",
+      "duration": "15–20 min",
+      "bestTime": "Afternoon",
+      "crossListedIn": ["gifts"],
+      "note": "Fresh roasted and boiled peanuts since 1907, sold from a historic Morris Avenue storefront — an edible souvenir with more local specificity than a magnet.",
+      "source": { "citedFrom": "web-search", "detail": "styleblueprint.com" }
+    },
+    {
+      "id": "makebhm",
+      "name": "MAKEbhm",
+      "category": "electronics",
+      "status": "sourced-recommendation",
+      "address": "4000 3rd Ave S, Avondale, Birmingham, AL",
+      "interestTags": ["i-diy"],
+      "cost": "Membership-based; tours by appointment",
+      "duration": "Half-day tour",
+      "bestTime": "By appointment",
+      "note": "Creative-workspace makerspace with ceramics, screen printing, stained glass, woodworking, and digital-tools studios; 24/7 coworking access for members.",
+      "source": { "citedFrom": "web-search", "detail": "makebhm.com" }
+    },
+    {
+      "id": "red-mountain-makers",
+      "name": "Red Mountain Makers",
+      "category": "electronics",
+      "status": "sourced-recommendation",
+      "address": "810 4th Ave N, Birmingham, AL 35203",
+      "interestTags": ["i-diy", "i-political"],
+      "cost": "Tiered membership (Maker-level limited hours; Keyholder 24/7)",
+      "duration": "Open hours: Tue/Thu 6–8pm, Sat/Sun 2–6pm",
+      "bestTime": "Weekend afternoon open hours",
+      "threadAnchor": false,
+      "crossListedIn": ["sights"],
+      "note": "7,800 sq ft volunteer-run nonprofit hackerspace with a dedicated electronics lab plus metal, wood, and textile shops. Sits at 810 4th Avenue North — physically inside the Fourth Avenue Historic District footprint, an organic link between the DIY-electronics and civil-rights-history threads.",
+      "source": { "citedFrom": "web-search", "detail": "redmountainmakers.org" }
+    },
+    {
+      "id": "birmingham-music-exchange",
+      "name": "Birmingham Music Exchange",
+      "category": "electronics",
+      "status": "sourced-recommendation",
+      "district": "Irondale",
+      "interestTags": ["i-diy"],
+      "cost": "Varies ($50–$2,000+)",
+      "duration": "30–45 min",
+      "bestTime": "Afternoon",
+      "note": "Musician-owned shop trading in vintage guitars, amps, and pedals — the closest Birmingham-area analogue to a dedicated gear/pedal shop for the traveler's synth/DIY-electronics interest.",
+      "source": { "citedFrom": "web-search", "detail": "bhammusicexchange.com, reverb.com" }
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "furnace-fest-schedule",
+      "severity": "info",
+      "text": "Furnace Fest went dormant 2004–2018, revived 2019–2024, and announced a 2025 return after initially billing 2024 as final. Confirm current-year dates and whether it falls within any future visit window before planning a trip around it."
+    },
+    {
+      "id": "16th-street-active-congregation",
+      "severity": "info",
+      "text": "16th Street Baptist Church remains an active congregation with ~2,000 weekly attendees. Guided tour access can be affected by services and events — confirm hours before the May 9–11, 2026 visit window."
+    }
+  ],
+  "honestGaps": [
+    {
+      "id": "no-true-infoshop",
+      "category": "bookstores",
+      "text": "The mandatory anarchist/radical/infoshop search turned up no dedicated storefront in Birmingham. Burdock Book Collective (intersectional feminist, Alabama Books to Prisons program) is the closest analogue — politically organized but not anarchist-identified. This matches the pattern seen at other Southern-corridor and red-state stops on this trip: identity-politics and mutual-aid infrastructure substitutes for a classic coastal infoshop.",
+      "citedFrom": "StyleBlueprint, general web search"
+    },
+    {
+      "id": "thin-record-store-scene",
+      "category": "records",
+      "text": "Category 2 carries two picks, not five. Research surfaced exactly two dedicated brick-and-mortar vinyl retailers in Birmingham proper (Seasick Records, Renaissance Records). Padding further would mean reaching for general instrument shops rather than vinyl-focused stores — an honest data point rather than a research failure.",
+      "citedFrom": "keepthemspinning.com, vinylpackman.com"
+    },
+    {
+      "id": "thin-electronics-scene",
+      "category": "electronics",
+      "text": "Category 10 carries three picks, not five. Birmingham has two genuine makerspaces (MAKEbhm, Red Mountain Makers) and one vintage-gear shop (Birmingham Music Exchange, technically in neighboring Irondale) but no dedicated synth shop and no hackerspace beyond Red Mountain Makers with published open hours.",
+      "citedFrom": "makebhm.com, redmountainmakers.org, bhammusicexchange.com"
+    },
+    {
+      "id": "thin-souvenir-scene",
+      "category": "souvenirs",
+      "text": "Category 9 carries four picks, not five. Research did not surface a dedicated Birmingham shop built around locally screen-printed apparel or prints in the way Plaza District shops function in Oklahoma City; the strongest picks here cross-list from bookstores, gifts, and sights rather than standing as purpose-built souvenir retail.",
+      "citedFrom": "general web search"
+    }
+  ],
+  "scopeDecision": "Birmingham-proper primary; Bessemer (The Bright Star, for fried green tomatoes) and Irondale (Birmingham Music Exchange) included as edge-of-metro exceptions only where the pick has no true in-city equivalent.",
+  "fingerprint": null,
+  "meta": {
+    "guideVersion": "city-road-trip-guide v2.8",
+    "generated": "2026-08-20",
+    "totalRecommendations": 47,
+    "htmlGuide": "birmingham-guide.html"
+  }
+}

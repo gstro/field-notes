@@ -1,0 +1,241 @@
+{
+  "slug": "boise",
+  "city": "Boise",
+  "state": "ID",
+  "stateName": "Idaho",
+  "trip": 1,
+  "legOrder": 2,
+  "tripStatus": "retroactive-guide",
+  "route": {
+    "previous": "portland",
+    "next": "salt-lake-city"
+  },
+  "coordinates": {
+    "lat": 43.615,
+    "lng": -116.2023
+  },
+  "elevationFt": 2704,
+  "population": {
+    "cityProper": 235684,
+    "metro": 837442,
+    "fragmentationRatio": null,
+    "note": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files."
+  },
+  "visitWindow": {
+    "trip": 1,
+    "arrival": "2025-10-03",
+    "departure": "2025-10-05",
+    "nights": 2,
+    "note": "Trip 1 stop between Portland and Salt Lake City; guide built retroactively as control-group data against Trip 2's sourced-curation cities."
+  },
+  "framing": "Boise is Idaho's only real city, a frontier capital whose 19th-century penitentiary was built by its own inmates, sitting a few blocks from the largest concentration of Basque diaspora culture in the Americas. The traveler's-interest through-line is an unlikely underground music lineage: Septic Death, formed here in 1981, is a foundational hardcore/grindcore band whose vocalist Brian 'Pushead' Schroeder became one of metal's most recognized illustrators, and Doug Martsch built Built to Spill here in 1992 into one of the defining bands of '90s indie rock. Frank Church, born in Boise in 1924, chaired the Senate committee that exposed CIA/FBI/NSA surveillance abuses -- a direct thread to the Idaho Anne Frank Human Rights Memorial's anti-extremism framing, itself a response to the Aryan Nations compound that once operated in Hayden Lake, ID.",
+  "analyticalThread": {
+    "id": "radical-political-geography",
+    "anchor": "idaho-anne-frank-human-rights-memorial",
+    "summary": "The Western-leg counterpart to the Southern corridor's black-business-district-erasure thread, first flagged in Salt Lake City's JSON as 'westernLegCounterpart'. Boise's instance runs through Frank Church's Church Committee (exposing federal surveillance abuse) and the Anne Frank memorial's explicit anti-Aryan-Nations framing -- civil-liberties and anti-extremism organizing rather than dispossession of a physical business district.",
+    "crossTripLinks": [
+      "salt-lake-city"
+    ]
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "BoiseDev",
+    "The Arbiter",
+    "Idaho Press",
+    "Wassmuth Center for Human Rights",
+    "Idaho State Historical Society",
+    "Targeted web search"
+  ],
+  "popCulture": {
+    "films": [
+      {
+        "title": "Bronco Billy",
+        "year": 1980,
+        "director": "Clint Eastwood",
+        "locations": [
+          {
+            "name": "Downtown Boise (various)",
+            "address": null,
+            "status": "unconfirmed",
+            "note": "Bar fights and a train robbery sequence shot around town.",
+            "citedFrom": "giggster.com"
+          }
+        ]
+      },
+      {
+        "title": "Moving",
+        "year": 1988,
+        "director": "Alan Metter",
+        "locations": [
+          {
+            "name": "Boise city streets",
+            "address": null,
+            "status": "unconfirmed",
+            "note": "Richard Pryor plays a transport engineer relocating to Boise; filmed on city streets.",
+            "citedFrom": "giggster.com"
+          }
+        ]
+      },
+      {
+        "title": "Always",
+        "year": 1989,
+        "director": "Steven Spielberg",
+        "locations": [
+          {
+            "name": "Boise National Forest",
+            "address": null,
+            "status": "extant",
+            "note": "Aerial-firefighter romance largely shot in Boise National Forest just outside the city rather than in Boise proper.",
+            "citedFrom": "giggster.com"
+          }
+        ]
+      },
+      {
+        "title": "Ghost Dad",
+        "year": 1990,
+        "director": "Sidney Poitier",
+        "locations": [
+          {
+            "name": "Boise (general)",
+            "address": null,
+            "status": "unconfirmed",
+            "note": "Bill Cosby comedy partially filmed in Boise.",
+            "citedFrom": "giggster.com"
+          }
+        ]
+      }
+    ],
+    "correctionNote": {
+      "text": "Napoleon Dynamite (2004), by far the most famous 'Idaho movie', was shot roughly 280 miles away in Preston, ID -- not Boise. It is commonly and incorrectly assumed to be a Boise production.",
+      "citedFrom": "screenrant.com, prestonchamber.org"
+    },
+    "notablePeople": [
+      {
+        "name": "Frank Church",
+        "born": 1924,
+        "birthplace": "Boise, ID",
+        "raisedIn": null,
+        "relevance": "leftist-politics",
+        "note": "U.S. Senator who chaired the Church Committee (1975-76), exposing CIA/FBI/NSA surveillance abuses and laying groundwork for FISA. Prominent progressive voice against the Vietnam War and for wilderness protection.",
+        "citedFrom": "Wikipedia -- Frank Church",
+        "verificationFlag": null
+      },
+      {
+        "name": "Doug Martsch",
+        "born": null,
+        "birthplace": null,
+        "raisedIn": "Boise, ID",
+        "relevance": "music",
+        "note": "Formed Built to Spill in Boise in 1992; local press credits him with raising the whole city's music profile and helping touring opportunities for local musicians. Birthplace unconfirmed -- described here by Boise association (formed/based), not confirmed nativity.",
+        "citedFrom": "Idaho Press",
+        "verificationFlag": true
+      },
+      {
+        "name": "Brian \"Pushead\" Schroeder",
+        "born": null,
+        "birthplace": null,
+        "raisedIn": "Boise, ID",
+        "relevance": "music",
+        "note": "Vocalist of Septic Death (formed Boise, 1981), a foundational hardcore/grindcore band; also a legendary hardcore/metal illustrator (Metallica, Misfits) and founder of Pusmort Records. Band-origin association, not a confirmed birthplace.",
+        "citedFrom": "Wikipedia -- Septic Death",
+        "verificationFlag": true
+      },
+      {
+        "name": "Joëlle Jones",
+        "born": 1980,
+        "birthplace": "Boise, ID",
+        "raisedIn": null,
+        "relevance": "art",
+        "note": "Comics artist/writer known for Lady Killer and Catwoman.",
+        "citedFrom": "sprawltag.com",
+        "verificationFlag": true
+      }
+    ]
+  },
+  "categories": [
+    { "id": "bookstores", "label": "Bookstores", "emoji": "📚", "pickCount": 5 },
+    { "id": "records", "label": "Record Stores", "emoji": "🎵", "pickCount": 5 },
+    { "id": "coffee", "label": "Coffee Shops", "emoji": "☕", "pickCount": 5 },
+    { "id": "pastry", "label": "Pastry & Bakeries", "emoji": "🥐", "pickCount": 5 },
+    { "id": "dishes", "label": "Unique Dishes to Eat", "emoji": "🍽️", "pickCount": 5 },
+    { "id": "gifts", "label": "Non-Perishable Gifts & Mailable Foods", "emoji": "📦", "pickCount": 5 },
+    { "id": "sights", "label": "Sights & Things to Do", "emoji": "👁️", "pickCount": 8 },
+    { "id": "venues", "label": "Punk & Indie Rock Venues", "emoji": "🎸", "pickCount": 5 },
+    { "id": "souvenirs", "label": "Magnets, Postcards & Souvenirs", "emoji": "🧲", "pickCount": 5 },
+    { "id": "electronics", "label": "DIY Electronics & Maker Spaces", "emoji": "🔌", "pickCount": 4 }
+  ],
+  "recommendations": [
+    { "id": "rediscovered-books", "name": "Rediscovered Books", "category": "bookstores", "status": "retroactive-recommendation", "address": null, "district": "Downtown Boise", "interestTags": ["i-books"], "cost": "$0–35", "duration": "45 min–1 hr", "bestTime": "Evening for an event", "note": "Boise's flagship indie since 2006, downtown, with a packed events calendar -- author readings, 'Books & Booze After Hours' with local breweries, audiobook walks.", "source": { "citedFrom": "web-search", "detail": "rdbooks.org, Yelp" }, "balanceRule": "well-known-must-see", "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "once-and-future-books", "name": "Once and Future Books", "category": "bookstores", "status": "retroactive-recommendation", "address": "1310 W State St, Boise, ID", "district": null, "interestTags": ["i-books"], "cost": "$3–25", "duration": "30–45 min", "bestTime": "Afternoon", "note": "Rediscovered's all-used sister shop -- same ownership, entirely secondhand stock.", "source": { "citedFrom": "web-search", "detail": "rdbooks.org" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "the-lit-room", "name": "The Lit Room", "category": "bookstores", "status": "retroactive-recommendation", "address": "3640 W Chinden Blvd, Garden City, ID", "district": "Garden City", "interestTags": ["i-books"], "cost": "$0–30", "duration": "30–45 min", "bestTime": "Afternoon", "note": "Cozy indie bookstore and book lounge leaning into small and independent presses.", "source": { "citedFrom": "web-search", "detail": "The Scout Guide" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "bent-corners-used-books", "name": "Bent Corners Used Books", "category": "bookstores", "status": "retroactive-recommendation", "address": "3343 N Five Mile Rd, Boise, ID", "district": null, "interestTags": ["i-books"], "cost": "$2–20", "duration": "1 hr", "bestTime": "Afternoon", "note": "50,000+ titles of used and vintage stock, including hard-to-find gems.", "source": { "citedFrom": "web-search", "detail": "The Scout Guide" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "cooks-and-books", "name": "Cooks & Books", "category": "bookstores", "status": "retroactive-recommendation", "address": "2951 E Overland Rd Suite 110, Meridian, ID", "district": "Meridian", "interestTags": ["i-books", "i-food"], "cost": "$0–40+", "duration": "30–45 min", "bestTime": "Anytime; more with a class", "note": "Pairs curated cookbook selections with hands-on culinary classes and community events.", "source": { "citedFrom": "web-search", "detail": "The Scout Guide" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "record-exchange", "name": "The Record Exchange", "category": "records", "status": "retroactive-recommendation", "address": "1105 W Idaho St, Boise, ID", "district": "Downtown", "interestTags": ["i-diy"], "cost": "$5–40", "duration": "45 min–1 hr", "bestTime": "Afternoon", "note": "Idaho's largest independent record store, downtown since 1977, deep into vinyl, CDs, and Record Store Day culture.", "source": { "citedFrom": "web-search", "detail": "shop.therecordexchange.com" }, "balanceRule": "well-known-must-see", "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "wylie-records", "name": "Wylie Records", "category": "records", "status": "retroactive-recommendation", "address": "4586 W Chinden Blvd, Boise, ID", "district": null, "interestTags": ["i-punk", "i-diy"], "cost": "$5–35", "duration": "45 min", "bestTime": "Check calendar for an in-store", "note": "Vinyl, LaserDiscs, CDs and cassettes, plus roughly biweekly in-store live sets and consigned local-artist merch -- the strongest DIY-scene tie in this category.", "source": { "citedFrom": "web-search", "detail": "wylierecords.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "modern-sounds-vinyl", "name": "Modern Sounds Vinyl and Music", "category": "records", "status": "retroactive-recommendation", "address": null, "district": "Boise", "interestTags": ["i-diy"], "cost": "$5–30", "duration": "30–45 min", "bestTime": "Afternoon", "note": "Sister location to the Twin Falls shop of the same name.", "source": { "citedFrom": "web-search", "detail": "recordstoredirectory.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "jam-session-record-shop", "name": "Jam Session Record Shop", "category": "records", "status": "retroactive-recommendation", "address": null, "district": "Main Street", "interestTags": ["i-diy"], "cost": "$5–25", "duration": "30 min", "bestTime": "Afternoon", "note": "A Main Street storefront, smaller and more browsable than the Record Exchange.", "source": { "citedFrom": "web-search", "detail": "recordstoredirectory.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "spin-records-boise", "name": "Spin Records Boise", "category": "records", "status": "retroactive-recommendation", "address": null, "district": "Boise", "interestTags": ["i-diy"], "cost": "$5–30", "duration": "30–45 min", "bestTime": "Afternoon", "note": "Relocated from Petaluma, CA; carries used vinyl alongside musical instruments.", "source": { "citedFrom": "web-search", "detail": "recordstoredirectory.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "flying-m-coffee", "name": "Flying M Coffee", "category": "coffee", "status": "retroactive-recommendation", "address": "500 W Idaho St, Boise, ID", "district": "Downtown", "interestTags": ["i-food"], "cost": "$4–8", "duration": "30–45 min", "bestTime": "Morning", "note": "Downtown institution running since 1992, house-roasted -- the anchor of Boise coffee culture.", "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }, "balanceRule": "well-known-must-see", "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "momentum-roasting-co", "name": "Momentum Roasting Co.", "category": "coffee", "status": "retroactive-recommendation", "address": "508 S 5th St, Boise, ID", "district": null, "interestTags": ["i-food"], "cost": "$4–8", "duration": "30–45 min", "bestTime": "Morning", "note": "Small Boise roaster and cafe near Julia Davis Park with an art-and-outdoors community bent.", "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "primal-coffee", "name": "Primal Coffee", "category": "coffee", "status": "retroactive-recommendation", "address": "20 N Latah St, Boise, ID", "district": "The Bench", "interestTags": ["i-food"], "cost": "$4–10", "duration": "45 min", "bestTime": "Anytime", "note": "Wood-fired and concentrated-sunlight roasting methods, easygoing patio-with-fire-pits vibe, flips into Karuna Kava Bar at night.", "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "neckar-coffee", "name": "Neckar Coffee", "category": "coffee", "status": "retroactive-recommendation", "address": "117 S 10th St, Boise, ID", "district": "Downtown", "interestTags": ["i-food"], "cost": "$4–8", "duration": "30 min", "bestTime": "Morning", "note": "Downtown specialty roaster and cafe with a strong pour-over and pastry program.", "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "slow-by-slow-coffee-bar", "name": "Slow By Slow Coffee Bar", "category": "coffee", "status": "retroactive-recommendation", "address": "405 S 8th St Suite 155, Boise, ID", "district": "BoDo", "interestTags": ["i-food"], "cost": "$4–9", "duration": "30–45 min", "bestTime": "Anytime", "note": "A multi-roaster bar rotating specialty coffees with hand-brewed pour-overs.", "source": { "citedFrom": "web-search", "detail": "mycoffeeexplorer.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "janjou-patisserie", "name": "Janjou Pâtisserie", "category": "pastry", "status": "retroactive-recommendation", "address": "1754 W State St, Boise, ID", "district": null, "interestTags": ["i-food"], "cost": "$4–12", "duration": "30–45 min", "bestTime": "Morning, before the case thins out", "note": "The city's French-technique benchmark since 2008 -- butter croissants and specialty cakes; staff cap capacity at six customers at a time.", "source": { "citedFrom": "web-search", "detail": "Wanderlog" }, "balanceRule": "well-known-must-see", "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "yeast-and-west-natural-bakery", "name": "Yeast & West Natural Bakery", "category": "pastry", "status": "retroactive-recommendation", "address": "600 S 9th St, Boise, ID", "district": null, "interestTags": ["i-food"], "cost": "$4–10", "duration": "20–30 min", "bestTime": "Morning", "note": "Organic sourdough and ancient-grain baking, small-batch throughout the morning -- the closest thing to a farmer-direct pastry program in Boise.", "source": { "citedFrom": "web-search", "detail": "Wanderlog" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "gastons-bakery", "name": "Gaston's Bakery", "category": "pastry", "status": "retroactive-recommendation", "address": "3651 W Overland Rd, Boise, ID", "district": null, "interestTags": ["i-food"], "cost": "$4–10", "duration": "20–30 min", "bestTime": "Anytime", "note": "Handcrafted breads and croissants built on a 52-year-old sourdough starter and locally sourced Idaho wheat.", "source": { "citedFrom": "web-search", "detail": "Wanderlog" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "guru-donuts", "name": "Guru Donuts", "category": "pastry", "status": "retroactive-recommendation", "address": "928 W Main St #100, Boise, ID", "district": null, "interestTags": ["i-food"], "cost": "$3–7", "duration": "20 min", "bestTime": "Anytime", "note": "Made-from-scratch donuts with genuinely good vegan and gluten-free (potato-based) options and playful flavors.", "source": { "citedFrom": "web-search", "detail": "Wanderlog" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": true, "restaurants": null, "verificationFlag": null },
+    { "id": "certified-kitchen-and-bakery", "name": "Certified Kitchen and Bakery", "category": "pastry", "status": "retroactive-recommendation", "address": "1511 N 13th St, Boise, ID", "district": "Hyde Park", "interestTags": ["i-food"], "cost": "$4–10", "duration": "20–30 min", "bestTime": "Morning", "note": "Same 52-year sourdough starter lineage, known for English muffins and breakfast sandwiches -- small, limited seating, arrive early.", "source": { "citedFrom": "web-search", "detail": "Wanderlog" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "finger-steaks", "name": "Finger Steaks", "category": "dishes", "status": "retroactive-recommendation", "restaurants": ["Westside Drive-In (Boise)", "Lindy's Steak House (Boise)"], "interestTags": ["i-food"], "cost": "$8–14", "duration": "30–45 min", "bestTime": "Lunch", "balanceRule": "well-known-must-see", "note": "Battered, deep-fried strips of beef steak, purportedly created by Milo Bybee in Boise in 1957, served with fry sauce or a horseradish cocktail sauce.", "source": { "citedFrom": "tasteatlas", "detail": "TasteAtlas -- Finger Steaks" }, "address": null, "district": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "verificationFlag": null },
+    { "id": "ice-cream-potato", "name": "Ice Cream Potato", "category": "dishes", "status": "retroactive-recommendation", "restaurants": ["Westside Drive-In (Boise)"], "interestTags": ["i-food"], "cost": "$6–9", "duration": "20 min", "bestTime": "Anytime", "note": "Vanilla ice cream shaped and rolled in cocoa powder to look like a baked russet, topped with whipped-cream 'sour cream' and candy garnish.", "source": { "citedFrom": "tasteatlas", "detail": "TasteAtlas -- Ice Cream Potato" }, "address": null, "district": null, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "verificationFlag": null },
+    { "id": "huckleberry-pie", "name": "Huckleberry Pie", "category": "dishes", "status": "retroactive-recommendation", "restaurants": ["Pie Hut"], "interestTags": ["i-food"], "cost": "$6–10", "duration": "20–30 min", "bestTime": "Anytime", "note": "Idaho's signature wild-berry dessert, tart and purple -- a genuine seasonal treat across the region.", "source": { "citedFrom": "tasteatlas", "detail": "TasteAtlas -- Best Rated Dishes in Idaho" }, "address": null, "district": null, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "verificationFlag": null },
+    { "id": "idaho-hot-dog", "name": "Idaho Hot Dog", "category": "dishes", "status": "retroactive-recommendation", "restaurants": ["Various Boise diners"], "interestTags": ["i-food"], "cost": "$6–10", "duration": "20 min", "bestTime": "Anytime", "note": "A skinless hot dog baked inside a hollowed-out potato, split and topped with chives, bacon, and sour cream.", "source": { "citedFrom": "tasteatlas", "detail": "TasteAtlas -- Best Rated Dishes in Idaho" }, "address": null, "district": null, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "verificationFlag": null },
+    { "id": "bar-gernika-tongue-croquetas", "name": "Beef Tongue & Croquetas -- Bar Gernika", "category": "dishes", "status": "retroactive-recommendation", "address": "202 S Capitol Blvd, Boise, ID", "district": "Basque Block", "interestTags": ["i-food"], "cost": "$12–22", "duration": "1 hr", "bestTime": "Saturday for the tongue", "restaurants": ["Bar Gernika"], "note": "Boise's Basque pub on the Basque Block, famous for beef tongue served Saturdays and a rotating croquetas menu -- the strongest tie to the city's most distinctive immigrant cuisine.", "source": { "citedFrom": "web-search", "detail": "roadfood.com, Atlas Obscura" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": ["sights"], "filmConnection": null, "glutenFreeAvailable": null, "verificationFlag": null },
+    { "id": "boise-hot-sauce-co", "name": "Boise Hot Sauce Co. (Kempature208)", "category": "gifts", "status": "retroactive-recommendation", "district": "Meridian / online", "interestTags": ["i-food", "i-bees"], "cost": "$8–14/bottle", "duration": "N/A", "bestTime": "N/A", "note": "David Kemp and Katii Blaser's hot sauce line, born from a 2018 wing-off win; flavors include a 'Bee Stinger' built on wildflower honey.", "source": { "citedFrom": "web-search", "detail": "BoiseDev" }, "address": null, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "idaho-huckleberry-products", "name": "Idaho Huckleberry Products", "category": "gifts", "status": "retroactive-recommendation", "district": null, "interestTags": ["i-food"], "cost": "$8–25", "duration": "N/A", "bestTime": "N/A", "note": "Jams, syrups, and candy from Weiser Classic Candy or Larchwood Farms gift trays -- the single most Idaho-coded mailable gift there is.", "source": { "citedFrom": "web-search", "detail": "weiserclassiccandy.com, larchwoodfarms.com" }, "address": null, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "boise-farmers-market-honey", "name": "Local Honey -- Boise Farmers Market", "category": "gifts", "status": "retroactive-recommendation", "address": "1500 Shoreline Dr, Boise, ID", "district": null, "interestTags": ["i-bees"], "cost": "$8–18/jar", "duration": "N/A", "bestTime": "Sat 9am–1pm, Apr–Oct", "note": "Honey from area apiaries sold Saturdays alongside jam, bread, and produce.", "source": { "citedFrom": "web-search", "detail": "theboisefarmersmarket.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "boise-co-op-pantry", "name": "Boise Co-op Local Pantry Goods", "category": "gifts", "status": "retroactive-recommendation", "address": "888 W Fort St, Boise, ID", "district": null, "interestTags": ["i-food"], "cost": "$6–30", "duration": "30–45 min", "bestTime": "Anytime", "note": "Hand-picked local and Idaho-made products since the 1970s -- jarred condiments, dry goods, specialty foods.", "source": { "citedFrom": "web-search", "detail": "KIVI-TV" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": ["souvenirs"], "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "8-feathers-distillery", "name": "8 Feathers Distillery Bourbon & Whiskey", "category": "gifts", "status": "retroactive-recommendation", "address": "272 N Maple Grove Rd, Boise, ID", "district": null, "interestTags": ["i-drinks"], "cost": "$25–45/bottle", "duration": "N/A", "bestTime": "Tasting room Sat 12–5", "note": "Small-batch bourbon, whiskey, and moonshine -- including vanilla and cherry-flavored bourbon -- made with locally sourced grain and an artesian well.", "source": { "citedFrom": "web-search", "detail": "ourtravelmoments.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "idaho-anne-frank-memorial", "name": "Idaho Anne Frank Human Rights Memorial", "category": "sights", "status": "retroactive-recommendation", "address": "770 S 8th St, Boise, ID", "district": null, "interestTags": ["i-political"], "cost": "Free", "duration": "30–45 min", "bestTime": "Any time; morning light for photos", "balanceRule": "well-known-must-see", "threadAnchor": true, "note": "The largest memorial of its kind in the U.S., built by the Wassmuth Center for Human Rights explicitly to confront Idaho's history as a haven for white-supremacist organizing (the Aryan Nations compound was in Hayden Lake).", "source": { "citedFrom": "web-search", "detail": "wassmuthcenter.org" }, "statusFlag": null, "bonus": null, "crossListedIn": ["souvenirs"], "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "freak-alley-gallery", "name": "Freak Alley Gallery", "category": "sights", "status": "retroactive-recommendation", "address": null, "district": "Downtown Boise", "interestTags": ["i-horror", "i-diy"], "cost": "Free", "duration": "20–30 min", "bestTime": "Daylight", "note": "The largest outdoor art gallery in the Northwest U.S. -- a full alley of murals, legitimized street art.", "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura -- Freak Alley Gallery" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "old-idaho-penitentiary", "name": "Old Idaho Penitentiary", "category": "sights", "status": "retroactive-recommendation", "address": "2445 Old Penitentiary Rd, Boise, ID", "district": null, "interestTags": ["i-horror"], "cost": "~$8", "duration": "1.5–2 hrs", "bestTime": "Midday", "note": "A 19th-century prison literally built by its own inmates, operating until 1973; now a museum with cellblocks, a gallows, and a grim history -- regular ghost tours run here.", "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura, Idaho State Historical Society" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "basque-block", "name": "The Basque Block", "category": "sights", "status": "retroactive-recommendation", "address": null, "district": "Grove St, Downtown Boise", "interestTags": ["i-food", "i-diy"], "cost": "Free / $5 museum", "duration": "1–1.5 hrs", "bestTime": "Anytime", "note": "A single downtown block sustaining the largest concentration of Basque culture in the Americas -- cultural center, fronton court, museum, and Bar Gernika.", "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura -- The Basque Block" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": ["dishes"], "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "black-cliffs", "name": "The Black Cliffs", "category": "sights", "status": "retroactive-recommendation", "address": "Highway 21, Boise River corridor", "district": null, "interestTags": [], "cost": "Free", "duration": "2+ hrs", "bestTime": "Morning", "balanceRule": "natural-attraction", "note": "Columnar volcanic basalt cliffs along the Boise River toward Lucky Peak Reservoir, climbed since the 1960s with hundreds of established routes today.", "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura -- The Black Cliffs" }, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "boise-river-greenbelt", "name": "Boise River Greenbelt", "category": "sights", "status": "retroactive-recommendation", "address": null, "district": "Along the Boise River", "interestTags": [], "cost": "Free", "duration": "Any length", "bestTime": "Golden hour", "balanceRule": "well-known-must-see", "bonus": true, "note": "25 miles of paved, tree-shaded path connecting most of the city's parks -- the natural anchor everyone in Boise actually uses daily.", "source": { "citedFrom": "web-search", "detail": "City of Boise" }, "statusFlag": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "egyptian-theatre", "name": "Egyptian Theatre", "category": "sights", "status": "retroactive-recommendation", "address": "700 W Main St, Boise, ID", "district": null, "interestTags": ["i-horror"], "cost": "Varies by show", "duration": "2–3 hrs", "bestTime": "Evening screening", "bonus": true, "note": "A 1927 Egyptian Revival movie palace built on the Tutankhamun-discovery craze, nearly demolished, restored in 1999 -- still runs classic film screenings, concerts, and comedy.", "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura -- The Egyptian Theatre in Boise" }, "balanceRule": null, "statusFlag": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": "Restored film-house tied to Boise's classic-film screening tradition", "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "gentle-breeze-park", "name": "Cherie Buckner-Webb Park (\"Gentle Breeze\")", "category": "sights", "status": "retroactive-recommendation", "address": null, "district": "Boise", "interestTags": ["i-political"], "cost": "Free", "duration": "15–20 min", "bestTime": "Anytime", "bonus": true, "note": "A park dedicated to Idaho's first Black legislator, anchored by Matthew Mazzotta's oversized pink tree sculpture.", "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura -- 'Gentle Breeze'" }, "balanceRule": null, "statusFlag": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "the-shredder", "name": "The Shredder", "category": "venues", "status": "retroactive-recommendation", "address": null, "district": "Boise", "interestTags": ["i-punk"], "cost": "$10–20", "duration": "3+ hrs", "bestTime": "Night", "note": "Self-described 'heaviest hitting venue in Boise,' run for years by the city's most persistent underground promoter -- metal, hardcore, and punk shows alongside pool tables and a skate half-pipe.", "source": { "citedFrom": "web-search", "detail": "shredderboise.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "treefort-music-hall", "name": "Treefort Music Hall", "category": "venues", "status": "retroactive-recommendation", "address": "722 W Broad St, Boise, ID", "district": null, "interestTags": ["i-punk"], "cost": "$15–40", "duration": "3 hrs", "bestTime": "Night", "balanceRule": "well-known-must-see", "note": "State-of-the-art all-ages venue tied to the Duck Club group and Treefort Music Fest.", "source": { "citedFrom": "web-search", "detail": "treefortmusichall.com" }, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "neurolux", "name": "Neurolux", "category": "venues", "status": "retroactive-recommendation", "address": "111 N 11th St, Boise, ID", "district": "Downtown", "interestTags": ["i-punk"], "cost": "$10–25", "duration": "3 hrs", "bestTime": "Night", "note": "Downtown lounge and long-running indie-rock room, open every day of the year -- the room most closely tied to Boise's post-Built to Spill indie identity.", "source": { "citedFrom": "web-search", "detail": "neurolux.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "shrine-social-club", "name": "Shrine Social Club (Ballroom & Basement)", "category": "venues", "status": "retroactive-recommendation", "address": null, "district": "Boise", "interestTags": ["i-punk"], "cost": "$10–30", "duration": "3 hrs", "bestTime": "Night", "note": "A two-room Duck Club venue with a dedicated basement space that leans into punk and hardcore bookings alongside the bigger ballroom upstairs.", "source": { "citedFrom": "web-search", "detail": "shrinesocialclub.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "boise-bomb-bunker", "name": "Boise Bomb Bunker", "category": "venues", "status": "retroactive-recommendation", "address": null, "district": "Boise", "interestTags": ["i-punk"], "cost": "N/A — not public-facing", "duration": "N/A", "bestTime": "N/A", "note": "A repurposed concrete building serving as practice and recording space for local bands -- the community-collective side of the scene rather than a public venue.", "source": { "citedFrom": "web-search", "detail": "The Arbiter" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "re-pop-gifts", "name": "Re-POP Gifts", "category": "souvenirs", "status": "retroactive-recommendation", "address": "210 N 10th St, Boise, ID", "district": "Downtown", "interestTags": ["i-diy"], "cost": "$5–35", "duration": "20–30 min", "bestTime": "Anytime", "balanceRule": "well-known-must-see", "note": "Downtown pop-culture and fandom shop with genuinely playful, non-generic merch.", "source": { "citedFrom": "atlasobscura", "detail": "Atlas Obscura, repopgifts.com" }, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "evermore-prints", "name": "Evermore Prints", "category": "souvenirs", "status": "retroactive-recommendation", "address": "5375 W Kendall St, Boise, ID", "district": null, "interestTags": ["i-diy"], "cost": "$15–80", "duration": "20–30 min", "bestTime": "Anytime", "note": "A local giclee print studio partnering directly with Boise artists and photographers -- hosts First Thursday gallery spotlights for local creators.", "source": { "citedFrom": "web-search", "detail": "evermoreprints.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "anne-frank-memorial-gift-shop", "name": "Idaho Anne Frank Memorial Gift Shop", "category": "souvenirs", "status": "retroactive-recommendation", "address": "770 S 8th St, Boise, ID", "district": null, "interestTags": ["i-political"], "cost": "$5–25", "duration": "10–15 min", "bestTime": "Anytime", "note": "Books and materials tied directly to the memorial's human-rights mission -- a souvenir that's also a small act of political memory.", "source": { "citedFrom": "web-search", "detail": "wassmuthcenter.org" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": ["sights"], "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "boise-co-op-souvenirs", "name": "Boise Co-op", "category": "souvenirs", "status": "retroactive-recommendation", "address": "888 W Fort St, Boise, ID", "district": null, "interestTags": ["i-food"], "cost": "$6–30", "duration": "20–30 min", "bestTime": "Anytime", "note": "Alongside groceries, stocks Idaho-made goods, local honey, and gift-worthy pantry items under one roof.", "source": { "citedFrom": "web-search", "detail": "KIVI-TV" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": ["gifts"], "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "idaho-vinyl-records-covers", "name": "Idaho Vinyl Records -- \"Strange & Cool Covers\"", "category": "souvenirs", "status": "retroactive-recommendation", "address": "4544 W Overland Rd, Boise, ID", "district": "Antique World Mall", "interestTags": ["i-horror", "i-diy"], "cost": "$3–20", "duration": "20–30 min", "bestTime": "Anytime", "note": "Their oddball vintage record-cover stock doubles as genuinely weird, framable wall art if you want a souvenir with more edge than a magnet.", "source": { "citedFrom": "web-search", "detail": "idahovinylrecords.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": ["records"], "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "up-makerspace", "name": "UP MakerSpace", "category": "electronics", "status": "retroactive-recommendation", "address": null, "district": "Garden City", "interestTags": ["i-diy"], "cost": "Membership-based", "duration": "Varies", "bestTime": "Check open hours", "note": "Member-driven community makerspace covering 3D printing, CNC cutting, laser engraving, robotics, and electronics, with member-led classes and events.", "source": { "citedFrom": "web-search", "detail": "upmakerspace.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "open-lab-idaho", "name": "Open Lab Idaho", "category": "electronics", "status": "retroactive-recommendation", "address": null, "district": "Boise", "interestTags": ["i-diy"], "cost": "Membership/class fees", "duration": "Varies", "bestTime": "Check class calendar", "note": "A community of hackers, circuit benders, engineers, and artists running classes and outreach, with deep ties to Idaho's FIRST Robotics program (sponsors FRC Team 5461).", "source": { "citedFrom": "web-search", "detail": "openlabidaho.org" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "boise-state-makerlab", "name": "Boise State MakerLab", "category": "electronics", "status": "retroactive-recommendation", "address": "Albertsons Library, Boise State University, Boise, ID", "district": null, "interestTags": ["i-diy"], "cost": "Free for affiliates; inquire otherwise", "duration": "Varies", "bestTime": "Weekdays 10am–5pm", "note": "A public library-adjacent makerspace primarily for Boise State affiliates, but will field outside equipment inquiries by email.", "source": { "citedFrom": "web-search", "detail": "boisestate.edu" }, "balanceRule": null, "statusFlag": "public-access-limited", "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null },
+    { "id": "12th-fret-music", "name": "12th Fret Music", "category": "electronics", "status": "retroactive-recommendation", "address": "671 S Capitol Blvd, Boise, ID", "district": null, "interestTags": ["i-diy"], "cost": "Varies", "duration": "30–45 min", "bestTime": "Anytime", "note": "A guitar, amp, and pedal shop with a genuine repair bench and a recording studio/soundstage under construction -- the closest thing Boise has to a gear-hacking hub.", "source": { "citedFrom": "web-search", "detail": "12thfretmusic.com" }, "balanceRule": null, "statusFlag": null, "bonus": null, "threadAnchor": null, "crossListedIn": null, "filmConnection": null, "glutenFreeAvailable": null, "restaurants": null, "verificationFlag": null }
+  ],
+  "statusNotes": [
+    { "id": "napoleon-dynamite-misattribution", "severity": "info", "text": "Napoleon Dynamite (2004) is commonly but incorrectly assumed to be a Boise production. It was filmed in Preston, ID, roughly 280 miles east." },
+    { "id": "martsch-pushead-birthplace-unconfirmed", "severity": "info", "text": "Doug Martsch (Built to Spill) and Brian 'Pushead' Schroeder (Septic Death) are both strongly Boise-associated (formed/based their bands there) but their exact birthplaces could not be confirmed from available sources; described here by association, not nativity." },
+    { "id": "boise-state-makerlab-access", "severity": "info", "text": "Boise State MakerLab is primarily for university affiliates. Non-affiliates should email ahead to confirm equipment access before visiting." }
+  ],
+  "honestGaps": [
+    { "id": "no-infoshop", "category": "bookstores", "text": "The mandatory anarchist/radical/infoshop search found no storefront in Boise. Boise DSA organizes actively but has no physical space -- the city's radical-left infrastructure runs through organizing rather than a retail counterspace, unlike Salt Lake City's Boing! Anarchist Collective.", "citedFrom": "boisedsa.org, web-search" },
+    { "id": "thin-electronics-scene", "category": "electronics", "text": "Category 10 carries four picks, not five. Boise has no dedicated synth shop or hackerspace with published public open-hours, unlike Salt Lake City's Squarewave Sound and 801 Labs. Maker Shop Boise is a genuinely excellent 7,000 sq ft facility, but it's a woodworking shop, not electronics -- padding to five with it would misrepresent the city.", "citedFrom": "makershopboise.com, web-search" }
+  ],
+  "fingerprint": null,
+  "meta": {
+    "guideVersion": "city-road-trip-guide v2.8",
+    "generated": "2026-08-12",
+    "totalRecommendations": 52,
+    "htmlGuide": "boise-guide.html"
+  },
+  "scopeDecision": "Boise-proper primary; a small number of Treasure Valley picks (Garden City, Meridian) included only where the category genuinely lacked in-city depth, noted by district rather than presented as downtown Boise."
+}

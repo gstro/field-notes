@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charlotte, NC — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .pick-flag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    border: 1px solid rgba(212,168,67,0.4);
+    border-radius: 2px;
+    padding: 1px 5px;
+    margin-left: 6px;
+    white-space: nowrap;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 2 (Guide-Led) &nbsp;·&nbsp; Austin → Shreveport → Jackson → Birmingham → Atlanta → <strong style="color:var(--cream)">Charlotte</strong> → Richmond → Washington, DC → Philadelphia</p>
+  <h1>Road Trip Stop — <em>Charlotte, NC</em></h1>
+  <p class="subtitle">
+    A banking-boomtown skyline sitting on top of a leveled Black business district, a legendary punk club nobody puts on a postcard, and a former Ford/missile plant now doing duty as the city's closest thing to a maker district.<br>
+    10 categories · 5 picks each (Category 10 honest-gapped to 2) · Sources: Atlas Obscura, TasteAtlas, Eater, Timeout, Wikipedia, Queen City Nerve, Charlotte Magazine, Axios Charlotte, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Logan Lucky (2017)</strong> — dir. Steven Soderbergh. <strong>Charlotte Motor Speedway</strong> — Much of the heist-film photography was shot at the speedway during and around race weekends; production also used Atlanta Motor Speedway repainted to match Charlotte&#x27;s then-yellow walls (a former Sprint sponsorship color). The speedway itself is a working NASCAR track with a public souvenir shop and a Speedway Club restaurant.</li>
+
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born / Raised Here</h3>
+      <ul>
+        <li><strong>Carson McCullers</strong> — Novelist associated with the Southern Gothic tradition (The Heart Is a Lonely Hunter); lived in Charlotte for a period while writing.</li>
+<li><strong>Skeet Ulrich</strong> (b. 1970) — Raised in the Charlotte area; played Billy Loomis in Scream (1996), one of the defining slasher performances of the &#x27;90s horror revival.</li>
+<li><strong>DaBaby</strong> — Charlotte-raised rapper; much of his early mixtape-era mythology and video geography is tied to the city.</li>
+<li><strong>Anthony Hamilton</strong> — Charlotte-born R&amp;B singer.</li>
+<li><strong>Dorothy Counts</strong> — In 1957, at 15, photographed being jeered and spat on while integrating Harry Harding High School — one of the era&#x27;s most widely circulated civil rights images. A mural of her now stands at Camp North End, near the Brooklyn/Second Ward site.</li>
+<li><strong>Harvey B. Gantt</strong> — Not born in Charlotte (Charleston, SC) but the city&#x27;s first Black mayor (1983) and the first Black student admitted to Clemson; the Gantt Center for African-American Arts + Culture, opened 2009 near the former Brooklyn site, carries his name.</li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Park Road Books <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-books">Literary</span></div>
+        <div class="entry-desc">The only full-service independently owned new-book store in Charlotte, running since 1977, with a classic layout and staff picks that lean literary.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>4139 Park Rd, Charlotte, NC 28209</span><span class="meta-tag"><span>💰</span>$0–35</span><span class="meta-tag"><span>⏱</span>45 min–1 hr</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: secretcharlotte.co, theculturetrip.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">That&#x27;s Novel Books </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-books">Literary</span><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Charlotte&#x27;s newest used bookstore (opened Feb 2020), tucked inside a co-working space at Camp North End — the same former Ford/missile-plant complex anchoring this guide&#x27;s DIY thread. Community-building focus, local author sections.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>330 Camp Rd, Charlotte, NC 28206</span><span class="meta-tag"><span>💰</span>$0–25</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: secretcharlotte.co</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Book Buyers </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-books">Literary</span><span class="interest-tag i-horror">Horror/Occult</span></div>
+        <div class="entry-desc">Cozy used-book shop in a strip mall with a resident cat and unexpected sections — a paranormal romance shelf and an aviation exhibit among them.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>1306 The Plaza, Charlotte, NC 28205</span><span class="meta-tag"><span>💰</span>$1–20</span><span class="meta-tag"><span>⏱</span>45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: theculturetrip.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">Julia&#x27;s Cafe &amp; Books </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-books">Literary</span><span class="interest-tag i-political">Political</span><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">A fundraising arm of Charlotte&#x27;s Habitat for Humanity — an enormous used-book selection, locally roasted Magnolia Coffee Company coffee, and local pastries, all proceeds going to the nonprofit.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>1133 N Wendover Rd, Charlotte, NC 28211</span><span class="meta-tag"><span>💰</span>$0–30</span><span class="meta-tag"><span>⏱</span>1 hr</span><span class="meta-tag"><span>🕐</span>Morning or early afternoon</span><span class="cite-tag">— Source: secretcharlotte.co, theculturetrip.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Paper Skyscraper </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-books">Literary</span><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Gift-shop/bookstore hybrid open 35+ years, voted Charlotte Magazine&#x27;s Best Local Gift Shop 26 years running; cookbooks, puzzles, and a genuinely curated local-artisan section.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Dilworth (plus 2 more locations)</span><span class="meta-tag"><span>💰</span>$10–50</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: paperskyscraper.com</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Lunchbox Records <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Nearly two decades in, Charlotte&#x27;s flagship indie shop — indie rock, punk, metal, jazz, soul, and rap across every format, a dedicated Local Music section, and Record Store Day openings at 8am.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>825 Central Ave, Charlotte, NC 28204</span><span class="meta-tag"><span>💰</span>$5–40</span><span class="meta-tag"><span>⏱</span>45 min–1 hr</span><span class="meta-tag"><span>🕐</span>Afternoon; check for in-stores</span><span class="cite-tag">— Source: lunchboxrecords.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Repo Record </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Independent shop on the Plaza Midwood/NoDa corridor with a strong collector following (4.6★ across 600+ reviews).</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>3325 Commonwealth Ave, Charlotte, NC 28205</span><span class="meta-tag"><span>💰</span>$5–35</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: keepthemspinning.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Hardy Boys Records and Comics </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span><span class="interest-tag i-horror">Horror/Occult</span></div>
+        <div class="entry-desc">Records-and-comics shop inside Camp North End — another anchor point on this guide&#x27;s maker/DIY thread through the former Ford/missile-plant complex.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>701 Keswick Ave #106, Charlotte, NC 28206</span><span class="meta-tag"><span>💰</span>$3–30</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: keepthemspinning.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">The Poet&#x27;s Vault </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span><span class="interest-tag i-books">Literary</span></div>
+        <div class="entry-desc">Wide-genre shop — punk sits alongside hip-hop, jazz, blues, and metal — with a full RSD program; the owner is also a published author, a nice literature crossover.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>6424 South Blvd, Suite B, Charlotte, NC 28217</span><span class="meta-tag"><span>💰</span>$5–35</span><span class="meta-tag"><span>⏱</span>45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: thepoetsvault.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Noble Records </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Collector-focused shop just outside the city proper (4.9★); the highest-rated of the metro&#x27;s independent stores.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>11500 E Independence Blvd B, Matthews, NC 28105</span><span class="meta-tag"><span>💰</span>$10–50</span><span class="meta-tag"><span>⏱</span>45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: keepthemspinning.com</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Smelly Cat Coffeehouse &amp; Roastery <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Long-running NoDa institution since 2000, roasting on site; the anchor cafe of Charlotte&#x27;s original arts district.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>514 E 36th St, Charlotte, NC 28205</span><span class="meta-tag"><span>💰</span>$4–8</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: mycoffeeexplorer.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Enderly Coffee Co. </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span><span class="interest-tag i-political">Political</span></div>
+        <div class="entry-desc">Neighborhood-first roaster-cafe in West Charlotte with an explicit community mission, a few blocks from The Milestone Club on the same road.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>2620 Tuckaseegee Rd, Charlotte, NC 28208</span><span class="meta-tag"><span>💰</span>$4–8</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: mycoffeeexplorer.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">HEX Coffee </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Specialty roaster with a full food program and natural wine list, sitting inside Camp North End — a third DIY-thread anchor in the complex.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>201 Camp Rd, Charlotte, NC 28206</span><span class="meta-tag"><span>💰</span>$4–9</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Morning or afternoon</span><span class="cite-tag">— Source: mycoffeeexplorer.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">Archive CLT </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span><span class="interest-tag i-political">Political</span><span class="interest-tag i-books">Literary</span></div>
+        <div class="entry-desc">Coffee-and-culture shop on the historically Black Beatties Ford Rd corridor, doubling as a Black-culture archive with vintage magazines on display.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>2023 Beatties Ford Rd, Suite D, Charlotte, NC 28216</span><span class="meta-tag"><span>💰</span>$4–8</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: mycoffeeexplorer.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Night Swim Coffee Roasters </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Flagship roastery that supplies several other counters around the city (including Not Just Coffee) — worth visiting the source.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>4500 Old Pineville Rd, Charlotte, NC 28217</span><span class="meta-tag"><span>💰</span>$4–8</span><span class="meta-tag"><span>⏱</span>30 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: mycoffeeexplorer.com</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry & Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Amélie&#x27;s French Bakery <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Charlotte&#x27;s best-known French bakery, open since 2008 in NoDa with a round-the-clock location downtown; the salted caramel brownie is the standing order. Confirm current hours before a late visit.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>NoDa (original location)</span><span class="meta-tag"><span>💰</span>$4–12</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Morning, or late night at the 24-hour location</span><span class="cite-tag">— Source: Widely covered by regional press; not independently re-verified this run due to search-tool access issues</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Renaissance Pâtisserie </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Classically trained French pastry chef; kouign-amann and gem-like viennoiserie alongside a full bistro menu.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>6401 Carnegie Blvd #4a, Charlotte, NC 28211</span><span class="meta-tag"><span>💰</span>$5–15</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: waywardblog.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Manolo&#x27;s Bakery </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Charlotte&#x27;s first Latin bakery, 27 years running — conchas, tortas, and polvorones.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>4405 Central Ave, Charlotte, NC 28205</span><span class="meta-tag"><span>💰</span>$2–8</span><span class="meta-tag"><span>⏱</span>20–30 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: waywardblog.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">Verdant Bread </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Long-fermented, high-hydration sourdough program; the country loaf sells out.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>4410 Monroe Rd #C, Charlotte, NC 28205</span><span class="meta-tag"><span>💰</span>$5–12</span><span class="meta-tag"><span>⏱</span>20–30 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: waywardblog.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Villani&#x27;s Bakery </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">New York-Italian bakery with cannoli, pistachio cheesecake, and seven-layer cookies.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>901 Pecan Ave, Charlotte, NC 28205</span><span class="meta-tag"><span>💰</span>$3–10</span><span class="meta-tag"><span>⏱</span>20–30 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: waywardblog.com</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Fried Chicken — Price&#x27;s Chicken Coop <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Charlotte&#x27;s fried-chicken institution since 1962 — cash only, to-go only, no seating, and a citywide reputation few chains have matched. Confirm current hours/status locally, as this run could not independently re-verify.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$8–15</span><span class="meta-tag"><span>⏱</span>30–45 min (cash-only, expect a line)</span><span class="meta-tag"><span>🕐</span>Lunch</span><span class="cite-tag">— Source: Long-standing regional press coverage; not independently re-verified this run due to search-tool access issues</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Western/Lexington-Style BBQ — Midwood Smokehouse </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Pork shoulder, vinegar-pepper-and-tomato sauce — the western North Carolina style, at a Charlotte-founded barbecue restaurant group.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$12–22</span><span class="meta-tag"><span>⏱</span>1 hr</span><span class="meta-tag"><span>🕐</span>Lunch or early dinner</span><span class="cite-tag">— Source: TasteAtlas — North Carolina-Style Barbecue</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Livermush </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Fried pig-liver-and-cornmeal loaf, a Piedmont/western NC breakfast staple. No single Charlotte flagship venue was confirmed this run — ask for it at any old-school Charlotte diner or meat-and-three; it&#x27;s a regional dish rather than a destination-restaurant one.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$4–8 as a breakfast side</span><span class="meta-tag"><span>⏱</span>N/A</span><span class="meta-tag"><span>🕐</span>Breakfast</span><span class="cite-tag">— Source: TasteAtlas — Livermush; Wikipedia — Livermush</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">Carolina-Style Hot Dog (Slaw Dog) </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Slaw, onion, and chili-topped hot dog, a Carolinas-wide standard. Best found at Charlotte&#x27;s classic diners and drive-ins rather than one single destination — an honest regional-dish entry rather than a padded restaurant pick.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$3–6</span><span class="meta-tag"><span>⏱</span>N/A</span><span class="meta-tag"><span>🕐</span>Anytime</span><span class="cite-tag">— Source: TasteAtlas — Carolina-Style Hot Dog</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Moravian Spice Cookies </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Wafer-thin molasses-ginger cookie, the state&#x27;s best-known baked regional dish. The flagship bakery (Dewey&#x27;s) is in Winston-Salem, not Charlotte, but the cookies are sold at NC grocers and specialty shops here, and they ship nationwide — flagged honestly as out-of-city origin rather than presented as Charlotte-made.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$6–12</span><span class="meta-tag"><span>⏱</span>N/A</span><span class="meta-tag"><span>🕐</span>Anytime</span><span class="cite-tag">— Source: TasteAtlas — Moravian Spice Cookies</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts & Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Local Pantry Goods — Paper Skyscraper </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Shelf-stable local brands including Queen City Crunch, Chapel Hill Toffee, and Iva Jeans Fudge — all mailable, all local-maker-branded rather than generic.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Dilworth</span><span class="meta-tag"><span>💰</span>$6–20</span><span class="meta-tag"><span>⏱</span>20–30 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: paperskyscraper.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Vendor Pantry Goods — The Market at 7th Street </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span><span class="interest-tag i-political">Political</span></div>
+        <div class="entry-desc">Nonprofit food-hall-and-incubator that&#x27;s launched 175+ small businesses, 80% women-owned and 60% minority-owned — jams, sauces, and specialty goods change with the vendor roster.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>224 E 7th St, Charlotte, NC 28202</span><span class="meta-tag"><span>💰</span>$5–25</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Any open hours</span><span class="cite-tag">— Source: themarketat7thstreet.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Moravian Cookie Gift Boxes — Dewey&#x27;s Bakery </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Ships nationwide and sold at NC grocers in Charlotte; the most shippable version of the state&#x27;s signature baked good, though the bakery itself is in Winston-Salem.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$15–35</span><span class="meta-tag"><span>⏱</span>N/A</span><span class="cite-tag">— Source: deweys.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">Retail Coffee Beans — Night Swim / Smelly Cat </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">Both roast in-house and sell retail bags built for shipping — the simplest mailable gift on this list.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$16–22/bag</span><span class="meta-tag"><span>⏱</span>15 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: mycoffeeexplorer.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Local Honey — Charlotte-area farmers markets </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-bees">Bees/Well-Known</span><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">No single flagship apiary brand was confirmed this run (search-tool access was limited); Charlotte&#x27;s weekend farmers markets, including the Regional Farmers Market and 7th Street Market vendor rotation, are the reliable place to find jarred local honey.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$8–18/jar</span><span class="meta-tag"><span>⏱</span>N/A</span><span class="meta-tag"><span>🕐</span>Saturday market hours</span><span class="cite-tag">— Source: Not independently re-verified this run due to search-tool access issues</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights & Things to Do</h2>
+      <span class="cat-count">8 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Musical Parking Garage </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span><span class="interest-tag i-horror">Horror/Occult</span></div>
+        <div class="entry-desc">A nine-story parking structure rigged so it can be played like an instrument — exactly the kind of hidden-infrastructure oddity that rewards a slow walk-through.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Uptown</span><span class="meta-tag"><span>💰</span>Free</span><span class="meta-tag"><span>⏱</span>20–30 min</span><span class="meta-tag"><span>🕐</span>Anytime</span><span class="cite-tag">— Source: Atlas Obscura — Charlotte</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Brooklyn / Second Ward — The Green &amp; Gantt Center <span class="pick-flag">◆ Thread Anchor</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-political">Political</span><span class="interest-tag i-books">Literary</span></div>
+        <div class="entry-desc">Brooklyn was Charlotte&#x27;s Black business, church, and school district — home to the city&#x27;s first Black school, its only Black high school until 1969, an AME Zion publishing house, and a full commercial strip — razed almost entirely under 1960s urban renewal. The Green park and the Harvey B. Gantt Center for African-American Arts + Culture (2009) now sit on and near the site; Brooklyn Village Ave (renamed from Stonewall St, 2022) marks the ongoing redevelopment reckoning.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Second Ward, Uptown</span><span class="meta-tag"><span>💰</span>Free (Gantt Center admission ~$9)</span><span class="meta-tag"><span>⏱</span>1–2 hrs</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: Wikipedia — Brooklyn (Charlotte, North Carolina)</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Hilton Sisters&#x27; Grave </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-horror">Horror/Occult</span></div>
+        <div class="entry-desc">The joint grave of Daisy and Violet Hilton, conjoined-twin vaudeville stars who spent their final years in Charlotte — sideshow history with a real dark-Americana pull.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>Free</span><span class="meta-tag"><span>⏱</span>15–20 min</span><span class="meta-tag"><span>🕐</span>Daytime</span><span class="cite-tag">— Source: Atlas Obscura — Charlotte</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">VisArt Video </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-horror">Horror/Occult</span><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">A nonprofit video store with 30,000+ titles and a mission of supporting independent filmmakers since 1982 — exactly the kind of rare-horror/cult-film deep shelf that doesn&#x27;t survive most cities&#x27; streaming era. Verify current hours before visiting.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>Membership/rental fees</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: Atlas Obscura — Charlotte</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Camp North End <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span><span class="interest-tag i-political">Political</span></div>
+        <div class="entry-desc">A 76-acre former Ford Model T plant and WWII-era missile factory, now Charlotte&#x27;s densest cluster of maker/creative tenants — That&#x27;s Novel Books, Hardy Boys Records, HEX Coffee, the Dorothy Counts mural, and rotating art installations all sit inside it. The single best orientation stop for this guide&#x27;s DIY and political threads at once.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>300 Camp Rd, Charlotte, NC 28206</span><span class="meta-tag"><span>💰</span>Free to walk; venue prices vary</span><span class="meta-tag"><span>⏱</span>2–3 hrs</span><span class="meta-tag"><span>🕐</span>Afternoon into evening</span><span class="cite-tag">— Source: camp.nc, Atlas Obscura (Dorothy Counts mural)</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">6</div>
+      <div class="entry-body">
+        <div class="entry-name">U.S. National Whitewater Center <span class="pick-flag">🌲 Natural Attraction</span><span class="pick-flag">+ Bonus</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-bees">Bees/Well-Known</span></div>
+        <div class="entry-desc">Class III–IV whitewater rafting on a man-made river channel, plus zip-lining and 45+ miles of trails along the Catawba — the natural-attraction balance-rule pick for a city that otherwise reads entirely urban.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$60–100+ for activity passes; free to walk the trails</span><span class="meta-tag"><span>⏱</span>Half-day</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: charlottesgotalot.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">7</div>
+      <div class="entry-body">
+        <div class="entry-name">McGill Rose Garden <span class="pick-flag">+ Bonus</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-bees">Bees/Well-Known</span></div>
+        <div class="entry-desc">A scented city-block rose garden built on a former industrial site in 1976, with a vintage coal train car as a leftover artifact — a real pollinator draw in the middle of the city.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>Free</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Morning</span><span class="cite-tag">— Source: Atlas Obscura — Charlotte</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">8</div>
+      <div class="entry-body">
+        <div class="entry-name">Grave of John King <span class="pick-flag">+ Bonus</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-horror">Horror/Occult</span></div>
+        <div class="entry-desc">A gravestone carved with an elephant, marking a man killed by one — pure Atlas Obscura dark-oddity material.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>Free</span><span class="meta-tag"><span>⏱</span>15 min</span><span class="meta-tag"><span>🕐</span>Daytime</span><span class="cite-tag">— Source: Atlas Obscura — Grave of John King</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk & Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">The Milestone Club <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span></div>
+        <div class="entry-desc">Charlotte&#x27;s legendary DIY room, running since 1969 — Nirvana, Black Flag, and R.E.M. all played here early in their careers, and the graffiti-and-sticker-covered walls carry decades of the scene&#x27;s own tagging. Check the current show calendar; venue ownership/booking has shifted more than once over its long run.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>3400 Tuckaseegee Rd, Charlotte, NC 28208</span><span class="meta-tag"><span>💰</span>$10–25</span><span class="meta-tag"><span>⏱</span>3 hrs</span><span class="meta-tag"><span>🕐</span>Night</span><span class="cite-tag">— Source: Long-documented regional music history; current operating status not independently re-verified this run</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Snug Harbor </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span></div>
+        <div class="entry-desc">Punk, post-punk, and experimental-leaning club running since 2007, with multi-band bills most nights and a karaoke night as its lone concession to normalcy.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$10–20</span><span class="meta-tag"><span>⏱</span>3 hrs</span><span class="meta-tag"><span>🕐</span>Night (most shows 18+)</span><span class="cite-tag">— Source: snugrock.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Amos&#x27; Southend </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span></div>
+        <div class="entry-desc">Mid-size room in Historic South End that books touring punk, metal, and indie packages; verify current booking calendar.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>South End</span><span class="meta-tag"><span>💰</span>$15–35</span><span class="meta-tag"><span>⏱</span>3–4 hrs</span><span class="meta-tag"><span>🕐</span>Night</span><span class="cite-tag">— Source: Not independently re-verified this run due to search-tool access issues</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">The Evening Muse </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span><span class="interest-tag i-books">Literary</span></div>
+        <div class="entry-desc">Listening-room-style venue in NoDa with a songwriter-forward booking style that skews indie rather than hardcore; verify current booking calendar.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>NoDa</span><span class="meta-tag"><span>💰</span>$10–25</span><span class="meta-tag"><span>⏱</span>2–3 hrs</span><span class="meta-tag"><span>🕐</span>Night</span><span class="cite-tag">— Source: Not independently re-verified this run due to search-tool access issues</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Skylark Social Club </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-punk">Punk/DIY</span></div>
+        <div class="entry-desc">Bar-venue booking heavy roots rock and rock acts (King Cackle among them) — a smaller, scrappier room rounding out the scene.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>💰</span>$10–20</span><span class="meta-tag"><span>⏱</span>2–3 hrs</span><span class="meta-tag"><span>🕐</span>Night</span><span class="cite-tag">— Source: qcnerve.com archives</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards & Souvenirs</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Paper Skyscraper <span class="pick-flag">★ Must-See</span></div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span><span class="interest-tag i-food">Food & Drink</span></div>
+        <div class="entry-desc">26 straight years as Charlotte Magazine&#x27;s Best Local Gift Shop — handpicked local-maker goods rather than mass tourist product.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Dilworth</span><span class="meta-tag"><span>💰</span>$10–50</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: paperskyscraper.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">That&#x27;s Novel Books (zines &amp; local prints) </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-books">Literary</span><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Local-author and zine sections make this a better book-shaped souvenir stop than a generic gift shop.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Camp North End</span><span class="meta-tag"><span>💰</span>$5–25</span><span class="meta-tag"><span>⏱</span>20–30 min</span><span class="meta-tag"><span>🕐</span>Afternoon</span><span class="cite-tag">— Source: secretcharlotte.co</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">3</div>
+      <div class="entry-body">
+        <div class="entry-name">Camp North End rotating retail/artisan stalls </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Retail tenants and pop-up artisan markets rotate through the complex; not a single fixed shop, but reliably the most locally made merchandise in one place.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Camp North End</span><span class="meta-tag"><span>💰</span>$5–40</span><span class="meta-tag"><span>⏱</span>30–45 min</span><span class="meta-tag"><span>🕐</span>Afternoon/evening; seasonal markets (e.g. Mistletoe Market) add vendors</span><span class="cite-tag">— Source: camp.nc</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">4</div>
+      <div class="entry-body">
+        <div class="entry-name">The Market at 7th Street (vendor goods) </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span><span class="interest-tag i-political">Political</span></div>
+        <div class="entry-desc">175+ small businesses incubated here since opening, 80% women-owned, 60% minority-owned — handmade goods change with the vendor roster rather than sitting static on a rack.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>224 E 7th St, Charlotte, NC 28202</span><span class="meta-tag"><span>💰</span>$5–30</span><span class="meta-tag"><span>⏱</span>30 min</span><span class="meta-tag"><span>🕐</span>Any open hours</span><span class="cite-tag">— Source: themarketat7thstreet.com</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">5</div>
+      <div class="entry-body">
+        <div class="entry-name">Harvey B. Gantt Center Gift Shop </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-political">Political</span><span class="interest-tag i-books">Literary</span></div>
+        <div class="entry-desc">Books, prints, and art tied directly to the museum&#x27;s African-American arts and culture mission — a souvenir with a direct line back to the Brooklyn/Second Ward thread anchor next door.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Second Ward, Uptown</span><span class="meta-tag"><span>💰</span>$10–40</span><span class="meta-tag"><span>⏱</span>15–20 min</span><span class="meta-tag"><span>🕐</span>Pair with a museum visit</span><span class="cite-tag">— Source: Wikipedia — Brooklyn (Charlotte, North Carolina)</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics & Maker Spaces</h2>
+      <span class="cat-count">2 picks</span>
+    </div>
+    <div class="entries">
+    <div class="entry">
+      <div class="entry-num">1</div>
+      <div class="entry-body">
+        <div class="entry-name">Discovery Place — Thinker Space </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">A hands-on maker studio on Level 3 — design, build, and tinker with real tools. Not electronics-specific and not a walk-in-anytime hackerspace, but the closest thing Charlotte has to a public maker lab.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Uptown</span><span class="meta-tag"><span>💰</span>Included with museum admission (~$22)</span><span class="meta-tag"><span>⏱</span>45 min–1 hr</span><span class="meta-tag"><span>🕐</span>Midday</span><span class="cite-tag">— Source: discoveryplace.org</span></div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-num">2</div>
+      <div class="entry-body">
+        <div class="entry-name">Camp North End WorkStation (creative workspace leasing) </div>
+        <div style="margin-bottom:5px"><span class="interest-tag i-diy">DIY/Maker</span></div>
+        <div class="entry-desc">Camp North End leases creative/maker workspace inside the former missile plant, but this is general creative-studio space, not a dedicated electronics shop or hackerspace — included as the closest adjacent option, flagged honestly as not the real thing.</div>
+        <div class="entry-meta"><span class="meta-tag"><span>📍</span>Camp North End</span><span class="meta-tag"><span>💰</span>Membership/lease-based</span><span class="meta-tag"><span>⏱</span>Varies</span><span class="meta-tag"><span>🕐</span>Weekday business hours</span><span class="cite-tag">— Source: camp.nc</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ visart-video-hours:</strong> VisArt Video&#x27;s website returned an access error during this run; Atlas Obscura still lists it as active. Verify current hours before visiting.
+  </div>
+</div>
+
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap (bookstores):</strong> The mandatory anarchist/radical/infoshop search returned no Charlotte storefront. A Radical Guide&#x27;s only North Carolina listing is Firestorm Books &amp; Coffee in Asheville, over 2 hours west. Charlotte&#x27;s closest equivalents are nonprofit/community-fundraiser models (Julia&#x27;s Cafe &amp; Books benefits Habitat for Humanity) rather than an anarchist collective space — a genuine finding, consistent with the pattern already seen in Oklahoma City on this same trip&#x27;s corridor.
+  </div>
+</div>
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap (electronics):</strong> Category 10 carries only 2 picks, not 5. A search of Hackaday&#x27;s hackerspace directory (843 entries worldwide) turned up no Charlotte listing, and no dedicated synth shop, guitar-pedal builder, or electronics-repair collective was found. Discovery Place&#x27;s Thinker Space and Camp North End&#x27;s general creative-workspace leasing are the closest adjacent options, both flagged as imperfect substitutes rather than padded into false fives. This is a sharper gap than Oklahoma City&#x27;s (which at least had Keeley Electronics, a world-class boutique pedal manufacturer) — Charlotte&#x27;s maker culture appears to run through Camp North End&#x27;s broader creative-tenant mix rather than a dedicated electronics/hacker space.
+  </div>
+</div>
+
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Camp North End deserves its own standalone visit block — it's the rare stop that hits the DIY/maker thread (Hardy Boys Records, HEX Coffee, That's Novel Books), the political thread (Dorothy Counts mural), and the honest gap in Category 10 all in one 76-acre former missile plant. Budget a half-day, not a drive-by.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Brooklyn / Second Ward is Charlotte's instance of the <code>black-business-district-erasure</code> thread running through this trip's Southern corridor — same 1960s urban-renewal mechanism as Deep Deuce (Oklahoma City) and Freedman's Town (Dallas). Richmond's St. Luke Bank (next stop) is the thread's unconfirmed next link — worth checking on arrival whether it holds.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      The infoshop gap here matches Oklahoma City's: neither city has a public anarchist/radical bookstore space, and both substitute a nonprofit/cooperative model instead (Julia's Cafe & Books here, Literati Press's co-op ownership there). Worth tracking whether Richmond breaks or continues that Southern-corridor pattern.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 2 Guide-Led Stop &nbsp;·&nbsp; Charlotte, NC &nbsp;·&nbsp; Leg 6 of 9 &nbsp;·&nbsp; atlanta → charlotte → richmond<br>
+  Guide-led entry: sourced and curated ahead of the May 17–20, 2026 visit window, as part of a 13-city batch rebuild adding Category 10 and the JSON companion<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+</body>
+</html>

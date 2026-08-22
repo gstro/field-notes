@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birmingham, AL — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  .pc-note {
+    max-width: 900px;
+    margin: 1rem auto 0;
+    padding: 0 2rem;
+  }
+  .pc-note-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.9rem 1.25rem;
+    font-size: 12.5px;
+    color: rgba(245,237,216,0.72);
+    line-height: 1.6;
+  }
+  .pc-note-inner strong { color: var(--gold); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+  .gap-section { max-width: 900px; margin: 1.5rem auto 0; padding: 0 2rem; }
+  .gap-section h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 2 (Guide-Led) &nbsp;·&nbsp; Austin → Shreveport → Jackson → <strong style="color:var(--cream)">Birmingham</strong> → Atlanta → Charlotte → Richmond → Washington DC → Philadelphia &nbsp;·&nbsp; Arrival May 9 – Departure May 11, 2026 (2 nights)</p>
+  <h1>Road Trip Stop — <em>Birmingham, AL</em></h1>
+  <p class="subtitle">
+    The "Magic City" built on iron and steel, and the single most concentrated civil rights landscape on this trip — 16th Street Baptist Church, Kelly Ingram Park, and the A.G. Gaston Motel all sit within a five-minute walk. Sun Ra was born here; so was Angela Davis.<br>
+    10 categories · 5 picks each (fewer where the research found honest gaps) · Sources: Atlas Obscura, TasteAtlas, Wikipedia/BhamWiki, StyleBlueprint, Soul Grown, My Coffee Explorer, Bham Now, targeted web search
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>42 (2013)</strong> — Rickwood Field, the oldest standing pro ballpark in the country, doubled for several historic fields in the Jackie Robinson biopic; the Tutwiler Hotel lent a scene too.</li>
+        <li><strong>4 Little Girls (1997)</strong> — Spike Lee's documentary on the 16th Street Baptist Church bombing, shot at the church itself.</li>
+        <li><strong>Stay Hungry (1976)</strong> — Arnold Schwarzenegger and Jeff Bridges, shot around the Bank for Savings Building, Mountain Brook Parkway, and the Lyric Theatre.</li>
+        <li><strong>Ravagers (1979)</strong> — a post-apocalyptic gunfight staged inside the newly closed Sloss Furnaces.</li>
+        <li><strong>Sword of Trust (2019)</strong> — Marc Maron comedy shot around Southside and Irondale.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Angela Davis</strong> — Marxist-feminist political theorist, raised on Dynamite Hill amid ~40 unsolved Klan bombings targeting Black families.</li>
+        <li><strong>Sun Ra</strong> — Afrofuturist jazz bandleader, born Herman Blount; accessed esoteric texts as a teen through the Black Masonic Lodge library.</li>
+        <li><strong>Fannie Flagg</strong> — author of Fried Green Tomatoes at the Whistle Stop Cafe, set partly in present-day Birmingham.</li>
+        <li><strong>Emmylou Harris</strong> — 14-time Grammy-winning country/Americana songwriter.</li>
+        <li><strong>Louise Fletcher</strong> — Oscar-winning actress, Nurse Ratched in One Flew Over the Cuckoo's Nest.</li>
+        <li><strong>Erskine Hawkins</strong> — big-band trumpeter, composer of "Tuxedo Junction," named for a Birmingham streetcar/jazz intersection.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="pc-note">
+  <div class="pc-note-inner">
+    <strong>Correction note:</strong> Big Fish (2003) is often assumed to be a Birmingham-area film given its Alabama setting, but was shot almost entirely in Wetumpka, Montgomery, Tallassee, and on Jackson Lake Island. Selma (2014) dramatizes events tied to Birmingham's civil rights struggle but was filmed around Atlanta, GA and in Selma/Montgomery, AL — not Birmingham itself.
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- 1. BOOKSTORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <!-- 2. RECORD STORES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">2 picks — honest gap</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <!-- 3. COFFEE -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <!-- 4. PASTRY -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <!-- 5. DISHES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <!-- 6. GIFTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <!-- 7. SIGHTS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + 3 bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <!-- 8. VENUES -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <!-- 9. SOUVENIRS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">4 picks — honest gap</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <!-- 10. DIY ELECTRONICS -->
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔌</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">3 picks — honest gap</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTES -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Current Status Notes:</strong><br>
+    16th Street Baptist Church remains an active congregation with roughly 2,000 weekly attendees — guided-tour access can be affected by services and events, so confirm hours before the May 9–11, 2026 visit window.<br><br>
+    Furnace Fest at Sloss Furnaces went dormant 2004–2018, revived 2019–2024, and announced a 2025 return after initially billing 2024 as its final run. Confirm current-year dates before planning around it.
+  </div>
+</div>
+
+<!-- GAP NOTES -->
+<div class="gap-section">
+  <h2>Honest Gaps</h2>
+  <div class="gap-inner">
+    <strong>Bookstores — no true infoshop:</strong> the mandatory anarchist/radical/infoshop search turned up no dedicated storefront in Birmingham. Burdock Book Collective (intersectional feminist, Alabama Books to Prisons program) is the closest analogue — politically organized but not anarchist-identified, matching a pattern seen elsewhere on this Southern-corridor leg where identity-politics and mutual-aid infrastructure substitutes for a classic coastal infoshop.
+  </div>
+  <div class="gap-inner">
+    <strong>Record stores — thin scene:</strong> research surfaced exactly two dedicated brick-and-mortar vinyl retailers in Birmingham proper (Seasick Records, Renaissance Records). Padding to five would mean reaching for general instrument shops rather than vinyl-focused stores.
+  </div>
+  <div class="gap-inner">
+    <strong>DIY electronics — thin scene:</strong> two genuine makerspaces (MAKEbhm, Red Mountain Makers) and one vintage-gear shop (Birmingham Music Exchange, technically in neighboring Irondale), but no dedicated synth shop and no second hackerspace with published open hours.
+  </div>
+  <div class="gap-inner">
+    <strong>Souvenirs — thin purpose-built retail:</strong> no dedicated Birmingham shop built around locally screen-printed apparel or prints surfaced, the way Plaza District shops function in Oklahoma City. The strongest picks here cross-list from bookstores, gifts, and sights.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Sun Ra's Birmingham years — Fess Whatley's Industrial High School music program and the Black Masonic Lodge library that gave him access to esoteric texts — is a genuinely rich standalone thread connecting the music, horror/occult, and civil-rights interests in one figure. Worth a dedicated Field Notes entry.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      The Fourth Avenue Historic District extends the trip's black-business-district-erasure thread (Deep Deuce in OKC, Freedman's Town in Dallas) but with a variant mechanism — integration-era dispersal rather than a single highway project. Worth flagging to Greg as a genuine deviation in the pattern, not noise.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Red Mountain Makers sitting at 810 4th Avenue North — literally inside the Fourth Avenue Historic District — is an unplanned, organic pairing of the DIY-electronics and civil-rights threads. Worth checking whether Richmond's St. Luke Bank district (also on the black-business-district-erasure thread, not yet guided) has anything comparable nearby.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 2 Guide-Led Stop &nbsp;·&nbsp; Birmingham, AL &nbsp;·&nbsp; Leg 4 of 9 (Austin → Philadelphia)<br>
+  Built ahead of the May 9–11, 2026 visit — full rebuild replacing a pre-v2.3 interactive checklist that predated Category 10 (DIY Electronics)<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Burdock Book Collective",
+      tags: [TAG('i-political','Infoshop-Adjacent'), TAG('i-books','Feminist Press')],
+      desc: "An intersectional feminist bookstore in Forest Park running the Queer Lit Book Club and the Alabama Books to Prisons program — the closest thing Birmingham has to a politically organized infoshop (see honest gap below).",
+      meta: [["📍","Forest Park"],["💰","$0–30"],["⏱","45 min"],["🕐","Afternoon; evening for book club"]],
+      cite: "StyleBlueprint"
+    },
+    {
+      name: "Thank You Books",
+      tags: [TAG('i-books','Well-Known Pick')],
+      desc: "Opened December 2019 as a self-described 'community for authors and readers'; featured in the New York Times, Garden & Gun, and Book Riot, with a steady book-club and author-event calendar.",
+      meta: [["📍","Crestwood"],["💰","$0–30"],["⏱","45 min"],["🕐","Afternoon; evening for events"]],
+      cite: "StyleBlueprint"
+    },
+    {
+      name: "Jim Reed Books",
+      tags: [TAG('i-books','Rare & Antique'), TAG('i-horror','Nostalgia Museum')],
+      desc: "Rare and antique books alongside the in-store 'Museum of Fond Memories' — vintage magazines, posters, and oddities. Owner Jim Reed hosts the Red Clay Diary podcast. Atlas Obscura-listed.",
+      meta: [["📍","Downtown"],["💰","$5–100+"],["⏱","45–60 min"],["🕐","Afternoon"]],
+      cite: "Atlas Obscura, StyleBlueprint"
+    },
+    {
+      name: "Little Professor Bookshop",
+      tags: [TAG('i-books','Since 1972')],
+      desc: "Established 1972, relocated into a larger two-story space on 18th Street; membership discounts, author talks, book clubs, and children's story time.",
+      meta: [["📍","Homewood"],["💰","$0–30"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "StyleBlueprint"
+    },
+    {
+      name: "The Alabama Booksmith",
+      tags: [TAG('i-books','Every Book Signed'), TAG('i-diy','Odd Curation')],
+      desc: "Every single book in the store is signed by its author; runs a Signed First Editions Club with a curated annual selection — an unusually specific curatorial identity.",
+      meta: [["📍","Homewood"],["💰","$15–40"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "StyleBlueprint"
+    }
+  ],
+  records: [
+    {
+      name: "Seasick Records",
+      tags: [TAG('i-punk','Punk/Hardcore Section'), TAG('i-diy','Staff Picks Culture')],
+      desc: "New and used vinyl with an explicit punk/hardcore section alongside blues, funk, jazz, and metal; staff-picks culture and Seasick Exclusives limited variants give it real DIY-scene credibility.",
+      meta: [["📍","3131 5th Ave S, Southside"],["💰","$5–40"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "seasickbham.com, keepthemspinning.com"
+    },
+    {
+      name: "Renaissance Records Inc",
+      tags: [TAG('i-diy','Buy/Sell/Trade')],
+      desc: "Longstanding independent buy/sell/trade shop, a practical first stop if you're carrying records to sell as well as buy.",
+      meta: [["📍","2020 11th Ave S"],["💰","$5–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "keepthemspinning.com, vinylpackman.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Prevail Union",
+      tags: [TAG('i-food','Top-Rated Downtown')],
+      desc: "Polished downtown espresso/drip bar sourcing from Montgomery-based Prevail Coffee Roasters — the most consistently top-rated coffee stop in the city.",
+      meta: [["📍","420 20th St N, Downtown"],["💰","$4–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Punch Love Coffee",
+      tags: [TAG('i-food','Multi-Roaster Program')],
+      desc: "Multi-roaster program (Proud Mary, Thankfully, Junto) with a pastry case supplied by Last Call Baking Co. — pairs naturally with the Avondale record/venue corridor.",
+      meta: [["📍","Avondale"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Alicia's Coffee Shop",
+      tags: [TAG('i-political','A.G. Gaston Motel'), TAG('i-food','Black-Owned')],
+      desc: "Black-owned coffee shop operating inside the restored A.G. Gaston Motel; the signature Room 30 latte is named for the SCLC's operational headquarters room during the 1963 campaign, bombed by white supremacists on May 10, 1963.",
+      meta: [["📍","1510 5th Ave N, Civil Rights District"],["💰","$4–8"],["⏱","30–45 min"],["🕐","Morning, paired with Kelly Ingram Park"]],
+      cite: "mycoffeeexplorer.com, Wikipedia"
+    },
+    {
+      name: "June Coffee",
+      tags: [TAG('i-food','Black Sesame Date Latte')],
+      desc: "Specialty roaster with a Black Sesame Date Latte as its signature order — opened its cafe in 2022.",
+      meta: [["📍","213 25th St N, Downtown"],["💰","$5–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Domestique Coffee – Dawn Patrol",
+      tags: [TAG('i-food','Fluid-Bed Roast'), TAG('i-diy','Cycling Culture')],
+      desc: "Fluid-bed-roasted beans with a road-cycling community built into the shop's identity — the kind of independent, single-purpose roaster the coffee interest is built for.",
+      meta: [["📍","1724 27th Ct S, Homewood"],["💰","$4–7"],["⏱","30 min"],["🕐","Early morning"]],
+      cite: "mycoffeeexplorer.com"
+    }
+  ],
+  pastry: [
+    {
+      name: "Bandit Pâtisserie",
+      tags: [TAG('i-food','Well-Known Benchmark')],
+      desc: "Founded 2013 by Kristen Hall; the almond croissant is the best-seller and widely cited as the city's benchmark. Also serves Domestique-roasted coffee.",
+      meta: [["📍","2323 1st Ave N, Downtown"],["💰","$4–10"],["⏱","30 min"],["🕐","Morning, before they sell out"]],
+      cite: "soul-grown.com"
+    },
+    {
+      name: "Last Call Baking Co.",
+      tags: [TAG('i-food','Butter Croissant')],
+      desc: "Owner Chanah Willis calls the butter croissant 'the lifeblood' of the shop; the canelé is the other order worth the trip. Also supplies Punch Love Coffee's pastry case.",
+      meta: [["📍","25th Street area"],["💰","$4–10"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "birminghamal.gov, soul-grown.com"
+    },
+    {
+      name: "Continental Bakery",
+      tags: [TAG('i-food','Since 1985')],
+      desc: "Operating since 1985, adjoining the Chez Lulu café; ham-and-cheese croissants, tartes, and decorated shortbread, plus made-to-order Lane Cakes.",
+      meta: [["📍","English Village"],["💰","$4–10"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "soul-grown.com"
+    },
+    {
+      name: "Hello Bakery",
+      tags: [TAG('i-food','Laminated Cinnamon Roll')],
+      desc: "Opened 2022 by Wim Miree (20+ years at Continental Bakery). The laminated cinnamon roll, built on croissant dough, is the reason to show up early.",
+      meta: [["📍","Crestline Gardens"],["💰","$4–8"],["⏱","20–30 min"],["🕐","Morning — sells out"]],
+      cite: "soul-grown.com"
+    },
+    {
+      name: "Church Street Coffee & Books",
+      tags: [TAG('i-food','Breakup Cookie'), TAG('i-books','Cafe + Bookstore')],
+      desc: "A combined café and bookstore built around the 'Breakup Cookie,' with baristas doubling as informal reader's-advisory staff.",
+      meta: [["📍","Mountain Brook"],["💰","$4–10"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "StyleBlueprint"
+    }
+  ],
+  dishes: [
+    {
+      name: "Alabama White Sauce Chicken @ Saw's BBQ",
+      tags: [TAG('i-food','Regional Icon')],
+      desc: "A mayonnaise-and-vinegar-based barbecue sauce distinctive to north/central Alabama, applied to smoked chicken — the single most identifiable regional dish on this leg of the trip.",
+      meta: [["📍","Multiple Birmingham-area locations"],["💰","$10–18"],["⏱","45 min"],["🕐","Lunch"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Lane Cake @ Continental Bakery / Highlands Bar & Grill",
+      tags: [TAG('i-food','Bourbon Cake'), TAG('i-drinks','Bourbon-Soaked'), TAG('i-books','To Kill a Mockingbird')],
+      desc: "A bourbon-soaked coconut-custard layer cake invented by Emma Rylander Lane of Clayton, AL, and immortalized in Harper Lee's To Kill a Mockingbird — a literature/bourbon/pastry triple match.",
+      meta: [["📍","Continental Bakery (order ahead) / Highlands Bar & Grill"],["💰","$6–12/slice, $45+ whole"],["⏱","N/A"],["🕐","Anytime"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Fried Green Tomatoes @ The Bright Star",
+      tags: [TAG('i-food','Alabama\'s Oldest Restaurant'), TAG('i-books','Fannie Flagg')],
+      desc: "Alabama's oldest continuously operating restaurant (est. 1907, Bessemer, just southwest of Birmingham proper) serves a straightforwardly excellent version of the dish that gave Birmingham-born Fannie Flagg's novel its title.",
+      meta: [["📍","304 19th St N, Bessemer"],["💰","$8–14"],["⏱","1 hr incl. drive"],["🕐","Lunch or dinner"]],
+      cite: "Wikipedia — Fannie Flagg"
+    },
+    {
+      name: "Fried Catfish @ Johnny's Restaurant",
+      tags: [TAG('i-food','TasteAtlas Top-Rated')],
+      desc: "Buttermilk-soaked, cornmeal-dredged catfish is one of TasteAtlas's top-rated Alabama dishes, typically served with hush puppies and coleslaw.",
+      meta: [["📍","Homewood"],["💰","$14–22"],["⏱","1 hr"],["🕐","Dinner"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "Meat-and-Three @ Niki's West",
+      tags: [TAG('i-food','Since 1957')],
+      desc: "The vegetable-forward Southern cafeteria format at its most iconic Birmingham address — a rotating steam-table of a dozen-plus vegetable sides against one meat, cash-and-carry.",
+      meta: [["📍","Birmingham"],["💰","$10–15"],["⏱","45 min"],["🕐","Lunch"]],
+      cite: "local press"
+    }
+  ],
+  gifts: [
+    {
+      name: "Bee Creek Farm Honey",
+      tags: [TAG('i-bees','Local Apiary')],
+      desc: "Locally sourced honey from Vincent, AL, sold at Birmingham's Pepper Place Market and area specialty shops — the direct hit on the bee interest.",
+      meta: [["📍","Pepper Place Market / specialty shops"],["💰","$6–18"],["⏱","N/A"],["🕐","Saturday market morning"]],
+      cite: "madeinalabama.com"
+    },
+    {
+      name: "Match Chocolate",
+      tags: [TAG('i-food','Bean-to-Bar')],
+      desc: "Small-batch bean-to-bar chocolate maker based in Birmingham; bars, pastries, and truffles sold at pop-up events.",
+      meta: [["📍","Pepper Place Market pop-ups"],["💰","$8–14"],["⏱","N/A"]],
+      cite: "StyleBlueprint"
+    },
+    {
+      name: "Alabama Sunshine White BBQ & Hot Sauces",
+      tags: [TAG('i-food','Farm-to-Table')],
+      desc: "Farm-to-table white barbecue sauce and hot sauces made with locally sourced produce — a shelf-stable extension of the Alabama-white-sauce dish pick above.",
+      meta: [["📍","Birmingham specialty shops (made in Fayette, AL)"],["💰","$6–10"],["⏱","N/A"]],
+      cite: "styleblueprint.com"
+    },
+    {
+      name: "Priester's Pecans",
+      tags: [TAG('i-food','Alabama-Grown')],
+      desc: "Alabama-grown pecans — plain, roasted, salted, chocolate-covered, or brittle — the closest thing to a fruit/produce-native mailable gift the region offers.",
+      meta: [["📍","Alabama Goods and specialty shops"],["💰","$8–20"],["⏱","N/A"]],
+      cite: "madeinalabama.com"
+    },
+    {
+      name: "Wickles Pickles",
+      tags: [TAG('i-food','90-Year Recipe')],
+      desc: "Jarred, shelf-stable spicy pickle chips built on a 90-year-old Alabama recipe — an easy, sturdy thing to mail.",
+      meta: [["📍","Widely stocked Birmingham grocers"],["💰","$5–8"],["⏱","N/A"]],
+      cite: "styleblueprint.com"
+    }
+  ],
+  sights: [
+    {
+      name: "16th Street Baptist Church",
+      tags: [TAG('i-political','Well-Known Must-See'), TAG('i-horror','Film Location')],
+      desc: "The organizational headquarters of the Birmingham civil rights movement, where the September 15, 1963 Klan bombing killed Addie Mae Collins, Carole Robertson, Cynthia Wesley, and Denise McNair. National Historic Landmark, UNESCO tentative World Heritage list. Featured in Spike Lee's 4 Little Girls (1997).",
+      meta: [["📍","1530 6th Ave N"],["💰","Free (donations); tour ~$10"],["⏱","45–60 min"],["🕐","Weekday mornings for tours"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Kelly Ingram Park",
+      tags: [TAG('i-political','Children\'s Crusade Site')],
+      desc: "The staging ground for the 1963 Children's Crusade, where Bull Connor's police turned firehoses and dogs on child demonstrators — images that helped force passage of the Civil Rights Act of 1964. The Four Spirits sculpture (2013) commemorates the bombing victims.",
+      meta: [["📍","Between 16th St Baptist Church and BCRI"],["💰","Free"],["⏱","30–45 min"],["🕐","Morning, paired with the church"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Birmingham Civil Rights Institute",
+      tags: [TAG('i-political','Smithsonian Affiliate'), TAG('i-books','Oral History Project')],
+      desc: "Opened 1992; self-directed permanent exhibit walks a Birmingham-specific account of the 1963 campaign, including an Oral History Project and the Congressional Gold Medal awarded in 2013 for the bombing victims. Alicia's Coffee Shop, a few blocks away in the A.G. Gaston Motel, is the natural coffee pairing.",
+      meta: [["📍","520 16th St N"],["💰","~$15"],["⏱","2 hrs"],["🕐","Midday"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Sloss Furnaces National Historic Landmark",
+      tags: [TAG('i-horror','Ghost Lore'), TAG('i-punk','Furnace Fest')],
+      desc: "Operating 1882–1971, the nation's only 20th-century blast-furnace site preserved as a museum; local ghost lore plus night tours feed the horror interest, while its role hosting Furnace Fest — a hardcore/metalcore festival — ties it directly to the punk interest too. Ravagers (1979) staged a gunfight here.",
+      meta: [["📍","20 32nd St N"],["💰","Free (museum)"],["⏱","1–1.5 hrs"],["🕐","Golden hour, or night for ghost tours"]],
+      cite: "Atlas Obscura, Wikipedia"
+    },
+    {
+      name: "Vulcan Park & Museum",
+      tags: [TAG('i-diy','World\'s Largest Cast-Iron Statue')],
+      desc: "The world's largest cast-iron statue, built for the 1904 St. Louis World's Fair to represent Birmingham's iron industry before being relocated home — the city's most recognizable icon and an observation-deck skyline view worth the ticket.",
+      meta: [["📍","1701 Valley View Dr"],["💰","$6–9"],["⏱","1–1.5 hrs"],["🕐","Sunset for the skyline view"]],
+      cite: "general reference"
+    },
+    {
+      name: "Fourth Avenue Historic District",
+      tags: [TAG('i-political','Thread Anchor')],
+      desc: "Birmingham's Jim Crow-era Black business, entertainment, and professional district (1908–1941), listed on the National Register in 1982. The Colored Masonic Temple and Alabama Penny Savings Bank / Pythian Temple still stand as 'the only place left in the city which tells the story of the Jim Crow years in Birmingham.' Red Mountain Makers (Category 10) now sits inside its footprint.",
+      meta: [["📍","1600–1800 blocks of 4th Ave N"],["💰","Free"],["⏱","45 min walk"],["🕐","Morning"]],
+      cite: "Wikipedia — Fourth Avenue Historic District"
+    },
+    {
+      name: "Ruffner Mountain Nature Preserve",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "1,038 acres of reclaimed iron-ore and limestone mining land with 14+ miles of trails, fossil beds, and a LEED-certified visitor center housing native raptors and reptiles — the natural-attraction balance pick, and genuinely in-city rather than a drive-out.",
+      meta: [["📍","South East Lake"],["💰","Free"],["⏱","1–2 hrs"],["🕐","Morning"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Rickwood Field",
+      tags: [TAG('i-diy','Film Location'), TAG('i-political','Negro League History')],
+      desc: "Opened 1910, the oldest professional baseball park still standing in the country; former home of the Negro League's Birmingham Black Barons (Willie Mays's first pro team, 1948). MLB played its first-ever regular-season Alabama game here in June 2024. Filmed for 42 (2013) and Cobb (1994).",
+      meta: [["📍","1137 2nd Ave W"],["💰","Free grounds most days"],["⏱","1 hr"],["🕐","Weekday, or the Rickwood Classic"]],
+      cite: "Wikipedia"
+    }
+  ],
+  venues: [
+    {
+      name: "The Nick",
+      tags: [TAG('i-punk','30+ Years')],
+      desc: "'Birmingham's Dirty Little Secret' — a 21+ private club running for over 30 years, booking blues, punk, emo, metal, and everything between, functionally the city's most durable DIY-adjacent stage.",
+      meta: [["📍","2514 10th Ave S"],["💰","$5 annual membership + door"],["⏱","3 hrs"],["🕐","Late night (music from ~10pm)"]],
+      cite: "thenickrocks.com"
+    },
+    {
+      name: "Saturn",
+      tags: [TAG('i-punk','Avondale Anchor')],
+      desc: "Larger-capacity Avondale room used by DIY Birmingham for bigger punk and dance-adjacent bills; anchors the Avondale nightlife corridor alongside Punch Love Coffee and Avondale Brewing.",
+      meta: [["📍","Avondale"],["💰","$10–30"],["⏱","3 hrs"],["🕐","Night"]],
+      cite: "diybirmingham.com"
+    },
+    {
+      name: "Furnace Fest @ Sloss Furnaces",
+      tags: [TAG('i-punk','Hardcore Festival'), TAG('i-horror','Industrial Ruins')],
+      desc: "Founded 2000 by Takehold Records' Chad Johnson, dormant 2004–2018, revived 2019, running through 2024 with a 2025 return announced; a hardcore/metalcore/post-hardcore festival staged inside the blast-furnace ruins.",
+      meta: [["📍","Sloss Furnaces"],["💰","Weekend pass varies"],["⏱","Full day"],["🕐","Fall (dates vary yearly — verify)"]],
+      cite: "Wikipedia — Furnace Fest"
+    },
+    {
+      name: "DIY Birmingham",
+      tags: [TAG('i-punk','Grassroots Collective'), TAG('i-political','Anti-Industry Mission')],
+      desc: "Grassroots collective explicitly organized to 'break out of the social and economic hierarchies of the traditional music industry,' booking punk, hardcore, emo, shoegaze, industrial/noise, EBM/techno, and metal shows at The Firehouse, Saturn, and house shows citywide.",
+      meta: [["📍","Various — check socials"],["💰","Free–$10"],["⏱","Varies"],["🕐","Check DIY Birmingham calendar"]],
+      cite: "diybirmingham.com"
+    },
+    {
+      name: "The Firehouse",
+      tags: [TAG('i-punk','All-Ages Home Base')],
+      desc: "DIY Birmingham's primary all-ages show venue — the genuine house-show-adjacent stage underneath the bigger Saturn/Sloss bills.",
+      meta: [["📍","Birmingham"],["💰","$5–15"],["⏱","Evening"],["🕐","Night, check calendar"]],
+      cite: "diybirmingham.com"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Alabama Goods",
+      tags: [TAG('i-diy','One-Stop Shop'), TAG('i-food','Local Pantry')],
+      desc: "Vintage-style 'Greetings from Birmingham' postcards, a B-Ham magnet, and a Vulcan sticker alongside honey, BBQ sauces, pickles, pottery, and books — the closest thing Birmingham has to a one-stop mailable-souvenir shop.",
+      meta: [["📍","2933 18th St S, Homewood"],["💰","$5–40"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "alabamagoods.com"
+    },
+    {
+      name: "Vulcan Park & Museum Gift Shop",
+      tags: [TAG('i-diy','Cast-Iron Icon')],
+      desc: "On-site shop for Birmingham's iron-statue icon — cast-iron-themed goods tie directly back to the city's founding industry.",
+      meta: [["📍","1701 Valley View Dr"],["💰","$5–30"],["⏱","15–20 min"],["🕐","Paired with the tower visit"]],
+      cite: "general reference"
+    },
+    {
+      name: "Jim Reed Books — Museum of Fond Memories",
+      tags: [TAG('i-books','Vintage Ephemera'), TAG('i-horror','Nostalgia Museum')],
+      desc: "Vintage Birmingham postcards, magazines, and ephemera inside the shop's in-house nostalgia museum — a more meaningful souvenir than a rack magnet.",
+      meta: [["📍","Downtown"],["💰","$5–50"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Alabama Peanut Company",
+      tags: [TAG('i-food','Since 1907')],
+      desc: "Fresh roasted and boiled peanuts since 1907, sold from a historic Morris Avenue storefront — an edible souvenir with more local specificity than a magnet.",
+      meta: [["📍","Morris Ave, Downtown"],["💰","$5–15"],["⏱","15–20 min"],["🕐","Afternoon"]],
+      cite: "styleblueprint.com"
+    }
+  ],
+  electronics: [
+    {
+      name: "MAKEbhm",
+      tags: [TAG('i-diy','Creative Workspace')],
+      desc: "Creative-workspace makerspace with ceramics, screen printing, stained glass, woodworking, and digital-tools studios; 24/7 coworking access for members.",
+      meta: [["📍","4000 3rd Ave S, Avondale"],["💰","Membership-based"],["⏱","Half-day tour"],["🕐","By appointment"]],
+      cite: "makebhm.com"
+    },
+    {
+      name: "Red Mountain Makers",
+      tags: [TAG('i-diy','Electronics Lab'), TAG('i-political','Fourth Ave District')],
+      desc: "7,800 sq ft volunteer-run nonprofit hackerspace with a dedicated electronics lab plus metal, wood, and textile shops. Sits at 810 4th Avenue North — physically inside the Fourth Avenue Historic District footprint, an organic link between the DIY-electronics and civil-rights threads.",
+      meta: [["📍","810 4th Ave N"],["💰","Tiered membership"],["⏱","Tue/Thu 6–8pm, Sat/Sun 2–6pm"],["🕐","Weekend afternoon"]],
+      cite: "redmountainmakers.org"
+    },
+    {
+      name: "Birmingham Music Exchange",
+      tags: [TAG('i-diy','Vintage Gear')],
+      desc: "Musician-owned shop trading in vintage guitars, amps, and pedals — the closest Birmingham-area analogue to a dedicated gear/pedal shop for the synth/DIY-electronics interest.",
+      meta: [["📍","Irondale"],["💰","$50–2,000+"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "bhammusicexchange.com, reverb.com"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

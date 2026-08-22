@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richmond, VA — Road Trip Stop Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+    text-align: right;
+  }
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Trip 2 (Guide-Led) &nbsp;·&nbsp; ... → Charlotte → <strong style="color:var(--cream)">Richmond</strong> → Washington, D.C. → ...</p>
+  <h1>Road Trip Stop — <em>Richmond, VA</em></h1>
+  <p class="subtitle">
+    A former Confederate capital that spent the 2020s tearing down its own monuments, built on top of Jackson Ward — the segregation-era Black business district gutted by the same urban-renewal-plus-interstate playbook seen in Oklahoma City and Dallas.<br>
+    10 categories · Sources: Atlas Obscura, TasteAtlas, Eater, Timeout, Wikipedia, and others · 46 total picks across the guide
+  </p>
+</header>
+
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Hannibal (2001)</strong> — The abandoned Virginia Electric and Power Co. hydroelectric plant (1904-1963) on Belle Isle appears in the film; the ruins are freely walkable today as part of the James River Park System.</li>
+        <li><strong>Lincoln (2012)</strong> — Thomas Jefferson-designed capitol used for interior sequences; Richmond stood in extensively for 1860s Washington, D.C. Daniel Day-Lewis won his third Best Actor Oscar for the role.</li>
+        <li><strong>Loving (2016)</strong> — Dramatization of Loving v. Virginia, the 1967 Supreme Court case that struck down interracial-marriage bans; filmed largely in central Virginia, close to the case's Caroline County origins north of Richmond.</li>
+        <li><strong>Mercy Street (2016)</strong> — PBS Civil War-hospital drama set partly around Richmond's wartime medical infrastructure (echoing the real Chimborazo Hospital in Church Hill, once the Confederacy's largest military hospital).</li>
+        <li><strong>TURN: Washington's Spies (2014)</strong> — Revolutionary War spy-ring series that used Richmond-area locations for its Colonial-era setting.</li>
+        <li style="color:var(--muted);font-style:italic;">Correction: Gone with the Wind is popularly but incorrectly linked to Richmond: local legend claims the grand staircase at the Jefferson Hotel inspired Tara's staircase in the film. The hotel's staircase is real and worth seeing, but GWTW was shot on MGM soundstages in California, not in Richmond, and the 'inspiration' claim is unverified lore rather than documented production history.</li>
+        
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born / Raised Here</h3>
+      <ul>
+        <li><strong>D'Angelo</strong> — Neo-soul pioneer, born and raised in Richmond's Southside in a Pentecostal preacher's household; died October 2025 and was buried at Richmond's Mount Calvary Cemetery after a service at Saint Paul's Baptist Church.</li>
+        <li><strong>GWAR (founded by Dave Brockie and collaborators)</strong> — Formed at the Richmond Dairy, a former bottling plant turned artist space; the band's monster-costume shock-rock aesthetic runs directly through the traveler's horror and punk interests. Slave Pit Inc., the band's art/effects studio, and GWARbar in Jackson Ward keep the connection live in the city today.</li>
+        <li><strong>Arthur Ashe</strong> — Tennis champion and civil-rights figure; his 1996 statue is now the sole monument remaining on Monument Avenue after the 2020-2022 removal of the Confederate statues.</li>
+        <li><strong>Vince Gilligan</strong> — Creator of Breaking Bad and Better Call Saul, born in Richmond.</li>
+        <li><strong>Edgar Allan Poe</strong> — Not born in Richmond (Boston) but raised there from infancy after his mother's death; his formative and most productive Richmond years are the direct subject of the Poe Museum. Do not conflate birthplace with the Richmond connection.</li>
+        <li><strong>Tom Wolfe</strong> — New Journalism pioneer and novelist (The Right Stuff, The Bonfire of the Vanities), born in Richmond.</li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📚</span>
+      <h2 class="cat-title">Bookstores</h2>
+      <span class="cat-count">4 picks (honest gap — see note below)</span>
+    </div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎵</span>
+      <h2 class="cat-title">Record Stores</h2>
+      <span class="cat-count">4 picks (honest gap — see note below)</span>
+    </div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">☕</span>
+      <h2 class="cat-title">Coffee Shops</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🥐</span>
+      <h2 class="cat-title">Pastry &amp; Bakeries</h2>
+      <span class="cat-count">4 picks (honest gap — see note below)</span>
+    </div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🍽️</span>
+      <h2 class="cat-title">Unique Dishes to Eat</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">📦</span>
+      <h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">👁️</span>
+      <h2 class="cat-title">Sights &amp; Things to Do</h2>
+      <span class="cat-count">5 picks + 4 bonus</span>
+    </div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🎸</span>
+      <h2 class="cat-title">Punk &amp; Indie Rock Venues</h2>
+      <span class="cat-count">5 picks</span>
+    </div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🧲</span>
+      <h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2>
+      <span class="cat-count">3 picks (honest gap — see note below)</span>
+    </div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header">
+      <span class="cat-emoji">🔧</span>
+      <h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2>
+      <span class="cat-count">2 picks (honest gap — see note below)</span>
+    </div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Current Status Note:</strong><br>
+    Sub Rosa Bakery (Church Hill) is currently closed after fire damage; confirmed via a direct site fetch this session. Check their Instagram before planning a stop -- WPA Bakery is a solid backup in the meantime.
+  </div>
+</div>
+
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap (bookstores):</strong> The mandatory anarchist/radical/infoshop secondary search did not turn up a confirmed storefront infoshop in Richmond (constrained by this session's search-tooling limits as well as a genuine scarcity of storefront-model spaces). Richmond's leftist/mutual-aid infrastructure appears to run through networks like Food Not Bombs RVA and Richmond DSA rather than a bookstore-model space -- the same co-op-not-infoshop pattern the OKC guide documented, not a research failure to paper over.
+    <br><br>
+    <strong>Honest gap (electronics):</strong> Category 10 carries two picks, not five. HackRVA is a strong, confirmed community makerspace, but no dedicated synth or guitar-pedal retailer, hackerspace-adjacent-to-gear-shop pairing, or electronics-surplus shop could be confirmed for Richmond this session. VCU's da Vinci Center fills an institutional gap but isn't a walk-in public resource. Padding to five would misrepresent the city.
+    <br><br>
+    <strong>Honest gap (souvenirs):</strong> Category 9 carries three picks. A dedicated local-artist screen-print/postcard souvenir shop on the Shop Good (OKC) or Uniquely Utah (SLC) model could not be confidently identified for Richmond this session -- Quirk Gallery and World of Mirth cover the ground reasonably well, but this is a lower-confidence category pending re-verification.
+  </div>
+</div>
+
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Research note:</strong><br>
+    Strange Matter, Richmond's legendary all-ages DIY punk venue, closed in 2016. It isn't listed as a current pick but its closure is worth knowing -- Gallery5, Cobra Cabana, and Get Tight Lounge are the closest things to its successor in the current scene.<br><br>This session's live web-search tool was exhausted and most general search engines returned robots.txt/proxy errors, so several picks (marked in their source field) draw on general/local knowledge rather than a freshly re-verified 2026 source. Direct-fetch-confirmed picks are marked accordingly. Recommend confirming hours for lower-confidence picks before visiting.
+  </div>
+</div>
+
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      Pair the Maggie L. Walker National Historic Site with Evergreen Cemetery (where Walker and John Mitchell Jr. are buried) and a walk down 2nd Street through Jackson Ward — the single richest half-day thread of the whole guide, and it's free.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      This guide's analytical thread — Black-business-district erasure via urban renewal plus interstate construction — is now CONFIRMED for Richmond (St. Luke Penny Savings Bank / Jackson Ward, destroyed in large part by the Richmond-Petersburg Turnpike, now I-95). It links directly to Deep Deuce in Oklahoma City and Freedman's Town in Dallas — worth a standalone comparative Field Notes entry once all three guides exist.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      GWAR's horror-punk empire (GWARbar, Slave Pit Inc.) is Richmond's clearest punk/horror crossover — worth checking whether Washington, D.C., the next stop, has a comparable band-run commercial venue tying its DIY scene to a walk-in spot.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Trip 2 Guide-Led Stop &nbsp;·&nbsp; Richmond, VA &nbsp;·&nbsp; Leg 7 of 13 (Charlotte → Richmond → Washington, D.C.)<br>
+  Part of a 13-city parallel batch run for Trip 2 (Austin → Philadelphia, May 2026)<br>
+  Generated with City Road Trip Guide v2.8 — August 20, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Chop Suey Books",
+      tags: [TAG('i-books','Literary'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Richmond's flagship indie bookstore since 1998, new and used stacked side by side in a cozy Carytown storefront; regular author events and a house cat culture that's practically a neighborhood mascot.",
+      meta: [["📍","2913 W Cary St, Richmond, VA"],["💰","$0-30"],["⏱","45 min-1 hr"],["🕐","Afternoon"]],
+      cite: "long-running RVA indie institution"
+    },
+    {
+      name: "Fountain Bookstore",
+      tags: [TAG('i-books','Literary')],
+      desc: "Richmond's oldest surviving independent bookstore (since 1978), with a long history of author events and signings tying it into the city's literary calendar.",
+      meta: [["📍","1312 E Cary St, Richmond, VA"],["💰","$0-35"],["⏱","45 min"],["🕐","Afternoon; evening for a signing"]],
+      cite: "long-running RVA indie institution"
+    },
+    {
+      name: "Black Swan Books & Music",
+      tags: [TAG('i-books','Literary'),TAG('i-horror','Horror/Occult'),TAG('i-diy','Maker/DIY')],
+      desc: "Antiquarian and used books shelved alongside used vinyl -- rare volumes and old ephemera give it real horror/occult-browsing potential alongside the literary stock.",
+      meta: [["📍","2601 W Cary St, Richmond, VA"],["💰","$5-100+"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "long-running RVA antiquarian shop"
+    },
+    {
+      name: "bbgb tales for kids",
+      tags: [TAG('i-books','Literary')],
+      desc: "Beloved independent children's bookstore rounding out Carytown's book-shopping strip -- not a core-interest match but a genuine neighborhood institution worth the balance.",
+      meta: [["📍","Carytown, Richmond, VA"],["💰","$0-25"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "long-running RVA children's indie"
+    }
+  ],
+  records: [
+    {
+      name: "Steady Sounds Records",
+      tags: [TAG('i-punk','Punk/DIY'),TAG('i-diy','Maker/DIY'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Vinyl-first shop with a punk/hardcore/experimental leaning and real ties to Richmond's DIY show circuit, including in-store performances.",
+      meta: [["📍","210 W Broad St, Richmond, VA"],["💰","$5-40"],["⏱","45 min-1 hr"],["🕐","Afternoon; check for in-stores"]],
+      cite: "long-running RVA record shop, Broad St Arts District"
+    },
+    {
+      name: "Vinyl Conflict",
+      tags: [TAG('i-punk','Punk/DIY')],
+      desc: "Punk, hardcore, and metal-focused record shop that doubles as an informal bulletin board for the local underground show calendar -- the most on-the-nose punk match in the city.",
+      meta: [["📍","Carytown, Richmond, VA"],["💰","$5-30"],["⏱","30-45 min"],["🕐","Afternoon"]],
+      cite: "punk/hardcore-focused RVA record shop"
+    },
+    {
+      name: "Plan 9 Music",
+      tags: [TAG('i-diy','Maker/DIY'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Richmond-founded regional chain (dating to the early 1980s) with a deep new-and-used selection -- the well-known anchor of Carytown's record-shopping strip.",
+      meta: [["📍","Carytown, Richmond, VA"],["💰","$5-30"],["⏱","45 min"],["🕐","Anytime"]],
+      cite: "long-running Richmond-founded chain"
+    },
+    {
+      name: "Black Swan Books & Music",
+      tags: [TAG('i-diy','Maker/DIY'),TAG('i-horror','Horror/Occult')],
+      desc: "The same antiquarian shop from the bookstore list, crosslisted here for its used-vinyl bins.",
+      meta: [["📍","2601 W Cary St, Richmond, VA"],["💰","$2-30"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "long-running RVA antiquarian shop"
+    }
+  ],
+  coffee: [
+    {
+      name: "Lamplighter Coffee Roasters",
+      tags: [TAG('i-food','Local Food'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Richmond-based roaster and the city's best-known specialty-coffee name, with multiple locations and an on-site roasting program.",
+      meta: [["📍","Multiple locations (The Fan, Scott's Addition), Richmond, VA"],["💰","$4-8"],["⏱","30-45 min"],["🕐","Morning"]],
+      cite: "RVA roaster, multiple locations"
+    },
+    {
+      name: "Blanchard's Coffee Roasting Co.",
+      tags: [TAG('i-food','Local Food')],
+      desc: "RVA roaster (est. 2011) that wholesales to a wide swath of the city's cafes and restaurants -- a good stop to taste the bean before you see it on menus citywide.",
+      meta: [["📍","Richmond, VA"],["💰","$4-8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "RVA roaster since 2011"
+    },
+    {
+      name: "Rostov's Coffee & Tea",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Longtime VCU-area coffeehouse fixture -- an old-guard counterpoint to the newer third-wave roasters.",
+      meta: [["📍","Grace St, Richmond, VA"],["💰","$3-7"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "long-running VCU-area coffeehouse"
+    },
+    {
+      name: "Crossroads Coffee & Ice Cream",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Laid-back Northside neighborhood coffeehouse that doubles as an ice-cream shop -- a quieter, more residential counterpoint to the Fan/Carytown coffee crawl.",
+      meta: [["📍","Northside, Richmond, VA"],["💰","$3-8"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "Northside neighborhood coffeehouse"
+    },
+    {
+      name: "Nile Ethiopian Restaurant & Coffeehouse",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Traditional Ethiopian coffee ceremony alongside a full restaurant menu -- the least generic-espresso-bar pick on this list.",
+      meta: [["📍","Broad St, Richmond, VA"],["💰","$5-15"],["⏱","45 min"],["🕐","Afternoon or evening"]],
+      cite: "Ethiopian restaurant/coffeehouse, Broad St"
+    }
+  ],
+  pastry: [
+    {
+      name: "Sub Rosa Bakery",
+      tags: [TAG('i-food','Local Food'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Wood-fired, stone-milled, entirely vegan bread and pastry program using organically sourced regional grain -- Richmond's most distinctive bakery. CURRENTLY CLOSED after fire damage; check their Instagram before planning a visit.",
+      meta: [["📍","620 N 25th St, Richmond, VA"],["💰","$4-12"],["⏱","30 min"],["🕐","8-10am for the full pastry case (when open)"]],
+      cite: "confirmed via site fetch: temporarily closed, fire damage"
+    },
+    {
+      name: "WPA Bakery",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Sourdough-forward bakery with a wood-fired program -- a good backup while Sub Rosa is closed, and a strong stop in its own right.",
+      meta: [["📍","Richmond, VA"],["💰","$4-10"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "RVA sourdough bakery"
+    },
+    {
+      name: "Sugar & Twine",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Dessert-forward bakery/patisserie; confirm current hours before visiting, as this pick wasn't independently re-verified this session.",
+      meta: [["📍","Richmond, VA"],["💰","$4-10"],["⏱","20-30 min"],["🕐","Morning"]],
+      cite: "regional bakery roundups"
+    },
+    {
+      name: "Stella's",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Longtime Fan District Greek restaurant and market -- baklava and Greek pastry as the 'distinctive approach' pick alongside the French-technique bakeries.",
+      meta: [["📍","The Fan, Richmond, VA"],["💰","$4-10"],["⏱","20 min (as a stop within a meal)"],["🕐","Evening, as dessert after dinner"]],
+      cite: "long-running Fan District Greek restaurant"
+    }
+  ],
+  dishes: [
+    {
+      name: "Box Lunch \u2014 Sally Bell's Kitchen",
+      tags: [TAG('i-food','Local Food'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Richmond's James Beard 'America's Classic' (2015), operating since 1924. The boxed lunch -- deviled egg, beaten-biscuit ham sandwich, potato salad, a cheese wafer, and a tea cake -- is a genuine only-here regional institution.",
+      meta: [["📍","West Broad St, Richmond, VA"],["💰","$10-15"],["⏱","20 min to order, eat anywhere"]],
+      cite: "James Beard America's Classic 2015; relocated to West Broad St in 2016"
+    },
+    {
+      name: "Soul Food \u2014 Mama J's Kitchen",
+      tags: [TAG('i-food','Local Food'),TAG('i-political','Political History')],
+      desc: "Jackson Ward soul-food institution -- fried chicken, cornbread, mac and cheese -- sitting directly inside the historic Black Wall Street footprint that carries this guide's analytical thread.",
+      meta: [["📍","Jackson Ward, Richmond, VA"],["💰","$12-22"],["⏱","1 hr"],["🕐","Lunch; expect a line"]],
+      cite: "well-known Jackson Ward soul food restaurant"
+    },
+    {
+      name: "Brisket & Brunswick Stew \u2014 ZZQ Texas Craft Barbeque",
+      tags: [TAG('i-food','Local Food'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Texas-style smoked brisket built in Virginia, paired with Brunswick stew -- a dish central Virginia and Georgia both claim as their own regional invention.",
+      meta: [["📍","Scott's Addition, Richmond, VA"],["💰","$15-30"],["⏱","1-1.5 hrs"],["🕐","Lunch; sells out, arrive early"]],
+      cite: "acclaimed Scott's Addition barbecue restaurant"
+    },
+    {
+      name: "Currywurst \u2014 Metzger Bar & Butchery",
+      tags: [TAG('i-food','Local Food')],
+      desc: "German-technique butchery and restaurant in Church Hill making its own currywurst and charcuterie in-house -- a distinctly non-Southern dish that's become a Richmond destination anyway.",
+      meta: [["📍","Church Hill, Richmond, VA"],["💰","$15-25"],["⏱","1-1.5 hrs"],["🕐","Dinner"]],
+      cite: "Church Hill German-inspired restaurant"
+    },
+    {
+      name: "Pastrami Reuben \u2014 Perly's Restaurant & Delicatessen",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Jewish deli institution on Broad St -- pastrami reuben and a full deli case in a city not otherwise known for the genre.",
+      meta: [["📍","Broad St, Richmond, VA"],["💰","$14-20"],["⏱","1 hr"],["🕐","Lunch"]],
+      cite: "long-running Broad St Jewish deli"
+    }
+  ],
+  gifts: [
+    {
+      name: "Virginia Peanuts",
+      tags: [TAG('i-food','Local Food'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Virginia-type peanuts are the largest peanut cultivar grown -- a genuinely regional, easily mailed gift sold in gift shops and markets across Richmond.",
+      meta: [["📍","The Peanut Shop of Williamsburg / RVA gift shops"],["💰","$8-18"],["⏱","N/A"]],
+      cite: "Virginia peanut-growing region product"
+    },
+    {
+      name: "Smithfield / Surry Virginia Country Ham",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Salt-cured, dry-aged Virginia country ham from the Smithfield/Surry region just southeast of Richmond -- vacuum-sealed versions ship well and are a genuinely regional gift.",
+      meta: [["📍","S. Wallace Edwards & Sons (Surry, VA) / Richmond gourmet shops"],["💰","$25-70"],["⏱","N/A"]],
+      cite: "Virginia country-ham tradition"
+    },
+    {
+      name: "Whole-Bean Coffee \u2014 Blanchard's / Lamplighter",
+      tags: [TAG('i-food','Local Food')],
+      desc: "Both roast in Richmond and sell retail bags -- an easy, mailable way to bring the city's coffee scene home.",
+      meta: [["📍","Blanchard's Coffee Roasting Co. / Lamplighter Coffee Roasters, Richmond, VA"],["💰","$14-20/bag"],["⏱","N/A"]],
+      cite: "RVA roasters"
+    },
+    {
+      name: "Local RVA Honey",
+      tags: [TAG('i-bees','Bees/Honey')],
+      desc: "Ellwood Thompson's natural-foods grocery in Carytown carries honey from area beekeepers -- the direct bees/honey pick for this category.",
+      meta: [["📍","Ellwood Thompson's, Carytown, Richmond, VA"],["💰","$8-16/jar"],["⏱","N/A"]],
+      cite: "Carytown natural-foods grocery"
+    },
+    {
+      name: "Bottled Bourbon/Rye \u2014 Reservoir Distillery",
+      tags: [TAG('i-drinks','Whiskey/Bourbon')],
+      desc: "Richmond craft distillery running a Virginia Heritage Grain Project alongside its 4-Grain Bourbon and rye -- a proper whiskey/bourbon gift with a Richmond address on the label. Check shipping laws before mailing spirits.",
+      meta: [["📍","1800 A Summit Ave, Richmond, VA"],["💰","$45-80/bottle"],["⏱","N/A"]],
+      cite: "confirmed via site fetch: 1800 A Summit Ave, tasting room Mon-Sat 1-9pm"
+    }
+  ],
+  sights: [
+    {
+      name: "Maggie L. Walker National Historic Site",
+      tags: [TAG('i-political','Political History'),TAG('i-books','Literary'),TAG('i-political','Thread Anchor')],
+      desc: "Free NPS site preserving Maggie L. Walker's Jackson Ward rowhouse; the anchor point of this guide's confirmed analytical thread -- Walker founded St. Luke Penny Savings Bank in 1903, the first bank in the U.S. chartered and led by a woman of any race.",
+      meta: [["📍","600 N 2nd St, Richmond, VA"],["💰","Free"],["⏱","1-1.5 hrs"],["🕐","Morning, NPS ranger-led tour"]],
+      cite: "National Historic Landmark, NPS-operated"
+    },
+    {
+      name: "Edgar Allan Poe Museum",
+      tags: [TAG('i-horror','Horror/Occult'),TAG('i-books','Literary'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Built around the city's oldest stone house; holds Poe ephemera including his walking stick and socks, and centers his formative Richmond years (he was raised there, though born in Boston). The single best horror/literature crossover in the city.",
+      meta: [["📍","1914-16 E Main St, Richmond, VA"],["💰","~$10"],["⏱","1 hr"],["🕐","Afternoon"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Evergreen Cemetery",
+      tags: [TAG('i-horror','Horror/Occult'),TAG('i-political','Political History')],
+      desc: "1891 African American burial ground reclaimed for decades by kudzu and forest; Maggie L. Walker and John Mitchell Jr. are both buried here, making it a direct extension of the Jackson Ward thread. A $19M restoration plan was announced in 2020, with visible community cleanup progress since.",
+      meta: [["📍","East End, Richmond, VA"],["💰","Free"],["⏱","45 min-1 hr"],["🕐","Daylight hours"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Belle Isle",
+      tags: [TAG('i-horror','Horror/Occult'),TAG('i-diy','Maker/DIY'),TAG('i-bees','Natural Attraction')],
+      desc: "54-acre James River island, reached by pedestrian suspension bridge; a Civil War POW camp (1862-65), then a hydroelectric plant (1904-63) whose ruins appear in Ridley Scott's Hannibal (2001). Hiking, rock scrambling, and river swimming holes -- the natural-attraction balance-rule pick.",
+      meta: [["📍","James River Park System, Richmond, VA"],["💰","Free"],["⏱","1.5-2 hrs"],["🕐","Late afternoon / golden hour"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Hollywood Cemetery",
+      tags: [TAG('i-horror','Horror/Occult'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Presidents James Monroe and John Tyler, Confederate president Jefferson Davis, 18,000 Confederate soldiers, and the 'Richmond Vampire' grave of W.W. Pool -- one of the most visited cemeteries in Virginia.",
+      meta: [["📍","412 S Cherry St, Richmond, VA"],["💰","Free (tours extra)"],["⏱","1-1.5 hrs"],["🕐","Morning or late afternoon"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Monument Avenue (former Confederate monument sites)",
+      tags: [TAG('i-political','Political History')],
+      desc: "Five Confederate statues stood here from 1890-1929; all were removed between June 2020 and December 2022 following George Floyd-protest pressure and a state Supreme Court ruling on the Lee statue. Arthur Ashe's 1996 monument is now the only one left standing. The removed statues are held by the Black History Museum and Cultural Center of Virginia.",
+      meta: [["📍","Monument Ave, Richmond, VA"],["💰","Free"],["⏱","1 hr walk or drive"],["🕐","Anytime"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "The Grand Kugel",
+      tags: [TAG('i-horror','Horror/Occult')],
+      desc: "A 29-ton polished granite sphere that spins at the lightest touch, floating on a thin film of water -- an Atlas Obscura oddity pick, pure hidden-gem novelty.",
+      meta: [["📍","Science Museum of Virginia, Richmond, VA"],["💰","Free to view"],["⏱","15 min"],["🕐","Anytime"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Byrd Theatre",
+      tags: [TAG('i-books','Literary')],
+      desc: "1928 French Empire-style movie palace, largely unchanged since opening, with a Wurlitzer pipe organ played live Saturday nights and $8 second-run screenings -- a genuine film-history landmark, not a museum piece.",
+      meta: [["📍","2908 W Cary St, Richmond, VA"],["💰","$8 second-run ticket"],["⏱","2-2.5 hrs (with a film)"],["🕐","Evening; Saturday for the Wurlitzer organ"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Church Hill Tunnel (buried 1925 locomotive)",
+      tags: [TAG('i-horror','Horror/Occult')],
+      desc: "A C&O railroad tunnel collapsed in 1925, killing several workers and burying a locomotive that has never been recovered -- it's still down there. A quiet, genuinely eerie Atlas Obscura-style hidden gem in an otherwise gentrified neighborhood.",
+      meta: [["📍","Church Hill, Richmond, VA"],["💰","Free (exterior/marker only)"],["⏱","20-30 min"],["🕐","Daylight"]],
+      cite: "Wikipedia"
+    }
+  ],
+  venues: [
+    {
+      name: "The Camel",
+      tags: [TAG('i-punk','Punk/DIY'),TAG('i-bees','Well-Known Must-See')],
+      desc: "RVA's best-known independent live-music room -- eclectic booking (indie, alt, local showcases), full food/bar program, and an open-mic/community-event calendar alongside touring acts.",
+      meta: [["📍","1621 W Broad St, Richmond, VA"],["💰","$10-25"],["⏱","2-3 hrs"],["🕐","Night"]],
+      cite: "confirmed via site fetch"
+    },
+    {
+      name: "GWARbar",
+      tags: [TAG('i-punk','Punk/DIY'),TAG('i-horror','Horror/Occult')],
+      desc: "'Upscale dive bar' opened 2015 by GWAR guitarist Mike Derks, the commercial anchor of the horror-punk band that's been Richmond's most visible music export since 1984. Sits directly in Jackson Ward, the thread neighborhood.",
+      meta: [["📍","Jackson Ward, Richmond, VA"],["💰","$10-30 with a show; bar prices otherwise"],["⏱","2-4 hrs"],["🕐","Night"]],
+      cite: "Wikipedia"
+    },
+    {
+      name: "Gallery5",
+      tags: [TAG('i-punk','Punk/DIY'),TAG('i-diy','Maker/DIY'),TAG('i-political','Political History')],
+      desc: "Artist-run, all-ages arts space and DIY venue in the Broad Street Arts District, booking punk and experimental acts alongside visual-art and community programming.",
+      meta: [["📍","200 W Marshall St, Richmond, VA"],["💰","$5-15 suggested donation, varies by show"],["⏱","2-3 hrs"],["🕐","Night"]],
+      cite: "long-running RVA artist-run DIY space"
+    },
+    {
+      name: "Cobra Cabana",
+      tags: [TAG('i-punk','Punk/DIY')],
+      desc: "Manchester dive bar with a steady punk/garage/DIY booking history -- lower-key than The Camel, closer to the actual show-in-a-bar tradition.",
+      meta: [["📍","Manchester, Richmond, VA"],["💰","$5-15"],["⏱","2-3 hrs"],["🕐","Night"]],
+      cite: "RVA dive-bar venue"
+    },
+    {
+      name: "Get Tight Lounge",
+      tags: [TAG('i-punk','Punk/DIY')],
+      desc: "DIY dive-bar venue in the garage/punk lineage, part of the current generation of small rooms filling the gap left by Strange Matter's 2016 closure.",
+      meta: [["📍","Richmond, VA"],["💰","$5-15"],["⏱","2-3 hrs"],["🕐","Night"]],
+      cite: "RVA dive-bar venue"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Quirk Gallery",
+      tags: [TAG('i-diy','Maker/DIY'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Gallery/gift shop attached to the Quirk Hotel, stocking locally made art, prints, and design objects rather than generic tourist stock.",
+      meta: [["📍","201 W Broad St, Richmond, VA"],["💰","$10-60"],["⏱","30-45 min"],["🕐","Afternoon"]],
+      cite: "Broad St Arts District gallery/gift shop"
+    },
+    {
+      name: "World of Mirth",
+      tags: [TAG('i-diy','Maker/DIY')],
+      desc: "Kitschy, independent novelty and toy shop that's been a Carytown fixture for decades -- oddball ephemera over mass-market souvenirs.",
+      meta: [["📍","Carytown, Richmond, VA"],["💰","$5-30"],["⏱","20-30 min"],["🕐","Afternoon"]],
+      cite: "long-running Carytown novelty shop"
+    },
+    {
+      name: "Black Swan Books & Music (postcards/ephemera)",
+      tags: [TAG('i-books','Literary')],
+      desc: "Old postcards, prints, and ephemera turn up regularly in the antiquarian stock -- a more meaningful souvenir than a magnet, crosslisted from the bookstore/record picks above.",
+      meta: [["📍","2601 W Cary St, Richmond, VA"],["💰","$2-20"],["⏱","15 min (as part of a longer browse)"],["🕐","Afternoon"]],
+      cite: "long-running RVA antiquarian shop"
+    }
+  ],
+  electronics: [
+    {
+      name: "HackRVA",
+      tags: [TAG('i-diy','Maker/DIY'),TAG('i-bees','Well-Known Must-See')],
+      desc: "Member-run nonprofit makerspace covering electronics, embedded software, 3D printing, laser cutting, woodworking, and more; members get 24/7 access, visitors are welcome at the biweekly open house.",
+      meta: [["📍","2026-A Dabney Rd, Richmond, VA"],["💰","$39/month membership; open houses free"],["⏱","2 hrs for an open house"],["🕐","1st and 3rd Thursday, 7-9pm (open house)"]],
+      cite: "confirmed via site fetch"
+    },
+    {
+      name: "VCU da Vinci Center (RAMP Lab)",
+      tags: [TAG('i-diy','Maker/DIY')],
+      desc: "VCU's innovation/prototyping center runs a rapid-fabrication lab bridging art, design, and engineering students -- institutional rather than open-community, and public access to specific programs should be confirmed ahead of a visit.",
+      meta: [["📍","VCU campus, Richmond, VA"],["💰","Varies; primarily student-access"],["⏱","Varies"],["🕐","Weekday, check public-program calendar"]],
+      cite: "VCU da Vinci Center"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

@@ -1,0 +1,1380 @@
+{
+  "id": "salt-lake-city-ut",
+  "name": "Salt Lake City",
+  "state": "UT",
+  "tripId": "west",
+  "stay": {
+    "arrive": "2025-10-06",
+    "depart": "2025-10-09",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 40.7608,
+    "lng": -111.891
+  },
+  "elevationFt": 4327,
+  "population": {
+    "cityProper": 212040,
+    "metro": 1257936
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Weller Book Works",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "wellerbookworks.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "KSL",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Running since 1929 (as Zion's Bookstore, then Sam Weller's); Sam Weller stocked contraband Henry Miller and D.H. Lawrence for customers who asked, and the store now runs a standing 'Banned! from Utah Schools' display case -- literary-freedom politics built into the shelving.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The King's English Bookshop",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "kingsenglish.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "The Guardian via Deseret News",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon; evening for a reading",
+      "durationMin": 45,
+      "rating": null,
+      "note": "SLC's other long-running community-anchor indie -- packed events calendar, staff-pick culture, and the kind of shop the Guardian has written up for how it operates differently from a standard indie.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ken Sanders Rare Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "kensandersbooks.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-horror",
+        "i-political"
+      ],
+      "estCost": "$10–500+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Ken Sanders co-owned the 1970s countercultural shop The Cosmic Aeroplane before opening this ABAA rare-book operation in 1997 -- deep stock in Western Americana, rare and esoteric volumes, and counterculture ephemera; a Salt Lake institution for collectors of the strange and the political alike.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Legendarium",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "City Cast Salt Lake",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-books"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Genre specialist focused on sci-fi, fantasy, and horror, with an on-site cafe -- the direct hit for the horror-and-occult reading interest.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boing! Anarchist Collective",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "radical-guide.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free / donation",
+      "bestTimeOfDay": "Evening for a reading or discussion",
+      "durationMin": null,
+      "rating": null,
+      "note": "Mandatory radical/infoshop search result: a nine-plus-year anarchist community space hosting radical dialog, readings, and performances -- not a retail bookstore, but the closest thing SLC has to an infoshop, and explicitly welcomes LGBTQ+, anticapitalist, and countercultural community.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Heavy Metal Shop",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Iconic metal-and-punk vinyl, patches, and merch shop operating since 1987 -- the well-known/must-see anchor of SLC's heavy-music retail scene.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Diabolical Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "saltplatecity.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5–35",
+      "bestTimeOfDay": "Check calendar for an in-store",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Psych, punk, garage, electronic, and local pressings, plus a real DIY-scene tie: hosts Bandemonium (musicians randomly re-shuffled into new bands) and touring acts like Soft Kill and Cool Ghouls.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Raunch Records & Skate",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "'Raw, loud, and unapologetically punk' since the 1980s -- a hard-to-find-underground-music specialist that doubles as a skate shop and gathering point for the city's punk/hardcore community.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Randy's Record Shop",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "saltplatecity.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Deep breadth-and-depth general vinyl, CD, and tape stock spanning new releases and classics -- a longstanding SLC institution.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Memento Mori",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Part barbershop, part art gallery, part record cave -- an eclectic hybrid shop whose name alone is a direct hit for the horror/occult interest.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Salt Lake Roasting Co.",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Utah",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Established 1981, the pioneer of specialty coffee in a state where coffee is culturally uncommon -- Visit Utah compares its local role to Starbucks in Seattle. The single strongest 'unique because of the surrounding culture' pick in this list.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Publik Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Utah",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "publikcoffee.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–9",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Major local roaster operating out of a renovated warehouse, emphasizing responsibly sourced beans across several SLC locations.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "La Barba",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Utah",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Third-wave espresso and pour-over pairing with fresh pastries in an atmospheric downtown space.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Alchemy Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "TikTok/@utahisawesome",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "community lists",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Neighborhood specialty spot with a community-oriented, no-frills vibe -- a regular on locals' shortlists.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Coffee Garden",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "TikTok/@utahisawesome",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "community lists",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning or late afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Long-running indie community hangout in the 9th & 9th district, the kind of shop with regulars who've been coming for decades.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Les Madeleines",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "lesmadeleines.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Goldbelly",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–14",
+      "bestTimeOfDay": "Morning, before the case sells out",
+      "durationMin": 45,
+      "rating": null,
+      "note": "James Beard-recognized baker famous for kouign-amann ('kouing aman') -- the well-known/must-eat pastry stop in the city, and it also ships nationwide via Goldbelly if you can't make it in person.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mrs. Backer's Pastry Shop",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "tryperdiem.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–12",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A decades-old Sugar House institution -- handcrafted cakes, cookies, and eclairs, the kind of place locals order birthday cakes from generation after generation.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Tulie Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "tryperdiem.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Modern, minimalist bakery known for almond, bacon-and-egg, and ham-and-cheese croissants plus lemon tarts and morning buns.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fillings & Emulsions",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "tryperdiem.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Cuban-inspired pastry program (guava, passion fruit, Opera cake) that's also notably gluten-free friendly -- the most distinctive technique angle in this category.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Eva's Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "tryperdiem.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "French-leaning downtown bakery known for strawberry croissants in a photogenic blue-and-white space.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fry Sauce",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Fry Sauce",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$1–4 add-on",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The ketchup-and-mayo condiment invented in Salt Lake City in the 1950s -- the single most SLC-coded thing to order, best tried at Hires Big H, a since-1959 drive-in institution.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Pastrami Burger",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Pastrami Burger",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–13",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A beef patty topped with pastrami, cheese, and fry sauce on a sesame bun -- popularized at Crown Burgers.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Funeral Potatoes",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Funeral Potatoes",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–12",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A cheesy potato casserole with a cornflake topping, traditionally served at LDS funeral luncheons and now a year-round comfort dish across Utah restaurants.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Barely Buzzed Cheese",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Utah cheeses",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$12–20/lb",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": null,
+      "rating": null,
+      "note": "An award-winning espresso-and-lavender-rubbed cheddar from Beehive Cheese Co. -- one of TasteAtlas's top-rated Utah cheeses, and a direct hit for both the coffee and bee interests via the maker's own name.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Frog Eye Salad",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Frog Eye Salad",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 15,
+      "rating": null,
+      "note": "A whimsically named pasta salad (acini di pepe, egg yolks, whipped cream, optional pineapple/marshmallow) that TasteAtlas rates among the region's most divisive dishes -- worth trying purely for the novelty.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Caputo's Market Gift Boxes",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "gastronomicslc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$30+",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "SLC's essential gourmet deli/market ships curated boxes of cheeses, oils, vinegars, and specialty meats -- the well-known/must-see one-stop for mailable local flavor.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Local Honey — BEEZ Hives N Honey",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "beezslc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$8–20/jar",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Beekeeper-owned shop selling truly local raw honey from backyard and small-batch Wasatch Front apiaries, plus propolis, pollen, beeswax, and miniature gift-favor jars -- the most literal bee-interest pick in the whole guide.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Barely Buzzed Cheese (to mail)",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Utah cheeses",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$12–20/lb",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Same espresso-lavender cheddar as the dish pick above -- shelf-stable enough (vacuum-sealed) to travel well as a mailed gift; Caputo's ships it.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Z's Salsa & Hot Sauce",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "gastronomicslc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–14/bottle",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Small-batch four-pepper salsa and a spicy Bloody Mary mix, handcrafted locally and sold through farmers markets and Etsy -- easy to mail.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ritual Chocolate",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Utah",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–14/bar",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Small-batch bean-to-bar craft chocolate from just outside the metro, with rotating single-origin bars including an El Salvadoran-espresso pairing -- ships and mails well.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Gilgal Sculpture Garden",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Gilgal Sculpture Garden",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Daylight",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A free outsider-art garden built mid-20th-century by Thomas Battersby Child Jr. -- 12 sculptures and 70+ inscribed stones blending Mormon scripture, poetry, and literary texts, tucked behind a Chuck-a-Rama parking lot.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Summum Pyramid",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "City Cast Salt Lake",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "citing Atlas Obscura",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free (donation appreciated)",
+      "bestTimeOfDay": "Wednesday evening (tour night)",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A religious sect founded in 1975 blending science-fiction cosmology and Egyptian polytheism, practicing modern mummification, with public tours by appointment on Wednesday evenings -- as strange and occult-adjacent a stop as this guide gets.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lilly E. Gray's Grave — \"Victim of the Beast 666\"",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Victim of the Beast 666 Gravestone",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Daylight",
+      "durationMin": 20,
+      "rating": null,
+      "note": "A tombstone inscribed 'Victim of the Beast 666' in the largest municipally owned cemetery in the U.S. -- Lilly died of natural causes, but her husband believed government conspiracy killed her.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "This Is the Place Heritage Park",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Utah",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "~$16 general admission (village); monument grounds free",
+      "bestTimeOfDay": "Midday",
+      "durationMin": 180,
+      "rating": null,
+      "note": "The well-known/must-see anchor of SLC pioneer history -- marks where Brigham Young reportedly declared 'this is the right place' in 1847, with a living-history pioneer village on the grounds.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Antelope Island State Park",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Utah",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "Day-use entry fee (~$15/vehicle)",
+      "bestTimeOfDay": "Morning for bison activity; sunset for lake views",
+      "durationMin": null,
+      "rating": null,
+      "note": "The natural-attraction balance pick: a free-roaming bison and pronghorn herd on an island in the Great Salt Lake, plus hiking, cycling, and internationally certified dark-sky stargazing, about 40 minutes from downtown.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sugar House Park — Joe Hill Execution Site & 2023 Monument",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Sugar House Park",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Joe Hill",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A public park built on the site of the former Sugar House Prison, where Wobbly songwriter Joe Hill was executed by firing squad in 1915 after a controversial trial. In 2023 the Central Utah Federation of Labor (AFL-CIO) unveiled a monument near the execution site -- this guide's analyticalThread anchor.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Kilby Court",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "kilbycourt.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$12–25",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "SLC's longest-running all-ages venue, open since 1999 -- a converted garage that's launched Death Cab for Cutie, Phoebe Bridgers, Mitski, and Japanese Breakfast on the way up.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Urban Lounge",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Utah -- SLC subcultures",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Long-running indie/punk-leaning bar venue, a core stop on SLC's local and touring circuit.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Depot",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "bandsintown.com listings",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15–35",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A larger historic concert hall near the old Rio Grande railroad depot, booking rock, metal, and hardcore-adjacent touring acts alongside bigger indie names.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boing! Anarchist Collective (as a show space)",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "radical-guide.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-punk"
+      ],
+      "estCost": "Free / donation",
+      "bestTimeOfDay": "Evening",
+      "durationMin": null,
+      "rating": null,
+      "note": "Same space as the bookstores-category pick — its 'performances' programming crosses into DIY show territory, making it SLC's clearest example of a venue doubling as explicit political community space.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Diabolical Records In-Stores / Bandemonium",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "saltplatecity.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "Free (in-store)",
+      "bestTimeOfDay": "Check calendar",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Same shop as the records-category pick — its in-store sets and Bandemonium nights are the city's most direct record-store-as-venue tie.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Visit Salt Lake Store (Ashley Collett Design)",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "visit-salt-lake.myshopify.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$5–20",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "The official downtown visitor-center shop carries stickers, magnets, and pins designed by local Utah artist Ashley Collett -- a locally-designed alternative to generic tourist-shop magnets.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Salt & Honey Market",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "saltandhoneymarket.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A curated Utah-themed gift shop (name notwithstanding) featuring local vendors and artists — postcards, prints, honey, and topographic-patch apparel emphasizing locally-designed goods over mass-produced tourist product.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Memento Mori (prints & oddities)",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Same barbershop/gallery/record-cave hybrid as the records pick — its gallery side sells local art and prints with more edge than a standard magnet rack.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Weller Book Works — \"Banned!\" Merch & Postcards",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "wellerbookworks.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$5–20",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Same shop as the bookstores pick — postcards and totes tied to its 'Banned! from Utah Schools' display make for a souvenir with a literal political statement attached.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "BEEZ Hives N Honey (gift jars & beeswax candles)",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "beezslc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$4–20",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Same shop as the mailable-gifts pick — miniature honey jars and beeswax candles double as the most literal bee-themed souvenir in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Make Salt Lake",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "makesaltlake.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership-based",
+      "bestTimeOfDay": "Check open hours / open house",
+      "durationMin": null,
+      "rating": null,
+      "note": "The city's flagship community makerspace -- 3D printing, laser cutting, woodworking, and electronics under one roof, with regular open houses and Meetup-listed events.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "801 Labs",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "801labs.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership-based",
+      "bestTimeOfDay": "Check open hours",
+      "durationMin": null,
+      "rating": null,
+      "note": "A hackerspace with a strong cybersecurity/electronics-hacking bent -- meetups, workshops, and open lab nights for hardware and software tinkerers alike.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Squarewave Sound",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "squarewavesound.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Varies (gear purchase)",
+      "bestTimeOfDay": "Wed–Fri 12–6pm, Sat 12–5pm (per shop's own site — see status note)",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Self-described 'SLC's only synth shop' -- Eurorack modular, drum machines, and effects pedals, authorized dealer for Moog/Korg/Novation, with occasional community meetups and classes.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Craft Lake City DIY Festival",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "craftlakecity.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Ticketed",
+      "bestTimeOfDay": "Early August (annual, ~18 years running)",
+      "durationMin": null,
+      "rating": null,
+      "note": "SLC's annual flagship maker event -- 500+ local makers, food vendors, and performers; not a fixed space, but the clearest single snapshot of the city's DIY/maker culture in one place.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "SLC Punk!",
+        "year": 1998,
+        "locationVisited": null,
+        "visitNote": "Public high school still operating; exterior/hallway shots used for the fictional school. Confrontation scene shot on the historic quad. Heroin Bob's funeral sequence filmed here; still an active Catholic cathedral, open to visitors. Used for the film's LSD sequence. Site of Stevo's punk-rock monologue; the mall was demolished and redeveloped, so this location can no longer be visited as filmed.",
+        "photoId": null
+      },
+      {
+        "title": "High School Musical",
+        "year": 2006,
+        "locationVisited": null,
+        "visitNote": "All three films used East High's real hallways, cafeteria, and gym (Troy's 'Wildcats' are fictional -- East High's real team is the Leopards). A functioning public school; call ahead to arrange a tour.",
+        "photoId": null
+      },
+      {
+        "title": "The Sandlot",
+        "year": 1993,
+        "locationVisited": null,
+        "visitNote": "The dirt lot behind several private homes on Glenrose Drive; still privately owned by the residents, so it's viewable from the street only, not enterable.",
+        "photoId": null
+      },
+      {
+        "title": "Dumb and Dumber",
+        "year": 1994,
+        "locationVisited": null,
+        "visitNote": "Interiors shot at Intermountain Studios in Orem (built by the Osmonds); the frozen mini-bike arrival scene was shot on Main Street in Park City, not Aspen, CO, where the film is set.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Bill Haywood",
+        "relevance": "leftist-politics",
+        "note": "Founding member and General Secretary-Treasurer of the Industrial Workers of the World (IWW); his formative organizing happened in Idaho/Western mining, but he was born in SLC. See analyticalThread."
+      },
+      {
+        "name": "Neal Cassady",
+        "relevance": "literature",
+        "note": "Beat Generation figure who inspired the character Dean Moriarty in Jack Kerouac's On the Road; born in SLC, though most of his life was lived in Denver and San Francisco."
+      },
+      {
+        "name": "Natacha Rambova",
+        "relevance": "film-and-occult",
+        "note": "Silent-film costume/art director (and wife of Rudolph Valentino) who later became a serious Egyptologist and occult writer -- a genuine film-meets-esoterica crossover."
+      },
+      {
+        "name": "Roseanne Barr",
+        "relevance": "pop-culture",
+        "note": "Comedian and creator/star of Roseanne -- included as the well-known/must-mention balance pick for this list."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

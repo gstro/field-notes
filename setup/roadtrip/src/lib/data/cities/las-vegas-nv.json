@@ -1,0 +1,1390 @@
+{
+  "id": "las-vegas-nv",
+  "name": "Las Vegas",
+  "state": "NV",
+  "tripId": "west",
+  "stay": {
+    "arrive": "2025-10-09",
+    "depart": "2025-10-14",
+    "nights": 5
+  },
+  "coords": {
+    "lat": 36.1699,
+    "lng": -115.1398
+  },
+  "elevationFt": 2001,
+  "population": {
+    "cityProper": 656274,
+    "metro": 2336573
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "The Writer's Block",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Las Vegas Weekly",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–35",
+      "bestTimeOfDay": "Evening if there's a reading",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Downtown's flagship indie bookstore, Las Vegas Weekly's 2025 Readers' Choice Best Bookstore — literary fiction, poetry, deep Nevada-authors section, Onyx Coffee Lab built in, 2-4 events weekly.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Amber Unicorn Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$1–20",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Warehouse-style used bookstore, 60,000+ books at $1–5, sourced via estate sales and a walk-in buying program — genuine treasure-hunt browsing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dead Poet Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$5–60+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Small, tightly curated used shop — literary fiction, poetry, rare and signed first editions.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Get Booked",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "GayCities Las Vegas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Vegas's only gay-owned LGBTQ+ retail bookstore since 1993 — part bookshop, part community fixture, queer fiction alongside its adult-shop inventory.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Book Cellar",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Weekday afternoon",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Academic used-book shop near UNLV — textbooks, scholarly presses, discount research texts. Modest fifth pick, included for completeness.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Vinyl Threat @ The Punk Rock Museum",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Punk Rock Museum",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Rebel Atlas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$10–50",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The museum's in-house record shop, punk vinyl tied to the archive, plus rare demos pressed exclusively on the shop's own TPRM ODs label.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "11th Street Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Rebel Atlas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$8–30",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A working part of the local music ecosystem downtown, with an in-store studio hosting live sessions, tied into East Fremont's smaller venues.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cash 4 Chaos",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Rebel Atlas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5–35",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Punk/metal specialist since 1998, blending records with band shirts, patches, and scene ephemera — built by lifers, not trend forecasters.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Primitive Recordings",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Rebel Atlas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-punk"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Metal/horror/sci-fi specialist carrying extreme metal, underground shirts, and tapes not always available online.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Wax Trax Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Rebel Atlas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A three-floor operation for serious crate-diggers — the broad, well-known pick alongside the punk/metal specialists above.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "PublicUs",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Vegas 411",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$5–14",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Downtown's hybrid café-marketplace — pour-over and Japanese iced coffee, plus an honey toast and elevated brunch program.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Vesta Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Vegas 411",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A no-pretense specialty roaster — smooth espresso, strong cold brew and cortado program.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Gäbi Coffee & Bakery",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Vegas 411",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–10",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A discreet, minimally signed Korean-inspired café with vintage décor, lavender latte and matcha affogato, real pastry program.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sunrise Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Vegas 411",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Dog-friendly, mismatched-furniture neighborhood shop in East Vegas — house chai, vegan pastry case.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bad Owl Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Vegas 411",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-food"
+      ],
+      "estCost": "$5–9",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A themed South Vegas café (butterbeer latte, lavender latte) that leans into novelty without sacrificing the coffee.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Freed's Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$2–8/item",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Operating since 1959 — cannoli filled to order, sfogliatelle, Italian cookies, the city's default custom-cake maker. Not casino-owned.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Chloé Patisserie",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–8/item",
+      "bestTimeOfDay": "Morning, Tue–Sun",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Paris-trained pastry chef, kouign-amann/canelé/opera cake — reportedly where hotel pastry chefs go on their own days off.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bread & Butter Bakery Cafe",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–12/item",
+      "bestTimeOfDay": "Early morning, 7am open",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Naturally leavened 24-hour sourdough with no commercial yeast, plus weekend sourdough cinnamon rolls — sells out by 1pm.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Great Buns Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Vegas Vibin",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$2–4/item",
+      "bestTimeOfDay": "~3pm fresh batches",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Hong Kong-style BBQ pork buns, egg tarts, pineapple buns — time it around the fresh-batch window.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Kona Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–8/item",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Japanese shokupan milk bread, curry buns, melon pan, matcha croissants. Closed Wednesdays.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shrimp Cocktail — originally Golden Gate Hotel, now Circa Resort",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas — Best Dishes in Las Vegas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Invented by Golden Gate owner Italo Ghelfi in 1959 as a 50¢ loss-leader inspired by San Francisco's Fisherman's Wharf. Discontinued 2017, briefly revived 2019, now lives at owner Derek Stevens' Circa Resort.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Filet Mignon — The Golden Steer",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Tasting Table",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$60–90",
+      "bestTimeOfDay": "Dinner, reservation recommended",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Open since 1958, the Rat Pack's steakhouse of choice — aged prime filet in a mid-century dining room.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "French Toast Ambrosia — The Peppermill Fireside Lounge",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Tasting Table",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12–18",
+      "bestTimeOfDay": "24 hrs — late night or brunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A since-1972 retro Vegas diner landmark — vanilla-cinnamon French toast, fresh fruit, whipped cream, blueberry syrup, sunken fire-pit lounge.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Adobada Tacos — Tacos El Gordo",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Tasting Table",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–14",
+      "bestTimeOfDay": "Late night",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Tijuana-style al pastor tacos, hand-pressed tortillas, house salsas — the late-night Vegas standard.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Filipino Food — Filipinotown",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "City Cast Las Vegas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Clark County's officially designated Filipinotown, reflecting roughly 250,000 Filipino residents in the valley — one of the densest, least-touristed food scenes in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ethel M Chocolates",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Ethel M",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Handmade chocolates from a Henderson factory with an attached cactus garden — genuinely locally made, not a Strip gift-shop label.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "JoJo's Jerky",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Made in Nevada",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–15",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Nevada jerky maker since 2004, no preservatives — an easy, genuinely shelf-stable mailable gift.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Al Bees Nevada Honey",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Made in Nevada gift roundups",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$8–18/jar",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Raw honey from Sierra Nevada apiaries — the direct bees-interest pick.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Savor Spice Co.",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Made in Nevada gift roundups",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$8–14",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Black woman-owned artisanal spice-blend maker — a distinctive mailable gift beyond the generic Vegas hot sauce.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Mob Museum's House Moonshine",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia — The Mob Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$25–40/bottle",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "100-proof corn moonshine distilled in-house at The Underground, the museum's working speakeasy/distillery exhibit, sold retail through local liquor stores since 2019.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Neon Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "~$20–30",
+      "bestTimeOfDay": "Evening for the light show",
+      "durationMin": 90,
+      "rating": null,
+      "note": "A boneyard of ~250 vintage casino signs dating to the 1930s; the salvaged La Concha Motel lobby is now the visitor center. 'Brilliant!' relights unlit signs after dark.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Atomic Liquors",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "On The Luce",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$8–15/drink",
+      "bestTimeOfDay": "Early evening",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Opened 1954, popularly claimed as the oldest freestanding bar in Vegas. Scorsese's Casino crew used the garage next door as a production studio.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Pinball Hall of Fame",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-horror"
+      ],
+      "estCost": "$5–20 in quarters",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Nonprofit, volunteer-run hands-on museum with 700+ playable machines at 25¢ a pop; excess revenue goes to the Salvation Army. Founder Tim Arnold has collected since 1972.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Seven Magic Mountains",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Nevada Museum of Art",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Golden hour",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Ugo Rondinone's Day-Glo stacked-boulder land art installation — $3.5M, one of the largest US land-art works completed in the last 40 years, extended through May 2027.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Red Rock Canyon National Conservation Area",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "BLM",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "~$20/vehicle",
+      "bestTimeOfDay": "Early morning",
+      "durationMin": null,
+      "rating": null,
+      "note": "Sandstone walls up to 3,000 ft, a 13-mile scenic loop, hiking and rock climbing. The Killers publicly opposed development here in 2017.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Springs Preserve",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "~$20",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 180,
+      "rating": null,
+      "note": "180 acres on Las Vegas's original water source — desert-sustainability demonstration site, botanical gardens, wetland trails, opened 2007.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Culinary Workers Union Local 226 (Headquarters)",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Nevada Independent",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free (context visit)",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Founded 1935, now Nevada's largest union at 60,000 members — 'America's greatest modern labor success story' per The New Republic, and the single most concrete leftist political anchor in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Mob Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks",
+        "i-horror"
+      ],
+      "estCost": "~$35 ($20 NV residents)",
+      "bestTimeOfDay": "Midday",
+      "durationMin": 150,
+      "rating": null,
+      "note": "Housed in the city's actual 1933 federal courthouse, with the restored Kefauver hearing courtroom and a working in-house speakeasy/distillery.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Double Down Saloon",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "Free entry, $5–10 drinks",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Founded 1992 by P Moss in the old Fruit Loop district; no-cover punk, garage, ska, surf, and psychobilly every night, a Bourdain favorite.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Punk Rock Museum / Triple Down",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "~$28–40",
+      "bestTimeOfDay": "Afternoon; evening for the bar",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Founded 2023 by NOFX's Fat Mike and Lisa Brownlee, governed by a 10-person collective incl. Pat Smear and Tony Hawk; playable-instrument Jam Room, chapel, Triple Down dive bar built in.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Backstage Bar & Billiards",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia (Punk Rock Bowling)",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Books electronic/glitch/experimental lineups alongside standard rock bills; one of Punk Rock Bowling's official venue stages.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fremont Country Club",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia (Punk Rock Bowling)",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15–35",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A mid-size downtown room, one of Punk Rock Bowling's core venues — verify current booking calendar before visiting.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Punk Rock Bowling & Music Festival",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-political"
+      ],
+      "estCost": "Festival passes vary",
+      "bestTimeOfDay": "Late May",
+      "durationMin": null,
+      "rating": null,
+      "note": "Founded 1999 by Youth Brigade's Stern brothers (BYO Records); Memorial Day weekend, 8,000-10,000/day across downtown venues. Falls outside this trip's Oct window — scene-context citation, not a bookable activity.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Neon Museum Gift Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Neon Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Postcards and magnets designed from the museum's own vintage sign collection — genuinely tied to Vegas's specific visual heritage.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Arts Factory (18b Arts District)",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia — 18b Arts District",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "First Friday evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Wes Myles's 1998 warehouse conversion that founded the Arts District; galleries inside sell local-artist prints and small-run goods, especially on First Friday.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Punk Rock Museum Gift Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Punk Rock Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5–35",
+      "bestTimeOfDay": "",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Patches, pins, and postcards designed in-house, tied to the museum's flyer-art aesthetic.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Writer's Block",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Smart Vegas Deals",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Nevada-author titles and small literary prints — a better souvenir than a shot glass.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Springs Preserve Gift Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Springs Preserve",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Desert-themed, native-seed-packet, education-nonprofit-adjacent gifts tied to the preserve's sustainability mission.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "SYN Shop",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "synshop.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership-based; open houses often free",
+      "bestTimeOfDay": "Check event calendar",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Las Vegas's community hackerspace/makerspace — member-run space for hackers, makers, and inventors with an explicit mentorship culture; check their Discord for current open hours.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cowtown Guitars (historical, closed 2019)",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia — Cowtown Guitars",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "N/A — closed",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Not a current pick — flagged for context only. A nationally known vintage guitar shop (an authenticated 1963 Hendrix Strat passed through here) that relocated to the Arts District in 2011 and closed in 2019.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Casino",
+        "year": 1995,
+        "locationVisited": null,
+        "visitNote": "Scorsese's crew used the garage next door as a production studio. Salvaged shell-shaped lobby, relocated and now serves as the Neon Museum's visitor center; appeared in the film. Demolished 2015; used as a filming location.",
+        "photoId": null
+      },
+      {
+        "title": "Fear and Loathing in Las Vegas",
+        "year": 1998,
+        "locationVisited": null,
+        "visitNote": "A filming location for the cult classic. Owners refused filming permission; production built its own version rather than shooting on location.",
+        "photoId": null
+      },
+      {
+        "title": "Ocean's Eleven",
+        "year": 2001,
+        "locationVisited": null,
+        "visitNote": "Primary filming location — casino floor, botanical gardens, art gallery, Dale Chihuly glass lobby ceiling, and the fountain finale.",
+        "photoId": null
+      },
+      {
+        "title": "Anora",
+        "year": 2024,
+        "locationVisited": null,
+        "visitNote": "Palme d'Or and Best Picture winner (5 Oscars total). Filmed here and on Fremont Street; plot centers on an impulsive Vegas elopement. Filming location.",
+        "photoId": null
+      },
+      {
+        "title": "The Hangover",
+        "year": 2009,
+        "locationVisited": null,
+        "visitNote": "Filming location. Filming location, also used for Rain Man (1988) and Hangover Part III (2013).",
+        "photoId": null
+      },
+      {
+        "title": "Mars Attacks!",
+        "year": 1996,
+        "locationVisited": null,
+        "visitNote": "Filming location.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Jenna Jameson",
+        "relevance": "adult-entertainment / pop-culture",
+        "note": "Daughter of a Folies Bergère showgirl and a Las Vegas Sheriff's Dept officer; began dancing in Vegas strip clubs as a teenager in 1991."
+      },
+      {
+        "name": "Brandon Flowers",
+        "relevance": "music",
+        "note": "Frontman of The Killers. Sam's Town (2006) and Battle Born (2012, named for the Nevada flag) are explicit odes to Nevada; called Vegas 'the lion's den.'"
+      },
+      {
+        "name": "Dan Reynolds",
+        "relevance": "music",
+        "note": "Frontman of Imagine Dragons; the band relocated to and was based in his hometown to record its first three EPs."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

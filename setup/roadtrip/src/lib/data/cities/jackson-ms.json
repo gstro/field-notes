@@ -1,0 +1,1507 @@
+{
+  "id": "jackson-ms",
+  "name": "Jackson",
+  "state": "MS",
+  "tripId": "south",
+  "stay": {
+    "arrive": "2026-05-06",
+    "depart": "2026-05-09",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 32.29889,
+    "lng": -90.18472
+  },
+  "elevationFt": 361,
+  "population": {
+    "cityProper": 153701,
+    "metro": 591978
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Lemuria Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Tripadvisor",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Deep South Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "msbookfestival.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0-40",
+      "bestTimeOfDay": "Afternoon; evening for a signing",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Widely called one of the best independent bookstores in the nation -- deep Southern-lit and Mississippi-author focus, a First Edition Room, and a packed signings calendar.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Book Rack",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "newpages.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$2-20",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Jackson metro's premier used bookstore -- 57+ years in business, 40,000+ titles, deep mystery/sci-fi/rare and out-of-print sections, book clubs and signings.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Coffee Prose",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "msbookfestival.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-food"
+      ],
+      "estCost": "$3-20",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Used bookstore, coffee shop and bistro under one roof in Midtown, with drive-thru specialty lattes and Mississippi-made beverages alongside the stacks.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "OffBeat",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "msbookfestival.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "mississippifreepress.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-political",
+        "i-punk"
+      ],
+      "estCost": "$3-40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Mississippi's only Black-owned record and comic shop, run by DJ Young Venom -- the closest thing Jackson has to an unusually-curated, politically-inflected bookstore. Listed as both a Jackson bookseller and a record shop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "End of All Music JXN",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$10-40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Sibling shop to Oxford's celebrated End of All Music flagship; anchors the central-Mississippi record trade from Fondren.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "OffBeat",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "msbookfestival.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "mississippifreepress.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-political",
+        "i-punk"
+      ],
+      "estCost": "$3-40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Mississippi's only Black-owned record and comic shop, run by DJ Young Venom.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Morningbell Records & Studios",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mississippifreepress.org record store guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$5-35",
+      "bestTimeOfDay": "Afternoon; check for in-stores",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Opened 2012; new and used LPs plus turntables and accessories, hosts live shows in the same Duling Ave complex as Duling Hall and Just Vanilla Bake Shop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bama Record Shop",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "One of Jackson's longstanding local record shops; thinner sourcing than the other picks here -- call ahead to confirm hours.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "ReBop Record Shop",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5-35",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Opened late 2024; newest addition to the Jackson-metro vinyl scene, just north in Ridgeland.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Native Coffee Co.",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Belhaven specialty shop in a former service station, opened 2020 by Matt and Anna Flinn; house biscuits and ties to the Soapbox Coffee Roasters project. Jackson's highest-rated coffee spot in local roundups.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cups Espresso Cafe",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-7",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Long-running Mississippi coffee chain founded 1993 with its own in-house roastery and Mississippi-roasted blends -- the closest thing Jackson has to a coffee institution.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Urban Foxes",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Mississippi Today DIY music scene feature",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-punk"
+      ],
+      "estCost": "$4-10",
+      "bestTimeOfDay": "Morning; evening for a show",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Bakery-coffeehouse in a restored 1940s house serving espresso, pies, pastries and quiche -- and doubling as a small alt/DIY-music show space, per Jackson's own DIY-scene coverage.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Coffee Prose",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "msbookfestival.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-books"
+      ],
+      "estCost": "$3-20",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Combined coffee shop, used bookstore and bistro with drive-thru service and specialty lattes.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Northshore Specialty Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-9",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Espresso, pour-overs, tea and light bites; runs its own roasting facility in Midtown Jackson and sells Midtown-roasted beans retail.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sugaree's Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Caramel Cake",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-30 (whole cake)",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "TasteAtlas's named restaurant for Mississippi caramel cake -- soft yellow sponge stacked with hand-cooked caramel icing, a Delta holiday tradition.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Campbell's Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog Jackson bakeries",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Fondren fixture operating since 1962, known for signature tea cakes and custom event cakes.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Just Vanilla Bake Shop",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog Jackson bakeries",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Flaky croissants, breads and cookies inside the Duling Hall complex -- pair with a Morningbell Records browse and an evening show at Duling Hall itself.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Broad Street Baking Company & Cafe",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Deep South Magazine",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-14",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Industrial-style bakery-cafe with homemade breads, desserts and espresso -- steps from Lemuria Books, so the two pair naturally.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Urban Foxes",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Small-batch pies, pastries and quiche baked in a restored 1940s house.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Comeback Sauce",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Comeback sauce; TasteAtlas",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "Usually free with an order",
+      "bestTimeOfDay": "Any meal",
+      "durationMin": null,
+      "rating": null,
+      "note": "Mississippi's signature condiment, born in Jackson's Greek-owned restaurants in the late 1920s. Mayflower Cafe's own owner credits rival diner The Rotisserie with the actual invention; either way, order it on the blue-plate special at Mayflower.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Pig Ear Sliders & \"Smokes\" -- Big Apple Inn",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Big Apple Inn; The Local Palate",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$2-6",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Open since 1939 and now fourth-generation owned -- pig ear sliders and Red Rose sausage \"smokes\" for pocket change, a few doors from where Medgar Evers ran the NAACP's Mississippi field office. Serious civil-rights history alongside a genuinely great sandwich.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Caramel Cake -- Sugaree's Bakery",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Caramel Cake",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": null,
+      "rating": null,
+      "note": "Southern layer cake with hand-cooked caramel frosting that hardens at room temperature -- popular across the Delta for holidays. TasteAtlas's benchmark restaurant for the dish.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mississippi Mud Pie -- Rowdy's Family Restaurant",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Mississippi Mud Pie",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5-10",
+      "bestTimeOfDay": "After a meal",
+      "durationMin": null,
+      "rating": null,
+      "note": "Cookie-crust chocolate layer dessert believed to originate in the Vicksburg-Natchez region near Jackson; ice cream, pudding, whipped cream and marshmallow versions all circulate.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Delta Tamales -- Walker's Drive-In",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Local Palate",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8-14",
+      "bestTimeOfDay": "Lunch or dinner",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Mississippi Delta hot tamales -- a genuinely regional dish with disputed, contested origins (often traced to Mexican laborers and Black cooks in the early-20th-century Delta) -- served alongside blue-plate specials at this Jackson institution.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bottled Comeback Sauce",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Comeback sauce",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6-10/bottle",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "The Mississippi condiment that travels best -- pick up a bottled version to mail or carry home.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Local Honey -- Mississippi Farmers Market",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Mississippi Dept. of Agriculture & Commerce; local listings",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$8-18/jar",
+      "bestTimeOfDay": "Saturday morning, in season",
+      "durationMin": null,
+      "rating": null,
+      "note": "State-run farmers market a few blocks from the New Capitol; honey from area apiaries sold alongside jams, produce and other shelf-stable goods.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Whole-Bean Coffee -- Native Coffee Co. / Northshore",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$14-20/bag",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Both roasters sell retail bags of Jackson- and Midtown-roasted beans -- easy to ship or hand-carry.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mississippi Gift Company -- Sauces & Jams",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "themississippigiftcompany.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10-40",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "\"Everything Made in Mississippi\" mail-order gift company sourcing from 150+ Mississippi makers -- sauces, jams, honey, candies. Based in Greenwood, not Jackson, but offers next-day Jackson delivery and nationwide UPS shipping, which is why it's included here rather than as an in-city storefront.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Muscadine & Fig Preserves -- Mississippi Farmers Market",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "local listings",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "regional Southern-market convention",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6-12/jar",
+      "bestTimeOfDay": "Saturday morning, in season",
+      "durationMin": null,
+      "rating": null,
+      "note": "Jarred muscadine and fig preserves from area growers -- a shelf-stable nod to the traveler's fruit interest, sold alongside the market's honey.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mississippi Civil Rights Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Mississippi Civil Rights Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "~$8-15",
+      "bestTimeOfDay": "Midday, allow real time",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Opened 2017; eight galleries in a circular layout around a central rotunda, including a memorial to 600+ Mississippians lynched, Bryant's Grocery doors (Emmett Till), and Vernon Dahmer's bullet-riddled truck.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Farish Street Historic District",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Mississippi Encyclopedia",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Farish Street",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political",
+        "i-books",
+        "i-drinks"
+      ],
+      "estCost": "Free to walk",
+      "bestTimeOfDay": "Daylight, then dinner at F. Jones Corner",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Once nearly a third Black-owned and one of the largest self-sufficient Black business districts in the country -- blues labels, the Alamo Theatre, and Medgar Evers's NAACP office at 507 N Farish St. Now largely vacant after a 2002 redevelopment deal went dormant in 2014, but Big Apple Inn, Cathead Distillery and F. Jones Corner keep the block alive. See this guide's analytical-thread note for the full history.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mississippi River Basin Model",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- The Mississippi River Basin Model",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Late afternoon light",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A 200-acre scale model of 41% of the continental US, built 1943-66 by German and Italian POWs to simulate flood control -- it prevented ~$65M in Omaha flood damage in 1952, then went obsolete and was abandoned. Overgrown concrete riverbanks reclaimed by the woods; genuinely eerie and permanently closed to official visitation.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Eudora Welty House & Garden",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Eudora Welty House",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "~$5-10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 90,
+      "rating": null,
+      "note": "The restored home where Welty lived and wrote for nearly 80 years, original furnishings and library intact, plus a garden with plants she wrote about directly (the night-blooming cereus from The Golden Apples).",
+      "verifiedOpen": null
+    },
+    {
+      "name": "LeFleur's Bluff State Park",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- LeFleur's Bluff State Park",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free-$4/vehicle",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 120,
+      "rating": null,
+      "note": "305 acres on the Pearl River inside city limits -- five short trails, fishing on Mayes Lake, disc golf, and the adjoining Mississippi Museum of Natural Science. The balance-rule natural pick.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Smith Robertson Museum and Cultural Center",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Smith Robertson Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "~$5",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Jackson's first public school for Black children (1894, rebuilt in brick 1909); Richard Wright's alma mater, where he graduated valedictorian in 1925. Closed as a school in 1971, reopened as a history museum in 1984.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Medgar and Myrlie Evers Home National Monument",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "Wikipedia -- Medgar Evers",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free (tours by appointment)",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The ranch house where Medgar Evers was assassinated on his own driveway June 12, 1963, hours after JFK's civil rights address. National Historic Landmark since 2017; National Monument since 2019.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mississippi Museum of Art",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Mississippi Museum of Art",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free-$10 for special exhibits",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 120,
+      "rating": null,
+      "note": "The state's largest art museum, with a real self-taught/outsider-art vein: Howard Finster, Jimmy Lee Sudduth, Mose Tolliver, and Theora Hamblett's visionary, dream-derived religious paintings -- the strongest Atlas-Obscura-adjacent art pick in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cooperation Jackson / Chokwe Lumumba Center",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Cooperation Jackson",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Chokwe Lumumba",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political",
+        "i-diy"
+      ],
+      "estCost": "Free (check for open events)",
+      "bestTimeOfDay": "Check event calendar",
+      "durationMin": null,
+      "rating": null,
+      "note": "Worker-cooperative network built on the Jackson-Kush Plan -- solidarity economy, people's assemblies, and an independent Black political party -- running Freedom Farms, the Green Team, and the Center for Community Production (3D printing/digital fabrication cooperative). Direct contemporary counterpoint to Farish Street's history a few blocks away.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cathead Distillery",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "catheaddistillery.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "Tours/tastings vary; gift shop free to browse",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 90,
+      "rating": null,
+      "note": "The first legal distillery in Mississippi (founded 2010), sitting right on Farish Street. Makes Old Soul Bourbon alongside vodka and gin -- the whiskey/bourbon pick, with the added texture of being one of the surviving businesses on an otherwise largely vacant street.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Duling Hall",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "dulinghall.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15-40",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Restored school-auditorium-turned-venue with genuinely strong acoustics; part of the same Duling Ave complex as Morningbell Records and Just Vanilla Bake Shop. Books touring indie/roots/Americana more than punk specifically.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Hal & Mal's",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Local Palate",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-food"
+      ],
+      "estCost": "$5-20",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Historic warehouse venue and restaurant running live music since 1984 -- order \"Comeback and Crackers\" and tamale nachos between sets.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "F. Jones Corner",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "local press",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "general knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "$5-15 cover",
+      "bestTimeOfDay": "Late night (shows often start after 10pm)",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Late-night blues club on Farish Street -- one of the handful of businesses still operating on a block otherwise gutted by the stalled entertainment-district redevelopment. Not punk, but the strongest live-music tie to the analytical thread.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sunflower Oven",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Mississippi Today",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-food"
+      ],
+      "estCost": "Donation / cover varies",
+      "bestTimeOfDay": "Night; check socials",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Named as an active all-ages DIY venue in an August 2025 Mississippi Today feature on Jackson's punk/noise scene, but a separate bakery directory lists it as permanently closed -- it operated as both a bakery (king cakes) and a show space. Confirm before planning around it.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "CS's",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Mississippi Today DIY music scene feature",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5-15",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Bar and restaurant that books local bands -- named alongside Urban Foxes and Sunflower Oven as one of the few rooms carrying Jackson's small punk/noise scene, per JXN Underground's own coverage.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mississippi Crafts Center",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Tripadvisor",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10-100+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Craftsmen's Guild of Mississippi shop on the Natchez Trace -- pottery, quilts, baskets and jewelry made by Mississippi artisans, not mass-market tourist product. Called out directly as Jackson-area's best souvenir shopping.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Eudora Welty House Gift Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Eudora Welty House",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Paired with the house tour",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Small shop in the Education & Visitors Center -- Welty's own books, literary-award materials, and Mississippi small-press titles.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mississippi Civil Rights Museum Gift Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Mississippi Civil Rights Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "$5-40",
+      "bestTimeOfDay": "After the museum",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Books, prints and civil-rights ephemera tied directly to the museum's collection -- a souvenir that's also an act of political memory.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "OffBeat",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "msbookfestival.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-political"
+      ],
+      "estCost": "$5-40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Records, comics and local ephemera from Jackson's only Black-owned shop of its kind -- a far more meaningful take-home than a mass-produced magnet.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cathead Distillery Gift & Bottle Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "catheaddistillery.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$20-45/bottle",
+      "bestTimeOfDay": "Weekday, 10am-5pm",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Bottled Old Soul Bourbon, Cathead Vodka and Bristow Gin, plus Farish Street-branded merch -- best hand-carried home given interstate alcohol-shipping restrictions.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Bean Path",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "beanpath.org",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "WLBT",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Mississippi Free Press",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free-membership varies",
+      "bestTimeOfDay": "Check class calendar",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Jackson's premier STEAM hub and community workshop, 6,000+ sq ft, first phase of a planned 21-acre Bean Path Tech District. Black-led tech nonprofit running Canva, Python and robotics classes alongside open workshop time.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cooperation Jackson -- Center for Community Production",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Cooperation Jackson",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-political"
+      ],
+      "estCost": "Free (check for open events)",
+      "bestTimeOfDay": "Check event calendar",
+      "durationMin": null,
+      "rating": null,
+      "note": "A worker-cooperative digital-fabrication shop (3D printing/manufacturing) inside Cooperation Jackson's broader solidarity-economy network -- DIY electronics filtered through explicit cooperative-ownership politics rather than a retail hackerspace model.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Jackson State University Makerspace",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "jsums.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free for affiliates; inquire otherwise",
+      "bestTimeOfDay": "Weekday, contact ahead",
+      "durationMin": null,
+      "rating": null,
+      "note": "University makerspace with 3D printers (Ultimaker, Markforged, Cube Trio), laser/vinyl cutting and a full Adobe/SketchUp/Blender software suite. Primarily for JSU affiliates; whether outside visitors can access equipment is unconfirmed -- email ahead.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Collaborative Space (Mississippi LIGHT Collaborative)",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mslightcollaborative.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Varies by program",
+      "bestTimeOfDay": "Check event calendar",
+      "durationMin": null,
+      "rating": null,
+      "note": "A Creative STEAM Lab and Studio doubling as a gallery, hosting the annual Mississippi LIGHT Festival plus workshops, talks and artist residencies -- not a walk-in retail hackerspace, but a genuine hands-on maker/light-art community.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Hotel Tehran",
+        "year": 2026,
+        "locationVisited": null,
+        "visitNote": "Liam Neeson / Zachary Levi heist-action production filmed on campus in September 2024; the biology and chemistry building stood in for a middle school drop-off scene.",
+        "photoId": null
+      },
+      {
+        "title": "The Help",
+        "year": 2011,
+        "locationVisited": null,
+        "visitNote": "One of the few real Jackson locations used in the film -- a 1946 soda fountain and diner, still operating today. Downtown Jackson diner used as a location; also the restaurant most associated with comeback sauce. Exterior location that can still be visited.",
+        "photoId": null
+      },
+      {
+        "title": "Get on Up",
+        "year": 2014,
+        "locationVisited": null,
+        "visitNote": "James Brown biopic; some scenes reported filmed in Jackson, but specific addresses could not be confirmed from available sources.",
+        "photoId": null
+      },
+      {
+        "title": "Speech & Debate",
+        "year": null,
+        "locationVisited": null,
+        "visitNote": "Reported as filmed entirely in Jackson; year and specific locations unconfirmed from available sources.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Eudora Welty",
+        "relevance": "literature",
+        "note": "Pulitzer Prize winner (1973, The Optimist's Daughter). Lived in her Belhaven home for nearly 80 years; it's now a National Historic Landmark house museum."
+      },
+      {
+        "name": "Richard Wright",
+        "relevance": "literature",
+        "note": "Author of Black Boy and Native Son. Lived with his grandmother in Jackson from 1920-1925, graduating as valedictorian of Smith Robertson Junior High -- now the Smith Robertson Museum."
+      },
+      {
+        "name": "Cassandra Wilson",
+        "relevance": "music",
+        "note": "Jazz vocalist, two-time Grammy winner, named Time's 'America's Best Singer' in 2001. Jackson State University class of 1980."
+      },
+      {
+        "name": "David Banner",
+        "relevance": "music / leftist-politics",
+        "note": "Rapper, songwriter and producer (T.I., Lil Wayne, Lil Boosie). Testified before Congress in 2007 on hip-hop and racism; did extensive Hurricane Katrina relief work."
+      },
+      {
+        "name": "Medgar Evers",
+        "relevance": "civil-rights",
+        "note": "NAACP's first Mississippi field secretary, operating out of 507 N Farish St from 1954. Assassinated outside his Jackson home on June 12, 1963; the home is now the Medgar and Myrlie Evers Home National Monument."
+      },
+      {
+        "name": "Margaret Walker (Alexander)",
+        "relevance": "literature",
+        "note": "Yale Younger Poets Prize winner; taught at Jackson State University from 1949, founding its Center for African-American Studies (now the Margaret Walker Center). Career-defined by Jackson rather than born here."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

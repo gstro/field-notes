@@ -1,0 +1,1312 @@
+{
+  "id": "shreveport-la",
+  "name": "Shreveport",
+  "state": "LA",
+  "tripId": "south",
+  "stay": {
+    "arrive": "2026-05-03",
+    "depart": "2026-05-06",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 32.5252,
+    "lng": -93.7502
+  },
+  "elevationFt": 206,
+  "population": {
+    "cityProper": 178000,
+    "metro": 393000
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "The Thrifty Peanut",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "familydestinationsguide.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "thethriftypeanut.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "$3-25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A sprawling used book-and-media warehouse running trade-in credit since 2006 -- towering shelves, a deliberately un-curated 'lose yourself for hours' layout, and a vinyl/CD/DVD section alongside the books.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Beth the Book Lady",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "beththebooklady.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "$5-60",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A personally curated rare-and-used book dealer operating since 1991 out of two antique-mall booths rather than a standalone storefront -- the hidden-gem hunt is half the appeal.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Vine Books & Vinyl",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "vinylpackman.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "$3-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A combined used-book and vinyl shop -- exactly the kind of dual-format independent the traveler's interests were built for, though this run couldn't independently confirm an address or hours beyond the directory listing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Centenary College Book Bazaar",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "shreveportbossieradvocate.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$1-15/book",
+      "bestTimeOfDay": "Annual, each September",
+      "durationMin": 120,
+      "rating": null,
+      "note": "An annual used-and-collectible book sale run by the college, thousands of titles at deep discounts -- a genuine literary event rather than a year-round shop, and outside this trip's May visit window, but worth flagging for a return trip or for anyone routing through Shreveport in the fall.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "RPB Vinyl",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "rpbvinyl.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$8-40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "New and pre-loved vinyl, CDs, and cassettes across rock, country, soul, jazz, and gospel, tucked inside an antiques mall -- 'IT'S BETTER ON VINYL!' is the whole pitch.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Little Shop of Music",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "shreveportbossieradvocate.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$8-40",
+      "bestTimeOfDay": "Afternoon (some days by appointment only -- call ahead)",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Owner Scott Auer describes it as 'a hang out spot, a record store and a place to connect to local music' -- vinyl, CDs, used/vintage guitars, and a dedicated section for local and Louisiana artists.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rick's Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "vinylpackman.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Described by a regional vinyl directory as 'a strong first stop if your priority is used vinyl, deeper bins, or harder-to-find stock' -- address unconfirmed via live source this run.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Vine Books & Vinyl",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "vinylpackman.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-books"
+      ],
+      "estCost": "$8-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The vinyl half of the same combined book-and-record shop listed under Bookstores -- blues and jazz stock notable per the directory description.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Thrifty Peanut (vinyl section)",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "thethriftypeanut.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$3-25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The same used-media warehouse from Bookstores carries a genuinely large vinyl selection alongside its books -- the easiest single stop to cover both categories.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rhino Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "roastlocal.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "rhinocoffee.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Shreveport's longest-running specialty roaster (14+ years), Fairtrade-certified, sourcing direct from farms in Colombia and Ethiopia -- the ground-truth confirmed anchor of the city's coffee scene (the traveler's own Maps data shows repeat visits to the Uptown location).",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Jelks Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "roastlocal.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "jelkscoffeeroasters.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-9",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A roasting operation with roots tracing back to 1896, now stocking 200+ origin and flavored coffees -- the deepest bean selection in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lyons' Pride Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "roastlocal.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "An SCA-certified roaster that runs employment programs for workers with disabilities -- the strongest community/political-economy tie in the city's coffee scene.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Kern Has Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "roastlocal.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "An air-roasting specialist that began at farmers markets in 2011 and has stayed deliberately small-batch -- owner Kern Courtney's name is on the tin.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "My Friend's Coffee Co",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "roastlocal.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Started as a backyard roasting operation by owner Patty Cramer and still leans into that grassroots origin story in its branding.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Julie Anne's Bakery & Cafe",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "threebestrated.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-12",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Everything -- cakes, pies, pastries, tarts, cookies, bread -- baked fresh every morning; the closest thing in Shreveport to a full daily-scratch pastry case.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lowder Baking Company",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "threebestrated.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Artisan breads, croissants, and cinnamon rolls, plus seasonal King Cakes -- ground-truth confirmed as a repeat stop on the traveler's own May 2026 Maps data.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Strawn's Eat Shop",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "regional/well-established institution; live-source re-confirmation blocked this run",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8/slice",
+      "bestTimeOfDay": "Late morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A Shreveport institution since the 1940s built around one dish: strawberry icebox pie. This run could not independently re-confirm the exact founding year or current address via a live source (several fetch attempts were blocked), but the traveler's own Maps data shows two direction-navigated visits during the May 2026 stay -- included on that ground-truth basis.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Prep Cakes Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "threebestrated.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Health-focused baking with genuine gluten-free, vegan, and dairy-free options -- cinnamon rolls and bagels are the draw.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shrimp Buster",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "regional/well-established institution",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$14-20",
+      "bestTimeOfDay": "Lunch or dinner",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Deep-fried, butterflied shrimp under a closely guarded spicy proprietary sauce, invented at this Shreveport institution -- ground-truth confirmed via two navigated visits on the traveler's own May 2026 Maps data.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Stuffed Shrimp & Gumbeaux",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "orlandeauxscafe.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$12-22",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Orlandeaux's is the oldest continuously operating African-American family-owned restaurant in the United States, running since 1921 under the Chapman family across five generations (formerly Freeman & Harris Cafe, then Pete Harris Cafe). The Chapman-original stuffed shrimp and the shrimp/chicken/crab/sausage gumbeaux are the dishes to order -- a direct, still-thriving counterpoint to this guide's business-district-erasure thread rather than a memorial to a lost one.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Strawberry Icebox Pie",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "regional/well-established institution; live-source re-confirmation blocked this run",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8/slice",
+      "bestTimeOfDay": "Late morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The single dish Strawn's is built around -- see the Pastry entry for the same institution's live-source caveat.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Crab Sandwich & Creole Classics",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "jacquelynscafe.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10-16",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Billed as 'Shreveport's iconic lunch hotspot' for Creole and American classics; the crab sandwich is the standout. Ground-truth confirmed on the traveler's own May 2026 Maps data.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Natchitoches Meat Pie",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Best Rated Meat Dishes in Louisiana",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5-10",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": null,
+      "rating": null,
+      "note": "Small, fried, empanada-style hand pies of ground beef and pork -- TasteAtlas-listed among Louisiana's best meat dishes and effectively the region's official meat pie. The dish originates in Natchitoches rather than Shreveport proper, so this is a deliberate scope exception: nothing in-city matches its regional distinctiveness, and it's a manageable day trip from the Shreveport-Bossier base.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Jelks Coffee Roasters bagged beans",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "jelkscoffeeroasters.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12-18/bag",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Bagged roasted coffee from the 1896-rooted Midtown roaster -- shelf-stable, easy to mail, and a more distinctive gift than a magnet.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Great Raft Brewing cans & merch",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "greatraftbrewing.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$10-20 (4-pack); $20-35 (merch)",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "No craft whiskey or bourbon distillery could be confirmed in or near Shreveport this run -- Great Raft's canned beer and taproom merch is the closest craft-beverage souvenir the city offers. Beer generally isn't mailable across state lines, so treat this as a bring-home rather than a ship-home pick.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cane Syrup, Rice & Satsumas",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "redriverrevel.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5-15",
+      "bestTimeOfDay": "Saturday mornings, in season",
+      "durationMin": null,
+      "rating": null,
+      "note": "Traditional Louisiana growers-only staples -- cane syrup, rice, Satsuma oranges -- sold at the Shreveport Farmers Market. Important logistical flag: the market's 2026 season runs Saturdays May 30-Aug 29, meaning it is closed during this trip's May 3-5 visit window. Included for completeness and for anyone routing back through later in the season.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Frozen Natchitoches Meat Pies",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Best Rated Meat Dishes in Louisiana",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$20-40/dozen, frozen",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Lasyone's and other Natchitoches producers ship frozen meat pies -- the same dish from the Dishes list, in a genuinely mailable form.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lowder Baking Co. King Cake",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "threebestrated.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$25-40",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Lowder's seasonal King Cake, shippable in the right season -- a more distinctive mail-home than a generic pastry box.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shreveport Water Works Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Shreveport Water Works Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "The McNeil Street Pump Station is the last steam-powered water treatment plant in the United States, with one of the world's largest intact collections of Victorian-era waterworks equipment -- ask the guide to sound the historic steam whistle.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Spring Street Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Spring Street Museum",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "Free (donations encouraged)",
+      "bestTimeOfDay": "Tue-Sat, 10am-4pm",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Housed in what began life as Tally's Bank in 1866 -- one of Shreveport's oldest surviving buildings. Caddo arrowheads and 1873 Yellow Fever Epidemic artifacts downstairs, a Victorian parlor recreation upstairs.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ogilvie-Wiener Mansion",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Ogilvie-Wiener Mansion",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Tour cost varies; call ahead",
+      "bestTimeOfDay": "Sat/Sun 3-5pm walk-in; weekday tours by appointment",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A 9,000-sq-ft 1896 Queen Anne mansion that went from private home to a celebrity-magnet supper club (Perry Como, John Wayne) to Shreveport's first openly gay bar and nightclub in the early 1980s to a decaying shell that appeared in True Blood's opening credits -- now a B&B run by a self-described 'doll hoarder' with roughly 2,000 ceramic dolls throughout the house.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "R.W. Norton Art Gallery & Gardens",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- R.W. Norton Art Gallery",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free (donations welcomed)",
+      "bestTimeOfDay": "Afternoon (Fri-Sat 1-7pm, Sun 1-5pm; gardens to sunset)",
+      "durationMin": 120,
+      "rating": null,
+      "note": "4,000 years of art -- Mary Cassatt, Rodin, Remington, a Roman emperor bust, Paul Revere silver -- inside, wrapped in a 40-acre botanical garden with 100 azalea varieties outside.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "American Rose Center",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "rose.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "Varies by season/event",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 120,
+      "rating": null,
+      "note": "The 118-acre headquarters garden of the American Rose Society, home to the largest collection of Rambler Roses in the United States -- the natural-attraction balance-rule pick, and a reasonable (if unconfirmed) pollinator-friendly stand-in given this run found no dedicated apiary or beekeeper in Shreveport itself.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shreveport Municipal Auditorium (Louisiana Hayride)",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Louisiana Hayride",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free to view exterior; event pricing varies",
+      "bestTimeOfDay": "Anytime; evening for a show",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Home of the Louisiana Hayride radio/TV show (1948-1960), second in country-music importance only to the Grand Ole Opry -- Elvis Presley made his first major stage appearances here, Hank Williams played after his Grand Ole Opry rejection, and emcee Horace Logan coined 'Elvis has left the building' from this stage. Ground-truth confirmed as the single most-navigated-to destination in the traveler's own May 2026 Shreveport Maps data.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lead Belly Statue & Ledbetter Heights",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Lead Belly; Wikipedia -- St. Paul's Bottoms",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A statue honoring Huddie 'Lead Belly' Ledbetter stands across from the courthouse; the surrounding neighborhood -- once St. Paul's Bottoms, the red-light district where he developed his style on Fannin Street -- is now renamed Ledbetter Heights in his honor. This guide's proposed anchor for the trip's business-district-erasure thread; see analyticalThread for the caveat on how cleanly it fits.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Robinson Film Center",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "robinsonfilmcenter.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Standard ticket pricing",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A 501(c)(3) two-screen art house (35mm and digital) running independent, international, and classic film, including a recurring 'Friday Night Freakout' cult/horror series -- attached to Abby Singer's Bistro. Opened May 3, 2008, meaning this trip's arrival date lands on its anniversary.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shreveport Municipal Auditorium",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "bandsintown.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Varies by event",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Same building as the Sights entry -- still an active event venue today, layered on top of its Louisiana Hayride legacy.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Strand Theatre",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "thestrandtheatre.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Varies by show",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A 2,500-seat 1925 opera house, now the Official State Theatre of Louisiana, still booking concerts, comedy, and touring productions alongside its ballet and musical-theater programming.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bear's on Fairfield",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "visitshreveportbossier.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5-15 cover, varies",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A bar and live-music room that also runs pop-up restaurant/food events -- the closest thing this run could confirm to a regular original-music room outside the historic theaters; exact genre bookings weren't independently verifiable this run.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fatty Arbuckle's Pub",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "visitshreveportbossier.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5-15 cover, varies",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A live-music pub in the Red River District near the casinos -- again, a general live-music bar rather than a confirmed punk/hardcore booking room; included for balance since dedicated DIY infrastructure could not be confirmed in this city (see honest gap below).",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Great Raft Brewing",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "greatraftbrewing.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "Free entry; $6-9/pour",
+      "bestTimeOfDay": "Evening; free tours Sat 1/2/3pm",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Community-oriented taproom hosting trivia, game nights, and craft activities alongside a rotating Caltex Barbecue food truck -- more community space than music venue, but the closest thing to a DIY-adjacent hangout this run could confirm.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Beth the Book Lady (antique-mall ephemera)",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "beththebooklady.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-diy"
+      ],
+      "estCost": "$5-40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Vintage books, ephemera, and prints curated one piece at a time -- a genuinely non-mass-market souvenir source, sold inside two antique-mall booths.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Great Raft Brewing merch",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "greatraftbrewing.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$20-35",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Taproom shirts, glassware, and cans -- locally designed rather than generic tourist merch, tied to a real local business.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "R.W. Norton Art Gallery gift shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- R.W. Norton Art Gallery (gift-shop inventory not independently confirmed)",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "$10-40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 15,
+      "rating": null,
+      "note": "An art-museum shop typically stocked with prints, art books, and garden-themed items; this run confirmed the museum itself thoroughly but not the shop's specific current inventory -- worth a look while on-site regardless.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Spring Street & Water Works Museum shops",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Spring Street Museum",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "Shreveport Water Works Museum (gift-shop inventory not independently confirmed)",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5-20",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Both free downtown museums typically run small gift tables tied to local/railroad/waterworks history -- a more specific souvenir than a generic magnet, though exact current stock wasn't independently confirmed this run.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shreveport Farmers Market vendor crafts",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "redriverrevel.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Saturday mornings, in season",
+      "durationMin": null,
+      "rating": null,
+      "note": "Grower-direct produce and craft vendors, same closure caveat as the Gifts entry: the 2026 season runs May 30-Aug 29 and is closed during this trip's May 3-5 window.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The String Shop",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "yellowpages.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Varies; repair quotes on request",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A 41-year-old instrument and amp repair shop with, per customer feedback, 'the BEST variety of stuff period, especially effect pedals' -- the closest thing this run found to a gear-hacking hub in the Shreveport-Bossier area.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shreveport Music Co",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "yellowpages.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "An independent guitar/amp/piano shop -- a smaller, in-city alternative to the Bossier City repair specialist above.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Battle: Los Angeles",
+        "year": 2011,
+        "locationVisited": null,
+        "visitNote": "Shot substantially at Shreveport's Millennium Studios soundstage complex, part of the state's film-tax-incentive-driven production boom.",
+        "photoId": null
+      },
+      {
+        "title": "Olympus Has Fallen",
+        "year": 2013,
+        "locationVisited": null,
+        "visitNote": "Also shot at Millennium Studios, the same soundstage complex as Battle: Los Angeles.",
+        "photoId": null
+      },
+      {
+        "title": "Click",
+        "year": 2006,
+        "locationVisited": null,
+        "visitNote": "Adam Sandler comedy filmed on location in Shreveport.",
+        "photoId": null
+      },
+      {
+        "title": "The Guardian",
+        "year": 2006,
+        "locationVisited": null,
+        "visitNote": "Coast Guard drama with Kevin Costner and Ashton Kutcher, filmed in Shreveport.",
+        "photoId": null
+      },
+      {
+        "title": "Premonition",
+        "year": 2007,
+        "locationVisited": null,
+        "visitNote": "Sandra Bullock psychological thriller filmed in Shreveport.",
+        "photoId": null
+      },
+      {
+        "title": "True Blood",
+        "year": 2008,
+        "locationVisited": null,
+        "visitNote": "The HBO series (not a film, but the single most-cited Shreveport production) was extensively shot in Shreveport-Bossier; the Ogilvie-Wiener Mansion appeared in the opening credits during its period of decay, before its current life as a B&B.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Huddie \"Lead Belly\" Ledbetter",
+        "relevance": "music",
+        "note": "Foundational blues and folk songster ('Goodnight, Irene'; 'In the Pines') who developed his style performing in Shreveport's red-light district; repeatedly imprisoned (including at Angola) and repeatedly used his music toward early release -- a direct thread into the South's carceral history. Honored with a statue across from the Caddo Parish Courthouse; the neighborhood is renamed Ledbetter Heights."
+      },
+      {
+        "name": "Jericho Brown",
+        "relevance": "literature",
+        "note": "Pulitzer Prize-winning poet (The Tradition, 2020); director of the Creative Writing Program at Emory University."
+      },
+      {
+        "name": "Johnnie Cochran",
+        "relevance": "leftist-politics",
+        "note": "Criminal defense and civil rights attorney; before his highest-profile cases he built a career litigating LAPD police-abuse cases, a direct line to the trip's political-history thread."
+      },
+      {
+        "name": "Mike Johnson",
+        "relevance": "politics",
+        "note": "Current U.S. Speaker of the House. Included here for completeness of the pop-culture/notable-person sweep, not as an interest-aligned pick -- his politics sit at the opposite end of the spectrum from the traveler's leftist framing, and that ideological distance is itself a data point about who this city produces."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

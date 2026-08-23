@@ -26,6 +26,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D18](#d18-binary-recommendation-rating) | Binary recommendation rating (resolves O3) | Final |
 | [D19](#d19-per-citation-source-urls) | Per-citation source URLs, not one shared URL | Final (M2, Aug 2026) |
 | [D20](#d20-spend-and-lodging-field-on-city) | `spend`/`lodging` field on `City` | Final (M2, Aug 2026) |
+| [D21](#d21-trip-2-guide-statuses-map-to-unverified) | Trip-2 guide statuses map to `unverified` | Provisional (M3, Aug 2026) |
 
 ## Decisions
 
@@ -109,9 +110,14 @@ Recommendations carry a **binary** rating (a single would-return / not signal), 
 
 Added `spend: { total, byCategory, lodging } | null` to the `City` schema. M2's own scope said spend and lodging "go straight into the city JSON" once O2 resolved public (D16), but no such field existed. Populated `null` for now — the card-statement CSV export (M0) hasn't landed. A guide's pre-trip cost estimate (e.g. "~$200 Est. Total") is not reconstructed spend and does not populate this field.
 
+### D21 — Trip-2 guide statuses map to `unverified`
+
+The 14 generated guides ([M3](m3-guide-ingest.md)) use `sourced-recommendation` for every trip-2 recommendation — meaning "the guide listed this," not an outcome. `RecStatus` has no "listed, outcome not yet reconciled" value; the closest existing member is `unverified`, which DC's M2 file already uses with exactly this meaning. Mapped `sourced-recommendation` → `unverified` rather than adding a schema member. **Provisional**: every trip-2 rec across the 6 newly-ingested trip-2 cities is `unverified` until real attendance data (memory + photos + calendar/ticket emails, per M0) lands and reassigns real statuses. Status assignment is isolated in one function (`assignStatus` in `tools/ingest-guides.mjs`) specifically so this re-run is cheap. Trip-1's `retroactive-recommendation` has the mirror problem — see O6.
+
 ## Open questions (undecided)
 
 | # | Question | Decide by |
 |---|---|---|
 | O4 | When to hold the fingerprint scoring session (per D12, one sitting) | After a few cities' qualitative data lands |
 | O5 | Whether legs need a `detours` field (OKC→Dallas logged at 7:49 — ~3.5 hrs of driving stretched to nearly 8 means stops) | During leg reconstruction |
+| O6 | Whether D2/D3's "Trip 1 was instinct travel (no guides existed)" framing survives `data/maps-trip-analysis-public.json`, which shows every trip-1 city had a 32–42 place self-made Google Maps list (47.4% vs. 52.5% on-list navigation) — the site's signature question may need to shift from *instinct vs. curation* to *self-curation vs. sourced curation* | Before trip-1 statuses (D3, D21) can be called final |

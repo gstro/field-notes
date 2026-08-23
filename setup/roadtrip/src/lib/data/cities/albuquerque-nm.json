@@ -1,0 +1,1448 @@
+{
+  "id": "albuquerque-nm",
+  "name": "Albuquerque",
+  "state": "NM",
+  "tripId": "west",
+  "stay": {
+    "arrive": "2025-10-17",
+    "depart": "2025-10-20",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 35.0844,
+    "lng": -106.6504
+  },
+  "elevationFt": 5312,
+  "population": {
+    "cityProper": 564559,
+    "metro": 918000
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Bookworks",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "bkwrks.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque bookstore roundup",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-horror"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Daily 10am–6pm; evenings for author events",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Independent since 1984 in the North Valley; runs a Horror Book Club alongside Sci-Fi/Fantasy, Romance and Queer book clubs, and has hosted Poet Laureate Joy Harjo for its Leopold Lecture series.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Organic Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque bookstore roundup",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "New-and-used shop in Nob Hill with a curated emphasis on local New Mexico authors.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Page 1 Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque bookstore roundup",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Tripadvisor",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Operating since 1981; new and used books, magazines, cards and gifts -- one of the city's longest-running independents.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Title Wave Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque bookstore roundup",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Carries local authors and New Mexico-focused titles alongside a strong rare/collectible case within its general used stock.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The People's Library-ABQ",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "anarresproject.org",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "The People's Library-ABQ (Facebook)",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Check social media for current pop-up location/hours",
+      "durationMin": null,
+      "rating": null,
+      "note": "The mandatory secondary-search-pass find: an anarchist/mutual-aid free lending library project documented by the Anarres Project for Alternative Futures (UNM). Operates as a pop-up rather than a fixed storefront -- itself the honest finding, see the gap note below.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Vinyl Consumption Record Shop",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "albuquerqueinsider.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$8–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Widely cited as the city's best overall selection -- near-mint originals across genres in a modest storefront.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Astro-Zombies",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "albuquerqueinsider.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-horror"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Named after the Misfits' horror-punk anthem 'Astro Zombies' -- the pedigree is built into the sign. Cool murals, knowledgeable staff, and a comic-book selection alongside the vinyl.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "LongHair Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "albuquerqueinsider.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon/evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Eclectic stock from classic rock to indie, and one of the few ABQ shops that hosts live in-store sets.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Charley's Records & CDs",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "albuquerqueinsider.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Cozy listening area and staff who are genuinely enthusiastic about deep-catalog questions.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "SloLow Vinyl Records (inside Antiques And Things)",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "albuquerqueinsider.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Booth-style vinyl nook inside a larger antiques mall on old Route 66 -- easy to pair with a Nob Hill stroll.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cutbow Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning; Friday for public cupping",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Food & Wine named it New Mexico's best coffee shop in 2022; founder Paul Gallegos has roasted for nearly 30 years, and Friday cupping sessions are open to anyone.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Humble Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–7",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Direct farmer relationships and single-origin espresso since 2014; the cold brew is widely called the city's best.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Zendo",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A bright, plant-filled community 'third space' with rotating local art; the Red Chile Mocha and Aztec Latte both lean into New Mexico flavor instead of a generic syrup menu.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Trifecta Coffee Company",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-drinks"
+      ],
+      "estCost": "$5–9",
+      "bestTimeOfDay": "Morning/brunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Albuquerque's first combined roaster-cafe-bakery (2015); the coffee-and-cocktail-style menu (Coffee and Tonic) is worth the detour off the tourist core.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Little Bear Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-drinks"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning for coffee; Thu–Mon evening for the natural wine bar",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Fully traceable, specialty-grade coffee by day; the same room converts into a natural wine bar Thursday through Monday nights.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Golden Crown Panaderia",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "goldencrown.biz",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–15",
+      "bestTimeOfDay": "Anytime -- the Cookie/Bread ATM runs 24/7",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Fifty-plus years deep: biscochitos (the official state cookie), green chile bread, and an in-house coffee roastery. The 24/7 vending machine out front means there's no bad time to show up.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Burque Bakehouse",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "secretalbuquerque.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "newmexico.tablemagazine.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Morning, before sellout",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Walk-up window bakery with two James Beard 'Outstanding Bakery' nominations; the green chile croissant is the one to chase.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ihatov Bread and Coffee",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "newmexico.tablemagazine.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "secretalbuquerque.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "James Beard semi-finalist for Outstanding Bakery; a serious sourdough program in a cozy Nob Hill room.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Coda Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "newmexico.tablemagazine.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$2–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Vietnamese-French bakery -- pandan cake, sesame balls, pate chaud, banh mi -- and a 2025 James Beard 'Outstanding Baker' nominee.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Witching Flour Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "albuquerqueinsider.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-horror"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Weekend mornings only -- limited hours, sells out fast",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The name alone earns the occult tag. Limited weekend hours and a reputation for selling out fast, so arrive early.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Green Chile Cheeseburger",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas — Best Dishes in Albuquerque",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10–16",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "New Mexico's defining sandwich since the 1950s -- roasted green chile and melted American cheese on a charbroiled patty.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Breakfast Burrito",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas — Best Dishes in Albuquerque",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–10",
+      "bestTimeOfDay": "Any hour -- open late, across from UNM",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Eggs, bacon, potato and chile in a flour tortilla, at a round-the-clock institution across from campus.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Green Chile Stew",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas — Best Dishes in Albuquerque",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–10",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Pork-and-green-chile stew with fresh tortillas on the side; order it alongside the burrito to cover both Frontier classics in one stop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sopapillas with Honey",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas New Mexico dishes; Visit Albuquerque film tourism page",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Dinner",
+      "durationMin": null,
+      "rating": null,
+      "note": "Fried-dough pillows drizzled with honey -- the direct bees/food crossover pick, at the huge patio restaurant Bryan Cranston recommends to visiting fans.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bizcochito",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas — Best Rated Dishes in New Mexico",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$2–6",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": null,
+      "rating": null,
+      "note": "New Mexico's official state cookie -- lard-based, anise-and-cinnamon -- at the panaderia most locals point to first.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lavender Honey & Green Chile Jam — Los Poblanos Farm Shop",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Albuquerque Journal — 'Always in Good Taste'",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Daytime, pair with the historic farm grounds",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Farm-produced lavender honey (plain or creamed) and green chile jam -- the strongest bees/food crossover gift in the metro, though technically in neighboring Los Ranchos rather than Albuquerque proper.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Eldora Chocolate",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Albuquerque Journal — 'Always in Good Taste'",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–70",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Craft bean-to-bar chocolate with a genuinely New Mexican variety: a green chile biscochito bar alongside peppermint crunch.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Apple Canyon Gourmet",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Albuquerque Journal — 'Always in Good Taste'",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10–40 (gift baskets to $175)",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Fire-roasted Hatch green chile, red chile sauce, and a Hatch green chile bloody mary mix -- built specifically for mailing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "New Mexico Piñon Coffee gift sets",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Albuquerque Journal — 'Always in Good Taste'",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Piñon and Mexican-spiced-chocolate flavored roasts in shelf-stable gift sets -- the classic 'take New Mexico home in a bag' pick.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bottled Spirits — Left Turn Distilling",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "leftturndistilling.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$30–55/bottle",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Albuquerque's first distillery; a bottle to go is the whiskey/bourbon-interest mailable pick, alongside on-site tastings and tours.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Petroglyph National Monument",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "nps.gov/petr",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "Free (small vehicle fee at Boca Negra Canyon)",
+      "bestTimeOfDay": "Early morning, before the heat",
+      "durationMin": null,
+      "rating": null,
+      "note": "One of the largest petroglyph sites in North America -- three main canyon trail systems (Boca Negra, Rinconada, Piedras Marcadas) carved by Ancestral Puebloans and early Spanish settlers 400-700 years ago. A 1990s fight over a proposed road through Piedras Marcadas/Boca Negra is the anchor for this guide's radical-political-geography thread.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "National Museum of Nuclear Science & History",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — National Museum of Nuclear Science & History",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "~$18–24",
+      "bestTimeOfDay": "Midday",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Sixteen indoor exhibit areas covering the Manhattan Project, the Cold War, and civilian nuclear power, plus a 9-acre outdoor Heritage Park with a B-29 and a submarine sail. The official atomic museum of the United States, and directly tied to the federal-land-use thread behind this guide's analytical anchor.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "ATLAS-I",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — ATLAS-I",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free (reservation-based tour)",
+      "bestTimeOfDay": "Weekday, advance reservation required",
+      "durationMin": 60,
+      "rating": null,
+      "note": "A pseudo-steampunk electromagnetic-pulse weapons research facility, and the world's largest wood-and-glue structure. Sits on active Sandia National Labs-adjacent land, so it's a scheduled-tour stop, not a walk-up one -- confirm availability before planning around it.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Grave of Walter White",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — Grave of Walter White",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free to view / dinner reservation to dine",
+      "bestTimeOfDay": "Evening (it's a supper club)",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A genuine tombstone for the show's fictional protagonist, installed at a real Los Ranchos supper club -- one of the odder pieces of Breaking Bad pilgrimage geography.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "KiMo Theatre",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general knowledge",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "flagged for independent verification of the ghost-story detail",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free lobby / ticketed for shows",
+      "bestTimeOfDay": "Evening for a show; daytime to view the lobby",
+      "durationMin": 120,
+      "rating": null,
+      "note": "A 1927 Pueblo Deco downtown theater, said to be haunted by the ghost of a six-year-old boy killed in a 1951 boiler explosion -- staff reportedly still leave donuts out for him.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Center of the Universe",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — Center of the Universe",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Anytime during daylight/campus hours",
+      "durationMin": 15,
+      "rating": null,
+      "note": "An abstract, acoustically tuned walk-through sculpture on the UNM campus, with a plaque declaring it the literal center of the universe.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sandia Peak Tramway",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia — Sandia Peak Tramway",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "~$35 round trip",
+      "bestTimeOfDay": "Late afternoon for sunset",
+      "durationMin": null,
+      "rating": null,
+      "note": "The longest aerial tramway in the Americas and the world's third-longest single span; a 15-minute ride climbs 3,819 feet to a 10,378-foot summit with mountain-bike and ski access depending on season.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Left Turn Distilling — Tasting & Tour",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "leftturndistilling.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$10–20 tasting",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Albuquerque's first distillery; book a tasting and tour for the whiskey/bourbon-interest activity pick.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sunshine Theater",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general knowledge",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "flagged for independent verification",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$20–45",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "The city's best-known mid-size touring room downtown; punk, metal and indie routing regularly stops here.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Launchpad",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "launchpadrocks.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Ticketmaster venue listing",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A longtime DIY-adjacent punk/indie stalwart; books a heavy local and touring punk/hardcore lineup.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sister",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Bandsintown venue listing",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–20",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Bar venue with a steady punk/indie booking calendar.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Corpus Arts",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "New Mexico News Port — 'DIY venues offer eclectic live music and more'",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-political"
+      ],
+      "estCost": "Free–$15",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Started 2016 as a library/gallery/queer-educational space explicitly conceived as 'a queer space that isn't a bar'; expanded into live shows while keeping its community-education focus.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fly Honey Warehouse",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "New Mexico News Port — 'DIY venues offer eclectic live music and more'",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "Free–$10 donation",
+      "bestTimeOfDay": "Check socials for shows -- no fixed public hours",
+      "durationMin": null,
+      "rating": null,
+      "note": "A DIY warehouse space named alongside the (now-closed) Tannex and Corpus Arts as part of ABQ's underground circuit -- the least documented of the three, so confirm it's still active before planning around it.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Kei & Molly Textiles",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "keiandmolly.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque souvenirs guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$12–35",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Hand screen-printed Albuquerque and New Mexico designs on dish towels and totes -- about as far from a mass-market magnet as a souvenir gets.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Candy Lady",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque film tourism page",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "KRQE",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "$5–15",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "An Old Town candy shop that became an accidental Breaking Bad landmark.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Indian Pueblo Store",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque souvenirs guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "$10–200+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Handcrafted jewelry, pottery and woven rugs bought directly from Native artists -- pair with a walk through the Cultural Center itself.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sumner & Dene Creations in Art",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque souvenirs guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–100+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Fine art and punched-tin craft -- a traditional New Mexican technique applied to frames and candle holders you won't find at an airport gift shop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Puzzled",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Visit Albuquerque souvenirs guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$15–60",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Handcrafted wooden puzzles, including Albuquerque-themed designs -- a genuinely different souvenir category.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Quelab",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "quelab.net",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free open house / membership for regular access",
+      "bestTimeOfDay": "Wednesday 7–9pm",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Nonprofit 501(c)3 hackerspace with a weekly public open house; welding intro classes plus general tinkering and citizen-science projects.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "FUSE Makerspace",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "fusemakerspace.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Weekly/monthly/semi-annual/annual membership tiers; workshops don't require membership",
+      "bestTimeOfDay": "Mon–Thu 10am–8:30pm, Fri–Sat 10am–6pm",
+      "durationMin": null,
+      "rating": null,
+      "note": "CNM Ingenuity-run makerspace: wood and metal shops, CNC, laser cutters, 3D printers, screen printing and wide-format digital printing, open to beginners.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Backroads Guitars",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "backroadsguitars.net",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp ABQ musical instrument stores",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Varies by repair/part",
+      "bestTimeOfDay": "Weekday afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Full-service guitar repair and customization shop -- the closest ABQ gets to a dedicated gear-tinkering destination in the absence of a synth-specific boutique.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Explora Tinkering Studio",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general knowledge",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "flagged for independent verification of pricing/branding",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "~$12 general admission",
+      "bestTimeOfDay": "Weekday midday, less crowded",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Hands-on science-museum tinkering space -- more family-oriented than a true hackerspace, but it's where a lot of Albuquerque's maker culture starts.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Breaking Bad",
+        "year": 2008,
+        "locationVisited": null,
+        "visitNote": "Private residence in the Northeast Heights, exterior only. The real owners have dealt with fans throwing pizzas on the roof re-enacting the Season 2 finale; view respectfully from the sidewalk and do not trespass. Still an operating New Mexican restaurant chain; the Isleta Blvd location is the one most associated with the Los Pollos Hermanos exterior. Exact address confirmed against multiple location guides but not independently re-verified this session. Real, still-operating hot-dog drive-in that appears on screen; a classic stop on self-guided tours. A real working car wash was used for exterior shots; confirm current name and ownership before visiting, as identification varies across tour guides. Recurring drug-deal-scene motel on old Route 66; redevelopment/demolition has been reported in past years and current status could not be confirmed this session -- verify before planning a stop.",
+        "photoId": null
+      },
+      {
+        "title": "Better Call Saul",
+        "year": 2015,
+        "locationVisited": null,
+        "visitNote": "Downtown transit hub used for Mike Ehrmantraut's arrival via the NM Rail Runner Express; still a working station, freely visitable.",
+        "photoId": null
+      },
+      {
+        "title": "El Camino: A Breaking Bad Movie",
+        "year": 2019,
+        "locationVisited": null,
+        "visitNote": "Netflix's 2019 follow-up film reused much of the parent series' Albuquerque location library rather than establishing new landmark sites.",
+        "photoId": null
+      },
+      {
+        "title": "Terminator Salvation",
+        "year": 2009,
+        "locationVisited": null,
+        "visitNote": "Large-scale action sequences shot in and around the city; part of what established Albuquerque as a major studio hub before the Netflix-era production boom.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Neil Patrick Harris",
+        "relevance": "film/theater",
+        "note": "Actor, host, and Broadway performer; born in Albuquerque before the family moved to Ruidoso."
+      },
+      {
+        "name": "Jeff Bezos",
+        "relevance": "pop-culture/business -- included as friction against this traveler's leftist-politics interest, not celebration",
+        "note": "Attended a Montessori school here as a toddler before the family relocated to Houston. His maternal grandfather, Lawrence Preston Gise, ran the Albuquerque regional office of the U.S. Atomic Energy Commission -- the same federal-land-use history behind the Museum of Nuclear Science pick and the radical-political-geography thread above."
+      },
+      {
+        "name": "Jay Roach",
+        "relevance": "film",
+        "note": "Director of the Austin Powers films and the Meet the Parents series; also directed Trumbo (2015), about blacklisted screenwriter Dalton Trumbo -- a quieter fit for a leftist-politics-adjacent traveler."
+      },
+      {
+        "name": "Paula Gunn Allen",
+        "relevance": "literature / Indigenous feminism / activism",
+        "note": "Born in nearby Cubero (not Albuquerque proper) but closely tied to Albuquerque and UNM's literary and Laguna Pueblo intellectual community. The Sacred Hoop (1986) reshaped Indigenous feminist scholarship by arguing pre-contact Native societies were largely matrifocal and egalitarian."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

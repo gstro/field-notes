@@ -1,0 +1,1695 @@
+{
+  "id": "oklahoma-city-ok",
+  "name": "Oklahoma City",
+  "state": "OK",
+  "tripId": "west",
+  "stay": {
+    "arrive": "2025-10-20",
+    "depart": "2025-10-23",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 35.4676,
+    "lng": -97.5164
+  },
+  "elevationFt": 1201,
+  "population": {
+    "cityProper": 702767,
+    "metro": 1477926
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Literati Press Comics & Novels",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "literatipressok.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "TravelOK",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "thepaseo.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political",
+        "i-diy"
+      ],
+      "estCost": "$0–35",
+      "bestTimeOfDay": "10am–6pm daily; evening for events",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Oklahoma's first community-owned bookshop — The Writers Co-op, founded as a legal cooperative in 2024, began taking ownership in 2025. Subculture publisher since 2010.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Nappy Roots Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Nappy Roots Books",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Black-owned bookstore expanding into gallery and performance space, with classes in visual arts, theatre and dance.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Full Circle Bookstore",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "fullcirclebooks.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "NewPages",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-bees"
+      ],
+      "estCost": "$0–40",
+      "bestTimeOfDay": "Late morning",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Oklahoma's largest and oldest independent bookstore; 60,000+ titles, fireplaces, deep Oklahoma and Native American sections, publishes Oklahoma-centric nonfiction.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Second Story Books and Cafe",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "OKC Insider",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-food"
+      ],
+      "estCost": "$3–20",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Used-and-new stack with an attached working cafe.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Commonplace Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "OKC bookstore roundups",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-food"
+      ],
+      "estCost": "$0–35",
+      "bestTimeOfDay": "Morning or evening event",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Tightly curated new-book shop with coffee bar and a steady author-event calendar.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Guestroom Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "405 Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "vinylvirgins.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-bees",
+        "i-diy"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Afternoon; check for in-stores",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Founded by two OU students; presses and sells vinyl by Oklahoma artists and hosts local acts for release parties. High-ceilinged room doubles as a stage.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Trolley Stop Record Shop",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "vinylvirgins.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "keepthemspinning.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$2–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Housed in a historic landmark building that was formerly a movie theater. 78s, 45s, LPs, CDs, cassettes, 8-tracks, VHS.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "39th Street Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "vinylworld.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-political"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Sits in OKC's long-standing LGBTQ nightlife district. At least one vinyl directory lists this address as permanently closed while other guides still carry it — call ahead.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "3 Dachshunds",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "bestlocalthings.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-horror"
+      ],
+      "estCost": "$1–25",
+      "bestTimeOfDay": "Weekend afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Claims the largest inventory in the OKC metro — 140+ crates plus graphic novels, posters and collectibles.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bad Granny's Bazaar",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$3–50",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Two wings of vintage booths with vinyl, cassettes, old cameras and collectibles; local vendors run rotating booths.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Zero Tolerance Coffee & Siyo Chocolate",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog OKC roasters",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political",
+        "i-punk"
+      ],
+      "estCost": "$4–7",
+      "bestTimeOfDay": "Late morning / brunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Veteran-owned bean-to-cup roastery and bean-to-counter chocolate maker sourcing directly from independent farmers to ensure fair compensation. Signature roast: Slippery Slope. Live music on select days.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Elemental Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Petry / FitCity OKC roundups",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$4–14",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Roasts on site; pour-over and siphon alongside espresso, plus a full breakfast/lunch menu.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Clarity Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "405 Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-books"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Founded by Steve Willingham, one-time KLLR partner. Sustainably roasted single-origin; seasonal drinks made with fresh local produce; hangs work by local artists. Pastries from Quincy Bake Shop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Coffee Slingers Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "405 Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "coffeespots.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-diy"
+      ],
+      "estCost": "$4–20 (retail bags)",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Sourcing-and-sustainability roaster; whole-bean retail with subscription option.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Prelude Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "preludecoffeeroasters.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Early morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Roasts fresh in OKC; serious tea program alongside coffee.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Gilded Acorn",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Oklahoman via AOL",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$4–12",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Patisserie that stood in for the New York City coffee shop in Twisters during the May 2023 downtown Park Avenue shoot.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Harvey Bakery & Kitchen",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "OKC Insider",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "foodieflashpacker",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$4–15",
+      "bestTimeOfDay": "Before 10am",
+      "durationMin": 90,
+      "rating": null,
+      "note": "The city's croissant benchmark; also cruffins, muffins and large sandwiches. Carries a gluten-free and vegan cinnamon roll.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ganache Patisserie",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "ganacheokc.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wanderlog OKC pastries",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–18",
+      "bestTimeOfDay": "Late morning / brunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Full French-technique patisserie: quiche, croissants, macarons, mousse cakes including champagne-apricot-Cointreau, pistachio frangipane–dark chocolate tarts.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Quincy Bake Shop",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "405 Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp OKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–12",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Full-service bakery that supplies Clarity Coffee's pastry case.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Oaxaca Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "foodieflashpacker OKC bakeries",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$1–8",
+      "bestTimeOfDay": "Early morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Mexican-style pan dulce in south OKC, in the orbit of the Capitol Hill district.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fried Onion Burger",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas — Fried Onion Burger; Wikipedia — Fried onion burger",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political",
+        "i-bees"
+      ],
+      "estCost": "$8–14",
+      "bestTimeOfDay": "Lunch, arrive early",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Created in El Reno in the 1920s by a restaurateur stretching ground beef with cheap onions to feed striking railroad workers during the Great Railroad Strike of 1922. Paper-thin onions pressed into the patty on the griddle, flipped onion-side down, served with mustard, pickles and American cheese on a potato bun.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Theta Burger",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas — Best Rated Burgers in Oklahoma",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$9–14",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Hickory sauce, mayonnaise, dill pickle slices and shredded cheddar. Believed to have originated at OKC's Split-T (now closed), with a competing claim from the Town Tavern in Norman.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Chicken-Fried Steak & Lamb Fries — Cattlemen's Steakhouse",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas Oklahoma dishes",
+            "url": null
+          },
+          {
+            "source": "tasteatlas",
+            "label": "VisitOKC",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-horror",
+        "i-bees"
+      ],
+      "estCost": "$16–40",
+      "bestTimeOfDay": "Early dinner, or breakfast",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Open since 1910 in a working cattle district that still runs auctions. Chicken-fried steak and fried okra are the standard order; lamb fries are the regional oddity.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Native Oklahoma Cooking — Thirty Nine Restaurant",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — Oklahoma City",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political",
+        "i-horror"
+      ],
+      "estCost": "$18–35",
+      "bestTimeOfDay": "Lunch, paired with the museum",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Named for the 39 tribal nations headquartered in Oklahoma; menu builds from Indigenous ingredients and regional foodways. Atlas Obscura listed.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Phở & Bánh Mì — The Asian District",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura city profile",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "local press",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$8–16",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Grew from Vietnamese refugee resettlement after 1975; now one of the densest concentrations of Vietnamese food per capita in the country, within a few blocks of Classen Boulevard.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Local Honey — OKC Farmers Public Market",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "okcfmd.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "News9 OKC markets",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "LocalHarvest",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$8–20/jar",
+      "bestTimeOfDay": "Saturday 9am–2pm",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Operating since 1928. Saturday market on the first floor of the historic market hall: produce, meat, jams, canned goods and honey from area apiaries.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Urban Agrarian",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "localhoneymap.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "okcfmd.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$6–30",
+      "bestTimeOfDay": "Open daily",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Gathers food from 60+ Oklahoma farms and makers, prioritizing sustainable and organic producers. Honey, jams, jarred condiments, shelf-stable specialty goods.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Siyo Chocolate Single-Origin Bars",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog OKC roasters",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$8–14/bar",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Bean-to-counter chocolate made alongside the Zero Tolerance roastery, sourced directly from independent farmers.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Made in Oklahoma Pantry — Tin Lizzie's",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "okcmom.com Made in Oklahoma guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-diy"
+      ],
+      "estCost": "$6–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Built on shop-in-shop and pop-up partnerships with smaller Oklahoma-owned makers, artisans and authors, so pantry goods carry maker names rather than a generic state label.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Whole-Bean Coffee — Coffee Slingers / Elemental",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "405 Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Petry OKC coffee guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$16–24/bag",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Both roast in OKC and sell retail bags with subscriptions available.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Clara Luper National Sit-In Plaza",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "BlackPast.org",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Clio",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Zinn Education Project",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "KOSU",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "KGOU",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "KFOR",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-bees",
+        "i-books"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Any time; morning light is better",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Bronze lunch-counter installation on the site of the former Katz Drug Store, marking the Aug 19–21, 1958 sit-in led by Clara Luper and thirteen Black youth from the NAACP Youth Council — eighteen months before Greensboro. $3.6M monument with life-size bronze figures of all thirteen sit-inners. Confirmed dedicated November 3, 2025 — after this trip's Oct 20–22, 2025 visit window closed, so the finished piece would not yet have been standing during the actual stay.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Oklahoma City Underground (the Conncourse)",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — Oklahoma City Underground",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy",
+        "i-books"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Weekday business hours only",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Opened 1974 as the 'Conncourse'. A mile of tunnels across 20+ downtown blocks, color-coded in neon with each colour a wing corresponding to a gallery of art and history exhibits. No single entrance — access points are scattered through basements and parking garages.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Factory Obscura: Mix-Tape",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — Factory Obscura Mix-Tape",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$18–25",
+      "bestTimeOfDay": "Afternoon or evening",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Immersive walk-through installation built by the local Factory Obscura arts collective inside the building formerly known as The Womb, the psychedelic arts center founded by Wayne Coyne of the Flaming Lips.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Oklahoma City National Memorial & Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura city profile",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "OKC National Memorial",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-political",
+        "i-horror"
+      ],
+      "estCost": "Memorial free / museum ~$18",
+      "bestTimeOfDay": "Museum midday; memorial at night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "168 empty chairs on the Murrah Building footprint; Gates of Time marking 9:01 and 9:03; the Survivor Tree elm. The MAPS one-cent sales tax that rebuilt downtown was the city's direct answer to the 1995 bombing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Museum of Osteology (Skeletons)",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia — Museum of Osteology",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "skeletonmuseum.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "~$12–15",
+      "bestTimeOfDay": "Midday",
+      "durationMin": 90,
+      "rating": null,
+      "note": "450+ articulated skeletons on display and 7,000+ in the collection — the largest privately held osteological collection in the world, assembled over 40 years by Jay Villemarette. An arm of Skulls Unlimited International.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Deep Deuce — Ellison & Christian Geography",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "BlackPast.org",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "KOSU 'Deep Deuce guide'",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "News9 'Deep Roots of Deep Deuce'",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Oklahoma Historical Society",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-punk",
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The segregated Black business and jazz district where Ralph Ellison grew up and Charlie Christian came up, both taught by bandleader Zelia N. Breaux. Gutted by 1960s-70s urban renewal and the I-235 corridor; largely new-build now, with historical markers standing in for the district itself. Anchor point for this guide's cross-trip analytical thread on Black business-district erasure — see analyticalThread.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Martin Park Nature Center",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "OKC Parks",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "OKC Audubon Society",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "News9",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Early morning (opens 8am)",
+      "durationMin": 120,
+      "rating": null,
+      "note": "140 acres of grassland, woodland, rocky streams and ponds; 3.5 miles of trails, bird blinds, a viewing deck, and a staffed centre with a hands-on museum and browsing library.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "First Americans Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura — Oklahoma City places",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-horror",
+        "i-books"
+      ],
+      "estCost": "~$15",
+      "bestTimeOfDay": "Midday; pair with Thirty Nine",
+      "durationMin": 180,
+      "rating": null,
+      "note": "The largest single-building tribal cultural center in the United States, telling the collective histories of the 39 tribal nations now headquartered in Oklahoma — nearly all of them here because they were removed here.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Sanctuary",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Oklahoma Gazette 'Subculture Sanctum'",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "DoDIY.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-horror",
+        "i-political"
+      ],
+      "estCost": "$10–20",
+      "bestTimeOfDay": "Night; check socials for bills",
+      "durationMin": 180,
+      "rating": null,
+      "note": "All-ages DIY venue and creative arts collective sharing a building with Beloved Bones, an oddity store known for taxidermy. Low-capacity main room plus back patio; explicit mission as a safe, inclusive space investing in the local underground. Punk, metal and fringe-genre bookings.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Tower Theatre",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "Oklahoma City Free Press",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-horror",
+        "i-bees"
+      ],
+      "estCost": "$20–45",
+      "bestTimeOfDay": "Night",
+      "durationMin": 240,
+      "rating": null,
+      "note": "Oklahoma's first air-conditioned theatre, abandoned for decades and reborn in the new century. Chat Pile played one of their highest-profile local gigs here in October 2025 — inside the Trip 1 visit window.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Beer City Music Hall",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Bandsintown",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "OKC listings",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-drinks"
+      ],
+      "estCost": "$15–35",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Mid-size room for touring punk, hardcore and indie packages.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Diamond Ballroom",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "setlist.fm venue history",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-horror"
+      ],
+      "estCost": "$25–45",
+      "bestTimeOfDay": "Doors typically 6pm",
+      "durationMin": 240,
+      "rating": null,
+      "note": "Opened 1964 as the Diamond Theatre; still the city's heavy room for death metal, deathcore and hardcore packages. South-side, well outside the walkable core.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "OK Underground Music Archive (UMA) — Downtown Library",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Oklahoma City Free Press",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-books",
+        "i-political",
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Library hours",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Not a venue — the archive that documents them. Built by library staff who are themselves members of the local music community; heavily DIY-spirited, and publishes UMAmi, a zine distributed to shops and businesses across the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "DNA Galleries",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "okcmom.com Made in Oklahoma guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-books"
+      ],
+      "estCost": "$4–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Local art, apparel, accessories, prints, pins and paper goods made in OKC, with frequently rotating inventory.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shop Good",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "VisitOKC 'Only in OKC'",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "okcmom.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-political",
+        "i-bees"
+      ],
+      "estCost": "$6–35",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Family-owned retail shop and screen-print studio printing since 2009; one of the only exclusively water-based print shops in the Midwest. Designs collaborate with local artists; printing happens on site.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Paseo Arts and Creativity Center Gift Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "okcmom.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "thepaseo.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-books"
+      ],
+      "estCost": "$5–100+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Large inventory of work by local artists and vendors, in the same district as Literati Press.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bad Granny's Bazaar",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "VisitOKC",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$3–50",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Recycled, repurposed and vintage clothing, collectibles, jewelry, art and furnishings across two wings, with local vendors running rotating booths.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Plenty Mercantile",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "okcmom.com Made in Oklahoma guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-food"
+      ],
+      "estCost": "$8–60",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Mindfully sourced homewares, pantry items and gifts with a stated sustainability and responsible-design position.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Keeley Electronics",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia — Keeley Electronics",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "RobertKeeley.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-punk",
+        "i-bees"
+      ],
+      "estCost": "$100–300/pedal",
+      "bestTimeOfDay": "Weekday business hours",
+      "durationMin": null,
+      "rating": null,
+      "note": "One of the most respected boutique guitar-pedal manufacturers in the world, headquartered in OKC. Founded 2001 by Robert Keeley, an OU electrical engineering graduate who started at home rebuilding and modifying old effects units beginning with a Ross compressor. Not a walk-in retail store.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Co-Laboratory Oklahoma (The Co-Lab)",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "colab-ok.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-political"
+      ],
+      "estCost": "Membership / class fees",
+      "bestTimeOfDay": "Check class calendar",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Makerspace that describes itself first as a community center. Regular classes in soldering, electronic circuit design, 3D printing, laser cutting/engraving and screen printing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Prototek OKC",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "prototekokc.wordpress.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Hackaday.io",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "makerspacedir.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-horror"
+      ],
+      "estCost": "Membership",
+      "bestTimeOfDay": "Verify first",
+      "durationMin": null,
+      "rating": null,
+      "note": "Founded 2013 by James Newman and Matt W. as an 11,000 sq ft workshop covering machining, electronics, woodworking, 3D printing, vinyl cutting and graphic design, with Arduino/hobby electronics and CAD classes. Public web presence stale for roughly a decade while directory listings persist; could not be re-verified this run (web-search budget for this batch was exhausted before a fresh check could run).",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Innovation Studio",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp OKC makerspaces",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "",
+      "bestTimeOfDay": "Weekday hours",
+      "durationMin": null,
+      "rating": null,
+      "note": "Institutionally hosted makerspace rather than volunteer-run. Confirm visitor or day-use policy.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Twisters",
+        "year": 2024,
+        "locationVisited": null,
+        "visitNote": "Downtown OKC doubled for New York City. Streets were closed for 19 hours in May 2023 and dressed with scaffolds, subway signage and taxi cabs for the scene where Kate relocates to NYC. Converted former convention center; served as the production base for interior sets and controlled sequences. Played the New York City coffee shop where Kate meets Javi. Doubled for an NYC branch of the National Weather Service.",
+        "photoId": null
+      },
+      {
+        "title": "Elizabethtown",
+        "year": 2005,
+        "locationVisited": null,
+        "visitNote": "American elm that survived the 1995 bombing. Outdoor memorial is free and open 24 hours.",
+        "photoId": null
+      },
+      {
+        "title": "Rain Man",
+        "year": 1988,
+        "locationVisited": null,
+        "visitNote": "Pivotal sequences shot in El Reno — the same town that produced the fried onion burger — and in Guthrie's Victorian downtown.",
+        "photoId": null
+      },
+      {
+        "title": "Bringing Up Bobby",
+        "year": 2011,
+        "locationVisited": null,
+        "visitNote": "Milla Jovovich as a con-artist mother; filmed partly in OKC.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Ralph Ellison",
+        "relevance": "literature",
+        "note": "Author of Invisible Man. Grew up in the segregated Deep Deuce district surrounded by jazz and blues; taught under bandleader Zelia N. Breaux."
+      },
+      {
+        "name": "Jim Thompson",
+        "relevance": "literature",
+        "note": "Pulp/noir novelist (The Killer Inside Me, The Grifters). Frequently listed among OKC's own; sources vary on exact birthplace within Oklahoma — verify before publication."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

@@ -1,0 +1,1296 @@
+{
+  "id": "phoenix-az",
+  "name": "Phoenix",
+  "state": "AZ",
+  "tripId": "west",
+  "stay": {
+    "arrive": "2025-10-14",
+    "depart": "2025-10-17",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 33.4484,
+    "lng": -112.074
+  },
+  "elevationFt": 1086,
+  "population": {
+    "cityProper": 1650070,
+    "metro": 4948203
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Changing Hands Bookstore",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "secretphoenix.co",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "coppercourier.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–35",
+      "bestTimeOfDay": "Evening for an event",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Phoenix's flagship indie since 1974, with the First Draft Book Bar inside and 300+ author events a year -- the anchor of the local book scene.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Palabras Bilingual Bookstore",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "secretphoenix.co",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "azpbs.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "English/Spanish bookstore that's evolved into a gallery and workshop space as much as a bookstore -- a genuine community and cultural hub.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Grassrootz Bookstore",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "grassrootzbookstore.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "kjzz.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Open daily 9am–5pm",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Eastlake Park's Black- and activist-owned bookstore, café, and poetry/jazz events space -- a direct hit for the leftist-politics and literature interests.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Wasted Ink Zine Distro",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Slingshot Collective directory",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-political"
+      ],
+      "estCost": "$2–15",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Phoenix's closest living equivalent to an infoshop: a zine distro carrying DIY punk and political zine culture, one of the few surviving pieces of the city's radical-space infrastructure.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Poisoned Pen",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "secretphoenix.co",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Mystery, thriller, and horror-adjacent genre specialist operating since 1989, with autographed first editions and imports.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Stinkweeds",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–35",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The well-known anchor of Phoenix vinyl, on Camelback for decades, with a dedicated Arizona-artists section and deep DIY-scene ties.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Ghost of Eastside Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Punk-specialty shop in Tempe with strong jazz, country, reggae, and rock depth alongside the punk bins.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Zia Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The largest new-and-used vinyl selection anywhere in the Valley.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Grand Avenue Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "DJ-oriented shop in the Grand Avenue arts corridor covering hip-hop, jazz, electronic, soul, indie rock, and international.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Tracks in Wax",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$4–25",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Used vinyl since 1982, with strong comedy, soundtrack, and international-record selections.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cartel Coffee Labs",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "azbigmedia.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The well-known anchor of Phoenix specialty coffee, with a 'seed to cup' sourcing philosophy across six Valley locations.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Songbird Coffee & Tea House",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "azbigmedia.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–7",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Roosevelt Row institution -- locally sourced coffee plus 25+ loose-leaf teas.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Xanadu Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "azbigmedia.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Trunk Space",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-punk"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Garfield District roaster known for its prickly-pear espresso tonic -- also the bean supplier for The Trunk Space's espresso bar, a direct line into the DIY venue scene.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lola Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "azbigmedia.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–7",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Family-owned and -operated for 10+ years, with locations in Melrose and Arcadia.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Provision Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "azbigmedia.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Arcadia café known for its Prickly Pear Blend and Ponderosa Blend, plus a strong snacks-and-cocktails program.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "JL Patisserie",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–9",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The well-known pick: classic French butter croissants laminated into 55 paper-thin layers.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Valentine",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–9",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Pine Nut Cream Croissant made with Sonora heritage wheat flour and piñon frangipane -- the most locally-rooted pastry in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Proof Bread",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Sourdough-forward bakery; the pain au chocolat runs dual chocolate batons through sourdough laminated dough.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Essence Bakery Café",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Butter, chocolate, and pistachio croissants on Indian School Road.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Chacónne Patisserie",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–9",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Chocolate almond croissant built on browned butter, cognac syrup, almond cream, and Valrhona dark chocolate.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Chimichanga",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Chimichanga",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12–18",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Phoenix's own origin claim: Woody Johnson says he accidentally invented it in 1946 at Woody's El Nido, which became Macayo's Mexican Kitchen by 1952 -- Tucson's El Charro Café disputes the claim.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Frybread / Navajo Taco",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "atlasobscura.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$9–14",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "James Beard Award–winning Fry Bread House, founded by Tohono O'odham Nation members, celebrated for exceptionally light fry bread.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Chicken and Waffles",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "tasteatlas.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12–18",
+      "bestTimeOfDay": "Brunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Lo Lo's Chicken and Waffles is a genuine Phoenix institution for the dish.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Snickerdoodle (Chino Bandido fusion)",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "tasteatlas.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10–15",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Chino Bandido's Chinese/Mexican fusion menu turns up on TasteAtlas's Phoenix dish list -- a genuine only-here oddity.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sonoran Hot Dog",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Sonoran hot dog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–7",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Bacon-wrapped, bean-and-tomato-topped hot dog on a bolillo bun; Phoenix reportedly had more vendors than Tucson at its 2009 peak, though no single restaurant dominates the way El Charro does for chimichangas -- best hunted from a cart.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cactus Corn Popcorn",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cactuscorn.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–16",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Handmade gourmet popcorn in Southwest-inspired flavors including prickly pear and jalapeño.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Queen Creek Olive Mill products",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "localfirstaz.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Olive oils, vinegars, and specialty items like jalapeño-stuffed olives and mesquite-smoked oil from the state's only commercial olive mill.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Prickly pear jam / syrup / candy",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cactuscorn.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$8–18",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Jams, syrups, candies, and drinks made from the prickly pear cactus, with a distinctive berry-watermelon flavor.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Hayden Flour Mills heritage grains",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cactuscorn.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–14",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Stone-milled flours from heritage wheat varieties grown in Buckeye, Arizona.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Desert wildflower honey / mesquite flour",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cactuscorn.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$8–16",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Raw honey from desert wildflowers and mesquite flour with a caramel-like sweetness -- a direct hit for the beekeeping interest.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mystery Castle",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "atlasobscura.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free to view exterior",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "18-room fortress hand-built by Boyce Luther Gulley over 15 years from salvaged stone, adobe, and railroad ties, reportedly held together partly with goat milk.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sunnyslope Rock Garden",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "atlasobscura.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Grover Cleveland Thompson's outsider-art rock garden, built 1952-74 using shards of Fiestaware.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Phoenix Bat Cave",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "atlasobscura.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Dusk",
+      "durationMin": 45,
+      "rating": null,
+      "note": "An abandoned storm drain hosting 10,000-20,000 Mexican free-tailed bats emerging at dusk, May through October.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "South Mountain Park/Preserve",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "thescoutguide.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning",
+      "durationMin": null,
+      "rating": null,
+      "note": "One of the largest municipal parks in the US -- the well-known natural-attraction pick, anchored by the Hidden Valley Trail.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Santa Rita Hall",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Santa Rita Hall",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Sí se puede",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free (exterior; community space, not a museum)",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Where Cesar Chavez held his 24-day fast in 1972 protesting a bill restricting farmworker collective bargaining -- and where Dolores Huerta coined \"Sí, se puede.\" A landmark of Southwest labor organizing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Trunk Space",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Trunk Space",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5–15",
+      "bestTimeOfDay": "Night",
+      "durationMin": null,
+      "rating": null,
+      "note": "All-ages DIY venue that launched Andrew Jackson Jihad -- Sean Bonnette's tattooed street address inspired a dozen imitators among the venue's community.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Nile Theater",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "statepress.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Punk and hardcore specialist with a dedicated basement 'Underground' room alongside the main floor.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Rebel Lounge",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "statepress.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "phoenixnewtimes.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$8–15",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Well-known/must-see indie/alt room with strong Arizona-band support; tickets rarely rise above $10.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Yucca Tap Room",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "statepress.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "Free–$10",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Tempe dive-bar rock room known for frequently free shows.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Crescent Ballroom",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "statepress.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–20",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Described by local press as the 'gold standard' of Arizona venues -- consistently low ticket prices, strong sound, outdoor event space.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Practical Art",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "visitphoenix.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–60",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Well-known/must-see indie gift gallery stocking Arizona artisans working in wood, fiber, and ceramic.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cosanti Originals",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "visitphoenix.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$20–150",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Hand-cast bronze and ceramic wind-bells from architect Paolo Soleri's studio -- a direct link to the utopian, outsider-architecture Arcosanti project in the desert north of the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Phoenix General",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "danielleoutdoors.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$8–40",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Upscale downtown gift shop with a strong local-goods and design-object selection.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "State Forty Eight",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "visitphoenix.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-political"
+      ],
+      "estCost": "$15–40",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Locally screen-printed Arizona-pride apparel; limited-release designs benefit local charities.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Heard Museum Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "visitphoenix.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–100+",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Authentic, handmade items directly supporting Indigenous artists -- a souvenir that's also a direct economic contribution.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "HeatSync Labs",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "heatsynclabs.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Donation-based membership",
+      "bestTimeOfDay": "Check open hours/calendar",
+      "durationMin": null,
+      "rating": null,
+      "note": "Arizona's original hackerspace, operating since 2009 on open-source principles -- 3,200 sq ft with 3D printers, laser cutters, and electronics workbenches; membership runs on a donation model, not a subscription.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Phoenix Forge",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phxforge.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$80/mo + $25 initiation",
+      "bestTimeOfDay": "Check membership hours",
+      "durationMin": null,
+      "rating": null,
+      "note": "Downtown Phoenix community makerspace tied to GateWay Community College; general membership is $80/month plus a $25 initiation fee, with reservable equipment across textiles, wood, metal, and electronics.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Psycho",
+        "year": 1960,
+        "locationVisited": null,
+        "visitNote": "The film's opening sequence, set in Marion Crane's office, was shot in downtown Phoenix.",
+        "photoId": null
+      },
+      {
+        "title": "Raising Arizona",
+        "year": 1987,
+        "locationVisited": null,
+        "visitNote": "Coen Brothers classic explicitly set in and shot around the Phoenix/Tempe area.",
+        "photoId": null
+      },
+      {
+        "title": "Wayne's World",
+        "year": 1992,
+        "locationVisited": null,
+        "visitNote": "Partly shot in Phoenix, featuring a cameo from Phoenix-rooted Alice Cooper.",
+        "photoId": null
+      },
+      {
+        "title": "The Nutty Professor",
+        "year": 1963,
+        "locationVisited": null,
+        "visitNote": "The prom scene was shot in the then-new Frank Lloyd Wright-designed Gammage Auditorium.",
+        "photoId": null
+      },
+      {
+        "title": "Little Miss Sunshine",
+        "year": 2006,
+        "locationVisited": null,
+        "visitNote": "The film's cross-country journey includes Arizona filming sequences.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Alice Cooper",
+        "relevance": "horror",
+        "note": "Born Vincent Damon Furnier in Detroit; family relocated to Phoenix following childhood illness, and he attended Cortez High School there. Formed his original band in Phoenix in 1964 for a high school talent show; returned permanently in the mid-1980s and still owns Alice Cooperstown restaurant downtown. Godfather of shock/horror-rock -- direct match for the horror interest."
+      },
+      {
+        "name": "Chester Bennington",
+        "relevance": "music",
+        "note": "Linkin Park frontman, alt-metal/nu-metal."
+      },
+      {
+        "name": "Stevie Nicks",
+        "relevance": "music",
+        "note": "Fleetwood Mac vocalist; a well-known/must-see-tier native musician."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

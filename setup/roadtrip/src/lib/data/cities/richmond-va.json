@@ -1,0 +1,1254 @@
+{
+  "id": "richmond-va",
+  "name": "Richmond",
+  "state": "VA",
+  "tripId": "south",
+  "stay": {
+    "arrive": "2026-05-21",
+    "depart": "2026-05-24",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 37.5407,
+    "lng": -77.436
+  },
+  "elevationFt": 166,
+  "population": {
+    "cityProper": 226610,
+    "metro": 1349945
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Chop Suey Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Richmond's flagship indie bookstore since 1998, new and used stacked side by side in a cozy Carytown storefront; regular author events and a house cat culture that's practically a neighborhood mascot.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fountain Bookstore",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0-35",
+      "bestTimeOfDay": "Afternoon; evening for a signing",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Richmond's oldest surviving independent bookstore (since 1978), with a long history of author events and signings tying it into the city's literary calendar.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Black Swan Books & Music",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$5-100+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Antiquarian and used books shelved alongside used vinyl -- rare volumes and old ephemera give it real horror/occult-browsing potential alongside the literary stock.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "bbgb tales for kids",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0-25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Beloved independent children's bookstore rounding out Carytown's book-shopping strip -- not a core-interest match but a genuine neighborhood institution worth the balance.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Steady Sounds Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5-40",
+      "bestTimeOfDay": "Afternoon; check for in-stores",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Vinyl-first shop with a punk/hardcore/experimental leaning and real ties to Richmond's DIY show circuit, including in-store performances.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Vinyl Conflict",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Punk, hardcore, and metal-focused record shop that doubles as an informal bulletin board for the local underground show calendar -- the most on-the-nose punk match in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Plan 9 Music",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Richmond-founded regional chain (dating to the early 1980s) with a deep new-and-used selection -- the well-known anchor of Carytown's record-shopping strip.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Black Swan Books & Music",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-horror"
+      ],
+      "estCost": "$2-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The same antiquarian shop from the bookstore list, crosslisted here for its used-vinyl bins.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lamplighter Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Richmond-based roaster and the city's best-known specialty-coffee name, with multiple locations and an on-site roasting program.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Blanchard's Coffee Roasting Co.",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "RVA roaster (est. 2011) that wholesales to a wide swath of the city's cafes and restaurants -- a good stop to taste the bean before you see it on menus citywide.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rostov's Coffee & Tea",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-7",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Longtime VCU-area coffeehouse fixture -- an old-guard counterpoint to the newer third-wave roasters.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Crossroads Coffee & Ice Cream",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3-8",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Laid-back Northside neighborhood coffeehouse that doubles as an ice-cream shop -- a quieter, more residential counterpoint to the Fan/Carytown coffee crawl.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Nile Ethiopian Restaurant & Coffeehouse",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5-15",
+      "bestTimeOfDay": "Afternoon or evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Traditional Ethiopian coffee ceremony alongside a full restaurant menu -- the least generic-espresso-bar pick on this list.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sub Rosa Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "subrosabakery.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-12",
+      "bestTimeOfDay": "8-10am for the full pastry case (when open)",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Wood-fired, stone-milled, entirely vegan bread and pastry program using organically sourced regional grain -- Richmond's most distinctive bakery. CURRENTLY CLOSED after fire damage; check their Instagram before planning a visit.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "WPA Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Sourdough-forward bakery with a wood-fired program -- a good backup while Sub Rosa is closed, and a strong stop in its own right.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sugar & Twine",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge, lower confidence",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Dessert-forward bakery/patisserie; confirm current hours before visiting, as this pick wasn't independently re-verified this session.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Stella's",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4-10",
+      "bestTimeOfDay": "Evening, as dessert after dinner",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Longtime Fan District Greek restaurant and market -- baklava and Greek pastry as the 'distinctive approach' pick alongside the French-technique bakeries.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Box Lunch — Sally Bell's Kitchen",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Sally Bell's Kitchen",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10-15",
+      "bestTimeOfDay": "",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Richmond's James Beard 'America's Classic' (2015), operating since 1924. The boxed lunch -- deviled egg, beaten-biscuit ham sandwich, potato salad, a cheese wafer, and a tea cake -- is a genuine only-here regional institution.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Soul Food — Mama J's Kitchen",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$12-22",
+      "bestTimeOfDay": "Lunch; expect a line",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Jackson Ward soul-food institution -- fried chicken, cornbread, mac and cheese -- sitting directly inside the historic Black Wall Street footprint that carries this guide's analytical thread.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Brisket & Brunswick Stew — ZZQ Texas Craft Barbeque",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$15-30",
+      "bestTimeOfDay": "Lunch; sells out, arrive early",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Texas-style smoked brisket built in Virginia, paired with Brunswick stew -- a dish central Virginia and Georgia both claim as their own regional invention.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Currywurst — Metzger Bar & Butchery",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$15-25",
+      "bestTimeOfDay": "Dinner",
+      "durationMin": 90,
+      "rating": null,
+      "note": "German-technique butchery and restaurant in Church Hill making its own currywurst and charcuterie in-house -- a distinctly non-Southern dish that's become a Richmond destination anyway.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Pastrami Reuben — Perly's Restaurant & Delicatessen",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$14-20",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Jewish deli institution on Broad St -- pastrami reuben and a full deli case in a city not otherwise known for the genre.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Virginia Peanuts",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8-18",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Virginia-type peanuts are the largest peanut cultivar grown -- a genuinely regional, easily mailed gift sold in gift shops and markets across Richmond.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Smithfield / Surry Virginia Country Ham",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$25-70",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Salt-cured, dry-aged Virginia country ham from the Smithfield/Surry region just southeast of Richmond -- vacuum-sealed versions ship well and are a genuinely regional gift.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Whole-Bean Coffee — Blanchard's / Lamplighter",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$14-20/bag",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Both roast in Richmond and sell retail bags -- an easy, mailable way to bring the city's coffee scene home.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Local RVA Honey",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$8-16/jar",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Ellwood Thompson's natural-foods grocery in Carytown carries honey from area beekeepers -- the direct bees/honey pick for this category.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bottled Bourbon/Rye — Reservoir Distillery",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "reservoirdistillery.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$45-80/bottle",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Richmond craft distillery running a Virginia Heritage Grain Project alongside its 4-Grain Bourbon and rye -- a proper whiskey/bourbon gift with a Richmond address on the label. Check shipping laws before mailing spirits.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Maggie L. Walker National Historic Site",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Maggie L. Walker National Historic Site",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning, NPS ranger-led tour",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Free NPS site preserving Maggie L. Walker's Jackson Ward rowhouse; the anchor point of this guide's confirmed analytical thread -- Walker founded St. Luke Penny Savings Bank in 1903, the first bank in the U.S. chartered and led by a woman of any race.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Edgar Allan Poe Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "atlasobscura.com/things-to-do/richmond-virginia",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-books"
+      ],
+      "estCost": "~$10",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Built around the city's oldest stone house; holds Poe ephemera including his walking stick and socks, and centers his formative Richmond years (he was raised there, though born in Boston). The single best horror/literature crossover in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Evergreen Cemetery",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Evergreen Cemetery (Richmond, Virginia)",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Daylight hours",
+      "durationMin": 60,
+      "rating": null,
+      "note": "1891 African American burial ground reclaimed for decades by kudzu and forest; Maggie L. Walker and John Mitchell Jr. are both buried here, making it a direct extension of the Jackson Ward thread. A $19M restoration plan was announced in 2020, with visible community cleanup progress since.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Belle Isle",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Belle Isle (Virginia)",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Late afternoon / golden hour",
+      "durationMin": 120,
+      "rating": null,
+      "note": "54-acre James River island, reached by pedestrian suspension bridge; a Civil War POW camp (1862-65), then a hydroelectric plant (1904-63) whose ruins appear in Ridley Scott's Hannibal (2001). Hiking, rock scrambling, and river swimming holes -- the natural-attraction balance-rule pick.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Hollywood Cemetery",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Hollywood Cemetery (Richmond, Virginia)",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free (tours extra)",
+      "bestTimeOfDay": "Morning or late afternoon",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Presidents James Monroe and John Tyler, Confederate president Jefferson Davis, 18,000 Confederate soldiers, and the 'Richmond Vampire' grave of W.W. Pool -- one of the most visited cemeteries in Virginia.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Monument Avenue (former Confederate monument sites)",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Monument Avenue",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Five Confederate statues stood here from 1890-1929; all were removed between June 2020 and December 2022 following George Floyd-protest pressure and a state Supreme Court ruling on the Lee statue. Arthur Ashe's 1996 monument is now the only one left standing. The removed statues are held by the Black History Museum and Cultural Center of Virginia.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Grand Kugel",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "atlasobscura.com/things-to-do/richmond-virginia",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free to view",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 15,
+      "rating": null,
+      "note": "A 29-ton polished granite sphere that spins at the lightest touch, floating on a thin film of water -- an Atlas Obscura oddity pick, pure hidden-gem novelty.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Byrd Theatre",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Byrd Theatre",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$8 second-run ticket",
+      "bestTimeOfDay": "Evening; Saturday for the Wurlitzer organ",
+      "durationMin": 150,
+      "rating": null,
+      "note": "1928 French Empire-style movie palace, largely unchanged since opening, with a Wurlitzer pipe organ played live Saturday nights and $8 second-run screenings -- a genuine film-history landmark, not a museum piece.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Church Hill Tunnel (buried 1925 locomotive)",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Church Hill, Richmond, Virginia",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free (exterior/marker only)",
+      "bestTimeOfDay": "Daylight",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A C&O railroad tunnel collapsed in 1925, killing several workers and burying a locomotive that has never been recovered -- it's still down there. A quiet, genuinely eerie Atlas Obscura-style hidden gem in an otherwise gentrified neighborhood.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Camel",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "thecamel.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10-25",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "RVA's best-known independent live-music room -- eclectic booking (indie, alt, local showcases), full food/bar program, and an open-mic/community-event calendar alongside touring acts.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "GWARbar",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- GWAR",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-horror"
+      ],
+      "estCost": "$10-30 with a show; bar prices otherwise",
+      "bestTimeOfDay": "Night",
+      "durationMin": 240,
+      "rating": null,
+      "note": "'Upscale dive bar' opened 2015 by GWAR guitarist Mike Derks, the commercial anchor of the horror-punk band that's been Richmond's most visible music export since 1984. Sits directly in Jackson Ward, the thread neighborhood.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Gallery5",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-diy",
+        "i-political"
+      ],
+      "estCost": "$5-15 suggested donation, varies by show",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Artist-run, all-ages arts space and DIY venue in the Broad Street Arts District, booking punk and experimental acts alongside visual-art and community programming.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cobra Cabana",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge, moderate confidence",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5-15",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Manchester dive bar with a steady punk/garage/DIY booking history -- lower-key than The Camel, closer to the actual show-in-a-bar tradition.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Get Tight Lounge",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge, moderate confidence",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5-15",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "DIY dive-bar venue in the garage/punk lineage, part of the current generation of small rooms filling the gap left by Strange Matter's 2016 closure.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Quirk Gallery",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10-60",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Gallery/gift shop attached to the Quirk Hotel, stocking locally made art, prints, and design objects rather than generic tourist stock.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "World of Mirth",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5-30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Kitschy, independent novelty and toy shop that's been a Carytown fixture for decades -- oddball ephemera over mass-market souvenirs.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Black Swan Books & Music (postcards/ephemera)",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$2-20",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Old postcards, prints, and ephemera turn up regularly in the antiquarian stock -- a more meaningful souvenir than a magnet, crosslisted from the bookstore/record picks above.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "HackRVA",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "hackrva.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$39/month membership; open houses free",
+      "bestTimeOfDay": "1st and 3rd Thursday, 7-9pm (open house)",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Member-run nonprofit makerspace covering electronics, embedded software, 3D printing, laser cutting, woodworking, and more; members get 24/7 access, visitors are welcome at the biweekly open house.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "VCU da Vinci Center (RAMP Lab)",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "general/local knowledge, not independently re-verified this session",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Varies; primarily student-access",
+      "bestTimeOfDay": "Weekday, check public-program calendar",
+      "durationMin": null,
+      "rating": null,
+      "note": "VCU's innovation/prototyping center runs a rapid-fabrication lab bridging art, design, and engineering students -- institutional rather than open-community, and public access to specific programs should be confirmed ahead of a visit.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Hannibal",
+        "year": 2001,
+        "locationVisited": null,
+        "visitNote": "The abandoned Virginia Electric and Power Co. hydroelectric plant (1904-1963) on Belle Isle appears in the film; the ruins are freely walkable today as part of the James River Park System.",
+        "photoId": null
+      },
+      {
+        "title": "Lincoln",
+        "year": 2012,
+        "locationVisited": null,
+        "visitNote": "Thomas Jefferson-designed capitol used for interior sequences; Richmond stood in extensively for 1860s Washington, D.C. Daniel Day-Lewis won his third Best Actor Oscar for the role.",
+        "photoId": null
+      },
+      {
+        "title": "Loving",
+        "year": 2016,
+        "locationVisited": null,
+        "visitNote": "Dramatization of Loving v. Virginia, the 1967 Supreme Court case that struck down interracial-marriage bans; filmed largely in central Virginia, close to the case's Caroline County origins north of Richmond.",
+        "photoId": null
+      },
+      {
+        "title": "Mercy Street",
+        "year": 2016,
+        "locationVisited": null,
+        "visitNote": "PBS Civil War-hospital drama set partly around Richmond's wartime medical infrastructure (echoing the real Chimborazo Hospital in Church Hill, once the Confederacy's largest military hospital).",
+        "photoId": null
+      },
+      {
+        "title": "TURN: Washington's Spies",
+        "year": 2014,
+        "locationVisited": null,
+        "visitNote": "Revolutionary War spy-ring series that used Richmond-area locations for its Colonial-era setting.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "D'Angelo",
+        "relevance": "music",
+        "note": "Neo-soul pioneer, born and raised in Richmond's Southside in a Pentecostal preacher's household; died October 2025 and was buried at Richmond's Mount Calvary Cemetery after a service at Saint Paul's Baptist Church."
+      },
+      {
+        "name": "Arthur Ashe",
+        "relevance": "civil-rights / political",
+        "note": "Tennis champion and civil-rights figure; his 1996 statue is now the sole monument remaining on Monument Avenue after the 2020-2022 removal of the Confederate statues."
+      },
+      {
+        "name": "Vince Gilligan",
+        "relevance": "film/TV",
+        "note": "Creator of Breaking Bad and Better Call Saul, born in Richmond."
+      },
+      {
+        "name": "Edgar Allan Poe",
+        "relevance": "horror / literature",
+        "note": "Not born in Richmond (Boston) but raised there from infancy after his mother's death; his formative and most productive Richmond years are the direct subject of the Poe Museum. Do not conflate birthplace with the Richmond connection."
+      },
+      {
+        "name": "Tom Wolfe",
+        "relevance": "literature",
+        "note": "New Journalism pioneer and novelist (The Right Stuff, The Bonfire of the Vanities), born in Richmond."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

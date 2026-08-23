@@ -1,0 +1,1391 @@
+{
+  "id": "boise-id",
+  "name": "Boise",
+  "state": "ID",
+  "tripId": "west",
+  "stay": {
+    "arrive": "2025-10-03",
+    "depart": "2025-10-06",
+    "nights": 3
+  },
+  "coords": {
+    "lat": 43.615,
+    "lng": -116.2023
+  },
+  "elevationFt": 2704,
+  "population": {
+    "cityProper": 235684,
+    "metro": 837442
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Rediscovered Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "rdbooks.org",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–35",
+      "bestTimeOfDay": "Evening for an event",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Boise's flagship indie since 2006, downtown, with a packed events calendar -- author readings, 'Books & Booze After Hours' with local breweries, audiobook walks.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Once and Future Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "rdbooks.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$3–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Rediscovered's all-used sister shop -- same ownership, entirely secondhand stock.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Lit Room",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Scout Guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Cozy indie bookstore and book lounge leaning into small and independent presses.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bent Corners Used Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Scout Guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$2–20",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "50,000+ titles of used and vintage stock, including hard-to-find gems.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cooks & Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Scout Guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-food"
+      ],
+      "estCost": "$0–40+",
+      "bestTimeOfDay": "Anytime; more with a class",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Pairs curated cookbook selections with hands-on culinary classes and community events.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Record Exchange",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "shop.therecordexchange.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Idaho's largest independent record store, downtown since 1977, deep into vinyl, CDs, and Record Store Day culture.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Wylie Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "wylierecords.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5–35",
+      "bestTimeOfDay": "Check calendar for an in-store",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Vinyl, LaserDiscs, CDs and cassettes, plus roughly biweekly in-store live sets and consigned local-artist merch -- the strongest DIY-scene tie in this category.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Modern Sounds Vinyl and Music",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Sister location to the Twin Falls shop of the same name.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Jam Session Record Shop",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A Main Street storefront, smaller and more browsable than the Record Exchange.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Spin Records Boise",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "recordstoredirectory.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Relocated from Petaluma, CA; carries used vinyl alongside musical instruments.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Flying M Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Downtown institution running since 1992, house-roasted -- the anchor of Boise coffee culture.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Momentum Roasting Co.",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Small Boise roaster and cafe near Julia Davis Park with an art-and-outdoors community bent.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Primal Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Wood-fired and concentrated-sunlight roasting methods, easygoing patio-with-fire-pits vibe, flips into Karuna Kava Bar at night.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Neckar Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Downtown specialty roaster and cafe with a strong pour-over and pastry program.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Slow By Slow Coffee Bar",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–9",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A multi-roaster bar rotating specialty coffees with hand-brewed pour-overs.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Janjou Pâtisserie",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–12",
+      "bestTimeOfDay": "Morning, before the case thins out",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The city's French-technique benchmark since 2008 -- butter croissants and specialty cakes; staff cap capacity at six customers at a time.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Yeast & West Natural Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Organic sourdough and ancient-grain baking, small-batch throughout the morning -- the closest thing to a farmer-direct pastry program in Boise.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Gaston's Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Handcrafted breads and croissants built on a 52-year-old sourdough starter and locally sourced Idaho wheat.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Guru Donuts",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–7",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Made-from-scratch donuts with genuinely good vegan and gluten-free (potato-based) options and playful flavors.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Certified Kitchen and Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Same 52-year sourdough starter lineage, known for English muffins and breakfast sandwiches -- small, limited seating, arrive early.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Finger Steaks",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Finger Steaks",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–14",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Battered, deep-fried strips of beef steak, purportedly created by Milo Bybee in Boise in 1957, served with fry sauce or a horseradish cocktail sauce.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ice Cream Potato",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Ice Cream Potato",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–9",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Vanilla ice cream shaped and rolled in cocoa powder to look like a baked russet, topped with whipped-cream 'sour cream' and candy garnish.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Huckleberry Pie",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Best Rated Dishes in Idaho",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–10",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Idaho's signature wild-berry dessert, tart and purple -- a genuine seasonal treat across the region.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Idaho Hot Dog",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas -- Best Rated Dishes in Idaho",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–10",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "A skinless hot dog baked inside a hollowed-out potato, split and topped with chives, bacon, and sour cream.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Beef Tongue & Croquetas -- Bar Gernika",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "roadfood.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12–22",
+      "bestTimeOfDay": "Saturday for the tongue",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Boise's Basque pub on the Basque Block, famous for beef tongue served Saturdays and a rotating croquetas menu -- the strongest tie to the city's most distinctive immigrant cuisine.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boise Hot Sauce Co. (Kempature208)",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "BoiseDev",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-bees"
+      ],
+      "estCost": "$8–14/bottle",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "David Kemp and Katii Blaser's hot sauce line, born from a 2018 wing-off win; flavors include a 'Bee Stinger' built on wildflower honey.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Idaho Huckleberry Products",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "weiserclassiccandy.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "larchwoodfarms.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$8–25",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Jams, syrups, and candy from Weiser Classic Candy or Larchwood Farms gift trays -- the single most Idaho-coded mailable gift there is.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Local Honey -- Boise Farmers Market",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "theboisefarmersmarket.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$8–18/jar",
+      "bestTimeOfDay": "Sat 9am–1pm, Apr–Oct",
+      "durationMin": null,
+      "rating": null,
+      "note": "Honey from area apiaries sold Saturdays alongside jam, bread, and produce.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boise Co-op Local Pantry Goods",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "KIVI-TV",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Hand-picked local and Idaho-made products since the 1970s -- jarred condiments, dry goods, specialty foods.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "8 Feathers Distillery Bourbon & Whiskey",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "ourtravelmoments.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$25–45/bottle",
+      "bestTimeOfDay": "Tasting room Sat 12–5",
+      "durationMin": null,
+      "rating": null,
+      "note": "Small-batch bourbon, whiskey, and moonshine -- including vanilla and cherry-flavored bourbon -- made with locally sourced grain and an artesian well.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Idaho Anne Frank Human Rights Memorial",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "wassmuthcenter.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Any time; morning light for photos",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The largest memorial of its kind in the U.S., built by the Wassmuth Center for Human Rights explicitly to confront Idaho's history as a haven for white-supremacist organizing (the Aryan Nations compound was in Hayden Lake).",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Freak Alley Gallery",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Freak Alley Gallery",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Daylight",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The largest outdoor art gallery in the Northwest U.S. -- a full alley of murals, legitimized street art.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Old Idaho Penitentiary",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "Idaho State Historical Society",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "~$8",
+      "bestTimeOfDay": "Midday",
+      "durationMin": 120,
+      "rating": null,
+      "note": "A 19th-century prison literally built by its own inmates, operating until 1973; now a museum with cellblocks, a gallows, and a grim history -- regular ghost tours run here.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Basque Block",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- The Basque Block",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-diy"
+      ],
+      "estCost": "Free / $5 museum",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 90,
+      "rating": null,
+      "note": "A single downtown block sustaining the largest concentration of Basque culture in the Americas -- cultural center, fronton court, museum, and Bar Gernika.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Black Cliffs",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- The Black Cliffs",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning",
+      "durationMin": null,
+      "rating": null,
+      "note": "Columnar volcanic basalt cliffs along the Boise River toward Lucky Peak Reservoir, climbed since the 1960s with hundreds of established routes today.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boise River Greenbelt",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "City of Boise",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "Golden hour",
+      "durationMin": null,
+      "rating": null,
+      "note": "25 miles of paved, tree-shaded path connecting most of the city's parks -- the natural anchor everyone in Boise actually uses daily.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Egyptian Theatre",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- The Egyptian Theatre in Boise",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Varies by show",
+      "bestTimeOfDay": "Evening screening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A 1927 Egyptian Revival movie palace built on the Tutankhamun-discovery craze, nearly demolished, restored in 1999 -- still runs classic film screenings, concerts, and comedy.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cherie Buckner-Webb Park (\"Gentle Breeze\")",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- 'Gentle Breeze'",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "A park dedicated to Idaho's first Black legislator, anchored by Matthew Mazzotta's oversized pink tree sculpture.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Shredder",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "shredderboise.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–20",
+      "bestTimeOfDay": "Night",
+      "durationMin": null,
+      "rating": null,
+      "note": "Self-described 'heaviest hitting venue in Boise,' run for years by the city's most persistent underground promoter -- metal, hardcore, and punk shows alongside pool tables and a skate half-pipe.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Treefort Music Hall",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "treefortmusichall.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15–40",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "State-of-the-art all-ages venue tied to the Duck Club group and Treefort Music Fest.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Neurolux",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "neurolux.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–25",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Downtown lounge and long-running indie-rock room, open every day of the year -- the room most closely tied to Boise's post-Built to Spill indie identity.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Shrine Social Club (Ballroom & Basement)",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "shrinesocialclub.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A two-room Duck Club venue with a dedicated basement space that leans into punk and hardcore bookings alongside the bigger ballroom upstairs.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boise Bomb Bunker",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Arbiter",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "N/A — not public-facing",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "A repurposed concrete building serving as practice and recording space for local bands -- the community-collective side of the scene rather than a public venue.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Re-POP Gifts",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "repopgifts.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–35",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Downtown pop-culture and fandom shop with genuinely playful, non-generic merch.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Evermore Prints",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "evermoreprints.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$15–80",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A local giclee print studio partnering directly with Boise artists and photographers -- hosts First Thursday gallery spotlights for local creators.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Idaho Anne Frank Memorial Gift Shop",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "wassmuthcenter.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Books and materials tied directly to the memorial's human-rights mission -- a souvenir that's also a small act of political memory.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boise Co-op",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "KIVI-TV",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–30",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Alongside groceries, stocks Idaho-made goods, local honey, and gift-worthy pantry items under one roof.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Idaho Vinyl Records -- \"Strange & Cool Covers\"",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "idahovinylrecords.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "$3–20",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Their oddball vintage record-cover stock doubles as genuinely weird, framable wall art if you want a souvenir with more edge than a magnet.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "UP MakerSpace",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "upmakerspace.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership-based",
+      "bestTimeOfDay": "Check open hours",
+      "durationMin": null,
+      "rating": null,
+      "note": "Member-driven community makerspace covering 3D printing, CNC cutting, laser engraving, robotics, and electronics, with member-led classes and events.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Open Lab Idaho",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "openlabidaho.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership/class fees",
+      "bestTimeOfDay": "Check class calendar",
+      "durationMin": null,
+      "rating": null,
+      "note": "A community of hackers, circuit benders, engineers, and artists running classes and outreach, with deep ties to Idaho's FIRST Robotics program (sponsors FRC Team 5461).",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Boise State MakerLab",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "boisestate.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free for affiliates; inquire otherwise",
+      "bestTimeOfDay": "Weekdays 10am–5pm",
+      "durationMin": null,
+      "rating": null,
+      "note": "A public library-adjacent makerspace primarily for Boise State affiliates, but will field outside equipment inquiries by email.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "12th Fret Music",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "12thfretmusic.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 45,
+      "rating": null,
+      "note": "A guitar, amp, and pedal shop with a genuine repair bench and a recording studio/soundstage under construction -- the closest thing Boise has to a gear-hacking hub.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Bronco Billy",
+        "year": 1980,
+        "locationVisited": null,
+        "visitNote": "Bar fights and a train robbery sequence shot around town.",
+        "photoId": null
+      },
+      {
+        "title": "Moving",
+        "year": 1988,
+        "locationVisited": null,
+        "visitNote": "Richard Pryor plays a transport engineer relocating to Boise; filmed on city streets.",
+        "photoId": null
+      },
+      {
+        "title": "Always",
+        "year": 1989,
+        "locationVisited": null,
+        "visitNote": "Aerial-firefighter romance largely shot in Boise National Forest just outside the city rather than in Boise proper.",
+        "photoId": null
+      },
+      {
+        "title": "Ghost Dad",
+        "year": 1990,
+        "locationVisited": null,
+        "visitNote": "Bill Cosby comedy partially filmed in Boise.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Frank Church",
+        "relevance": "leftist-politics",
+        "note": "U.S. Senator who chaired the Church Committee (1975-76), exposing CIA/FBI/NSA surveillance abuses and laying groundwork for FISA. Prominent progressive voice against the Vietnam War and for wilderness protection."
+      },
+      {
+        "name": "Joëlle Jones",
+        "relevance": "art",
+        "note": "Comics artist/writer known for Lady Killer and Catwoman."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

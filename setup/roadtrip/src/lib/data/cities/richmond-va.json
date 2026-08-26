@@ -168,7 +168,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-punk"
       ],
@@ -361,7 +361,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -385,7 +385,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -942,7 +942,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-punk",
         "i-horror"

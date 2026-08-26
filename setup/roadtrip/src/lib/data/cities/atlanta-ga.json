@@ -50,7 +50,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-books"
       ],
@@ -79,7 +79,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-books",
         "i-political"
@@ -104,7 +104,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-books",
         "i-political"
@@ -179,7 +179,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-punk",
         "i-diy"
@@ -807,7 +807,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-horror",
         "i-diy"
@@ -856,7 +856,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-horror",
         "i-diy"

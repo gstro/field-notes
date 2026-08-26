@@ -2,9 +2,9 @@
 
 High-level build plan for the design in [`design.md`](design.md), grouped by milestones. Each milestone gets its own detailed doc when it starts; this doc holds just enough to build accurately from later. Undecided questions that gate milestones are tracked as O-numbers in [`decision-log.md`](decision-log.md#open-questions-undecided).
 
-## Current state (as of M3 guide ingest, Aug 2026)
+## Current state (as of M3.5 headline-metric fix, Aug 2026)
 
-Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · trip chapters, data deep-dive, superlatives, colophon unbuilt or stubs · **14 of 18 cities built** (`portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending") — recommendation content is real (transcribed from `guides/*-guide.json`), but every rec's `status`/`rating` is provisional pending attendance reconciliation (D21, [m3-guide-ingest.md](m3-guide-ingest.md)) and all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null · O1/O2/O3 resolved (D16 public posture, D17 leg-ledger, D18 binary rating); O4/O5/O6 remain open.
+Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · trip chapters, data deep-dive, superlatives, colophon unbuilt or stubs · **14 of 18 cities built** (`portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending") — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (48 recs / 42 venues from the Takeout join, [m35-headline-metric.md](m35-headline-metric.md)) with the authoritative curation-adherence rates rendered from `perCityAdherence`; `rating` and all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
 
 ## Milestone overview
 
@@ -59,9 +59,15 @@ Transcribed Washington DC end to end from `dc-city-guide.html` (the 9-category c
 - ~~Transcribe remaining trip-2 cities~~ **Done for content** — 6 trip-2 cities (shreveport, jackson, birmingham, atlanta, charlotte, richmond) ingested via [`tools/ingest-guides.mjs`](../tools/ingest-guides.mjs); DC preserved from M2. Statuses are provisional (D21) — the checkbox/localStorage gap from M0 still means real attendance reconstructs from memory + photos + calendar/ticket emails, not yet done.
 - ~~Birmingham (day-calendar format)~~ **Done** — Birmingham's sample JSON, explicitly pending reconstruction per CLAUDE.md, is now real transcribed content from `guides/birmingham-guide.json`.
 - NOLA per the M0 finding: still backlogged, no guide exists.
-- **Follow-up, not yet done:** attendance reconciliation (real statuses from Takeout/photo/calendar data), the D2/D3 thesis question (O6), the two-DC-sources reconciliation, and schema proposals for the unmapped guide fields — all detailed in [m3-guide-ingest.md](m3-guide-ingest.md).
+- **Follow-up, not yet done:** the two-DC-sources reconciliation and schema proposals for the unmapped guide fields — both detailed in [m3-guide-ingest.md](m3-guide-ingest.md).
 
 Pace: incremental by design — the site is publishable at every stage (D9/D10).
+
+## M3.5 — Headline metric + curation framing — done
+
+Fixed the `0 / N` defect M3 shipped: settled O6 as [D22](decision-log.md#d22-self-curation-vs-sourced-curation-supersedes-the-instinct-framing) (self- vs sourced curation), redefined D3's trip-1 statuses as provenance rather than outcome claims, and landed the Google Takeout join (`tools/join-takeout.mjs`) supplying a confirmed-visit floor plus per-city adherence rates. The hit-rate and thesis questions now render as separate panels from separate sources. Full findings, matcher rationale, and method caveats: [`m35-headline-metric.md`](m35-headline-metric.md).
+
+Still open from it: rendering the saved-list overlap (190 recs / 164 venues, computed and documented, pending review) and folding the Greensboro off-guide discovery into M4's leg data.
 
 ## M4 — Chapter pages ×3
 

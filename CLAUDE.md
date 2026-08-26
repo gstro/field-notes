@@ -38,7 +38,8 @@ Design tokens are in `src/lib/tokens.css`; components in `src/lib/components/` a
 
 These are decided (see `design/decision-log.md` for rationale; don't re-litigate without the user):
 
-- **Trip-1 vs trip-2 data are never visually conflated.** Trip-1 statuses (`attended-anyway`, `retroactive-recommendation`) never share colors with trip-2 statuses. Status color law: attended = green, off-guide = blue, closed = burnt, skipped = muted, trip-1 instinct-hit = gold fill, trip-1 retro-pick = gold dashed outline. Applies to any chart touching status.
+- **Trip-1 vs trip-2 data are never visually conflated.** Trip-1 statuses (`attended-anyway`, `retroactive-recommendation`) never share colors with trip-2 statuses. Status color law: attended = green, off-guide = blue, closed = burnt, skipped = muted, trip-1 visited = gold fill, trip-1 retro-pick = gold dashed outline. Applies to any chart touching status.
+- **The thesis is self-curation vs sourced curation, not instinct vs curation** (D22 — supersedes the older framing; see `design/rejection-log.md` R17). Trip 1 was *not* unguided: every trip-1 city had a 32–42 place self-made Maps list. Trip-1 statuses are **provenance markers, not outcome claims** — `retroactive-recommendation` means "the retro guide picked this; visit status unknown." The comparison metric comes from `perCityAdherence` in `data/maps-trip-analysis-public.json`, never from counting statuses; per-rec visit data is a floor only.
 - **Every field is nullable** and components render nothing (not placeholders, not errors) for missing data — this keeps the site publishable at every stage of data entry.
 - **Every recommendation carries `source.citedFrom`** (type-enforced); citation is a rendering requirement.
 - **All motion behind `prefers-reduced-motion`.**

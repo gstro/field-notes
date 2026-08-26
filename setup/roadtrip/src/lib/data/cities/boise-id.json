@@ -74,7 +74,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-books"
       ],
@@ -364,7 +364,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-food"
       ],
@@ -388,7 +388,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-food"
       ],
@@ -633,7 +633,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-food"
       ],

@@ -5,10 +5,15 @@
 	import FragmentationBar from '$lib/components/FragmentationBar.svelte';
 	import FieldNotes from '$lib/components/FieldNotes.svelte';
 	import PopCulture from '$lib/components/PopCulture.svelte';
+	import Adherence from '$lib/components/Adherence.svelte';
 	import cityIndex from '$lib/data/cityIndex.json';
 
 	let { data } = $props();
 	const c = $derived(data.city);
+	// "Was this city covered by a retro guide (trip 1) or a sourced guide (trip 2)?"
+	// Assumption made explicit: NOLA (`nola`) falls to the trip-2 branch. Moot
+	// today — no NOLA city file exists — but revisit here if one lands, since
+	// NOLA was an interlude with its own saved list and no sourced guide.
 	const isRetro = $derived(c.tripId === 'west');
 
 	// Prev/next from the index order; only link built cities (data.builtIds from load)
@@ -60,11 +65,22 @@
 		</div>
 	</section>
 
+	<!-- Two questions, two sources, two panels. Conflating them is what produced
+	     the `0 / N` defect: the guide hit rate is a floor derived from a
+	     truncated visit log, while the curation comparison (D22) comes from the
+	     full Maps corpus and is authoritative. -->
 	<section class="row">
 		<div>
-			<p class="panel-label">{isRetro ? 'Instinct vs. the Retro Guide' : 'Guide Hit Rate'}</p>
+			<p class="panel-label">{isRetro ? 'Retro Guide vs. What Happened' : 'Guide Hit Rate'}</p>
 			<Waffle recommendations={c.recommendations} {isRetro} />
 		</div>
+		<div>
+			<p class="panel-label">How Closely the List Was Followed</p>
+			<Adherence cityId={c.id} />
+		</div>
+	</section>
+
+	<section class="row">
 		<div>
 			<p class="panel-label">The Fragmentation Gap</p>
 			<FragmentationBar population={c.population} />

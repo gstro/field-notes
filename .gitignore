@@ -59,3 +59,4 @@ n
 # Regenerable report from tools/ingest-guides.mjs --dry-run; content lives in
 # design/m3-guide-ingest.md, not Git.
 tools/.cross-listed-report.md
+tools/.takeout-join-report.md

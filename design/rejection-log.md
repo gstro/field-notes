@@ -22,6 +22,7 @@ Things considered and rejected, with why — so they don't get re-litigated. The
 | [R14](#r14-git-ignored-overlay-for-sensitive-fields) | Git-ignored overlay for sensitive fields | Fully public ([D16](decision-log.md#d16-public-data-posture)) |
 | [R15](#r15-full-scrollytelling-as-the-initial-chapter-build) | Full MapLibre scrollytelling as the initial chapter build | Leg-ledger first ([D17](decision-log.md#d17-leg-ledger-chapter-pages-first)) |
 | [R16](#r16-15-rating-scale) | 1–5 rating scale | Binary rating ([D18](decision-log.md#d18-binary-recommendation-rating)) |
+| [R17](#r17-the-instinct-vs-curation-framing) | "Instinct vs. curation" framing | Self- vs sourced curation ([D22](decision-log.md#d22-self-curation-vs-sourced-curation-supersedes-the-instinct-framing)) |
 
 ## Rejections
 
@@ -88,3 +89,9 @@ Building the full MapLibre scroll-driven panning map as the first version of the
 ### R16 — 1–5 rating scale
 
 A five-point rating on every recommendation, for finer-grained superlatives (ranked bests, "top 5"). Rejected in favor of a binary would-return signal (D18): a 1–5 scale means scoring a number for every recommendation across 18 cities and invites calibration drift (the same failure mode D12 guards against for fingerprints). Binary is enough for "keepers"-style superlatives and is upgradeable to 1–5 later.
+
+### R17 — The "instinct vs. curation" framing
+
+The site's original signature question: trip 1 as unguided instinct travel, trip 2 as curated travel, with the retro guides as a control group measuring whether curation changes where you end up. **Rejected on evidence, not preference** — `data/maps-trip-analysis-public.json` shows every trip-1 city had a 32–42 place self-made Google Maps list (252 saved places across trip 1). There was no unguided condition to compare against; the framing described an experiment that never ran.
+
+Replaced by self-curation vs sourced curation (D22), which the same data answers directly: list-following barely moved (47.4% → 52.5%), but content inverted (books ×6.9, museums ×2.9, records 0→24). Recorded here because the instinct framing is intuitive, is still written into older drafts, and would otherwise get reintroduced — every trip-1 page rendering a "hit by instinct" count is a symptom of it.

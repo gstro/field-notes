@@ -143,7 +143,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-books",
         "i-diy"
@@ -173,7 +173,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-punk",
         "i-diy"
@@ -383,7 +383,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -455,7 +455,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food",
         "i-books"

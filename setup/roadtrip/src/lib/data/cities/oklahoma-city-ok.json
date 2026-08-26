@@ -181,7 +181,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-books",
         "i-food"
@@ -394,7 +394,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-food",
         "i-bees"
@@ -484,7 +484,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-food"
       ],
@@ -924,7 +924,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-food"
       ],
@@ -1056,7 +1056,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-bees",
         "i-political",

@@ -55,7 +55,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-books"
       ],
@@ -79,7 +79,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-books"
       ],
@@ -293,7 +293,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -502,7 +502,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -719,7 +719,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -923,7 +923,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-books",
         "i-political"
@@ -953,7 +953,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-political"
       ],

@@ -56,9 +56,11 @@
 	.status { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid; white-space: nowrap; }
 	.st-attended { color: var(--green); border-color: rgba(93,191,130,0.4); background: rgba(93,191,130,0.08); }
 	.st-skipped { color: var(--muted); border-color: var(--border); }
+	/* Visit unknown — fainter than `skipped`, which asserts a decision not to go. */
+	.st-unknown { color: var(--muted); border-color: var(--border); border-style: dotted; opacity: 0.8; }
 	.st-offguide { color: var(--blue); border-color: rgba(90,175,224,0.4); background: rgba(90,175,224,0.08); }
 	.st-closed { color: var(--burnt-light); border-color: rgba(200,90,0,0.45); background: rgba(200,90,0,0.08); }
-	.st-instinct { color: var(--gold); border-color: rgba(212,168,67,0.45); background: rgba(212,168,67,0.08); }
+	.st-visited { color: var(--gold); border-color: rgba(212,168,67,0.45); background: rgba(212,168,67,0.08); }
 	.st-retro { color: var(--gold); border-color: var(--gold); border-style: dashed; }
 	.meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); margin-top: 3px; }
 	.note { font-size: 13px; opacity: 0.9; margin-top: 5px; }

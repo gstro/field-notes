@@ -67,20 +67,31 @@ function stripPlaceholder(value) {
 	return !value || PLACEHOLDER_VALUES.has(value) ? '' : value;
 }
 
-// D21 (provisional — see design/decision-log.md and design/m3-guide-ingest.md):
-// guide status -> site RecStatus. Isolated here as the one thing that gets
-// re-run when real attendance data lands.
+// Confirmed-visit evidence from tools/join-takeout.mjs, keyed {citySlug: {recId}}.
+// Optional: absent file just means no upgrades (the M3 behaviour).
+let ATTENDANCE = {};
+try {
+	ATTENDANCE = JSON.parse(readFileSync(join(ROOT, 'data/attendance-matches.json'), 'utf8')).matches ?? {};
+} catch {
+	console.warn('note: data/attendance-matches.json not found — no visit upgrades applied');
+}
+
+// D21 (provisional) + D3 as redefined in M3.5. guide status -> site RecStatus.
+// Isolated here as the one thing that gets re-run when more attendance
+// evidence lands.
+//
+// Both unmatched outcomes are UNKNOWN, not negative:
+//   retroactive-recommendation = "retro guide picked this; visit status unknown"
+//   unverified                 = "guide listed this; outcome not established"
+// A match upgrades to the visited value for that trip. Because topPlaces is
+// truncated to ~top-10 per city, matches are a FLOOR — a non-match is not
+// evidence of absence, and nothing downstream may render these as a rate.
 function assignStatus(rec, guide) {
+	const visited = Boolean(ATTENDANCE[guide.slug]?.[rec.id]);
 	if (guide.tripStatus === 'retroactive-guide') {
-		// D3: asserts not-visited. Known to be wrong for ~47% of trip-1 recs
-		// per data/maps-trip-analysis-public.json — not resolved this chunk.
-		return 'retroactive-recommendation';
+		return visited ? 'attended-anyway' : 'retroactive-recommendation';
 	}
-	// trip-2 guide-led: 'sourced-recommendation' means "the guide listed this",
-	// not an outcome. No RecStatus value means that; 'unverified' is the
-	// closest existing value and DC's M2 file already uses it with this
-	// meaning (listed, outcome not established).
-	return 'unverified';
+	return visited ? 'attended' : 'unverified';
 }
 
 // ---------------------------------------------------------------------------

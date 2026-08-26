@@ -1,0 +1,273 @@
+{
+  "generated": "2026-07-19",
+  "source": "data/maps-trip-analysis-public.json topPlaces (top ~8-14 per city)",
+  "caveat": "FLOOR ONLY. topPlaces is truncated; a non-match proves nothing. Never render as a rate.",
+  "matches": {
+    "atlanta": {
+      "a-cappella-books": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "A Cappella Books"
+      },
+      "charis-books": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Charis Books & More"
+      },
+      "for-keeps-books": {
+        "kind": "same-tokens",
+        "score": 0.96,
+        "matched": "For Keeps Bookstore"
+      },
+      "criminal-records": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Criminal Records"
+      },
+      "dolls-head-trail": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Doll's Head Trail"
+      },
+      "krog-street-tunnel": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Krog Street Tunnel"
+      }
+    },
+    "birmingham": {
+      "alabama-booksmith": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Alabama Booksmith"
+      },
+      "seasick-records": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Seasick Records"
+      },
+      "last-call-baking": {
+        "kind": "prefix",
+        "score": 0.92,
+        "matched": "Last Call Baking Company"
+      },
+      "church-street-coffee-books": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Church Street Coffee & Books"
+      }
+    },
+    "boise": {
+      "once-and-future-books": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Once and Future Books"
+      },
+      "neckar-coffee": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Neckar Coffee"
+      },
+      "slow-by-slow-coffee-bar": {
+        "kind": "prefix",
+        "score": 0.76,
+        "matched": "Slow by Slow Coffee"
+      },
+      "bar-gernika-tongue-croquetas": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Bar Gernika"
+      }
+    },
+    "charlotte": {
+      "paper-skyscraper-books": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Paper Skyscraper"
+      },
+      "paper-skyscraper-foods": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Paper Skyscraper"
+      },
+      "musical-parking-garage": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Musical Parking Garage"
+      },
+      "visart-video": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "VisArt Video"
+      },
+      "paper-skyscraper-souvenirs": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Paper Skyscraper"
+      }
+    },
+    "dallas": {
+      "wild-detectives": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "The Wild Detectives"
+      },
+      "dallas-farmers-market-honey": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Dallas Farmers Market"
+      },
+      "dallas-farmers-market-souvenirs": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Dallas Farmers Market"
+      }
+    },
+    "jackson": {
+      "lemuria-books": {
+        "kind": "prefix",
+        "score": 0.76,
+        "matched": "Lemuria Book Store"
+      },
+      "the-book-rack": {
+        "kind": "prefix",
+        "score": 0.76,
+        "matched": "The Book Rack - Jackson"
+      },
+      "native-coffee-co": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Native Coffee"
+      },
+      "broad-street-baking": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Broad Street Baking Company & Cafe"
+      },
+      "whole-bean-coffee-mailable": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Native Coffee"
+      },
+      "smith-robertson-museum": {
+        "kind": "prefix",
+        "score": 0.87,
+        "matched": "Smith Robertson Museum"
+      },
+      "medgar-evers-home": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Medgar and Myrlie Evers Home National Monument"
+      }
+    },
+    "las-vegas": {
+      "pinball-hall-of-fame": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Pinball Hall of Fame"
+      }
+    },
+    "oklahoma-city": {
+      "commonplace-books": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Commonplace Books"
+      },
+      "elemental-coffee": {
+        "kind": "prefix",
+        "score": 0.75,
+        "matched": "Elemental Coffee"
+      },
+      "prelude-coffee": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Prelude Coffee Roasters"
+      },
+      "whole-bean-coffee-mailable": {
+        "kind": "prefix",
+        "score": 0.73,
+        "matched": "Elemental Coffee"
+      },
+      "okc-national-memorial": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Oklahoma City National Memorial & Museum"
+      }
+    },
+    "phoenix": {
+      "heard-museum-shop": {
+        "kind": "prefix",
+        "score": 0.76,
+        "matched": "Heard Museum"
+      }
+    },
+    "richmond": {
+      "vinyl-conflict": {
+        "kind": "prefix",
+        "score": 0.76,
+        "matched": "Vinyl Conflict Record Store"
+      },
+      "sub-rosa-bakery": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Sub Rosa Bakery"
+      },
+      "wpa-bakery": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "WPA Bakery"
+      },
+      "gwarbar": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "GWARbar"
+      }
+    },
+    "salt-lake-city": {
+      "summum-pyramid": {
+        "kind": "prefix",
+        "score": 0.74,
+        "matched": "Summum"
+      }
+    },
+    "shreveport": {
+      "rhino-coffee": {
+        "kind": "prefix",
+        "score": 0.75,
+        "matched": "Rhino Coffee Uptown"
+      },
+      "lowder-baking-company": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Lowder Baking Company"
+      },
+      "strawns-eat-shop-pastry": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Strawn's Eat Shop"
+      },
+      "louisiana-hayride-municipal-auditorium-sight": {
+        "kind": "prefix",
+        "score": 0.97,
+        "matched": "Shreveport Municipal Auditorium"
+      },
+      "shreveport-municipal-auditorium-venue": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Shreveport Municipal Auditorium"
+      }
+    },
+    "washington-dc": {
+      "busboys-and-poets": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Busboys and Poets"
+      },
+      "frederick-douglass-nhs": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Frederick Douglass National Historic Site"
+      }
+    }
+  }
+}

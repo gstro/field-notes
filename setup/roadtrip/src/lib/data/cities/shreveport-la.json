@@ -276,7 +276,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -426,7 +426,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -450,7 +450,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [
         "i-food"
       ],
@@ -858,7 +858,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [],
       "estCost": "Free to view exterior; event pricing varies",
       "bestTimeOfDay": "Anytime; evening for a show",
@@ -929,7 +929,7 @@
           }
         ]
       },
-      "status": "unverified",
+      "status": "attended",
       "interestTags": [],
       "estCost": "Varies by event",
       "bestTimeOfDay": "Evening",

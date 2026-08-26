@@ -110,7 +110,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-books",
         "i-food"
@@ -727,7 +727,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-bees",
         "i-food"
@@ -1229,7 +1229,7 @@
           }
         ]
       },
-      "status": "retroactive-recommendation",
+      "status": "attended-anyway",
       "interestTags": [
         "i-bees",
         "i-food"

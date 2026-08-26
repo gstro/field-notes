@@ -1,0 +1,119 @@
+{
+  "generated": "2026-07-19",
+  "source": "Google Takeout Maps activity; computed pre-sanitization over the full corpus",
+  "note": "Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json perCityAdherence — do not recompute.",
+  "cities": {
+    "albuquerque-nm": {
+      "trip": "trip1",
+      "saved": 32,
+      "navigatedFromList": 21,
+      "listConversionPct": 65.6,
+      "uniqueDirTargets": 44,
+      "visitsThatWereOnListPct": 47.7
+    },
+    "atlanta-ga": {
+      "trip": "trip2",
+      "saved": 87,
+      "navigatedFromList": 40,
+      "listConversionPct": 46,
+      "uniqueDirTargets": 57,
+      "visitsThatWereOnListPct": 68.4
+    },
+    "birmingham-al": {
+      "trip": "trip2",
+      "saved": 46,
+      "navigatedFromList": 23,
+      "listConversionPct": 50,
+      "uniqueDirTargets": 38,
+      "visitsThatWereOnListPct": 60.5
+    },
+    "boise-id": {
+      "trip": "trip1",
+      "saved": 33,
+      "navigatedFromList": 18,
+      "listConversionPct": 54.5,
+      "uniqueDirTargets": 34,
+      "visitsThatWereOnListPct": 52.9
+    },
+    "charlotte-nc": {
+      "trip": "trip2",
+      "saved": 66,
+      "navigatedFromList": 24,
+      "listConversionPct": 36.4,
+      "uniqueDirTargets": 46,
+      "visitsThatWereOnListPct": 52.2
+    },
+    "dallas-tx": {
+      "trip": "trip1",
+      "saved": 42,
+      "navigatedFromList": 18,
+      "listConversionPct": 42.9,
+      "uniqueDirTargets": 43,
+      "visitsThatWereOnListPct": 44.2
+    },
+    "jackson-ms": {
+      "trip": "trip2",
+      "saved": 34,
+      "navigatedFromList": 15,
+      "listConversionPct": 44.1,
+      "uniqueDirTargets": 32,
+      "visitsThatWereOnListPct": 46.9
+    },
+    "las-vegas-nv": {
+      "trip": "trip1",
+      "saved": 36,
+      "navigatedFromList": 12,
+      "listConversionPct": 33.3,
+      "uniqueDirTargets": 34,
+      "visitsThatWereOnListPct": 35.3
+    },
+    "oklahoma-city-ok": {
+      "trip": "trip1",
+      "saved": 36,
+      "navigatedFromList": 8,
+      "listConversionPct": 22.2,
+      "uniqueDirTargets": 21,
+      "visitsThatWereOnListPct": 38.1
+    },
+    "phoenix-az": {
+      "trip": "trip1",
+      "saved": 39,
+      "navigatedFromList": 22,
+      "listConversionPct": 56.4,
+      "uniqueDirTargets": 43,
+      "visitsThatWereOnListPct": 51.2
+    },
+    "richmond-va": {
+      "trip": "trip2",
+      "saved": 43,
+      "navigatedFromList": 9,
+      "listConversionPct": 20.9,
+      "uniqueDirTargets": 31,
+      "visitsThatWereOnListPct": 29
+    },
+    "salt-lake-city-ut": {
+      "trip": "trip1",
+      "saved": 34,
+      "navigatedFromList": 20,
+      "listConversionPct": 58.8,
+      "uniqueDirTargets": 34,
+      "visitsThatWereOnListPct": 58.8
+    },
+    "shreveport-la": {
+      "trip": "trip2",
+      "saved": 29,
+      "navigatedFromList": 15,
+      "listConversionPct": 51.7,
+      "uniqueDirTargets": 27,
+      "visitsThatWereOnListPct": 59.3
+    },
+    "washington-dc": {
+      "trip": "trip2",
+      "saved": 84,
+      "navigatedFromList": 31,
+      "listConversionPct": 36.9,
+      "uniqueDirTargets": 66,
+      "visitsThatWereOnListPct": 45.5
+    }
+  }
+}

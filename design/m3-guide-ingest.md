@@ -1,6 +1,6 @@
 # M3 — Guide ingest: 14 generated guides → site city data
 
-Per-milestone doc, matching the [`m2-first-city.md`](m2-first-city.md) pattern the implementation plan calls for. Records the findings from converting `guides/*-guide.json` into `src/lib/data/cities/*.json` via [`tools/ingest-guides.mjs`](../tools/ingest-guides.mjs), the committed, auditable transform. Result: **14 of 18 cities built** (13 emitted by the transform + `washington-dc.json`, preserved from M2). `portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending" (see [Deferred](#deferred-not-part-of-this-milestone)).
+Per-milestone doc, matching the [`m2-first-city.md`](m2-first-city.md) pattern the implementation plan calls for. Records the findings from converting `guides/*-guide.json` into `src/lib/data/cities/*.json` via [`tools/ingest-guides.mjs`](../tools/ingest-guides.mjs), the committed, auditable transform. Result: **14 of 18 cities built** (13 emitted by the transform + `washington-dc.json`, preserved from M2 at the time — DC was later regenerated too, see [M3.6](m36-purge-invented-data.md)). `portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending" (see [Deferred](#deferred-not-part-of-this-milestone)).
 
 ## Status vocabulary — not final
 
@@ -197,9 +197,11 @@ Emitted by the transform as `tools/.cross-listed-report.md` (gitignored scratch 
 
 Note: DC's guide (`washington-dc-guide.json`) has its own cross-listed group above — it does **not** describe `washington-dc.json`'s actual 57 recs, since DC kept its M2 content. See below.
 
-## Two DC sources need reconciling
+## Two DC sources need reconciling — ✅ resolved in M3.6
 
-`washington-dc.json` (57 recs, M2 hand-transcription, recovered citation labels, category 10 empty) and `guides/washington-dc-guide.json` (55 recs, all 10 categories, machine-generated) now describe the same city from different provenance. This chunk leaves the site file as-is — only `interestTags` were normalized in place (44 of 57 arrays changed; diff confirmed to touch nothing else). Reconciling the two is outstanding, not attempted here.
+`washington-dc.json` (57 recs, M2 hand-transcription, recovered citation labels, category 10 empty) and `guides/washington-dc-guide.json` (55 recs, all 10 categories, machine-generated) described the same city from different provenance. This chunk left the site file as-is — only `interestTags` were normalized in place.
+
+**Resolved in [M3.6](m36-purge-invented-data.md):** DC was regenerated from the guide and is now transform-built like the other 13. The `interestTags` migration described here, and the `DC_TAG_TO_SLUG` map it used, are deleted — DC's tags now come from the guide in `i-*` form like every other city.
 
 ## `interestTags` normalization
 

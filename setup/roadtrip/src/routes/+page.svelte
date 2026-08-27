@@ -8,13 +8,24 @@
 	const built = new Set(Object.values(cityModules).map((m) => (m as { default: { id: string } }).default.id));
 	const byId = Object.fromEntries(cityIndex.map((c) => [c.id, c]));
 
-	// SAMPLE values — replace as reconstruction lands
+	// Derived, so they cannot drift from the data: the arc's span from trips.json
+	// and the city count from cityIndex.
+	const arcStart = trips.trips[0].dates.start;
+	const arcEnd = trips.trips[trips.trips.length - 1].dates.end;
+	const totalDays =
+		Math.round((Date.parse(arcEnd) - Date.parse(arcStart)) / 86_400_000) + 1; // inclusive
+
+	// `pending: true` = not reconstructed from any source. Miles needs retroactive
+	// Maps routing (M0); records and books have no source at all and would be
+	// memory. They keep their slots but must not read as measured — see D9 and
+	// design/m36-purge-invented-data.md. Replacements once M0 lands: 101 city-days,
+	// 550 places navigated to, 641 places saved (all in maps-trip-analysis-public.json).
 	const stats = [
-		{ n: '4,812', l: 'Miles Driven' },
-		{ n: '242', l: 'Days' },
-		{ n: '18', l: 'Cities' },
-		{ n: '61', l: 'Records Bought' },
-		{ n: '38 lbs', l: 'Of Books' },
+		{ n: '4,812', l: 'Miles Driven', pending: true },
+		{ n: String(totalDays), l: 'Days' },
+		{ n: String(cityIndex.length), l: 'Cities' },
+		{ n: '61', l: 'Records Bought', pending: true },
+		{ n: '38 lbs', l: 'Of Books', pending: true },
 		{ n: '243', l: 'CPAP Setups', wry: true }
 	];
 	const chapterMeta: Record<string, { num: string; blurb: string }> = {

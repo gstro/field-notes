@@ -1,0 +1,12 @@
+{
+  "note": "Reviewed corrections applied by tools/ingest-guides.mjs AFTER the guide->city mapping, so human judgment survives regeneration. A guide value that a reviewer has already rejected must not silently return on the next re-run. Each entry states its reason. This is a transform input like data/attendance-matches.json, not a schema change: patched fields must already exist in src/lib/types.ts.",
+  "cities": {
+    "washington-dc": {
+      "elevationFt": {
+        "value": null,
+        "guideValue": 25,
+        "reason": "The guide's 25 ft is the National Mall's elevation, not the city's. DC spans roughly 1-410 ft, so a single figure misrepresents it. Per D9 this renders as nothing rather than as a misleading number. Rejected during M2 review (design/m2-first-city.md) and re-applied here so regenerating DC from the guide cannot reinstate it."
+      }
+    }
+  }
+}

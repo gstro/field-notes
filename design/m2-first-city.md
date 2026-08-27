@@ -1,5 +1,7 @@
 # M2 — First real city: Washington DC
 
+> **Superseded as a description of live data (M3.6, Aug 2026).** `washington-dc.json` is no longer this hand-transcription — DC was regenerated from `guides/washington-dc-guide.json` so it stops being a second provenance, and because its statuses and ratings here were dummy values that had begun rendering as measurements. **This doc remains the record of what the transcription taught** — the schema changes it forced (D19, D20), the citation-fidelity finding, the cross-category duplicate rule — all of which still hold. What no longer applies: the per-item dummy-status checklist below, and the "needed before publishing" list. The 37 venues unique to this transcription are listed in [`m36-purge-invented-data.md`](m36-purge-invented-data.md) so they can be re-added by hand if wanted.
+
 Per-milestone doc, as `implementation-plan.md` calls for. Holds the findings that came out of transcribing one real city end to end, and the checklist of fields only Greg can fill in before this goes live.
 
 ## Why DC, not Birmingham

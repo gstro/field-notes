@@ -17,8 +17,8 @@
     "cityProper": 702250,
     "metro": 6300000
   },
-  "vibeWord": "DUMMY-VIBE",
-  "tagline": "DUMMY — one-sentence characterization pending your review.",
+  "vibeWord": "",
+  "tagline": "",
   "wouldILiveHere": {
     "verdict": null,
     "note": ""
@@ -33,88 +33,88 @@
   },
   "recommendations": [
     {
-      "name": "Bridge Street Books — Georgetown",
+      "name": "Politics and Prose",
       "categoryNum": 1,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": "DC independent bookshop community",
+            "label": "Wikipedia -- Politics and Prose",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
         "i-books",
         "i-political"
       ],
-      "estCost": "Free browse",
-      "bestTimeOfDay": "lunch",
-      "durationMin": null,
-      "rating": false,
-      "note": "Bridge Street's tiny Georgetown space is packed with books on politics, cultural studies, poetry, and philosophy — the most politically serious bookstore in the city. Small-press radical theory, critical history, no filler. One block from the Exorcist steps.",
-      "verifiedOpen": true
+      "estCost": "$0–35",
+      "bestTimeOfDay": "Weekday morning; evening for an author event",
+      "durationMin": 60,
+      "rating": null,
+      "note": "DC's flagship indie since 1984, and 'liberal Washington's most sacred space' -- Bill Clinton, Obama and Rowling have all done events here. Became the city's first unionized bookstore in 2022. Three locations now, including Union Market.",
+      "verifiedOpen": null
     },
     {
-      "name": "Busboys and Poets — 14th St NW",
+      "name": "Kramerbooks & Afterwords",
       "categoryNum": 1,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": "busboysandpoets.com",
+            "label": "Wikipedia -- Kramerbooks",
             "url": null
           }
         ]
       },
-      "status": "attended",
-      "interestTags": [
-        "i-books",
-        "i-political"
-      ],
-      "estCost": "Free",
-      "bestTimeOfDay": "morning",
-      "durationMin": null,
-      "rating": true,
-      "note": "A progressive bookstore and restaurant that bills itself as a community gathering place for artists, writers, and activists. Worker-informed, politically explicit space — anti-war, anti-racist. Frequent free author events. Full restaurant on-site.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Capitol Hill Books — 657 C St SE",
-      "categoryNum": 1,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
+      "status": "unverified",
       "interestTags": [
         "i-books"
       ],
-      "estCost": "$5–30",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Late night -- historically open into the small hours on weekends",
+      "durationMin": 45,
       "rating": null,
-      "note": "Located directly across from Eastern Market, this Capitol Hill mainstay has been the neighborhood's go-to for used books since 1991. Expanded to a second floor; wandering through its many rooms is the point. Founder set a famously high standard for incoming stock.",
-      "verifiedOpen": true
+      "note": "Opened 1976, one of the first bookstore-cafes in the country. Gained a permanent footnote in political history in 1998 when it successfully fought a subpoena for Monica Lewinsky's purchase records, backed by the ACLU.",
+      "verifiedOpen": null
     },
     {
-      "name": "Politics & Prose — Connecticut Ave NW",
+      "name": "Solid State Books",
       "categoryNum": 1,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "solidstatebooksdc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Afternoon; check for one of 18 running book clubs",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Black-owned, two DC locations, runs 18 active book clubs including a horror club and a 'Community Building Book Club' -- a genuine neighborhood hub rather than a browse-and-leave shop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Busboys and Poets",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Busboys and Poets",
             "url": null
           }
         ]
@@ -124,265 +124,196 @@
         "i-books",
         "i-political"
       ],
-      "estCost": "Free events",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": false,
-      "note": "DC's preeminent indie bookstore and a relentless author event machine — journalists, policy historians, investigative reporters, frequently free. Multiple locations now including Union Market. Good political and literary criticism sections. Check the calendar before visiting.",
-      "verifiedOpen": true
+      "estCost": "$5–25 (cafe) / $0–25 (books)",
+      "bestTimeOfDay": "Evening for a poetry or panel event",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Restaurant-bookstore-bar-events venue opened 2005 by activist Andy Shallal, named for Langston Hughes's stint bussing tables. A hub for DC's progressive/activist organizing since day one -- C-SPAN and national press covered its opening as a political story, not a restaurant one.",
+      "verifiedOpen": null
     },
     {
-      "name": "Mahogany Books — Anacostia",
+      "name": "Sankofa Video Books & Cafe",
       "categoryNum": 1,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "sankofa.com",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
         "i-books",
         "i-political"
       ],
-      "estCost": "Free browse",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Black-owned bookstore across the Anacostia River, selling books written by or for the African diaspora. Arriving from the civil rights corridor, this is the right final bookstore — community anchor, politically serious, stocked with authors you won't find at the chains. Worth the trip across the river.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Smash! Records — Adams Morgan",
-      "categoryNum": 2,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$10–50",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "SMASH! opened in Georgetown in 1984 and has been the premier punk and alternative store in DC ever since — hanging tight through the rise and fall of the city's hardcore punk movement. Minor Threat, Bad Brains, all the kids keeping the spirit alive. Also stocks zines and vintage clothing.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Joint Custody — 1530 U Street NW",
-      "categoryNum": 2,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$10–60",
-      "bestTimeOfDay": "night",
-      "durationMin": null,
-      "rating": false,
-      "note": "Voted Best Record Store in DC three consecutive years. Pairs deep punk, metal, jazz, and reggae stock with a vintage clothing section. If you're looking for punk, hardcore, metal, jazz, sportswear, militaria, or Harley paraphernalia, this is the place. Deep crates.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Som Records — 14th St NW",
-      "categoryNum": 2,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$1–40",
-      "bestTimeOfDay": "afternoon",
-      "durationMin": null,
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
       "rating": null,
-      "note": "Covers everything from go-go to hardcore and present-day picks — new releases greet you right when you walk in, wide selection of used and rare records. Owner Neal Becton (DJ Neville C) has stocked jazz, Brazilian, go-go, and hardcore from the same location for years. Best $1 bins in the city.",
-      "verifiedOpen": true
+      "note": "Founded 1997 by filmmaker Haile Gerima and Shirikiana Gerima, named for their acclaimed 1993 film Sankofa. Black-owned 'liberated territory' for Pan-African literature, film and organizing -- the single strongest film/literature/political crossover pick in the city.",
+      "verifiedOpen": null
     },
     {
-      "name": "Spin Time Records — Capitol Hill",
+      "name": "Som Records",
       "categoryNum": 2,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "somrecordsdc.com",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
+        "i-diy",
         "i-punk"
       ],
       "estCost": "$5–40",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Takes its slogan \"the sounds of D.C.\" seriously, curating collections highlighting DC's unique contributions to genres as varied as punk and jazz. Located less than a mile from the Capitol Building. Natural pairing with any Mall visit. Less than 10 min walk from NMAAHC.",
-      "verifiedOpen": true
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Widely called the best record shop in DC -- go-go, soul, funk, punk, disco and everything between, dollar-bin to rare, with an in-store turntable to preview before you buy.",
+      "verifiedOpen": null
     },
     {
-      "name": "Byrdland Records — Union Market",
+      "name": "Byrdland Records",
       "categoryNum": 2,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "byrdlandrecords.com",
             "url": null
           }
         ]
       },
-      "status": "closed-on-arrival",
+      "status": "unverified",
       "interestTags": [
-        "i-punk"
+        "i-diy"
       ],
-      "estCost": "Free browse",
-      "bestTimeOfDay": "afternoon",
-      "durationMin": null,
+      "estCost": "$8–40",
+      "bestTimeOfDay": "Saturday for 'The Saturday Spins' DJ sessions",
+      "durationMin": 45,
       "rating": null,
-      "note": "In Union Market, features a light airy space with records spanning dozens of genres. Each Sunday: live DJ sets noon–2pm. Byrdland operates Songbyrd Music House nearby. Has a 1947 Voice-O-Graph recording booth — you record a 45 RPM direct. Genuinely unique experience.",
-      "verifiedOpen": false
+      "note": "5,000+ new and used titles from the team behind Songbyrd Music House next door; runs the New Columbia Record Club membership program.",
+      "verifiedOpen": null
     },
     {
-      "name": "Lost Sock Roasters — Takoma / Brightwood Park",
-      "categoryNum": 3,
+      "name": "Joint Custody",
+      "categoryNum": 2,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "jointcustodydc.com",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
-        "i-food"
+        "i-punk",
+        "i-diy"
       ],
-      "estCost": "$4–7",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Small-batch specialty roaster in the renovated historic Takoma Theater building, recognized by Food and Wine as Best Local Roaster and Best Drip Coffee in DC. Light to medium roasts, community-minded ownership. Worth the Metro ride north.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Dua DC — Dupont Circle",
-      "categoryNum": 3,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-food"
-      ],
-      "estCost": "$5–8",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "The first Indonesian specialty coffee shop in the nation's capital — each single-origin coffee comes from a different Indonesian island. Try the Kopi Susu (Indonesian latte with condensed milk). Handcrafted mugs from Naruna Ceramics on-site. Politically interesting ownership story.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Unido Coffee — Shaw",
-      "categoryNum": 3,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
-      "interestTags": [
-        "i-food"
-      ],
-      "estCost": "$5–8",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
+      "estCost": "$5–60",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
       "rating": null,
-      "note": "Serves Panama Geisha beans from high-altitude volcanic-soil farms — rare and genuinely complex. Unido established direct relationships with local farmers in Panama before moving to DC in 2019; roasts locally. One of the most serious single-origin programs in the city.",
-      "verifiedOpen": true
+      "note": "Vintage-and-vinyl shop run by self-described lifelong collectors -- rare hardcore demo tapes from the DC/Baltimore scene, band tees, and press photos alongside the crates. In-house merch includes a pointed 'U.S. Out Of DC' tee.",
+      "verifiedOpen": null
     },
     {
-      "name": "The Potter's House — Columbia Heights",
+      "name": "Songbyrd Music House",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "songbyrddc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "Venue: $10–30 / Records: $8–40",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Venue, cafe and vinyl shop in one, with a working record-pressing lathe on-site so you can genuinely cut your own single. Relocated here from Adams Morgan during the pandemic.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Crooked Beat Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "crookedbeat.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "DC's longtime Dischord/Touch & Go/Merge specialist and largest new-vinyl selection in the area was mid-relocation to Alexandria's Del Ray neighborhood (a short Metro/Blue Line hop) as of this guide's writing -- worth the trip but no longer strictly a DC-proper stop. Runs its own local-tribute record label, including a 30th-anniversary Insurgence DC punk comp.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Qualia Coffee",
       "categoryNum": 3,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "qualiacoffeeroasters.com",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
         "i-food",
-        "i-books",
         "i-political"
       ],
-      "estCost": "$4–6",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "A coffee shop, nonprofit bookstore, and community gathering space operated since 1960 by the Church of the Saviour — one of the most politically radical Christian communities in America. A social justice institution that also serves good coffee. The most DC-specific coffee experience on this list.",
-      "verifiedOpen": true
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Roasting in DC since 2009, treating coffee explicitly as 'produce' -- direct relationships with small-scale growers, beans delivered within days of roasting, distribution through farmers markets and local partners rather than mass retail.",
+      "verifiedOpen": null
     },
     {
-      "name": "Slipstream — Logan Circle",
+      "name": "Compass Coffee",
       "categoryNum": 3,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "Wikipedia -- Compass Coffee",
             "url": null
           }
         ]
@@ -391,194 +322,240 @@
       "interestTags": [
         "i-food"
       ],
-      "estCost": "$5–8",
-      "bestTimeOfDay": "evening",
-      "durationMin": null,
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
       "rating": null,
-      "note": "One of the most respected specialty programs in the city — serious single-origin, knowledgeable staff. Transitions to a strong natural wine program evenings. Community programming with a political bent. Good food program too.",
-      "verifiedOpen": true
+      "note": "DC's best-known local roaster since 2014, credited by Mayor Bowser for 'jump-starting the Made in DC movement.' Filed for Chapter 11 bankruptcy in January 2026 after a rocky few years including pandemic layoffs and a contentious union drive -- call ahead or check hours before building a stop around a specific location, as the store footprint may be actively shrinking.",
+      "verifiedOpen": null
     },
     {
-      "name": "Seylou — Blagden Alley, Mt. Vernon Triangle",
-      "categoryNum": 4,
+      "name": "Filter Coffeehouse",
+      "categoryNum": 3,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "local coffee-guide consensus",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
         "i-food"
       ],
-      "estCost": "$5–12",
-      "bestTimeOfDay": "morning",
-      "durationMin": null,
-      "rating": false,
-      "note": "No white flour, no granulated sugar, no instant yeast — only locally-sourced grains freshly stone-milled in an open kitchen. Working exclusively with whole grain flour is an exercise in insanity, and yet Seylou nails it. The whole-wheat croissant is a revelation. Arrive early, it sells out fast.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Ellē — Mt. Pleasant",
-      "categoryNum": 4,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-food"
-      ],
-      "estCost": "$4–10",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Guava turnovers, mudslide walnut cookies — small neighborhood café doing some of the most interesting pastry work in the city. Sip $6 lattes alongside freelancers in the cozy Mt. Pleasant space. Good full-day menu if you need to work.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Tango Pastry — Adams Morgan",
-      "categoryNum": 4,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-food"
-      ],
-      "estCost": "$3–8",
-      "bestTimeOfDay": "noon",
-      "durationMin": null,
-      "rating": true,
-      "note": "Argentine pastry, baked fresh daily — pillowy medialunas with dulce de leche or pastry cream, hand-made alfajor cookies, facturas with quince jam. If you haven't had a medialuna, run (don't walk). The most distinctive non-French pastry program in DC.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Petite Cerise — Georgetown",
-      "categoryNum": 4,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-food"
-      ],
-      "estCost": "$5–12",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": false,
-      "note": "From the team behind Albi — bright, yellow-accented Georgetown café with excellent date and labne coffee cake. One block from the Exorcist Steps. Natural pairing for the horror pilgrimage: croissant, then walk the stairs.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Saku Saku Flakerie — Capitol Hill",
-      "categoryNum": 4,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
-      "interestTags": [
-        "i-food"
-      ],
-      "estCost": "$4–10",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
+      "estCost": "$4–7",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
       "rating": null,
-      "note": "Take-out only Capitol Hill shop: raspberry rose macarons, almond croissants that leave you dusted in powdered sugar after the first bite, savory cardamom buns. Small, no seating, perfect pitstop before or after Spin Time Records or NMAAHC.",
-      "verifiedOpen": true
+      "note": "Opened 2008, generally credited as DC's original third-wave coffee shop -- small, unfussy, still a neighborhood fixture rather than a chain footprint.",
+      "verifiedOpen": null
     },
     {
-      "name": "Half-Smoke @ Ben's Chili Bowl — U Street NW",
+      "name": "Little Wild Things Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "littlewildthingscoffee.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Woman- and queer-owned DC micro-roaster; one of the smaller, more values-forward roasting operations in the city rather than a scaling chain.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Big Bear Cafe",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "bigbearcafe-dc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "One of the anchor businesses that helped kick off Bloomingdale's 2000s revival -- patio and herb garden, still a genuine neighborhood living room rather than a destination cafe.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bread Furst",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "breadfurst.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–14",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "James Beard Award-winning bakery from Mark Furstenberg, who previously built and sold both Marvelous Market and The Breadline -- the closest thing DC has to a bread-and-pastry patriarch, still hand-shaping loaves at 80-plus.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Seylou Bakery & Mill",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "local bakery-guide consensus",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–12",
+      "bestTimeOfDay": "Morning, before the case thins out",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Mills its own whole grains on-site rather than buying flour -- a genuinely rare farmer-to-loaf approach among East Coast bakeries, with a James Beard semifinalist nod for it.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Buttercream Bakeshop",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "local bakery-guide consensus",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Woman-owned Shaw bakeshop known for cupcakes and a rotating seasonal case that leans playful rather than strictly French-technique.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Patisserie Poupon",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "local bakery-guide consensus",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–12",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Old-school French patisserie that's held down a Georgetown storefront since the 1980s -- croissants and classic French pastry when the rest of Wisconsin Ave has turned over several times since.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dolcezza Gelato & Coffee",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "local dessert-guide consensus",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–10",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 20,
+      "rating": null,
+      "note": "Argentine-rooted gelato maker that also roasts its own coffee -- not a pastry counter in the strict sense, but the closest thing DC has to a farmer-direct dessert program, sourcing fruit for gelato flavors seasonally.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Half-Smoke -- Ben's Chili Bowl",
       "categoryNum": 5,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": "washington.org",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "wonderfulmuseums.com",
+            "label": "Wikipedia -- Ben's Chili Bowl",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
         "i-food",
         "i-political"
       ],
       "estCost": "$8–12",
-      "bestTimeOfDay": "morning",
-      "durationMin": null,
-      "rating": true,
-      "note": "DC's signature dish: mildly smoked beef-and-pork sausage, coarser grind, spicy from red pepper flakes, on a split roll with chili, mustard, and onions. Ben's has been feeding the community since the \"Black Broadway\" days — Miles Davis ate here. A civil rights landmark that's also just a great hot dog.",
-      "verifiedOpen": true
+      "bestTimeOfDay": "Lunch, or late night",
+      "durationMin": 45,
+      "rating": null,
+      "note": "DC's signature sausage -- a half-pork, half-beef smoked link, chili-topped, mustard and onions. Ben's opened 1958 in a former silent-movie theater and stayed open through the curfew during the April 1968 riots at Stokely Carmichael's request, feeding both police and activists; Ben wrote 'Soul Brother' on the window to keep it from being burned.",
+      "verifiedOpen": null
     },
     {
-      "name": "Mumbo Sauce Wings — any U Street carry-out",
+      "name": "Mumbo Sauce",
       "categoryNum": 5,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$8–14",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": false,
-      "note": "DC's indigenous condiment: sticky orange-red sauce, sweeter and spicier than BBQ sauce, made from ketchup, vinegar, sugar, pineapple juice, hot sauce, paprika — a triple threat of sweet, spicy, and tangy. Born in Black carry-out culture on U Street in the 1960s. Order wings from any local neighborhood Chinese carry-out, not a restaurant.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Ethiopian Doro Wat + Injera @ Etete — 9th St NW",
-      "categoryNum": 5,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "washington.org",
+            "label": "Wikipedia -- Mumbo sauce",
             "url": null
           }
         ]
@@ -587,215 +564,465 @@
       "interestTags": [
         "i-food"
       ],
-      "estCost": "$20–35/person",
-      "bestTimeOfDay": "any",
+      "estCost": "$0–2 as an add-on",
+      "bestTimeOfDay": "With fried wings or fries, anytime",
       "durationMin": null,
       "rating": null,
-      "note": "DC has one of the largest Ethiopian communities in the country, making Ethiopian cuisine a defining part of local food identity. Etete is consistently cited as one of the best. Get the combination platter — doro wat (spiced chicken stew), tibs (lamb), shiro — and eat communally from the same plate.",
-      "verifiedOpen": true
+      "note": "Sweet-sour-spicy red condiment served on wings, fries and fried rice across DC and Prince George's County carryouts. Origin is contested with a Chicago trademark holder, but the DC version has its own deep cultural footprint -- a go-go band, a beer, a mayoral controversy in 2018 when Muriel Bowser publicly dissed it.",
+      "verifiedOpen": null
     },
     {
-      "name": "Mid-Atlantic Seasonal @ The Dabney — Blagden Alley",
+      "name": "Doro Wat & Injera -- Little Ethiopia",
       "categoryNum": 5,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "local press consensus",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
         "i-food"
       ],
-      "estCost": "$80–120/person",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Michelin-starred Chef Jeremiah Longhorne runs the most serious mid-Atlantic cooking in DC — hyper-seasonal, region-specific, Chesapeake watershed as a culinary tradition worth preserving. Late spring means ramps, morels, local oysters. One of the genuinely important meals on the route.",
-      "verifiedOpen": true
+      "estCost": "$15–25",
+      "bestTimeOfDay": "Dinner",
+      "durationMin": 90,
+      "rating": null,
+      "note": "DC has one of the largest Ethiopian communities outside Ethiopia; the U Street/Shaw corridor and Georgia Ave carry the country's densest concentration of Ethiopian restaurants, with injera and richly spiced stews (doro wat, kitfo) eaten communally by hand.",
+      "verifiedOpen": null
     },
     {
-      "name": "Peruvian Pollo a la Brasa @ El Pollo Rico — Arlington",
+      "name": "Chesapeake Blue Crab / Crab Cakes",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "tasteatlas",
+            "label": "TasteAtlas Mid-Atlantic seafood consensus",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$18–40",
+      "bestTimeOfDay": "Lunch or dinner, summer for peak crab season",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Not DC-exclusive but the regional Mid-Atlantic dish that shows up on every serious DC menu -- blue crab from the Chesapeake, either whole and steamed or as a lump crab cake with minimal filler.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Jumbo Slice Pizza",
       "categoryNum": 5,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "local press consensus",
             "url": null
           }
         ]
       },
-      "status": "planned-skipped",
+      "status": "unverified",
       "interestTags": [
         "i-food"
       ],
-      "estCost": "$12–18",
-      "bestTimeOfDay": "any",
-      "durationMin": 10,
+      "estCost": "$5–8/slice",
+      "bestTimeOfDay": "Late night, post-bar",
+      "durationMin": 15,
       "rating": null,
-      "note": "The no-frills Arlington institution that pioneered pollo a la brasa in the region — marinate, rotate, serve with aji sauce. DC's enormous Peruvian immigrant community made this a local staple. The line moves fast. Cash only. Cross the river for this one.",
-      "verifiedOpen": true
+      "note": "Comically oversized (often folded-in-half-to-eat) NY-style slices sold along 18th Street since the 1990s, tightly bound up with Adams Morgan's late-night bar-crawl culture.",
+      "verifiedOpen": null
     },
     {
-      "name": "Capital City Mambo Sauce",
+      "name": "Bottled Mumbo Sauce",
       "categoryNum": 6,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "cross-referenced with dishes entry",
             "url": null
           }
         ]
       },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$10–15/bottle",
-      "bestTimeOfDay": "any",
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–10/bottle",
+      "bestTimeOfDay": "",
       "durationMin": null,
-      "rating": true,
-      "note": "The DC family that bottled the city's signature condiment — mild and spicy versions of the orange-red wing sauce that defines Black carry-out culture in the District. Available at Eastern Market and direct from their website. The most DC-specific food souvenir possible.",
-      "verifiedOpen": true
+      "rating": null,
+      "note": "Shelf-stable, ships well, and is the single most DC-coded condiment there is -- several small local brands bottle it for retail.",
+      "verifiedOpen": null
     },
     {
-      "name": "DC Rooftop Honey — Eastern Market",
+      "name": "Ben's Chili Bowl Jarred Chili",
       "categoryNum": 6,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "cross-referenced with dishes entry",
             "url": null
           }
         ]
       },
-      "status": "closed-on-arrival",
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$10–15/jar",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Ben's sells its own chili to go in shelf-stable jars/cans -- a mailable piece of the same civil-rights-era institution behind the half-smoke.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "One Eight Distilling Spirits",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "local distillery-guide consensus",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$30–55/bottle",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Generally credited as DC's first distillery since Prohibition (opened 2013); makes an Ivy City-branded whiskey alongside vodka, gin and rum, all distilled in the Ivy City warehouse district alongside Republic Restoratives.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Republic Restoratives Bourbon",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "republicrestoratives.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-drinks",
+        "i-political"
+      ],
+      "estCost": "$35–55/bottle",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Women-owned small-batch distillery and tasting room; bottles travel well and the brand's own framing ('outspoken,' 'disruptive') leans into the same political-adjacent identity as the rest of Ivy City's newer businesses.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Local DC Honey",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "dcbeekeepers.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
       "interestTags": [
         "i-bees"
       ],
-      "estCost": "$12–20/jar",
-      "bestTimeOfDay": "any",
+      "estCost": "$8–18/jar",
+      "bestTimeOfDay": "Weekend market hours",
       "durationMin": null,
       "rating": null,
-      "note": "Urban rooftop beekeeping has grown in DC — Capitol Hive and DC Honeybees both sell at Eastern Market on weekends. City honey has distinctive terroir from the urban flora (especially around the Mall's flowering trees in spring). Saturday and Sunday 7am–6pm.",
-      "verifiedOpen": false
+      "note": "DC has an unusually active urban beekeeping culture for a dense city -- the DC Beekeepers Alliance runs an annual beginner course, and rooftop and backyard hives across the District (including, historically, the White House garden) show up as jarred honey at Eastern Market and neighborhood farmers markets.",
+      "verifiedOpen": null
     },
     {
-      "name": "Harper Macaw Chocolate — Union Market",
-      "categoryNum": 6,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$10–16/bar",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": false,
-      "note": "DC's premier bean-to-bar chocolate maker, sourcing cacao from smallholder farmers in the Amazon basin — single-origin bars from Bolivia, Peru, and Ecuador. Shelf-stable, ship easily, genuinely excellent. The best edible souvenir for non-DC-specific gifts.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Go-Go Vinyl — Som Records / HR Records",
-      "categoryNum": 6,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$10–40",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Go-go is DC's official music — Chuck Brown, Trouble Funk, Rare Essence. Completely untransferable to other cities. Som Records and HR Records (a rare Black-owned shop in Petworth with deep jazz, soul, and reggae crates) both stock go-go. A Rare Essence or Chuck Brown LP is the most culturally specific thing you can take out of DC.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Dischord Records Back Catalog — direct or at Smash!",
-      "categoryNum": 6,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$15–25/LP",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": null,
-      "note": "Ian MacKaye's Dischord Records has kept its entire catalog in print at fair prices since 1980 — Minor Threat, Fugazi, Rites of Spring, Embrace, Dag Nasty. The most principled label in American music history. Buy direct at dischord.com or pick up at Smash! Records. The definitive DC souvenir for punk.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "The Exorcist Steps — Georgetown",
+      "name": "The Exorcist Steps",
       "categoryNum": 7,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "atlasobscura",
-            "label": "Atlas Obscura",
+            "label": "Atlas Obscura -- The Exorcist Steps",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
         "i-horror"
       ],
       "estCost": "Free",
-      "bestTimeOfDay": "dusk",
-      "durationMin": null,
-      "rating": false,
-      "note": "Seventy-four stone steps descending from Prospect St to M St NW, famous for the 1973 William Friedkin film. Built 1895. Walk them at dusk for full atmosphere. Then walk one block to 3600 Prospect Street — the MacNeil house exterior, unchanged. William Peter Blatty was inspired by an actual 1949 exorcism performed nearby, which he read about in the Washington Post as a Georgetown student. <em>Atlas Obscura pick.</em>",
-      "verifiedOpen": true
+      "bestTimeOfDay": "Any time; quieter at dusk",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The steep, narrow stairway from the film's climax, designated a DC historic landmark in 2015. A genuinely creepy piece of architecture even without the movie's reputation.",
+      "verifiedOpen": null
     },
     {
-      "name": "Dischord Records House + Inner Ear Studios — Arlington, VA",
+      "name": "Catacombs of the Franciscan Monastery",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Catacombs of Washington",
+            "url": null
+          },
+          {
+            "source": "atlasobscura",
+            "label": "D.C.",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free (tour donation appreciated)",
+      "bestTimeOfDay": "Wed–Fri, 10am–3pm only",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Turn-of-the-20th-century cement-cast replica of Rome's early-Christian catacombs, built so American pilgrims who couldn't afford the trip to the Holy Land had somewhere local to go -- complete with one genuine relic skeleton, reputedly a 2nd-century child martyr from Rome's Catacomb of St. Callistus.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "National Museum of Health and Medicine",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- National Museum of Health and Medicine",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Wed–Sun, 10am–5pm",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Technically in Silver Spring, MD, not DC proper -- flagged as a scope exception because the collection is extraordinary and Metro-accessible: fragments of Lincoln's skull, Civil War amputation kits, a preserved conjoined-twin specimen, and General Sickles's own amputated leg, which he reportedly visited for decades.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mary McLeod Bethune Council House",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura -- Mary McLeod Bethune Council House",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Weekday afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Home and archive of Mary McLeod Bethune -- founder of the National Council of Negro Women, first Black woman to lead a federal agency (FDR's Director of Negro Affairs) -- now houses the only archive in the US dedicated exclusively to African American women's history.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Congressional Cemetery",
       "categoryNum": 7,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": "dischord.com",
+            "label": "congressionalcemetery.org",
             "url": null
-          },
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-horror",
+        "i-diy"
+      ],
+      "estCost": "Free (tours ticketed)",
+      "bestTimeOfDay": "Morning or golden hour",
+      "durationMin": 90,
+      "rating": null,
+      "note": "70,000-plus burials dating to 1807, including J. Edgar Hoover and a long list of members of Congress. Runs genuinely odd programming -- Cinematery (outdoor horror screenings), Soul Strolls, and the K9 Corps, a paid off-leash dog-walking membership that literally funds the cemetery's upkeep.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Meridian Hill Park ('Malcolm X Park')",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
           {
             "source": "web-search",
-            "label": "wikipedia DC Hardcore",
+            "label": "Wikipedia -- Meridian Hill Park",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Sunday afternoon for the drum circle",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Italian Renaissance-style terraced park that's hosted a Sunday drum circle honoring Malcolm X since shortly after his 1965 assassination -- started by Howard Theatre house drummer Baba Ngoma. Site of Black Panther and Black United Front rallies through the 1960s-80s, plus decades of anti-war and anti-apartheid organizing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Cedar Hill -- Frederick Douglass National Historic Site",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Cedar Hill / Frederick Douglass NHS",
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "Free (timed entry)",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Douglass's home from 1877 until his 1895 death, bought after he became the first Black man confirmed by the Senate to a federal appointment (Marshal of DC). He wrote his final autobiography here. The 1922 restoration is believed to be the first historic-preservation project led by a Black architect (William Augustus Hazel) in the US.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rock Creek Park",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Rock Creek Park",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning",
+      "durationMin": null,
+      "rating": null,
+      "note": "1,754 acres, established 1890 -- the oldest natural urban park in the National Park System, predated only by Yellowstone and Mackinac among all US national parks. Nature center, planetarium, a restored 1820s water-powered mill, and enough forest to genuinely disappear into a few blocks from downtown.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Watergate Complex",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Watergate complex",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free to view exterior",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The building whose name became a permanent suffix for scandal, after five burglars were caught in the DNC's sixth-floor offices in June 1972. Exterior-only, but a five-minute walk from the Kennedy Center along the river.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "U Street -- 'Black Broadway' Walk",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cross-referenced across multiple entries in this guide",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political",
+        "i-punk",
+        "i-books"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 90,
+      "rating": null,
+      "note": "The corridor where Duke Ellington came up and where Marvin Gaye later lived nearby -- one of the country's most important Black cultural and business districts through the early-to-mid 20th century, devastated by the April 1968 riots after MLK's assassination, and only fully rebuilt decades later, now under renewed pressure from gentrification. The same historic strip also holds Ben's Chili Bowl, Busboys and Poets, and the 9:30 Club's current location -- most of the neighborhood's threads run through these few blocks.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "9:30 Club",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- 9:30 Club",
             "url": null
           }
         ]
@@ -804,208 +1031,121 @@
       "interestTags": [
         "i-punk"
       ],
-      "estCost": "Free",
-      "bestTimeOfDay": "any",
-      "durationMin": 10,
+      "estCost": "$25–60",
+      "bestTimeOfDay": "Night",
+      "durationMin": 240,
       "rating": null,
-      "note": "The physical address of Ian MacKaye's Dischord Records is a house in Arlington. The label's entire catalog — Minor Threat, Fugazi, Embrace, Rites of Spring — was recorded at Don Zientara's Inner Ear Studios nearby (also Arlington). The geographic center of American hardcore ethics. Drive by, walk the block, understand what it means that one of the most influential labels in music history operates out of a suburban house.",
-      "verifiedOpen": true
+      "note": "Opened 1980 at a different downtown address, moved to its current 1,200-capacity V Street home in 1996. Rolling Stone-ranked as one of the best live venues in the country and Pollstar's most-decorated 'Nightclub of the Year' winner in that award's history -- was the beating heart of DC's alternative scene as punk, hardcore and go-go all took shape in the early '80s.",
+      "verifiedOpen": null
     },
     {
-      "name": "National Museum of African American History & Culture",
-      "categoryNum": 7,
+      "name": "Black Cat",
+      "categoryNum": 8,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": "nmaahc.si.edu",
+            "label": "Wikipedia -- Black Cat (nightclub)",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15–35",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Opened 1993 by former Gray Matter drummer Dante Ferrando, with Dave Grohl among the original investors. Early stages for Radiohead, The Strokes, Foo Fighters and Yeah Yeah Yeahs; still runs the smaller Backstage/Red Room upstairs for club nights and DIY-scale bills.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Songbyrd Music House",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "songbyrddc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "150-capacity room, NIVA member, with its own record shop (Byrdland) and a pressing lathe -- the rare venue that's also a functioning record label infrastructure.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Comet Ping Pong",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Comet Ping Pong",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–20",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "A pizzeria with a genuinely well-booked indie/punk back-room stage (The Apes, Speedy Ortiz, Tussle have all played it) -- ping pong tables push right up against the low stage. Became internationally notorious in 2016-19 as ground zero for the 'Pizzagate' conspiracy theory, including an armed incident and an arson attempt; both are long-settled non-events but worth knowing before you bring it up with staff.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rhizome DC",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "rhizomedc.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-diy",
         "i-political"
       ],
-      "estCost": "Free, timed entry",
-      "bestTimeOfDay": "any",
-      "durationMin": 210,
-      "rating": true,
-      "note": "The most important museum in DC for this specific trip — after the civil rights corridor, the NMAAHC is the capstone. The lower floors (Slavery and Freedom, Era of Segregation) are devastating and essential. The Contemplative Court at the center is architecturally extraordinary. Pre-timed entry tickets required; free but book weeks in advance.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Riggs Library — Georgetown University",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "Free",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": false,
-      "note": "A six-story Victorian Gothic cast-iron interior that looks like a cathedral crossed with a steampunk fever dream — one of the most beautiful interior spaces in DC that most visitors never see. <em>Atlas Obscura pick.</em> Check Georgetown University visitor access rules before going; best attempted on a weekday.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "U Street \"Black Broadway\" Corridor + Ben's + Lincoln Theatre",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "atlasobscura",
-            "label": "Atlas Obscura",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "washington.org",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-political"
-      ],
-      "estCost": "Free to walk",
-      "bestTimeOfDay": "any",
-      "durationMin": 150,
-      "rating": true,
-      "note": "Once known as \"Black Broadway,\" U Street was the center of Black culture in America — where Duke Ellington was born, where Miles Davis and Ella Fitzgerald performed. Walk the murals (including one honoring everyone from Harriet Tubman to Dave Chappelle), eat at Ben's Chili Bowl, find the Lincoln Theatre (built 1922), end at an Ethiopian restaurant. The civil rights corridor's urban northern terminus.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "9:30 Club — U Street Corridor",
-      "categoryNum": 8,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "wikipedia 9:30 Club",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "930.com",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "blackcatdc.com",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$20–40 cover",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Open since 1980, named #1 nightclub by both Rolling Stone and Billboard. The essential DC venue — every important touring act passes through here. Intimate enough that sight lines are excellent from anywhere in the room. The room that connects the original hardcore era to the present.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Black Cat — 14th St NW",
-      "categoryNum": 8,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "blackcatdc.com",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "930.com",
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$10–20 cover",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
+      "estCost": "Free–$15, sliding scale",
+      "bestTimeOfDay": "Check socials for shows",
+      "durationMin": 180,
       "rating": null,
-      "note": "Co-founded by Dave Grohl; quickly established as a venue for independent music — punk, metal, electronic, DJ nights, film screenings. The Backstage room hosts smaller DIY acts. Downstairs Food for Thought restaurant is vegetarian. The graffiti-covered walls and grungy vibe are intentional. Check the Mainstage and Backstage calendars separately.",
-      "verifiedOpen": true
+      "note": "A residential-building-turned-collective arts space -- 'Art Learning DIY Culture' -- hosting experimental, punk, jazz and electronic shows alongside textile workshops (indigo dyeing, crochet), zine fairs, clothing swaps and mutual-aid-adjacent community events. The clearest analog in this guide to the anarchist-infoshop model this skill's mandatory secondary search usually turns up as a bookstore.",
+      "verifiedOpen": null
     },
     {
-      "name": "DC9 Nightclub — U Street NW",
+      "name": "Fort Reno Summer Concert Series",
       "categoryNum": 8,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$10–15 cover",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "A rooftop bar on a rowhouse — one of DC's best small venues for punk and experimental acts. Capacity ~250, which keeps it genuinely intimate. The kind of venue where you're three feet from the band. Check the calendar; weeknight shows here are often the most interesting.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Songbyrd Music House — Union Market",
-      "categoryNum": 8,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [
-        "i-punk"
-      ],
-      "estCost": "$10–20 cover",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Named DC's Best New Venue in 2016, Best Place for Dinner and Live Music 2017–2019. A 150-capacity venue, bar, and restaurant — intimate and community-oriented. Has in-house organic coffee roasting, a full menu, and a 1947 Voice-O-Graph recording booth where you can cut your own 45 RPM record.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "The Howard Theatre — Shaw",
-      "categoryNum": 8,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": null,
+            "label": "web-search consensus",
             "url": null
           }
         ]
@@ -1015,415 +1155,238 @@
         "i-punk",
         "i-political"
       ],
-      "estCost": "$20–50",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
+      "estCost": "Free",
+      "bestTimeOfDay": "Summer evenings (schedule varies by year)",
+      "durationMin": 180,
       "rating": null,
-      "note": "Built 1910, hosted Duke Ellington, Ella Fitzgerald, Billie Holiday, Chuck Brown. Restored and reopened 2012. One of the most historically significant Black music venues in America — the Lincoln Center of go-go and jazz. Especially meaningful at the end of the civil rights corridor. Check the touring calendar.",
-      "verifiedOpen": true
+      "note": "Free all-ages outdoor series running since 1968, launched amid the unrest following MLK's assassination -- became a bedrock of DC's hardcore-punk all-ages ethic for decades. Nearly killed in 2014 by a National Park Service fee dispute; a public petition and city intervention saved it.",
+      "verifiedOpen": null
     },
     {
-      "name": "Eastern Market — Capitol Hill Weekend Craft Hall",
+      "name": "Shop Made in DC",
       "categoryNum": 9,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": "washington.org",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "wonderfulmuseums.com",
+            "label": "shopmadeindc.com",
             "url": null
           }
         ]
       },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$5–25",
-      "bestTimeOfDay": "morning",
-      "durationMin": null,
-      "rating": true,
-      "note": "The Saturday and Sunday indoor craft market is the best place in DC for locally designed prints, screen-printed goods, and photography by DC artists. Ask specifically for neighborhood maps, mural photography, and DC flag designs. Avoid the tourist stalls outside — go inside the permanent market building.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Busboys and Poets Gift Area — 14th St NW",
-      "categoryNum": 9,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "busboysandpoets.com",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
-        "i-books"
+        "i-diy"
       ],
-      "estCost": "$15–35",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": false,
-      "note": "Stocks locally designed totes, political books, and DC-specific gifts alongside radical literature. Their DC flag totes are actually good. Ruth Bader Ginsburg mugs, Constitution-themed notebooks, activist-artist prints. Also a good spot for a book to read on arrival in Philly.",
-      "verifiedOpen": true
+      "estCost": "$8–60",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Retail model built exclusively around DC-made goods -- prints, ceramics, textiles, food -- the most direct alternative to a generic magnet rack in the city.",
+      "verifiedOpen": null
     },
     {
-      "name": "National Building Museum Shop — Penn Quarter",
+      "name": "Salt & Sundry",
       "categoryNum": 9,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "web-search consensus",
             "url": null
           }
         ]
       },
-      "status": "closed-on-arrival",
-      "interestTags": [],
-      "estCost": "$5–40",
-      "bestTimeOfDay": "any",
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-food"
+      ],
+      "estCost": "$10–50",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Curated home-and-gift shop inside Union Market leaning heavily on small-batch and locally made goods, jarred condiments included.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Eastern Market Weekend Artisans",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia -- Eastern Market",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
+        "i-food"
+      ],
+      "estCost": "$5–80",
+      "bestTimeOfDay": "Saturday or Sunday",
+      "durationMin": 60,
+      "rating": null,
+      "note": "The last of DC's original public markets, open since 1873 and rebuilt after a 2007 fire; weekend flea and art markets outside the main hall bring in up to 100 vendors from artists to antiques dealers, alongside the produce and meat stalls inside.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sankofa Video Books & Cafe (gift shelf)",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cross-referenced with bookstores entry",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$10–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 15,
+      "rating": null,
+      "note": "Pan-African literature, Gerima's own films, and small-press titles make a far more meaningful souvenir than a District magnet.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Joint Custody Vintage/Local Tees",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cross-referenced with records entry",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-diy"
+      ],
+      "estCost": "$25–60",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 15,
+      "rating": null,
+      "note": "In-house-designed tees (including the pointed 'U.S. Out Of DC') alongside genuine vintage band merch -- a souvenir with an actual point of view.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "HacDC",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "hacdc.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership-based; public events free/low-cost",
+      "bestTimeOfDay": "Check event calendar",
       "durationMin": null,
       "rating": null,
-      "note": "The museum shop carries architectural prints, DC map reproductions, and design-quality souvenirs that aren't mass-market tourist product. Good for a metro-map postcard or architectural lithograph. The museum itself is worth 30 min — the Great Hall is one of the most jaw-dropping interior spaces in DC.",
-      "verifiedOpen": false
+      "note": "The nation's second-oldest hackerspace, a member-run 501(c)(3) a block off the Columbia Heights Metro. Runs software-defined-radio and Arduino/circuits workshops open to the public even though the space itself is members-only for drop-in access.",
+      "verifiedOpen": null
     },
     {
-      "name": "Smash! Records Zines + Dischord Merch",
-      "categoryNum": 9,
+      "name": "DC Public Library Fab Labs",
+      "categoryNum": 10,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": null,
+            "label": "dclibrary.org",
             "url": null
           }
         ]
       },
-      "status": "attended",
+      "status": "unverified",
       "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Weekday afternoon; book equipment ahead where required",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Free public 3D-printing and laser-cutting fabrication labs built into the 2020 MLK Library renovation and select branches -- genuinely open-access DIY-electronics infrastructure with no membership fee, a rarity among the cities in this guide series.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rhizome DC (maker/craft programming)",
+      "categoryNum": 10,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "rhizomedc.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-diy",
         "i-punk"
       ],
-      "estCost": "$15–40",
-      "bestTimeOfDay": "any",
-      "durationMin": null,
-      "rating": true,
-      "note": "Smash Records has shirts, zines, and unique DC hardcore merch — Dischord logo tees, punk flyer art, Minor Threat iconography. More honest than anything from a souvenir shop. DC hardcore is the city's most lasting cultural export; take a piece of it home that means something.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Library of Congress",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "loc.gov",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "Free",
-      "bestTimeOfDay": "morning",
-      "durationMin": 90,
-      "rating": false,
-      "note": "Library of Congress (101 Independence Ave SE, Capitol Hill) — the world's largest library and one of the most beautiful interior spaces in America. The Thomas Jefferson Building's Main Reading Room is a cathedral of knowledge. The Great Hall has mosaics and carved stone that took 10 years to complete. Walk-in for tours; request a Reader Card to access the actual stacks and reading rooms. Free. Genuinely one of the best things in Washington.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Smithsonian American Art Museum + National Portrait Gallery",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "americanart.si.edu",
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
-      "interestTags": [],
-      "estCost": "Free",
-      "bestTimeOfDay": "evening",
+      "estCost": "Free–$15, sliding scale",
+      "bestTimeOfDay": "Check event calendar",
       "durationMin": 120,
       "rating": null,
-      "note": "Smithsonian American Art Museum + National Portrait Gallery (8th & F St NW, Penn Quarter) — two major museums sharing a stunning neoclassical building. Free admission. The American Art Museum has a world-class folk art and outsider art collection (relevant to your interests), plus a strong photography department. The Portrait Gallery's 'America's Presidents' hall is the most complete collection of presidential portraits in existence. The Kogod Courtyard atrium is architecturally extraordinary.",
-      "verifiedOpen": true
+      "note": "Leans more textile/general-craft than electronics specifically, but it's the city's clearest DIY-collective maker space and shares the same building/community as the venue listing above.",
+      "verifiedOpen": null
     },
     {
-      "name": "Folger Shakespeare Library",
-      "categoryNum": 7,
+      "name": "Chuck Levin's Washington Music Center",
+      "categoryNum": 10,
       "source": {
         "type": "guide",
         "citedFrom": [
           {
             "source": "web-search",
-            "label": "folger.edu",
+            "label": "long-running regional reputation",
             "url": null
           },
           {
             "source": "web-search",
-            "label": "washington.org",
+            "label": "general knowledge",
             "url": null
           }
         ]
       },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "Free exhibitions",
-      "bestTimeOfDay": "morning",
+      "status": "unverified",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Varies widely",
+      "bestTimeOfDay": "Weekday afternoon",
       "durationMin": 60,
-      "rating": true,
-      "note": "Folger Shakespeare Library (201 E Capitol St SE) — the world's largest collection of Shakespeare materials, recently completed a major renovation. 82 First Folios (out of 235 known to exist), rare manuscripts, early modern books. Free exhibitions open to the public. The reading room is one of the most beautiful spaces in DC. For the literary-minded, this is what the Library of Congress is for American democracy — a concentrated archive of cultural memory.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "The Phillips Collection",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "phillipscollection.org",
-            "url": null
-          }
-        ]
-      },
-      "status": "unverified",
-      "interestTags": [],
-      "estCost": "$16",
-      "bestTimeOfDay": "evening",
-      "durationMin": 90,
       "rating": null,
-      "note": "The Phillips Collection (1600 21st St NW, Dupont Circle) — America's first museum of modern art, opened 1921 in a Georgian Revival mansion. Renoir's 'Luncheon of the Boating Party' lives here permanently. Strong Rothko room, Klee, Bonnard, Hopper. Small enough to see everything in 90 minutes; large enough to be genuinely significant. One of the most civilized museum experiences in DC.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Mitsitam Native Foods Café",
-      "categoryNum": 5,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "atlasobscura",
-            "label": "Atlas Obscura",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "si.edu",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$12–18",
-      "bestTimeOfDay": "noon",
-      "durationMin": null,
-      "rating": true,
-      "note": "Mitsitam Native Foods Café (National Museum of the American Indian, 4th St & Independence Ave SW) — Atlas Obscura's pick for DC's most unusual restaurant. The menu changes seasonally and rotates through indigenous food traditions from across the Western Hemisphere: Great Plains bison, Pacific Northwest salmon, Mesoamerican corn preparations, Caribbean dishes. The café is inside the spectacular NMAI building and open to the public without museum admission. One of the most thoughtful dining concepts in DC.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "International Spy Museum",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "spymuseum.org",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$24.95",
-      "bestTimeOfDay": "evening",
-      "durationMin": 120,
-      "rating": true,
-      "note": "International Spy Museum (700 L'Enfant Plaza SW) — this is not a tourist trap. The collection of actual Cold War espionage equipment, decoded Enigma machines, and KGB artifacts is genuinely remarkable. The interactive elements are designed for adults. The 'Operation Spy' experience ($14 extra) is an immersive scenario. For anyone who has seen The Americans or read John le Carré, this museum has real weight.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Frederick Douglass National Historic Site — Cedar Hill",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "nps.gov",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "Free",
-      "bestTimeOfDay": "morning",
-      "durationMin": 90,
-      "rating": false,
-      "note": "Frederick Douglass National Historic Site — Cedar Hill (1411 W St SE, Anacostia) — Douglass's home from 1877 until his death in 1895, with panoramic views of DC from the Anacostia hilltop. The house is largely original with Douglass's actual library intact. Rangers lead 30-minute tours that cover the full arc of his life: escaped enslaved person, abolitionist, author, diplomat, statesman. Anacostia is an undervisited neighborhood with significant African American history; the Anacostia Community Museum (free, NPS) is two miles away.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Meridian Hill Park",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "nps.gov",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "Free",
-      "bestTimeOfDay": "noon",
-      "durationMin": 45,
-      "rating": true,
-      "note": "Meridian Hill Park (16th St & Florida Ave NW) — a formal cascading fountain park also known as Malcolm X Park, where Sunday drum circles have gathered since the 1960s. The concrete terracing is modeled on Italian Renaissance gardens. The park overlooks Adams Morgan and has been a gathering place for DC's Black radical tradition. Walk the full length; read the history markers.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Madam's Organ",
-      "categoryNum": 8,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "washington.org",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "tripadvisor",
-            "url": null
-          }
-        ]
-      },
-      "status": "planned-skipped",
-      "interestTags": [],
-      "estCost": "$5 cover",
-      "bestTimeOfDay": "night",
-      "durationMin": null,
-      "rating": null,
-      "note": "Madam's Organ (2461 18th St NW, Adams Morgan) — blues and R&B bar in Adams Morgan since 1994. Live music nightly, rowdy karaoke later in the week, red walls, neon signs, taxidermy. The neighborhood's anchor and one of the most beloved bars in DC. Thursday nights here are a DC tradition.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Mitsitam or Union Market",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "washington.org",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$12–20",
-      "bestTimeOfDay": "noon",
-      "durationMin": null,
-      "rating": false,
-      "note": "Mitsitam or Union Market — if you spent the morning at NMAAHC, recover at Union Market (1309 5th St NE, NoMa): 40+ independent food vendors in a converted 1930s meat market. La Cosecha adjacent is a Latin American marketplace worth exploring. Strong coffee at Compass Coffee (DC local chain, excellent single-origin).",
-      "verifiedOpen": true
-    },
-    {
-      "name": "National Mall morning walk",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "nps.gov",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "Free",
-      "bestTimeOfDay": "morning",
-      "durationMin": 120,
-      "rating": true,
-      "note": "National Mall morning walk — do this in the early morning when it's quiet. Start at the Lincoln Memorial (the steps where MLK gave the 'I Have a Dream' speech), walk past the Vietnam Veterans Memorial (Maya Lin's design is among the greatest works of public art in America), continue to the Korean War Veterans Memorial, the FDR Memorial, and the MLK National Memorial. This is not for tourists — this is American history at ground level. 2-mile walk, 2 hours.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Smithsonian National Air and Space Museum",
-      "categoryNum": 7,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "web-search",
-            "label": "si.edu",
-            "url": null
-          }
-        ]
-      },
-      "status": "unverified",
-      "interestTags": [],
-      "estCost": "Free",
-      "bestTimeOfDay": "morning",
-      "durationMin": 90,
-      "rating": null,
-      "note": "Smithsonian National Air and Space Museum (600 Independence Ave SW) — free. The Wright Brothers' actual Flyer, Charles Lindbergh's Spirit of St. Louis, John Glenn's Friendship 7 capsule, a moon rock you can touch. If the scale of human ambition means anything to you, this building has it. The most visited museum in the world. Go mid-morning when it opens to avoid peak crowds.",
-      "verifiedOpen": true
-    },
-    {
-      "name": "Farewell dinner: Tail Up Goat",
-      "categoryNum": 5,
-      "source": {
-        "type": "guide",
-        "citedFrom": [
-          {
-            "source": "eater",
-            "label": "eater.com",
-            "url": null
-          },
-          {
-            "source": "web-search",
-            "label": "dc",
-            "url": null
-          }
-        ]
-      },
-      "status": "attended",
-      "interestTags": [],
-      "estCost": "$60–90",
-      "bestTimeOfDay": "evening",
-      "durationMin": null,
-      "rating": false,
-      "note": "Farewell dinner: Tail Up Goat (1827 Adams Mill Rd NW, Adams Morgan) — one of DC's most genuinely original restaurants: James Beard Award-winning, with a menu that defies simple categorization (Caribbean influence, mountain cooking, wood fire, local produce). The bread program is nationally recognized. Book well ahead for Saturday dinner. This is the meal that ends the road trip.",
-      "verifiedOpen": true
+      "note": "One of the largest independent music-gear stores on the East Coast since 1958 -- deep pedal, synth and amp-repair inventory for anyone doing hands-on gear hacking. Technically in Wheaton, MD, not DC proper, flagged as a scope exception given the thinness of DC's own electronics-retail options.",
+      "verifiedOpen": null
     }
   ],
   "popCulture": {
@@ -1431,8 +1394,22 @@
       {
         "title": "The Exorcist",
         "year": 1973,
-        "locationVisited": true,
-        "visitNote": "The Exorcist Steps, Georgetown — 74 stone steps from Prospect St to M St NW; Blatty read about the real 1949 exorcism it was based on as a Georgetown student.",
+        "locationVisited": null,
+        "visitNote": "The narrow, steep stairway where Father Karras falls to his death in the film's climax. Designated a DC historic landmark in 2015 with a commemorative plaque. The adjacent house used as the MacNeil residence exterior is at 3600 Prospect St and remains a private home. Used for the lecture-scene and interior shots; Georgetown professor Fr. Thomas Bermingham appears in the film, and Fr. William O'Malley's character was drawn from an actual Georgetown theology instructor.",
+        "photoId": null
+      },
+      {
+        "title": "All the President's Men",
+        "year": 1976,
+        "locationVisited": null,
+        "visitNote": "Principal photography began in DC on May 12, 1975; the actual Post newsroom was replicated on a Burbank soundstage for $200,000, down to nearly 200 desks bought from the same supplier used by the real paper. Woodward and Bernstein's reporting, and the film, run directly through the Watergate complex in Foggy Bottom.",
+        "photoId": null
+      },
+      {
+        "title": "St. Elmo's Fire",
+        "year": 1985,
+        "locationVisited": null,
+        "visitNote": "Set at and around Georgetown University, but the university refused permission to film on campus over the script's content; the campus scenes were shot instead at the University of Maryland, College Park.",
         "photoId": null
       }
     ],
@@ -1440,7 +1417,27 @@
       {
         "name": "Duke Ellington",
         "relevance": "music",
-        "note": "Born at 1212 T St NW on the U Street “Black Broadway” corridor."
+        "note": "Jazz composer and bandleader, came up in DC's U Street corridor. The Duke Ellington School of the Arts and a small triangular park near his birth site are named for him."
+      },
+      {
+        "name": "Marvin Gaye",
+        "relevance": "music",
+        "note": "Soul icon, born at Freedmen's Hospital; grew up in DC public housing before Motown."
+      },
+      {
+        "name": "Ian MacKaye",
+        "relevance": "punk/hardcore",
+        "note": "Co-founder of Dischord Records (1980) with Jeff Nelson; frontman of Minor Threat and later Fugazi. His personal-abstinence lyric 'Straight Edge' gave a whole hardcore subculture its name, though MacKaye has repeatedly said he never intended it as doctrine."
+      },
+      {
+        "name": "Henry Rollins",
+        "relevance": "punk/hardcore",
+        "note": "Fronted DC's State of Alert (S.O.A.), which released one 1981 EP on Dischord, before joining Black Flag later that year."
+      },
+      {
+        "name": "Eleanor Holmes Norton",
+        "relevance": "leftist-politics",
+        "note": "Civil-rights attorney and SNCC/Freedom Summer organizer, first woman to chair the EEOC (Carter appointee), and DC's non-voting House delegate since 1991; founding member of the Congressional Progressive Caucus. Announced in January 2026 she would not seek re-election after 35 years."
       }
     ]
   },

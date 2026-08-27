@@ -50,7 +50,10 @@ Confirmed-visit floor: **48 recs / 42 distinct venues, of 705**.
 
 Rendering follows from this: `≥4 of 52`, never `4 / 52`; Albuquerque (no matches) shows `—`, not `0`. Unmatched recs render in a distinct **dotted "visit unknown"** cell — deliberately not the `skipped` style, which asserts a decision not to go. Absence of evidence must not read as a finding.
 
-### Residual: Washington DC's floor is not measured
+### Residual: Washington DC's floor is not measured — ✅ closed in M3.6
+
+> **Resolved.** DC was regenerated from its guide in [M3.6](m36-purge-invented-data.md); its dummy statuses and ratings are gone and it now reads `≥2 of 55`, join-derived like every other city. The section below is kept as the record of the defect and why it was left standing for one chunk.
+
 
 **`washington-dc` reads `≥39 of 57`, and that number is dummy data.** DC's city file is the M2 hand-transcription, whose statuses were assigned mechanically for display purposes and never reflected a record of what happened (`m2-first-city.md`: *"Every recommendation's `status` and `rating` are dummy values"*). The Takeout join found 2 confirmed visits for DC's guide, but that guide is not the source of DC's city file, so the join does not touch it.
 
@@ -119,7 +122,7 @@ This is the only true `off-guide-discovery` in the corpus — a status the site 
 
 - **Rendering the saved-list overlap** — after review.
 - **Landing `StatStrip` sample numbers** (`+page.svelte:11`) — mileage and spend need M0 pulls that haven't landed.
-- **Two-DC-sources reconciliation** — now the highest-priority follow-up, since DC's rendered floor is dummy-derived (see the residual above). Details in [`m3-guide-ingest.md`](m3-guide-ingest.md).
+- ~~**Two-DC-sources reconciliation**~~ — **done in [M3.6](m36-purge-invented-data.md)**: DC regenerated from its guide, dummy floor gone.
 - **Schema additions for unmapped guide fields** — also in `m3-guide-ingest.md`.
 - **Greensboro** into M4's leg data.
 - `isRetro` is still `tripId === 'west'`, so a future NOLA city file would fall to the trip-2 branch. Noted at the call site.

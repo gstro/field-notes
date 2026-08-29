@@ -15,7 +15,8 @@
   "elevationFt": 206,
   "population": {
     "cityProper": 178000,
-    "metro": 393000
+    "metro": 393000,
+    "note": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files. Shreveport-proper has declined from a 2010 peak (~199,000); the metro figure is the Shreveport-Bossier City MSA."
   },
   "vibeWord": "",
   "tagline": "",

@@ -28,6 +28,8 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D20](#d20-spend-and-lodging-field-on-city) | `spend`/`lodging` field on `City` | Final (M2, Aug 2026) |
 | [D21](#d21-trip-2-guide-statuses-map-to-unverified) | Trip-2 guide statuses map to `unverified` | Provisional (M3, Aug 2026) |
 | [D22](#d22-self-curation-vs-sourced-curation-supersedes-the-instinct-framing) | Self-curation vs sourced curation supersedes the instinct framing | Final (M3.5, Aug 2026; resolves O6) |
+| [D23](#d23-populationnote-stored-not-rendered) | `population.note` stored, not rendered | Final (M3.7, Aug 2026) |
+| [D24](#d24-additive-overrides-reviewed-restorations-survive-regeneration) | Additive overrides — reviewed restorations survive regeneration | Final (M3.7, Aug 2026) |
 
 ## Decisions
 
@@ -142,6 +144,27 @@ Consequences:
 - D2's retro-guide decision and Portland exclusion are unaffected.
 
 Resolves O6. Method caveats that bound every claim above are recorded in [`m35-headline-metric.md`](m35-headline-metric.md).
+
+### D23 — `population.note` stored, not rendered
+
+`City.population` gains `note: string | null`, carried verbatim from the guides. All 14 guides have one; **ten carry the D8 mechanism behind that city's fragmentation gap** — OKC annexed aggressively (the metric inverts), Atlanta fragmented via the cityhood movement, the Las Vegas Strip sits in unincorporated Clark County, Richmond is a Virginia independent city, DC cannot annex at all.
+
+**Rendered nowhere**, because every note mixes that content with authoring self-reference (*"consistent with the caveat practice established in the Oklahoma City and Dallas JSON files"*, *"fragmentationRatio left null: …"*). Publishing it verbatim would put shop talk on a public page. Storing it preserves the content; turning it into reader-facing prose is an editorial pass, and that pass is outstanding. Same shape as M3.5's compute-but-don't-render call on the saved-list overlap.
+
+`fragmentationRatio` is `null` in all 14 guides and has no schema home; it is not carried.
+
+### D24 — Additive overrides: reviewed restorations survive regeneration
+
+`data/city-overrides.json` (D-less mechanism introduced in M3.6 for field patches) gains `additionalRecommendations` — whole recommendations a reviewer restored, appended by `transformCity` after mapping. Introduced to bring back 14 Washington DC venues that the generated guide doesn't cover and that M3.6 dropped, each carrying a citation recovered by hand in M2.
+
+Rules that keep it from becoming a back door:
+
+- Entries **cannot** set `status`, `rating` or `verifiedOpen` — the transform owns those, so a restored venue can never assert an outcome. Attempting to set one is a hard error.
+- Every entry is validated for required and unknown fields, failing with the venue name.
+- **`join-takeout.mjs` matches additive entries exactly as it matches guide recs.** Without this a restored venue could only ever read as "visit unknown"; DC's `topPlaces` contains two of them (Library of Congress, Bridge Street Books), and both are confirmed visits.
+- Each entry carries a `reason` recording where it came from.
+
+Corollary: DC again has two provenances (55 guide-derived + 14 restored), a milder form of the split M3.6 ended. Deliberate, and recorded per entry.
 
 ## Open questions (undecided)
 

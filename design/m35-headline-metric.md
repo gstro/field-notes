@@ -96,7 +96,9 @@ Supporting rules: guide recs carrying a dish/product prefix are split on `--`/`�
 
 ## Saved-list overlap — computed, documented, not rendered
 
-**190 recs / 164 distinct venues** overlap between the 2026 guides and the self-made Maps lists: places a sourced guide independently picked that were already self-curated. This is the sharpest form of the D22 question, and the full 191-row table lives in `tools/.takeout-join-report.md`.
+**190 recs / 164 distinct venues** overlap between the 2026 guides and the self-made Maps lists: places a sourced guide independently picked that were already self-curated. This is the sharpest form of the D22 question, and the full table lives in `tools/.takeout-join-report.md`.
+
+> **Corrected in [M3.7](m37-colophon.md): 189 recs / 163 venues.** The deferred review was carried out and found one false positive — `Boise Co-op` ← `Boise Whitewater Park`. "Co-op" reduces to nothing (both fragments are ≤2 characters and drop out), leaving a bare city name that prefix-matched anything beginning with "Boise": the same failure shape as the `Coffee Garden` → `garden` bug, one layer down. Fixed by capping a city's own name tokens in `buildIdf` alongside `GENERIC`. **Rendering is still deferred** — review settles match quality, not the in-situ-save circularity below, which was the actual reason for holding it back.
 
 It does not render yet, for two reasons: caveat 3 above (in-situ saves), and the rule that a number gets reviewed before it becomes site content — M3 shipped an unvalidated one and this chunk exists to fix it. Rendering is the next chunk's call.
 

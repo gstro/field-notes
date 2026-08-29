@@ -248,7 +248,7 @@
       },
       "louisiana-hayride-municipal-auditorium-sight": {
         "kind": "prefix",
-        "score": 0.97,
+        "score": 0.87,
         "matched": "Shreveport Municipal Auditorium"
       },
       "shreveport-municipal-auditorium-venue": {
@@ -267,6 +267,16 @@
         "kind": "exact",
         "score": 1,
         "matched": "Frederick Douglass National Historic Site"
+      },
+      "bridge-street-books-georgetown": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Bridge Street Books"
+      },
+      "library-of-congress": {
+        "kind": "exact",
+        "score": 1,
+        "matched": "Library of Congress"
       }
     }
   }

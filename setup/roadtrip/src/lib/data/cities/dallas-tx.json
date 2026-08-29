@@ -15,7 +15,8 @@
   "elevationFt": 430,
   "population": {
     "cityProper": 1304000,
-    "metro": 8100000
+    "metro": 8100000,
+    "note": "City-proper and DFW-metro figures are approximate mid-2020s estimates pending Census reconciliation; DFW is a genuinely polycentric metro (Fort Worth, Arlington, Plano, etc. are independent city governments, not annexed Dallas territory), which is a different fragmentation mechanism than OKC's aggressive-annexation pattern noted in that city's file. No fragmentation ratio has been computed here — left null rather than guessed."
   },
   "vibeWord": "",
   "tagline": "",

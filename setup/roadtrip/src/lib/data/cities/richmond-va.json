@@ -15,7 +15,8 @@
   "elevationFt": 166,
   "population": {
     "cityProper": 226610,
-    "metro": 1349945
+    "metro": 1349945,
+    "note": "City-proper and metro figures are estimates (Richmond city + Chesterfield/Henrico/Hanover-anchored metro) pending Census reconciliation; Virginia's independent-city structure makes Richmond's own boundary unusually stable compared to Southern-corridor annexation/fragmentation cities, so fragmentationRatio is left null rather than forced."
   },
   "vibeWord": "",
   "tagline": "",

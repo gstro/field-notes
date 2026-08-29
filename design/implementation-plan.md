@@ -2,9 +2,9 @@
 
 High-level build plan for the design in [`design.md`](design.md), grouped by milestones. Each milestone gets its own detailed doc when it starts; this doc holds just enough to build accurately from later. Undecided questions that gate milestones are tracked as O-numbers in [`decision-log.md`](decision-log.md#open-questions-undecided).
 
-## Current state (as of M3.6 invented-data purge, Aug 2026)
+## Current state (as of M3.7 colophon, Aug 2026)
 
-Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · trip chapters, data deep-dive, superlatives, colophon unbuilt or stubs · **14 of 18 cities built** (`portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending") — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (48 recs / 42 venues from the Takeout join, [m35-headline-metric.md](m35-headline-metric.md)) with the authoritative curation-adherence rates rendered from `perCityAdherence`; **no surface renders an unmeasured number** (M3.6: DC regenerated from its guide, all dummy statuses/ratings/placeholder strings gone; unsourced landing figures marked "not yet reconstructed") · `rating` is now **empty dataset-wide**, which blocks M6 — see below · all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
+Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · **colophon built** ([M3.7](m37-colophon.md)); trip chapters, data deep-dive and superlatives unbuilt or stubs · **14 of 18 cities built** (`portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending") — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (50 recs / 44 venues from the Takeout join across 719 recommendations) with the authoritative curation-adherence rates rendered verbatim from `perCityAdherence`, never re-derived; **no surface renders an unmeasured number** (M3.6: DC regenerated from its guide, all dummy statuses/ratings/placeholder strings gone; unsourced landing figures marked "not yet reconstructed") · `rating` is now **empty dataset-wide**, which blocks M6 — see below · all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
 
 ## Milestone overview
 
@@ -69,6 +69,12 @@ Fixed the `0 / N` defect M3 shipped: settled O6 as [D22](decision-log.md#d22-sel
 
 Still open from it: rendering the saved-list overlap (190 recs / 164 venues, computed and documented, pending review) and folding the Greensboro off-guide discovery into M4's leg data.
 
+## M3.7 — Deferred threads + colophon — done
+
+The **colophon ships** (`/colophon`, linked from the landing page) — methodology, error bars, what is not reconstructed, and a neutral revisions log, with every figure derived from committed data at build time rather than typed in. `population.note` is carried for all 14 cities but deliberately not rendered (D23). The deferred saved-list review was carried out: it found one false positive (`Boise Co-op` ← `Boise Whitewater Park`), corrected the count to 189/163, and confirmed that **rendering stays blocked on the in-situ-save circularity, which review cannot settle**. Fourteen cited DC venues restored via a new additive-overrides mechanism (D24); DC now at 69 recs with its floor up from 2 to 4. Full findings: [`m37-colophon.md`](m37-colophon.md).
+
+Still open from it: the `population.note` editorial pass, the colophon wishlist (the user's to write), and the other 22 dropped DC venues.
+
 ## M3.6 — Purge the last invented data — done
 
 DC regenerated from its guide (ending the two-provenance split and its dummy statuses/ratings/`DUMMY-` placeholder strings), landing StatStrip's three unsourced figures marked `not yet reconstructed`, and `data/city-overrides.json` added so reviewed corrections — starting with DC's rejected `elevationFt: 25` — survive regeneration. **No surface on the site now asserts an unmeasured number.** Full findings, including the 37 M2-only DC venues dropped and the discarded `population.note` D8 caveat: [`m36-purge-invented-data.md`](m36-purge-invented-data.md).
@@ -85,7 +91,9 @@ LayerChart installs here. Content: prices time capsule (`prices.json`), spend, t
 
 Writing-heavy; save for post-data. Superlatives page renders `superlatives.json` in awards format — superlatives derive from the **binary** would-return rating (D18), so awards are "keepers"-style lists, not numeric rankings. Colophon covers methodology, the retro-guide anachronism disclosure (D2/D22), reconstruction error bars, and the "things I wish I'd captured" wishlist.
 
-**Blocker (M3.6):** `rating` is now empty across all 705 recommendations — DC's 39 were the only populated ones, and they were invented. No export contains would-return signals; capturing them is a manual memory pass over the full corpus, the same class of work as trip-2 attendance reconstruction. **The superlatives page cannot be built until that happens**; the colophon half is unblocked and could ship first.
+**Colophon half shipped in [M3.7](m37-colophon.md)**; the superlatives half remains blocked.
+
+**Blocker (M3.6):** `rating` is empty across all 719 recommendations — DC's 39 were the only populated ones, and they were invented. No export contains would-return signals; capturing them is a manual memory pass over the full corpus, the same class of work as trip-2 attendance reconstruction. **The superlatives page cannot be built until that happens**; the colophon half is unblocked and could ship first.
 
 ## M7 — Photo pipeline
 

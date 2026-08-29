@@ -15,7 +15,8 @@
   "elevationFt": 1201,
   "population": {
     "cityProper": 702767,
-    "metro": 1477926
+    "metro": 1477926,
+    "note": "OKC city-proper land area is roughly 620 sq mi — one of the largest municipal footprints in the country. The fragmentation metric inverts here relative to the Southern corridor: OKC annexed aggressively rather than fragmenting, which produced a different mechanism for the same outcome. Figures are approximate estimates pending Census reconciliation."
   },
   "vibeWord": "",
   "tagline": "",

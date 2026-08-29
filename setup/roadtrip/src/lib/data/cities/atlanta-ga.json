@@ -15,7 +15,8 @@
   "elevationFt": 1050,
   "population": {
     "cityProper": 510000,
-    "metro": 6300000
+    "metro": 6300000,
+    "note": "City-proper figure is a recent-estimate midpoint (2020 census: 498,715); metro figure is the Atlanta-Sandy Springs-Alpharetta MSA, both pending Census reconciliation. fragmentationRatio left null: Atlanta metro is a nationally cited case study in municipal fragmentation via the 'cityhood movement' (Sandy Springs, Brookhaven, Dunwoody, Milton and others incorporating out of unincorporated Fulton/DeKalb County since 2005, largely to control local tax base and schools) but no single ratio has been computed for this guide -- flagged as a possible Field Notes follow-up rather than a number invented for this file."
   },
   "vibeWord": "",
   "tagline": "",

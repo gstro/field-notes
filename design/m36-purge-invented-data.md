@@ -41,8 +41,10 @@ It is a transform *input* like `data/attendance-matches.json`, **not** a schema 
 
 37 M2 venues have no counterpart in the generated guide. A count isn't recoverable later; this list is. **15 carry citation labels recovered by M2's hand cross-referencing**, which is the part that stings — several are major DC institutions the generated guide simply doesn't cover.
 
+> **Update ([M3.7](m37-colophon.md)): the cited ones are back.** All 15 marked ✅ below were restored via `additionalRecommendations` (D24), minus one collapsed as a duplicate — 14 entries, DC now at 69 recs. Library of Congress and Bridge Street Books turned out to be in DC's `topPlaces` and are now confirmed visits. **The 22 unmarked entries remain dropped.**
+
 **Bookstores**
-- Bridge Street Books — Georgetown *(cited: DC independent bookshop community)*
+- ✅ Bridge Street Books — Georgetown *(cited: DC independent bookshop community)*
 - Capitol Hill Books — 657 C St SE
 - Mahogany Books — Anacostia
 
@@ -64,11 +66,11 @@ It is a transform *input* like `data/attendance-matches.json`, **not** a schema 
 - Saku Saku Flakerie — Capitol Hill
 
 **Unique Dishes**
-- Ethiopian Doro Wat + Injera @ Etete — 9th St NW *(cited: washington.org)*
+- ✅ Ethiopian Doro Wat + Injera @ Etete — 9th St NW *(cited: washington.org)*
 - Mid-Atlantic Seasonal @ The Dabney — Blagden Alley
 - Peruvian Pollo a la Brasa @ El Pollo Rico — Arlington
-- Mitsitam Native Foods Café *(cited: Atlas Obscura; si.edu)*
-- Farewell dinner: Tail Up Goat *(cited: eater.com/dc)*
+- ✅ Mitsitam Native Foods Café *(cited: Atlas Obscura; si.edu)*
+- ✅ Farewell dinner: Tail Up Goat *(cited: eater.com/dc)*
 
 **Mailable Gifts**
 - Capital City Mambo Sauce
@@ -76,21 +78,21 @@ It is a transform *input* like `data/attendance-matches.json`, **not** a schema 
 - Dischord Records Back Catalog — direct or at Smash!
 
 **Sights & Oddities**
-- Dischord Records House + Inner Ear Studios — Arlington, VA *(cited: dischord.com; Wikipedia DC Hardcore)* — note the unresolved address conflict flagged in M2
-- National Museum of African American History & Culture *(cited: nmaahc.si.edu)*
+- ✅ Dischord Records House + Inner Ear Studios — Arlington, VA *(cited: dischord.com; Wikipedia DC Hardcore)* — note the unresolved address conflict flagged in M2
+- ✅ National Museum of African American History & Culture *(cited: nmaahc.si.edu)*
 - Riggs Library — Georgetown University
-- Library of Congress *(cited: loc.gov)*
-- Smithsonian American Art Museum + National Portrait Gallery *(cited: americanart.si.edu)*
-- Folger Shakespeare Library *(cited: folger.edu; washington.org)*
-- The Phillips Collection *(cited: phillipscollection.org)*
-- International Spy Museum *(cited: spymuseum.org)*
-- Mitsitam or Union Market *(cited: washington.org)*
-- National Mall morning walk *(cited: nps.gov)*
-- Smithsonian National Air and Space Museum *(cited: si.edu)*
+- ✅ Library of Congress *(cited: loc.gov)*
+- ✅ Smithsonian American Art Museum + National Portrait Gallery *(cited: americanart.si.edu)*
+- ✅ Folger Shakespeare Library *(cited: folger.edu; washington.org)*
+- ✅ The Phillips Collection *(cited: phillipscollection.org)*
+- ✅ International Spy Museum *(cited: spymuseum.org)*
+- ↩︎ Mitsitam or Union Market *(cited: washington.org)* *(collapsed into the Mitsitam dish entry — an either/or note, not a venue)*
+- ✅ National Mall morning walk *(cited: nps.gov)*
+- ✅ Smithsonian National Air and Space Museum *(cited: si.edu)*
 
 **Punk / Indie Venues**
 - The Howard Theatre — Shaw
-- Madam's Organ *(cited: washington.org; Tripadvisor)*
+- ✅ Madam's Organ *(cited: washington.org; Tripadvisor)*
 
 **Souvenirs**
 - National Building Museum Shop — Penn Quarter
@@ -98,7 +100,9 @@ It is a transform *input* like `data/attendance-matches.json`, **not** a schema 
 
 Re-adding any of these by hand is a future chunk's call. The generated guide covers different ground (Catacombs of the Franciscan Monastery, National Museum of Health and Medicine, Mary McLeod Bethune Council House, Congressional Cemetery, Rock Creek Park, the Watergate) — the two are complementary surveys of the same city, not competing ones.
 
-### `population.note` is discarded — a D8 caveat, not just lost text
+### `population.note` is discarded — a D8 caveat, not just lost text — ✅ carried as of M3.7
+
+> **Resolved ([M3.7](m37-colophon.md), D23):** `population.note` is now in the schema and carried verbatim for all 14 cities — and ten of them, not just DC, turned out to hold the D8 mechanism behind their fragmentation gap. It is still **not rendered**: every note mixes that content with authoring self-reference. Getting it onto the page is an editorial pass, still outstanding.
 
 DC's guide carries a ~400-character `population.note` explaining that its fragmentation metric is **structurally different** from the Southern corridor's: the city cannot annex or be annexed and has no county government at all, since Congress retains ultimate budget authority regardless of city-proper boundaries. `types.ts` types `population` as `{cityProper, metro}`, so the transform drops it.
 

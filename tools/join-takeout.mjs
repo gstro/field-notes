@@ -42,6 +42,21 @@ const SLUG_TO_MAPS_NAME = {
 	shreveport: 'Shreveport', 'washington-dc': 'Washington DC'
 };
 
+const SLUG_TO_CITY_ID = {
+	albuquerque: 'albuquerque-nm', atlanta: 'atlanta-ga', birmingham: 'birmingham-al',
+	boise: 'boise-id', charlotte: 'charlotte-nc', dallas: 'dallas-tx', jackson: 'jackson-ms',
+	'las-vegas': 'las-vegas-nv', 'oklahoma-city': 'oklahoma-city-ok', phoenix: 'phoenix-az',
+	richmond: 'richmond-va', 'salt-lake-city': 'salt-lake-city-ut',
+	shreveport: 'shreveport-la', 'washington-dc': 'washington-dc'
+};
+
+// Hand-restored venues (D24) join exactly like guide recs — see the joinable
+// list in main(). Optional: an absent file just means nothing was restored.
+let OVERRIDES = {};
+try {
+	OVERRIDES = JSON.parse(readFileSync(join(ROOT, 'data/city-overrides.json'), 'utf8')).cities ?? {};
+} catch { /* no restorations to join */ }
+
 // Guide slug -> the saved-list key in saved-lists-corridor-public.json
 const SLUG_TO_SAVED_LIST = {
 	albuquerque: '2025 Albuquerque', boise: '2025 Boise', dallas: '2025 Dallas',
@@ -190,7 +205,13 @@ function candidateStrings(name) {
 // generic head like "the market" can't match everything in the pool.
 const MIN_SHARED_IDF = 1.0;
 
-function buildIdf(names) {
+// `cityTokens` are capped alongside GENERIC: within one city's name pool the
+// city's OWN name identifies nothing. Found by hand-reviewing the saved-list
+// table — "Boise Co-op" reduces to just ["boise"] (both "co" and "op" are 2
+// chars and drop out), which then prefix-matched "Boise Whitewater Park". Same
+// failure shape as the original "Coffee Garden" -> "garden" bug: a name whose
+// identifying part is gone matches on a word that was never identifying.
+function buildIdf(names, cityTokens = new Set()) {
 	const df = new Map();
 	for (const n of names) {
 		for (const t of new Set(tokens(n))) df.set(t, (df.get(t) ?? 0) + 1);
@@ -198,7 +219,7 @@ function buildIdf(names) {
 	const N = Math.max(names.length, 1);
 	return (t) => {
 		const raw = Math.log((N + 1) / ((df.get(t) ?? 0) + 1));
-		return GENERIC.has(t) ? Math.min(raw, GENERIC_IDF_CAP) : raw;
+		return GENERIC.has(t) || cityTokens.has(t) ? Math.min(raw, GENERIC_IDF_CAP) : raw;
 	};
 }
 
@@ -271,17 +292,29 @@ function main() {
 		const topPlaces = topByCity[SLUG_TO_MAPS_NAME[slug]] ?? [];
 		const savedPlaces = (saved[SLUG_TO_SAVED_LIST[slug]] ?? []).map((i) => i.title);
 
+		// Hand-restored venues (D24) are matched exactly like guide recs — one
+		// matcher, one code path. Without this a restored venue could only ever be
+		// "visit unknown": DC's topPlaces contains Library of Congress and Bridge
+		// Street Books, both of which were restored, and both of which the
+		// location data confirms were visited.
+		const additive = (OVERRIDES[SLUG_TO_CITY_ID[slug]]?.additionalRecommendations ?? [])
+			.map((e) => ({ id: e.id, name: e.name }));
+		const joinable = [...guide.recommendations.map((r) => ({ id: r.id, name: r.name })), ...additive];
+
 		// IDF is computed per city over that city's whole name pool — the
 		// distinctiveness of "virginia" is a property of the Richmond corpus,
 		// not of English.
-		const idf = buildIdf([...topPlaces, ...savedPlaces, ...guide.recommendations.map((r) => r.name)]);
+		const idf = buildIdf(
+			[...topPlaces, ...savedPlaces, ...joinable.map((r) => r.name)],
+			tokens(guide.city)
+		);
 
 		const hits = {};
 		const visitVenues = new Set();
 		const savedVenues = new Set();
 		let savedRecCount = 0;
 
-		for (const rec of guide.recommendations) {
+		for (const rec of joinable) {
 			const v = matchOne(rec.name, topPlaces, idf);
 			if (v) {
 				hits[rec.id] = { kind: v.kind, score: v.score, matched: v.matched };
@@ -342,13 +375,6 @@ function main() {
 	// The authoritative thesis metric (D22), re-keyed from display name to city
 	// id for the site. These figures come from the FULL pre-sanitization corpus
 	// and are copied verbatim — never recomputed from the public file.
-	const SLUG_TO_CITY_ID = {
-		albuquerque: 'albuquerque-nm', atlanta: 'atlanta-ga', birmingham: 'birmingham-al',
-		boise: 'boise-id', charlotte: 'charlotte-nc', dallas: 'dallas-tx', jackson: 'jackson-ms',
-		'las-vegas': 'las-vegas-nv', 'oklahoma-city': 'oklahoma-city-ok', phoenix: 'phoenix-az',
-		richmond: 'richmond-va', 'salt-lake-city': 'salt-lake-city-ut',
-		shreveport: 'shreveport-la', 'washington-dc': 'washington-dc'
-	};
 	const adherence = {};
 	for (const [slug, mapsName] of Object.entries(SLUG_TO_MAPS_NAME)) {
 		const a = maps.perCityAdherence[mapsName];
@@ -362,10 +388,20 @@ function main() {
 			visitsThatWereOnListPct: a.visitsThatWereOnListPct
 		};
 	}
+	// Corpus-wide comparison, copied verbatim. These are the figures D22 calls
+	// authoritative; anything deriving a headline rate must use THESE, not an
+	// average over the per-city rows below (an unweighted per-city mean is a
+	// different statistic and lands a few tenths off).
+	const pick = (o) => o && {
+		cities: o.cities, cityDays: o.cityDays, savedListPlaces: o.savedListPlaces,
+		uniqueDirectionTargets: o.uniqueDirectionTargets, listConversionPct: o.listConversionPct,
+		visitsThatWereOnListPct: o.visitsThatWereOnListPct
+	};
 	writeFileSync(ADHERENCE_PATH, JSON.stringify({
 		generated: maps.generated,
 		source: 'Google Takeout Maps activity; computed pre-sanitization over the full corpus',
-		note: 'Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json perCityAdherence — do not recompute.',
+		note: 'Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json — do not recompute.',
+		comparison: { trip1: pick(maps.comparison.trip1), trip2: pick(maps.comparison.trip2) },
 		cities: adherence
 	}, null, 2) + '\n');
 	console.log(`wrote ${ADHERENCE_PATH} (${Object.keys(adherence).length} cities)`);

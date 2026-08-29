@@ -15,7 +15,8 @@
   "elevationFt": 2704,
   "population": {
     "cityProper": 235684,
-    "metro": 837442
+    "metro": 837442,
+    "note": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files."
   },
   "vibeWord": "",
   "tagline": "",

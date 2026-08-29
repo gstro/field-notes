@@ -67,6 +67,34 @@ function stripPlaceholder(value) {
 	return !value || PLACEHOLDER_VALUES.has(value) ? '' : value;
 }
 
+// Reviewed corrections that must survive regeneration (data/city-overrides.json).
+// A guide value a human already rejected must not silently come back on the next
+// re-run — without this, that class of finding is lost every time the transform
+// runs. Applied AFTER mapping, in transformCity.
+let OVERRIDES = {};
+try {
+	OVERRIDES = JSON.parse(readFileSync(join(ROOT, 'data/city-overrides.json'), 'utf8')).cities ?? {};
+} catch {
+	console.warn('note: data/city-overrides.json not found — no reviewed corrections applied');
+}
+const appliedOverrides = [];
+
+function applyOverrides(city) {
+	const patch = OVERRIDES[city.id];
+	if (!patch) return city;
+	for (const [field, spec] of Object.entries(patch)) {
+		if (!(field in city)) {
+			throw new Error(
+				`city-overrides.json: "${city.id}.${field}" is not a field in the City schema. ` +
+				`Overrides patch existing fields only — they are not a way to extend types.ts.`
+			);
+		}
+		city[field] = spec.value;
+		appliedOverrides.push(`${city.id}.${field}`);
+	}
+	return city;
+}
+
 // Confirmed-visit evidence from tools/join-takeout.mjs, keyed {citySlug: {recId}}.
 // Optional: absent file just means no upgrades (the M3 behaviour).
 let ATTENDANCE = {};
@@ -266,62 +294,6 @@ function transformCity(guide, cityIndexEntry) {
 }
 
 // ---------------------------------------------------------------------------
-// interestTags normalization (guides already use i-* slugs; DC's M2 file uses
-// a richer, per-category vocabulary that silently diverged from the same
-// bare-string[] field — types.ts doesn't distinguish the two shapes).
-//
-// DC's 21 distinct values don't map 1:1 onto the guide corpus's 8-value
-// cross-cutting interest axis (i-food/i-diy/i-punk/i-books/i-political/
-// i-horror/i-bees/i-drinks) — several DC tags are category echoes (Coffee,
-// Pastry, Venue, Sights, Souvenirs, Gifts) rather than interest threads, and
-// have no equivalent. Those are dropped rather than force-fit; the rest map
-// on editorial judgment. Documented in design/m3-guide-ingest.md as a
-// mechanical-normalization judgment call, same spirit as duration parsing
-// (design/m2-first-city.md: "reasonable but not hand-verified").
-const DC_TAG_TO_SLUG = {
-	Books: 'i-books',
-	'Punk/HC': 'i-punk',
-	Vinyl: 'i-punk', // no dedicated records/music tag in guide vocab
-	Venue: 'i-punk',
-	'Go-Go': 'i-punk', // DC-specific music scene; closest existing axis
-	Coffee: 'i-food',
-	Pastry: 'i-food',
-	Food: 'i-food',
-	'Michelin ★': 'i-food',
-	Politics: 'i-political',
-	'Civil Rights': 'i-political',
-	'Black Broadway': 'i-political', // cultural-history thread, matches the political through-line
-	Bees: 'i-bees',
-	Horror: 'i-horror'
-	// Dropped, no guide-vocab equivalent: Gifts, Sights, Souvenirs, DC Original,
-	// Film, Film Location, Atlas Obscura (a source label, not an interest).
-};
-
-function normalizeDcCityFile() {
-	const path = join(CITIES_DIR, 'washington-dc.json');
-	const dc = JSON.parse(readFileSync(path, 'utf8'));
-	let changed = 0;
-	const dropped = new Set();
-	for (const rec of dc.recommendations) {
-		const before = rec.interestTags ?? [];
-		// Idempotency guard: a tag already in i-* slug form (i.e. this function
-		// already ran) passes through unchanged instead of being looked up in
-		// DC_TAG_TO_SLUG (whose keys are the original Title Case labels) and
-		// silently dropped on a second run.
-		const parts = before.flatMap((t) => (t.startsWith('i-') ? [t] : t.split('·').map((s) => s.trim())));
-		const normalized = [...new Set(parts.map((t) => {
-			if (t.startsWith('i-')) return t;
-			const slug = DC_TAG_TO_SLUG[t];
-			if (!slug) dropped.add(t);
-			return slug;
-		}).filter(Boolean))];
-		if (JSON.stringify(normalized) !== JSON.stringify(before)) changed++;
-		rec.interestTags = normalized;
-	}
-	return { dc, changed, dropped: [...dropped].sort() };
-}
-
-// ---------------------------------------------------------------------------
 // Validation
 
 function validateCity(city, guideSlug) {
@@ -385,45 +357,40 @@ function main() {
 		const cityIndexEntry = cityIndexById[cityId];
 		if (!cityIndexEntry) throw new Error(`${file}: cityIndex has no entry for "${cityId}"`);
 
-		const city = transformCity(guide, cityIndexEntry);
+		const city = applyOverrides(transformCity(guide, cityIndexEntry));
 		validateCity(city, guide.slug);
 		crossListedReport.push(...collectCrossListedReport(guide));
 		results.push({ cityId, city, guideSlug: guide.slug });
 	}
 
-	// Ground-truth check before writing anything: DC's derived stay must match
-	// the reviewed M2 record exactly.
+	// Ground-truth check before writing anything. DC is now transform-built like
+	// every other city (M3.6), so this no longer compares against a separate
+	// hand-transcription — it stays as a regression guard on the nights rule
+	// (cityIndex nights + guide arrival -> depart), pinned to the one stay that
+	// was verified by hand against the real itinerary.
 	const dcResult = results.find((r) => r.cityId === 'washington-dc');
 	const expectedDcStay = { arrive: '2026-05-24', depart: '2026-05-31', nights: 7 };
 	if (JSON.stringify(dcResult.city.stay) !== JSON.stringify(expectedDcStay)) {
 		throw new Error(
 			`Ground-truth check failed: derived DC stay ${JSON.stringify(dcResult.city.stay)} ` +
-			`does not match M2's hand-transcribed record ${JSON.stringify(expectedDcStay)}`
+			`does not match the hand-verified record ${JSON.stringify(expectedDcStay)}`
 		);
 	}
-	console.log('Ground-truth check passed: derived DC stay matches M2 record.');
-
-	// DC keeps its M2 recommendations/citations/notes — only interestTags are
-	// normalized in-place, separately from the transform's own output above.
-	const { dc: normalizedDc, changed: dcTagsChanged, dropped: dcTagsDropped } = normalizeDcCityFile();
+	console.log('Ground-truth check passed: derived DC stay matches the hand-verified record.');
 
 	if (DRY_RUN) {
-		console.log(`Dry run: would write ${results.filter((r) => r.cityId !== 'washington-dc').length} city files ` +
-			`+ normalize ${dcTagsChanged} DC interestTags arrays.`);
-		console.log(`DC tags with no guide-vocab equivalent (dropped): ${dcTagsDropped.join(', ')}`);
+		console.log(`Dry run: would write ${results.length} city files.`);
+		console.log(`Overrides applied: ${appliedOverrides.length ? appliedOverrides.join(', ') : 'none'}`);
 		console.log(`Cross-listed groups found: ${crossListedReport.length}`);
 		return;
 	}
 
 	for (const { cityId, city } of results) {
-		if (cityId === 'washington-dc') continue; // preserved, not regenerated
 		const path = join(CITIES_DIR, `${cityId}.json`);
 		writeFileSync(path, JSON.stringify(city, null, 2) + '\n');
 		console.log(`wrote ${path}`);
 	}
-
-	writeFileSync(join(CITIES_DIR, 'washington-dc.json'), JSON.stringify(normalizedDc, null, 2) + '\n');
-	console.log(`normalized washington-dc.json (${dcTagsChanged} interestTags arrays changed)`);
+	console.log(`overrides applied: ${appliedOverrides.length ? appliedOverrides.join(', ') : 'none'}`);
 
 	// Emit the cross-listed report as a fenced block the M3 doc can quote.
 	const reportPath = join(ROOT, 'tools/.cross-listed-report.md');

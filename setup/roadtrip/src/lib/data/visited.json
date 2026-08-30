@@ -1,0 +1,1107 @@
+{
+  "generated": "2026-07-19",
+  "source": "data/maps-trip-analysis-public.json topPlaces — the most-navigated places per city",
+  "caveat": "Provenance is matched, not recorded. \"own-list\" is an UPPER bound and \"found\" a FLOOR: the export has no per-item save timestamps and the lists were edited during the trips, so a place saved on the ground cannot be separated from one saved before leaving. topPlaces is also truncated to roughly the top 8-14 per city, so this is what was navigated to MOST, not everything.",
+  "totals": {
+    "found": 23,
+    "own-list": 85,
+    "guide": 42
+  },
+  "cities": {
+    "albuquerque-nm": [
+      {
+        "name": "Maverik",
+        "count": 7,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Twisters Burgers and Burritos",
+        "count": 4,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "United States Postal Service",
+        "count": 4,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Blackbird Coffee House",
+        "count": 3,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Bow & Arrow Brewing Co.",
+        "count": 3,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "The Grove Cafe & Market",
+        "count": 3,
+        "categories": [
+          "food",
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Mary & Tito's Cafe",
+        "count": 2,
+        "categories": [
+          "food",
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Sawmill Market",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Masks Y Mas",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      }
+    ],
+    "atlanta-ga": [
+      {
+        "name": "Krog Street Tunnel",
+        "count": 53,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Talat Market",
+        "count": 35,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Charis Books & More",
+        "count": 11,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Kamayan ATL - Filipino Restaurant",
+        "count": 10,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Doll's Head Trail",
+        "count": 8,
+        "categories": [
+          "outdoors"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "A Cappella Books",
+        "count": 6,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Criminal Records",
+        "count": 6,
+        "categories": [
+          "records_music"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Peachtree Road Farmers Market",
+        "count": 6,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Chrome Yellow",
+        "count": 6,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Bookish Atlanta",
+        "count": 5,
+        "categories": [
+          "books"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "The Reading Room",
+        "count": 4,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Grant Park Farmers Market",
+        "count": 3,
+        "categories": [
+          "outdoors"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "For Keeps Bookstore",
+        "count": 3,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Olympic Rings",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      }
+    ],
+    "birmingham-al": [
+      {
+        "name": "Seasick Records",
+        "count": 6,
+        "categories": [
+          "records_music"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Joe Minter’s African Village",
+        "count": 5,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Irondale Cafe",
+        "count": 4,
+        "categories": [
+          "food",
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Steel City Barbershop",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Church Street Coffee & Books",
+        "count": 3,
+        "categories": [
+          "books",
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Alabama Booksmith",
+        "count": 3,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Bandit Bakery",
+        "count": 3,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "World's Largest Office Chair",
+        "count": 2,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Buc-ee’s",
+        "count": 2,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Chez Fonfon",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Last Call Baking Company",
+        "count": 2,
+        "categories": [],
+        "provenance": "guide"
+      }
+    ],
+    "boise-id": [
+      {
+        "name": "The Flicks: Rick's Cafe Americain",
+        "count": 4,
+        "categories": [
+          "food",
+          "coffee",
+          "film"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Slow by Slow Coffee",
+        "count": 3,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Albertsons Stadium",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Once and Future Books",
+        "count": 2,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Neckar Coffee",
+        "count": 2,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Flicks",
+        "count": 2,
+        "categories": [
+          "film"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "United States Postal Service",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Bar Gernika",
+        "count": 2,
+        "categories": [
+          "food"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Maverik",
+        "count": 1,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Westside Drive In",
+        "count": 1,
+        "categories": [],
+        "provenance": "own-list"
+      }
+    ],
+    "charlotte-nc": [
+      {
+        "name": "Troubadour Booksellers",
+        "count": 22,
+        "categories": [
+          "books"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "McEwen Funerals & Cremations at Forest Lawn West",
+        "count": 6,
+        "categories": [
+          "horror_occult"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Musical Parking Garage",
+        "count": 4,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Haberdish",
+        "count": 4,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Paper Skyscraper",
+        "count": 3,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "VisArt Video",
+        "count": 3,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Haraz Coffee House",
+        "count": 3,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Mama Ricotta's",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "New South Kitchen & Bar",
+        "count": 2,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Sea Hut",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Fairy Ring Lights",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      }
+    ],
+    "dallas-tx": [
+      {
+        "name": "The Wild Detectives",
+        "count": 7,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Cindi's NY Deli & Restaurant",
+        "count": 6,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Museum of Illusions",
+        "count": 3,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Thanks-Giving Square",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Pecan Lodge",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "United States Postal Service",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Dallas Farmers Market",
+        "count": 2,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Mochas & Javas",
+        "count": 2,
+        "categories": [],
+        "provenance": "found"
+      }
+    ],
+    "jackson-ms": [
+      {
+        "name": "Rooted in Mississippi",
+        "count": 7,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Smith Robertson Museum",
+        "count": 7,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Broad Street Baking Company & Cafe",
+        "count": 3,
+        "categories": [
+          "food",
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Museum of Mississippi History",
+        "count": 2,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "Mississippi Museum of Natural Science",
+        "count": 2,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "The Book Rack - Jackson",
+        "count": 2,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "The Finery",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Medgar and Myrlie Evers Home National Monument",
+        "count": 2,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Native Coffee",
+        "count": 2,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Elvie's",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Lemuria Book Store",
+        "count": 2,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      }
+    ],
+    "las-vegas-nv": [
+      {
+        "name": "Oasis at Gold Spike",
+        "count": 9,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Baguette Cafe",
+        "count": 3,
+        "categories": [
+          "food",
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Mothership Coffee Roasters",
+        "count": 2,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "Island Deli and Smoothie Bar",
+        "count": 1,
+        "categories": [
+          "food"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "Pinball Hall of Fame",
+        "count": 1,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Meow Wolf Las Vegas' Omega Mart",
+        "count": 1,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Firestone Complete Auto Care",
+        "count": 1,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "AAA Southwest Las Vegas Branch",
+        "count": 1,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "AAA Car Doctor",
+        "count": 1,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "The Laundry Room",
+        "count": 1,
+        "categories": [],
+        "provenance": "own-list"
+      }
+    ],
+    "oklahoma-city-ok": [
+      {
+        "name": "Elemental Coffee",
+        "count": 4,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Edge Craft Barbecue",
+        "count": 2,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Caboose Coffee",
+        "count": 2,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "Commonplace Books",
+        "count": 2,
+        "categories": [
+          "books"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Tucker's Onion Burgers",
+        "count": 2,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Shell",
+        "count": 1,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "The Floating Bookshop",
+        "count": 1,
+        "categories": [
+          "books"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Prelude Coffee Roasters",
+        "count": 1,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Oklahoma City National Memorial & Museum",
+        "count": 1,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "guide"
+      }
+    ],
+    "phoenix-az": [
+      {
+        "name": "The Coffee Builders",
+        "count": 7,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "The Vig",
+        "count": 6,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "AAA Phoenix East Thomas Auto Repair Center",
+        "count": 5,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "1st Ave",
+        "count": 4,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Navajo Code Talker Memorial",
+        "count": 3,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Oak Street Murals",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Heard Museum",
+        "count": 2,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Paradise Valley",
+        "count": 2,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Arizona Falls",
+        "count": 2,
+        "categories": [
+          "outdoors"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Tacos Chiwas",
+        "count": 2,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Peixoto Coffee",
+        "count": 2,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "own-list"
+      }
+    ],
+    "richmond-va": [
+      {
+        "name": "The Roosevelt",
+        "count": 11,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "The Jasper",
+        "count": 4,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "New York Deli",
+        "count": 4,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Vinyl Conflict Record Store",
+        "count": 3,
+        "categories": [
+          "records_music"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Public Parking",
+        "count": 3,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "GWARbar",
+        "count": 2,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Sub Rosa Bakery",
+        "count": 2,
+        "categories": [
+          "food"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Marco's Pizza",
+        "count": 2,
+        "categories": [
+          "food"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "USPS Collection Box",
+        "count": 1,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "WPA Bakery",
+        "count": 1,
+        "categories": [
+          "food"
+        ],
+        "provenance": "guide"
+      }
+    ],
+    "salt-lake-city-ut": [
+      {
+        "name": "Summum",
+        "count": 10,
+        "categories": [
+          "horror_occult"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Bambara Salt Lake City",
+        "count": 5,
+        "categories": [
+          "outdoors"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Lilly E. Gray: Victim of the Beast",
+        "count": 4,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Alpha Coffee Cafe - Salt Lake City",
+        "count": 4,
+        "categories": [
+          "food",
+          "coffee",
+          "outdoors"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Caputo's Market & Deli",
+        "count": 4,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Temple Square",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Memory Grove Park",
+        "count": 3,
+        "categories": [
+          "outdoors"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Under the Umbrella Bookstore and Cafe",
+        "count": 2,
+        "categories": [
+          "books",
+          "food",
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Beauty Lab + Laser",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Name Droppers Resale Clothing",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Out of the Blue",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      }
+    ],
+    "shreveport-la": [
+      {
+        "name": "Orlandeaux's Café",
+        "count": 5,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Shreveport Municipal Auditorium",
+        "count": 5,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "United States Postal Service",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Rhino Coffee Uptown",
+        "count": 3,
+        "categories": [
+          "coffee"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "Strawn's Eat Shop",
+        "count": 2,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Jacquelyn's Cafe",
+        "count": 2,
+        "categories": [
+          "food",
+          "coffee"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Herby-K's",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Lowder Baking Company",
+        "count": 2,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Best Buy",
+        "count": 2,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Planet Fitness",
+        "count": 2,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Shawn’s Triple J",
+        "count": 1,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Enchanted Garden",
+        "count": 1,
+        "categories": [
+          "outdoors"
+        ],
+        "provenance": "own-list"
+      }
+    ],
+    "washington-dc": [
+      {
+        "name": "Fish Shop Restaurant",
+        "count": 7,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "The White House",
+        "count": 6,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Martin Luther King",
+        "count": 6,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Frederick Douglass National Historic Site",
+        "count": 5,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "guide"
+      },
+      {
+        "name": "YELLOW Georgetown",
+        "count": 5,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Busboys and Poets",
+        "count": 4,
+        "categories": [],
+        "provenance": "guide"
+      },
+      {
+        "name": "Library of Congress",
+        "count": 4,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Thomas Jefferson Memorial",
+        "count": 4,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Lucky Danger",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Washington Monument",
+        "count": 3,
+        "categories": [
+          "museums_history"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Eatopia Eatery",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Bridge Street Books",
+        "count": 3,
+        "categories": [
+          "books"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Thip Khao Restaurant",
+        "count": 3,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      }
+    ]
+  }
+}

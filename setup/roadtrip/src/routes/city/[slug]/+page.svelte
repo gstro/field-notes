@@ -6,7 +6,9 @@
 	import FieldNotes from '$lib/components/FieldNotes.svelte';
 	import PopCulture from '$lib/components/PopCulture.svelte';
 	import Adherence from '$lib/components/Adherence.svelte';
+	import VisitedPlaces from '$lib/components/VisitedPlaces.svelte';
 	import cityIndex from '$lib/data/cityIndex.json';
+	import visited from '$lib/data/visited.json';
 
 	let { data } = $props();
 	const c = $derived(data.city);
@@ -15,6 +17,8 @@
 	// today — no NOLA city file exists — but revisit here if one lands, since
 	// NOLA was an interlude with its own saved list and no sourced guide.
 	const isRetro = $derived(c.tripId === 'west');
+	type Place = { name: string; count: number; categories: string[]; provenance: string };
+	const visitedHere = $derived((visited.cities as Record<string, Place[]>)[c.id] ?? []);
 
 	// Prev/next from the index order; only link built cities (data.builtIds from load)
 	const order = cityIndex.map((x) => x.id);
@@ -91,6 +95,13 @@
 		<p class="panel-label">The Full List — Sourced &amp; Cited</p>
 		<RecommendationList recommendations={c.recommendations} />
 	</section>
+
+	{#if visitedHere.length}
+		<section class="single">
+			<p class="panel-label">Where the Days Actually Went</p>
+			<VisitedPlaces places={visitedHere} />
+		</section>
+	{/if}
 
 	<section class="row">
 		<div>

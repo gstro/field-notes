@@ -73,7 +73,7 @@ Two corrections made while re-entering the data:
 ## Deferred
 
 - **The other 22 dropped DC venues** — listed in [`m36-purge-invented-data.md`](m36-purge-invented-data.md).
-- **Rendering the saved-list overlap** — blocked on the circularity caveat, not on review.
+- **Rendering the saved-list overlap** — still blocked on the circularity caveat, not on review. [M5b](m5b-visited-places.md) renders visit *provenance* with that caveat disclosed inline, which is a different claim from list agreement.
 - ~~**The `population.note` editorial pass**~~ — **done in [M5a](m5a-data-page.md)**: the mechanisms now annotate the fragmentation comparison on `/data`, extracted into `fragmentation-notes.json` beside their verbatim sources. The split turned out to be 6 mechanisms / 4 trends / 4 provenance-only, not a flat "10 substantive".
 - **The colophon wishlist** — the user's to write.
 - **M4 leg ledger** — needs the M0 routing pull; with location tracking off there are no GPS traces, and great-circle distance is not driving miles.

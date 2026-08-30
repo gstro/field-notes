@@ -31,6 +31,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D23](#d23-populationnote-stored-not-rendered) | `population.note` stored, not rendered | Final (M3.7, Aug 2026) |
 | [D24](#d24-additive-overrides-reviewed-restorations-survive-regeneration) | Additive overrides — reviewed restorations survive regeneration | Final (M3.7, Aug 2026) |
 | [D25](#d25-hand-rolled-charts-no-charting-dependency) | Hand-rolled charts; no charting dependency | Final (M5a, Aug 2026; supersedes M5's LayerChart line) |
+| [D26](#d26-visited-places-are-their-own-surface-never-recommendations) | Visited places are their own surface, never recommendations | Final (M5b, Aug 2026) |
 
 ## Decisions
 
@@ -174,6 +175,18 @@ The data page's three charts are hand-rolled Svelte components, not LayerChart. 
 The site has **zero runtime dependencies**. Three charts do not justify the first one against D7 ("free tier forever, portable, nothing to maintain") and R13's rejection of anything that breaks portability. Reassess only if a chart genuinely needs scales, axes and layout that hand-rolling can't carry — a projected map or a dense time series would be fair grounds; bars and slopes are not.
 
 **Corollary — colour is validated, not eyeballed.** Categorical pairs are checked with a CVD/contrast validator before shipping. That check found `--gold` against `--burnt-light` separating by only ΔE 12.5 in normal vision (6.9 deuteranopia) — below the legibility floor, and in use for the trip-1/trip-2 route lines on the landing map. `--burnt` clears it at 18.4 / 15.3 and is now the trip-2 colour everywhere. Both are D14 colours; the palette is unchanged, only which orange carries trip 2. D11's status colour law is untouched, and status hues (green, blue) stay reserved for status.
+
+### D26 — Visited places are their own surface, never recommendations
+
+`topPlaces` — the most-navigated places per city — renders as its own data surface (`visited.json`) and its own module, **not** as entries in `City.recommendations`.
+
+**The reason is metric integrity, not taxonomy.** The hit-rate floor means *"of the guide's N picks, how many are confirmed."* Folding in places no guide ever named corrupts that denominator — the same class of error as the `0 / N` defect (D21/M3.5) and the unweighted-mean near-miss (M3.7). Rec counts and every city's `≥N of M` must be unaffected by anything in this surface. (Secondarily, these places genuinely don't fit the 10 categories — a gas station is not one of them.)
+
+**Provenance is three-way**, matched through the existing tuned matcher with the guide checked first: `guide` · `own-list` · `found`. Across the corpus: 42 / 85 / 23. Published guides account for the smallest share of actual navigation, which sharpens D22.
+
+**Both bounds are disclosed wherever the split renders**, not only on the colophon: the export has no per-item save timestamps and the lists were edited mid-trip, so **`own-list` is an upper bound and `found` a floor**. This is the same circularity that keeps the saved-list *overlap* unrendered; it is disclosed rather than deferred here because the claim is about provenance of visits rather than agreement between lists, and the bound makes the discovery figure conservative.
+
+Colour follows D11 unchanged — `--blue` (the off-guide hue) finally carries something — with a text label on every entry so identity is never colour-alone.
 
 ## Open questions (undecided)
 

@@ -1,6 +1,6 @@
 {
   "generated": "2026-07-19",
-  "note": "PUBLIC VERSION \u2014 corridor-relevant lists only; person-named lists, the 'Favorite places' lodging ledger, 'Offices', bare street addresses, one health-related place note (Victory Medical, Austin), and both gluten-free lists (Austin GF, Philly GF) removed. Titles and Maps URLs of public businesses/venues retained.",
+  "note": "PUBLIC VERSION \u2014 corridor-relevant lists only; person-named lists, the 'Favorite places' lodging ledger, 'Offices', bare street addresses, one health-related place note (Victory Medical, Austin), and both gluten-free lists (Austin GF, Philly GF) removed. Titles and Maps URLs of public businesses/venues retained. Corrected 2026-08-30: one residence entry (with its Maps URL) survived the original pass and has been removed; it is deliberately not named here. The removal applies going forward only -- it remains in this repository's git history from the commit that first added this file.",
   "lists": {
     "2025 Boise": [
       {
@@ -5083,11 +5083,6 @@
       }
     ],
     "2025 Exodus": [
-      {
-        "title": "4th West Apartments",
-        "note": "",
-        "url": "https://www.google.com/maps/place/4th+West+Apartments/data=!4m2!3m1!1s0x8752f5ab60658221:0x590e587e72a027f8"
-      },
       {
         "title": "Beach At Bridger Bay",
         "note": "",

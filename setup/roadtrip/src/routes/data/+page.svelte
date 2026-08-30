@@ -5,6 +5,7 @@
 	import cityIndex from '$lib/data/cityIndex.json';
 	import adherence from '$lib/data/adherence.json';
 	import fragNotes from '$lib/data/fragmentation-notes.json';
+	import visited from '$lib/data/visited.json';
 
 	const cityModules = import.meta.glob('$lib/data/cities/*.json', { eager: true });
 	type City = { id: string; name: string; state: string; population: { cityProper: number | null; metro: number | null } };
@@ -47,6 +48,8 @@
 	// misreport the site's central finding.
 	const cmp = adherence.comparison as Record<string, { visitsThatWereOnListPct: number; savedListPlaces: number; interestMix?: Record<string, number> }>;
 	const mix = { trip1: cmp.trip1?.interestMix ?? {}, trip2: cmp.trip2?.interestMix ?? {} };
+
+	const provTotal = Object.values(visited.totals as Record<string, number>).reduce((a, b) => a + b, 0);
 </script>
 
 <svelte:head><title>The Data — The Long Way Home</title></svelte:head>
@@ -73,6 +76,25 @@
 			inverted was the <i>content</i>. Counts are direction requests tagged by interest.
 		</p>
 		{#if mix.trip1 && mix.trip2}<CurationSlope {mix} />{/if}
+
+		<div class="prov">
+			<p class="p-head">The same argument from the other end — where the days actually went</p>
+			<div class="p-row">
+				{#each [['guide', 'On the sourced guide'], ['own-list', 'On the self-made list'], ['found', 'Found on the ground']] as [k, label]}
+					<div class="p-cell">
+						<span class="p-n">{visited.totals[k as keyof typeof visited.totals] ?? 0}</span>
+						<span class="p-l">{label}</span>
+					</div>
+				{/each}
+			</div>
+			<p class="p-note">
+				Of the {provTotal} places navigated to most across the {Object.keys(visited.cities).length} cities.
+				Published guides account for the smallest share. “On the self-made list” is an upper
+				bound and “found on the ground” a floor — saves cannot be dated, so a place saved
+				while standing in it counts as listed.
+			</p>
+		</div>
+
 		<p class="caveat">
 			Interest tags are keyword-matched on destination names — a rough instrument, and
 			places with uninformative names tag as nothing. Source: Google Takeout Maps activity.
@@ -131,6 +153,13 @@
 	h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
 	.framing { line-height: 1.7; opacity: 0.9; margin-bottom: 1.8rem; }
 	.caveat { font-family: var(--font-mono); font-size: 10px; line-height: 1.7; letter-spacing: 0.04em; color: var(--muted); margin-top: 1.6rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
+	.prov { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--border); }
+	.p-head { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+	.p-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.4rem; }
+	.p-cell { display: flex; flex-direction: column; }
+	.p-n { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; color: var(--gold); line-height: 1; }
+	.p-l { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin-top: 7px; }
+	.p-note { font-size: 12.5px; line-height: 1.7; color: var(--muted); margin-top: 1.2rem; }
 	.absent p { line-height: 1.7; opacity: 0.82; }
 	b { color: var(--cream); font-weight: 500; }
 	i { opacity: 0.85; }

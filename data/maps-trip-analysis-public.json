@@ -7,7 +7,7 @@
     "2026-07-18"
   ],
   "entriesInWindow": 26779,
-  "privacyNote": "PUBLIC VERSION \u2014 sanitized 2026-07-19: residences, lodging addresses, and bare street addresses removed from topPlaces and prose. Named public businesses, venues, and hotels retained.",
+  "privacyNote": "PUBLIC VERSION \u2014 sanitized 2026-07-19: residences, lodging addresses, and bare street addresses removed from topPlaces and prose. Named public businesses, venues, and hotels retained. Corrected 2026-08-30: one residence entry survived the original pass and has been removed from topPlaces; it is deliberately not named here. The removal applies going forward only -- it remains in this repository's git history from the commit that first added this file.",
   "thesis": {
     "framing": "self-curation vs sourced curation",
     "statement": "Trip 1 was not unguided: every Trip 1 city had a 32\u201342 place self-made Google Maps list. The experiment is therefore not instinct vs curation but self-curation (own judgment, no external sources) vs sourced curation (10-category guides built from Atlas Obscura / Eater / Timeout / TasteAtlas). Under that frame the central finding sharpens: the DEGREE of list-following barely moved between methods, but the CONTENT of what was curated and visited inverted.",
@@ -325,11 +325,6 @@
           "categories": [
             "outdoors"
           ]
-        },
-        {
-          "name": "4th West Apartments",
-          "count": 2,
-          "categories": []
         },
         {
           "name": "Under the Umbrella Bookstore and Cafe",

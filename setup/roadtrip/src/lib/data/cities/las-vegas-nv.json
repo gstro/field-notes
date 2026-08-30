@@ -15,7 +15,8 @@
   "elevationFt": 2001,
   "population": {
     "cityProper": 656274,
-    "metro": 2336573
+    "metro": 2336573,
+    "note": "City-proper and metro figures are approximate estimates pending Census reconciliation. Clark County unincorporated areas (much of the actual built-up Las Vegas Valley, including the Strip itself) fall outside city-proper limits, which understates the city's functional footprint relative to its metro population."
   },
   "vibeWord": "",
   "tagline": "",

@@ -15,7 +15,8 @@
   "elevationFt": null,
   "population": {
     "cityProper": 702250,
-    "metro": 6300000
+    "metro": 6300000,
+    "note": "City-proper figure is a 2023-vintage estimate; metro figure rounds the Washington-Arlington-Alexandria MSA. DC's fragmentation metric is structurally different from the Southern corridor's -- the city cannot annex or be annexed, and has no county government at all, since Congress retains ultimate budget authority over the District regardless of city-proper boundaries. Figures are approximate, pending Census reconciliation, consistent with prior JSON files' caveat practice."
   },
   "vibeWord": "",
   "tagline": "",
@@ -1386,6 +1387,343 @@
       "durationMin": 60,
       "rating": null,
       "note": "One of the largest independent music-gear stores on the East Coast since 1958 -- deep pedal, synth and amp-repair inventory for anyone doing hands-on gear hacking. Technically in Wheaton, MD, not DC proper, flagged as a scope exception given the thinness of DC's own electronics-retail options.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bridge Street Books — Georgetown",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "DC independent bookshop community",
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "Free browse",
+      "bestTimeOfDay": "lunch",
+      "durationMin": null,
+      "rating": null,
+      "note": "Bridge Street's tiny Georgetown space is packed with books on politics, cultural studies, poetry, and philosophy — the most politically serious bookstore in the city. Small-press radical theory, critical history, no filler. One block from the Exorcist steps.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ethiopian Doro Wat + Injera @ Etete — 9th St NW",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "washington.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$20–35/person",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "DC has one of the largest Ethiopian communities in the country, making Ethiopian cuisine a defining part of local food identity. Etete is consistently cited as one of the best. Get the combination platter — doro wat (spiced chicken stew), tibs (lamb), shiro — and eat communally from the same plate.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dischord Records House + Inner Ear Studios — Arlington, VA",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "dischord.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "wikipedia DC Hardcore",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "any",
+      "durationMin": 10,
+      "rating": null,
+      "note": "The physical address of Ian MacKaye's Dischord Records is a house in Arlington. The label's entire catalog — Minor Threat, Fugazi, Embrace, Rites of Spring — was recorded at Don Zientara's Inner Ear Studios nearby (also Arlington). The geographic center of American hardcore ethics. Drive by, walk the block, understand what it means that one of the most influential labels in music history operates out of a suburban house.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "National Museum of African American History & Culture",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "nmaahc.si.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-political"
+      ],
+      "estCost": "Free, timed entry",
+      "bestTimeOfDay": "any",
+      "durationMin": 210,
+      "rating": null,
+      "note": "The most important museum in DC for this specific trip — after the civil rights corridor, the NMAAHC is the capstone. The lower floors (Slavery and Freedom, Era of Segregation) are devastating and essential. The Contemplative Court at the center is architecturally extraordinary. Pre-timed entry tickets required; free but book weeks in advance.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Library of Congress",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "loc.gov",
+            "url": null
+          }
+        ]
+      },
+      "status": "attended",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "morning",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Library of Congress (101 Independence Ave SE, Capitol Hill) — the world's largest library and one of the most beautiful interior spaces in America. The Thomas Jefferson Building's Main Reading Room is a cathedral of knowledge. The Great Hall has mosaics and carved stone that took 10 years to complete. Walk-in for tours; request a Reader Card to access the actual stacks and reading rooms. Free. Genuinely one of the best things in Washington.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Smithsonian American Art Museum + National Portrait Gallery",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "americanart.si.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "evening",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Smithsonian American Art Museum + National Portrait Gallery (8th & F St NW, Penn Quarter) — two major museums sharing a stunning neoclassical building. Free admission. The American Art Museum has a world-class folk art and outsider art collection (relevant to your interests), plus a strong photography department. The Portrait Gallery's 'America's Presidents' hall is the most complete collection of presidential portraits in existence. The Kogod Courtyard atrium is architecturally extraordinary.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Folger Shakespeare Library",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "folger.edu",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "washington.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free exhibitions",
+      "bestTimeOfDay": "morning",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Folger Shakespeare Library (201 E Capitol St SE) — the world's largest collection of Shakespeare materials, recently completed a major renovation. 82 First Folios (out of 235 known to exist), rare manuscripts, early modern books. Free exhibitions open to the public. The reading room is one of the most beautiful spaces in DC. For the literary-minded, this is what the Library of Congress is for American democracy — a concentrated archive of cultural memory.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Phillips Collection",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "phillipscollection.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "$16",
+      "bestTimeOfDay": "evening",
+      "durationMin": 90,
+      "rating": null,
+      "note": "The Phillips Collection (1600 21st St NW, Dupont Circle) — America's first museum of modern art, opened 1921 in a Georgian Revival mansion. Renoir's 'Luncheon of the Boating Party' lives here permanently. Strong Rothko room, Klee, Bonnard, Hopper. Small enough to see everything in 90 minutes; large enough to be genuinely significant. One of the most civilized museum experiences in DC.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mitsitam Native Foods Café",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "si.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "$12–18",
+      "bestTimeOfDay": "noon",
+      "durationMin": null,
+      "rating": null,
+      "note": "Mitsitam Native Foods Café (National Museum of the American Indian, 4th St & Independence Ave SW) — Atlas Obscura's pick for DC's most unusual restaurant. The menu changes seasonally and rotates through indigenous food traditions from across the Western Hemisphere: Great Plains bison, Pacific Northwest salmon, Mesoamerican corn preparations, Caribbean dishes. The café is inside the spectacular NMAI building and open to the public without museum admission. One of the most thoughtful dining concepts in DC.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "International Spy Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "spymuseum.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "$24.95",
+      "bestTimeOfDay": "evening",
+      "durationMin": 120,
+      "rating": null,
+      "note": "International Spy Museum (700 L'Enfant Plaza SW) — this is not a tourist trap. The collection of actual Cold War espionage equipment, decoded Enigma machines, and KGB artifacts is genuinely remarkable. The interactive elements are designed for adults. The 'Operation Spy' experience ($14 extra) is an immersive scenario. For anyone who has seen The Americans or read John le Carré, this museum has real weight.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Madam's Organ",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "washington.org",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "tripadvisor",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "$5 cover",
+      "bestTimeOfDay": "night",
+      "durationMin": null,
+      "rating": null,
+      "note": "Madam's Organ (2461 18th St NW, Adams Morgan) — blues and R&B bar in Adams Morgan since 1994. Live music nightly, rowdy karaoke later in the week, red walls, neon signs, taxidermy. The neighborhood's anchor and one of the most beloved bars in DC. Thursday nights here are a DC tradition.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "National Mall morning walk",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "nps.gov",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "morning",
+      "durationMin": 120,
+      "rating": null,
+      "note": "National Mall morning walk — do this in the early morning when it's quiet. Start at the Lincoln Memorial (the steps where MLK gave the 'I Have a Dream' speech), walk past the Vietnam Veterans Memorial (Maya Lin's design is among the greatest works of public art in America), continue to the Korean War Veterans Memorial, the FDR Memorial, and the MLK National Memorial. This is not for tourists — this is American history at ground level. 2-mile walk, 2 hours.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Smithsonian National Air and Space Museum",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "si.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "morning",
+      "durationMin": 90,
+      "rating": null,
+      "note": "Smithsonian National Air and Space Museum (600 Independence Ave SW) — free. The Wright Brothers' actual Flyer, Charles Lindbergh's Spirit of St. Louis, John Glenn's Friendship 7 capsule, a moon rock you can touch. If the scale of human ambition means anything to you, this building has it. The most visited museum in the world. Go mid-morning when it opens to avoid peak crowds.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Farewell dinner: Tail Up Goat",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "eater",
+            "label": "eater.com/dc",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "$60–90",
+      "bestTimeOfDay": "evening",
+      "durationMin": null,
+      "rating": null,
+      "note": "Farewell dinner: Tail Up Goat (1827 Adams Mill Rd NW, Adams Morgan) — one of DC's most genuinely original restaurants: James Beard Award-winning, with a menu that defies simple categorization (Caribbean influence, mountain cooking, wood fire, local produce). The bread program is nationally recognized. Book well ahead for Saturday dinner. This is the meal that ends the road trip.",
       "verifiedOpen": null
     }
   ],

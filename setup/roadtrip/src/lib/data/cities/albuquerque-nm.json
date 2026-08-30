@@ -15,7 +15,8 @@
   "elevationFt": 5312,
   "population": {
     "cityProper": 564559,
-    "metro": 918000
+    "metro": 918000,
+    "note": "City-proper figure is the 2020 Census count; metro figure is a rounded 2023-era estimate for the Albuquerque MSA. Both are approximate pending reconciliation against a single census vintage."
   },
   "vibeWord": "",
   "tagline": "",

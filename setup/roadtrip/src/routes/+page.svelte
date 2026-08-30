@@ -87,6 +87,7 @@
 	<div class="teaser-grid">
 		<a class="teaser" href="/data"><p class="t-title">The Data</p><p>Prices as a time capsule, spend by city, the full chart gallery.</p></a>
 		<a class="teaser" href="/superlatives"><p class="t-title">Superlatives</p><p>Best meal. Worst meal. The weirdest thing encountered anywhere.</p></a>
+		<a class="teaser" href="/colophon"><p class="t-title">Colophon</p><p>How this was reconstructed, what the numbers can bear, and what is missing.</p></a>
 	</div>
 </section>
 

@@ -15,7 +15,8 @@
   "elevationFt": 361,
   "population": {
     "cityProper": 153701,
-    "metro": 591978
+    "metro": 591978,
+    "note": "2020 Census baseline. Jackson's population has declined meaningfully since 2020 amid the city's prolonged water-system crisis and out-migration; treat these figures as a starting point pending Census reconciliation, not a current count."
   },
   "vibeWord": "",
   "tagline": "",

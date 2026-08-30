@@ -15,7 +15,8 @@
   "elevationFt": 631,
   "population": {
     "cityProper": 196644,
-    "metro": 1120000
+    "metro": 1120000,
+    "note": "City-proper figure is a 2023-era estimate off a declining post-2020-Census base; metro figure (Birmingham-Hoover MSA) is rounded. Both should be reconciled against a single Census vintage before publication."
   },
   "vibeWord": "",
   "tagline": "",

@@ -79,10 +79,53 @@ try {
 }
 const appliedOverrides = [];
 
+// Entries a reviewer restored by hand (D24). Shaped like guide recs minus the
+// fields the transform owns: `status` comes from the join and `rating` is null,
+// so a restored venue can never smuggle back an asserted outcome.
+const ADDITIVE_REQUIRED = ['id', 'name', 'categoryNum', 'source', 'interestTags', 'estCost', 'bestTimeOfDay', 'durationMin', 'note', 'reason'];
+const ADDITIVE_FORBIDDEN = ['status', 'rating', 'verifiedOpen'];
+
+function transformAdditive(entry, cityId) {
+	const where = `city-overrides.json: ${cityId} additionalRecommendations "${entry.name ?? entry.id ?? '(unnamed)'}"`;
+	for (const f of ADDITIVE_REQUIRED) {
+		if (!(f in entry)) throw new Error(`${where}: missing required field "${f}".`);
+	}
+	for (const f of ADDITIVE_FORBIDDEN) {
+		if (f in entry) {
+			throw new Error(
+				`${where}: must not set "${f}". The transform owns it — status comes from the ` +
+				`takeout join and rating is null, so a restored entry cannot assert an outcome.`
+			);
+		}
+	}
+	const unknown = Object.keys(entry).filter((k) => !ADDITIVE_REQUIRED.includes(k));
+	if (unknown.length) throw new Error(`${where}: unrecognized field(s) ${unknown.join(', ')}.`);
+
+	const visited = Boolean(ATTENDANCE[cityId]?.[entry.id]);
+	return {
+		name: entry.name,
+		categoryNum: entry.categoryNum,
+		source: entry.source,
+		status: visited ? 'attended' : 'unverified',
+		interestTags: entry.interestTags,
+		estCost: stripPlaceholder(entry.estCost),
+		bestTimeOfDay: stripPlaceholder(entry.bestTimeOfDay),
+		durationMin: entry.durationMin,
+		rating: null,
+		note: entry.note,
+		verifiedOpen: null
+	};
+}
+
 function applyOverrides(city) {
 	const patch = OVERRIDES[city.id];
 	if (!patch) return city;
 	for (const [field, spec] of Object.entries(patch)) {
+		if (field === 'additionalRecommendations') {
+			for (const entry of spec) city.recommendations.push(transformAdditive(entry, city.id));
+			appliedOverrides.push(`${city.id}.+${spec.length}recs`);
+			continue;
+		}
 		if (!(field in city)) {
 			throw new Error(
 				`city-overrides.json: "${city.id}.${field}" is not a field in the City schema. ` +
@@ -250,7 +293,10 @@ function transformCity(guide, cityIndexEntry) {
 		elevationFt: guide.elevationFt ?? null,
 		population: {
 			cityProper: guide.population?.cityProper ?? null,
-			metro: guide.population?.metro ?? null
+			metro: guide.population?.metro ?? null,
+			// D23 — carried but not rendered; see types.ts. `fragmentationRatio` is
+			// null in all 14 guides and has no schema home, so it is not carried.
+			note: guide.population?.note ?? null
 		},
 		vibeWord: '',
 		tagline: '',

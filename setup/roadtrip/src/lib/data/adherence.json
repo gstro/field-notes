@@ -1,7 +1,25 @@
 {
   "generated": "2026-07-19",
   "source": "Google Takeout Maps activity; computed pre-sanitization over the full corpus",
-  "note": "Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json perCityAdherence — do not recompute.",
+  "note": "Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json — do not recompute.",
+  "comparison": {
+    "trip1": {
+      "cities": 7,
+      "cityDays": 45,
+      "savedListPlaces": 252,
+      "uniqueDirectionTargets": 253,
+      "listConversionPct": 47.2,
+      "visitsThatWereOnListPct": 47.4
+    },
+    "trip2": {
+      "cities": 7,
+      "cityDays": 56,
+      "savedListPlaces": 389,
+      "uniqueDirectionTargets": 297,
+      "listConversionPct": 40.4,
+      "visitsThatWereOnListPct": 52.5
+    }
+  },
   "cities": {
     "albuquerque-nm": {
       "trip": "trip1",

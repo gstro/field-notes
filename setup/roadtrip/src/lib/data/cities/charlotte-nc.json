@@ -15,7 +15,8 @@
   "elevationFt": 751,
   "population": {
     "cityProper": 897720,
-    "metro": 2805115
+    "metro": 2805115,
+    "note": "City-proper figure is the 2023 Census estimate; Charlotte has been one of the fastest-growing large US cities so the true 2026 figure is almost certainly higher. Metro figure is the Charlotte-Concord-Gastonia, NC-SC MSA 2023 estimate. Both pending Census reconciliation."
   },
   "vibeWord": "",
   "tagline": "",

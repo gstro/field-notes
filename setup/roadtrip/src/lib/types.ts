@@ -40,7 +40,14 @@ export interface City {
 	stay: { arrive: string; depart: string; nights: number };
 	coords: { lat: number; lng: number };
 	elevationFt: number | null;
-	population: { cityProper: number | null; metro: number | null };
+	// D23: `note` carries the guide's caveat on how these figures were derived and,
+	// for ~10 of 14 cities, the city-specific mechanism behind the fragmentation
+	// gap (OKC annexed aggressively; Atlanta fragmented via the cityhood movement;
+	// DC cannot annex at all). Stored, deliberately NOT rendered — the notes are
+	// authoring notes that mix real D8 content with self-reference ("consistent
+	// with the caveat practice established in the … JSON files"). Rendering needs
+	// an editorial pass. See design/m37-colophon.md.
+	population: { cityProper: number | null; metro: number | null; note: string | null };
 	vibeWord: string;
 	tagline: string;
 	wouldILiveHere: { verdict: string | null; note: string };

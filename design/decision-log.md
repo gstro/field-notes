@@ -30,6 +30,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D22](#d22-self-curation-vs-sourced-curation-supersedes-the-instinct-framing) | Self-curation vs sourced curation supersedes the instinct framing | Final (M3.5, Aug 2026; resolves O6) |
 | [D23](#d23-populationnote-stored-not-rendered) | `population.note` stored, not rendered | Final (M3.7, Aug 2026) |
 | [D24](#d24-additive-overrides-reviewed-restorations-survive-regeneration) | Additive overrides — reviewed restorations survive regeneration | Final (M3.7, Aug 2026) |
+| [D25](#d25-hand-rolled-charts-no-charting-dependency) | Hand-rolled charts; no charting dependency | Final (M5a, Aug 2026; supersedes M5's LayerChart line) |
 
 ## Decisions
 
@@ -165,6 +166,14 @@ Rules that keep it from becoming a back door:
 - Each entry carries a `reason` recording where it came from.
 
 Corollary: DC again has two provenances (55 guide-derived + 14 restored), a milder form of the split M3.6 ended. Deliberate, and recorded per entry.
+
+### D25 — Hand-rolled charts; no charting dependency
+
+The data page's three charts are hand-rolled Svelte components, not LayerChart. **This supersedes the "LayerChart installs here" line in M5's plan**, which predates the four hand-rolled viz components (`ConstellationMap`, `Fingerprint`, `Waffle`, `FragmentationBar` — 32–65 lines each) that now set the precedent.
+
+The site has **zero runtime dependencies**. Three charts do not justify the first one against D7 ("free tier forever, portable, nothing to maintain") and R13's rejection of anything that breaks portability. Reassess only if a chart genuinely needs scales, axes and layout that hand-rolling can't carry — a projected map or a dense time series would be fair grounds; bars and slopes are not.
+
+**Corollary — colour is validated, not eyeballed.** Categorical pairs are checked with a CVD/contrast validator before shipping. That check found `--gold` against `--burnt-light` separating by only ΔE 12.5 in normal vision (6.9 deuteranopia) — below the legibility floor, and in use for the trip-1/trip-2 route lines on the landing map. `--burnt` clears it at 18.4 / 15.3 and is now the trip-2 colour everywhere. Both are D14 colours; the palette is unchanged, only which orange carries trip 2. D11's status colour law is untouched, and status hues (green, blue) stay reserved for status.
 
 ## Open questions (undecided)
 

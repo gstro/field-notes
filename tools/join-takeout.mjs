@@ -28,6 +28,7 @@ const MAPS_PATH = join(ROOT, 'data/maps-trip-analysis-public.json');
 const SAVED_PATH = join(ROOT, 'data/saved-lists-corridor-public.json');
 const MATCHES_PATH = join(ROOT, 'data/attendance-matches.json');
 const ADHERENCE_PATH = join(ROOT, 'setup/roadtrip/src/lib/data/adherence.json');
+const VISITED_PATH = join(ROOT, 'setup/roadtrip/src/lib/data/visited.json');
 const REPORT_PATH = join(ROOT, 'tools/.takeout-join-report.md');
 
 const DRY_RUN = process.argv.includes('--dry-run');
@@ -279,7 +280,10 @@ function main() {
 	const topByCity = Object.fromEntries(
 		maps.cities.map((c) => [c.name, (c.topPlaces ?? []).map((p) => p.name)])
 	);
+	// Full records (name + count + categories), for the visited-places module.
+	const topPlacesFull = Object.fromEntries(maps.cities.map((c) => [c.name, c.topPlaces ?? []]));
 
+	const visited = {};         // cityId -> [{ name, count, categories, provenance }]
 	const attendance = {};      // citySlug -> { recId: {kind, score, matched, via} }
 	const visitRows = [];
 	const savedRows = [];
@@ -343,6 +347,32 @@ function main() {
 		}
 
 		if (Object.keys(hits).length) attendance[slug] = hits;
+
+		// Provenance of what was actually navigated to (D26). Guide first, then the
+		// self-made list, then neither. Same matcher, same idf, opposite direction:
+		// here each VISITED place is matched against the two lists, rather than each
+		// recommendation being matched against the visits.
+		//
+		// The 'own-list' bucket is an UPPER bound and 'found' a floor: per
+		// methodNotes the export carries no per-item save timestamps and the lists
+		// were edited mid-trip, so a place saved while standing in it cannot be
+		// separated from one saved before leaving.
+		// matchOne only splits dish/product prefixes on its FIRST argument, and this
+		// call runs in the opposite direction from the attendance join — a visited
+		// place is matched against the rec list, not the reverse. So expand the recs
+		// into their venue segments up front, or "Bar Gernika" fails to match the
+		// guide's "Beef Tongue & Croquetas -- Bar Gernika" and lands in the wrong
+		// bucket. (Caught by hand-checking Boise against its guide and saved list.)
+		const recNames = guide.recommendations.flatMap((r) => candidateStrings(r.name));
+		visited[SLUG_TO_CITY_ID[slug]] = topPlacesFull[SLUG_TO_MAPS_NAME[slug]].map((p) => ({
+			name: p.name,
+			count: p.count,
+			categories: p.categories ?? [],
+			provenance: matchOne(p.name, recNames, idf) ? 'guide'
+				: matchOne(p.name, savedPlaces, idf) ? 'own-list'
+				: 'found'
+		}));
+
 		summary.push({
 			slug, recs: guide.recommendations.length,
 			topPlaces: topPlaces.length, visitRecs: Object.keys(hits).length, visitVenues: visitVenues.size,
@@ -408,6 +438,16 @@ function main() {
 		cities: adherence
 	}, null, 2) + '\n');
 	console.log(`wrote ${ADHERENCE_PATH} (${Object.keys(adherence).length} cities)`);
+
+	const provTotals = Object.values(visited).flat().reduce((a, p) => ({ ...a, [p.provenance]: (a[p.provenance] ?? 0) + 1 }), {});
+	writeFileSync(VISITED_PATH, JSON.stringify({
+		generated: maps.generated,
+		source: 'data/maps-trip-analysis-public.json topPlaces — the most-navigated places per city',
+		caveat: 'Provenance is matched, not recorded. "own-list" is an UPPER bound and "found" a FLOOR: the export has no per-item save timestamps and the lists were edited during the trips, so a place saved on the ground cannot be separated from one saved before leaving. topPlaces is also truncated to roughly the top 8-14 per city, so this is what was navigated to MOST, not everything.',
+		totals: provTotals,
+		cities: visited
+	}, null, 2) + '\n');
+	console.log(`wrote ${VISITED_PATH} — provenance ${JSON.stringify(provTotals)}`);
 
 	const report = [
 		`# Takeout join report`, '',

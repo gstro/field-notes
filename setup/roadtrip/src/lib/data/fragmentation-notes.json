@@ -1,0 +1,80 @@
+{
+  "note": "Reader-facing annotations for the fragmentation comparison (D8), extracted from each guide's population.note (carried on City.population.note per D23). EXTRACTION RULE: keep the factual municipal-history or population-trend clause; drop census-vintage provenance and every reference to the guide's own authoring decisions ('fragmentationRatio left null...', 'consistent with the caveat practice established in the ... JSON files', 'flagged as a possible Field Notes follow-up'). No fact is added, sharpened, or reworded beyond compression. `sourceNote` is the original verbatim so the trimming stays auditable — see design/m5a-data-page.md.",
+  "kinds": {
+    "mechanism": "A structural reason the city-proper/metro ratio is what it is.",
+    "trend": "A population trajectory that qualifies how the ratio should be read.",
+    "none": "The guide's note is census-vintage provenance only — no annotation is rendered rather than padding one."
+  },
+  "cities": {
+    "atlanta-ga": {
+      "kind": "mechanism",
+      "mechanism": "A nationally cited case study in municipal fragmentation: Sandy Springs, Brookhaven, Dunwoody, Milton and others incorporated out of unincorporated Fulton and DeKalb counties from 2005, largely to control local tax base and schools.",
+      "sourceNote": "City-proper figure is a recent-estimate midpoint (2020 census: 498,715); metro figure is the Atlanta-Sandy Springs-Alpharetta MSA, both pending Census reconciliation. fragmentationRatio left null: Atlanta metro is a nationally cited case study in municipal fragmentation via the 'cityhood movement' (Sandy Springs, Brookhaven, Dunwoody, Milton and others incorporating out of unincorporated Fulton/DeKalb County since 2005, largely to control local tax base and schools) but no single ratio has been computed for this guide -- flagged as a possible Field Notes follow-up rather than a number invented for this file."
+    },
+    "oklahoma-city-ok": {
+      "kind": "mechanism",
+      "mechanism": "The metric inverts here: OKC annexed aggressively rather than fragmenting, producing a city-proper land area of roughly 620 square miles — one of the largest municipal footprints in the country — and the same outcome by the opposite route.",
+      "sourceNote": "OKC city-proper land area is roughly 620 sq mi — one of the largest municipal footprints in the country. The fragmentation metric inverts here relative to the Southern corridor: OKC annexed aggressively rather than fragmenting, which produced a different mechanism for the same outcome. Figures are approximate estimates pending Census reconciliation."
+    },
+    "washington-dc": {
+      "kind": "mechanism",
+      "mechanism": "Structurally unlike the rest: the District cannot annex or be annexed and has no county government at all, and Congress retains ultimate budget authority regardless of city-proper boundaries.",
+      "sourceNote": "City-proper figure is a 2023-vintage estimate; metro figure rounds the Washington-Arlington-Alexandria MSA. DC's fragmentation metric is structurally different from the Southern corridor's -- the city cannot annex or be annexed, and has no county government at all, since Congress retains ultimate budget authority over the District regardless of city-proper boundaries. Figures are approximate, pending Census reconciliation, consistent with prior JSON files' caveat practice."
+    },
+    "dallas-tx": {
+      "kind": "mechanism",
+      "mechanism": "A genuinely polycentric metro — Fort Worth, Arlington and Plano are independent city governments rather than annexed Dallas territory, a different fragmentation mechanism from Oklahoma City's aggressive annexation.",
+      "sourceNote": "City-proper and DFW-metro figures are approximate mid-2020s estimates pending Census reconciliation; DFW is a genuinely polycentric metro (Fort Worth, Arlington, Plano, etc. are independent city governments, not annexed Dallas territory), which is a different fragmentation mechanism than OKC's aggressive-annexation pattern noted in that city's file. No fragmentation ratio has been computed here — left null rather than guessed."
+    },
+    "las-vegas-nv": {
+      "kind": "mechanism",
+      "mechanism": "Unincorporated Clark County holds much of the built-up Las Vegas Valley — including the Strip itself — outside city-proper limits, which understates the city's functional footprint against its metro.",
+      "sourceNote": "City-proper and metro figures are approximate estimates pending Census reconciliation. Clark County unincorporated areas (much of the actual built-up Las Vegas Valley, including the Strip itself) fall outside city-proper limits, which understates the city's functional footprint relative to its metro population."
+    },
+    "richmond-va": {
+      "kind": "mechanism",
+      "mechanism": "Virginia's independent-city structure makes Richmond's own boundary unusually stable compared with the annexation and fragmentation patterns elsewhere on the corridor.",
+      "sourceNote": "City-proper and metro figures are estimates (Richmond city + Chesterfield/Henrico/Hanover-anchored metro) pending Census reconciliation; Virginia's independent-city structure makes Richmond's own boundary unusually stable compared to Southern-corridor annexation/fragmentation cities, so fragmentationRatio is left null rather than forced."
+    },
+    "jackson-ms": {
+      "kind": "trend",
+      "mechanism": "Jackson's population has declined meaningfully since 2020 amid the city's prolonged water-system crisis and out-migration; the figure is a starting point, not a current count.",
+      "sourceNote": "2020 Census baseline. Jackson's population has declined meaningfully since 2020 amid the city's prolonged water-system crisis and out-migration; treat these figures as a starting point pending Census reconciliation, not a current count."
+    },
+    "charlotte-nc": {
+      "kind": "trend",
+      "mechanism": "One of the fastest-growing large US cities, so the true current city-proper figure is almost certainly higher than the estimate shown.",
+      "sourceNote": "City-proper figure is the 2023 Census estimate; Charlotte has been one of the fastest-growing large US cities so the true 2026 figure is almost certainly higher. Metro figure is the Charlotte-Concord-Gastonia, NC-SC MSA 2023 estimate. Both pending Census reconciliation."
+    },
+    "birmingham-al": {
+      "kind": "trend",
+      "mechanism": "The city-proper figure sits on a declining post-2020 base.",
+      "sourceNote": "City-proper figure is a 2023-era estimate off a declining post-2020-Census base; metro figure (Birmingham-Hoover MSA) is rounded. Both should be reconciled against a single Census vintage before publication."
+    },
+    "shreveport-la": {
+      "kind": "trend",
+      "mechanism": "Shreveport-proper has declined from a 2010 peak of roughly 199,000.",
+      "sourceNote": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files. Shreveport-proper has declined from a 2010 peak (~199,000); the metro figure is the Shreveport-Bossier City MSA."
+    },
+    "albuquerque-nm": {
+      "kind": "none",
+      "mechanism": null,
+      "sourceNote": "City-proper figure is the 2020 Census count; metro figure is a rounded 2023-era estimate for the Albuquerque MSA. Both are approximate pending reconciliation against a single census vintage."
+    },
+    "boise-id": {
+      "kind": "none",
+      "mechanism": null,
+      "sourceNote": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files."
+    },
+    "phoenix-az": {
+      "kind": "none",
+      "mechanism": null,
+      "sourceNote": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files."
+    },
+    "salt-lake-city-ut": {
+      "kind": "none",
+      "mechanism": null,
+      "sourceNote": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files."
+    }
+  }
+}

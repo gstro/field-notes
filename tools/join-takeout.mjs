@@ -395,7 +395,10 @@ function main() {
 	const pick = (o) => o && {
 		cities: o.cities, cityDays: o.cityDays, savedListPlaces: o.savedListPlaces,
 		uniqueDirectionTargets: o.uniqueDirectionTargets, listConversionPct: o.listConversionPct,
-		visitsThatWereOnListPct: o.visitsThatWereOnListPct
+		visitsThatWereOnListPct: o.visitsThatWereOnListPct,
+		// The interest mix is the D22 content inversion — the site's central
+		// finding. Carried verbatim so the chart never re-derives it.
+		interestMix: o.interestMix
 	};
 	writeFileSync(ADHERENCE_PATH, JSON.stringify({
 		generated: maps.generated,

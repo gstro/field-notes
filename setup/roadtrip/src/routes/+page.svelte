@@ -85,7 +85,7 @@
 <section class="teasers">
 	<p class="section-label">Deep Dives</p>
 	<div class="teaser-grid">
-		<a class="teaser" href="/data"><p class="t-title">The Data</p><p>Prices as a time capsule, spend by city, the full chart gallery.</p></a>
+		<a class="teaser" href="/data"><p class="t-title">The Data</p><p>What curation changed, how closely each list was followed, and the fragmentation gap.</p></a>
 		<a class="teaser" href="/superlatives"><p class="t-title">Superlatives</p><p>Best meal. Worst meal. The weirdest thing encountered anywhere.</p></a>
 		<a class="teaser" href="/colophon"><p class="t-title">Colophon</p><p>How this was reconstructed, what the numbers can bear, and what is missing.</p></a>
 	</div>
@@ -106,7 +106,11 @@
 	.map-legend span { display: inline-flex; align-items: center; gap: 6px; }
 	.swatch { width: 18px; height: 2px; display: inline-block; }
 	.sw-gold { background: var(--gold); }
-	.sw-burnt { background: var(--burnt-light); }
+	/* --burnt, not --burnt-light: against --gold the lighter orange separates by
+	   only ΔE 12.5 in normal vision (6.9 deutan), which is below the legibility
+	   floor for two marks that must be told apart. --burnt clears it at 18.4 /
+	   15.3. Same swap on the route lines in ConstellationMap. */
+	.sw-burnt { background: var(--burnt); }
 	.sw-dash { background: repeating-linear-gradient(90deg, var(--gold) 0 4px, transparent 4px 8px); opacity: 0.6; }
 	:global(.stats) { max-width: 1100px; margin: 0 auto; }
 	.chapters, .teasers { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 0; }

@@ -9,7 +9,16 @@
       "savedListPlaces": 252,
       "uniqueDirectionTargets": 253,
       "listConversionPct": 47.2,
-      "visitsThatWereOnListPct": 47.4
+      "visitsThatWereOnListPct": 47.4,
+      "interestMix": {
+        "film": 7,
+        "museums_history": 15,
+        "food": 51,
+        "outdoors": 14,
+        "books": 11,
+        "coffee": 50,
+        "horror_occult": 10
+      }
     },
     "trip2": {
       "cities": 7,
@@ -17,7 +26,16 @@
       "savedListPlaces": 389,
       "uniqueDirectionTargets": 297,
       "listConversionPct": 40.4,
-      "visitsThatWereOnListPct": 52.5
+      "visitsThatWereOnListPct": 52.5,
+      "interestMix": {
+        "food": 69,
+        "records_music": 24,
+        "museums_history": 44,
+        "books": 76,
+        "coffee": 31,
+        "horror_occult": 6,
+        "outdoors": 17
+      }
     }
   },
   "cities": {

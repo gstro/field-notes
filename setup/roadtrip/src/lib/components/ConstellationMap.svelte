@@ -36,7 +36,11 @@
 	svg { width: 100%; height: auto; display: block; }
 	.route { fill: none; stroke-width: 1.5; stroke-dasharray: 2200; stroke-dashoffset: 2200; animation: draw 3s ease-out forwards; }
 	.west { stroke: var(--gold); animation-delay: 0.4s; }
-	.south { stroke: var(--burnt-light); animation-delay: 2s; }
+	/* --burnt, not --burnt-light: the west and south routes cross the same space,
+	   so they are the pair that most needs to be distinguishable. Against --gold,
+	   --burnt-light separates by only ΔE 12.5 (normal vision) / 6.9 (deutan);
+	   --burnt clears both at 18.4 / 15.3. */
+	.south { stroke: var(--burnt); animation-delay: 2s; }
 	.nola { stroke: var(--gold); stroke-dasharray: 5 5; stroke-dashoffset: 0; opacity: 0; animation: fade 1s ease-out 3.2s forwards; }
 	@keyframes draw { to { stroke-dashoffset: 0; } }
 	@keyframes fade { to { opacity: 0.55; } }
@@ -45,7 +49,7 @@
 		.nola { opacity: 0.55; }
 	}
 	.dot { fill: var(--dark3); stroke: var(--gold); stroke-width: 1.5; }
-	.dot.anchor { fill: rgba(200,90,0,0.25); stroke: var(--burnt-light); stroke-width: 2; }
+	.dot.anchor { fill: rgba(200,90,0,0.25); stroke: var(--burnt); stroke-width: 2; }
 	.dot.home { fill: rgba(212,168,67,0.3); stroke: var(--gold); stroke-width: 2.5; }
 	.label { font-family: var(--font-mono); font-size: 10px; fill: var(--muted); letter-spacing: 0.05em; }
 	.label.major { fill: var(--cream); font-size: 11px; }

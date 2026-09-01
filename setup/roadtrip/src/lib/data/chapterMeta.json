@@ -1,0 +1,29 @@
+{
+  "note": "Editorial framing for the three chapters (D1). Shared by the landing page and /chapter/[id] so the blurbs don't drift between them. `mixSource` names where that chapter's interest mix is read from: 'trip1'/'trip2' read comparison.interestMix VERBATIM (D27 — summing per-city counts re-derives an authoritative number and disagrees with it), while 'city' means the chapter is a single city and shows that city's own tag counts.",
+  "chapters": {
+    "west": {
+      "num": "Chapter I",
+      "blurb": "Leaving home the long way: high desert, two mountain systems, and the loneliest stretches of the whole arc.",
+      "curation": "Self-curated. No published guide existed for these cities at the time — every stop came off a list made beforehand, by hand.",
+      "mixSource": "trip1"
+    },
+    "nola": {
+      "num": "Interlude",
+      "blurb": "Eleven days in the one American city that is entirely its own country. A festival, not a stop.",
+      "curation": "Neither method. The interlude sits between the two trips and had no guide at the time — it ran on a saved list alone.",
+      "mixSource": "city"
+    },
+    "south": {
+      "num": "Chapter II",
+      "blurb": "Austin to Philadelphia through the geography of the movement: Jackson, Birmingham, Atlanta, and the road between.",
+      "curation": "Sourced curation. Every city on this leg had a ten-category guide built from Atlas Obscura, Eater, Time Out and TasteAtlas before departure.",
+      "mixSource": "trip2"
+    }
+  },
+  "sideTrip": {
+    "where": "Greensboro, NC — en route Charlotte → Richmond",
+    "note": "The International Civil Rights Center & Museum, at the Woolworth sit-in counter. A civil-rights-corridor stop that appeared in no guide, on the trip that had guides for everything.",
+    "evidence": "8 direction requests",
+    "window": "May 2026"
+  }
+}

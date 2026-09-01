@@ -7,6 +7,90 @@
     "own-list": 85,
     "guide": 42
   },
+  "interestTagCounts": {
+    "boise-id": {
+      "food": 6,
+      "coffee": 9,
+      "film": 6,
+      "books": 2
+    },
+    "salt-lake-city-ut": {
+      "horror_occult": 10,
+      "outdoors": 12,
+      "food": 10,
+      "coffee": 6,
+      "books": 2
+    },
+    "las-vegas-nv": {
+      "food": 4,
+      "coffee": 5
+    },
+    "phoenix-az": {
+      "coffee": 9,
+      "museums_history": 5,
+      "outdoors": 2,
+      "food": 2
+    },
+    "albuquerque-nm": {
+      "food": 12,
+      "coffee": 8
+    },
+    "oklahoma-city-ok": {
+      "coffee": 7,
+      "food": 4,
+      "books": 3,
+      "museums_history": 1
+    },
+    "dallas-tx": {
+      "food": 6,
+      "museums_history": 3,
+      "outdoors": 2
+    },
+    "shreveport-la": {
+      "food": 7,
+      "coffee": 5,
+      "outdoors": 1
+    },
+    "jackson-ms": {
+      "museums_history": 13,
+      "food": 3,
+      "coffee": 5,
+      "books": 4
+    },
+    "birmingham-al": {
+      "records_music": 6,
+      "food": 7,
+      "coffee": 7,
+      "books": 6
+    },
+    "atlanta-ga": {
+      "books": 25,
+      "food": 10,
+      "outdoors": 11,
+      "records_music": 6
+    },
+    "charlotte-nc": {
+      "books": 22,
+      "horror_occult": 6,
+      "coffee": 3,
+      "food": 2
+    },
+    "richmond-va": {
+      "food": 9,
+      "records_music": 3
+    },
+    "washington-dc": {
+      "food": 10,
+      "museums_history": 16,
+      "books": 3
+    },
+    "new-orleans-la": {
+      "books": 11,
+      "food": 9,
+      "outdoors": 8,
+      "film": 3
+    }
+  },
   "cities": {
     "albuquerque-nm": [
       {

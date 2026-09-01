@@ -2,9 +2,9 @@
 
 High-level build plan for the design in [`design.md`](design.md), grouped by milestones. Each milestone gets its own detailed doc when it starts; this doc holds just enough to build accurately from later. Undecided questions that gate milestones are tracked as O-numbers in [`decision-log.md`](decision-log.md#open-questions-undecided).
 
-## Current state (as of M5b visited places, Aug 2026)
+## Current state (as of M4a chapter pages, Aug 2026)
 
-Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · **colophon and data page built** ([M3.7](m37-colophon.md), [M5a](m5a-data-page.md)); city pages now also render where the days actually went ([M5b](m5b-visited-places.md)); trip chapters and superlatives unbuilt or stubs · **14 of 18 cities built** (`portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending") — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (50 recs / 44 venues from the Takeout join across 719 recommendations) with the authoritative curation-adherence rates rendered verbatim from `perCityAdherence`, never re-derived; **no surface renders an unmeasured number** (M3.6: DC regenerated from its guide, all dummy statuses/ratings/placeholder strings gone; unsourced landing figures marked "not yet reconstructed") · `rating` is now **empty dataset-wide**, which blocks M6 — see below · all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
+Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · **colophon and data page built** ([M3.7](m37-colophon.md), [M5a](m5a-data-page.md)); city pages now also render where the days actually went ([M5b](m5b-visited-places.md)); **three chapter pages built** ([M4a](m4a-chapter-pages.md)); superlatives still a stub · **14 of 18 cities built** (`portland-or`, `austin-tx`, `new-orleans-la`, `philadelphia-pa` remain "data pending") — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (50 recs / 44 venues from the Takeout join across 719 recommendations) with the authoritative curation-adherence rates rendered verbatim from `perCityAdherence`, never re-derived; **no surface renders an unmeasured number** (M3.6: DC regenerated from its guide, all dummy statuses/ratings/placeholder strings gone; unsourced landing figures marked "not yet reconstructed") · `rating` is now **empty dataset-wide**, which blocks M6 — see below · all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
 
 ## Milestone overview
 
@@ -69,6 +69,10 @@ Fixed the `0 / N` defect M3 shipped: settled O6 as [D22](decision-log.md#d22-sel
 
 Still open from it: rendering the saved-list overlap (190 recs / 164 venues, computed and documented, pending review) and folding the Greensboro off-guide discovery into M4's leg data.
 
+## M4a — Chapter pages — done
+
+The three-chapter arc finally has pages. Also pre-wired New Orleans's pipeline slot ahead of its guide — four mapping entries plus three real bugs that would have surfaced on arrival, including `isRetro` deriving from `tripId` rather than the data. Proven with a throwaway stub guide, then discarded. Full findings: [`m4a-chapter-pages.md`](m4a-chapter-pages.md).
+
 ## M5b — Where the days actually went — done
 
 Renders `topPlaces` for the first time: the most-navigated places per city, tagged three ways — 42 on the sourced guide, 85 on the self-made list, 23 found on the ground. Published guides account for the smallest share of actual navigation, sharpening D22. Kept deliberately out of `recommendations` so the hit-rate denominator stays honest ([D26](decision-log.md#d26-visited-places-are-their-own-surface-never-recommendations)); rec counts and every `≥N of M` are byte-identical to before.
@@ -89,9 +93,11 @@ Still open from it: the `population.note` editorial pass, the colophon wishlist 
 
 DC regenerated from its guide (ending the two-provenance split and its dummy statuses/ratings/`DUMMY-` placeholder strings), landing StatStrip's three unsourced figures marked `not yet reconstructed`, and `data/city-overrides.json` added so reviewed corrections — starting with DC's rejected `elevationFt: 25` — survive regeneration. **No surface on the site now asserts an unmeasured number.** Full findings, including the 37 M2-only DC venues dropped and the discarded `population.note` D8 caveat: [`m36-purge-invented-data.md`](m36-purge-invented-data.md).
 
-## M4 — Chapter pages ×3
+## M4 — Chapter pages ×3 — **partially shipped ([M4a](m4a-chapter-pages.md))**
 
-**Leg-ledger per D17** (~1 session), not the full MapLibre scroll-driven panning showpiece — scrollytelling stays a roadmap upgrade path (R15). Interlude chapter (NOLA) gets a lighter treatment (`type` drives layout). Consumes `legs.json`; leg reconstruction from M0 Timeline data feeds this.
+**Shipped:** `/chapter/west`, `/chapter/nola`, `/chapter/south` — the route as an ordered stop list, chapter rollups, the curation identity, the interest mix (read verbatim per [D27](decision-log.md#d27-chapter-aggregates-name-what-they-count-and-are-never-re-derived)), per-city adherence, visited places, and the Greensboro side trip. Interlude gets the lighter `type`-driven treatment (D1). NOLA's pipeline slot is pre-wired, so its guide drops in with two commands.
+
+**Still gated on M0:** the leg-ledger itself (D17) — per-leg distances and drive times need the routing pull; tracking was off during the trips so no GPS traces exist. Scrollytelling stays a roadmap upgrade path (R15). Each chapter page states the ledger's absence.
 
 ## M5 — Data deep-dive page — **partially shipped ([M5a](m5a-data-page.md))**
 

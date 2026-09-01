@@ -14,8 +14,13 @@
 
 	const a = $derived((adherenceData.cities as Record<string, Row>)[cityId] ?? null);
 	// D22: trip 1 curated its own lists, trip 2 followed sourced guides. The
-	// comparison is between curation *sources*, not guided vs unguided.
-	const method = $derived(a?.trip === 'trip1' ? 'self-curated' : 'sourced-curated');
+	// comparison is between curation *sources*, not guided vs unguided. The
+	// interlude is neither — New Orleans had no guide at the time and sits
+	// between the two trips, so it must not be labelled sourced-curated by
+	// falling through the else branch.
+	const method = $derived(
+		a?.trip === 'trip1' ? 'self-curated' : a?.trip === 'interlude' ? 'self-curated, between the trips' : 'sourced-curated'
+	);
 </script>
 
 {#if a}

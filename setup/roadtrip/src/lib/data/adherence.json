@@ -150,6 +150,14 @@
       "listConversionPct": 36.9,
       "uniqueDirTargets": 66,
       "visitsThatWereOnListPct": 45.5
+    },
+    "new-orleans-la": {
+      "trip": "interlude",
+      "saved": 99,
+      "navigatedFromList": 33,
+      "listConversionPct": 33.3,
+      "uniqueDirTargets": 71,
+      "visitsThatWereOnListPct": 43.7
     }
   }
 }

@@ -32,6 +32,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D24](#d24-additive-overrides-reviewed-restorations-survive-regeneration) | Additive overrides — reviewed restorations survive regeneration | Final (M3.7, Aug 2026) |
 | [D25](#d25-hand-rolled-charts-no-charting-dependency) | Hand-rolled charts; no charting dependency | Final (M5a, Aug 2026; supersedes M5's LayerChart line) |
 | [D26](#d26-visited-places-are-their-own-surface-never-recommendations) | Visited places are their own surface, never recommendations | Final (M5b, Aug 2026) |
+| [D27](#d27-chapter-aggregates-name-what-they-count-and-are-never-re-derived) | Chapter aggregates name what they count, and are never re-derived | Final (M4a, Aug 2026) |
 
 ## Decisions
 
@@ -187,6 +188,18 @@ The site has **zero runtime dependencies**. Three charts do not justify the firs
 **Both bounds are disclosed wherever the split renders**, not only on the colophon: the export has no per-item save timestamps and the lists were edited mid-trip, so **`own-list` is an upper bound and `found` a floor**. This is the same circularity that keeps the saved-list *overlap* unrendered; it is disclosed rather than deferred here because the claim is about provenance of visits rather than agreement between lists, and the bound makes the discovery figure conservative.
 
 Colour follows D11 unchanged — `--blue` (the off-guide hue) finally carries something — with a text label on every entry so identity is never colour-alone.
+
+### D27 — Chapter aggregates name what they count, and are never re-derived
+
+Two rules for any figure aggregated across a chapter.
+
+**Night totals exclude `origin`/`anchor`/`home` and are labelled "nights on the road."** Chapter I's three defensible lengths disagree — a 25-day span, 23 road nights, and 200 if every city's `nights` is summed, because Austin's 177-night anchor stay is in that list. A bare 200 reads as the drive. The date span is shown separately as a span, and an anchor's nights still appear beside that city, where they are true and in context.
+
+**Interest mixes are read verbatim from `comparison`, never summed from per-city `interestTagCounts`.** Summing gives west `food 44 / coffee 44` where the authoritative figure is `51 / 50`. Where a chapter is a single city (the interlude), that city's own counts are shown and labelled as that city's record rather than an aggregate. `chapterMeta.json` encodes which applies per chapter, so the rule lives in data rather than in a component condition.
+
+Both are instances of the same standing rule: a number must answer the question its label asks. Cf. the `0 / N` defect (M3.5) and the unweighted-mean near-miss (M3.7).
+
+**Corollary to D3 — trip-1 semantics are detected from the data, not from `tripId`.** `isRetro` keyed on `tripId === 'west'`, which held for all 14 cities but would mislabel New Orleans: an interlude that had no guide at the time, so retro-guided, yet not `west`. It now derives from `source.type === 'retro-guide'`. Anything asking "is this retro-guided?" must ask the recommendations, not the itinerary.
 
 ## Open questions (undecided)
 

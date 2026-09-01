@@ -104,11 +104,11 @@ It does not render yet, for two reasons (the circularity below now has a *render
 
 Per-city spread, for the review: albuquerque 8 · atlanta 22 · birmingham 22 · boise 15 · charlotte 20 · dallas 13 · jackson 24 · las-vegas 7 · oklahoma-city 11 · phoenix 5 · richmond 14 · salt-lake-city 3 · shreveport 11 · washington-dc 15. Salt Lake City's 3 against Jackson's 24 is the discriminating pair to eyeball — SLC's low count is now believed real (its saved list skews to chain/utility stops the guides would never pick), but that is a judgment, not a verified fact.
 
-## Greensboro — one genuine off-guide discovery, deferred
+## Greensboro — one genuine off-guide discovery — ✅ rendered in M4a
 
 `sideTrips` records the **International Civil Rights Center & Museum** (×8 direction requests, Greensboro NC, en route Charlotte→Richmond, May 2026) as *"Woolworth sit-in site — civil rights corridor stop not in any guide."*
 
-This is the only true `off-guide-discovery` in the corpus — a status the site has never rendered. It is deliberately **not** forced into a city file: it belongs to a leg, not a city, and inventing a Greensboro city page or attaching it to Charlotte would misrepresent where it happened. **Noted for M4's leg work.**
+This is the only true `off-guide-discovery` in the corpus — a status the site has never rendered. It is deliberately **not** forced into a city file: it belongs to a leg, not a city, and inventing a Greensboro city page or attaching it to Charlotte would misrepresent where it happened. **Noted for M4's leg work — and rendered there:** it now appears on the `south` chapter page under "Off the route" ([M4a](m4a-chapter-pages.md)), attached to the leg rather than to a city.
 
 ## Verified during implementation
 

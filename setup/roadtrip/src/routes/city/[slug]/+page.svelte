@@ -12,11 +12,14 @@
 
 	let { data } = $props();
 	const c = $derived(data.city);
-	// "Was this city covered by a retro guide (trip 1) or a sourced guide (trip 2)?"
-	// Assumption made explicit: NOLA (`nola`) falls to the trip-2 branch. Moot
-	// today — no NOLA city file exists — but revisit here if one lands, since
-	// NOLA was an interlude with its own saved list and no sourced guide.
-	const isRetro = $derived(c.tripId === 'west');
+	// "Was this city covered by a retro guide, or by a guide that existed at the
+	// time?" Derived from the DATA, not from which trip the city belongs to.
+	// It keyed on `tripId === 'west'` until M4a, which happened to be right for
+	// all 14 cities but would mislabel New Orleans the moment its retro guide
+	// landed: an interlude that had no guide at the time, so retro-guided, yet
+	// not `west`. `source.type` is set by the transform from the guide's own
+	// `tripStatus`, so it answers the actual question.
+	const isRetro = $derived(c.recommendations.some((r) => r.source.type === 'retro-guide'));
 	type Place = { name: string; count: number; categories: string[]; provenance: string };
 	const visitedHere = $derived((visited.cities as Record<string, Place[]>)[c.id] ?? []);
 

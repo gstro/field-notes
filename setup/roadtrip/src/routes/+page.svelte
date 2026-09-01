@@ -3,6 +3,9 @@
 	import StatStrip from '$lib/components/StatStrip.svelte';
 	import trips from '$lib/data/trips.json';
 	import cityIndex from '$lib/data/cityIndex.json';
+	// Shared with /chapter/[id] so the blurbs cannot drift between the two.
+	import chapterMetaFile from '$lib/data/chapterMeta.json';
+	const chapterMeta = chapterMetaFile.chapters as Record<string, { num: string; blurb: string }>;
 
 	const cityModules = import.meta.glob('$lib/data/cities/*.json', { eager: true });
 	const built = new Set(Object.values(cityModules).map((m) => (m as { default: { id: string } }).default.id));
@@ -28,11 +31,6 @@
 		{ n: '38 lbs', l: 'Of Books', pending: true },
 		{ n: '243', l: 'CPAP Setups', wry: true }
 	];
-	const chapterMeta: Record<string, { num: string; blurb: string }> = {
-		west: { num: 'Chapter I', blurb: 'Leaving home the long way: high desert, two mountain systems, and the loneliest stretches of the whole arc.' },
-		nola: { num: 'Interlude', blurb: 'Eleven days in the one American city that is entirely its own country. A festival, not a stop.' },
-		south: { num: 'Chapter II', blurb: 'Austin to Philadelphia through the geography of the movement: Jackson, Birmingham, Atlanta, and the road between.' }
-	};
 </script>
 
 <svelte:head><title>The Long Way Home — Portland → Austin → Philadelphia</title></svelte:head>
@@ -64,7 +62,7 @@
 		{#each trips.trips as trip}
 			<div class="chapter" class:interlude={trip.type === 'interlude'}>
 				<span class="ch-num">{chapterMeta[trip.id].num}</span>
-				<h3>{trip.title}</h3>
+				<h3><a href="/chapter/{trip.id}">{trip.title}</a></h3>
 				<p class="ch-sub">{trip.dates.start} → {trip.dates.end}</p>
 				<p class="blurb">{chapterMeta[trip.id].blurb}</p>
 				<p class="ch-cities">
@@ -77,6 +75,7 @@
 						{/if}
 					{/each}
 				</p>
+				<a class="ch-more" href="/chapter/{trip.id}">Read this chapter →</a>
 			</div>
 		{/each}
 	</div>
@@ -126,6 +125,10 @@
 	.ch-cities { margin-top: 1.25rem; font-family: var(--font-mono); font-size: 10px; color: var(--muted); line-height: 1.9; letter-spacing: 0.04em; }
 	.ch-cities a { color: var(--gold); text-decoration: none; }
 	.ch-cities a:hover { color: var(--burnt-light); }
+	.chapter h3 a { color: inherit; text-decoration: none; }
+	.chapter h3 a:hover { color: var(--gold); }
+	.ch-more { display: inline-block; margin-top: 1rem; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--border); }
+	.ch-more:hover { border-color: var(--gold); }
 	.pending { opacity: 0.5; }
 	.teaser-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 	.teaser { background: var(--dark2); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; text-decoration: none; display: block; transition: border-color 0.2s; }

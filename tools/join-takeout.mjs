@@ -40,7 +40,12 @@ const SLUG_TO_MAPS_NAME = {
 	boise: 'Boise', charlotte: 'Charlotte', dallas: 'Dallas', jackson: 'Jackson',
 	'las-vegas': 'Las Vegas', 'oklahoma-city': 'Oklahoma City', phoenix: 'Phoenix',
 	richmond: 'Richmond', 'salt-lake-city': 'Salt Lake City',
-	shreveport: 'Shreveport', 'washington-dc': 'Washington DC'
+	shreveport: 'Shreveport', 'washington-dc': 'Washington DC',
+	// The interlude. Pre-wired ahead of its guide: join-takeout iterates the
+	// guides directory, so this entry is unused until that file exists — except
+	// in the adherence loop below, which keys on this map and so picks NOLA up
+	// immediately from perCityAdherence.
+	'new-orleans': 'New Orleans'
 };
 
 const SLUG_TO_CITY_ID = {
@@ -48,7 +53,8 @@ const SLUG_TO_CITY_ID = {
 	boise: 'boise-id', charlotte: 'charlotte-nc', dallas: 'dallas-tx', jackson: 'jackson-ms',
 	'las-vegas': 'las-vegas-nv', 'oklahoma-city': 'oklahoma-city-ok', phoenix: 'phoenix-az',
 	richmond: 'richmond-va', 'salt-lake-city': 'salt-lake-city-ut',
-	shreveport: 'shreveport-la', 'washington-dc': 'washington-dc'
+	shreveport: 'shreveport-la', 'washington-dc': 'washington-dc',
+	'new-orleans': 'new-orleans-la'
 };
 
 // Hand-restored venues (D24) join exactly like guide recs — see the joinable
@@ -65,7 +71,8 @@ const SLUG_TO_SAVED_LIST = {
 	phoenix: '2025 Phoenix', 'salt-lake-city': '2025 SLC',
 	atlanta: '2026 Atlanta', birmingham: '2026 Birmingham', charlotte: '2026 Charlotte',
 	jackson: '2026 Jackson', richmond: '2026 Richmond', shreveport: '2026 Shreveport',
-	'washington-dc': '2026 Washington, DC'
+	'washington-dc': '2026 Washington, DC',
+	'new-orleans': '2026 New Orleans'
 };
 
 // ---------------------------------------------------------------------------
@@ -440,11 +447,25 @@ function main() {
 	console.log(`wrote ${ADHERENCE_PATH} (${Object.keys(adherence).length} cities)`);
 
 	const provTotals = Object.values(visited).flat().reduce((a, p) => ({ ...a, [p.provenance]: (a[p.provenance] ?? 0) + 1 }), {});
+
+	// Per-city interest tags, carried for the cities this file already covers plus
+	// New Orleans. Used only where a chapter is a SINGLE city, so it is that
+	// city's own record rather than an aggregate — summing these across a chapter
+	// would re-derive comparison.interestMix and disagree with it (D27).
+	const tagCities = new Set([...Object.keys(visited), 'new-orleans-la']);
+	const interestTagCounts = {};
+	for (const c of maps.cities) {
+		const cid = Object.entries(SLUG_TO_MAPS_NAME).find(([, n]) => n === c.name)?.[0];
+		const id = cid && SLUG_TO_CITY_ID[cid];
+		if (id && tagCities.has(id) && c.interestTagCounts) interestTagCounts[id] = c.interestTagCounts;
+	}
+
 	writeFileSync(VISITED_PATH, JSON.stringify({
 		generated: maps.generated,
 		source: 'data/maps-trip-analysis-public.json topPlaces — the most-navigated places per city',
 		caveat: 'Provenance is matched, not recorded. "own-list" is an UPPER bound and "found" a FLOOR: the export has no per-item save timestamps and the lists were edited during the trips, so a place saved on the ground cannot be separated from one saved before leaving. topPlaces is also truncated to roughly the top 8-14 per city, so this is what was navigated to MOST, not everything.',
 		totals: provTotals,
+		interestTagCounts,
 		cities: visited
 	}, null, 2) + '\n');
 	console.log(`wrote ${VISITED_PATH} — provenance ${JSON.stringify(provTotals)}`);

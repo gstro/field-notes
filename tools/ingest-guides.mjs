@@ -37,7 +37,9 @@ const SLUG_TO_CITY_ID = {
 	richmond: 'richmond-va',
 	'salt-lake-city': 'salt-lake-city-ut',
 	shreveport: 'shreveport-la',
-	'washington-dc': 'washington-dc'
+	'washington-dc': 'washington-dc',
+	// Pre-wired ahead of its guide (M4a); unused until guides/new-orleans-guide.json exists.
+	'new-orleans': 'new-orleans-la'
 };
 
 // Verified 1:1 against registry.ts CATEGORIES — wording differs, mapping doesn't.

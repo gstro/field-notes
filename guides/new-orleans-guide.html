@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Orleans, LA — Interlude Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burnt: #C85A00;
+    --burnt-light: #E8722A;
+    --gold: #D4A843;
+    --cream: #F5EDD8;
+    --dark: #111009;
+    --dark2: #1C1A12;
+    --dark3: #252318;
+    --muted: #8A8270;
+    --border: rgba(196,160,80,0.18);
+    --red: #E87070;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .site-header .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+  }
+  .site-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1rem;
+  }
+  .site-header h1 em { font-style: italic; color: var(--gold); }
+  .site-header .subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.9;
+  }
+
+  /* POP CULTURE */
+  .pop-culture {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1rem;
+  }
+  .pop-culture h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .pc-card {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+  }
+  .pc-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+  .pc-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .pc-card li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.82);
+  }
+  .pc-card li strong { color: var(--cream); font-weight: 500; }
+  @media (max-width: 640px) {
+    .pc-grid { grid-template-columns: 1fr; }
+  }
+
+  /* MAIN / CATEGORY SECTIONS */
+  .main { max-width: 900px; margin: 0 auto; padding: 1rem 2rem 2rem; }
+  .cat-section { margin-top: 2.5rem; }
+  .cat-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .cat-emoji { font-size: 1.1rem; }
+  .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cream);
+  }
+  .cat-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: auto;
+  }
+
+  /* ENTRY CARD */
+  .entries { display: flex; flex-direction: column; gap: 8px; }
+  .entry {
+    background: var(--dark2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 0.75rem;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+  .entry:hover { border-color: rgba(196,160,80,0.4); }
+  .entry-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
+    opacity: 0.7;
+  }
+  .entry-body {}
+  .entry-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+  }
+  .entry-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(245,237,216,0.8);
+    margin-bottom: 0.4rem;
+  }
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+    margin-top: 0.4rem;
+  }
+  .meta-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .meta-tag span { color: var(--gold); margin-right: 3px; }
+  .cite-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    font-style: italic;
+  }
+
+  /* INTEREST TAGS */
+  .interest-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .i-punk     { color: #B07AE8; background: rgba(120,60,180,0.15); border: 1px solid rgba(120,60,180,0.3); }
+  .i-horror   { color: #E87070; background: rgba(220,60,60,0.15); border: 1px solid rgba(220,60,60,0.3); }
+  .i-books    { color: #5AAFE0; background: rgba(40,120,160,0.15); border: 1px solid rgba(40,120,160,0.3); }
+  .i-diy      { color: #60D0E0; background: rgba(60,160,180,0.15); border: 1px solid rgba(60,160,180,0.3); }
+  .i-food     { color: #E8722A; background: rgba(200,90,0,0.15); border: 1px solid rgba(200,90,0,0.3); }
+  .i-drinks   { color: #D4A843; background: rgba(180,150,30,0.15); border: 1px solid rgba(180,150,30,0.3); }
+  .i-bees     { color: #5DBF82; background: rgba(50,130,80,0.15); border: 1px solid rgba(50,130,80,0.3); }
+  .i-political{ color: #E07898; background: rgba(180,60,100,0.15); border: 1px solid rgba(180,60,100,0.3); }
+
+  /* STATUS NOTE */
+  .closure-warning {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+  }
+  .closure-inner {
+    background: rgba(220,60,60,0.08);
+    border: 1px solid rgba(220,60,60,0.3);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--red);
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+  }
+  .closure-inner strong { font-weight: 500; }
+
+  /* NEXT STEPS */
+  .next-steps {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 0 2rem 4rem;
+  }
+  .next-steps h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--burnt-light);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .ns-grid { display: flex; flex-direction: column; gap: 8px; }
+  .ns-card {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.82);
+    line-height: 1.6;
+  }
+  .ns-card strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  /* GAP NOTE */
+  .gap-note {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .gap-inner {
+    background: var(--dark3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: rgba(245,237,216,0.8);
+    line-height: 1.65;
+  }
+  .gap-inner strong { color: var(--gold); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    line-height: 2;
+  }
+
+  @media (max-width: 540px) {
+    .entry { grid-template-columns: 24px 1fr; }
+    .entry-num { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <p class="eyebrow">Interlude &nbsp;·&nbsp; Austin (Trip 1 end) → <strong style="color:var(--cream)">New Orleans</strong> → Austin (Trip 2 start)</p>
+  <h1>Road Trip Stop — <em>New Orleans, LA</em></h1>
+  <p class="subtitle">
+    Not a leg of Trip 1 or Trip 2 — the 10-day interlude between them (Feb 9–19, 2026), with Mardi Gras Day (Feb 17) inside the window. Built retroactively as a residency-analysis companion, not a data point in the self-curation vs. sourced-curation thesis.<br>
+    10 categories · 5 picks each · Sources: Atlas Obscura, Eater, TasteAtlas, Timeout, local press
+  </p>
+</header>
+
+<!-- POP CULTURE -->
+<section class="pop-culture">
+  <h2>✦ Pop-Culture Connections</h2>
+  <div class="pc-grid">
+    <div class="pc-card">
+      <h3>Films Shot Here</h3>
+      <ul>
+        <li><strong>Interview with the Vampire (1994)</strong> — Anne Rice's French Quarter/Lafayette Cemetery No. 1 Gothic atmosphere anchors the film's New Orleans identity.</li>
+        <li><strong>American Horror Story: Coven (2013)</strong> — LaLaurie Mansion exterior (1140 Royal St, private residence), Lafayette Cemetery No. 1, Hermann-Grima House.</li>
+        <li><strong>12 Years a Slave (2013)</strong> — Audubon Park, the Columns Hotel, and the French Quarter.</li>
+        <li><strong>NCIS: New Orleans (2014–2021)</strong> — Café Du Monde, Jackson Square, Bourbon Street, Louis Armstrong Park.</li>
+        <li><strong>The Curious Case of Benjamin Button (2008)</strong> — the Nolan House on Coliseum St, Garden District; Lake Pontchartrain.</li>
+      </ul>
+    </div>
+    <div class="pc-card">
+      <h3>Notable People Born Here</h3>
+      <ul>
+        <li><strong>Louis Armstrong</strong> — jazz's foundational figure, born and raised here; Congo Square and Armstrong Park carry the legacy.</li>
+        <li><strong>Anne Rice</strong> — Gothic/horror novelist (The Vampire Chronicles), born in the Irish Channel, 1941.</li>
+        <li><strong>Truman Capote</strong> — born at Touro Infirmary, 1924; Southern Gothic literary lineage.</li>
+        <li><strong>Jelly Roll Morton</strong> — composer/pianist who claimed to have "invented jazz" in 1902.</li>
+        <li><strong>Phil Anselmo</strong> — hardcore-adjacent metal vocalist (Pantera, Down, Superjoint), New Orleans native.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">📚</span><h2 class="cat-title">Bookstores</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="bookstores"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">🎵</span><h2 class="cat-title">Record Stores</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="records"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">☕</span><h2 class="cat-title">Coffee Shops</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="coffee"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">🥐</span><h2 class="cat-title">Pastry &amp; Bakeries</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="pastry"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">🍽️</span><h2 class="cat-title">Unique Dishes to Eat</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="dishes"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">📦</span><h2 class="cat-title">Non-Perishable Gifts &amp; Mailable Foods</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="gifts"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">👁️</span><h2 class="cat-title">Sights &amp; Things to Do</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="sights"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">🎸</span><h2 class="cat-title">Punk &amp; Indie Rock Venues</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="venues"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">🧲</span><h2 class="cat-title">Magnets, Postcards &amp; Souvenirs</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="souvenirs"></div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-header"><span class="cat-emoji">🔧</span><h2 class="cat-title">DIY Electronics &amp; Maker Spaces</h2><span class="cat-count">5 picks</span></div>
+    <div class="entries" id="electronics"></div>
+  </section>
+
+</main>
+
+<!-- STATUS NOTE -->
+<div class="closure-warning">
+  <div class="closure-inner">
+    <strong>⚠ Current Status Note:</strong><br>
+    Iron Rail Book Collective (the mandatory infoshop pick) operated as unhoused pop-ups for years before landing inside CANOA at 4210 St. Claude Ave in <strong>April 2026</strong> — after this Feb 2026 visit window, so no fixed storefront existed during the actual stay. Rank &amp; File Books' current hours at its Sisters in Christ/Mae's Guitars location are unconfirmed — call ahead. All other picks were verified active as of mid-2026.
+  </div>
+</div>
+
+<!-- GAP NOTE -->
+<div class="gap-note" style="margin-top: 1rem;">
+  <div class="gap-inner">
+    <strong>Honest gap:</strong> Category 10 (DIY Electronics) leans wood/metal/textile fabrication in New Orleans, not electronics — no dedicated Arduino/Raspberry Pi hackerspace turned up in research. NOLA Guitar Shop's Eurorack modular-synth stock is the closest genuine electronics-culture touchpoint the city offers.
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div class="next-steps">
+  <h2>Next Steps</h2>
+  <div class="ns-grid">
+    <div class="ns-card">
+      <strong>Deeper Dive</strong>
+      The Fred Hampton Free Store deserves its own Field Notes entry — a genuine post-Katrina, post-neglect Lower 9th Ward site that also functions as the city's only all-ages punk venue.
+    </div>
+    <div class="ns-card">
+      <strong>Political / Historical Thread</strong>
+      Congo Square and Dooky Chase's both sit on the corridor's civil rights through-line — a possible New Orleans instance of <code>black-business-district-erasure</code>, though the mechanism here (cultural-origin-point erasure) differs from the highway-driven pattern seen elsewhere on the Southern leg.
+    </div>
+    <div class="ns-card">
+      <strong>Cross-City Link</strong>
+      Dong Phuong's Vietnamese-New Orleans king cake and Baldwin &amp; Co.'s Black-owned coffee/bookstore hybrid model are worth checking against Charlotte's and Atlanta's immigrant/Black-business overlaps on the Southern corridor.
+    </div>
+  </div>
+</div>
+
+<footer>
+  Attended Anyway &nbsp;·&nbsp; Interlude (not a numbered trip leg) &nbsp;·&nbsp; New Orleans, LA<br>
+  Micro-residency control case: visited between Trip 1 and Trip 2, guided retroactively at the traveler's request<br>
+  Generated with City Road Trip Guide v2.8 — August 31, 2026
+</footer>
+
+<script>
+const TAG = (cls, label) => `<span class="interest-tag ${cls}">${label}</span>`;
+
+const data = {
+  bookstores: [
+    {
+      name: "Faulkner House Books",
+      tags: [TAG('i-books','Literary Landmark')],
+      desc: "French Quarter shop in the house where William Faulkner lived in 1925 while writing his first novel; stocks Southern literary classics and rare first editions.",
+      meta: [["📍","624 Pirate's Alley, French Quarter"],["💰","$0–40"],["⏱","20–30 min"],["🕐","Anytime"]],
+      cite: "Secret New Orleans, Axios"
+    },
+    {
+      name: "Baldwin & Co.",
+      tags: [TAG('i-books','Black-Owned'), TAG('i-political','Social Justice')],
+      desc: "Black-owned bookstore and coffee shop in Marigny built around social justice and Black authors, with a packed author-events calendar and its own small recording studio.",
+      meta: [["📍","1030 Elysian Fields Ave, Marigny"],["💰","$0–30"],["⏱","45 min–1 hr"],["🕐","Morning"]],
+      cite: "Axios"
+    },
+    {
+      name: "Community Book Center",
+      tags: [TAG('i-books','Black-Owned'), TAG('i-political','Institution')],
+      desc: "Decades-old Black-owned institution on Bayou Road's historic Black business corridor — African-centered titles, gifts, and community standing run by \"Ms. Vera and Mama Jennifer.\"",
+      meta: [["📍","2523 Bayou Road, 7th Ward"],["💰","$0–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Axios"
+    },
+    {
+      name: "Iron Rail Book Collective",
+      tags: [TAG('i-political','Infoshop'), TAG('i-books','Radical Library')],
+      desc: "Mandatory infoshop pick: volunteer-run anarchist lending library and zine archive (3,000+ radical titles, plus the Above Ground Zine Library), now housed inside CANOA on St. Claude Ave.",
+      meta: [["📍","4210 St. Claude Ave, Bywater"],["💰","Free/donation"],["⏱","30 min"],["🕐","Check socials — no fixed hours"]],
+      cite: "Wikipedia, Slingshot Collective"
+    },
+    {
+      name: "Rank & File Books",
+      tags: [TAG('i-books','Radical/Feminist'), TAG('i-punk','Shares Record Shop Space')],
+      desc: "Radical, anarchist, and feminist bookstore and zine shop sharing space with Sisters in Christ Records — cross-listed with Record Stores below.",
+      meta: [["📍","5206 Magazine St"],["💰","Free browse"],["⏱","20–30 min"],["🕐","Verify hours ahead"]],
+      cite: "Facebook"
+    }
+  ],
+  records: [
+    {
+      name: "Louisiana Music Factory",
+      tags: [TAG('i-bees','Well-Known / Must-See')],
+      desc: "The city's essential local-music specialist on Frenchmen Street — deep jazz, brass band, R&B, and Mardi Gras Indian catalog, with a crate-digging vinyl room upstairs.",
+      meta: [["📍","421 Frenchmen St, Marigny"],["💰","$10–40"],["⏱","1 hr"],["🕐","Afternoon"]],
+      cite: "Yelp, keepthemspinning.com"
+    },
+    {
+      name: "Euclid Records",
+      tags: [TAG('i-diy','Locals\' Favorite')],
+      desc: "Two floors of new and used vinyl, CDs, and 45s in Bywater, a bit off the tourist track and locally called \"the best record store in town.\"",
+      meta: [["📍","3301 Chartres St, Bywater"],["💰","$10–30"],["⏱","45 min"],["🕐","Afternoon"]],
+      cite: "The Pelican Star, Yelp"
+    },
+    {
+      name: "Domino Sound Record Shack",
+      tags: [TAG('i-diy','Crate-Digger Favorite'), TAG('i-political','Bayou Road Corridor')],
+      desc: "Opened 2007 on the Bayou Road Black business corridor, a serious crate-digger favorite with strong reggae and international selections.",
+      meta: [["📍","2557 Bayou Road, 7th Ward"],["💰","$10–30"],["⏱","45 min"],["🕐","Weekday afternoon (limited hours)"]],
+      cite: "keepthemspinning.com, Yelp"
+    },
+    {
+      name: "Sisters in Christ Records",
+      tags: [TAG('i-punk','Metal-Leaning'), TAG('i-political','Shares Bookstore Space')],
+      desc: "Metal-leaning vinyl curation on Magazine St, sharing its space with Rank & File Books above.",
+      meta: [["📍","5206 Magazine St, Freret"],["💰","$10–30"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Yelp, Facebook"
+    },
+    {
+      name: "NOLA Mix Records",
+      tags: [TAG('i-diy','Tightly Curated')],
+      desc: "A small Lower Garden District shop with a tightly curated, well-loved selection.",
+      meta: [["📍","Magazine St, Lower Garden District"],["💰","$10–30"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "keepthemspinning.com"
+    }
+  ],
+  coffee: [
+    {
+      name: "Café Du Monde",
+      tags: [TAG('i-bees','Well-Known / Must-See'), TAG('i-food','Since 1862')],
+      desc: "Chicory café au lait and sugar-dusted beignets since 1862 — the essential New Orleans coffee stop.",
+      meta: [["📍","800 Decatur St, French Quarter"],["💰","$5–10"],["⏱","20–30 min"],["🕐","Early morning or late night"]],
+      cite: "mycoffeeexplorer.com"
+    },
+    {
+      name: "Congregation Coffee Roasters",
+      tags: [TAG('i-food','Local Roaster')],
+      desc: "Bywater/Marigny local roaster working ethically sourced single-origin coffee.",
+      meta: [["📍","Bywater / Marigny"],["💰","$5–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "brewatlas.co"
+    },
+    {
+      name: "Baldwin & Co.",
+      tags: [TAG('i-food','Coffee + Books'), TAG('i-political','Black-Owned')],
+      desc: "Cross-listed with Bookstores above — coffee program plus a small in-house recording studio in a Black-owned social-justice-minded space.",
+      meta: [["📍","1030 Elysian Fields Ave, Marigny"],["💰","$5–8"],["⏱","45 min"],["🕐","Morning"]],
+      cite: "Yelp"
+    },
+    {
+      name: "HiVolt Coffee",
+      tags: [TAG('i-diy','Independent Spirit')],
+      desc: "The Bywater's independent-spirit coffee anchor, a neighborhood mainstay for coffee-with-food.",
+      meta: [["📍","Bywater"],["💰","$5–8"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "brewatlas.co"
+    },
+    {
+      name: "Mammoth Espresso",
+      tags: [TAG('i-food','Espresso Focus')],
+      desc: "Warehouse District espresso bar with dialed-in shots, frequently praised by Eater and Thrillist.",
+      meta: [["📍","Warehouse District"],["💰","$5–9"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "postcard.inc, Yelp"
+    }
+  ],
+  pastry: [
+    {
+      name: "Croissant D'Or Patisserie",
+      tags: [TAG('i-food','Classic French Technique')],
+      desc: "Classic French-technique pastry shop tucked into the French Quarter, laminated dough done right.",
+      meta: [["📍","French Quarter"],["💰","$5–12"],["⏱","30 min"],["🕐","Early morning"]],
+      cite: "Yelp"
+    },
+    {
+      name: "Ayu Bakehouse",
+      tags: [TAG('i-food','King Cake Champion')],
+      desc: "Frenchmen St bakery whose Croissant City Classic King Cake won the Times-Picayune's 2025 king cake bracket over 320,000 votes cast; also known for the cro madame.",
+      meta: [["📍","801 Frenchmen St, Marigny"],["💰","$6–15"],["⏱","30–45 min"],["🕐","Morning — sells out"]],
+      cite: "americanweekender.substack.com"
+    },
+    {
+      name: "Bywater Bakery",
+      tags: [TAG('i-food','Carnival Season Lines'), TAG('i-political','Community-Rooted')],
+      desc: "Neighborhood bakery known for long Carnival-season king cake lines, Breakfast Gumbo, and community-minded owners active in mutual aid.",
+      meta: [["📍","3624 Dauphine St"],["💰","$6–14"],["⏱","30 min"],["🕐","Morning"]],
+      cite: "Wanderlog, Axios"
+    },
+    {
+      name: "Dong Phuong Bakery",
+      tags: [TAG('i-food','Vietnamese-New Orleans')],
+      desc: "Vietnamese-American bakery in New Orleans East with a dominant king cake reputation citywide; note it's a drive from the core.",
+      meta: [["📍","14207 Chef Menteur Hwy, New Orleans East"],["💰","$10–20/cake"],["⏱","30 min + travel"],["🕐","Morning"]],
+      cite: "WGNO"
+    },
+    {
+      name: "Levee Baking Co.",
+      tags: [TAG('i-food','Uptown Favorite')],
+      desc: "Uptown bakery specializing in croissants and sweet breads, with lines that back up the quality claim.",
+      meta: [["📍","Uptown"],["💰","$5–10"],["⏱","20–30 min"],["🕐","Morning"]],
+      cite: "Wanderlog"
+    }
+  ],
+  dishes: [
+    {
+      name: "Muffuletta — Central Grocery & Deli",
+      tags: [TAG('i-bees','Well-Known / Must-See')],
+      desc: "Invented here in 1906 by Sicilian grocer Salvatore Lupo; the round Italian loaf stacked with cured meats, cheese, and olive salad that judges every muffuletta after it.",
+      meta: [["📍","923 Decatur St, French Quarter"],["💰","$12–16 (quarter is plenty)"],["⏱","30 min"],["🕐","Lunch"]],
+      cite: "Chowhound, Timeout"
+    },
+    {
+      name: "Gumbo — Dooky Chase's Restaurant",
+      tags: [TAG('i-food','Creole Institution'), TAG('i-political','Civil Rights History')],
+      desc: "Tremé restaurant helmed for decades by \"Queen of Creole Cuisine\" Leah Chase, and a real civil rights-era meeting place beyond its food.",
+      meta: [["📍","2301 Orleans Ave, Tremé"],["💰","$20–30"],["⏱","1 hr"],["🕐","Lunch"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Sazerac — Sazerac Bar, Roosevelt Hotel",
+      tags: [TAG('i-drinks','America\'s First Cocktail')],
+      desc: "Rye whiskey, Peychaud's Bitters, and absinthe — America's oldest cocktail, and the official cocktail of New Orleans since 2008.",
+      meta: [["📍","130 Roosevelt Way, CBD"],["💰","$16–21"],["⏱","30–45 min"],["🕐","Evening"]],
+      cite: "Atlas Obscura, UponArriving"
+    },
+    {
+      name: "Bananas Foster — Brennan's",
+      tags: [TAG('i-food','Invented Here, 1951')],
+      desc: "Tableside flambé dessert invented at Brennan's in 1951 by chef Paul Blangé, still the house signature.",
+      meta: [["📍","417 Royal St, French Quarter"],["💰","$16–20"],["⏱","30 min"],["🕐","Dinner"]],
+      cite: "TasteAtlas"
+    },
+    {
+      name: "New Orleans-Style BBQ Shrimp — Pascal's Manale",
+      tags: [TAG('i-food','Invented Here, 1950s')],
+      desc: "Head-on shrimp in a rich black-pepper butter sauce, invented here in the mid-1950s and, despite the name, entirely unrelated to barbecue.",
+      meta: [["📍","1838 Napoleon Ave, Uptown"],["💰","$20–28"],["⏱","45 min"],["🕐","Dinner"]],
+      cite: "Deep South Magazine, NPR"
+    }
+  ],
+  gifts: [
+    {
+      name: "Crystal Hot Sauce",
+      tags: [TAG('i-food','Locals\' Pick')],
+      desc: "The hot sauce locals actually reach for over Tabasco, made in New Orleans since the 1920s.",
+      meta: [["📍","Any grocery store / French Market"],["💰","$4–8"]],
+      cite: "thatswhatshehad.com"
+    },
+    {
+      name: "Peychaud's Bitters",
+      tags: [TAG('i-drinks','Sazerac Origin')],
+      desc: "The bitters that built the Sazerac, invented by a French Quarter apothecary — a cocktail-themed gift with a direct whiskey-history tie.",
+      meta: [["📍","French Market or liquor stores"],["💰","$10–15"]],
+      cite: "Axios"
+    },
+    {
+      name: "Tony Chachere's / Slap Ya Mama",
+      tags: [TAG('i-food','Kitchen Staple')],
+      desc: "Shelf-stable Creole and Cajun seasoning blends that are genuine kitchen staples here, not tourist product.",
+      meta: [["📍","Any grocery store"],["💰","$5–10 each"]],
+      cite: "Axios, alderhotel.com"
+    },
+    {
+      name: "What It Bees Like Honey",
+      tags: [TAG('i-bees','Urban Beekeeper')],
+      desc: "Urban beekeeper Shae Thomas harvests directly from hives in the Gentilly Woods neighborhood — genuinely in-city honey, not regional.",
+      meta: [["📍","Order via shaeshea.com"],["💰","$10–15/jar"]],
+      cite: "shaeshea.com"
+    },
+    {
+      name: "Zatarain's New-Orleans-in-a-Box",
+      tags: [TAG('i-food','Since 1889')],
+      desc: "Gumbo, jambalaya, and red beans & rice packaged as shelf-stable mixes since 1889.",
+      meta: [["📍","Any grocery store"],["💰","$3–6/box"]],
+      cite: "alderhotel.com"
+    }
+  ],
+  sights: [
+    {
+      name: "Congo Square",
+      tags: [TAG('i-political','Origin Point'), TAG('i-bees','Well-Known / Must-See')],
+      desc: "Where enslaved and free Black New Orleanians gathered on Sundays to play music, dance, and trade — the literal birthplace of the rhythms that became jazz.",
+      meta: [["📍","Louis Armstrong Park, Tremé"],["💰","Free"],["⏱","30–45 min"],["🕐","Morning"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Museum of Death",
+      tags: [TAG('i-horror','Occult / Oddities')],
+      desc: "French Quarter oddities collection including Dr. Kevorkian's Thanatron — the city's most concentrated horror/occult stop.",
+      meta: [["📍","French Quarter"],["💰","$15–20"],["⏱","45 min–1 hr"],["🕐","Afternoon"]],
+      cite: "Atlas Obscura"
+    },
+    {
+      name: "Rice Family Mausoleum / Lafayette Cemetery No. 1",
+      tags: [TAG('i-horror','Anne Rice'), TAG('i-books','Film Location')],
+      desc: "Anne Rice's resting place and the real-world set for jazz-funeral scenes in Interview with the Vampire and American Horror Story: Coven.",
+      meta: [["📍","Garden District"],["💰","Free–$20 (guided)"],["⏱","45 min"],["🕐","Morning — better light, fewer crowds"]],
+      cite: "Atlas Obscura, beverlyboy.com"
+    },
+    {
+      name: "Carousel Bar, Hotel Monteleone",
+      tags: [TAG('i-drinks','Whiskey History')],
+      desc: "The only rotating bar in the city, spinning since 1949, and the birthplace of the rye-whiskey Vieux Carré cocktail.",
+      meta: [["📍","French Quarter"],["💰","$14–18/drink"],["⏱","30–45 min"],["🕐","Evening"]],
+      cite: "Atlas Obscura, Expedia"
+    },
+    {
+      name: "Jean Lafitte National Historical Park (Barataria Preserve)",
+      tags: [TAG('i-bees','Natural Attraction')],
+      desc: "26,000 free, boardwalked acres of bayou, swamp, and marsh 25 minutes south of downtown — alligators and free ranger-led tours included.",
+      meta: [["📍","Barataria Blvd, Marrero"],["💰","Free"],["⏱","2–3 hrs"],["🕐","Morning — cooler, more wildlife"]],
+      cite: "freetoursbyfoot.com"
+    }
+  ],
+  venues: [
+    {
+      name: "Fred Hampton Free Store",
+      tags: [TAG('i-punk','All-Ages'), TAG('i-political','Named for Fred Hampton'), TAG('i-diy','Mutual Aid')],
+      desc: "Lower 9th Ward mutual-aid free store, skate rink, and punk show venue named for the Black Panther chairman — explicitly \"the only all-ages venue in Greater New Orleans.\"",
+      meta: [["📍","5523 St. Claude Ave, Lower 9th Ward"],["💰","Free/donation"],["⏱","1–2 hrs"],["🕐","Evening for shows"]],
+      cite: "Verité News, gnocc.net"
+    },
+    {
+      name: "Siberia",
+      tags: [TAG('i-punk','Hardcore Refuge')],
+      desc: "St. Roch bar/venue self-described by regulars as a \"hardcore metal/punk refuge.\"",
+      meta: [["📍","2227 St. Claude Ave, St. Roch"],["💰","$10–20"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "Yelp"
+    },
+    {
+      name: "Gasa Gasa",
+      tags: [TAG('i-punk','Scene Favorite')],
+      desc: "Freret St booking venue that's a longtime scene favorite among local punk and indie writers.",
+      meta: [["📍","Freret St"],["💰","$10–20"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "Orbiting Punk"
+    },
+    {
+      name: "Saturn Bar",
+      tags: [TAG('i-punk','Dive Bar Institution')],
+      desc: "Bywater dive-bar institution with a long-running punk and garage booking history.",
+      meta: [["📍","St. Claude Ave, Bywater"],["💰","$10–15"],["⏱","2 hrs"],["🕐","Night"]],
+      cite: "Yelp"
+    },
+    {
+      name: "Midcity Ballroom",
+      tags: [TAG('i-punk','Touring Hardcore')],
+      desc: "Hosts touring hardcore/metal DIY bills, often presented by Louisiana Hardcore; the city's DIY show calendar and booking collective (Belly Up) live at noladiy.org alongside the Free Store above.",
+      meta: [["📍","Mid-City"],["💰","$15–20"],["⏱","2–3 hrs"],["🕐","Night"]],
+      cite: "NOLADIY.org"
+    }
+  ],
+  souvenirs: [
+    {
+      name: "Home Malone",
+      tags: [TAG('i-diy','Local Artist Designed')],
+      desc: "\"Where locals shop local\" — stationery and magnets by New Orleans artist Kristin Malone, plus local jewelry and ceramics.",
+      meta: [["📍","Uptown"],["💰","$5–25"],["⏱","30 min"],["🕐","Afternoon"]],
+      cite: "homemalonenola.com"
+    },
+    {
+      name: "Palace Market",
+      tags: [TAG('i-diy','Artist Market')],
+      desc: "Frenchmen St alley market of independent local artists and artisans — prints, jewelry, and NOLA-pun T-shirts.",
+      meta: [["📍","Frenchmen St, Marigny"],["💰","$10–40"],["⏱","30–45 min"],["🕐","Evening"]],
+      cite: "Lonely Planet"
+    },
+    {
+      name: "Dr. Bob's Folk Art",
+      tags: [TAG('i-horror','Outsider Art')],
+      desc: "Outsider folk art from the artist behind the citywide \"Be Nice Or Leave\" signs — a genuinely only-in-New-Orleans souvenir.",
+      meta: [["📍","By appointment/gallery"],["💰","$20–100+"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "Axios"
+    },
+    {
+      name: "Frenchmen Art Bazaar",
+      tags: [TAG('i-diy','Open-Air Market')],
+      desc: "Open-air Marigny market of local prints and crafts alongside the live-music strip.",
+      meta: [["📍","Frenchmen St, Marigny"],["💰","$10–40"],["⏱","30–45 min"],["🕐","Evening"]],
+      cite: "Yelp"
+    },
+    {
+      name: "Gallery Rinard",
+      tags: [TAG('i-diy','Local Prints')],
+      desc: "French Quarter gallery of local prints, including posters from Barkus, the city's dog Mardi Gras parade.",
+      meta: [["📍","French Quarter"],["💰","$10–40"],["⏱","20–30 min"],["🕐","Afternoon"]],
+      cite: "Yelp"
+    }
+  ],
+  electronics: [
+    {
+      name: "Community Workshop NOLA (The Workshop)",
+      tags: [TAG('i-diy','Queer-Led Co-op'), TAG('i-political','Community Access')],
+      desc: "Queer-led, female-founded cooperative makerspace in Bywater with 24/7 member access and open community classes.",
+      meta: [["📍","1201 Mazant St, Bywater"],["💰","Membership varies"],["⏱","1–2 hrs / open shop"],["🕐","Weekday evenings"]],
+      cite: "Yelp, communityworkshopnola.com"
+    },
+    {
+      name: "NOLA Guitar Shop",
+      tags: [TAG('i-diy','Eurorack Synths'), TAG('i-punk','Youth Music Programs')],
+      desc: "Post-Katrina (2005) shop stocking guitars, amps, and Eurorack modular synthesizers — the closest thing here to a dedicated synth shop, with proceeds supporting youth music programs.",
+      meta: [["📍","3920 General De Gaulle Dr, Behrman"],["💰","$0–500+"],["⏱","30–45 min"],["🕐","Afternoon"]],
+      cite: "Reverb, nolaguitarshop.com"
+    },
+    {
+      name: "FabLab NOLA (Delgado Community College)",
+      tags: [TAG('i-diy','Digital Fabrication')],
+      desc: "Laser cutters, CNC routers, a vinyl cutter, and 3D printers, open to community members and small businesses, not just students.",
+      meta: [["📍","615 City Park Ave"],["💰","Free–$25 class fees"],["⏱","1–2 hrs"],["🕐","Weekday"]],
+      cite: "dcc.edu"
+    },
+    {
+      name: "Strange Guitarworks",
+      tags: [TAG('i-diy','Repair Culture')],
+      desc: "Full-service guitar repair and luthier shop doing everything from restringing to electronics work and full restorations.",
+      meta: [["📍","New Orleans"],["💰","$20–150+"],["⏱","Drop-in / pickup later"],["🕐","Weekday"]],
+      cite: "strangeguitarworks.com"
+    },
+    {
+      name: "NolaWorks",
+      tags: [TAG('i-diy','General Fabrication')],
+      desc: "General wood/auto/metal makerspace with classes — honest evidence that the city's maker scene leans fabrication over electronics (see gap note above).",
+      meta: [["📍","3923 Euphrosine St"],["💰","Membership-based"],["⏱","Class length varies"],["🕐","Weekday"]],
+      cite: "Facebook"
+    }
+  ]
+};
+
+function renderEntries(containerId, items) {
+  const container = document.getElementById(containerId);
+  items.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'entry';
+    const tagHtml = item.tags ? item.tags.join('') : '';
+    const metaHtml = item.meta ? item.meta.map(m => `<span class="meta-tag"><span>${m[0]}</span>${m[1]}</span>`).join('') : '';
+    const citeHtml = item.cite ? `<span class="cite-tag">— Source: ${item.cite}</span>` : '';
+    div.innerHTML = `
+      <div class="entry-num">${i+1}</div>
+      <div class="entry-body">
+        <div class="entry-name">${item.name}</div>
+        <div style="margin-bottom:5px">${tagHtml}</div>
+        <div class="entry-desc">${item.desc}</div>
+        <div class="entry-meta">${metaHtml}${citeHtml}</div>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+renderEntries('bookstores', data.bookstores);
+renderEntries('records', data.records);
+renderEntries('coffee', data.coffee);
+renderEntries('pastry', data.pastry);
+renderEntries('dishes', data.dishes);
+renderEntries('gifts', data.gifts);
+renderEntries('sights', data.sights);
+renderEntries('venues', data.venues);
+renderEntries('souvenirs', data.souvenirs);
+renderEntries('electronics', data.electronics);
+</script>
+</body>
+</html>

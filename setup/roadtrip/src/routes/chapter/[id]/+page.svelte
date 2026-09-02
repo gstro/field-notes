@@ -116,7 +116,9 @@
 			<div class="figs">
 				<div class="fig"><span class="n">{stops.length}</span><span class="l">Stops</span></div>
 				{#if recs}<div class="fig"><span class="n">{recs}</span><span class="l">Recommendations</span></div>{/if}
-				{#if recs}<div class="fig"><span class="n">≥{confirmed}</span><span class="l">Confirmed visited</span></div>{/if}
+				<!-- "—" rather than "≥0" when nothing is confirmed, matching the city
+				     page: a floor of zero is not a measurement worth printing as one. -->
+				{#if recs}<div class="fig"><span class="n">{#if confirmed}≥{confirmed}{:else}—{/if}</span><span class="l">Confirmed visited</span></div>{/if}
 				{#if places.length}<div class="fig"><span class="n">{places.length}</span><span class="l">Places navigated to</span></div>{/if}
 			</div>
 			{#if places.length}

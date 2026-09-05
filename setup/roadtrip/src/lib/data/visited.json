@@ -3,8 +3,8 @@
   "source": "data/maps-trip-analysis-public.json topPlaces — the most-navigated places per city",
   "caveat": "Provenance is matched, not recorded. \"own-list\" is an UPPER bound and \"found\" a FLOOR: the export has no per-item save timestamps and the lists were edited during the trips, so a place saved on the ground cannot be separated from one saved before leaving. topPlaces is also truncated to roughly the top 8-14 per city, so this is what was navigated to MOST, not everything.",
   "totals": {
-    "found": 23,
-    "own-list": 85,
+    "found": 29,
+    "own-list": 92,
     "guide": 42
   },
   "interestTagCounts": {
@@ -698,6 +698,99 @@
       {
         "name": "The Laundry Room",
         "count": 1,
+        "categories": [],
+        "provenance": "own-list"
+      }
+    ],
+    "new-orleans-la": [
+      {
+        "name": "Terminal",
+        "count": 11,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Tubby & Coo's Traveling Book Shop",
+        "count": 7,
+        "categories": [
+          "books"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Faubourg Marigny",
+        "count": 5,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Mr. Ed's Seafood & Oyster House",
+        "count": 5,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Backspace Bar & Kitchen",
+        "count": 4,
+        "categories": [
+          "food"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "The Garden District Book Shop",
+        "count": 4,
+        "categories": [
+          "books",
+          "outdoors"
+        ],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Lower Garden District",
+        "count": 4,
+        "categories": [
+          "outdoors"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "The Singing Oak",
+        "count": 4,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Zhang Bistro",
+        "count": 3,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Basin St. Station",
+        "count": 3,
+        "categories": [],
+        "provenance": "own-list"
+      },
+      {
+        "name": "Baronne Bistro",
+        "count": 3,
+        "categories": [],
+        "provenance": "found"
+      },
+      {
+        "name": "Joy Theater",
+        "count": 3,
+        "categories": [
+          "film"
+        ],
+        "provenance": "found"
+      },
+      {
+        "name": "The Will & The Way",
+        "count": 3,
         "categories": [],
         "provenance": "own-list"
       }

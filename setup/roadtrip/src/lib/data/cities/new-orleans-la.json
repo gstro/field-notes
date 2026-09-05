@@ -1,0 +1,1451 @@
+{
+  "id": "new-orleans-la",
+  "name": "New Orleans",
+  "state": "LA",
+  "tripId": "nola",
+  "stay": {
+    "arrive": "2026-02-09",
+    "depart": "2026-02-19",
+    "nights": 10
+  },
+  "coords": {
+    "lat": 29.9511,
+    "lng": -90.0715
+  },
+  "elevationFt": 3,
+  "population": {
+    "cityProper": 362000,
+    "metro": 1270000,
+    "note": "General-knowledge estimates pending Census API reconciliation, per standard practice for all city files. New Orleans elevation and population figures are unusually volatile even by that standard — much of the city sits at or below sea level, and population has fluctuated significantly since Hurricane Katrina (2005), so these numbers should be treated as rough until replaced."
+  },
+  "vibeWord": "",
+  "tagline": "",
+  "wouldILiveHere": {
+    "verdict": null,
+    "note": ""
+  },
+  "fingerprint": {
+    "food": null,
+    "musicScene": null,
+    "weirdness": null,
+    "politicalEnergy": null,
+    "cost": null,
+    "interestCoverage": null
+  },
+  "recommendations": [
+    {
+      "name": "Faulkner House Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Secret New Orleans",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Axios",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$0–40",
+      "bestTimeOfDay": "Anytime",
+      "durationMin": 30,
+      "rating": null,
+      "note": "William Faulkner lived here in 1925 while writing his first novel; now a small shop specializing in Southern literary classics and rare first editions.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Baldwin & Co.",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Axios",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political",
+        "i-food"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Black-owned bookstore and coffee shop built around social justice and Black authors, with a packed author-events calendar and a small in-house recording studio.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Community Book Center",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Axios",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$0–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Decades-old Black-owned institution on Bayou Road's historic Black business corridor — African-centered titles, gifts, and deep community standing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Iron Rail Book Collective",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wikipedia",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Slingshot Collective",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-books",
+        "i-punk"
+      ],
+      "estCost": "Free/donation",
+      "bestTimeOfDay": "Check socials — no fixed hours",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Mandatory infoshop pick: volunteer-run anarchist lending library and zine archive (3,000+ titles, plus the Above Ground Zine Library), now housed inside the CANOA arts/music venue.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rank & File Books",
+      "categoryNum": 1,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Facebook",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-books",
+        "i-political",
+        "i-punk"
+      ],
+      "estCost": "Free browse",
+      "bestTimeOfDay": "Verify hours ahead",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Radical, anarchist, and feminist bookstore and zine shop sharing space with Sisters in Christ Records and Mae's Guitars.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Louisiana Music Factory",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "keepthemspinning.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$10–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "The city's essential local-music specialist — deep jazz, brass band, R&B, and Mardi Gras Indian catalog, with a crate-digging vinyl room upstairs.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Euclid Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "The Pelican Star",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Two floors of new and used vinyl, CDs, and 45s, a bit off the tourist track and locally called \"the best record store in town.\"",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Domino Sound Record Shack",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "keepthemspinning.com",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-political"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "Weekday afternoon (limited hours)",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Opened 2007 on the Bayou Road Black business corridor, a serious crate-digger favorite with strong reggae and international selections.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sisters in Christ Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Facebook",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-political"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Metal-leaning vinyl curation, sharing its space with Rank & File Books.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "NOLA Mix Records",
+      "categoryNum": 2,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "keepthemspinning.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–30",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "A small shop with a tightly curated, well-loved selection on Magazine St.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Café Du Monde",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mycoffeeexplorer.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$5–10",
+      "bestTimeOfDay": "Early morning or late night",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Chicory café au lait and sugar-dusted beignets since 1862 — the essential New Orleans coffee stop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Congregation Coffee Roasters",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "brewatlas.co",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Local roaster working ethically sourced single-origin coffee.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Baldwin & Co.",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political",
+        "i-books"
+      ],
+      "estCost": "$5–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Cross-listed with Bookstores — coffee program plus a small in-house recording studio in a Black-owned, social-justice-minded space.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "HiVolt Coffee",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "brewatlas.co",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-diy"
+      ],
+      "estCost": "$5–8",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "The Bywater's independent-spirit coffee anchor, a neighborhood mainstay for coffee-with-food.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mammoth Espresso",
+      "categoryNum": 3,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "postcard.inc",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–9",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Dialed-in espresso bar frequently praised by Eater and Thrillist.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Croissant D'Or Patisserie",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–12",
+      "bestTimeOfDay": "Early morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Classic French-technique pastry shop, laminated dough done right.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ayu Bakehouse",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "americanweekender.substack.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$6–15",
+      "bestTimeOfDay": "Morning — sells out",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Its Croissant City Classic King Cake won the Times-Picayune's 2025 king cake bracket over 320,000 votes cast; also known for the cro madame.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bywater Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Axios",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$6–14",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Long Carnival-season king cake lines, Breakfast Gumbo, and community-minded owners active in mutual aid.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dong Phuong Bakery",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "WGNO",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$10–20/cake",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Vietnamese-American bakery with a dominant king cake reputation citywide; a drive from the core.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Levee Baking Co.",
+      "categoryNum": 4,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Wanderlog",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–10",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Croissants and sweet breads with lines that back up the quality claim.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Muffuletta — Central Grocery & Deli",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Chowhound",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Timeout",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees",
+        "i-food"
+      ],
+      "estCost": "$12–16 (quarter is plenty)",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Invented here in 1906 by Sicilian grocer Salvatore Lupo; the round Italian loaf stacked with cured meats, cheese, and olive salad that judges every muffuletta after it.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Gumbo — Dooky Chase's Restaurant",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food",
+        "i-political"
+      ],
+      "estCost": "$20–30",
+      "bestTimeOfDay": "Lunch",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Restaurant helmed for decades by \"Queen of Creole Cuisine\" Leah Chase, and a real civil rights-era meeting place beyond its food.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Sazerac — Sazerac Bar, Roosevelt Hotel",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "UponArriving",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$16–21",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Rye whiskey, Peychaud's Bitters, and absinthe — America's oldest cocktail, official cocktail of New Orleans since 2008.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Bananas Foster — Brennan's",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "TasteAtlas",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$16–20",
+      "bestTimeOfDay": "Dinner",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Tableside flambé dessert invented at Brennan's in 1951 by chef Paul Blangé, still the house signature.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "New Orleans-Style BBQ Shrimp — Pascal's Manale",
+      "categoryNum": 5,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Deep South Magazine",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "NPR",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$20–28",
+      "bestTimeOfDay": "Dinner",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Head-on shrimp in a rich black-pepper butter sauce, invented here in the mid-1950s and, despite the name, entirely unrelated to barbecue.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Crystal Hot Sauce",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "thatswhatshehad.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–8",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "The hot sauce locals actually reach for over Tabasco, made in New Orleans since the 1920s.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Peychaud's Bitters",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Axios",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$10–15",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "The bitters that built the Sazerac, invented by a French Quarter apothecary — a cocktail-themed gift with a direct whiskey-history tie.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Tony Chachere's / Slap Ya Mama",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Axios",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "alderhotel.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–10 each",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Shelf-stable Creole and Cajun seasoning blends that are genuine kitchen staples here, not tourist product.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "What It Bees Like Honey",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "shaeshea.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "$10–15/jar",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Urban beekeeper Shae Thomas harvests directly from hives in the Gentilly Woods neighborhood — genuinely in-city honey, not regional.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Zatarain's New-Orleans-in-a-Box",
+      "categoryNum": 6,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "alderhotel.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–6/box",
+      "bestTimeOfDay": "",
+      "durationMin": null,
+      "rating": null,
+      "note": "Gumbo, jambalaya, and red beans & rice packaged as shelf-stable mixes since 1889.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Congo Square",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-political",
+        "i-bees"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Where enslaved and free Black New Orleanians gathered on Sundays to play music, dance, and trade — the literal birthplace of the rhythms that became jazz.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Museum of Death",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "$15–20",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 60,
+      "rating": null,
+      "note": "Oddities collection including Dr. Kevorkian's Thanatron — the city's most concentrated horror/occult stop.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Rice Family Mausoleum / Lafayette Cemetery No. 1",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "beverlyboy.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror",
+        "i-books"
+      ],
+      "estCost": "Free–$20 (guided)",
+      "bestTimeOfDay": "Morning — better light, fewer crowds",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Anne Rice's resting place and the real-world set for jazz-funeral scenes in Interview with the Vampire and American Horror Story: Coven.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Carousel Bar, Hotel Monteleone",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "Expedia",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-drinks"
+      ],
+      "estCost": "$14–18/drink",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "The only rotating bar in the city, spinning since 1949, and the birthplace of the rye-whiskey Vieux Carré cocktail.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Jean Lafitte National Historical Park (Barataria Preserve)",
+      "categoryNum": 7,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "freetoursbyfoot.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-bees"
+      ],
+      "estCost": "Free",
+      "bestTimeOfDay": "Morning — cooler, more wildlife",
+      "durationMin": 180,
+      "rating": null,
+      "note": "26,000 free, boardwalked acres of bayou, swamp, and marsh 25 minutes south of downtown — alligators and free ranger-led tours included.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Fred Hampton Free Store",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Verite News",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "gnocc.net",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk",
+        "i-political",
+        "i-diy"
+      ],
+      "estCost": "Free/donation",
+      "bestTimeOfDay": "Evening for shows",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Mutual-aid free store, skate rink, and punk show venue named for the Black Panther chairman — explicitly \"the only all-ages venue in Greater New Orleans.\"",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Siberia",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–20",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Bar/venue self-described by regulars as a \"hardcore metal/punk refuge.\"",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Gasa Gasa",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Orbiting Punk",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–20",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Booking venue that's a longtime scene favorite among local punk and indie writers.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Saturn Bar",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–15",
+      "bestTimeOfDay": "Night",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Dive-bar institution with a long-running punk and garage booking history.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Midcity Ballroom",
+      "categoryNum": 8,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "NOLADIY.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15–20",
+      "bestTimeOfDay": "Night",
+      "durationMin": 180,
+      "rating": null,
+      "note": "Hosts touring hardcore/metal DIY bills, often presented by Louisiana Hardcore; the city's DIY show calendar and booking collective (Belly Up) live at noladiy.org alongside the Free Store.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Home Malone",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "homemalonenola.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$5–25",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "\"Where locals shop local\" — stationery and magnets by New Orleans artist Kristin Malone, plus local jewelry and ceramics.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Palace Market",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Lonely Planet",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–40",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Frenchmen St alley market of independent local artists and artisans — prints, jewelry, and NOLA-pun T-shirts.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dr. Bob's Folk Art",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Axios",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-horror"
+      ],
+      "estCost": "$20–100+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Outsider folk art from the artist behind the citywide \"Be Nice Or Leave\" signs — a genuinely only-in-New-Orleans souvenir.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Frenchmen Art Bazaar",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–40",
+      "bestTimeOfDay": "Evening",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Open-air market of local prints and crafts alongside the live-music strip.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Gallery Rinard",
+      "categoryNum": 9,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$10–40",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 30,
+      "rating": null,
+      "note": "Local prints gallery, including posters from Barkus, the city's dog Mardi Gras parade.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Community Workshop NOLA (The Workshop)",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Yelp",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "communityworkshopnola.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-political"
+      ],
+      "estCost": "Membership varies",
+      "bestTimeOfDay": "Weekday evenings",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Queer-led, female-founded cooperative makerspace with 24/7 member access and open community classes.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "NOLA Guitar Shop",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Reverb",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "nolaguitarshop.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy",
+        "i-punk"
+      ],
+      "estCost": "$0–500+",
+      "bestTimeOfDay": "Afternoon",
+      "durationMin": 45,
+      "rating": null,
+      "note": "Post-Katrina (2005) shop stocking guitars, amps, and Eurorack modular synthesizers — the closest thing here to a dedicated synth shop, with proceeds supporting youth music programs.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "FabLab NOLA (Delgado Community College)",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "dcc.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Free–$25 class fees",
+      "bestTimeOfDay": "Weekday",
+      "durationMin": 120,
+      "rating": null,
+      "note": "Laser cutters, CNC routers, a vinyl cutter, and 3D printers, open to community members and small businesses, not just students.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Strange Guitarworks",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "strangeguitarworks.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "$20–150+",
+      "bestTimeOfDay": "Weekday",
+      "durationMin": null,
+      "rating": null,
+      "note": "Full-service guitar repair and luthier shop doing everything from restringing to electronics work and full restorations.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "NolaWorks",
+      "categoryNum": 10,
+      "source": {
+        "type": "retro-guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "Facebook",
+            "url": null
+          }
+        ]
+      },
+      "status": "retroactive-recommendation",
+      "interestTags": [
+        "i-diy"
+      ],
+      "estCost": "Membership-based",
+      "bestTimeOfDay": "Weekday",
+      "durationMin": null,
+      "rating": null,
+      "note": "General wood/auto/metal makerspace with classes — honest evidence that the city's maker scene leans fabrication over electronics.",
+      "verifiedOpen": null
+    }
+  ],
+  "popCulture": {
+    "filmedHere": [
+      {
+        "title": "Interview with the Vampire",
+        "year": 1994,
+        "locationVisited": null,
+        "visitNote": "Anne Rice's own cemetery of choice; provided much of the film's Gothic atmosphere and has appeared in numerous other productions since. General Gothic backdrop for the film's 18th-century New Orleans sequences.",
+        "photoId": null
+      },
+      {
+        "title": "American Horror Story: Coven",
+        "year": 2013,
+        "locationVisited": null,
+        "visitNote": "Private residence — exterior view only. Named for the historical Madame LaLaurie, whose house is one of the most infamous in the French Quarter. Site of a jazz-funeral scene in Episode 10. Featured location for several Coven scenes.",
+        "photoId": null
+      },
+      {
+        "title": "12 Years a Slave",
+        "year": 2013,
+        "locationVisited": null,
+        "visitNote": "One of several New Orleans locations used alongside River Road plantations (Felicity Plantation). Historic Garden District hotel used as a filming location.",
+        "photoId": null
+      },
+      {
+        "title": "NCIS: New Orleans",
+        "year": 2014,
+        "locationVisited": null,
+        "visitNote": "Recurring background location across the series' run (2014–2021). Used as a recurring backdrop.",
+        "photoId": null
+      },
+      {
+        "title": "The Curious Case of Benjamin Button",
+        "year": 2008,
+        "locationVisited": null,
+        "visitNote": "Where the bulk of the film's nursing-home scenes were shot; the house has since sold privately.",
+        "photoId": null
+      }
+    ],
+    "bornHere": [
+      {
+        "name": "Louis Armstrong",
+        "relevance": "music",
+        "note": "Jazz's foundational figure, born and raised in New Orleans; Congo Square and Louis Armstrong Park carry his legacy directly."
+      },
+      {
+        "name": "Anne Rice",
+        "relevance": "horror-literature",
+        "note": "Author of The Vampire Chronicles (Interview with the Vampire, 1976); drew directly on New Orleans cemeteries and Catholic upbringing for her Gothic fiction. Buried near Metairie/Lake Lawn Cemetery."
+      },
+      {
+        "name": "Truman Capote",
+        "relevance": "literature",
+        "note": "Southern Gothic novelist (In Cold Blood, Breakfast at Tiffany's); born in New Orleans but raised largely in Alabama."
+      },
+      {
+        "name": "Jelly Roll Morton",
+        "relevance": "music",
+        "note": "Composer and pianist who claimed to have \"invented jazz\" in 1902; foundational early-jazz figure."
+      },
+      {
+        "name": "Phil Anselmo",
+        "relevance": "music",
+        "note": "Hardcore-adjacent heavy metal vocalist (Pantera, Down, Superjoint); direct connection to the traveler's punk/hardcore interest."
+      },
+      {
+        "name": "Big Freedia",
+        "relevance": "music",
+        "note": "Bounce-music artist and queer icon, a distinctly New Orleans musical export."
+      }
+    ]
+  },
+  "favorites": {
+    "meal": {
+      "what": "",
+      "where": "",
+      "note": ""
+    },
+    "coffee": {
+      "what": "",
+      "where": ""
+    },
+    "site": {
+      "what": "",
+      "note": ""
+    },
+    "newFood": "",
+    "bestStranger": "",
+    "weirdestThing": ""
+  },
+  "fieldNotes": {
+    "coffeePriceUsd": null,
+    "eggsDozenUsd": null,
+    "parkingEase": null,
+    "tapWater": null,
+    "strangerFriendliness": null,
+    "bartenderAskedWhereFrom": null,
+    "firstUnpromptedConversation": "",
+    "accentNote": "",
+    "roadQuality": null,
+    "yardSignRatio": ""
+  },
+  "spend": null,
+  "photos": {
+    "hero": null,
+    "gallery": [],
+    "serialSubjects": {}
+  }
+}

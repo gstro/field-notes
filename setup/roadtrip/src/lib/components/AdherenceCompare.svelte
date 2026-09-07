@@ -11,8 +11,9 @@
 	const pct = (n: number) => n.toFixed(1);
 
 	// The interlude group exists so New Orleans isn't silently filtered out of the
-	// chart once it enters adherence.json — a city dropping off a comparison
-	// without saying so is the failure this site keeps correcting.
+	// chart — it's an interlude city (no guide at the time) in adherence.json,
+	// not trip1/trip2, and a city dropping off a comparison without saying so is
+	// the failure this site keeps correcting.
 	const groups = $derived([
 		{ trip: 'trip1', label: 'Trip 1 · self-curated', rows: rows.filter((r) => r.trip === 'trip1') },
 		{ trip: 'interlude', label: 'Interlude · no guide at the time', rows: rows.filter((r) => r.trip === 'interlude') },

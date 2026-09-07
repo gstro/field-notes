@@ -24,11 +24,11 @@ Full details in [`design/design.md`](design/design.md).
 | [`design/rejection-log.md`](design/rejection-log.md) | Rejected alternatives and non-goals with rationale |
 | [`design/implementation-plan.md`](design/implementation-plan.md) | Build milestones and the data-reconstruction audit |
 | [`design/roadmap.md`](design/roadmap.md) | Floated-but-unendorsed feature ideas |
-| [`setup/roadtrip/`](setup/roadtrip/) | **The site** — a build-verified SvelteKit scaffold with the design tokens, typed schema, components, and sample Birmingham data |
+| [`setup/roadtrip/`](setup/roadtrip/) | **The site** — a build-verified SvelteKit scaffold with the design tokens, typed schema, components, and 15 of 18 cities' real transcribed data |
 | [`setup/roadtrip-setup-guide.md`](setup/roadtrip-setup-guide.md) | Verified local setup, GitHub, Vercel, and ImageKit deployment steps, plus the data-entry workflow |
-| [`Itineraries/`](Itineraries/) | The original trip-2 HTML city guides (Shreveport → Philadelphia corridor, May 2026) and the civil-rights-corridor companions — the source material for trip-2 recommendation data |
-| [`mockups/`](mockups/) | Static HTML mockups for the landing page and city page template, since ported into Svelte components |
-| [`data/`](data/) | Raw reconstruction data (currently a speed-test export with per-city timestamps/coordinates) |
+| [`guides/`](guides/) | The original HTML city guides (trip-2, Shreveport → Philadelphia corridor, plus bulk-generated trip-1 retro guides) and the civil-rights-corridor companions — the source material for recommendation data, paired with machine-generated `*-guide.json` |
+| [`mockups/`](mockups/) | Static HTML mockups for the landing page and city page template, since ported into Svelte components (one exception — see `design/rejection-log.md` R18) |
+| [`data/`](data/) | Raw reconstruction data — the Google Takeout Maps analysis, saved-lists export, and reviewed overrides that feed `tools/join-takeout.mjs` and `tools/ingest-guides.mjs` |
 
 ## The site
 

@@ -11,6 +11,10 @@
 	// Every figure on this page is derived from committed data, never typed in.
 	// A colophon that hardcoded its own numbers would be the exact failure it
 	// exists to disclose.
+	// `built` doubles as "cities with a guide" below: guides/*.json and
+	// src/lib/data/cities/*.json are an exact 1:1 match, so the glob count is
+	// also the guide count. If that invariant ever breaks, split the two
+	// figures rather than let one silently answer the wrong question (D27).
 	const built = cities.length;
 	const total = cityIndex.length;
 	const recs = cities.flatMap((c) => c.recommendations);
@@ -26,7 +30,7 @@
 	// An unweighted mean over the per-city rows is a DIFFERENT statistic and
 	// lands a few tenths off — deriving one here would misreport the site's
 	// central finding.
-	const cmp = adherence.comparison as Record<string, { visitsThatWereOnListPct: number }>;
+	const cmp = adherence.comparison as { trip1: { visitsThatWereOnListPct: number }; trip2: { visitsThatWereOnListPct: number } };
 </script>
 
 <svelte:head><title>Colophon — The Long Way Home</title></svelte:head>
@@ -64,7 +68,7 @@
 		<h2>What the site is built from</h2>
 		<dl>
 			<div><dt>City guides</dt><dd>
-				14 machine-generated 10-category guides, one per city, built in 2026 from Atlas
+				{built} machine-generated 10-category guides, one per city, built in 2026 from Atlas
 				Obscura, Eater, Time&nbsp;Out, TasteAtlas and web search. {recs.length} recommendations
 				across {built} of {total} cities.
 			</dd></div>
@@ -101,6 +105,12 @@
 
 	<section>
 		<h2>Error bars</h2>
+		<!-- The "Adherence is directions-only", "Saves cannot be dated", and "Interest
+		     categories are keyword-tagged" entries below restate
+		     adherence.comparison.methodNotes (copied verbatim from the corpus by
+		     tools/join-takeout.mjs) in fuller prose, tied to this page's own
+		     numbers. That JSON array is the source of record if these ever drift —
+		     see design/m5c-deferred-threads.md. -->
 		<dl>
 			<div><dt>Visit counts are floors, not rates</dt><dd>
 				The public export truncates each city to its top ~8–14 places: 151 entries against

@@ -95,3 +95,9 @@ A five-point rating on every recommendation, for finer-grained superlatives (ran
 The site's original signature question: trip 1 as unguided instinct travel, trip 2 as curated travel, with the retro guides as a control group measuring whether curation changes where you end up. **Rejected on evidence, not preference** — `data/maps-trip-analysis-public.json` shows every trip-1 city had a 32–42 place self-made Google Maps list (252 saved places across trip 1). There was no unguided condition to compare against; the framing described an experiment that never ran.
 
 Replaced by self-curation vs sourced curation (D22), which the same data answers directly: list-following barely moved (47.4% → 52.5%), but content inverted (books ×6.9, museums ×2.9, records 0→24). Recorded here because the instinct framing is intuitive, is still written into older drafts, and would otherwise get reintroduced — every trip-1 page rendering a "hit by instinct" count is a symptom of it.
+
+### R18 — `InterestDiptych.svelte` as the trip1→trip2 interest-mix view
+
+`mockups/InterestDiptych.svelte` (plus its `.props.json`) was the original design for comparing interest-category mix across trips — never ported to the live site. Superseded rather than resurrected: M5a shipped `CurationSlope.svelte` on `/data` for the same comparison, reading `comparison.interestMix` verbatim per D22/D27.
+
+The diptych's one feature `CurationSlope` doesn't have — a hover reveal of the top direction-targets per category per trip — stays unbuilt. Its own doc comment says it needs a `category_places.json` that doesn't exist anywhere in the repo; building it is a new data-reconstruction pass, not a component port. Recorded so the file doesn't keep reading as an open porting task.

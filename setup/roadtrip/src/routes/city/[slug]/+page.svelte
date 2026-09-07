@@ -15,10 +15,10 @@
 	// "Was this city covered by a retro guide, or by a guide that existed at the
 	// time?" Derived from the DATA, not from which trip the city belongs to.
 	// It keyed on `tripId === 'west'` until M4a, which happened to be right for
-	// all 14 cities but would mislabel New Orleans the moment its retro guide
-	// landed: an interlude that had no guide at the time, so retro-guided, yet
-	// not `west`. `source.type` is set by the transform from the guide's own
-	// `tripStatus`, so it answers the actual question.
+	// all 14 cities of that era but would have mislabelled New Orleans once its
+	// retro guide landed: an interlude that had no guide at the time, so
+	// retro-guided, yet not `west`. `source.type` is set by the transform from
+	// the guide's own `tripStatus`, so it answers the actual question.
 	const isRetro = $derived(c.recommendations.some((r) => r.source.type === 'retro-guide'));
 	type Place = { name: string; count: number; categories: string[]; provenance: string };
 	const visitedHere = $derived((visited.cities as Record<string, Place[]>)[c.id] ?? []);
@@ -32,6 +32,16 @@
 		{ west: 'Chapter I · The Interstate West', nola: 'Interlude · Mardi Gras', south: 'Chapter II · The Civil Rights Corridor' }[c.tripId]
 	);
 	const fav = $derived(c.favorites as Record<string, { what?: string; where?: string; note?: string } | string>);
+	// D9: nothing renders for missing data — not a heading over empty content.
+	// Mirrors Fingerprint.svelte's own `hasData` (some axis non-null); fingerprint
+	// is currently empty in every city pending O4's one-sitting scoring session.
+	const hasFingerprint = $derived(Object.values(c.fingerprint ?? {}).some((v) => v != null));
+	const hasFavorites = $derived(
+		(['meal', 'coffee', 'site'] as const).some((k) => {
+			const f = fav[k];
+			return f && typeof f === 'object' && (f.what || f.where);
+		})
+	);
 </script>
 
 <svelte:head><title>{c.name}, {c.state} — The Long Way Home</title></svelte:head>
@@ -50,27 +60,33 @@
 		</div>
 	</header>
 
-	<section class="row fp-row">
-		<div>
-			<p class="panel-label">City Fingerprint</p>
-			<Fingerprint fingerprint={c.fingerprint} />
-		</div>
-		<div>
-			<p class="panel-label">Favorites</p>
-			<div class="fav-grid">
-				{#each [['Meal', fav.meal], ['Coffee', fav.coffee], ['Site', fav.site]] as [label, f]}
-					{#if f && typeof f === 'object' && (f.what || f.where)}
-						<div class="fav">
-							<p class="f-cat">{label}</p>
-							{#if f.what}<p class="f-what">{f.what}</p>{/if}
-							{#if f.where}<p class="f-where">{f.where}</p>{/if}
-							{#if f.note}<p class="f-note">{f.note}</p>{/if}
-						</div>
-					{/if}
-				{/each}
-			</div>
-		</div>
-	</section>
+	{#if hasFingerprint || hasFavorites}
+		<section class="row fp-row">
+			{#if hasFingerprint}
+				<div>
+					<p class="panel-label">City Fingerprint</p>
+					<Fingerprint fingerprint={c.fingerprint} />
+				</div>
+			{/if}
+			{#if hasFavorites}
+				<div>
+					<p class="panel-label">Favorites</p>
+					<div class="fav-grid">
+						{#each [['Meal', fav.meal], ['Coffee', fav.coffee], ['Site', fav.site]] as [label, f]}
+							{#if f && typeof f === 'object' && (f.what || f.where)}
+								<div class="fav">
+									<p class="f-cat">{label}</p>
+									{#if f.what}<p class="f-what">{f.what}</p>{/if}
+									{#if f.where}<p class="f-where">{f.where}</p>{/if}
+									{#if f.note}<p class="f-note">{f.note}</p>{/if}
+								</div>
+							{/if}
+						{/each}
+					</div>
+				</div>
+			{/if}
+		</section>
+	{/if}
 
 	<!-- Two questions, two sources, two panels. Conflating them is what produced
 	     the `0 / N` defect: the guide hit rate is a floor derived from a

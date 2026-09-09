@@ -6,7 +6,7 @@ Per-milestone doc, as `implementation-plan.md` calls for. Holds the findings tha
 
 ## Why DC, not Birmingham
 
-`Itineraries/` turned out to hold two different guide formats. `dc-city-guide.html` is the category-first checklist the schema was designed around (9 categories × 45 items, matching `registry.ts` near-verbatim). `birmingham.html` and five other per-city files are day calendars badged Food/Music/Culture/Nature/Drinks/Film — Birmingham's guide has zero bookstores, record stores, or makerspaces, and would have populated 2 of 10 categories. DC uniquely has both formats (`washington-dc.html` is its 7-day calendar companion), so transcribing it exercises the checklist path and proves the day-calendar path maps, in one city. Birmingham stays the sample page, untouched, for M3.
+`Itineraries/` (since renamed `guides/`) turned out to hold two different guide formats. `dc-city-guide.html` is the category-first checklist the schema was designed around (9 categories × 45 items, matching `registry.ts` near-verbatim). `birmingham.html` and five other per-city files are day calendars badged Food/Music/Culture/Nature/Drinks/Film — Birmingham's guide has zero bookstores, record stores, or makerspaces, and would have populated 2 of 10 categories. DC uniquely has both formats (`washington-dc.html` is its 7-day calendar companion), so transcribing it exercises the checklist path and proves the day-calendar path maps, in one city. Birmingham stays the sample page, untouched, for M3.
 
 ## Source join
 

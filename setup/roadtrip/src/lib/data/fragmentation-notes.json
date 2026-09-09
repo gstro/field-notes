@@ -75,6 +75,11 @@
       "kind": "none",
       "mechanism": null,
       "sourceNote": "Figures are approximate estimates pending Census reconciliation, consistent with the caveat practice established in the Oklahoma City and Dallas JSON files."
+    },
+    "new-orleans-la": {
+      "kind": "trend",
+      "mechanism": "New Orleans's population has fluctuated significantly since Hurricane Katrina (2005), leaving the current figure less settled than most cities' estimates.",
+      "sourceNote": "General-knowledge estimates pending Census API reconciliation, per standard practice for all city files. New Orleans elevation and population figures are unusually volatile even by that standard — much of the city sits at or below sea level, and population has fluctuated significantly since Hurricane Katrina (2005), so these numbers should be treated as rough until replaced."
     }
   }
 }

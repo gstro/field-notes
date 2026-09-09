@@ -441,7 +441,14 @@ function main() {
 		generated: maps.generated,
 		source: 'Google Takeout Maps activity; computed pre-sanitization over the full corpus',
 		note: 'Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json — do not recompute.',
-		comparison: { trip1: pick(maps.comparison.trip1), trip2: pick(maps.comparison.trip2) },
+		comparison: {
+			trip1: pick(maps.comparison.trip1),
+			trip2: pick(maps.comparison.trip2),
+			// Method caveats, copied verbatim — the citation-as-rendering rule
+			// (CLAUDE.md) applies to how the comparison was computed, not just to
+			// individual recs. Rendered on the colophon.
+			methodNotes: maps.comparison.methodNotes
+		},
 		cities: adherence
 	}, null, 2) + '\n');
 	console.log(`wrote ${ADHERENCE_PATH} (${Object.keys(adherence).length} cities)`);

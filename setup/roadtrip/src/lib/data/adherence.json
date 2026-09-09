@@ -36,7 +36,12 @@
         "horror_occult": 6,
         "outdoors": 17
       }
-    }
+    },
+    "methodNotes": [
+      "Interest categories keyword-tagged on direction-request names; a rough instrument (uninformatively-named places tag as nothing).",
+      "Adherence is directions-only. place_view matches were excluded as circular: browsing a saved list generates place_view entries for its items.",
+      "Per-item save timestamps do not exist in the Takeout export, and list files were edited during trips (mtimes fall inside visit windows), so pre-trip saves cannot be perfectly separated from in-situ saves."
+    ]
   },
   "cities": {
     "albuquerque-nm": {

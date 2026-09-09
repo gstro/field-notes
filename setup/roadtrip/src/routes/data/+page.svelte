@@ -46,7 +46,8 @@
 	// D22: the corpus-wide comparison is authoritative and read verbatim. An
 	// average over the per-city rows above is a DIFFERENT statistic and would
 	// misreport the site's central finding.
-	const cmp = adherence.comparison as Record<string, { visitsThatWereOnListPct: number; savedListPlaces: number; interestMix?: Record<string, number> }>;
+	type ComparisonSide = { visitsThatWereOnListPct: number; savedListPlaces: number; interestMix?: Record<string, number> };
+	const cmp = adherence.comparison as { trip1: ComparisonSide; trip2: ComparisonSide };
 	const mix = { trip1: cmp.trip1?.interestMix ?? {}, trip2: cmp.trip2?.interestMix ?? {} };
 
 	const provTotal = Object.values(visited.totals as Record<string, number>).reduce((a, b) => a + b, 0);

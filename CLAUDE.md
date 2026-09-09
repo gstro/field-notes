@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-"The Long Way Home" (working title) — a retrospective website for a Portland → Austin → New Orleans → Philadelphia relocation arc, plus everything around it. The site itself lives in `setup/roadtrip/`; the rest of the repo is design docs (`design/`), the original trip-2 HTML city guides that are source material for data entry (`Itineraries/`), static HTML mockups already ported to Svelte (`mockups/`), and raw reconstruction data (`data/`).
+"The Long Way Home" (working title) — a retrospective website for a Portland → Austin → New Orleans → Philadelphia relocation arc, plus everything around it. The site itself lives in `setup/roadtrip/`; the rest of the repo is design docs (`design/`), the original HTML city guides that are source material for data entry (`guides/` — trip-2 guides plus bulk-generated trip-1 retro guides, both paired with a machine-generated `*-guide.json`), static HTML mockups already ported to Svelte (`mockups/`, with one exception — see `design/rejection-log.md` R18), and raw reconstruction data (`data/`).
 
 ## Commands
 
@@ -46,8 +46,8 @@ These are decided (see `design/decision-log.md` for rationale; don't re-litigate
 
 ## Design docs
 
-`design/` holds five docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions D1–D15 + open questions O1–O5), `rejection-log.md` (rejected alternatives R1–R13), `implementation-plan.md` (milestones M0–M7), `roadmap.md` (unendorsed ideas). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan.
+`design/` holds five docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions, currently through D27, + open questions O4/O5), `rejection-log.md` (rejected alternatives, currently through R18), `implementation-plan.md` (milestones M0–M7, each with its own per-milestone doc once started), `roadmap.md` (unendorsed ideas). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan.
 
 ## Current status
 
-Schema frozen; landing page and city template built; the only city JSON is sample Birmingham data — **all displayed numbers are sample data pending reconstruction**. Trip chapter pages, data deep-dive, superlatives, and colophon are unbuilt or stubs.
+Schema frozen; landing page, city template, three chapter pages, the data deep-dive, and the colophon are built. 15 of 18 cities have real transcribed content (Birmingham's sample-data placeholder was replaced in M3); `portland-or`, `austin-tx`, `philadelphia-pa` remain "data pending" — they're origin/anchor/home waypoints with no guide, not a backlog. Superlatives is still a stub, blocked on a manual would-return-rating pass (`rating` is empty dataset-wide). See `design/implementation-plan.md`'s "Current state" line for the up-to-date milestone picture — this file is a slower-moving overview, not the source of truth for it.

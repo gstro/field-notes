@@ -6,6 +6,7 @@
 	import FieldNotes from '$lib/components/FieldNotes.svelte';
 	import PopCulture from '$lib/components/PopCulture.svelte';
 	import Adherence from '$lib/components/Adherence.svelte';
+	import InterestComposition from '$lib/components/InterestComposition.svelte';
 	import VisitedPlaces from '$lib/components/VisitedPlaces.svelte';
 	import cityIndex from '$lib/data/cityIndex.json';
 	import visited from '$lib/data/visited.json';
@@ -107,6 +108,10 @@
 		<div>
 			<p class="panel-label">The Fragmentation Gap</p>
 			<FragmentationBar population={c.population} />
+		</div>
+		<div>
+			<p class="panel-label">What the Guide Was Made Of</p>
+			<InterestComposition recommendations={c.recommendations} />
 		</div>
 	</section>
 

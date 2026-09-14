@@ -433,6 +433,12 @@ function main() {
 		cities: o.cities, cityDays: o.cityDays, savedListPlaces: o.savedListPlaces,
 		uniqueDirectionTargets: o.uniqueDirectionTargets, listConversionPct: o.listConversionPct,
 		visitsThatWereOnListPct: o.visitsThatWereOnListPct,
+		// Searches per direction request, and distinct places reached per city-day.
+		// The first is the improvisation measure (1.19 → 0.99); the second is the
+		// control that keeps it honest — if both had fallen, the story would be
+		// "did less", not "searched less". Verbatim; the page never re-derives them.
+		searchToDirectionsRatio: o.searchToDirectionsRatio,
+		uniquePlacesPerCityDay: o.uniquePlacesPerCityDay,
 		// The interest mix is the D22 content inversion — the site's central
 		// finding. Carried verbatim so the chart never re-derives it.
 		interestMix: o.interestMix
@@ -441,6 +447,10 @@ function main() {
 		generated: maps.generated,
 		source: 'Google Takeout Maps activity; computed pre-sanitization over the full corpus',
 		note: 'Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json — do not recompute.',
+		// Corpus scale, carried so any page stating it cites the real window
+		// rather than a number typed into prose.
+		windowAnalyzed: maps.windowAnalyzed,
+		entriesInWindow: maps.entriesInWindow,
 		comparison: {
 			trip1: pick(maps.comparison.trip1),
 			trip2: pick(maps.comparison.trip2),

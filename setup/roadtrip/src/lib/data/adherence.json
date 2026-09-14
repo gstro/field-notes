@@ -2,6 +2,11 @@
   "generated": "2026-07-19",
   "source": "Google Takeout Maps activity; computed pre-sanitization over the full corpus",
   "note": "Authoritative per D22. Copied verbatim from maps-trip-analysis-public.json — do not recompute.",
+  "windowAnalyzed": [
+    "2025-09-01",
+    "2026-07-18"
+  ],
+  "entriesInWindow": 26779,
   "comparison": {
     "trip1": {
       "cities": 7,
@@ -10,6 +15,8 @@
       "uniqueDirectionTargets": 253,
       "listConversionPct": 47.2,
       "visitsThatWereOnListPct": 47.4,
+      "searchToDirectionsRatio": 1.19,
+      "uniquePlacesPerCityDay": 5.4,
       "interestMix": {
         "film": 7,
         "museums_history": 15,
@@ -27,6 +34,8 @@
       "uniqueDirectionTargets": 297,
       "listConversionPct": 40.4,
       "visitsThatWereOnListPct": 52.5,
+      "searchToDirectionsRatio": 0.99,
+      "uniquePlacesPerCityDay": 5.2,
       "interestMix": {
         "food": 69,
         "records_music": 24,

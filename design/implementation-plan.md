@@ -2,7 +2,7 @@
 
 High-level build plan for the design in [`design.md`](design.md), grouped by milestones. Each milestone gets its own detailed doc when it starts; this doc holds just enough to build accurately from later. Undecided questions that gate milestones are tracked as O-numbers in [`decision-log.md`](decision-log.md#open-questions-undecided).
 
-## Current state (as of M5c deferred threads, Sep 2026)
+## Current state (as of M5d, Sep 2026)
 
 Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · **colophon and data page built** ([M3.7](m37-colophon.md), [M5a](m5a-data-page.md)); city pages now also render where the days actually went ([M5b](m5b-visited-places.md)); **three chapter pages built** ([M4a](m4a-chapter-pages.md)); superlatives still a stub · **15 of 18 cities built** (`portland-or`, `austin-tx`, `philadelphia-pa` — origin, anchor, home — remain "data pending"; New Orleans ingested [`0c2e074`](https://github.com/gstro/field-notes/commit/0c2e074), seam closed in [M5c](m5c-deferred-threads.md)) — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (50 recs / 44 venues from the Takeout join across 769 recommendations) with the authoritative curation-adherence rates rendered verbatim from `perCityAdherence`, never re-derived; **no surface renders an unmeasured number** (M3.6: DC regenerated from its guide, all dummy statuses/ratings/placeholder strings gone; unsourced landing figures marked "not yet reconstructed") · `rating` is now **empty dataset-wide**, which blocks M6 — see below · all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null (the city-page panels for the empty ones are now guarded rather than rendering orphan headings, per M5c) · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
 
@@ -81,6 +81,10 @@ Renders `topPlaces` for the first time: the most-navigated places per city, tagg
 
 Also removed one residence entry that had survived the export's own sanitization pass. **Outstanding: it remains in git history on a public repo** — scrubbing needs a force-push across merged PRs and is the user's call. Full findings: [`m5b-visited-places.md`](m5b-visited-places.md).
 
+## M5d — What curation displaced — done
+
+Renders the last unconsumed result in the analysis corpus: on-ground searching fell 1.19 → 0.99 searches per direction request (−16.8%) while distinct places per city-day held near flat at 5.4 → 5.2. The flat second measure is what makes the first meaningful — the same ground covered with materially less looking around. Deliberately a stat row rather than a fourth chart (four numbers; and the two measures are different scales, so one plot would mean a dual axis). Also carries `windowAnalyzed`/`entriesInWindow` so the page's provenance line is rendered rather than typed. Every field in the corpus's `comparison` object is now either rendered or has a recorded reason not to be. Full findings, including a flexbox bug that silently broke the shared axis: [`m5d-improvisation-finding.md`](m5d-improvisation-finding.md).
+
 ## M5c — Close deferred threads — done
 
 Closed the seam the NOLA ingest left open: New Orleans's `/data` fragmentation annotation (`fragmentation-notes.json`, dropped since the extraction pass in M5a predates NOLA), the colophon's typed-in `14` guide count (now derived, matching D27), and several stale "14 cities" comments across the codebase. Also fixed a rendering defect that predates NOLA — the city page's Fingerprint/Favorites headings rendered with no guard, so every one of the 15 cities showed two empty panel labels; both now hide until their data lands. Extended `tools/join-takeout.mjs` to carry `comparison.methodNotes` into `adherence.json`, though found on investigation that the colophon already states those caveats in its own prose — no duplicate added. Full findings: [`m5c-deferred-threads.md`](m5c-deferred-threads.md).
@@ -107,7 +111,7 @@ DC regenerated from its guide (ending the two-provenance split and its dummy sta
 
 ## M5 — Data deep-dive page — **partially shipped ([M5a](m5a-data-page.md))**
 
-**Shipped:** `/data` is a real page carrying the fragmentation comparison (15 of 18 cities, annotated with each city's boundary mechanism or population trend — New Orleans's annotation added in [M5c](m5c-deferred-threads.md)), the D22 curation inversion, and per-city adherence. Charts are hand-rolled, **not LayerChart** — see [D25](decision-log.md#d25-hand-rolled-charts-no-charting-dependency), which supersedes that part of this milestone's original spec.
+**Shipped:** `/data` is a real page carrying the fragmentation comparison (15 of 18 cities, annotated with each city's boundary mechanism or population trend — New Orleans's annotation added in [M5c](m5c-deferred-threads.md)), the D22 curation inversion, what curation displaced ([M5d](m5d-improvisation-finding.md)), and per-city adherence. Charts are hand-rolled, **not LayerChart** — see [D25](decision-log.md#d25-hand-rolled-charts-no-charting-dependency), which supersedes that part of this milestone's original spec.
 
 **Still gated on M0:** prices time capsule (`prices.json`), spend by city, and driving timelines. All three are stated as absent on the page rather than faked.
 

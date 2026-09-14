@@ -2,6 +2,7 @@
 	import FragmentationCompare from '$lib/components/FragmentationCompare.svelte';
 	import CurationSlope from '$lib/components/CurationSlope.svelte';
 	import AdherenceCompare from '$lib/components/AdherenceCompare.svelte';
+	import ImprovisationShift from '$lib/components/ImprovisationShift.svelte';
 	import cityIndex from '$lib/data/cityIndex.json';
 	import adherence from '$lib/data/adherence.json';
 	import fragNotes from '$lib/data/fragmentation-notes.json';
@@ -46,11 +47,20 @@
 	// D22: the corpus-wide comparison is authoritative and read verbatim. An
 	// average over the per-city rows above is a DIFFERENT statistic and would
 	// misreport the site's central finding.
-	type ComparisonSide = { visitsThatWereOnListPct: number; savedListPlaces: number; interestMix?: Record<string, number> };
+	type ComparisonSide = {
+		visitsThatWereOnListPct: number;
+		savedListPlaces: number;
+		interestMix?: Record<string, number>;
+		searchToDirectionsRatio: number | null;
+		uniquePlacesPerCityDay: number | null;
+	};
 	const cmp = adherence.comparison as { trip1: ComparisonSide; trip2: ComparisonSide };
 	const mix = { trip1: cmp.trip1?.interestMix ?? {}, trip2: cmp.trip2?.interestMix ?? {} };
 
 	const provTotal = Object.values(visited.totals as Record<string, number>).reduce((a, b) => a + b, 0);
+	// Corpus scale, carried in adherence.json rather than typed into the prose.
+	const [windowFrom, windowTo] = adherence.windowAnalyzed as [string, string];
+	const entries = (adherence.entriesInWindow as number).toLocaleString('en-US');
 </script>
 
 <svelte:head><title>The Data — The Long Way Home</title></svelte:head>
@@ -62,9 +72,9 @@
 		<p class="eyebrow">Analysis</p>
 		<h1>The Data</h1>
 		<p class="lede">
-			Three things the reconstruction can actually answer: what the two curation methods
-			changed, how closely either list was followed, and how much of each metro sits inside
-			its own city limits.
+			Four things the reconstruction can actually answer: what the two curation methods
+			changed, what they displaced, how closely either list was followed, and how much of
+			each metro sits inside its own city limits.
 		</p>
 	</header>
 
@@ -99,6 +109,24 @@
 		<p class="caveat">
 			Interest tags are keyword-matched on destination names — a rough instrument, and
 			places with uninformative names tag as nothing. Source: Google Takeout Maps activity.
+		</p>
+	</section>
+
+	<section>
+		<h2>What curation displaced</h2>
+		<p class="framing">
+			The content inverted, but the <i>behaviour</i> changed too — and in one direction only.
+			Searching while already on the ground fell by roughly a sixth, while the number of
+			distinct places a day actually reached stayed near flat. The guides answered the
+			question that searching used to answer; they did not add stops.
+		</p>
+		<ImprovisationShift trip1={cmp.trip1} trip2={cmp.trip2} />
+		<p class="caveat">
+			A ratio below 1 means more places were navigated to than searched for on the ground.
+			Both figures are corpus-wide and read verbatim. Drawn from {entries} Maps entries
+			between {windowFrom} and {windowTo}. That searching fell alongside a steady place
+			count is consistent with the list pre-answering it — but this is observational: no
+			part of the export records why a search did or didn't happen.
 		</p>
 	</section>
 

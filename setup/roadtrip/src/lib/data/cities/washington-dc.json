@@ -1725,6 +1725,443 @@
       "rating": null,
       "note": "Farewell dinner: Tail Up Goat (1827 Adams Mill Rd NW, Adams Morgan) — one of DC's most genuinely original restaurants: James Beard Award-winning, with a menu that defies simple categorization (Caribbean influence, mountain cooking, wood fire, local produce). The bread program is nationally recognized. Book well ahead for Saturday dinner. This is the meal that ends the road trip.",
       "verifiedOpen": null
+    },
+    {
+      "name": "Capitol Hill Books — 657 C St SE",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "capitolhillbooks-dc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books"
+      ],
+      "estCost": "$5–30",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Located directly across from Eastern Market, this Capitol Hill mainstay has been the neighborhood's go-to for used books since 1991. Expanded to a second floor; wandering through its many rooms is the point. Founder set a famously high standard for incoming stock.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mahogany Books — Anacostia",
+      "categoryNum": 1,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "mahoganybooks.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "Free browse",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Black-owned bookstore across the Anacostia River, selling books written by or for the African diaspora. Arriving from the civil rights corridor, this is the right final bookstore — community anchor, politically serious, stocked with authors you won't find at the chains. Worth the trip across the river.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Smash! Records — Adams Morgan",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "smashrecords.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$10–50",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "SMASH! opened in Georgetown in 1984 and has been the premier punk and alternative store in DC ever since — hanging tight through the rise and fall of the city's hardcore punk movement. Minor Threat, Bad Brains, all the kids keeping the spirit alive. Also stocks zines and vintage clothing.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Spin Time Records — Capitol Hill",
+      "categoryNum": 2,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "spintimerecords.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Takes its slogan \"the sounds of D.C.\" seriously, curating collections highlighting DC's unique contributions to genres as varied as punk and jazz. Located less than a mile from the Capitol Building. Natural pairing with any Mall visit. Less than 10 min walk from NMAAHC.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Lost Sock Roasters — Takoma / Brightwood Park",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "lostsockroasters.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–7",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Small-batch specialty roaster in the renovated historic Takoma Theater building, recognized by Food and Wine as Best Local Roaster and Best Drip Coffee in DC. Light to medium roasts, community-minded ownership. Worth the Metro ride north.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dua DC — Downtown",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "duadc.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–8",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "The first Indonesian specialty coffee shop in the nation's capital — each single-origin coffee comes from a different Indonesian island. Try the Kopi Susu (Indonesian latte with condensed milk). Handcrafted mugs from Naruna Ceramics on-site. Politically interesting ownership story.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Unido Coffee — Shaw",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "cafeunido.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–8",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Serves Panama Geisha beans from high-altitude volcanic-soil farms — rare and genuinely complex. Unido established direct relationships with local farmers in Panama before moving to DC in 2019; roasts locally. One of the most serious single-origin programs in the city.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Potter's House — Columbia Rd NW",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "pottershousedc.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food",
+        "i-books",
+        "i-political"
+      ],
+      "estCost": "$4–6",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "A coffee shop, nonprofit bookstore, and community gathering space operated since 1960 by the Church of the Saviour — one of the most politically radical Christian communities in America. A social justice institution that also serves good coffee. The most DC-specific coffee experience on this list.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Slipstream — Logan Circle",
+      "categoryNum": 3,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "joe.coffee — Slipstream listing",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$5–8",
+      "bestTimeOfDay": "evening",
+      "durationMin": null,
+      "rating": null,
+      "note": "One of the most respected specialty programs in the city — serious single-origin, knowledgeable staff. Transitions to a strong natural wine program evenings. Community programming with a political bent. Good food program too.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Ellē — Mt. Pleasant",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "eatatelle.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$4–10",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Guava turnovers, mudslide walnut cookies — small neighborhood café doing some of the most interesting pastry work in the city. Sip $6 lattes alongside freelancers in the cozy Mt. Pleasant space. Good full-day menu if you need to work.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Tango Pastry — H St NE",
+      "categoryNum": 4,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "tangopastry.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$3–8",
+      "bestTimeOfDay": "noon",
+      "durationMin": null,
+      "rating": null,
+      "note": "Argentine pastry, baked fresh daily — pillowy medialunas with dulce de leche or pastry cream, hand-made alfajor cookies, facturas with quince jam. If you haven't had a medialuna, run (don't walk). The most distinctive non-French pastry program in DC.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Mid-Atlantic Seasonal @ The Dabney — Blagden Alley",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "MICHELIN Guide — The Dabney",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$80–120/person",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Michelin-starred Chef Jeremiah Longhorne runs the most serious mid-Atlantic cooking in DC — hyper-seasonal, region-specific, Chesapeake watershed as a culinary tradition worth preserving. Late spring means ramps, morels, local oysters. One of the genuinely important meals on the route.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Peruvian Pollo a la Brasa @ El Pollo Rico — Arlington",
+      "categoryNum": 5,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "elpollorico.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-food"
+      ],
+      "estCost": "$12–18",
+      "bestTimeOfDay": "any",
+      "durationMin": 10,
+      "rating": null,
+      "note": "The no-frills Arlington institution that pioneered pollo a la brasa in the region — marinate, rotate, serve with aji sauce. DC's enormous Peruvian immigrant community made this a local staple. The line moves fast. Cash only. Cross the river for this one.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Dischord Records Back Catalog — direct or at Smash!",
+      "categoryNum": 6,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "dischord.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15–25/LP",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Ian MacKaye's Dischord Records has kept its entire catalog in print at fair prices since 1980 — Minor Threat, Fugazi, Rites of Spring, Embrace, Dag Nasty. The most principled label in American music history. Buy direct at dischord.com or pick up at Smash! Records. The definitive DC souvenir for punk.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Riggs Library — Georgetown University",
+      "categoryNum": 7,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "atlasobscura",
+            "label": "Atlas Obscura",
+            "url": null
+          },
+          {
+            "source": "web-search",
+            "label": "library.georgetown.edu",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "Free",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "A six-story Victorian Gothic cast-iron interior that looks like a cathedral crossed with a steampunk fever dream — one of the most beautiful interior spaces in DC that most visitors never see. Managed by the university President’s office for its own functions rather than open for general visitation, so check Georgetown’s access rules before going; best attempted on a weekday.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "The Howard Theatre — Shaw",
+      "categoryNum": 8,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "DC Historic Sites — Howard Theatre",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk",
+        "i-political"
+      ],
+      "estCost": "$20–50",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Built 1910, hosted Duke Ellington, Ella Fitzgerald, Billie Holiday, Chuck Brown. Restored and reopened 2012. One of the most historically significant Black music venues in America — the Lincoln Center of go-go and jazz. Especially meaningful at the end of the civil rights corridor. Check the touring calendar.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "National Building Museum Shop — Penn Quarter",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "nbm.org",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [],
+      "estCost": "$5–40",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "The museum shop carries architectural prints, DC map reproductions, and design-quality souvenirs that aren't mass-market tourist product. Good for a metro-map postcard or architectural lithograph. The museum itself is worth 30 min — the Great Hall is one of the most jaw-dropping interior spaces in DC.",
+      "verifiedOpen": null
+    },
+    {
+      "name": "Smash! Records Zines + Dischord Merch",
+      "categoryNum": 9,
+      "source": {
+        "type": "guide",
+        "citedFrom": [
+          {
+            "source": "web-search",
+            "label": "smashrecords.com",
+            "url": null
+          }
+        ]
+      },
+      "status": "unverified",
+      "interestTags": [
+        "i-punk"
+      ],
+      "estCost": "$15–40",
+      "bestTimeOfDay": "any",
+      "durationMin": null,
+      "rating": null,
+      "note": "Smash Records has shirts, zines, and unique DC hardcore merch — Dischord logo tees, punk flyer art, Minor Threat iconography. More honest than anything from a souvenir shop. DC hardcore is the city's most lasting cultural export; take a piece of it home that means something.",
+      "verifiedOpen": null
     }
   ],
   "popCulture": {

@@ -101,3 +101,13 @@ Replaced by self-curation vs sourced curation (D22), which the same data answers
 `mockups/InterestDiptych.svelte` (plus its `.props.json`) was the original design for comparing interest-category mix across trips — never ported to the live site. Superseded rather than resurrected: M5a shipped `CurationSlope.svelte` on `/data` for the same comparison, reading `comparison.interestMix` verbatim per D22/D27.
 
 The diptych's one feature `CurationSlope` doesn't have — a hover reveal of the top direction-targets per category per trip — stays unbuilt. Its own doc comment says it needs a `category_places.json` that doesn't exist anywhere in the repo; building it is a new data-reconstruction pass, not a component port. Recorded so the file doesn't keep reading as an open porting task.
+
+### R19 — A per-city navigated-interest module
+
+The obvious follow-on to [M5e](m5e-interest-composition.md): pair each city's *guide* interest composition with what was actually navigated to, from `visited.json`'s `interestTagCounts`. Rejected on the data, not on appetite.
+
+Three separate problems, any one of which would be enough. The two vocabularies **overlap on 2 of 8 tags** — only `books` and `food`; the guide axis has `diy`, `punk`, `political`, `drinks`, `bees`, the Maps axis has `coffee`, `film`, `museums_history`, `outdoors`, `records_music`. `interestTagCounts` sums **direction requests, not places** (Atlanta: 14 places, 52 tag-counts), so it has a different denominator than the guide composition's per-pick counts. And it is computed over `topPlaces`, truncated to the **8–14 most-navigated places per city** — Las Vegas totals 9 tag-counts in all.
+
+Rendered side by side these would read as one comparison while being three different measurements — the `0 / N` and unweighted-mean failure mode (D27) with better graphics. The underlying finding it was reaching for is already carried honestly by [M5b](m5b-visited-places.md)'s provenance split and [M5d](m5d-improvisation-finding.md).
+
+Revisit only with an untruncated per-city navigation set tagged against the *guide's* vocabulary — which is a re-derivation of the corpus, not a component.

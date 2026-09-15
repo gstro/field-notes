@@ -42,6 +42,8 @@ It is a transform *input* like `data/attendance-matches.json`, **not** a schema 
 37 M2 venues have no counterpart in the generated guide. A count isn't recoverable later; this list is. **15 carry citation labels recovered by M2's hand cross-referencing**, which is the part that stings — several are major DC institutions the generated guide simply doesn't cover.
 
 > **Update ([M3.7](m37-colophon.md)): the cited ones are back.** All 15 marked ✅ below were restored via `additionalRecommendations` (D24), minus one collapsed as a duplicate — 14 entries, DC now at 69 recs. Library of Congress and Bridge Street Books turned out to be in DC's `topPlaces` and are now confirmed visits. **The 22 unmarked entries remain dropped.**
+>
+> **Update ([M5f](m5f-dc-restorations.md)): 18 of those 22 are back; 4 stay out.** Each restored venue was verified against a named source and cited to it. Excluded for cause: **Petite Cerise** and **Saku Saku Flakerie** (the notes' rationale rests on a neighbourhood that is wrong — Shaw and upper-northwest respectively, not Georgetown and Capitol Hill), **Harper Macaw** (Union Market association and the cacao-sourcing claim both unverifiable), and **Capital City Mambo Sauce** (a true duplicate of the guide's own *Bottled Mumbo Sauce*, same category). Three further neighbourhood errors — Dua DC, The Potter's House, Tango Pastry — were corrected in the restored names. **DC is now 87 recs, which is close to the ~92 union this milestone rejected; that tension is flagged for the user, not settled.**
 
 **Bookstores**
 - ✅ Bridge Street Books — Georgetown *(cited: DC independent bookshop community)*

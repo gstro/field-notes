@@ -2,7 +2,7 @@
 
 High-level build plan for the design in [`design.md`](design.md), grouped by milestones. Each milestone gets its own detailed doc when it starts; this doc holds just enough to build accurately from later. Undecided questions that gate milestones are tracked as O-numbers in [`decision-log.md`](decision-log.md#open-questions-undecided).
 
-## Current state (as of M5d, Sep 2026)
+## Current state (as of M5e, Sep 2026)
 
 Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · **colophon and data page built** ([M3.7](m37-colophon.md), [M5a](m5a-data-page.md)); city pages now also render where the days actually went ([M5b](m5b-visited-places.md)); **three chapter pages built** ([M4a](m4a-chapter-pages.md)); superlatives still a stub · **15 of 18 cities built** (`portland-or`, `austin-tx`, `philadelphia-pa` — origin, anchor, home — remain "data pending"; New Orleans ingested [`0c2e074`](https://github.com/gstro/field-notes/commit/0c2e074), seam closed in [M5c](m5c-deferred-threads.md)) — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (50 recs / 44 venues from the Takeout join across 769 recommendations) with the authoritative curation-adherence rates rendered verbatim from `perCityAdherence`, never re-derived; **no surface renders an unmeasured number** (M3.6: DC regenerated from its guide, all dummy statuses/ratings/placeholder strings gone; unsourced landing figures marked "not yet reconstructed") · `rating` is now **empty dataset-wide**, which blocks M6 — see below · all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null (the city-page panels for the empty ones are now guarded rather than rendering orphan headings, per M5c) · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
 
@@ -80,6 +80,10 @@ The three-chapter arc finally has pages. Also pre-wired New Orleans's pipeline s
 Renders `topPlaces` for the first time: the most-navigated places per city, tagged three ways — 42 on the sourced guide, 85 on the self-made list, 23 found on the ground. Published guides account for the smallest share of actual navigation, sharpening D22. Kept deliberately out of `recommendations` so the hit-rate denominator stays honest ([D26](decision-log.md#d26-visited-places-are-their-own-surface-never-recommendations)); rec counts and every `≥N of M` are byte-identical to before.
 
 Also removed one residence entry that had survived the export's own sanitization pass. **Outstanding: it remains in git history on a public repo** — scrubbing needs a force-push across merged PRs and is the user's call. Full findings: [`m5b-visited-places.md`](m5b-visited-places.md).
+
+## M5e — What the guide was made of — done
+
+Renders the guides' 8-value cross-cutting interest axis for the first time — carried on 749 of 769 recommendations since M3, referenced in three docs, displayed nowhere. Per city, sorted, within-city shares only: tagging density varies too much between guides (OKC 2.27 tags per tagged rec against Boise's 1.12) for raw counts to be comparable across cities, so no cross-city ranking is offered. Food and DIY are a constant floor; the differentiator is the third slot — political history in DC/Jackson/New Orleans, horror in Richmond/Albuquerque, punk across the west. Also closes the schema hole M3 named: `interestTags` is now a typed union with labels in `registry.ts`, verified to fail `check` on an out-of-vocabulary value. Full findings: [`m5e-interest-composition.md`](m5e-interest-composition.md).
 
 ## M5d — What curation displaced — done
 

@@ -10,6 +10,15 @@ export type CitedSource =
 	| 'atlasobscura' | 'tasteatlas' | 'eater' | 'timeout'
 	| 'web-search' | 'local-tip' | 'self';
 
+// The guides' cross-cutting interest axis, orthogonal to the 10 categories.
+// Typed as a union rather than `string[]` so a guide inventing a ninth value
+// fails `npm run check` instead of silently rendering as an unlabelled tag —
+// the failure mode M3 hit when DC's vocabulary diverged unnoticed. Display
+// labels live in registry.ts (INTEREST_TAGS).
+export type InterestTag =
+	| 'i-food' | 'i-drinks' | 'i-books' | 'i-punk'
+	| 'i-diy' | 'i-political' | 'i-horror' | 'i-bees';
+
 export interface Citation {
 	source: CitedSource;
 	label: string | null; // real-world publication/site name when known, e.g. "nps.gov"; falls back to SOURCE_LABELS[source]
@@ -23,7 +32,7 @@ export interface Recommendation {
 	// sources (e.g. Atlas Obscura + a local paper) linking to two different places.
 	source: { type: 'guide' | 'retro-guide'; citedFrom: Citation[] };
 	status: RecStatus;
-	interestTags: string[];
+	interestTags: InterestTag[];
 	estCost: string;
 	bestTimeOfDay: string;
 	durationMin: number | null;

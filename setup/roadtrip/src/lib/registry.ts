@@ -21,6 +21,25 @@ export const SOURCE_LABELS: Record<string, string> = {
 	self: 'Found it myself'
 };
 
+// The guides' cross-cutting interest axis — the 8-value vocabulary every guide
+// tags recommendations against, orthogonal to the 10 CATEGORIES above (a record
+// shop is category 2; whether it reads as `i-punk` is a different question).
+//
+// Order is fixed and meaningful: it is the vocabulary's own order, not a ranking.
+// Nothing may sort by it. Typed as a union in types.ts so `npm run check` catches
+// a guide inventing a ninth value — M3 found DC's tags had silently diverged to a
+// 21-value set precisely because both sides were bare `string[]`.
+export const INTEREST_TAGS: Record<string, string> = {
+	'i-food': 'Food',
+	'i-drinks': 'Drinks',
+	'i-books': 'Books',
+	'i-punk': 'Punk & indie',
+	'i-diy': 'DIY & maker',
+	'i-political': 'Political history',
+	'i-horror': 'Horror & occult',
+	'i-bees': 'Bees'
+};
+
 // Trip-2 (sourced-curated) and trip-1 (retro) statuses render distinctly — schema rule.
 // Labels for the two trip-1 values and for `unverified` state PROVENANCE, never an
 // outcome (D3 as redefined in M3.5): nothing here may imply "didn't go" where the

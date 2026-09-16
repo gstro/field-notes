@@ -46,7 +46,14 @@
 	@keyframes fade { to { opacity: 0.55; } }
 	@media (prefers-reduced-motion: reduce) {
 		.route { animation: none; stroke-dashoffset: 0; }
-		.nola { opacity: 0.55; }
+		/* `animation: none` is belt-and-braces. Overriding opacity alone already
+		   neutralises the fade, because `@keyframes fade` declares only a `to`
+		   and its implicit `from` resolves to whatever opacity is in force —
+		   0.55 here, so it animates to itself. That is correct but load-bearing
+		   on an implicit value: adding a `from` to the keyframe later would
+		   silently reintroduce motion. Killing the animation outright removes
+		   the dependency. Opacity must stay set, or the spur renders invisible. */
+		.nola { animation: none; opacity: 0.55; }
 	}
 	.dot { fill: var(--dark3); stroke: var(--gold); stroke-width: 1.5; }
 	.dot.anchor { fill: rgba(200,90,0,0.25); stroke: var(--burnt); stroke-width: 2; }

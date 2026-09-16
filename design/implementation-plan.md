@@ -2,7 +2,7 @@
 
 High-level build plan for the design in [`design.md`](design.md), grouped by milestones. Each milestone gets its own detailed doc when it starts; this doc holds just enough to build accurately from later. Undecided questions that gate milestones are tracked as O-numbers in [`decision-log.md`](decision-log.md#open-questions-undecided).
 
-## Current state (as of M5f, Sep 2026)
+## Current state (as of M1.1 site-quality pass, Sep 2026)
 
 Schema frozen · scaffold build-verified · landing page and city template built (all components runes-mode: `ConstellationMap`, `StatStrip`, `Fingerprint`, `Waffle`, `RecommendationList`, `FragmentationBar`, `FieldNotes`, `PopCulture`) · **colophon and data page built** ([M3.7](m37-colophon.md), [M5a](m5a-data-page.md)); city pages now also render where the days actually went ([M5b](m5b-visited-places.md)); **three chapter pages built** ([M4a](m4a-chapter-pages.md)); superlatives still a stub · **15 of 18 cities built** (`portland-or`, `austin-tx`, `philadelphia-pa` — origin, anchor, home — remain "data pending"; New Orleans ingested [`0c2e074`](https://github.com/gstro/field-notes/commit/0c2e074), seam closed in [M5c](m5c-deferred-threads.md)) — recommendation content is real (transcribed from `guides/*-guide.json`) · **the thesis is self- vs sourced curation (D22), not instinct vs curation** · per-city visit data is a **confirmed floor** (50 recs / 44 venues from the Takeout join across 787 recommendations) with the authoritative curation-adherence rates rendered verbatim from `perCityAdherence`, never re-derived; **no surface renders an unmeasured number** (M3.6: DC regenerated from its guide, all dummy statuses/ratings/placeholder strings gone; unsourced landing figures marked "not yet reconstructed") · `rating` is now **empty dataset-wide**, which blocks M6 — see below · all whole-city qualitative fields (`vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere`) are still empty/null (the city-page panels for the empty ones are now guarded rather than rendering orphan headings, per M5c) · O1/O2/O3/O6 resolved (D16 public posture, D17 leg-ledger, D18 binary rating, D22 curation framing); O4/O5 remain open.
 
@@ -45,9 +45,13 @@ Reconstruction feasibility reference (E = exists, R = reconstructable, U = likel
 | Media | Photos + EXIF E (city assignment for free) · serial series partial — audit against the 7-subject list, accept gaps |
 | Calendar | DC itinerary E (25 events on Curated Events calendar) · other cities partial via calendar search + ticket emails |
 
-## M1 — Deploy v2 + template corrections — done (undocumented)
+## M1 — Deploy v2 + template corrections — done
 
-Deploy the current scaffold to Vercel; review the Birmingham sample template on mobile; run a corrections pass on whatever the review surfaces. Small, unblocks continuous deploys for everything after. `setup/roadtrip/vercel.json` confirms the deploy config landed; no dedicated doc or commit message names this milestone, so treat the mobile-review pass as unverified rather than reopening it without evidence either way.
+Deploy the current scaffold to Vercel; review the Birmingham sample template on mobile; run a corrections pass on whatever the review surfaces. `setup/roadtrip/vercel.json` confirms the deploy config landed. **The mobile pass is now verified** ([M1.1](m11-site-quality.md)): six routes × three viewports measured over the DevTools protocol, zero horizontal overflow — no longer a hedge.
+
+## M1.1 — Site-quality pass — done
+
+The first chunk to treat the site as a site rather than as data. **Per-route payload cut ~72–75%** (landing 142 → 35 KB gzipped) by giving the aggregate pages a derived `citySummary.json` instead of globbing the whole corpus, and splitting `/city/[slug]` into per-city chunks — every visitor had been downloading all 787 recommendations to read a headline. Rebuilt the `/superlatives` stub on the design system so it states why it is empty instead of promising a file that does not exist. **Two reported defects turned out not to exist** — a D15 reduced-motion violation and a mobile overflow, both "confirmed" from screenshots and both disproved by measurement. Rendered text is byte-identical to the prior build on every page but `/superlatives`. Full findings: [`m11-site-quality.md`](m11-site-quality.md).
 
 ## M2 — First real city (schema reality-check) — done, superseded
 

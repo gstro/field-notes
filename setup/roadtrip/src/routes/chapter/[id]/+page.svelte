@@ -20,8 +20,8 @@
 				id, name: idx.name, state: idx.state, nights: idx.nights,
 				role: idx.role ?? null,
 				built: data.builtIds.includes(id),
-				recs: city ? city.recommendations.length : 0,
-				confirmed: city ? city.recommendations.filter((r: { status: string }) => ['attended', 'attended-anyway'].includes(r.status)).length : 0
+				recs: city ? city.recCount : 0,
+				confirmed: city ? city.confirmedCount : 0
 			};
 		})
 	);

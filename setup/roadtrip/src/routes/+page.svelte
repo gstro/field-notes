@@ -7,8 +7,12 @@
 	import chapterMetaFile from '$lib/data/chapterMeta.json';
 	const chapterMeta = chapterMetaFile.chapters as Record<string, { num: string; blurb: string }>;
 
-	const cityModules = import.meta.glob('$lib/data/cities/*.json', { eager: true });
-	const built = new Set(Object.values(cityModules).map((m) => (m as { default: { id: string } }).default.id));
+	// Ids only — this page needs to know WHICH cities are built (D10: unbuilt
+	// ones render as non-linked "data pending"), never their contents. Reading
+	// the summary instead of globbing the corpus keeps ~670KB of recommendation
+	// prose out of the bundle a first-time visitor downloads.
+	import citySummary from '$lib/data/citySummary.json';
+	const built = new Set(citySummary.cities.map((c) => c.id));
 	const byId = Object.fromEntries(cityIndex.map((c) => [c.id, c]));
 
 	// Derived, so they cannot drift from the data: the arc's span from trips.json

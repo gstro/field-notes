@@ -440,6 +440,39 @@ function main() {
 	}
 	console.log(`overrides applied: ${appliedOverrides.length ? appliedOverrides.join(', ') : 'none'}`);
 
+	// Per-city rollups for the pages that need counts rather than content.
+	// Landing, colophon, /data and the chapter pages between them used to pull
+	// every city's full JSON into the client bundle — 787 recommendations with
+	// their notes — to compute a handful of totals. Only /city/[slug] needs a
+	// whole city. Derived here, never typed, so it cannot drift from the files
+	// it summarizes.
+	const summary = results
+		.map(({ city }) => {
+			const recs = city.recommendations;
+			const count = (...s) => recs.filter((r) => s.includes(r.status)).length;
+			return {
+				id: city.id,
+				name: city.name,
+				state: city.state,
+				tripId: city.tripId,
+				// cityProper/metro only. `population.note` is D23 authoring prose
+				// that no surface renders — shipping it to the browser would send
+				// the one field the site deliberately keeps unrendered.
+				population: { cityProper: city.population.cityProper, metro: city.population.metro },
+				recCount: recs.length,
+				confirmedCount: count('attended', 'attended-anyway'),
+				unknownCount: count('unverified', 'retroactive-recommendation'),
+				ratedCount: recs.filter((r) => r.rating !== null).length
+			};
+		})
+		.sort((a, b) => a.id.localeCompare(b.id));
+	const summaryPath = join(CITIES_DIR, '..', 'citySummary.json');
+	writeFileSync(summaryPath, JSON.stringify({
+		note: 'Derived from cities/*.json by tools/ingest-guides.mjs — do not edit. Counts only, so aggregate pages need not ship the whole corpus.',
+		cities: summary
+	}, null, 2) + '\n');
+	console.log(`wrote ${summaryPath} (${summary.length} cities)`);
+
 	// Emit the cross-listed report as a fenced block the M3 doc can quote.
 	const reportPath = join(ROOT, 'tools/.cross-listed-report.md');
 	writeFileSync(reportPath, `Cross-listed venue groups (${crossListedReport.length}):\n\n${crossListedReport.join('\n')}\n`);

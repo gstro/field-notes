@@ -1,0 +1,215 @@
+{
+  "note": "Derived from cities/*.json by tools/ingest-guides.mjs — do not edit. Counts only, so aggregate pages need not ship the whole corpus.",
+  "cities": [
+    {
+      "id": "albuquerque-nm",
+      "name": "Albuquerque",
+      "state": "NM",
+      "tripId": "west",
+      "population": {
+        "cityProper": 564559,
+        "metro": 918000
+      },
+      "recCount": 52,
+      "confirmedCount": 0,
+      "unknownCount": 52,
+      "ratedCount": 0
+    },
+    {
+      "id": "atlanta-ga",
+      "name": "Atlanta",
+      "state": "GA",
+      "tripId": "south",
+      "population": {
+        "cityProper": 510000,
+        "metro": 6300000
+      },
+      "recCount": 51,
+      "confirmedCount": 6,
+      "unknownCount": 45,
+      "ratedCount": 0
+    },
+    {
+      "id": "birmingham-al",
+      "name": "Birmingham",
+      "state": "AL",
+      "tripId": "south",
+      "population": {
+        "cityProper": 196644,
+        "metro": 1120000
+      },
+      "recCount": 47,
+      "confirmedCount": 4,
+      "unknownCount": 43,
+      "ratedCount": 0
+    },
+    {
+      "id": "boise-id",
+      "name": "Boise",
+      "state": "ID",
+      "tripId": "west",
+      "population": {
+        "cityProper": 235684,
+        "metro": 837442
+      },
+      "recCount": 52,
+      "confirmedCount": 4,
+      "unknownCount": 48,
+      "ratedCount": 0
+    },
+    {
+      "id": "charlotte-nc",
+      "name": "Charlotte",
+      "state": "NC",
+      "tripId": "south",
+      "population": {
+        "cityProper": 897720,
+        "metro": 2805115
+      },
+      "recCount": 50,
+      "confirmedCount": 5,
+      "unknownCount": 45,
+      "ratedCount": 0
+    },
+    {
+      "id": "dallas-tx",
+      "name": "Dallas",
+      "state": "TX",
+      "tripId": "west",
+      "population": {
+        "cityProper": 1304000,
+        "metro": 8100000
+      },
+      "recCount": 52,
+      "confirmedCount": 3,
+      "unknownCount": 49,
+      "ratedCount": 0
+    },
+    {
+      "id": "jackson-ms",
+      "name": "Jackson",
+      "state": "MS",
+      "tripId": "south",
+      "population": {
+        "cityProper": 153701,
+        "metro": 591978
+      },
+      "recCount": 53,
+      "confirmedCount": 7,
+      "unknownCount": 46,
+      "ratedCount": 0
+    },
+    {
+      "id": "las-vegas-nv",
+      "name": "Las Vegas",
+      "state": "NV",
+      "tripId": "west",
+      "population": {
+        "cityProper": 656274,
+        "metro": 2336573
+      },
+      "recCount": 50,
+      "confirmedCount": 1,
+      "unknownCount": 49,
+      "ratedCount": 0
+    },
+    {
+      "id": "new-orleans-la",
+      "name": "New Orleans",
+      "state": "LA",
+      "tripId": "nola",
+      "population": {
+        "cityProper": 362000,
+        "metro": 1270000
+      },
+      "recCount": 50,
+      "confirmedCount": 0,
+      "unknownCount": 50,
+      "ratedCount": 0
+    },
+    {
+      "id": "oklahoma-city-ok",
+      "name": "Oklahoma City",
+      "state": "OK",
+      "tripId": "west",
+      "population": {
+        "cityProper": 702767,
+        "metro": 1477926
+      },
+      "recCount": 52,
+      "confirmedCount": 5,
+      "unknownCount": 47,
+      "ratedCount": 0
+    },
+    {
+      "id": "phoenix-az",
+      "name": "Phoenix",
+      "state": "AZ",
+      "tripId": "west",
+      "population": {
+        "cityProper": 1650070,
+        "metro": 4948203
+      },
+      "recCount": 47,
+      "confirmedCount": 1,
+      "unknownCount": 46,
+      "ratedCount": 0
+    },
+    {
+      "id": "richmond-va",
+      "name": "Richmond",
+      "state": "VA",
+      "tripId": "south",
+      "population": {
+        "cityProper": 226610,
+        "metro": 1349945
+      },
+      "recCount": 46,
+      "confirmedCount": 4,
+      "unknownCount": 42,
+      "ratedCount": 0
+    },
+    {
+      "id": "salt-lake-city-ut",
+      "name": "Salt Lake City",
+      "state": "UT",
+      "tripId": "west",
+      "population": {
+        "cityProper": 212040,
+        "metro": 1257936
+      },
+      "recCount": 50,
+      "confirmedCount": 1,
+      "unknownCount": 49,
+      "ratedCount": 0
+    },
+    {
+      "id": "shreveport-la",
+      "name": "Shreveport",
+      "state": "LA",
+      "tripId": "south",
+      "population": {
+        "cityProper": 178000,
+        "metro": 393000
+      },
+      "recCount": 48,
+      "confirmedCount": 5,
+      "unknownCount": 43,
+      "ratedCount": 0
+    },
+    {
+      "id": "washington-dc",
+      "name": "Washington",
+      "state": "DC",
+      "tripId": "south",
+      "population": {
+        "cityProper": 702250,
+        "metro": 6300000
+      },
+      "recCount": 87,
+      "confirmedCount": 4,
+      "unknownCount": 83,
+      "ratedCount": 0
+    }
+  ]
+}

@@ -8,9 +8,11 @@
 	import fragNotes from '$lib/data/fragmentation-notes.json';
 	import visited from '$lib/data/visited.json';
 
-	const cityModules = import.meta.glob('$lib/data/cities/*.json', { eager: true });
-	type City = { id: string; name: string; state: string; population: { cityProper: number | null; metro: number | null } };
-	const cities = Object.values(cityModules).map((m) => (m as { default: City }).default);
+	// This page never touches a recommendation — it needs identity and population
+	// per city and nothing else, so it reads the derived rollup rather than the
+	// corpus.
+	import citySummary from '$lib/data/citySummary.json';
+	const cities = citySummary.cities;
 
 	const notes = fragNotes.cities as Record<string, { kind: string; mechanism: string | null }>;
 

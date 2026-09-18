@@ -3,24 +3,26 @@
 	import trips from '$lib/data/trips.json';
 	import adherence from '$lib/data/adherence.json';
 
-	const cityModules = import.meta.glob('$lib/data/cities/*.json', { eager: true });
-	const cities = Object.values(cityModules).map(
-		(m) => (m as { default: { id: string; recommendations: { status: string; rating: boolean | null }[] } }).default
-	);
+	// Counts, not content. Every figure below is a total over the corpus, so the
+	// page reads the derived per-city rollup rather than pulling all 787
+	// recommendations into the bundle to count them.
+	import citySummary from '$lib/data/citySummary.json';
+	const cities = citySummary.cities;
 
 	// Every figure on this page is derived from committed data, never typed in.
 	// A colophon that hardcoded its own numbers would be the exact failure it
 	// exists to disclose.
 	// `built` doubles as "cities with a guide" below: guides/*.json and
-	// src/lib/data/cities/*.json are an exact 1:1 match, so the glob count is
+	// src/lib/data/cities/*.json are an exact 1:1 match, so the city count is
 	// also the guide count. If that invariant ever breaks, split the two
 	// figures rather than let one silently answer the wrong question (D27).
 	const built = cities.length;
 	const total = cityIndex.length;
-	const recs = cities.flatMap((c) => c.recommendations);
-	const confirmed = recs.filter((r) => ['attended', 'attended-anyway'].includes(r.status)).length;
-	const unknown = recs.filter((r) => ['unverified', 'retroactive-recommendation'].includes(r.status)).length;
-	const rated = recs.filter((r) => r.rating !== null).length;
+	const sum = (f: (c: (typeof cities)[number]) => number) => cities.reduce((a, c) => a + f(c), 0);
+	const recCount = sum((c) => c.recCount);
+	const confirmed = sum((c) => c.confirmedCount);
+	const unknown = sum((c) => c.unknownCount);
+	const rated = sum((c) => c.ratedCount);
 
 	const arcStart = trips.trips[0].dates.start;
 	const arcEnd = trips.trips[trips.trips.length - 1].dates.end;
@@ -69,7 +71,7 @@
 		<dl>
 			<div><dt>City guides</dt><dd>
 				{built} machine-generated 10-category guides, one per city, built in 2026 from Atlas
-				Obscura, Eater, Time&nbsp;Out, TasteAtlas and web search. {recs.length} recommendations
+				Obscura, Eater, Time&nbsp;Out, TasteAtlas and web search. {recCount} recommendations
 				across {built} of {total} cities.
 			</dd></div>
 			<div><dt>Location history</dt><dd>
@@ -115,7 +117,7 @@
 			<div><dt>Visit counts are floors, not rates</dt><dd>
 				The public export truncates each city to its top ~8–14 places: 151 entries against
 				1,102 distinct destinations navigated to. A match proves a visit; <b>a non-match
-				proves nothing.</b> {confirmed} of {recs.length} recommendations are confirmed
+				proves nothing.</b> {confirmed} of {recCount} recommendations are confirmed
 				visited, and {unknown} have no record either way. Hence “≥” on every city page,
 				and a distinct “visit unknown” state that is deliberately not the same as “skipped”.
 			</dd></div>
@@ -154,7 +156,7 @@
 				drive times are bounded only by search timestamps.</li>
 			<li><b>Spend.</b> Card statements have not been exported. No cost figure on this site is
 				reconstructed spend.</li>
-			<li><b>Ratings.</b> {rated === 0 ? 'No recommendation carries a would-return rating.' : `${rated} of ${recs.length} recommendations carry a rating.`}
+			<li><b>Ratings.</b> {rated === 0 ? 'No recommendation carries a would-return rating.' : `${rated} of ${recCount} recommendations carry a rating.`}
 				The only ratings that ever existed here were invented for layout and have been
 				removed. Superlatives cannot be derived until real ones are recorded.</li>
 			<li><b>City character.</b> Vibe, verdict, favourites, field notes and the six-axis

@@ -33,6 +33,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D25](#d25-hand-rolled-charts-no-charting-dependency) | Hand-rolled charts; no charting dependency | Final (M5a, Aug 2026; supersedes M5's LayerChart line) |
 | [D26](#d26-visited-places-are-their-own-surface-never-recommendations) | Visited places are their own surface, never recommendations | Final (M5b, Aug 2026) |
 | [D27](#d27-chapter-aggregates-name-what-they-count-and-are-never-re-derived) | Chapter aggregates name what they count, and are never re-derived | Final (M4a, Aug 2026) |
+| [D28](#d28-four-of-the-unmapped-guide-fields-added-the-rest-stay-out) | Four of the unmapped guide fields added (`sources`, `scopeDecision`, `honestGaps`, `statusNotes` + `popCulture.correctionNote`); the rest stay out | Final (M38, Sep 2026) |
 
 ## Decisions
 
@@ -201,7 +202,19 @@ Both are instances of the same standing rule: a number must answer the question 
 
 **Corollary to D3 — trip-1 semantics are detected from the data, not from `tripId`.** `isRetro` keyed on `tripId === 'west'`, which held for all 14 cities but would mislabel New Orleans: an interlude that had no guide at the time, so retro-guided, yet not `west`. It now derives from `source.type === 'retro-guide'`. Anything asking "is this retro-guided?" must ask the recommendations, not the itinerary.
 
-## Open questions (undecided)
+### D28 — Four of the unmapped guide fields added; the rest stay out
+
+M3's inventory of unmapped guide content (design/m3-guide-ingest.md) sat untouched since Aug 2026. `City` gains `sources: string[]`, `scopeDecision: string | null`, `honestGaps: GuideGap[]`, `statusNotes: GuideNote[]`, and `popCulture.correctionNote`. All five describe the guide's own **method** — what it drew on, what scope it set, what it looked for and didn't find, what it flags as possibly stale — rather than asserting anything new about the world. That's the line: it's why these five were safe to add in one pass while `framing`/`analyticalThread` were not (R20) and `district`/`address` weren't attempted (M5f's neighbourhood-accuracy finding makes 552 unverified values the wrong scope for this chunk).
+
+Render targets: a new `GuideNotes.svelte` panel ("About This Guide," city page, below the full recommendation list) carries `scopeDecision`/`honestGaps`/`statusNotes`/`sources`; `correctionNote` renders inside `PopCulture.svelte`, ahead of the films it corrects. Unlike D23's `population.note`, these render unconditionally per-field rather than waiting on an editorial pass — because auditing the corpus for the self-reference problem D23 flagged *was* this chunk's editorial pass (below), not a deferred one.
+
+**Auditing for shop talk, the same failure D23 named.** Two `statusNotes` entries (Charlotte, Richmond) and one `scopeDecision` (Richmond) turned out to be commentary about the guide-*generation* run itself — a shared web-search tool budget exhausted across a parallel 13-city batch — not a caveat about any place. Excluded/trimmed via `STATUS_NOTE_EXCLUSIONS` (ingest-guides.mjs) and `data/city-overrides.json`'s `richmond-va` entry respectively, each keeping every word of substance and dropping only the self-referential aside. The same audit, run for consistency against the fields already live since M3, found two `Recommendation.note` fields (Oklahoma City's Prototek, Charlotte's Local Honey pick) carrying the identical leak; redacted via a new `NOTE_REDACTIONS` map in the transform, same rule. Everything else in the ~49 `statusNotes` and ~700 `Recommendation.note` fields that mentions "this run" or "this session" is a genuine, scoped verification caveat about one place and was kept.
+
+One `honestGaps` entry (Atlanta, `no-dedicated-gear-shop`) has `citedFrom: null` in the source guide — carried as `null`, not fabricated, per the standing D19 corollary against inventing attribution.
+
+**Rejected as render targets — see [R20](rejection-log.md#r20-framing-and-analyticalthread-as-rendered-city-page-content).**
+
+**`district`/`address` deferred, not rejected.** The best-covered unmapped fields (552/499 of 705 recs) but held out of this chunk: M5f found 6 of 22 hand-transcribed DC neighbourhoods factually wrong, and the machine-generated guides carry the same risk at roughly 25× the volume with no per-venue review done. Ingesting the field means either verifying 552 values (a project M5f's size, not this chunk's) or publishing addresses/neighbourhoods this site cannot yet stand behind — the citation-as-rendering rule (CLAUDE.md) cuts the other way here: an unreviewed value is exactly what D19 exists to prevent. Revisit once neighbourhood accuracy has a review pass, the way M5f gave DC's citations one.
 
 | # | Question | Decide by |
 |---|---|---|

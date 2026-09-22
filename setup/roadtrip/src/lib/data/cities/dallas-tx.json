@@ -1397,7 +1397,11 @@
         "relevance": "literature/film",
         "note": "Screenwriter (Dr. Strangelove, Easy Rider) and novelist central to 1960s countercultural satire; birthplace attribution varies by source -- verify before publication."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "The TV series Dallas (1978-91, and its 2012 reboot) is the single most commonly assumed Dallas filming credit, but its signature location, Southfork Ranch, is in Parker, TX -- roughly 25 miles north of downtown Dallas, not within city limits. It's still a real, visitable tourist attraction (working ranch plus a Dallas TV series museum) -- just not an in-city stop.",
+      "citedFrom": "General knowledge -- verify against current Southfork Ranch visitor info before relying on hours/pricing"
+    }
   },
   "favorites": {
     "meal": {
@@ -1434,5 +1438,55 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Timeout",
+    "Dallas Observer",
+    "PaperCity Magazine",
+    "D Magazine",
+    "CultureMap Dallas",
+    "Visit Dallas",
+    "DALtoday",
+    "Dallas Free Press / Dallas Weekly",
+    "Texas State Historical Association (TSHA)",
+    "Bisnow",
+    "Wikipedia",
+    "Community Impact",
+    "James Beard Foundation",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Dallas-proper primary; several picks (GROWL in Arlington, Herman Marshall in Wylie, Dallas Makerspace in Carrollton, Meow Wolf in Grapevine, Crow Hollow Bookshop in Allen) reach into the wider DFW metro where the category genuinely couldn't be answered as well in-city -- each is flagged with its district/distance rather than presented as an in-Dallas stop.",
+  "honestGaps": [
+    {
+      "id": "no-storefront-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search turned up a DFW Anarchist Bookfair (an annual event, not a storefront) and no permanent walk-in infoshop in Dallas proper. Pan-African Connection is the closest sustained political-bookstore anchor the city has -- a Black-nationalist community institution rather than an anarchist one. Worth comparing against OKC's finding that red-state metros tend to produce cooperative and community-institution infrastructure where coastal cities produce infoshops; Dallas's version leans further still toward a single legacy institution rather than either model.",
+      "citedFrom": "web-search -- anarchistnews.org, radical-guide.com (fetch partially blocked)"
+    },
+    {
+      "id": "no-dedicated-synth-shop",
+      "categoryNum": 10,
+      "text": "No dedicated synthesizer retailer was found in Dallas or the wider DFW metro -- a Gearspace forum thread on the exact question confirms the gap, noting only Guitar Center locations and a now-closed local retailer (Brook Mays). Category 10 leans on a general-purpose makerspace, a guitar/pedal shop, and a boutique pedal maker instead of padding in a synth store that doesn't exist.",
+      "citedFrom": "web-search -- gearspace.com forum thread"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "knights-of-pythias-verify",
+      "severity": "warning",
+      "text": "Knights of Pythias Temple / The Pittman Hotel address and current public-access policy were not independently confirmed via a live fetch this run -- verify before publishing or visiting."
+    },
+    {
+      "id": "solodallas-showroom-unconfirmed",
+      "severity": "warning",
+      "text": "SoloDallas's walk-in showroom status is unconfirmed; the business may be online/appointment-only. Call ahead."
+    },
+    {
+      "id": "southfork-not-in-dallas",
+      "severity": "info",
+      "text": "Southfork Ranch (the TV series Dallas's signature location) is in Parker, TX, about 25 miles north of downtown -- not an in-city stop, despite being the most commonly assumed Dallas filming credit."
+    }
+  ]
 }

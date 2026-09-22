@@ -1340,7 +1340,11 @@
         "relevance": "pop-culture",
         "note": "Comedian and creator/star of Roseanne -- included as the well-known/must-mention balance pick for this list."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "Dumb and Dumber's plot is set in Aspen, Colorado, and most visitors assume it was filmed there. It was almost entirely shot around the Wasatch Front instead -- Park City's Main Street doubles for Aspen throughout.",
+      "citedFrom": "Westgate Resorts"
+    }
   },
   "favorites": {
     "meal": {
@@ -1377,5 +1381,48 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "City Cast Salt Lake",
+    "SLUG Magazine",
+    "Visit Utah",
+    "Visit Salt Lake",
+    "Wikipedia",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Salt Lake City-proper primary; all picks fall within city limits or immediately adjacent neighborhoods (Sugar House, Trolley Square, 9th & 9th, Central Ninth) given the compact urban core, with the sole exception of Antelope Island State Park (natural-attraction balance-rule pick, ~40 min drive via causeway).",
+  "honestGaps": [
+    {
+      "id": "thin-standalone-electronics-scene",
+      "categoryNum": 10,
+      "text": "Category 10 carries four picks, not five. Beyond Make Salt Lake, 801 Labs, and Squarewave Sound, no additional standalone hackerspace or electronics-repair collective with published public hours turned up in this session's research -- Craft Lake City DIY Festival rounds the category out as an annual event rather than a fixed space. Notably, this is still a stronger showing than Boise's four picks in the same category on this trip, which lacked an equivalent to Squarewave Sound entirely.",
+      "citedFrom": "web-search"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "ken-sanders-address-unconfirmed",
+      "severity": "warning",
+      "text": "Ken Sanders Rare Books' current street address could not be confirmed from available sources this session -- the shop is known to have relocated before. Check kensandersbooks.com or call ahead before visiting."
+    },
+    {
+      "id": "squarewave-sound-status-conflict",
+      "severity": "warning",
+      "text": "Squarewave Sound's Yelp listing was marked CLOSED as of a June 2025 snapshot, but the shop's own website (squarewavesound.com) still lists current abbreviated hours (Wed–Fri 12–6pm, Sat 12–5pm) and describes itself as operating part-time with appointments available. Sources conflict -- call or email ahead to confirm before visiting."
+    },
+    {
+      "id": "cottonwood-mall-demolished",
+      "severity": "info",
+      "text": "Cottonwood Mall, the SLC Punk! filming location for Stevo's monologue scene, has been demolished and redeveloped; it can no longer be visited as filmed."
+    },
+    {
+      "id": "dodiy-utah-resource",
+      "severity": "info",
+      "text": "DoDIY (dodiy.org/usa/ut) tracks Utah's all-ages/DIY punk show listings and is a useful standing resource beyond this guide's fixed venue picks."
+    }
+  ]
 }

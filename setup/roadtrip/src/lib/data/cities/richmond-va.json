@@ -1214,7 +1214,11 @@
         "relevance": "literature",
         "note": "New Journalism pioneer and novelist (The Right Stuff, The Bonfire of the Vanities), born in Richmond."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "Gone with the Wind is popularly but incorrectly linked to Richmond: local legend claims the grand staircase at the Jefferson Hotel inspired Tara's staircase in the film. The hotel's staircase is real and worth seeing, but GWTW was shot on MGM soundstages in California, not in Richmond, and the 'inspiration' claim is unverified lore rather than documented production history.",
+      "citedFrom": "general knowledge -- flagged as legend, not fact"
+    }
   },
   "favorites": {
     "meal": {
@@ -1251,5 +1255,48 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "Wikipedia",
+    "National Park Service (Maggie L. Walker NHS)",
+    "Richmond Times-Dispatch / Richmond Magazine (secondary references)",
+    "Targeted web search and direct-source fetch"
+  ],
+  "scopeDecision": "Richmond-proper primary.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop-storefront",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop secondary search did not turn up a confirmed storefront infoshop in Richmond (constrained by this session's search-tooling limits as well as a genuine scarcity of storefront-model spaces). Richmond's leftist/mutual-aid infrastructure appears to run through networks like Food Not Bombs RVA and Richmond DSA rather than a bookstore-model space -- the same co-op-not-infoshop pattern the OKC guide documented, not a research failure to paper over.",
+      "citedFrom": "web-search, direct fetch of infoshop directory (no Richmond entry found)"
+    },
+    {
+      "id": "thin-electronics-scene",
+      "categoryNum": 10,
+      "text": "Category 10 carries two picks, not five. HackRVA is a strong, confirmed community makerspace, but no dedicated synth or guitar-pedal retailer, hackerspace-adjacent-to-gear-shop pairing, or electronics-surplus shop could be confirmed for Richmond this session. VCU's da Vinci Center fills an institutional gap but isn't a walk-in public resource. Padding to five would misrepresent the city.",
+      "citedFrom": "direct fetch (hackrva.org), general knowledge; live search unavailable to fully rule out additional options"
+    },
+    {
+      "id": "souvenirs-thin",
+      "categoryNum": 9,
+      "text": "Category 9 carries three picks. A dedicated local-artist screen-print/postcard souvenir shop on the Shop Good (OKC) or Uniquely Utah (SLC) model could not be confidently identified for Richmond this session -- Quirk Gallery and World of Mirth cover the ground reasonably well, but this is a lower-confidence category pending re-verification.",
+      "citedFrom": "general knowledge; live search unavailable this session"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "sub-rosa-fire-closure",
+      "severity": "warning",
+      "text": "Sub Rosa Bakery (Church Hill) is currently closed after fire damage; confirmed via a direct site fetch this session. Check their Instagram before planning a stop -- WPA Bakery is a solid backup in the meantime."
+    },
+    {
+      "id": "strange-matter-closed",
+      "severity": "info",
+      "text": "Strange Matter, Richmond's legendary all-ages DIY punk venue, closed in 2016. It isn't listed as a current pick but its closure is worth knowing -- Gallery5, Cobra Cabana, and Get Tight Lounge are the closest things to its successor in the current scene."
+    }
+  ]
 }

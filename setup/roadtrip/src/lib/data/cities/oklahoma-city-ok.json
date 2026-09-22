@@ -1585,7 +1585,7 @@
       "bestTimeOfDay": "Verify first",
       "durationMin": null,
       "rating": null,
-      "note": "Founded 2013 by James Newman and Matt W. as an 11,000 sq ft workshop covering machining, electronics, woodworking, 3D printing, vinyl cutting and graphic design, with Arduino/hobby electronics and CAD classes. Public web presence stale for roughly a decade while directory listings persist; could not be re-verified this run (web-search budget for this batch was exhausted before a fresh check could run).",
+      "note": "Founded 2013 by James Newman and Matt W. as an 11,000 sq ft workshop covering machining, electronics, woodworking, 3D printing, vinyl cutting and graphic design, with Arduino/hobby electronics and CAD classes. Public web presence stale for roughly a decade while directory listings persist; could not be re-verified this run.",
       "verifiedOpen": null
     },
     {
@@ -1655,7 +1655,11 @@
         "relevance": "literature",
         "note": "Pulp/noir novelist (The Killer Inside Me, The Grifters). Frequently listed among OKC's own; sources vary on exact birthplace within Oklahoma — verify before publication."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "Twister (1996), August: Osage County (2013) and Killers of the Flower Moon (2023) are commonly attributed to Oklahoma City but were shot elsewhere in the state — Wakita/Ponca City for the first, and Pawhuska/Bartlesville/Osage County for the latter two. Only the 2024 Twisters sequel is genuinely an OKC production.",
+      "citedFrom": "TravelOK, Tulsa City-County Library, WorldAtlas"
+    }
   },
   "favorites": {
     "meal": {
@@ -1692,5 +1696,61 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater / 405 Magazine",
+    "Timeout",
+    "Oklahoma Gazette",
+    "Oklahoma City Free Press",
+    "VisitOKC",
+    "BlackPast.org / Clio / Zinn Education Project",
+    "Oklahoma Film & Music Office",
+    "DoDIY.org",
+    "NPR / Mississippi Today / TheGrio (cross-trip thread research)",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Oklahoma City-proper primary; out-of-city picks (e.g. Nic's fried onion burger lineage in El Reno) included only where explicitly noted as a regional-dish origin story, not presented as in-city.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search returned no dedicated storefront in Oklahoma City — OKC does not appear in radical-guide.com's bookstore-collective directory. The nearest true infoshop is Red Scare Infoshop in Tulsa, roughly 100 miles east. OKC's equivalent infrastructure is cooperative rather than anarchist — Literati Press became Oklahoma's first community-owned bookshop when The Writers Co-op began taking ownership in 2025 — plus OKC DSA working groups, which organize but do not run a public storefront. The distinction is the finding: a red-state capital produces co-ops and mutual-aid networks where a coastal city produces infoshops.",
+      "citedFrom": "Electric Literature, radical-guide.com, literatipressok.com"
+    },
+    {
+      "id": "thin-maker-scene",
+      "categoryNum": 10,
+      "text": "Category 10 carries four picks, not five. OKC has a world-class boutique electronics manufacturer in Keeley but no dedicated synth shop, no hackerspace with published public open-hours, and at least one makerspace (Prototek) whose operating status could not be freshly confirmed this run. Padding to five would misrepresent the city.",
+      "citedFrom": "Yelp OKC, Hackaday.io, colab-ok.com"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "clara-luper-plaza-dedication-timing",
+      "severity": "warning",
+      "text": "Clara Luper National Sit-In Plaza was dedicated November 3, 2025 — after this trip's Oct 20–22, 2025 visit window. The finished bronze installation would not yet have been standing during the actual stay; earlier coverage in that window would only show design-approval renderings, not the completed monument."
+    },
+    {
+      "id": "nappy-roots-relocated",
+      "severity": "warning",
+      "text": "Nappy Roots Books has relocated. Older directory listings show 3705 N Springlake Dr; the shop's own announcement gives 3621 N Lottie."
+    },
+    {
+      "id": "split-t-closed",
+      "severity": "info",
+      "text": "Split-T, the OKC restaurant credited with inventing the Theta burger, is closed. Order at Johnnie's Charcoal Broiler or The Garage instead."
+    },
+    {
+      "id": "39th-street-records-status",
+      "severity": "warning",
+      "text": "39th Street Records (2131 NW 39th St) appears as permanently closed in at least one vinyl directory while still listed elsewhere. Call ahead."
+    },
+    {
+      "id": "prototek-status",
+      "severity": "warning",
+      "text": "Prototek OKC's public web presence has been stale for roughly a decade despite active directory listings. Confirm operation before visiting."
+    }
+  ]
 }

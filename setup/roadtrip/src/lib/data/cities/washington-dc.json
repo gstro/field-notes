@@ -2214,7 +2214,11 @@
         "relevance": "leftist-politics",
         "note": "Civil-rights attorney and SNCC/Freedom Summer organizer, first woman to chair the EEOC (Carter appointee), and DC's non-voting House delegate since 1991; founding member of the Congressional Progressive Caucus. Announced in January 2026 she would not seek re-election after 35 years."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "House of Cards (2013-2018), the most-cited 'DC show' of the streaming era, was shot almost entirely in and around Baltimore, MD, not Washington -- DC's own restrictive filming permits push most current TV/film production north. Similarly, the real 1949 exorcism case that inspired The Exorcist took place primarily in Cottage City and Mount Rainier, Maryland (inner DC suburbs), with only a brief hospitalization at Georgetown University Hospital -- not in the Georgetown neighborhood itself, despite the film's setting.",
+      "citedFrom": "web-search cross-check"
+    }
   },
   "favorites": {
     "meal": {
@@ -2251,5 +2255,54 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater DC",
+    "Timeout Washington DC",
+    "Wikipedia (cross-checked for factual/biographical claims)",
+    "Washingtonian",
+    "Washington City Paper",
+    "DC Beekeepers Alliance",
+    "HacDC",
+    "Targeted web search"
+  ],
+  "scopeDecision": "DC-proper primary; a small number of out-of-DC picks included only where explicitly flagged with statusFlag 'outside-dc-proper' or 'relocated-out-of-dc' (National Museum of Health and Medicine in Silver Spring MD, Chuck Levin's in Wheaton MD, Crooked Beat Records relocating to Alexandria VA) because the category would otherwise be noticeably thinner than the city deserves.",
+  "honestGaps": [
+    {
+      "id": "no-true-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop secondary search did not turn up an active, DC-proper worker-owned radical bookstore. The strongest historical candidate, The Potter's House, is currently closed; the closest true infoshop-model space (Red Emma's) is in Baltimore. DC's actual radical-left infrastructure runs instead through explicitly political community hubs that are commercial rather than cooperative -- Busboys and Poets, Sankofa Video Books & Cafe, Solid State Books -- plus DSA DC and similar organizing groups that have no public storefront. This is presented as a real finding: a federal capital with enormous nonprofit and advocacy-org density produces a different radical-bookselling ecosystem than a college town or a port city, not a weaker one, just structurally different.",
+      "citedFrom": "web-search, cross-referenced with pottershousedc.org"
+    },
+    {
+      "id": "thin-electronics-retail",
+      "categoryNum": 10,
+      "text": "Category 10 carries four picks, not five, and two of the four (Rhizome's general craft focus, Chuck Levin's location in Wheaton MD) are adjacent rather than dead-center matches. DC has a genuinely excellent hackerspace in HacDC and free public fab labs through the library system, but no dedicated synth shop or boutique pedal manufacturer comparable to Keeley Electronics in Oklahoma City or Squarewave Sound in Salt Lake City. Padding to five would misrepresent the city; the honest picture is strong institutional/public-access maker infrastructure and thin private-retail electronics culture.",
+      "citedFrom": "web-search, hacdc.org, dclibrary.org"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "potters-house-closed",
+      "severity": "warning",
+      "text": "The Potter's House (Adams Morgan) -- Adams Morgan's oldest locally owned bookstore-cafe, a pay-what-you-can nonprofit space since 1960 with deep roots in DC's peace and civil-rights organizing -- is currently closed 'for the foreseeable future.' Its online bookstore remains active. This was the guide's strongest lead on a true DC infoshop-style radical bookstore/cafe and its closure is a genuine loss noted here rather than papered over."
+    },
+    {
+      "id": "red-emmas-not-dc",
+      "severity": "info",
+      "text": "Red Emma's, the well-known worker-cooperative anarchist bookstore/cafe often associated with the DC area in casual conversation, is located in Baltimore, MD (3128 Greenmount Ave), not Washington DC. Excluded from this guide's DC-proper picks for that reason; worth a detour if the road trip ever runs through Baltimore."
+    },
+    {
+      "id": "compass-coffee-bankruptcy",
+      "severity": "warning",
+      "text": "Compass Coffee, DC's best-known local roaster chain, filed for Chapter 11 bankruptcy in January 2026. Store footprint may be actively shrinking -- call ahead before planning around a specific location."
+    },
+    {
+      "id": "crooked-beat-relocating",
+      "severity": "warning",
+      "text": "Crooked Beat Records, one of DC's longest-running vinyl shops, was in the process of relocating from Adams Morgan, DC to Del Ray in Alexandria, VA as of this guide's writing. Still easily reachable via Metro but no longer a DC-proper stop."
+    }
+  ]
 }

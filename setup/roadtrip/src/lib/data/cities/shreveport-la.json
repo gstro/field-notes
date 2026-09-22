@@ -1272,7 +1272,11 @@
         "relevance": "politics",
         "note": "Current U.S. Speaker of the House. Included here for completeness of the pop-culture/notable-person sweep, not as an interest-aligned pick -- his politics sit at the opposite end of the spectrum from the traveler's leftist framing, and that ideological distance is itself a data point about who this city produces."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "X-Men Origins: Wolverine (2009) is commonly but incorrectly included in 'movies filmed in Shreveport' roundups. Its actual filming locations were New Zealand, Australia, and Canada.",
+      "citedFrom": "wondrousdrifter.com"
+    }
   },
   "favorites": {
     "meal": {
@@ -1309,5 +1313,83 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "Wikipedia",
+    "Visit Shreveport-Bossier",
+    "Roast Local",
+    "Explore Louisiana",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Shreveport-proper primary; the Natchitoches Meat Pie (dishes and gifts) is a deliberate ~70-mile day-trip exception given its regional distinctiveness and the lack of an equally strong in-city analog. All other picks are within Shreveport-Bossier.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop secondary search turned up no results specific to Shreveport -- every relevant hit (Iron Rail Book Collective, Rank & File Books) was in New Orleans instead. No radical bookstore or infoshop could be confirmed operating in Shreveport-Bossier at all.",
+      "citedFrom": "web-search"
+    },
+    {
+      "id": "thin-new-book-retail",
+      "categoryNum": 1,
+      "text": "Category carries 4 picks, not 5. Every confirmed Shreveport bookstore this run found is used/rare/antique-mall-based (The Thrifty Peanut, Beth the Book Lady, Vine Books & Vinyl) rather than a flagship new-book independent -- a real finding about the city's retail landscape, not a gap in research effort.",
+      "citedFrom": "web-search"
+    },
+    {
+      "id": "thin-pastry-retail",
+      "categoryNum": 4,
+      "text": "Category carries 4 picks, not 5. Shreveport's bakery scene leans Southern/American rather than French-technique patisserie; no fifth pick met the bar without padding.",
+      "citedFrom": "web-search"
+    },
+    {
+      "id": "no-dedicated-diy-venue",
+      "categoryNum": 8,
+      "text": "No dedicated all-ages punk/hardcore DIY venue or promoter collective could be confirmed in Shreveport-Bossier. The five picks here are historic theaters and general live-music bars; whatever original/DIY scene exists appears to run through house shows or informal bookings this run could not surface via available sources.",
+      "citedFrom": "web-search"
+    },
+    {
+      "id": "no-public-makerspace",
+      "categoryNum": 10,
+      "text": "Category carries 2 picks, not 5. No public-access makerspace or hackerspace could be confirmed in Shreveport-Bossier. The Cyber Innovation Center in Bossier City is real and well-funded but is a K-12/workforce-development STEM institution anchoring a research park, not an open drop-in maker space -- padding it in here would misrepresent it.",
+      "citedFrom": "web-search"
+    },
+    {
+      "id": "no-whiskey-distillery",
+      "categoryNum": 6,
+      "text": "No craft whiskey or bourbon distillery could be confirmed in or near Shreveport. Great Raft Brewing (craft beer) is the closest craft-beverage analog and is flagged as such rather than presented as a whiskey substitute.",
+      "citedFrom": "web-search"
+    },
+    {
+      "id": "no-confirmed-apiary",
+      "categoryNum": 7,
+      "text": "No dedicated apiary, beekeeper, or bee-specific honey vendor could be confirmed operating in Shreveport this run -- a genuine gap against the traveler's bees interest specifically. The American Rose Center's pollinator-friendly gardens are the closest (unconfirmed) adjacency.",
+      "citedFrom": "web-search"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "farmers-market-closed-in-window",
+      "severity": "warning",
+      "text": "The Shreveport Farmers Market at Festival Plaza runs its 2026 season Saturdays May 30-Aug 29 -- it will be closed for the entirety of this trip's May 3-5 visit window. Both farmers-market picks (Gifts, Souvenirs) are included for completeness/future reference, not as bookable stops for this specific stay."
+    },
+    {
+      "id": "wolverine-misattribution",
+      "severity": "info",
+      "text": "X-Men Origins: Wolverine (2009) is commonly but incorrectly listed as filmed in Shreveport. Its actual locations were New Zealand, Australia, and Canada."
+    },
+    {
+      "id": "strawns-live-source-blocked",
+      "severity": "info",
+      "text": "Strawn's Eat Shop's own site and several press write-ups returned fetch errors during this run (robots.txt / DNS / proxy rejections). Its inclusion rests on well-established regional reputation plus the traveler's own May 2026 Maps ground-truth data (2 navigated visits), not a freshly re-verified live source."
+    },
+    {
+      "id": "vine-books-vinyl-address-unconfirmed",
+      "severity": "info",
+      "text": "Vine Books & Vinyl and Rick's Records appear in a regional vinyl directory (vinylpackman.com) but this run could not independently confirm street addresses or hours for either via a live fetch. Call ahead or verify via Google Maps before a dedicated trip."
+    }
+  ]
 }

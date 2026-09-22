@@ -1408,7 +1408,11 @@
         "relevance": "literature / Indigenous feminism / activism",
         "note": "Born in nearby Cubero (not Albuquerque proper) but closely tied to Albuquerque and UNM's literary and Laguna Pueblo intellectual community. The Sacred Hoop (1986) reshaped Indigenous feminist scholarship by arguing pre-contact Native societies were largely matrifocal and egalitarian."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "Breaking Bad's pilot and several cook-site sequences were shot well outside Albuquerque proper, in the desert around the To'hajiilee Indian Reservation and other high-desert sites in Bernalillo County -- so not every location a tour operator calls a 'Breaking Bad spot' is actually within city limits. The Whites' house, Twisters, the Dog House, the car wash, and the Alvarado Transportation Center are the genuinely in-city stops.",
+      "citedFrom": "breakingbad-locations.com, KRQE, general knowledge"
+    }
   },
   "favorites": {
     "meal": {
@@ -1445,5 +1449,55 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "Visit Albuquerque",
+    "Albuquerque Insider",
+    "mycoffeeexplorer.com",
+    "KRQE",
+    "Albuquerque Journal",
+    "New Mexico News Port",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Albuquerque-proper primary; one gifts pick (Los Poblanos Farm Shop) sits just over the line in neighboring Los Ranchos and is flagged as such rather than presented as in-city.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop-storefront",
+      "categoryNum": 1,
+      "text": "Albuquerque has no fixed-address anarchist infoshop on the scale of Salt Lake City's Boing! Anarchist Collective or a dedicated storefront collective. The mandatory secondary search surfaced The People's Library-ABQ (a pop-up/mutual-aid lending library) and Albuquerque DSA's reading groups (no physical space) rather than a storefront. The deeper infrastructure here is mutual aid, not infoshops -- a pattern also seen in Oklahoma City.",
+      "citedFrom": "anarresproject.org, abqdsa.org"
+    },
+    {
+      "id": "thin-synth-retail",
+      "categoryNum": 10,
+      "text": "No dedicated synth or guitar-pedal boutique retailer turned up for Albuquerque, unlike Salt Lake City's Squarewave Sound or Oklahoma City's Keeley Electronics manufacturing base. The category leans on two genuine makerspaces (Quelab, FUSE) plus a guitar-repair shop and a science-museum tinkering space rather than gear-specific retail -- a real gap, not padding. Category carries 4 picks, not 5.",
+      "citedFrom": "web search of ABQ music-gear retailers"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "tannex-closed",
+      "severity": "warning",
+      "text": "The Tannex, a converted Barelas DIY space that hosted music, lectures, film screenings and an extensive zine library since 2013, closed after its building was sold (reported 2019). It doesn't appear in the Top 5 for that reason, but it's worth knowing as the scene's most-mourned closure."
+    },
+    {
+      "id": "crossroads-motel-status",
+      "severity": "warning",
+      "text": "The Crossroads Motel, a recurring Breaking Bad drug-deal location on Central Ave SE, has an uncertain current status -- redevelopment/demolition has been reported in past years. Confirm before building a stop around it."
+    },
+    {
+      "id": "atlas-i-tour-access",
+      "severity": "info",
+      "text": "ATLAS-I sits on active Sandia National Labs-adjacent land; public access is by scheduled tour only, not a walk-up stop. Confirm tour availability before planning a visit."
+    },
+    {
+      "id": "fly-honey-warehouse-status",
+      "severity": "warning",
+      "text": "Fly Honey Warehouse is the least documented of Albuquerque's current DIY spaces; confirm it's still active via social media before treating it as a fixed stop."
+    }
+  ]
 }

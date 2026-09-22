@@ -1,5 +1,5 @@
 {
-  "note": "Reviewed corrections applied by tools/ingest-guides.mjs AFTER the guide->city mapping, so human judgment survives regeneration. A guide value that a reviewer has already rejected must not silently return on the next re-run. Each entry states its reason. `additionalRecommendations` appends whole recommendations that a reviewer restored; the transform assigns their status from the takeout join and their rating null, exactly as it does for guide-derived recs. This is a transform input like data/attendance-matches.json, not a schema change: patched fields must already exist in src/lib/types.ts.",
+  "note": "Reviewed corrections applied by tools/ingest-guides.mjs AFTER the guide->city mapping, so human judgment survives regeneration. A guide value that a reviewer has already rejected must not silently return on the next re-run. Each entry states its reason. `additionalRecommendations` appends whole recommendations that a reviewer restored; the transform assigns their status from the takeout join and their rating null, exactly as it does for guide-derived recs. This is a transform input like data/attendance-matches.json, not a schema change: patched fields must already exist in src/lib/types.ts. This file only patches whole top-level City fields — a correction to ONE entry inside an array field (one statusNotes note, one recommendation's note) lives in tools/ingest-guides.mjs instead, as STATUS_NOTE_EXCLUSIONS or NOTE_REDACTIONS (M38). Check both places before concluding a value was never reviewed.",
   "cities": {
     "washington-dc": {
       "elevationFt": {
@@ -751,6 +751,23 @@
           "reason": "Restored from the M2 hand-transcription (design/m2-first-city.md): covered by that survey, absent from the generated guide, and dropped in M3.6 because its citation was an empty web-search placeholder. Citation recovered and the venue verified against a named source in M5f. Status comes from the takeout join and rating is null, exactly as for guide-derived recs."
         }
       ]
+    },
+    "richmond-va": {
+      "scopeDecision": {
+        "value": "Richmond-proper primary.",
+        "guideValue": "Richmond-proper primary. This run's live WebSearch tool was exhausted before the Richmond-specific searches began (shared budget across a 13-city parallel batch) and most general search engines (DuckDuckGo, Bing, Google) returned robots.txt or proxy errors to WebFetch. Research leaned on direct WebFetch of Wikipedia, the Atlas Obscura Richmond page, and individual business sites where reachable, supplemented by general/local knowledge for picks that couldn't be freshly re-verified -- each such pick is marked in its source.citedFrom field. The analytical-thread research (St. Luke Bank / Jackson Ward) was fully verified via direct fetch and is high-confidence.",
+        "reason": "Everything after the first sentence is commentary about the guide-generation run itself (a shared web-search tool budget exhausted across a parallel batch) rather than geographic scope reasoning — the same shoptalk leak D23 found in population.note, landing here instead because M38 is the first pass that renders scopeDecision at all. The kept sentence is verbatim from the guide, not rewritten. See design/m38-guide-provenance-fields.md."
+      },
+      "sources": {
+        "value": [
+          "Atlas Obscura", "TasteAtlas", "Eater", "Timeout", "Wikipedia",
+          "National Park Service (Maggie L. Walker NHS)",
+          "Richmond Times-Dispatch / Richmond Magazine (secondary references)",
+          "Targeted web search and direct-source fetch"
+        ],
+        "guideValue": "Targeted web search and direct-source fetch (search-engine tooling constrained this session -- see scopeDecision)",
+        "reason": "Same leak as scopeDecision above, in the bibliography's last entry — trimmed the self-referential parenthetical, kept the real source description verbatim. See design/m38-guide-provenance-fields.md."
+      }
     }
   }
 }

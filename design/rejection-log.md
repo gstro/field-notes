@@ -111,3 +111,11 @@ Three separate problems, any one of which would be enough. The two vocabularies 
 Rendered side by side these would read as one comparison while being three different measurements — the `0 / N` and unweighted-mean failure mode (D27) with better graphics. The underlying finding it was reaching for is already carried honestly by [M5b](m5b-visited-places.md)'s provenance split and [M5d](m5d-improvisation-finding.md).
 
 Revisit only with an untruncated per-city navigation set tagged against the *guide's* vocabulary — which is a re-derivation of the corpus, not a component.
+
+### R20 — `framing` and `analyticalThread` as rendered city-page content
+
+Two of the unmapped guide fields M3 inventoried, considered for [D28](decision-log.md#d28-four-of-the-unmapped-guide-fields-added-the-rest-stay-out) alongside the five that shipped. Rejected as render targets, not deleted from the guides.
+
+`framing` (~850 chars/city of generative narrative prose) and `analyticalThread` (the cross-city political-geography through-line, e.g. Boise's Frank Church/Anne Frank thread linked to Salt Lake City's) both read well and both cut against the same thing: this is a first-person retrospective of a trip the owner actually took, and both fields are machine-written editorializing composed after the fact, not a record of what happened or what the guide drew on. Rendering ~850 characters of generated narrative per city risks reading as the owner's own retrospective voice when it isn't — the same anachronism problem D2/D22 already require disclosing for the retro guides themselves, one layer deeper: not just "this guide didn't exist yet," but "this paragraph was never actually thought by the traveler." `scopeDecision`/`honestGaps`/`statusNotes`/`sources` don't have this problem because they describe the guide's method, which is a fact about the artifact, not a voice standing in for the owner's.
+
+Not a D23-style store-not-render call — that pattern is for content that's real but needs an editorial pass before it can be trusted to read cleanly (`population.note`). This is closer to R7's photo-led rejection: a fit question, not a data-quality one. Both fields stay in `guides/*.json`, available if a future editorial pass wants to rewrite them in the owner's own hand rather than render them as generated.

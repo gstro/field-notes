@@ -1256,7 +1256,8 @@
         "relevance": "music",
         "note": "Fleetwood Mac vocalist; a well-known/must-see-tier native musician."
       }
-    ]
+    ],
+    "correctionNote": null
   },
   "favorites": {
     "meal": {
@@ -1293,5 +1294,53 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "Phoenix New Times",
+    "Slingshot Collective",
+    "Wikipedia",
+    "Visit Phoenix",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Phoenix-proper primary; a small number of metro picks (Tempe, Mesa, Scottsdale, Paradise Valley, Queen Creek) included only where the category genuinely lacked in-city depth, noted by district rather than presented as downtown Phoenix.",
+  "honestGaps": [
+    {
+      "id": "infoshop-defunct",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search found that both the Phoenix Infoshop and the Phoenix Anarchist Library are listed as defunct on the Slingshot Collective's directory. Wasted Ink Zine Distro is the closest living equivalent -- a DIY zine distro, not a true infoshop -- included as the fifth bookstore pick with that caveat.",
+      "citedFrom": "slingshotcollective.org"
+    },
+    {
+      "id": "no-gear-hacking-shop",
+      "categoryNum": 10,
+      "text": "Category 10 carries two picks, not five. Phoenix has two genuinely strong hackerspace/makerspace picks (HeatSync Labs, Phoenix Forge) but research turned up no dedicated synth, pedal, or gear-hacking storefront in the metro -- only national chains like Guitar Center surfaced. Two honest picks instead of five padded ones.",
+      "citedFrom": "web-search"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "mystery-castle-tours-suspended",
+      "severity": "warning",
+      "text": "Mystery Castle's public tours have been suspended as of January 2025 per the castle's official website. The exterior is still viewable from the road; check mymysterycastle.com for current status before visiting."
+    },
+    {
+      "id": "trunk-space-relocating",
+      "severity": "warning",
+      "text": "The Trunk Space left its longtime home at Grace Lutheran Church in May 2024 after a 30% rent increase and new parking fees, and is actively searching for a new permanent location. Check trunkspace.org or their socials for the current address before visiting."
+    },
+    {
+      "id": "poisoned-pen-scottsdale",
+      "severity": "info",
+      "text": "The Poisoned Pen is in Old Town Scottsdale, not Phoenix proper -- included for genre-fiction depth given Phoenix's own horror/mystery bookstore options are thin."
+    },
+    {
+      "id": "alice-cooper-raised-not-born",
+      "severity": "info",
+      "text": "Alice Cooper was born in Detroit, MI, not Phoenix -- he was raised in Phoenix from childhood and returned permanently in the 1980s. Described here by raisedIn/residency, not nativity."
+    }
+  ]
 }

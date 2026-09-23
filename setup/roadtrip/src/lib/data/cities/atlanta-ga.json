@@ -1335,7 +1335,11 @@
         "relevance": "music",
         "note": "Motown legend, raised in Atlanta."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "Gone with the Wind (1939) is set entirely in Atlanta and its 1939 Loew's Grand Theatre premiere happened here, but the film itself was shot almost entirely on Selznick International's backlot in Culver City, California -- the burning-of-Atlanta scene famously reused old standing sets (including pieces of the King Kong jungle set) rather than any real Atlanta location.",
+      "citedFrom": "web-search"
+    }
   },
   "favorites": {
     "meal": {
@@ -1372,5 +1376,52 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "WABE",
+    "Atlanta Magazine",
+    "The Atlanta Journal-Constitution",
+    "Discover Atlanta",
+    "The Infatuation",
+    "AtlantaFi.com",
+    "Hackaday / Freeside Atlanta",
+    "Wikipedia",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Atlanta-proper primary; Clarkston (Refuge Coffee) and Pinewood Atlanta Studios (Fayetteville) included as clearly labeled metro-area exceptions given how directly they serve the political and film-history threads.",
+  "honestGaps": [
+    {
+      "id": "no-atlanta-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search turned up no dedicated storefront in Atlanta proper. On Our Own Authority! Publishing, Atlanta's own autonomous radical press (anarchism, labor history, Pan-Africanism, Palestine solidarity), operates online-only and distributes through Bluestockings (NYC), Burning Books (Buffalo), and Atlanta Zine Fest rather than running a physical space. Offbeat Books' anti-imperialist reading groups are the closest thing to a storefront equivalent. Worth noting alongside Sweet Auburn: a city this large and this politically significant still doesn't have a fixed anarchist infoshop, a genuine data point rather than a search failure.",
+      "citedFrom": "radical-guide.com, oooabooks.wordpress.com"
+    },
+    {
+      "id": "no-dedicated-gear-shop",
+      "categoryNum": 10,
+      "text": "Category 10 carries four picks, not five. Atlanta has a genuinely serious hackerspace scene (Freeside, Decatur Makers) but no dedicated synth or boutique guitar-pedal retail shop comparable to Salt Lake City's Squarewave Sound turned up in research. ASW Distillery's tour is included as a whiskey-adjacent maker/production stop rather than padding this category with a weak electronics pick.",
+      "citedFrom": null
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "grim-reader-opening-window",
+      "severity": "warning",
+      "text": "The Grim Reader Bookshop's Upper Westside storefront was slated to open summer 2026, right around this trip's May 12-16 visit window. It may still be operating as a mobile hearse-shop only rather than a fixed storefront -- check their socials before planning a special trip."
+    },
+    {
+      "id": "gt-invention-studio-access",
+      "severity": "warning",
+      "text": "Georgia Tech's Invention Studio is a student-run academic makerspace, not a public retail hackerspace. Confirm visitor/tour policy before counting on a walk-in visit."
+    },
+    {
+      "id": "oakland-halloween-tours-out-of-window",
+      "severity": "info",
+      "text": "Oakland Cemetery's 'Capturing the Spirit of Oakland' theatrical tours run in October, outside this May visit window -- the grounds and standard tours are still worthwhile in spring."
+    }
+  ]
 }

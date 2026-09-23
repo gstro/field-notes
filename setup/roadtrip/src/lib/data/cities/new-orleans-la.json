@@ -1410,7 +1410,8 @@
         "relevance": "music",
         "note": "Bounce-music artist and queer icon, a distinctly New Orleans musical export."
       }
-    ]
+    ],
+    "correctionNote": null
   },
   "favorites": {
     "meal": {
@@ -1447,5 +1448,35 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "Eater",
+    "TasteAtlas",
+    "Timeout",
+    "Axios New Orleans",
+    "Local press (Verite News, The Pelican Star, Deep South Magazine)",
+    "Targeted web search"
+  ],
+  "scopeDecision": "New Orleans-proper primary; Jean Lafitte National Historical Park (Barataria Preserve) and Dong Phuong Bakery included as the two out-of-core-city exceptions, both flagged in their own entries as involving travel time.",
+  "honestGaps": [
+    {
+      "id": "electronics-leans-fabrication",
+      "categoryNum": 10,
+      "text": "New Orleans' maker scene leans wood/metal/textile fabrication, not dedicated electronics or hackerspace culture — no Arduino/Raspberry Pi hackerspace with published open-hours turned up in research. NOLA Guitar Shop's Eurorack modular-synth stock is the closest genuine electronics-culture touchpoint the city offers.",
+      "citedFrom": "web-search"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "iron-rail-relocated",
+      "severity": "warning",
+      "text": "Iron Rail Book Collective operated as unhoused pop-ups for years before relocating into CANOA at 4210 St. Claude Ave in April 2026 — after the Feb 2026 visit window, so no fixed storefront existed during the actual stay."
+    },
+    {
+      "id": "rank-and-file-hours-unconfirmed",
+      "severity": "warning",
+      "text": "Rank & File Books' current operating hours at its Sisters in Christ/Mae's Guitars location are unconfirmed in available sources — call or check socials ahead of a visit."
+    }
+  ]
 }

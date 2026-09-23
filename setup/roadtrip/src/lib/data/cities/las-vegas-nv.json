@@ -1350,7 +1350,8 @@
         "relevance": "music",
         "note": "Frontman of Imagine Dragons; the band relocated to and was based in his hometown to record its first three EPs."
       }
-    ]
+    ],
+    "correctionNote": null
   },
   "favorites": {
     "meal": {
@@ -1387,5 +1388,56 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Wikipedia",
+    "Rebel Atlas",
+    "Vegas 411",
+    "Smart Vegas Deals",
+    "Tasting Table",
+    "City Cast Las Vegas",
+    "GayCities Las Vegas",
+    "Made in Nevada",
+    "Nevada Independent / labor press",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Las Vegas-proper and unincorporated Clark County Valley (Henderson, Summerlin, Paradise) treated as one functional city, since the Strip itself and much of the built-up valley sit outside Las Vegas city-proper limits — flagged in population.note rather than silently conflated.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop bookstore search turned up no Las Vegas storefront — no equivalent of Salt Lake City's Boing! Anarchist Collective or Oklahoma City's Literati Press co-op. The city's leftist political infrastructure runs through the Culinary Workers Union Local 226 (see sights) rather than a bookstore-anchored infoshop scene.",
+      "citedFrom": "web-search"
+    },
+    {
+      "id": "thin-electronics-scene",
+      "categoryNum": 10,
+      "text": "Category 10 carries 2 picks, not 5. Unlike Salt Lake City (Squarewave Sound) or Oklahoma City (Keeley Electronics), Las Vegas does not appear to have a currently operating dedicated synth/pedal boutique or electronics-surplus storefront — repeated searches surfaced only national chains (Guitar Center). SYN Shop is the one genuine, verifiable DIY-electronics anchor; Cowtown Guitars, the closest historical analogue, closed in 2019. Padding to five would misrepresent the city.",
+      "citedFrom": "web-search"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "shrimp-cocktail-relocated",
+      "severity": "warning",
+      "text": "The original 50¢ Golden Gate Hotel shrimp cocktail was discontinued in 2017 when Du-par's closed; owner Derek Stevens briefly revived it in 2019 and it now lives on at his Circa Resort instead of the Golden Gate."
+    },
+    {
+      "id": "cowtown-guitars-closed",
+      "severity": "info",
+      "text": "Cowtown Guitars, once a nationally known vintage-guitar landmark in the downtown Arts District, closed in 2019. Listed for historical context only, not as a visitable pick."
+    },
+    {
+      "id": "punk-rock-bowling-timing",
+      "severity": "info",
+      "text": "Punk Rock Bowling & Music Festival runs Memorial Day weekend (late May), well outside this trip's Oct 9–13, 2025 window. Included as a scene-context citation, not a bookable October activity."
+    },
+    {
+      "id": "fremont-country-club-verify",
+      "severity": "info",
+      "text": "Fremont Country Club's current booking calendar could not be directly verified this run (site fetch blocked) — confirm lineup before visiting."
+    }
+  ]
 }

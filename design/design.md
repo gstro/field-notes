@@ -59,7 +59,7 @@ Build status and sequencing live in [`implementation-plan.md`](implementation-pl
 
 ## 6. Component inventory (runes-mode)
 
-`ConstellationMap` (projection from cityIndex; label offsets data-driven) · `StatStrip` · `Fingerprint` (6-axis spider from `fingerprint`, renders nothing if all-null) · `Waffle` (derives counts from statuses; `isRetro` swaps palette + legend) · `RecommendationList` (grouped by the 10 guide categories; per-item status chip, source badges linking out where URL exists, cost/duration/best-time meta, closure warning) · `FragmentationBar` · `FieldNotes` (renders only non-null) · `PopCulture` (pilgrimage badge; trivia-only entries dimmed).
+`ConstellationMap` (projection from cityIndex; label offsets data-driven) · `StatStrip` · `Fingerprint` (6-axis spider from `fingerprint`, renders nothing if all-null) · `Waffle` (derives counts from statuses; `isRetro` swaps palette + legend) · `RecommendationList` (grouped by the 10 guide categories; per-item status chip, source badges linking out where URL exists, cost/duration/best-time meta, closure warning) · `FragmentationBar` · `FieldNotes` (renders only non-null) · `PopCulture` (pilgrimage badge; trivia-only entries dimmed; leads with `correctionNote` when present) · `GuideNotes` (M38 — scope, gaps, caveats, bibliography; guarded, renders nothing if all four fields are empty).
 
 ## 7. Data schema
 
@@ -172,11 +172,23 @@ A possible `detours` field is open question O5.
 ```json
 "popCulture": {
   "filmedHere": [{ "title": "", "year": null, "locationVisited": null, "visitNote": "", "photoId": null }],
-  "bornHere":   [{ "name": "", "relevance": "punk|horror|film|literature|politics", "note": "" }]
+  "bornHere":   [{ "name": "", "relevance": "punk|horror|film|literature|politics", "note": "" }],
+  "correctionNote": { "text": "", "citedFrom": null }
 }
 ```
 
-Filtered to interest-relevant figures only. `locationVisited` (bool) distinguishes "trivia" from "pilgrimage completed" (e.g., the TCM gas station in Bastrop).
+Filtered to interest-relevant figures only. `locationVisited` (bool) distinguishes "trivia" from "pilgrimage completed" (e.g., the TCM gas station in Bastrop). `correctionNote` (M38, D28) is the guide's own flag on the single most commonly assumed pop-culture tie that turned out wrong (e.g. Napoleon Dynamite ~ Boise); renders first in `PopCulture.svelte`, ahead of the films it corrects.
+
+**Guide method** (M38, D28) — the guide talking about its own scope and limits, not a new claim about a place; renders in `GuideNotes.svelte` as an "About This Guide" panel:
+
+```json
+"sources": ["Atlas Obscura", "TasteAtlas", "..."],
+"scopeDecision": "Boise-proper primary; a small number of Treasure Valley picks included only where...",
+"honestGaps": [{ "id": "no-infoshop", "categoryNum": 1, "text": "...", "citedFrom": "boisedsa.org, web-search" }],
+"statusNotes": [{ "id": "napoleon-dynamite-misattribution", "severity": "info", "text": "..." }]
+```
+
+`honestGaps[].categoryNum` uses the same 10-category taxonomy as `Recommendation.categoryNum`. `statusNotes[].severity` is `info | warning`, typographic only — not color-coded, since D11's status color law reserves color for `RecStatus`. Two of the unmapped guide fields these superseded — `framing`, `analyticalThread` — were considered and rejected as render targets (R20): both are generated narrative prose standing in for the traveler's own voice in a first-person retrospective, which is a fit problem the other four fields don't have. `district`/`address` remain unmapped, deferred pending a per-venue accuracy pass like M5f's DC audit.
 
 **Fingerprint** — six axes, 1–5, subjective by design; scored in one sitting per trip (D12):
 

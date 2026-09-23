@@ -58,6 +58,18 @@ const CATEGORY_TO_NUM = {
 
 const CLEAN_CITED_FROM = new Set(['web-search', 'atlasobscura', 'tasteatlas']);
 
+// M38: two statusNotes ids are meta commentary about the guide-GENERATION run
+// itself (a shared web-search tool budget exhausted across a parallel batch),
+// not a caveat about any place or claim in the guide — the same shoptalk leak
+// D23 found in population.note, at the level of one note instead of a whole
+// field. Everything else in statusNotes is a genuine per-place caveat (closure,
+// relocation, unconfirmed detail, popular misattribution) and is kept verbatim.
+// See design/m38-guide-provenance-fields.md.
+const STATUS_NOTE_EXCLUSIONS = new Set([
+	'charlotte/search-budget-exhausted',
+	'richmond/search-tooling-constrained'
+]);
+
 // CLAUDE.md, non-negotiable: missing data renders as nothing, never a
 // placeholder. estCost/bestTimeOfDay are plain strings (not nullable in
 // types.ts), and RecommendationList's {#if r.bestTimeOfDay} guard only
@@ -68,6 +80,26 @@ const PLACEHOLDER_VALUES = new Set(['N/A', 'Varies', 'TBD', 'Unknown']);
 function stripPlaceholder(value) {
 	return !value || PLACEHOLDER_VALUES.has(value) ? '' : value;
 }
+
+// M38: found while auditing statusNotes/scopeDecision for the same defect —
+// two rec.note fields (pre-existing since M3) also carry a parenthetical about
+// the guide-GENERATION run's own search-tool budget, not about the place being
+// described. Same shoptalk class as D23/STATUS_NOTE_EXCLUSIONS above; redacted
+// here rather than routed through city-overrides.json because the patch is to
+// one string inside a recommendation, which that mechanism doesn't address at
+// the field level. Kept text is verbatim from the guide, only the
+// self-referential aside is dropped. See design/m38-guide-provenance-fields.md.
+const NOTE_REDACTIONS = {
+	'oklahoma-city/prototek-okc':
+		'Founded 2013 by James Newman and Matt W. as an 11,000 sq ft workshop covering machining, ' +
+		'electronics, woodworking, 3D printing, vinyl cutting and graphic design, with Arduino/hobby ' +
+		'electronics and CAD classes. Public web presence stale for roughly a decade while directory ' +
+		'listings persist; could not be re-verified this run.',
+	'charlotte/local-honey-market':
+		'No single flagship apiary brand was confirmed this run; Charlotte’s weekend farmers markets, ' +
+		'including the Regional Farmers Market and 7th Street Market vendor rotation, are the reliable ' +
+		'place to find jarred local honey.'
+};
 
 // Reviewed corrections that must survive regeneration (data/city-overrides.json).
 // A guide value a human already rejected must not silently come back on the next
@@ -242,7 +274,7 @@ function transformRecommendation(rec, guide) {
 		bestTimeOfDay: stripPlaceholder(rec.bestTime),
 		durationMin: parseDurationMin(rec.duration),
 		rating: null, // D18 — nothing in the guides records a would-return signal
-		note: rec.note ?? '',
+		note: NOTE_REDACTIONS[`${guide.slug}/${rec.id}`] ?? rec.note ?? '',
 		verifiedOpen: null // do NOT infer from verificationFlag (source confidence, not open/closed)
 	};
 }
@@ -280,6 +312,29 @@ function transformBornHere(notablePeople) {
 	return out;
 }
 
+// M38 — see design/m38-guide-provenance-fields.md for which unmapped guide
+// fields were judged safe to add and why the others weren't.
+
+function transformCorrectionNote(popCulture) {
+	const cn = popCulture?.correctionNote;
+	if (!cn) return null;
+	return { text: cn.text, citedFrom: cn.citedFrom ?? null };
+}
+
+function transformHonestGaps(gaps, guideSlug) {
+	return (gaps ?? []).map((g) => {
+		const categoryNum = CATEGORY_TO_NUM[g.category];
+		if (!categoryNum) throw new Error(`${guideSlug}/honestGaps/${g.id}: unknown category "${g.category}"`);
+		return { id: g.id, categoryNum, text: g.text, citedFrom: g.citedFrom ?? null };
+	});
+}
+
+function transformStatusNotes(notes, guideSlug) {
+	return (notes ?? [])
+		.filter((n) => !STATUS_NOTE_EXCLUSIONS.has(`${guideSlug}/${n.id}`))
+		.map((n) => ({ id: n.id, severity: n.severity, text: n.text }));
+}
+
 function transformCity(guide, cityIndexEntry) {
 	const stay = deriveStay(guide, cityIndexEntry);
 	return {
@@ -314,7 +369,8 @@ function transformCity(guide, cityIndexEntry) {
 		recommendations: guide.recommendations.map((r) => transformRecommendation(r, guide)),
 		popCulture: {
 			filmedHere: transformFilmedHere(guide.popCulture?.films),
-			bornHere: transformBornHere(guide.popCulture?.notablePeople)
+			bornHere: transformBornHere(guide.popCulture?.notablePeople),
+			correctionNote: transformCorrectionNote(guide.popCulture)
 		},
 		favorites: {
 			meal: { what: '', where: '', note: '' },
@@ -337,7 +393,11 @@ function transformCity(guide, cityIndexEntry) {
 			yardSignRatio: ''
 		},
 		spend: null, // D20 — card-statement CSVs (M0) haven't landed
-		photos: { hero: null, gallery: [], serialSubjects: {} }
+		photos: { hero: null, gallery: [], serialSubjects: {} },
+		sources: guide.sources ?? [],
+		scopeDecision: guide.scopeDecision ?? null,
+		honestGaps: transformHonestGaps(guide.honestGaps, guide.slug),
+		statusNotes: transformStatusNotes(guide.statusNotes, guide.slug)
 	};
 }
 
@@ -366,6 +426,13 @@ function validateCity(city, guideSlug) {
 				`rec "${rec.name}": bad citation source "${c.source}"`);
 			req(c.url === null, `rec "${rec.name}": citation url should be null, got "${c.url}" (never synthesize)`);
 		}
+	}
+	for (const g of city.honestGaps) {
+		req(typeof g.categoryNum === 'number' && g.categoryNum >= 1 && g.categoryNum <= 10,
+			`honestGap "${g.id}": bad categoryNum ${g.categoryNum}`);
+	}
+	for (const n of city.statusNotes) {
+		req(['info', 'warning'].includes(n.severity), `statusNote "${n.id}": bad severity "${n.severity}"`);
 	}
 	if (errors.length) {
 		throw new Error(`Validation failed for ${guideSlug}:\n  ${errors.join('\n  ')}`);

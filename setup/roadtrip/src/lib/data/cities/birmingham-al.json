@@ -1293,7 +1293,11 @@
         "relevance": "music",
         "note": "Big-band trumpeter and composer of 'Tuxedo Junction' (1939), named for a Birmingham streetcar/jazz intersection — later a hit for Glenn Miller and a jazz standard."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "Two films with strong Alabama associations are commonly misattributed to Birmingham. Big Fish (2003, Tim Burton) was shot almost entirely in Wetumpka, Montgomery, Tallassee and on Jackson Lake Island — not Birmingham. Selma (2014) dramatizes events connected to the Birmingham civil rights struggle but was filmed around Atlanta, GA and in Selma and Montgomery, AL, not in Birmingham itself.",
+      "citedFrom": "Wikipedia — Big Fish (film), Selma (film)"
+    }
   },
   "favorites": {
     "meal": {
@@ -1330,5 +1334,56 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Wikipedia / BhamWiki",
+    "StyleBlueprint",
+    "Soul Grown",
+    "My Coffee Explorer",
+    "Bham Now",
+    "About Town / Big 7 Travel",
+    "Made in Alabama",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Birmingham-proper primary; Bessemer (The Bright Star, for fried green tomatoes) and Irondale (Birmingham Music Exchange) included as edge-of-metro exceptions only where the pick has no true in-city equivalent.",
+  "honestGaps": [
+    {
+      "id": "no-true-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search turned up no dedicated storefront in Birmingham. Burdock Book Collective (intersectional feminist, Alabama Books to Prisons program) is the closest analogue — politically organized but not anarchist-identified. This matches the pattern seen at other Southern-corridor and red-state stops on this trip: identity-politics and mutual-aid infrastructure substitutes for a classic coastal infoshop.",
+      "citedFrom": "StyleBlueprint, general web search"
+    },
+    {
+      "id": "thin-record-store-scene",
+      "categoryNum": 2,
+      "text": "Category 2 carries two picks, not five. Research surfaced exactly two dedicated brick-and-mortar vinyl retailers in Birmingham proper (Seasick Records, Renaissance Records). Padding further would mean reaching for general instrument shops rather than vinyl-focused stores — an honest data point rather than a research failure.",
+      "citedFrom": "keepthemspinning.com, vinylpackman.com"
+    },
+    {
+      "id": "thin-electronics-scene",
+      "categoryNum": 10,
+      "text": "Category 10 carries three picks, not five. Birmingham has two genuine makerspaces (MAKEbhm, Red Mountain Makers) and one vintage-gear shop (Birmingham Music Exchange, technically in neighboring Irondale) but no dedicated synth shop and no hackerspace beyond Red Mountain Makers with published open hours.",
+      "citedFrom": "makebhm.com, redmountainmakers.org, bhammusicexchange.com"
+    },
+    {
+      "id": "thin-souvenir-scene",
+      "categoryNum": 9,
+      "text": "Category 9 carries four picks, not five. Research did not surface a dedicated Birmingham shop built around locally screen-printed apparel or prints in the way Plaza District shops function in Oklahoma City; the strongest picks here cross-list from bookstores, gifts, and sights rather than standing as purpose-built souvenir retail.",
+      "citedFrom": "general web search"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "furnace-fest-schedule",
+      "severity": "info",
+      "text": "Furnace Fest went dormant 2004–2018, revived 2019–2024, and announced a 2025 return after initially billing 2024 as final. Confirm current-year dates and whether it falls within any future visit window before planning a trip around it."
+    },
+    {
+      "id": "16th-street-active-congregation",
+      "severity": "info",
+      "text": "16th Street Baptist Church remains an active congregation with ~2,000 weekly attendees. Guided tour access can be affected by services and events — confirm hours before the May 9–11, 2026 visit window."
+    }
+  ]
 }

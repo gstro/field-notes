@@ -1351,7 +1351,11 @@
         "relevance": "art",
         "note": "Comics artist/writer known for Lady Killer and Catwoman."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "Napoleon Dynamite (2004), by far the most famous 'Idaho movie', was shot roughly 280 miles away in Preston, ID -- not Boise. It is commonly and incorrectly assumed to be a Boise production.",
+      "citedFrom": "screenrant.com, prestonchamber.org"
+    }
   },
   "favorites": {
     "meal": {
@@ -1388,5 +1392,49 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "BoiseDev",
+    "The Arbiter",
+    "Idaho Press",
+    "Wassmuth Center for Human Rights",
+    "Idaho State Historical Society",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Boise-proper primary; a small number of Treasure Valley picks (Garden City, Meridian) included only where the category genuinely lacked in-city depth, noted by district rather than presented as downtown Boise.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search found no storefront in Boise. Boise DSA organizes actively but has no physical space -- the city's radical-left infrastructure runs through organizing rather than a retail counterspace, unlike Salt Lake City's Boing! Anarchist Collective.",
+      "citedFrom": "boisedsa.org, web-search"
+    },
+    {
+      "id": "thin-electronics-scene",
+      "categoryNum": 10,
+      "text": "Category 10 carries four picks, not five. Boise has no dedicated synth shop or hackerspace with published public open-hours, unlike Salt Lake City's Squarewave Sound and 801 Labs. Maker Shop Boise is a genuinely excellent 7,000 sq ft facility, but it's a woodworking shop, not electronics -- padding to five with it would misrepresent the city.",
+      "citedFrom": "makershopboise.com, web-search"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "napoleon-dynamite-misattribution",
+      "severity": "info",
+      "text": "Napoleon Dynamite (2004) is commonly but incorrectly assumed to be a Boise production. It was filmed in Preston, ID, roughly 280 miles east."
+    },
+    {
+      "id": "martsch-pushead-birthplace-unconfirmed",
+      "severity": "info",
+      "text": "Doug Martsch (Built to Spill) and Brian 'Pushead' Schroeder (Septic Death) are both strongly Boise-associated (formed/based their bands there) but their exact birthplaces could not be confirmed from available sources; described here by association, not nativity."
+    },
+    {
+      "id": "boise-state-makerlab-access",
+      "severity": "info",
+      "text": "Boise State MakerLab is primarily for university affiliates. Non-affiliates should email ahead to confirm equipment access before visiting."
+    }
+  ]
 }

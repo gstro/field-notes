@@ -775,7 +775,7 @@
       "bestTimeOfDay": "Saturday market hours",
       "durationMin": null,
       "rating": null,
-      "note": "No single flagship apiary brand was confirmed this run (search-tool access was limited); Charlotte's weekend farmers markets, including the Regional Farmers Market and 7th Street Market vendor rotation, are the reliable place to find jarred local honey.",
+      "note": "No single flagship apiary brand was confirmed this run; Charlotte’s weekend farmers markets, including the Regional Farmers Market and 7th Street Market vendor rotation, are the reliable place to find jarred local honey.",
       "verifiedOpen": null
     },
     {
@@ -1299,7 +1299,8 @@
         "relevance": "horror-film",
         "note": "Raised in the Charlotte area; played Billy Loomis in Scream (1996), one of the defining slasher performances of the '90s horror revival."
       }
-    ]
+    ],
+    "correctionNote": null
   },
   "favorites": {
     "meal": {
@@ -1336,5 +1337,44 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater",
+    "Timeout",
+    "Wikipedia",
+    "Queen City Nerve",
+    "Charlotte Magazine",
+    "Axios Charlotte",
+    "Secret Charlotte",
+    "The Culture Trip",
+    "A Radical Guide",
+    "mycoffeeexplorer.com",
+    "Wayward Blog",
+    "Keep Them Spinning",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Charlotte-proper primary; Noble Records (Matthews) included as the single out-of-city exception because it was the highest-rated record store in the metro and the category otherwise had adequate in-city depth without it — flagged as metro, not city-proper.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search returned no Charlotte storefront. A Radical Guide's only North Carolina listing is Firestorm Books & Coffee in Asheville, over 2 hours west. Charlotte's closest equivalents are nonprofit/community-fundraiser models (Julia's Cafe & Books benefits Habitat for Humanity) rather than an anarchist collective space — a genuine finding, consistent with the pattern already seen in Oklahoma City on this same trip's corridor.",
+      "citedFrom": "radical-guide.com"
+    },
+    {
+      "id": "thin-maker-scene-charlotte",
+      "categoryNum": 10,
+      "text": "Category 10 carries only 2 picks, not 5. A search of Hackaday's hackerspace directory (843 entries worldwide) turned up no Charlotte listing, and no dedicated synth shop, guitar-pedal builder, or electronics-repair collective was found. Discovery Place's Thinker Space and Camp North End's general creative-workspace leasing are the closest adjacent options, both flagged as imperfect substitutes rather than padded into false fives. This is a sharper gap than Oklahoma City's (which at least had Keeley Electronics, a world-class boutique pedal manufacturer) — Charlotte's maker culture appears to run through Camp North End's broader creative-tenant mix rather than a dedicated electronics/hacker space.",
+      "citedFrom": "hackaday.io, discoveryplace.org, camp.nc"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "visart-video-hours",
+      "severity": "warning",
+      "text": "VisArt Video's website returned an access error during this run; Atlas Obscura still lists it as active. Verify current hours before visiting."
+    }
+  ]
 }

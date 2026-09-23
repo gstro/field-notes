@@ -1467,7 +1467,11 @@
         "relevance": "literature",
         "note": "Yale Younger Poets Prize winner; taught at Jackson State University from 1949, founding its Center for African-American Studies (now the Margaret Walker Center). Career-defined by Jackson rather than born here."
       }
-    ]
+    ],
+    "correctionNote": {
+      "text": "The Help (2011) is commonly assumed to be a full Jackson production because it's set here, but the bulk of filming used Greenwood, MS (with additional work in Clarksdale and Greenville) as a stand-in for 1960s Jackson -- including the fictional Jackson Journal office, actually shot in Clarksdale. Only a handful of scenes (Brent's Drugs, Mayflower Cafe, the New Capitol exterior) used real Jackson locations.",
+      "citedFrom": "web-search (film-location roundup)"
+    }
   },
   "favorites": {
     "meal": {
@@ -1504,5 +1508,70 @@
     "hero": null,
     "gallery": [],
     "serialSubjects": {}
-  }
+  },
+  "sources": [
+    "Atlas Obscura",
+    "TasteAtlas",
+    "Eater / The Local Palate",
+    "Timeout",
+    "Mississippi Free Press",
+    "Mississippi Today",
+    "Jackson Free Press",
+    "Mississippi Encyclopedia",
+    "Wikipedia",
+    "Targeted web search"
+  ],
+  "scopeDecision": "Jackson-proper primary; two picks (ReBop Record Shop, Mississippi Crafts Center) sit in immediately adjacent Ridgeland and are noted by location rather than presented as downtown Jackson; Mississippi Gift Company is Greenwood-based and included only for its Jackson delivery service.",
+  "honestGaps": [
+    {
+      "id": "no-infoshop",
+      "categoryNum": 1,
+      "text": "The mandatory anarchist/radical/infoshop search turned up no dedicated storefront in Jackson. As in Oklahoma City and Boise, Jackson's radical-left infrastructure runs through organizing and cooperative economics rather than a bookstore counterspace -- Cooperation Jackson's Balagoon Center is the closest thing to a movement space, but it's a cooperative incubator, not a bookshop. Category 1 carries 4 picks, not 5.",
+      "citedFrom": "web-search, Wikipedia -- Cooperation Jackson"
+    },
+    {
+      "id": "thin-punk-venue-infrastructure",
+      "categoryNum": 8,
+      "text": "Jackson's own DIY press describes its punk/noise scene as small and largely informal -- house shows, coffee-shop bills at Urban Foxes, and a handful of bar bookings, documented by the zine JXN Underground and Lucy Isadora's Landmass Library zine distro rather than a dedicated punk room. The five picks above reflect that reality: two (Duling Hall, Hal & Mal's) are general-audience live-music institutions rather than punk-specific rooms, and F. Jones Corner is a blues club included for its Farish Street significance, not its genre fit.",
+      "citedFrom": "Mississippi Today -- Jackson's DIY music scene thrives with punk, noise and zines"
+    },
+    {
+      "id": "thin-synth-hackerspace",
+      "categoryNum": 10,
+      "text": "No dedicated synth shop or membership hackerspace with published public open-hours turned up for Jackson. What exists instead runs through nonprofits, worker cooperatives, and universities: The Bean Path (STEAM nonprofit), Cooperation Jackson's Center for Community Production (cooperative fabrication), and JSU's makerspace (largely affiliates-only). Category 10 carries 4 picks, not 5, rather than padding with a weak retail substitute.",
+      "citedFrom": "web-search, beanpath.org, jsums.edu"
+    }
+  ],
+  "statusNotes": [
+    {
+      "id": "sunflower-oven-status",
+      "severity": "warning",
+      "text": "Sunflower Oven appears in an August 2025 Mississippi Today feature as an active all-ages DIY venue, but a separate bakery directory lists it as permanently closed. Call ahead or check socials before planning a visit around it."
+    },
+    {
+      "id": "rotisserie-status",
+      "severity": "info",
+      "text": "The Rotisserie -- the restaurant Mayflower Cafe's own owner credits with actually inventing comeback sauce -- could not be confirmed as still operating. Order the sauce at Mayflower Cafe or Walker's Drive-In instead."
+    },
+    {
+      "id": "mississippi-gift-company-location",
+      "severity": "info",
+      "text": "The Mississippi Gift Company is headquartered in Greenwood, MS (about 1.5 hrs north), not Jackson proper. Included for its Jackson-focused next-day delivery service rather than as an in-city storefront."
+    },
+    {
+      "id": "jsu-makerspace-access",
+      "severity": "info",
+      "text": "Jackson State University's Makerspace is primarily for university affiliates; public/community access policy is unconfirmed from available sources -- email ahead."
+    },
+    {
+      "id": "population-decline",
+      "severity": "info",
+      "text": "Jackson's population has declined meaningfully since the 2020 Census count of 153,701, driven in part by the city's prolonged water-system crisis. Treat the population figure as a 2020 baseline, not a current count."
+    },
+    {
+      "id": "farish-street-vacancy",
+      "severity": "warning",
+      "text": "Most of Farish Street is vacant storefronts following the 2014 collapse of the Performa Entertainment redevelopment deal. Big Apple Inn, Cathead Distillery, and F. Jones Corner are active; do not expect a bustling entertainment district."
+    }
+  ]
 }

@@ -33,7 +33,7 @@ One arc, two migrations, three chapters ([D1](decision-log.md#d1-three-chapter-a
 
 ## 3. Architecture
 
-- **Stack:** SvelteKit 2.63 / Svelte 5 (runes) / Vite 8 / TypeScript 6 · `adapter-static`, full prerender · GitHub (private) → Vercel Hobby · ImageKit for photos.
+- **Stack:** SvelteKit 2.63 / Svelte 5 (runes) / Vite 8 / TypeScript 6 · `adapter-static`, full prerender · GitHub (public, [D16](decision-log.md#d16-public-data-posture)) → Vercel Hobby · ImageKit for photos.
 - **"Database is Git"** ([D7](decision-log.md#d7-static-only-database-is-git)): all content is JSON in `src/lib/data/`. `cityIndex.json` (thin registry: 18 × id/coords/nights/label) drives the map and nav; `cities/*.json` (deep per-city files) drive city pages. A city page + all links to it materialize automatically when its JSON lands — no route work per city.
 - **Crawler-safety pattern** ([D10](decision-log.md#d10-crawler-safety-data-pending-pattern)): unbuilt cities render as non-linked "data pending" everywhere. Load-bearing; keep it on new link surfaces.
 - **Types as guardrail:** `types.ts` encodes the schema; `npm run check` rejects malformed city data before it can break a build. Config lives in `vite.config.ts` ([R12](rejection-log.md#r12-sveltekit-config-in-svelteconfigjs)).

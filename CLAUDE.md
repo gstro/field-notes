@@ -46,7 +46,7 @@ These are decided (see `design/decision-log.md` for rationale; don't re-litigate
 
 ## Design docs
 
-`design/` holds five docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions, currently through D27, + open questions O4/O5), `rejection-log.md` (rejected alternatives, currently through R19), `implementation-plan.md` (milestones M0–M7, each with its own per-milestone doc once started), `roadmap.md` (unendorsed ideas). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan.
+`design/` holds six docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions, currently through D27, + open questions O4/O5), `rejection-log.md` (rejected alternatives, currently through R19), `implementation-plan.md` (milestones M0–M7, each with its own per-milestone doc once started), `roadmap.md` (unendorsed ideas), `manual-steps.md` (every step only the user can do — vendor setup, secrets, memory passes over data, open decisions). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan; new manual/vendor/data-entry tasks go to `manual-steps.md`, not scattered across milestone docs.
 
 ## Current status
 

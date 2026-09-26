@@ -49,9 +49,12 @@
 	);
 </script>
 
-<svelte:head><title>{c.name}, {c.state} — The Long Way Home</title></svelte:head>
+<svelte:head>
+	<title>{c.name}, {c.state} — The Long Way Home</title>
+	<meta name="description" content="{c.tagline || `Guide, visit data, and curation notes for ${c.name}, ${c.state}.`}" />
+</svelte:head>
 
-<div class="wrap">
+<main class="wrap">
 	<header class="city-head">
 		<div>
 			<p class="crumb"><a href="/">← Home</a> · {chapterName} · City {pos + 1} of {order.length}</p>
@@ -69,13 +72,13 @@
 		<section class="row fp-row">
 			{#if hasFingerprint}
 				<div>
-					<p class="panel-label">City Fingerprint</p>
+					<h2 class="panel-label">City Fingerprint</h2>
 					<Fingerprint fingerprint={c.fingerprint} />
 				</div>
 			{/if}
 			{#if hasFavorites}
 				<div>
-					<p class="panel-label">Favorites</p>
+					<h2 class="panel-label">Favorites</h2>
 					<div class="fav-grid">
 						{#each [['Meal', fav.meal], ['Coffee', fav.coffee], ['Site', fav.site]] as [label, f]}
 							{#if f && typeof f === 'object' && (f.what || f.where)}
@@ -99,53 +102,53 @@
 	     full Maps corpus and is authoritative. -->
 	<section class="row">
 		<div>
-			<p class="panel-label">{isRetro ? 'Retro Guide vs. What Happened' : 'Guide Hit Rate'}</p>
+			<h2 class="panel-label">{isRetro ? 'Retro Guide vs. What Happened' : 'Guide Hit Rate'}</h2>
 			<Waffle recommendations={c.recommendations} {isRetro} />
 		</div>
 		<div>
-			<p class="panel-label">How Closely the List Was Followed</p>
+			<h2 class="panel-label">How Closely the List Was Followed</h2>
 			<Adherence cityId={c.id} />
 		</div>
 	</section>
 
 	<section class="row">
 		<div>
-			<p class="panel-label">The Fragmentation Gap</p>
+			<h2 class="panel-label">The Fragmentation Gap</h2>
 			<FragmentationBar population={c.population} />
 		</div>
 		<div>
-			<p class="panel-label">What the Guide Was Made Of</p>
+			<h2 class="panel-label">What the Guide Was Made Of</h2>
 			<InterestComposition recommendations={c.recommendations} />
 		</div>
 	</section>
 
 	<section class="single">
-		<p class="panel-label">The Full List — Sourced &amp; Cited</p>
+		<h2 class="panel-label">The Full List — Sourced &amp; Cited</h2>
 		<RecommendationList recommendations={c.recommendations} />
 	</section>
 
 	{#if hasGuideNotes}
 		<section class="single">
-			<p class="panel-label">About This Guide</p>
+			<h2 class="panel-label">About This Guide</h2>
 			<GuideNotes sources={c.sources} scopeDecision={c.scopeDecision} honestGaps={c.honestGaps} statusNotes={c.statusNotes} />
 		</section>
 	{/if}
 
 	{#if visitedHere.length}
 		<section class="single">
-			<p class="panel-label">Where the Days Actually Went</p>
+			<h2 class="panel-label">Where the Days Actually Went</h2>
 			<VisitedPlaces places={visitedHere} />
 		</section>
 	{/if}
 
 	<section class="row">
 		<div>
-			<p class="panel-label">Pop Culture &amp; Pilgrimage</p>
+			<h2 class="panel-label">Pop Culture &amp; Pilgrimage</h2>
 			<PopCulture popCulture={c.popCulture} />
 		</div>
 		{#if c.wouldILiveHere.verdict}
 			<div>
-				<p class="panel-label">The Verdict</p>
+				<h2 class="panel-label">The Verdict</h2>
 				<div class="verdict">
 					<p class="v-q">Would I live here?</p>
 					<p class="v-a">"{c.wouldILiveHere.verdict}"</p>
@@ -165,7 +168,7 @@
 		{#if next && data.builtIds.includes(next.id)}<a href="/city/{next.id}">{next.name}, {next.state} →</a>
 		{:else if next}<span class="pending">{next.name} · data pending →</span>{/if}
 	</nav>
-</div>
+</main>
 
 <style>
 	.wrap { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
@@ -193,7 +196,7 @@
 	.city-nav { display: flex; justify-content: space-between; padding: 1.5rem 0 3rem; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; }
 	.city-nav a { color: var(--gold); text-decoration: none; }
 	.city-nav a:hover { color: var(--burnt-light); }
-	.pending { color: var(--muted); opacity: 0.55; }
+	.pending { color: var(--muted); }
 	@media (max-width: 720px) {
 		.city-head, .row, .fp-row { grid-template-columns: 1fr; }
 		.head-meta { text-align: left; }

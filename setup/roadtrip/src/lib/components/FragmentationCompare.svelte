@@ -51,5 +51,5 @@
 	.mech.trend { border-left-color: var(--border); opacity: 0.7; }
 	.pending { border-top: 1px solid var(--border); padding-top: 1rem; }
 	.p-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
-	.p-list { font-size: 12.5px; color: var(--muted); opacity: 0.75; margin-top: 5px; }
+	.p-list { font-size: 12.5px; color: var(--muted); margin-top: 5px; }
 </style>

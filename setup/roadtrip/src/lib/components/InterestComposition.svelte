@@ -70,8 +70,10 @@
 	.n { font-family: var(--font-mono); font-size: 11.5px; color: var(--cream); text-align: right; font-variant-numeric: tabular-nums; }
 	.pct { font-family: var(--font-mono); font-size: 10px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
 	/* An absent interest keeps its row and its label, but loses the ink — the
-	   gap is the information, so it is shown rather than dropped. */
-	.zero .label, .zero .n { color: var(--muted); opacity: 0.6; }
+	   gap is the information, so it is shown rather than dropped. No opacity
+	   on top of --muted: measured to fail WCAG AA against --dark2/--dark at
+	   any fraction < 1 (see m39-lighthouse-hygiene.md). */
+	.zero .label, .zero .n { color: var(--muted); }
 	.note { font-family: var(--font-mono); font-size: 9.5px; line-height: 1.75; letter-spacing: 0.03em; color: var(--muted); margin-top: 1.1rem; }
 	@media (max-width: 600px) {
 		.row { grid-template-columns: 6.6rem 1fr 2rem 2.2rem; gap: 0.5rem; }

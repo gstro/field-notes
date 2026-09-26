@@ -56,8 +56,16 @@
 	.status { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid; white-space: nowrap; }
 	.st-attended { color: var(--green); border-color: rgba(93,191,130,0.4); background: rgba(93,191,130,0.08); }
 	.st-skipped { color: var(--muted); border-color: var(--border); }
-	/* Visit unknown — fainter than `skipped`, which asserts a decision not to go. */
-	.st-unknown { color: var(--muted); border-color: var(--border); border-style: dotted; opacity: 0.8; }
+	/* Visit unknown — same muted color as `skipped` (which asserts a decision not
+	   to go); a recessed fill plus the dotted border tell them apart, since no
+	   corpus recommendation currently carries `planned-skipped` to check the
+	   collision against directly (D21 attendance reconstruction may change
+	   that). The fill is BLACK, not --muted: at this contrast margin (--muted
+	   on --dark2 is 4.57:1, against a 4.5:1 floor) any warm/light fill pushes
+	   the text below AA — measured, not assumed, after a first attempt at a
+	   --muted-tinted fill regressed exactly this (D29). A dark fill moves the
+	   opposite direction and raises contrast instead. */
+	.st-unknown { color: var(--muted); border-color: var(--border); border-style: dotted; background: rgba(0,0,0,0.18); }
 	.st-offguide { color: var(--blue); border-color: rgba(90,175,224,0.4); background: rgba(90,175,224,0.08); }
 	.st-closed { color: var(--burnt-light); border-color: rgba(200,90,0,0.45); background: rgba(200,90,0,0.08); }
 	.st-visited { color: var(--gold); border-color: rgba(212,168,67,0.45); background: rgba(212,168,67,0.08); }

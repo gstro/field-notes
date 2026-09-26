@@ -51,7 +51,7 @@
 	.fig { display: flex; flex-direction: column; }
 	.n { font-family: var(--font-display); font-size: 2.1rem; font-weight: 700; color: var(--gold); line-height: 1; }
 	.l { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted); margin-top: 7px; }
-	.d { font-family: var(--font-mono); font-size: 9.5px; color: var(--muted); opacity: 0.7; margin-top: 3px; }
+	.d { font-family: var(--font-mono); font-size: 9.5px; color: var(--muted); margin-top: 3px; }
 	.note { font-size: 12px; color: var(--muted); line-height: 1.5; border-top: 1px solid var(--border); padding-top: 0.7rem; }
 	.note b { color: var(--cream); font-weight: 500; }
 </style>

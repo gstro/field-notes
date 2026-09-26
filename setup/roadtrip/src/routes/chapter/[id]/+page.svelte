@@ -68,7 +68,10 @@
 	const pendingNote = $derived(stops.filter((s) => s.role && !s.built));
 </script>
 
-<svelte:head><title>{meta.num} · {trip.title} — The Long Way Home</title></svelte:head>
+<svelte:head>
+	<title>{meta.num} · {trip.title} — The Long Way Home</title>
+	<meta name="description" content="{trip.subtitle}" />
+</svelte:head>
 
 <main>
 	<a class="back" href="/">← The Long Way Home</a>

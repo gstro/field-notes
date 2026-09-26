@@ -35,7 +35,10 @@
 	const cmp = adherence.comparison as { trip1: { visitsThatWereOnListPct: number }; trip2: { visitsThatWereOnListPct: number } };
 </script>
 
-<svelte:head><title>Colophon — The Long Way Home</title></svelte:head>
+<svelte:head>
+	<title>Colophon — The Long Way Home</title>
+	<meta name="description" content="How this site was built and reconstructed: sourcing, methodology, error bars, and what is not yet measured." />
+</svelte:head>
 
 <main>
 	<a class="back" href="/">← The Long Way Home</a>
@@ -220,6 +223,8 @@
 	main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
 	.back { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
 	.back:hover { color: var(--gold); }
+	p a { color: var(--gold); }
+	p a:hover { color: var(--burnt-light); }
 	.bottom { display: block; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
 	header { margin: 2.5rem 0 3.5rem; }
 	.eyebrow { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--burnt-light); }

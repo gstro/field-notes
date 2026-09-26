@@ -10,7 +10,10 @@
 	const rated = sum((c) => c.ratedCount);
 </script>
 
-<svelte:head><title>Superlatives — The Long Way Home</title></svelte:head>
+<svelte:head>
+	<title>Superlatives — The Long Way Home</title>
+	<meta name="description" content="Why this page is still empty — the would-return rating pass hasn't happened — and what's here instead." />
+</svelte:head>
 
 <main>
 	<a class="back" href="/">← The Long Way Home</a>

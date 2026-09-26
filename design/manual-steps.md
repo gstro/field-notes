@@ -58,15 +58,14 @@ every city file. When you're ready (`roadtrip-setup-guide.md:57-66`):
 
 - [ ] Replace the placeholder favicon (`setup/roadtrip/static/favicon.png`) — still the
       original 32px dark square (`roadtrip-setup-guide.md:102`).
-- [ ] Run a Lighthouse pass on the live Vercel URL (`roadtrip-setup-guide.md:103`) — not done;
-      M1.1 only measured mobile overflow, not Lighthouse.
-- Optional, low priority:
-  - [ ] Pin the Node version — `.npmrc` sets `engine-strict=true` but there's no `engines`
-        field in `package.json` and no `.nvmrc`.
-  - [ ] Drop the unused `@sveltejs/adapter-auto` dependency (nothing uses it; the app uses
-        `adapter-static` configured in `vite.config.ts`).
-  - [ ] Fix the stale template line at `setup/roadtrip/README.md:42` ("you may need to
-        install an adapter" — it's already installed and configured).
+- [ ] Run Lighthouse against the **live Vercel URL** once §2's URL is recorded
+      (`roadtrip-setup-guide.md:103`). [M39](m39-lighthouse-hygiene.md) ran it against a local
+      `preview` build instead — every sampled route now scores 100 on accessibility,
+      best-practices and SEO, with the real contrast/landmark/heading/meta-description defects
+      fixed, but local-preview performance numbers exclude CDN/edge effects.
+- ~~Pin the Node version~~, ~~drop the unused `@sveltejs/adapter-auto` dependency~~, and ~~fix
+  the stale README adapter line~~ — **done in [M39](m39-lighthouse-hygiene.md)**. (These were
+  code-only edits mis-filed here; this document is for what only a human can do.)
 
 ## 6. Privacy — your call, not a default action
 

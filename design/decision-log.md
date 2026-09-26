@@ -34,6 +34,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D26](#d26-visited-places-are-their-own-surface-never-recommendations) | Visited places are their own surface, never recommendations | Final (M5b, Aug 2026) |
 | [D27](#d27-chapter-aggregates-name-what-they-count-and-are-never-re-derived) | Chapter aggregates name what they count, and are never re-derived | Final (M4a, Aug 2026) |
 | [D28](#d28-four-of-the-unmapped-guide-fields-added-the-rest-stay-out) | Four of the unmapped guide fields added (`sources`, `scopeDecision`, `honestGaps`, `statusNotes` + `popCulture.correctionNote`); the rest stay out | Final (M38, Sep 2026) |
+| [D29](#d29-no-opacity-multiplier-on---muted-text) | No opacity multiplier on `--muted` text, anywhere | Final (M39, Sep 2026) |
 
 ## Decisions
 
@@ -215,6 +216,14 @@ One `honestGaps` entry (Atlanta, `no-dedicated-gear-shop`) has `citedFrom: null`
 **Rejected as render targets — see [R20](rejection-log.md#r20-framing-and-analyticalthread-as-rendered-city-page-content).**
 
 **`district`/`address` deferred, not rejected.** The best-covered unmapped fields (552/499 of 705 recs) but held out of this chunk: M5f found 6 of 22 hand-transcribed DC neighbourhoods factually wrong, and the machine-generated guides carry the same risk at roughly 25× the volume with no per-venue review done. Ingesting the field means either verifying 552 values (a project M5f's size, not this chunk's) or publishing addresses/neighbourhoods this site cannot yet stand behind — the citation-as-rendering rule (CLAUDE.md) cuts the other way here: an unreviewed value is exactly what D19 exists to prevent. Revisit once neighbourhood accuracy has a review pass, the way M5f gave DC's citations one.
+
+### D29 — No opacity multiplier on `--muted` text
+
+A Lighthouse accessibility sweep ([M39](m39-lighthouse-hygiene.md)) found six components stacking an extra CSS `opacity` on top of text already colored `--muted` (`#8A8270`), meant to signal "more de-emphasized than muted alone" — unreconstructed stats, not-yet-built cities, provisional visit status, adherence sub-figures, a zero-count row, an un-visited pop-culture entry. `--muted` is already the site's dimmest text color, measuring 5.0:1 against `--dark` and 4.57:1 against `--dark2` — both clear WCAG AA's 4.5:1 floor for normal text, but neither leaves headroom. Checked by computing the actual blended color at each opacity from 0.55 to 0.9: **every fraction below 1 drops the contrast below 4.5:1** (0.9 only reaches 4.28:1).
+
+**Rule: `--muted` text never carries an additional opacity.** Extra de-emphasis, where wanted, comes from something that doesn't touch text contrast — a border style, a *dark* background fill (never a fill in `--muted` itself — see below), or in one case (`PopCulture`'s un-visited filmed-location entries) nothing at all: the existing "Visited" pilgrim badge already carries that distinction, so the opacity dim was redundant as well as non-compliant and was removed outright rather than replaced.
+
+One collision this surfaced: `st-skipped` and `st-unknown` (`RecommendationList.svelte`) now share the same text color and, before this fix, were told apart largely by the opacity fade the removed comment called out ("fainter than skipped"). Checked against the full corpus — `planned-skipped` currently has **zero** occurrences across all 787 recommendations, so the collision is theoretical today, not a live regression; D21 marks trip-2 attendance as provisional pending a memory-based reconstruction pass that will eventually populate it. `st-unknown` was given a background fill so the two stay distinct once that data lands, kept alongside its existing dotted border. **First attempt used a `--muted`-tinted fill and it regressed the exact bug this decision exists to prevent**: `--muted` on `--dark2` is only 4.57:1 against a 4.5:1 floor, and any warm/light fill color pulls the effective background toward the text color, which *reduces* contrast — the margin has no headroom for that. Re-measuring with Lighthouse (not just re-reading the CSS) caught it immediately. The fix uses `rgba(0,0,0,0.18)` instead — black moves the effective background the opposite direction and *raises* contrast (4.57:1 → 4.75:1) while still reading as a visually distinct, more "recessed" badge.
 
 | # | Question | Decide by |
 |---|---|---|

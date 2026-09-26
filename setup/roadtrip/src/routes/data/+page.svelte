@@ -65,7 +65,10 @@
 	const entries = (adherence.entriesInWindow as number).toLocaleString('en-US');
 </script>
 
-<svelte:head><title>The Data — The Long Way Home</title></svelte:head>
+<svelte:head>
+	<title>The Data — The Long Way Home</title>
+	<meta name="description" content="What curation changed, what it displaced, and the fragmentation gap — computed from a Google Takeout join, never from counting statuses." />
+</svelte:head>
 
 <main>
 	<a class="back" href="/">← The Long Way Home</a>

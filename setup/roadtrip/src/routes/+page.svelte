@@ -37,8 +37,12 @@
 	];
 </script>
 
-<svelte:head><title>The Long Way Home — Portland → Austin → Philadelphia</title></svelte:head>
+<svelte:head>
+	<title>The Long Way Home — Portland → Austin → Philadelphia</title>
+	<meta name="description" content="A retrospective of an 18-city, 242-day relocation from Portland to Austin to Philadelphia: self-curated guides, sourced recommendations, and what the data says about the difference." />
+</svelte:head>
 
+<main>
 <section class="hero">
 	<p class="eyebrow">Oct 2025 — May 2026 · One Arc, Two Migrations</p>
 	<h1>The Long Way <em>Home</em></h1>
@@ -61,7 +65,7 @@
 <StatStrip {stats} />
 
 <section class="chapters">
-	<p class="section-label">Three Chapters</p>
+	<h2 class="section-label">Three Chapters</h2>
 	<div class="chapter-grid">
 		{#each trips.trips as trip}
 			<div class="chapter" class:interlude={trip.type === 'interlude'}>
@@ -75,7 +79,7 @@
 						{#if built.has(id)}
 							<a href="/city/{id}">{byId[id].name}</a>
 						{:else}
-							<span class="pending">{byId[id].name}</span>
+							<span>{byId[id].name}</span>
 						{/if}
 					{/each}
 				</p>
@@ -86,13 +90,14 @@
 </section>
 
 <section class="teasers">
-	<p class="section-label">Deep Dives</p>
+	<h2 class="section-label">Deep Dives</h2>
 	<div class="teaser-grid">
 		<a class="teaser" href="/data"><p class="t-title">The Data</p><p>What curation changed, how closely each list was followed, and the fragmentation gap.</p></a>
 		<a class="teaser" href="/superlatives"><p class="t-title">Superlatives</p><p>Best meal. Worst meal. The weirdest thing encountered anywhere.</p></a>
 		<a class="teaser" href="/colophon"><p class="t-title">Colophon</p><p>How this was reconstructed, what the numbers can bear, and what is missing.</p></a>
 	</div>
 </section>
+</main>
 
 <footer>
 	Built in Philadelphia · Data reconstructed &amp; logged Oct 2025 – Jun 2026 · SvelteKit / Vercel / ImageKit
@@ -133,7 +138,9 @@
 	.chapter h3 a:hover { color: var(--gold); }
 	.ch-more { display: inline-block; margin-top: 1rem; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--border); }
 	.ch-more:hover { border-color: var(--gold); }
-	.pending { opacity: 0.5; }
+	/* Not-yet-built cities render as plain (muted-inherited) text with no link —
+	   that contrast with the linked cities' gold is signal enough; no opacity
+	   dim on top (D29 — see StatStrip.svelte's comment for the measurement). */
 	.teaser-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 	.teaser { background: var(--dark2); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; text-decoration: none; display: block; transition: border-color 0.2s; }
 	.teaser:hover { border-color: rgba(196,160,80,0.45); }

@@ -14,7 +14,7 @@
 		</div>
 	{/if}
 	{#each popCulture.filmedHere as f}
-		<div class="item" class:dim={!f.locationVisited}>
+		<div class="item">
 			<!-- {' '} — Svelte trims a bare leading space inside the block -->
 			<p class="title">{f.title}{#if f.year}{' '}({f.year}){/if}{#if f.locationVisited}<span class="pilgrim">Visited</span>{/if}</p>
 			{#if f.visitNote}<p class="note">{f.visitNote}</p>{/if}
@@ -30,7 +30,8 @@
 
 <style>
 	.item { margin-bottom: 1rem; font-size: 14px; }
-	.item.dim { opacity: 0.65; }
+	/* No opacity dim for un-visited locations — it dropped the already-muted
+	   .note text below WCAG AA. The "Visited" pilgrim badge is the signal. */
 	.title { font-weight: 500; }
 	.note { font-size: 12.5px; color: var(--muted); }
 	.correction { padding-bottom: 0.85rem; margin-bottom: 1.15rem; border-bottom: 1px dashed var(--border); }

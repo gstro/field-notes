@@ -9,19 +9,27 @@
 		{ key: 'cost', label: 'Afford' },
 		{ key: 'interestCoverage', label: 'Coverage' }
 	];
-	const CX = 170, CY = 160, R = 110;
+	const CX = 170,
+		CY = 160,
+		R = 110;
 
 	const pt = (i: number, r: number) => {
 		const a = (Math.PI / 180) * (-90 + i * 60);
 		return [CX + r * Math.cos(a), CY + r * Math.sin(a)];
 	};
 	const ring = (frac: number) =>
-		AXES.map((_, i) => pt(i, R * frac).map((n) => n.toFixed(1)).join(',')).join(' ');
+		AXES.map((_, i) =>
+			pt(i, R * frac)
+				.map((n) => n.toFixed(1))
+				.join(',')
+		).join(' ');
 
 	const shape = $derived(
 		AXES.map((ax, i) => {
 			const v = fingerprint[ax.key] ?? 0;
-			return pt(i, (v / 5) * R).map((n) => n.toFixed(1)).join(',');
+			return pt(i, (v / 5) * R)
+				.map((n) => n.toFixed(1))
+				.join(',');
 		}).join(' ')
 	);
 	const labels = $derived(
@@ -51,9 +59,30 @@
 {/if}
 
 <style>
-	svg { width: 100%; height: auto; max-width: 420px; }
-	.grid-line { fill: none; stroke: var(--border); stroke-width: 1; }
-	.axis-line { stroke: var(--border); stroke-width: 1; }
-	.shape { fill: rgba(200, 90, 0, 0.18); stroke: var(--burnt-light); stroke-width: 1.5; }
-	.axis-label { font-family: var(--font-mono); font-size: 9px; fill: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+	svg {
+		width: 100%;
+		height: auto;
+		max-width: 420px;
+	}
+	.grid-line {
+		fill: none;
+		stroke: var(--border);
+		stroke-width: 1;
+	}
+	.axis-line {
+		stroke: var(--border);
+		stroke-width: 1;
+	}
+	.shape {
+		fill: rgba(200, 90, 0, 0.18);
+		stroke: var(--burnt-light);
+		stroke-width: 1.5;
+	}
+	.axis-label {
+		font-family: var(--font-mono);
+		font-size: 9px;
+		fill: var(--muted);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
 </style>

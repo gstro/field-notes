@@ -33,7 +33,12 @@
 		return {
 			total,
 			items: [...counts.entries()]
-				.map(([key, n]) => ({ key, label: INTEREST_TAGS[key], n, pct: total ? (n / total) * 100 : 0 }))
+				.map(([key, n]) => ({
+					key,
+					label: INTEREST_TAGS[key],
+					n,
+					pct: total ? (n / total) * 100 : 0
+				}))
 				.sort((a, b) => b.n - a.n || a.label.localeCompare(b.label))
 		};
 	});
@@ -55,30 +60,77 @@
 		{/each}
 	</div>
 	<p class="note">
-		{rows.total} interest tags across {tagged} of {recommendations.length} recommendations —
-		a pick can carry more than one. Shares are of tags, not of recommendations, and describe
-		what this guide surfaced rather than where the days went.
+		{rows.total} interest tags across {tagged} of {recommendations.length} recommendations — a pick can
+		carry more than one. Shares are of tags, not of recommendations, and describe what this guide surfaced
+		rather than where the days went.
 	</p>
 {/if}
 
 <style>
-	.comp { display: flex; flex-direction: column; gap: 0.55rem; }
+	.comp {
+		display: flex;
+		flex-direction: column;
+		gap: 0.55rem;
+	}
 	/* Tags are NOMINAL — one hue for every bar. Colouring by value would
 	   double-encode length and spend the only free channel for nothing. */
-	.row { display: grid; grid-template-columns: 8.5rem 1fr 2.2rem 2.4rem; align-items: center; gap: 0.7rem; }
-	.label { font-size: 12.5px; color: var(--cream); }
-	.track { height: 8px; background: var(--dark2); border-radius: 2px; }
-	.fill { height: 100%; background: var(--gold); border-radius: 2px; }
-	.n { font-family: var(--font-mono); font-size: 11.5px; color: var(--cream); text-align: right; font-variant-numeric: tabular-nums; }
-	.pct { font-family: var(--font-mono); font-size: 10px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+	.row {
+		display: grid;
+		grid-template-columns: 8.5rem 1fr 2.2rem 2.4rem;
+		align-items: center;
+		gap: 0.7rem;
+	}
+	.label {
+		font-size: 12.5px;
+		color: var(--cream);
+	}
+	.track {
+		height: 8px;
+		background: var(--dark2);
+		border-radius: 2px;
+	}
+	.fill {
+		height: 100%;
+		background: var(--gold);
+		border-radius: 2px;
+	}
+	.n {
+		font-family: var(--font-mono);
+		font-size: 11.5px;
+		color: var(--cream);
+		text-align: right;
+		font-variant-numeric: tabular-nums;
+	}
+	.pct {
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--muted);
+		text-align: right;
+		font-variant-numeric: tabular-nums;
+	}
 	/* An absent interest keeps its row and its label, but loses the ink — the
 	   gap is the information, so it is shown rather than dropped. No opacity
 	   on top of --muted: measured to fail WCAG AA against --dark2/--dark at
 	   any fraction < 1 (see m39-lighthouse-hygiene.md). */
-	.zero .label, .zero .n { color: var(--muted); }
-	.note { font-family: var(--font-mono); font-size: 9.5px; line-height: 1.75; letter-spacing: 0.03em; color: var(--muted); margin-top: 1.1rem; }
+	.zero .label,
+	.zero .n {
+		color: var(--muted);
+	}
+	.note {
+		font-family: var(--font-mono);
+		font-size: 9.5px;
+		line-height: 1.75;
+		letter-spacing: 0.03em;
+		color: var(--muted);
+		margin-top: 1.1rem;
+	}
 	@media (max-width: 600px) {
-		.row { grid-template-columns: 6.6rem 1fr 2rem 2.2rem; gap: 0.5rem; }
-		.label { font-size: 11.5px; }
+		.row {
+			grid-template-columns: 6.6rem 1fr 2rem 2.2rem;
+			gap: 0.5rem;
+		}
+		.label {
+			font-size: 11.5px;
+		}
 	}
 </style>

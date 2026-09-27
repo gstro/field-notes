@@ -66,7 +66,9 @@
 				<div
 					class="bar-row"
 					role="img"
-					aria-label="{r.label}: {fmt(r.a as number)} on trip one, {fmt(r.b as number)} on trip two, {pctLabel(r.pct as number)}"
+					aria-label="{r.label}: {fmt(r.a as number)} on trip one, {fmt(
+						r.b as number
+					)} on trip two, {pctLabel(r.pct as number)}"
 				>
 					<div class="track">
 						<div class="fill" style="width: {(Math.abs(r.pct as number) / max) * 100}%"></div>
@@ -80,29 +82,114 @@
 {/if}
 
 <style>
-	.legend { display: flex; flex-wrap: wrap; gap: 1.2rem; font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-bottom: 1.5rem; }
-	.legend span { display: inline-flex; align-items: center; gap: 6px; }
-	.key { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-	.t1 { background: var(--gold); }
-	.t2 { background: var(--burnt); }
-	.rows { display: flex; flex-direction: column; gap: 1.9rem; }
-	.head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 9px; }
-	.label { font-size: 14px; color: var(--cream); }
+	.legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.2rem;
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--muted);
+		margin-bottom: 1.5rem;
+	}
+	.legend span {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.key {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	.t1 {
+		background: var(--gold);
+	}
+	.t2 {
+		background: var(--burnt);
+	}
+	.rows {
+		display: flex;
+		flex-direction: column;
+		gap: 1.9rem;
+	}
+	.head {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 9px;
+	}
+	.label {
+		font-size: 14px;
+		color: var(--cream);
+	}
 	/* Text wears text tokens; the coloured dot beside each value carries trip
 	   identity, so nothing here is reachable by colour alone. */
-	.vals { font-family: var(--font-mono); font-size: 12px; color: var(--cream); display: inline-flex; align-items: center; gap: 5px; font-variant-numeric: tabular-nums; }
-	.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-	.d1 { background: var(--gold); }
-	.d2 { background: var(--burnt); }
-	.arrow { color: var(--muted); opacity: 0.6; font-size: 10px; margin: 0 2px; }
+	.vals {
+		font-family: var(--font-mono);
+		font-size: 12px;
+		color: var(--cream);
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+		font-variant-numeric: tabular-nums;
+	}
+	.dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	.d1 {
+		background: var(--gold);
+	}
+	.d2 {
+		background: var(--burnt);
+	}
+	.arrow {
+		color: var(--muted);
+		opacity: 0.6;
+		font-size: 10px;
+		margin: 0 2px;
+	}
 	/* The track is its own flex child so the fill is always an exact percentage
 	   of a FULL-width track. Letting the fill and the label share one flex
 	   context made the longest bar shrink to make room for its label, which
 	   silently broke the shared axis the two bars are compared on. The label
 	   is fixed-width for the same reason: both tracks must measure the same. */
-	.bar-row { display: flex; align-items: center; gap: 9px; }
-	.track { flex: 1; height: 9px; background: var(--dark2); border-radius: 2px; }
-	.fill { height: 100%; background: var(--burnt); border-radius: 2px; }
-	.delta { flex: none; width: 4.6em; text-align: right; font-family: var(--font-mono); font-size: 10.5px; color: var(--cream); font-variant-numeric: tabular-nums; white-space: nowrap; }
-	.gloss { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.05em; color: var(--muted); margin-top: 8px; }
+	.bar-row {
+		display: flex;
+		align-items: center;
+		gap: 9px;
+	}
+	.track {
+		flex: 1;
+		height: 9px;
+		background: var(--dark2);
+		border-radius: 2px;
+	}
+	.fill {
+		height: 100%;
+		background: var(--burnt);
+		border-radius: 2px;
+	}
+	.delta {
+		flex: none;
+		width: 4.6em;
+		text-align: right;
+		font-family: var(--font-mono);
+		font-size: 10.5px;
+		color: var(--cream);
+		font-variant-numeric: tabular-nums;
+		white-space: nowrap;
+	}
+	.gloss {
+		font-family: var(--font-mono);
+		font-size: 9.5px;
+		letter-spacing: 0.05em;
+		color: var(--muted);
+		margin-top: 8px;
+	}
 </style>

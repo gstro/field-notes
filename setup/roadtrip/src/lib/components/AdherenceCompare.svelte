@@ -2,7 +2,13 @@
 	// Per-city list-following, grouped by curation method. Both measures are
 	// percentages on one scale — never a second axis.
 	// Trip 1 = gold, Trip 2 = burnt (validated pair; see CurationSlope).
-	type Row = { id: string; name: string; trip: string; listConversionPct: number; visitsThatWereOnListPct: number };
+	type Row = {
+		id: string;
+		name: string;
+		trip: string;
+		listConversionPct: number;
+		visitsThatWereOnListPct: number;
+	};
 	let { rows }: { rows: Row[] } = $props();
 
 	// Fixed to 1dp: the values align vertically, and mixing "46%" with "68.4%"
@@ -14,11 +20,25 @@
 	// chart — it's an interlude city (no guide at the time) in adherence.json,
 	// not trip1/trip2, and a city dropping off a comparison without saying so is
 	// the failure this site keeps correcting.
-	const groups = $derived([
-		{ trip: 'trip1', label: 'Trip 1 · self-curated', rows: rows.filter((r) => r.trip === 'trip1') },
-		{ trip: 'interlude', label: 'Interlude · no guide at the time', rows: rows.filter((r) => r.trip === 'interlude') },
-		{ trip: 'trip2', label: 'Trip 2 · sourced guides', rows: rows.filter((r) => r.trip === 'trip2') }
-	].filter((g) => g.rows.length));
+	const groups = $derived(
+		[
+			{
+				trip: 'trip1',
+				label: 'Trip 1 · self-curated',
+				rows: rows.filter((r) => r.trip === 'trip1')
+			},
+			{
+				trip: 'interlude',
+				label: 'Interlude · no guide at the time',
+				rows: rows.filter((r) => r.trip === 'interlude')
+			},
+			{
+				trip: 'trip2',
+				label: 'Trip 2 · sourced guides',
+				rows: rows.filter((r) => r.trip === 'trip2')
+			}
+		].filter((g) => g.rows.length)
+	);
 </script>
 
 <div class="legend">
@@ -50,24 +70,95 @@
 </div>
 
 <style>
-	.legend { display: flex; flex-wrap: wrap; gap: 1.2rem; font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-bottom: 1.5rem; }
-	.legend span { display: inline-flex; align-items: center; gap: 6px; }
-	.key { width: 14px; height: 8px; border-radius: 2px; display: inline-block; background: var(--muted); }
+	.legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.2rem;
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--muted);
+		margin-bottom: 1.5rem;
+	}
+	.legend span {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.key {
+		width: 14px;
+		height: 8px;
+		border-radius: 2px;
+		display: inline-block;
+		background: var(--muted);
+	}
 	/* Measure is distinguished by fill texture, not by a second hue — the hue
 	   slot is spent on trip identity, and texture keeps the two readable when
 	   the group colour changes. */
-	.key.hatch { background: repeating-linear-gradient(135deg, var(--muted) 0 2px, transparent 2px 5px); }
-	.groups { display: flex; flex-direction: column; gap: 2rem; }
-	.g-label { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
-	.t2 .g-label { color: var(--burnt-light); }
-	.row { display: grid; grid-template-columns: 108px 1fr; gap: 0.9rem; align-items: center; margin-bottom: 0.65rem; }
-	.city { font-size: 12.5px; color: var(--cream); }
-	.bars { display: flex; flex-direction: column; gap: 3px; }
-	.bar-wrap { display: flex; align-items: center; gap: 7px; }
-	.bar { height: 7px; border-radius: 2px; background: var(--gold); min-width: 2px; }
-	.bar.hatch { background: repeating-linear-gradient(135deg, var(--gold) 0 2px, transparent 2px 5px); }
-	.t2 .bar { background: var(--burnt); }
-	.t2 .bar.hatch { background: repeating-linear-gradient(135deg, var(--burnt) 0 2px, transparent 2px 5px); }
-	.v { font-family: var(--font-mono); font-size: 9.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
-	@media (max-width: 520px) { .row { grid-template-columns: 1fr; gap: 0.3rem; } }
+	.key.hatch {
+		background: repeating-linear-gradient(135deg, var(--muted) 0 2px, transparent 2px 5px);
+	}
+	.groups {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.g-label {
+		font-family: var(--font-mono);
+		font-size: 9.5px;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--gold);
+		margin-bottom: 0.9rem;
+	}
+	.t2 .g-label {
+		color: var(--burnt-light);
+	}
+	.row {
+		display: grid;
+		grid-template-columns: 108px 1fr;
+		gap: 0.9rem;
+		align-items: center;
+		margin-bottom: 0.65rem;
+	}
+	.city {
+		font-size: 12.5px;
+		color: var(--cream);
+	}
+	.bars {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+	}
+	.bar-wrap {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+	}
+	.bar {
+		height: 7px;
+		border-radius: 2px;
+		background: var(--gold);
+		min-width: 2px;
+	}
+	.bar.hatch {
+		background: repeating-linear-gradient(135deg, var(--gold) 0 2px, transparent 2px 5px);
+	}
+	.t2 .bar {
+		background: var(--burnt);
+	}
+	.t2 .bar.hatch {
+		background: repeating-linear-gradient(135deg, var(--burnt) 0 2px, transparent 2px 5px);
+	}
+	.v {
+		font-family: var(--font-mono);
+		font-size: 9.5px;
+		color: var(--muted);
+		font-variant-numeric: tabular-nums;
+	}
+	@media (max-width: 520px) {
+		.row {
+			grid-template-columns: 1fr;
+			gap: 0.3rem;
+		}
+	}
 </style>

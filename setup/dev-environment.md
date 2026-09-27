@@ -39,7 +39,7 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 | chrome-devtools MCP | ✅ | ⚠️ needs Chrome (setup script) | — |
 | Project skills / commands / hook | ✅ | ✅ loaded from repo | — |
 | Svelte Claude plugin (optional) | ✅ if you install it | ❌ plugins don't load in cloud | — |
-| `gh` CLI | ✅ (authenticated) | ✅ GitHub access through the session's proxy | built-in `GITHUB_TOKEN` |
+| `gh` CLI | ✅ (authenticated) | ⚠️ unverified; `gh auth status` | built-in `GITHUB_TOKEN` |
 | VS Code JSON Schema validation | ✅ | n/a | — |
 
 ⚠️ = works once the one-time step in manual-steps §9 is done. Until then the rest of the environment still works; only that tool is missing.
@@ -106,14 +106,14 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 - **What:** `chrome-devtools-mcp`, which drives headless Chrome over CDP in an isolated, throwaway profile. Its tools include:
   - page control: `new_page`, `navigate_page`, `resize_page`
   - inspection: `take_screenshot`, `take_snapshot` (the accessibility tree), `evaluate_script`, console and network inspection
-  - emulation: `emulate` (reduced motion, colour scheme, CPU/network)
+  - emulation: `emulate` (colour scheme, viewport, CPU/network, geolocation). It does **not** do `prefers-reduced-motion`; the `visual-check` skill audits the stylesheets for that instead.
   - auditing: performance traces and `lighthouse_audit`
 - **Why this one and not Playwright MCP:** M1.1 established that layout gets verified by measuring (`scrollWidth` vs `clientWidth` over CDP), not by eyeballing a screenshot. This server does exactly that, and it adds perf traces.
 - **Use:** follow the `visual-check` skill:
   1. Build and preview.
   2. Open clean URLs (never `city/<slug>.html`, which 404s after hydration).
   3. Resize to 390px and measure overflow.
-  4. Emulate reduced motion.
+  4. Audit the stylesheets for unguarded animations.
   5. Take a screenshot.
 - **Cloud:** needs a Chrome binary. Run `check-tools` in the first session; if Chrome is missing, use the setup script below.
 
@@ -156,7 +156,7 @@ Everything is at the repo root, so it loads in both local and cloud sessions.
 - **Use:**
   - `gh pr create`, `gh pr checks`, `gh pr view --comments`
   - `gh run view --log-failed` to read a CI failure
-- **Cloud:** GitHub access goes through the session's GitHub proxy; you don't need a token.
+- **Cloud:** GitHub domains are on the default allowlist and git pushes go through the session's GitHub integration. Whether the `gh` CLI itself is authenticated there is **unverified**; run `gh auth status` in the first session (manual-steps §9).
 
 ### Repo data tools (`tools/*.mjs`)
 

@@ -129,7 +129,8 @@ These steps live in vendor UIs that only you can reach. Background and troublesh
 - [ ] **First cloud session smoke test.** Open a session on this repo and ask Claude to:
       1. Run `check-tools`, and confirm that Node is ≥22.12 and whether Chrome is present.
       2. Run `/mcp`, and confirm that `svelte` and `chrome-devtools` are connected.
-      3. Run the `validate` skill.
+      3. Run `gh auth status` to see whether the `gh` CLI is authenticated in the cloud.
+      4. Run the `validate` skill.
 - [ ] **Branch protection on `main`** (GitHub → Settings → Branches): require the `CI /
       validate` check before merging.
 - [ ] **VS Code:** accept the workspace's recommended extensions prompt (Svelte, ESLint,

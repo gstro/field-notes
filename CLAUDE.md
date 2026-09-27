@@ -16,9 +16,19 @@ npm install
 npm run dev -- --open   # dev server
 npm run check           # svelte-check: validates pages AND city JSON against types.ts
 npm run build           # static build — prerenderer hard-fails on broken links
+npm run lint            # prettier --check + eslint   (npm run format to fix)
+npm run schemas         # regenerate schemas/city.schema.json after editing types.ts
+npm run lhci            # Lighthouse CI on 6 routes (after build); a11y/BP/SEO must be 100
 ```
 
-There are no tests or linters; `npm run check` and `npm run build` are the validation gates. Run both after touching data JSON or components — `check` catches schema violations, `build` catches broken link surfaces.
+There is no test suite (R21). The validation gates are `check`, `lint`, and `build`, and CI (`.github/workflows/ci.yml`) runs them on every PR, plus a schema-drift check. Run them after touching data JSON or components: `check` catches schema violations, `build` catches broken link surfaces. Data JSON in `src/lib/data/` is deliberately Prettier-ignored.
+
+Tooling and agent setup are described in `setup/dev-environment.md` (D30):
+- Project MCP servers in `.mcp.json`: `svelte` for docs and `svelte-autofixer`; `chrome-devtools` for browser checks.
+- Project skills: `validate`, `city-data-edit`, `lighthouse`, `visual-check`.
+- A SessionStart hook that installs dependencies in cloud sessions.
+
+After changing a `.svelte` file, run `svelte-autofixer` on it. Verify UI changes with the `visual-check` skill, not by reading the CSS.
 
 ## Site architecture
 
@@ -46,7 +56,7 @@ These are decided (see `design/decision-log.md` for rationale; don't re-litigate
 
 ## Design docs
 
-`design/` holds six docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions, currently through D27, + open questions O4/O5), `rejection-log.md` (rejected alternatives, currently through R19), `implementation-plan.md` (milestones M0–M7, each with its own per-milestone doc once started), `roadmap.md` (unendorsed ideas), `manual-steps.md` (every step only the user can do — vendor setup, secrets, memory passes over data, open decisions). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan; new manual/vendor/data-entry tasks go to `manual-steps.md`, not scattered across milestone docs.
+`design/` holds six docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions, currently through D30, + open questions O4/O5), `rejection-log.md` (rejected alternatives, currently through R21), `implementation-plan.md` (milestones M0–M7, each with its own per-milestone doc once started), `roadmap.md` (unendorsed ideas), `manual-steps.md` (every step only the user can do — vendor setup, secrets, memory passes over data, open decisions). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan; new manual/vendor/data-entry tasks go to `manual-steps.md`, not scattered across milestone docs.
 
 ## Current status
 

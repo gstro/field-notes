@@ -23,6 +23,7 @@ Things considered and rejected, with why — so they don't get re-litigated. The
 | [R15](#r15-full-scrollytelling-as-the-initial-chapter-build) | Full MapLibre scrollytelling as the initial chapter build | Leg-ledger first ([D17](decision-log.md#d17-leg-ledger-chapter-pages-first)) |
 | [R16](#r16-15-rating-scale) | 1–5 rating scale | Binary rating ([D18](decision-log.md#d18-binary-recommendation-rating)) |
 | [R17](#r17-the-instinct-vs-curation-framing) | "Instinct vs. curation" framing | Self- vs sourced curation ([D22](decision-log.md#d22-self-curation-vs-sourced-curation-supersedes-the-instinct-framing)) |
+| [R21](#r21-playwright-test-suite-devcontainer-lighthouse-in-ci) | Playwright test suite; devcontainer; Lighthouse in CI | MCP browser checks, Claude Code on the web, on-demand `npm run lhci` ([D30](decision-log.md#d30-dev-environment-lintformat-ci-generated-json-schema-committed-agent-config)) |
 
 ## Rejections
 
@@ -119,3 +120,11 @@ Two of the unmapped guide fields M3 inventoried, considered for [D28](decision-l
 `framing` (~850 chars/city of generative narrative prose) and `analyticalThread` (the cross-city political-geography through-line, e.g. Boise's Frank Church/Anne Frank thread linked to Salt Lake City's) both read well and both cut against the same thing: this is a first-person retrospective of a trip the owner actually took, and both fields are machine-written editorializing composed after the fact, not a record of what happened or what the guide drew on. Rendering ~850 characters of generated narrative per city risks reading as the owner's own retrospective voice when it isn't — the same anachronism problem D2/D22 already require disclosing for the retro guides themselves, one layer deeper: not just "this guide didn't exist yet," but "this paragraph was never actually thought by the traveler." `scopeDecision`/`honestGaps`/`statusNotes`/`sources` don't have this problem because they describe the guide's method, which is a fact about the artifact, not a voice standing in for the owner's.
 
 Not a D23-style store-not-render call — that pattern is for content that's real but needs an editorial pass before it can be trusted to read cleanly (`population.note`). This is closer to R7's photo-led rejection: a fit question, not a data-quality one. Both fields stay in `guides/*.json`, available if a future editorial pass wants to rewrite them in the owner's own hand rather than render them as generated.
+
+### R21 — Playwright test suite, devcontainer, Lighthouse in CI
+
+Considered while setting up the M40 dev environment ([D30](decision-log.md#d30-dev-environment-lintformat-ci-generated-json-schema-committed-agent-config)). All three are rejected for now, not permanently.
+
+- **A `@playwright/test` suite** (smoke tests for every route rendering, no overflow at 390px, pending cities unlinked). The site's real failure modes are already covered: svelte-check catches schema violations, and the prerender crawler catches broken links. Layout is checked by agents through the chrome-devtools MCP using the M1.1 CDP method, so a suite would mostly re-assert static JSON. Worth revisiting if the site gains interaction, such as the roadmap's scrollytelling.
+- **A `.devcontainer/` for Codespaces.** Claude Code on the web is the cloud target, and it runs from the committed `.claude/` and `.mcp.json` plus a setup script (manual-steps §9). A devcontainer would be a second environment definition to keep in sync, and nothing currently uses it.
+- **Lighthouse in CI.** M39 recorded performance swinging 91–99 between identical local runs, and a11y/best-practices/SEO only change when markup or colour changes. `npm run lhci` stays on demand; the `lighthouse` skill tells agents when to run it.

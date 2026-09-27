@@ -1,0 +1,10 @@
+{
+	"[svelte]": { "editor.defaultFormatter": "svelte.svelte-vscode" },
+	"[typescript][javascript][css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"json.schemas": [
+		{
+			"fileMatch": ["/src/lib/data/cities/*.json"],
+			"url": "./schemas/city.schema.json"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /setup/roadtrip
+    schedule:
+      interval: monthly
+    groups:
+      svelte:
+        patterns: ['svelte', 'svelte-check', '@sveltejs/*', 'vite']
+      lint:
+        patterns: ['eslint*', '@eslint/*', 'typescript-eslint', 'prettier*', 'globals']
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

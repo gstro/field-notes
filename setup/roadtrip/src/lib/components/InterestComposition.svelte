@@ -15,6 +15,8 @@
 	let { recommendations }: { recommendations: Recommendation[] } = $props();
 
 	const rows = $derived.by(() => {
+		// Local tally inside $derived.by, never exposed as state.
+		// eslint-disable-next-line svelte/prefer-svelte-reactivity
 		const counts = new Map<string, number>(Object.keys(INTEREST_TAGS).map((k) => [k, 0]));
 		let total = 0;
 		for (const r of recommendations) {

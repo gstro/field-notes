@@ -1,0 +1,602 @@
+{
+  "$ref": "#/definitions/City",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/CitedSource"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "source",
+        "label",
+        "url"
+      ],
+      "type": "object"
+    },
+    "CitedSource": {
+      "enum": [
+        "atlasobscura",
+        "tasteatlas",
+        "eater",
+        "timeout",
+        "web-search",
+        "local-tip",
+        "self"
+      ],
+      "type": "string"
+    },
+    "City": {
+      "additionalProperties": false,
+      "properties": {
+        "coords": {
+          "additionalProperties": false,
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lng": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "lat",
+            "lng"
+          ],
+          "type": "object"
+        },
+        "elevationFt": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "favorites": {
+          "additionalProperties": {},
+          "type": "object"
+        },
+        "fieldNotes": {
+          "additionalProperties": {},
+          "type": "object"
+        },
+        "fingerprint": {
+          "additionalProperties": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "type": "object"
+        },
+        "honestGaps": {
+          "items": {
+            "$ref": "#/definitions/GuideGap"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "photos": {
+          "additionalProperties": false,
+          "properties": {
+            "gallery": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "hero": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "serialSubjects": {
+              "additionalProperties": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "hero",
+            "gallery",
+            "serialSubjects"
+          ],
+          "type": "object"
+        },
+        "popCulture": {
+          "additionalProperties": false,
+          "properties": {
+            "bornHere": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "relevance": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "relevance",
+                  "note"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "correctionNote": {
+              "anyOf": [
+                {
+                  "additionalProperties": false,
+                  "properties": {
+                    "citedFrom": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "text": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "citedFrom"
+                  ],
+                  "type": "object"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "filmedHere": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "locationVisited": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "photoId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "visitNote": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "title",
+                  "year",
+                  "locationVisited",
+                  "visitNote",
+                  "photoId"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "filmedHere",
+            "bornHere",
+            "correctionNote"
+          ],
+          "type": "object"
+        },
+        "population": {
+          "additionalProperties": false,
+          "properties": {
+            "cityProper": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "metro": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "cityProper",
+            "metro",
+            "note"
+          ],
+          "type": "object"
+        },
+        "recommendations": {
+          "items": {
+            "$ref": "#/definitions/Recommendation"
+          },
+          "type": "array"
+        },
+        "scopeDecision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sources": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "spend": {
+          "anyOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "byCategory": {
+                  "additionalProperties": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "type": "object"
+                },
+                "lodging": {
+                  "anyOf": [
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "cost": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "name": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "nights": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "note": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "cost",
+                        "nights",
+                        "note"
+                      ],
+                      "type": "object"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "total": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "total",
+                "byCategory",
+                "lodging"
+              ],
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "state": {
+          "type": "string"
+        },
+        "statusNotes": {
+          "items": {
+            "$ref": "#/definitions/GuideNote"
+          },
+          "type": "array"
+        },
+        "stay": {
+          "additionalProperties": false,
+          "properties": {
+            "arrive": {
+              "type": "string"
+            },
+            "depart": {
+              "type": "string"
+            },
+            "nights": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "arrive",
+            "depart",
+            "nights"
+          ],
+          "type": "object"
+        },
+        "tagline": {
+          "type": "string"
+        },
+        "tripId": {
+          "$ref": "#/definitions/TripId"
+        },
+        "vibeWord": {
+          "type": "string"
+        },
+        "wouldILiveHere": {
+          "additionalProperties": false,
+          "properties": {
+            "note": {
+              "type": "string"
+            },
+            "verdict": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "verdict",
+            "note"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "state",
+        "tripId",
+        "stay",
+        "coords",
+        "elevationFt",
+        "population",
+        "vibeWord",
+        "tagline",
+        "wouldILiveHere",
+        "fingerprint",
+        "recommendations",
+        "popCulture",
+        "favorites",
+        "fieldNotes",
+        "spend",
+        "photos",
+        "sources",
+        "scopeDecision",
+        "honestGaps",
+        "statusNotes"
+      ],
+      "type": "object"
+    },
+    "GuideGap": {
+      "additionalProperties": false,
+      "properties": {
+        "categoryNum": {
+          "type": "number"
+        },
+        "citedFrom": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "categoryNum",
+        "text",
+        "citedFrom"
+      ],
+      "type": "object"
+    },
+    "GuideNote": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "info",
+            "warning"
+          ],
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "severity",
+        "text"
+      ],
+      "type": "object"
+    },
+    "InterestTag": {
+      "enum": [
+        "i-food",
+        "i-drinks",
+        "i-books",
+        "i-punk",
+        "i-diy",
+        "i-political",
+        "i-horror",
+        "i-bees"
+      ],
+      "type": "string"
+    },
+    "RecStatus": {
+      "enum": [
+        "attended",
+        "planned-skipped",
+        "off-guide-discovery",
+        "closed-on-arrival",
+        "unverified",
+        "attended-anyway",
+        "retroactive-recommendation"
+      ],
+      "type": "string"
+    },
+    "Recommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "bestTimeOfDay": {
+          "type": "string"
+        },
+        "categoryNum": {
+          "type": "number"
+        },
+        "durationMin": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "estCost": {
+          "type": "string"
+        },
+        "interestTags": {
+          "items": {
+            "$ref": "#/definitions/InterestTag"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "rating": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "source": {
+          "additionalProperties": false,
+          "properties": {
+            "citedFrom": {
+              "items": {
+                "$ref": "#/definitions/Citation"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "guide",
+                "retro-guide"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "citedFrom"
+          ],
+          "type": "object"
+        },
+        "status": {
+          "$ref": "#/definitions/RecStatus"
+        },
+        "verifiedOpen": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "categoryNum",
+        "source",
+        "status",
+        "interestTags",
+        "estCost",
+        "bestTimeOfDay",
+        "durationMin",
+        "rating",
+        "note",
+        "verifiedOpen"
+      ],
+      "type": "object"
+    },
+    "TripId": {
+      "enum": [
+        "west",
+        "nola",
+        "south"
+      ],
+      "type": "string"
+    }
+  }
+}

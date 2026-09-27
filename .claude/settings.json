@@ -1,0 +1,56 @@
+{
+	"$schema": "https://json.schemastore.org/claude-code-settings.json",
+	"enabledMcpjsonServers": ["svelte", "chrome-devtools"],
+	"permissions": {
+		"allow": [
+			"Bash(npm ci)",
+			"Bash(npm install)",
+			"Bash(npm run check)",
+			"Bash(npm run check:*)",
+			"Bash(npm run build)",
+			"Bash(npm run lint)",
+			"Bash(npm run format)",
+			"Bash(npm run schemas)",
+			"Bash(npm run lhci)",
+			"Bash(npm run preview:*)",
+			"Bash(npm run dev:*)",
+			"Bash(node tools/ingest-guides.mjs --dry-run)",
+			"Bash(node tools/join-takeout.mjs --dry-run:*)",
+			"Bash(git status:*)",
+			"Bash(git diff:*)",
+			"Bash(git log:*)",
+			"Bash(gh pr view:*)",
+			"Bash(gh pr list:*)",
+			"Bash(gh pr checks:*)",
+			"Bash(gh run view:*)",
+			"Bash(gh run list:*)",
+			"mcp__svelte__list-sections",
+			"mcp__svelte__get-documentation",
+			"mcp__svelte__svelte-autofixer",
+			"mcp__chrome-devtools__navigate_page",
+			"mcp__chrome-devtools__new_page",
+			"mcp__chrome-devtools__resize_page",
+			"mcp__chrome-devtools__take_screenshot",
+			"mcp__chrome-devtools__take_snapshot",
+			"mcp__chrome-devtools__evaluate_script",
+			"mcp__chrome-devtools__emulate",
+			"mcp__chrome-devtools__get_console_message",
+			"mcp__chrome-devtools__lighthouse_audit",
+			"mcp__chrome-devtools__list_pages"
+		]
+	},
+	"hooks": {
+		"SessionStart": [
+			{
+				"matcher": "startup|resume",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-start.sh",
+						"timeout": 600
+					}
+				]
+			}
+		]
+	}
+}

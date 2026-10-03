@@ -116,21 +116,22 @@ Everything in-repo is committed ([D30](decision-log.md#d30-dev-environment-lintf
 These steps live in vendor UIs that only you can reach. Background and troubleshooting are in
 [`setup/dev-environment.md`](../setup/dev-environment.md).
 
-- [ ] **Claude Code on the web environment** (claude.ai/code → environment settings).
-      Set network access to **Custom**, tick "include default allowed domains," and add:
-      - `svelte.dev`: the Svelte MCP's `list-sections`/`get-documentation` fetch docs from it
-        at runtime (checked in the `@sveltejs/mcp@0.1.26` bundle). `svelte-autofixer` works
-        without it.
-      - Only if the first session shows Chrome is missing: the host your setup script
-        downloads Chrome from (see the next item).
-- [ ] **Setup script** (same dialog). It's optional, and only needed if the first cloud
-      session shows no Chrome for the chrome-devtools MCP or a Node older than 22.12. The
-      candidate script is in `setup/dev-environment.md` § Cloud.
-- [ ] **First cloud session smoke test.** Open a session on this repo and ask Claude to:
-      1. Run `check-tools`, and confirm that Node is ≥22.12 and whether Chrome is present.
-      2. Run `/mcp`, and confirm that `svelte` and `chrome-devtools` are connected.
-      3. Run `gh auth status` to see whether the `gh` CLI is authenticated in the cloud.
-      4. Run the `validate` skill.
+- [x] **Claude Code on the web environment.** Network is set to **Custom** with the
+      defaults plus `svelte.dev`. The Svelte MCP's `list-sections`/`get-documentation` fetch
+      from `svelte.dev` at runtime, and both were verified working in a cloud session (Oct 2026).
+- [ ] **Delete `GH_TOKEN` and the setup script** from the environment settings. Neither is
+      needed:
+      - The token is invalid, and it only breaks `gh`, which nothing in the repo uses.
+      - GitHub work goes through the session's built-in GitHub MCP, which is verified working.
+      - The setup script 403'd on `dl.google.com`, and the image already ships Playwright's
+        Chromium.
+- [ ] **Re-run the browser checks in a fresh cloud session** after the chrome-devtools
+      wrapper (`.claude/scripts/chrome-devtools-mcp.sh`) lands on `main`. Already verified:
+      Node v22.22.0, the `validate` skill, both Svelte MCP tools, and the GitHub MCP. Still
+      to verify:
+      - chrome-devtools `new_page` → `about:blank` and `list_pages`;
+      - the `visual-check` skill on `/city/boise-id`;
+      - `npm run build && npm run lhci`.
 - [ ] **Branch protection on `main`** (GitHub → Settings → Branches): require the `CI /
       validate` check before merging.
 - [ ] **VS Code:** accept the workspace's recommended extensions prompt (Svelte, ESLint,

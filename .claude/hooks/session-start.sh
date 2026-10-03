@@ -8,12 +8,21 @@ set -euo pipefail
 
 cd "${CLAUDE_PROJECT_DIR:-$(pwd)}/setup/roadtrip"
 
+# The cloud image has no Google Chrome, only Playwright's Chromium. Export it as
+# CHROME_PATH for the session's Bash commands so `npm run lhci` (chrome-launcher)
+# finds it; lighthouserc.json already passes --no-sandbox for running as root.
+# The chrome-devtools MCP finds it on its own (.claude/scripts/chrome-devtools-mcp.sh).
+if [ -z "${CHROME_PATH:-}" ] && [ -n "${CLAUDE_ENV_FILE:-}" ]; then
+	pw_chrome="$(ls -d /opt/pw-browsers/chromium-*/chrome-linux*/chrome 2>/dev/null | sort -V | tail -1 || true)"
+	[ -n "$pw_chrome" ] && echo "export CHROME_PATH=\"$pw_chrome\"" >>"$CLAUDE_ENV_FILE"
+fi
+
 # .npmrc has engine-strict=true and engines.node is >=22.12.0, so an older
 # Node fails `npm ci` with a cryptic error. Say so plainly instead.
 node_version="$(node -v 2>/dev/null || echo v0.0.0)"
 IFS=. read -r major minor _ <<<"${node_version#v}"
 if [ "$major" -lt 22 ] || { [ "$major" -eq 22 ] && [ "$minor" -lt 12 ]; }; then
-	echo "session-start: Node $node_version is below 22.12; see setup/dev-environment.md (cloud setup script)." >&2
+	echo "session-start: Node $node_version is below 22.12; see setup/dev-environment.md (Cloud section)." >&2
 	exit 0
 fi
 

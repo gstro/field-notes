@@ -18,6 +18,6 @@ Reports land in `setup/roadtrip/.lighthouseci/` (gitignored), one `lhr-*.json` +
 - Contrast fixes must be **re-measured**, not judged from CSS. D29 (no opacity on `--muted` text) came from exactly that.
 - Don't audit `build/city/<slug>.html` directly with a file server; it 404s after hydration. Always go through `vite preview`.
 - For one-off audits of a single page during a session, the chrome-devtools MCP's `lighthouse_audit` tool also works.
-- **Known failure:** `/` fails `font-size` (59.66% legible against a 60% bar) because of the 8–10px mono labels. It's an open type-scale decision (`design/manual-steps.md` §8). Report it as known rather than "fixing" font sizes unasked, and flag any *other* failure as new.
+- **`font-size`:** all six routes should pass; `/` was 91% legible after D31. Small text sits in the D31 tier: 10px is the floor, 11px is captions, 12px is labels. A new failure here usually means someone added text below 10px.
 - **In cloud sessions,** the SessionStart hook sets `CHROME_PATH` and `LHCI_COLLECT__SETTINGS__CHROME_FLAGS` (adding `--ignore-certificate-errors` for the TLS proxy). If `errors-in-console` fails with `ERR_CERT_AUTHORITY_INVALID`, that export didn't happen; check the hook.
 - The live-URL re-run is a manual step (`design/manual-steps.md`).

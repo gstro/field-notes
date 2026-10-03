@@ -90,7 +90,7 @@
 	}
 	.status {
 		font-family: var(--font-mono);
-		font-size: 8.5px;
+		font-size: 10px;
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		padding: 2px 7px;
@@ -144,7 +144,7 @@
 	}
 	.meta {
 		font-family: var(--font-mono);
-		font-size: 10.5px;
+		font-size: 12px;
 		color: var(--muted);
 		margin-top: 3px;
 	}
@@ -161,7 +161,7 @@
 	}
 	.src {
 		font-family: var(--font-mono);
-		font-size: 9px;
+		font-size: 11px;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color: var(--muted);

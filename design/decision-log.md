@@ -36,6 +36,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D28](#d28-four-of-the-unmapped-guide-fields-added-the-rest-stay-out) | Four of the unmapped guide fields added (`sources`, `scopeDecision`, `honestGaps`, `statusNotes` + `popCulture.correctionNote`); the rest stay out | Final (M38, Sep 2026) |
 | [D29](#d29-no-opacity-multiplier-on---muted-text) | No opacity multiplier on `--muted` text, anywhere | Final (M39, Sep 2026) |
 | [D30](#d30-dev-environment-lintformat-ci-generated-json-schema-committed-agent-config) | Dev environment: lint/format, CI, generated JSON Schema, committed agent config | Final (M40, Sep 2026) |
+| [D31](#d31-small-text-tier-shifted-up-for-legibility) | Small text tier shifted up for legibility; no text below 10px | Final (Oct 2026) |
 
 ## Decisions
 
@@ -246,6 +247,33 @@ Set up in [M40](m40-dev-environment.md) so that people and Claude Code agents, w
 
   Plugins aren't used as the primary path because cloud sessions don't load them.
 - **`engines.node` raised to `>=22.12.0`.** Node 20 is end-of-life, the schema generator needs 22, and the cloud image defaults to 22.
+
+### D31 — Small text tier shifted up for legibility
+
+Found by Lighthouse after M40: on `/`, only 59.66% of text was ≥12px, against Lighthouse's 60% legibility bar.
+- **Culprits:** the 8–10px IBM Plex Mono labels (footer, chapter city lists, map legend, constellation labels).
+- **Not an environment artefact:** it reproduced locally and in the cloud.
+- **Why it surfaced late:** the page sat right on the threshold, so the earlier passing run was luck.
+
+The options were to bump only the high-coverage blocks, to set a flat 12px floor, or to shift the whole tier up. **The tier shifts up and keeps its order:**
+
+| Before | After |
+|---|---|
+| 8–8.5px | 10px |
+| 9–9.5px | 11px |
+| 10–11.5px | 12px |
+
+Text at 12px and up is unchanged.
+
+**Applied across all 77 declarations site-wide,** not just on `/`, so the small-label hierarchy stays consistent between pages. Result:
+- every sampled route went to 87–100% legible text (`/` 91.38%, `/chapter/west` 87.6%);
+- best-practices is back to 100 everywhere.
+
+**Layout was checked by measurement** on all 22 pages at 390px and 1280px, before and after: horizontal overflow, clipped text, and SVG label collisions. That found zero new problems. Screenshots showed one regression: the `CurationSlope` "Museums & history" label wrapped at 12px and knocked its plot out of the row. Fixed by reserving exactly two label lines (`line-height: 1.4; min-height: 2.8em`).
+
+**Rule:** no text below 10px. New small labels use 10px (floor), 11px (captions) or 12px (labels).
+
+Out of scope: the constellation map's labels at 390px are still tiny, because the SVG scales down as a whole. That's the open mobile-treatment question (D5 territory, manual-steps §8), not a type-scale issue.
 
 | # | Question | Decide by |
 |---|---|---|

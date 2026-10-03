@@ -58,7 +58,7 @@
 	}
 	.l {
 		font-family: var(--font-mono);
-		font-size: 8.5px;
+		font-size: 10px;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--muted);

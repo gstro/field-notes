@@ -266,7 +266,7 @@
 	}
 	.back {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -292,7 +292,7 @@
 	}
 	.eyebrow {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.22em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -350,7 +350,7 @@
 	}
 	dt {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.13em;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -375,7 +375,7 @@
 	.corr li::marker {
 		color: var(--burnt-light);
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 	}
 	.tech {
 		font-size: 0.95rem;

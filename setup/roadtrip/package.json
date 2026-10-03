@@ -13,7 +13,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
+		"lint": "prettier --check . && eslint . && node --experimental-strip-types --no-warnings=ExperimentalWarning scripts/check-type-scale.ts",
 		"format": "prettier --write .",
 		"schemas": "ts-json-schema-generator --path src/lib/types.ts --type City --tsconfig tsconfig.json --no-type-check -o schemas/city.schema.json",
 		"lhci": "npx -y @lhci/cli@0.15.1 autorun"

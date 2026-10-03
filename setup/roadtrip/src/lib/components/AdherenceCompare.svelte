@@ -75,7 +75,7 @@
 		flex-wrap: wrap;
 		gap: 1.2rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		margin-bottom: 1.5rem;
 	}
@@ -104,7 +104,7 @@
 	}
 	.g-label {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -151,7 +151,7 @@
 	}
 	.v {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		color: var(--muted);
 		font-variant-numeric: tabular-nums;
 	}

@@ -14,6 +14,15 @@
 	--font-display: 'Playfair Display', serif;
 	--font-mono: 'IBM Plex Mono', monospace;
 	--font-body: 'IBM Plex Sans', sans-serif;
+
+	/* Type scale for small and UI text (D32). Display headings stay as one-off rem
+	   sizes. Nothing renders below --text-2xs (D31); scripts/check-type-scale.ts
+	   enforces both rules in `npm run lint`. */
+	--text-2xs: 10px; /* floor: legends, flags, tiny chart labels */
+	--text-xs: 11px; /* captions, notes, secondary meta */
+	--text-sm: 12px; /* mono labels, eyebrows, footers */
+	--text-ui: 13px; /* small UI and body-adjacent text */
+	--text-md: 14px;
 }
 *,
 *::before,

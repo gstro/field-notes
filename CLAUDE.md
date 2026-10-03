@@ -16,7 +16,7 @@ npm install
 npm run dev -- --open   # dev server
 npm run check           # svelte-check: validates pages AND city JSON against types.ts
 npm run build           # static build — prerenderer hard-fails on broken links
-npm run lint            # prettier --check + eslint   (npm run format to fix)
+npm run lint            # prettier --check + eslint + type-scale guard   (npm run format to fix)
 npm run schemas         # regenerate schemas/city.schema.json after editing types.ts
 npm run lhci            # Lighthouse CI on 6 routes (after build); a11y/BP/SEO must be 100
 ```
@@ -42,7 +42,7 @@ The data flow that takes multiple files to see:
 - `src/lib/registry.ts` — display enums: the 10 guide categories, source labels, and status→chip-class mapping.
 - Cities in `cityIndex.json` with no `cities/*.json` file must render as non-linked "data pending" everywhere. This is load-bearing: the prerender crawler fails the build on links to unbuilt pages. Preserve this pattern on any new link surface.
 
-Design tokens are in `src/lib/tokens.css`; components in `src/lib/components/` are all runes-mode.
+Design tokens are in `src/lib/tokens.css`, both colours and the `--text-*` type scale. Size small or UI text with the tokens, never raw px; `npm run lint` enforces this and the 10px floor (D31/D32). Components in `src/lib/components/` are all runes-mode.
 
 ## Non-negotiable design rules
 
@@ -56,7 +56,7 @@ These are decided (see `design/decision-log.md` for rationale; don't re-litigate
 
 ## Design docs
 
-`design/` holds six docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions, currently through D31, + open questions O4/O5), `rejection-log.md` (rejected alternatives, currently through R21), `implementation-plan.md` (milestones M0–M7, each with its own per-milestone doc once started), `roadmap.md` (unendorsed ideas), `manual-steps.md` (every step only the user can do — vendor setup, secrets, memory passes over data, open decisions). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan; new manual/vendor/data-entry tasks go to `manual-steps.md`, not scattered across milestone docs.
+`design/` holds six docs with distinct roles: `design.md` (concept, architecture, visual system, full data-schema reference), `decision-log.md` (endorsed decisions, currently through D32, + open questions O4/O5), `rejection-log.md` (rejected alternatives, currently through R21), `implementation-plan.md` (milestones M0–M7, each with its own per-milestone doc once started), `roadmap.md` (unendorsed ideas), `manual-steps.md` (every step only the user can do — vendor setup, secrets, memory passes over data, open decisions). When work settles a decision or rejects an approach, record it in the matching log; new speculative features go to `roadmap.md`, not the plan; new manual/vendor/data-entry tasks go to `manual-steps.md`, not scattered across milestone docs.
 
 ## Current status
 

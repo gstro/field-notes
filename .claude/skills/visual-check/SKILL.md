@@ -29,5 +29,13 @@ description: Verify a UI change in a real browser via the chrome-devtools MCP (s
 5. **Theme:** if tokens changed, also run `emulate` with a `colorScheme` of `dark` and then `light`.
 6. `take_screenshot` for the user when the change is visual, and check the console messages for errors.
 7. **Charts:** confirm status colours follow the colour law in CLAUDE.md. Trip-1 gold never shares a hue with trip-2 statuses.
+8. **Type:** new or changed text should be sized with the `--text-*` tokens in `src/lib/tokens.css` (D32), not raw px:
+   - `--text-2xs` 10px, the floor;
+   - `--text-xs` 11px;
+   - `--text-sm` 12px;
+   - `--text-ui` 13px;
+   - `--text-md` 14px.
+
+   `npm run lint` enforces this. If a label wraps after a size change, measure the row's alignment rather than eyeballing it (the D31 `CurationSlope` lesson).
 
 Stop the preview server when done.

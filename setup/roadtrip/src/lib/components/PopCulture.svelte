@@ -39,7 +39,7 @@
 <style>
 	.item {
 		margin-bottom: 1rem;
-		font-size: 14px;
+		font-size: var(--text-md);
 	}
 	/* No opacity dim for un-visited locations — it dropped the already-muted
 	   .note text below WCAG AA. The "Visited" pilgrim badge is the signal. */
@@ -57,14 +57,14 @@
 	}
 	.correction .title {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
 	}
 	.pilgrim {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: var(--text-2xs);
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		padding: 1px 6px;

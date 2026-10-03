@@ -73,7 +73,7 @@
 	}
 	.l {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.11em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -81,12 +81,12 @@
 	}
 	.d {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		color: var(--muted);
 		margin-top: 3px;
 	}
 	.note {
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		line-height: 1.5;
 		border-top: 1px solid var(--border);

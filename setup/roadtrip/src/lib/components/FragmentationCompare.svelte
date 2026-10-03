@@ -62,12 +62,12 @@
 		margin-bottom: 6px;
 	}
 	.city {
-		font-size: 14px;
+		font-size: var(--text-md);
 		color: var(--cream);
 	}
 	.st {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.1em;
 		color: var(--muted);
 		margin-left: 7px;
@@ -93,7 +93,7 @@
 	}
 	.pop {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.05em;
 		color: var(--muted);
 		margin-top: 7px;
@@ -119,7 +119,7 @@
 	}
 	.p-label {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.15em;
 		text-transform: uppercase;
 		color: var(--muted);

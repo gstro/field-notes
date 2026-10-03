@@ -208,7 +208,7 @@
 	}
 	.crumb {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -239,7 +239,7 @@
 	}
 	.head-meta {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		letter-spacing: 0.06em;
 		line-height: 2.1;
@@ -265,7 +265,7 @@
 	}
 	.panel-label {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.25em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -284,7 +284,7 @@
 	}
 	.f-cat {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -312,7 +312,7 @@
 	}
 	.v-q {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -330,7 +330,7 @@
 		justify-content: space-between;
 		padding: 1.5rem 0 3rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.08em;
 	}
 	.city-nav a {

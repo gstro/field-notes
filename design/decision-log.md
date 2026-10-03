@@ -37,6 +37,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D29](#d29-no-opacity-multiplier-on---muted-text) | No opacity multiplier on `--muted` text, anywhere | Final (M39, Sep 2026) |
 | [D30](#d30-dev-environment-lintformat-ci-generated-json-schema-committed-agent-config) | Dev environment: lint/format, CI, generated JSON Schema, committed agent config | Final (M40, Sep 2026) |
 | [D31](#d31-small-text-tier-shifted-up-for-legibility) | Small text tier shifted up for legibility; no text below 10px | Final (Oct 2026) |
+| [D32](#d32-type-scale-tokens-for-small-and-ui-text) | Type-scale tokens for small and UI text, enforced in lint | Final (Oct 2026) |
 
 ## Decisions
 
@@ -274,6 +275,30 @@ Text at 12px and up is unchanged.
 **Rule:** no text below 10px. New small labels use 10px (floor), 11px (captions) or 12px (labels).
 
 Out of scope: the constellation map's labels at 390px are still tiny, because the SVG scales down as a whole. That's the open mobile-treatment question (D5 territory, manual-steps §8), not a type-scale issue.
+
+### D32 — Type-scale tokens for small and UI text
+
+D31's font-size change had to edit 77 declarations across 22 files, because every component hard-coded its own px sizes. Colours were already tokens in `tokens.css`; type sizes never were. That's now fixed with five tokens:
+
+| Token | Size | Used for |
+|---|---|---|
+| `--text-2xs` | 10px | the floor |
+| `--text-xs` | 11px | captions |
+| `--text-sm` | 12px | mono labels |
+| `--text-ui` | 13px | small UI text |
+| `--text-md` | 14px | |
+
+**93 declarations now use them, with values identical to before.** Verified by recording the computed `font-size` of all 26,362 elements on all 22 pages at 390px and 1280px, before and after: zero differences.
+
+**What stays raw:**
+- Display headings keep their one-off `rem`/`clamp()` sizes. A token per heading would add nothing.
+- 12.5px (9 uses), 13.5px (1) and 15px (2) have no token yet. Folding them into the nearest token would visibly change those spots, so that's a separate decision (manual-steps §8).
+
+**Enforced, not just documented.** `scripts/check-type-scale.ts` runs as part of `npm run lint`, so CI runs it too. It fails on:
+- any px `font-size` below the 10px floor (D31);
+- any raw px value that a token already covers.
+
+It's a small TypeScript script run with Node's built-in type stripping, so it adds no dependency. Stylelint was considered and rejected as overkill for one rule.
 
 | # | Question | Decide by |
 |---|---|---|

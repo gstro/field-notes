@@ -66,7 +66,7 @@
 		flex-wrap: wrap;
 		gap: 1.2rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		margin-bottom: 1.5rem;
 	}
@@ -99,7 +99,7 @@
 	}
 	.label {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -147,7 +147,7 @@
 	   Text wears text tokens — the coloured dot beside it carries identity. */
 	.vals {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--cream);
 		display: flex;
 		align-items: baseline;
@@ -157,6 +157,6 @@
 	.arrow {
 		color: var(--muted);
 		opacity: 0.6;
-		font-size: 11px;
+		font-size: var(--text-xs);
 	}
 </style>

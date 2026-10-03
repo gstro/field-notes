@@ -57,7 +57,7 @@
 
 <style>
 	.guide-notes {
-		font-size: 13px;
+		font-size: var(--text-ui);
 	}
 	.scope {
 		color: var(--muted);
@@ -68,7 +68,7 @@
 	}
 	.group-label {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -79,7 +79,7 @@
 	}
 	.cat {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -96,13 +96,13 @@
 		margin-bottom: 0.6rem;
 	}
 	.sources {
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		margin-top: 0.5rem;
 	}
 	.sources-label {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--burnt-light);

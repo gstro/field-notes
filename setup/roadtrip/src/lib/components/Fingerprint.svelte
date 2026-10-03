@@ -80,7 +80,7 @@
 	}
 	.axis-label {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		fill: var(--muted);
 		letter-spacing: 0.05em;
 		text-transform: uppercase;

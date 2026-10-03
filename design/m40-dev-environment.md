@@ -50,3 +50,24 @@ Data JSON under `src/lib/data/` is excluded from Prettier, so `cityIndex.json`'s
 ## Not done here
 - The claude.ai/code environment itself (network allowlist, optional setup script), the first cloud smoke test, and branch protection. These are vendor-UI steps, listed in manual-steps §9.
 - The Svelte Claude Code plugin (`sveltejs/ai-tools`). It's an optional local extra, covered in the guide, and it doesn't load in cloud sessions.
+
+## Follow-up: cloud verification (Oct 2026)
+
+A real Claude Code on the web session (tracked in [#19](https://github.com/gstro/field-notes/issues/19)) found four things.
+
+**No Chrome, running as root.** The image has no Google Chrome, only Playwright's Chromium, and the session runs as root. The chrome-devtools MCP now launches through `.claude/scripts/chrome-devtools-mcp.sh`, which adds `--executablePath` and `--no-sandbox` when needed. The SessionStart hook exports `CHROME_PATH`.
+
+**TLS-intercepting proxy.** Outbound HTTPS goes through a proxy whose CA curl, Node and git trust via env vars, but Chromium doesn't. Google Fonts failed with `ERR_CERT_AUTHORITY_INVALID`, which failed Lighthouse's `errors-in-console` audit on every route. In the cloud only:
+- the wrapper adds `--ignore-certificate-errors`;
+- the hook exports `LHCI_COLLECT__SETTINGS__CHROME_FLAGS`.
+
+I verified locally that this env var fully replaces `lighthouserc.json`'s `chromeFlags`: an env-only proxy flag made `errors-in-console` fail on every route.
+
+**`GH_TOKEN` is a platform placeholder.** It starts `prox` and is 14 characters long, so it isn't a GitHub token. That's why `gh` says "invalid token". The session's GitHub MCP covers all GitHub work, so `gh` and `GH_TOKEN` aren't needed.
+
+**A real legibility finding: `/` fails Lighthouse's `font-size` audit.** Only 59.66% of its text is ≥12px, against a 60% bar; the culprits are the 8–10px mono labels.
+- It reproduces locally (Chrome 154) and in the cloud.
+- It passed in this milestone's Sep 26 baseline. The score sits right at the threshold, so it can flip between runs.
+- `/chapter/west` is at 61.67%.
+
+This is not an environment artefact. It's filed as a type-scale decision in manual-steps §8.

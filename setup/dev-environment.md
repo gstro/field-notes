@@ -33,10 +33,10 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 | Node | 24 via fnm (`.nvmrc`) | 22 preinstalled (must be ≥22.12; `engine-strict`) | 24 via `setup-node` + `.nvmrc` |
 | Dependency install | you run `npm ci` | SessionStart hook runs it | workflow step |
 | `check` / `lint` / `build` / `schemas` | ✅ | ✅ | ✅ (all four + schema-drift check) |
-| `npm run lhci` | ✅ uses installed Chrome | ⚠️ Playwright Chromium via the hook's `CHROME_PATH` (not yet run in cloud) | — not run (R21) |
+| `npm run lhci` | ✅ uses installed Chrome | ✅ Playwright Chromium; the hook sets the path and Chrome flags (flags verified via an equivalent CLI override) | — not run (R21) |
 | Svelte MCP: `svelte-autofixer` | ✅ | ✅ offline | — |
 | Svelte MCP: docs tools | ✅ | ⚠️ needs `svelte.dev` on a Custom allowlist | — |
-| chrome-devtools MCP | ✅ | ⚠️ Playwright Chromium + `--no-sandbox` via the wrapper (not yet run in cloud) | — |
+| chrome-devtools MCP | ✅ | ✅ Playwright Chromium via the wrapper (verified Oct 2026) | — |
 | Project skills / commands / hook | ✅ | ✅ loaded from repo | — |
 | Svelte Claude plugin (optional) | ✅ if you install it | ❌ plugins don't load in cloud | — |
 | GitHub access | `gh` CLI (authenticated) | ✅ built-in GitHub MCP; `gh` not needed | built-in `GITHUB_TOKEN` |
@@ -125,6 +125,7 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 - **What:** `lighthouserc.json` starts `vite preview` and audits `/`, `/city/washington-dc`, `/chapter/west`, `/data`, `/colophon` and `/superlatives`. It asserts **accessibility, best-practices and SEO = 100**. Performance is recorded but not asserted (M39: 91–99 run-to-run noise).
 - **Use:** `npm run build && npm run lhci`. Reports go to `setup/roadtrip/.lighthouseci/` (gitignored). For a single page mid-session, the chrome-devtools MCP's `lighthouse_audit` is quicker.
 - **Rule (D29):** re-measure contrast changes; don't judge them from the CSS.
+- **Known failure (Oct 2026):** `/` fails best-practices on the `font-size` audit. Only 59.66% of its text is ≥12px, against Lighthouse's 60% bar. The small text is the 8–10px mono labels: `footer`, `.ch-cities`, `.map-legend`, `.label`, `.flag`. `/chapter/west` passes, but only just (61.67%). This reproduces locally and in the cloud. It's a type-scale decision waiting on you (manual-steps §8). Until it's settled, `npm run lhci` exits non-zero on that one assertion.
 - **Not in CI** (R21). The live-URL run is a manual step (manual-steps §5).
 
 ### GitHub Actions CI + Dependabot
@@ -159,7 +160,7 @@ Everything is at the repo root, so it loads in both local and cloud sessions.
 - **Use:**
   - `gh pr create`, `gh pr checks`, `gh pr view --comments`
   - `gh run view --log-failed` to read a CI failure
-- **Cloud:** don't use `gh` there. The session's built-in GitHub MCP (`mcp__github__*`) covers PRs, issues, CI status and logs, and it's verified working. `gh` would need a `GH_TOKEN`, and nothing in the repo needs one.
+- **Cloud:** don't use `gh` there. The session's built-in GitHub MCP (`mcp__github__*`) covers PRs, issues, CI status and logs, and it's verified working. The `GH_TOKEN` the platform injects is a placeholder that `gh` rejects, and nothing in the repo needs `gh`.
 
 ### Repo data tools (`tools/*.mjs`)
 
@@ -186,17 +187,22 @@ What a session actually showed (Oct 2026, verified in a real session):
 | Node | v22.22.0, which meets the ≥22.12 floor |
 | Browser | no Google Chrome; **Playwright's Chromium** at `/opt/pw-browsers/chromium-*/chrome-linux/chrome` |
 | User | root, so Chrome needs `--no-sandbox` |
+| Network | outbound HTTPS goes through a TLS-intercepting proxy. curl, Node and git trust its CA via env vars (`NODE_EXTRA_CA_CERTS`, `GIT_SSL_CAINFO`, …). Chromium doesn't, so without a flag Google Fonts fails with `ERR_CERT_AUTHORITY_INVALID`. |
 | GitHub | the session's built-in **GitHub MCP** (`mcp__github__*`) covers PRs, issues and CI; git push goes through the session's own remote |
+| `GH_TOKEN` | **platform-injected placeholder** (14 chars, starts `prox`), not a GitHub token, and not something you can delete. It's why `gh` reports "invalid token". Harmless, because nothing in the repo uses `gh`. |
 
-1. **Environment** (once, at claude.ai/code): set network to **Custom**, tick "include default allowed domains," and add `svelte.dev`. **You don't need a setup script or a `GH_TOKEN`**:
-   - Chromium is already in the image.
-   - The `gh` CLI isn't used anywhere in this repo.
-   - A stale `GH_TOKEN` only makes `gh` print an "invalid token" error. Delete it from the environment settings.
-2. **Every session:** the SessionStart hook does two things:
+1. **Environment** (once, at claude.ai/code): set network to **Custom**, tick "include default allowed domains," and add `svelte.dev`. **You don't need a setup script or your own token.** Chromium is already in the image, and the `gh` CLI isn't used anywhere in this repo.
+2. **Every session:** the SessionStart hook does three things:
    - installs dependencies;
-   - exports `CHROME_PATH` (the Playwright Chromium) so `npm run lhci` can find a browser.
+   - exports `CHROME_PATH` (the Playwright Chromium) so `npm run lhci` can find a browser;
+   - exports `LHCI_COLLECT__SETTINGS__CHROME_FLAGS` (`--headless=new --no-sandbox --ignore-certificate-errors`). This replaces `lighthouserc.json`'s Chrome flags in the cloud only, so the proxy's certificate doesn't turn into a console error on every route.
 
-   The chrome-devtools MCP is launched through `.claude/scripts/chrome-devtools-mcp.sh`, which adds `--executablePath <that Chromium>` and `--chrome-arg=--no-sandbox` only when they're needed. Locally it runs the plain server. `.mcp.json`, the skills and the settings load from the repo.
+   The chrome-devtools MCP is launched through `.claude/scripts/chrome-devtools-mcp.sh`. Locally it runs the plain server. In the cloud it adds:
+   - `--executablePath <that Chromium>`;
+   - `--chrome-arg=--no-sandbox`;
+   - `--chrome-arg=--ignore-certificate-errors`.
+
+   Ignoring certificate errors is limited to that throwaway headless profile. `.mcp.json`, the skills and the settings load from the repo.
 3. **Not available in cloud:** plugins, and MCP servers added with `--scope user|local`. Anything the project needs must be committed at the repo root.
 
 ---
@@ -227,7 +233,7 @@ What a session actually showed (Oct 2026, verified in a real session):
 |---|---|
 | `npm ci` fails with `EBADENGINE` | Node is below 22.12; run `fnm use` (locally) |
 | cloud chrome-devtools: "Could not find Google Chrome" or "running as root" | `.mcp.json` must launch through `.claude/scripts/chrome-devtools-mcp.sh`, not plain `npx` |
-| `gh`: "The token in GH_TOKEN is invalid" (cloud) | delete `GH_TOKEN` from the environment settings; use the GitHub MCP |
+| `gh`: "The token in GH_TOKEN is invalid" (cloud) | expected: `GH_TOKEN` is a platform placeholder. Use the GitHub MCP. |
 | `build` fails with `404 /city/<slug>` | a new link points at a city with no JSON; render it as "data pending" |
 | CI fails at "JSON Schema is up to date" | run `npm run schemas` and commit |
 | MCP shows "failed" in `/mcp` | cloud: check the allowlist (`svelte.dev`); local: `bash .claude/scripts/chrome-devtools-mcp.sh </dev/null` to see the error |

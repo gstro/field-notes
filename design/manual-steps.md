@@ -107,6 +107,22 @@ These are memory passes or exports — nothing in the codebase can generate them
   `m37-colophon.md:39,76`)
 - **`ConstellationMap` mobile treatment at 390px** — flagged as a D5-territory design
   question, not yet resolved. (`m11-site-quality.md:70`)
+- **Small mono labels vs. Lighthouse's legible-font-size bar** (found Oct 2026, M40 follow-up).
+  - **The finding:** on `/`, only 59.66% of text is ≥12px, against Lighthouse's 60% bar, so
+    the page fails best-practices.
+  - **The culprits:** the 8–10px IBM Plex Mono labels:
+    - `footer`, `.ch-cities`, `.map-legend` (10px);
+    - `.label`, `.flag` (8px).
+  - **Also at risk:** `/chapter/west` sits just over the bar at 61.67% (mostly `.caveat`,
+    10px).
+  - **How it showed up:** it reproduces locally and in the cloud, but M40's first Lighthouse
+    CI run on Sep 26 passed it. Because the score sits right at the threshold, it can flip
+    between runs.
+  - **The options:**
+    - bump the smallest label sizes (a type-scale change, so it's yours to make);
+    - or accept it and relax that one assertion in `lighthouserc.json` (record that as a
+      decision).
+  - Until it's decided, `npm run lhci` fails on that one assertion.
 - Unendorsed feature ideas (scrollytelling, a 1–5 rating scale, soundtrack modules, etc.) live
   in `design/roadmap.md` — nothing there needs a decision until you promote one into the plan.
 
@@ -119,19 +135,23 @@ These steps live in vendor UIs that only you can reach. Background and troublesh
 - [x] **Claude Code on the web environment.** Network is set to **Custom** with the
       defaults plus `svelte.dev`. The Svelte MCP's `list-sections`/`get-documentation` fetch
       from `svelte.dev` at runtime, and both were verified working in a cloud session (Oct 2026).
-- [ ] **Delete `GH_TOKEN` and the setup script** from the environment settings. Neither is
-      needed:
-      - The token is invalid, and it only breaks `gh`, which nothing in the repo uses.
-      - GitHub work goes through the session's built-in GitHub MCP, which is verified working.
-      - The setup script 403'd on `dl.google.com`, and the image already ships Playwright's
-        Chromium.
-- [ ] **Re-run the browser checks in a fresh cloud session** after the chrome-devtools
-      wrapper (`.claude/scripts/chrome-devtools-mcp.sh`) lands on `main`. Already verified:
-      Node v22.22.0, the `validate` skill, both Svelte MCP tools, and the GitHub MCP. Still
-      to verify:
-      - chrome-devtools `new_page` → `about:blank` and `list_pages`;
-      - the `visual-check` skill on `/city/boise-id`;
-      - `npm run build && npm run lhci`.
+- [x] **Setup script removed.** It 403'd on `dl.google.com`, and the image already ships
+      Playwright's Chromium.
+- [x] **`GH_TOKEN`:** nothing to do. In cloud sessions it's a platform-injected placeholder
+      (starts `prox`, 14 chars), not a token you set, and the session's GitHub MCP covers all
+      GitHub work (verified).
+- [x] **Cloud session verified (Oct 2026):**
+      - Node v22.22.0 and the `validate` skill.
+      - Both Svelte MCP tools and the GitHub MCP.
+      - chrome-devtools `new_page`/`list_pages`.
+      - The `visual-check` skill: no overflow at 390px, and the reduced-motion guards on `/`
+        are present.
+      - Lighthouse with the cert flag: a11y and SEO are 100 everywhere, and best-practices is
+        100 everywhere except `/`'s `font-size`, which is a real issue (§8).
+- [ ] **One more cloud check, after the M40 cert follow-up lands on `main`:** run
+      `npm run build && npm run lhci` with no extra flags. That confirms the hook's
+      `LHCI_COLLECT__SETTINGS__CHROME_FLAGS` export takes effect. The only failure should be
+      `/` `font-size`.
 - [ ] **Branch protection on `main`** (GitHub → Settings → Branches): require the `CI /
       validate` check before merging.
 - [ ] **VS Code:** accept the workspace's recommended extensions prompt (Svelte, ESLint,

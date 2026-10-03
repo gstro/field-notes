@@ -17,6 +17,14 @@ if [ -z "${CHROME_PATH:-}" ] && [ -n "${CLAUDE_ENV_FILE:-}" ]; then
 	[ -n "$pw_chrome" ] && echo "export CHROME_PATH=\"$pw_chrome\"" >>"$CLAUDE_ENV_FILE"
 fi
 
+# Same TLS-proxy problem as in .claude/scripts/chrome-devtools-mcp.sh: Chromium
+# doesn't trust the proxy CA, so Google Fonts fails and Lighthouse's
+# errors-in-console audit fails on every route. LHCI_* env vars replace the
+# lighthouserc.json value entirely, so repeat its flags here.
+if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
+	echo 'export LHCI_COLLECT__SETTINGS__CHROME_FLAGS="--headless=new --no-sandbox --ignore-certificate-errors"' >>"$CLAUDE_ENV_FILE"
+fi
+
 # .npmrc has engine-strict=true and engines.node is >=22.12.0, so an older
 # Node fails `npm ci` with a cryptic error. Say so plainly instead.
 node_version="$(node -v 2>/dev/null || echo v0.0.0)"

@@ -87,7 +87,7 @@
 		flex-wrap: wrap;
 		gap: 1.2rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		margin-bottom: 1.5rem;
 	}
@@ -122,14 +122,14 @@
 		margin-bottom: 9px;
 	}
 	.label {
-		font-size: 14px;
+		font-size: var(--text-md);
 		color: var(--cream);
 	}
 	/* Text wears text tokens; the coloured dot beside each value carries trip
 	   identity, so nothing here is reachable by colour alone. */
 	.vals {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--cream);
 		display: inline-flex;
 		align-items: center;
@@ -151,7 +151,7 @@
 	.arrow {
 		color: var(--muted);
 		opacity: 0.6;
-		font-size: 12px;
+		font-size: var(--text-sm);
 		margin: 0 2px;
 	}
 	/* The track is its own flex child so the fill is always an exact percentage
@@ -180,14 +180,14 @@
 		width: 4.6em;
 		text-align: right;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--cream);
 		font-variant-numeric: tabular-nums;
 		white-space: nowrap;
 	}
 	.gloss {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.05em;
 		color: var(--muted);
 		margin-top: 8px;

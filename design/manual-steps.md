@@ -107,6 +107,12 @@ These are memory passes or exports — nothing in the codebase can generate them
   `m37-colophon.md:39,76`)
 - **`ConstellationMap` mobile treatment at 390px** — flagged as a D5-territory design
   question, not yet resolved. (`m11-site-quality.md:70`)
+- **The three un-tokenized text sizes** ([D32](decision-log.md#d32-type-scale-tokens-for-small-and-ui-text)).
+  - **What's left:** 12.5px (9 uses), 13.5px (1) and 15px (2) have no `--text-*` token.
+  - **Option 1:** fold them into the nearest token (12.5→12 or 13, 13.5→13 or 14, 15→14). Each
+    of those spots shifts by about 0.5–1px, so eyeball them.
+  - **Option 2:** add tokens for them as they are.
+  - **Find the uses:** `grep -rn 'font-size: *\(12.5\|13.5\|15\)px' setup/roadtrip/src`.
 - ~~**Small mono labels vs. Lighthouse's legible-font-size bar**~~ — **resolved Oct 2026,
   [D31](decision-log.md#d31-small-text-tier-shifted-up-for-legibility)**: the sub-12px tier
   shifted up by about 2px. `/` went from 59.66% to 91.38% legible text, and every sampled

@@ -128,17 +128,17 @@
 	}
 	.label {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		fill: var(--muted);
 		letter-spacing: 0.05em;
 	}
 	.label.major {
 		fill: var(--cream);
-		font-size: 12px;
+		font-size: var(--text-sm);
 	}
 	@media (max-width: 600px) {
 		.label {
-			font-size: 10px;
+			font-size: var(--text-2xs);
 		}
 	}
 </style>

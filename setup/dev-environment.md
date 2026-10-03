@@ -60,7 +60,7 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 |---|---|---|
 | `dev` | Vite dev server with HMR | interactive work |
 | `check` | `svelte-kit sync` + `svelte-check`; validates pages **and** every city JSON against `types.ts` | after any code or data change |
-| `lint` | `prettier --check .` then `eslint .` | before committing |
+| `lint` | `prettier --check .`, `eslint .`, then the type-scale guard (`scripts/check-type-scale.ts`, D32) | before committing |
 | `format` | `prettier --write .` | fixing lint's formatting half |
 | `build` | full static prerender; **fails on any broken internal link** | before committing; this is what Vercel runs |
 | `preview` | serves `build/` with clean URLs on :4173 | browser checks, Lighthouse |
@@ -125,7 +125,7 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 - **What:** `lighthouserc.json` starts `vite preview` and audits `/`, `/city/washington-dc`, `/chapter/west`, `/data`, `/colophon` and `/superlatives`. It asserts **accessibility, best-practices and SEO = 100**. Performance is recorded but not asserted (M39: 91–99 run-to-run noise).
 - **Use:** `npm run build && npm run lhci`. Reports go to `setup/roadtrip/.lighthouseci/` (gitignored). For a single page mid-session, the chrome-devtools MCP's `lighthouse_audit` is quicker.
 - **Rule (D29):** re-measure contrast changes; don't judge them from the CSS.
-- **Legible type (D31):** Lighthouse counts text ≥12px as legible and fails a page under 60%. Every sampled route is now 87–100% legible. Keep new small text at 10–12px (the D31 tier), not below.
+- **Legible type (D31):** Lighthouse counts text ≥12px as legible and fails a page under 60%. Every sampled route is now 87–100% legible. Size small text with the `--text-*` tokens in `tokens.css` (D32), never raw px. `npm run lint` rejects px values that a token covers and anything below 10px.
 - **Not in CI** (R21). The live-URL run is a manual step (manual-steps §5).
 
 ### GitHub Actions CI + Dependabot

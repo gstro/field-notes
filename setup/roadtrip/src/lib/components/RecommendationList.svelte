@@ -90,7 +90,7 @@
 	}
 	.status {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: var(--text-2xs);
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		padding: 2px 7px;
@@ -144,12 +144,12 @@
 	}
 	.meta {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		margin-top: 3px;
 	}
 	.note {
-		font-size: 13px;
+		font-size: var(--text-ui);
 		opacity: 0.9;
 		margin-top: 5px;
 	}
@@ -161,7 +161,7 @@
 	}
 	.src {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color: var(--muted);

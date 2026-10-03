@@ -129,7 +129,7 @@
 	}
 	.eyebrow {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.25em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -148,7 +148,7 @@
 	}
 	.sub {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		letter-spacing: 0.08em;
 		line-height: 2;
@@ -163,7 +163,7 @@
 		flex-wrap: wrap;
 		margin-top: 0.75rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		letter-spacing: 0.06em;
 	}
@@ -206,7 +206,7 @@
 	}
 	.section-label {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.25em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -230,7 +230,7 @@
 	}
 	.ch-num {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.2em;
 		color: var(--muted);
 		text-transform: uppercase;
@@ -243,19 +243,19 @@
 	}
 	.ch-sub {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		letter-spacing: 0.06em;
 		margin-bottom: 1rem;
 	}
 	.blurb {
-		font-size: 14px;
+		font-size: var(--text-md);
 		opacity: 0.85;
 	}
 	.ch-cities {
 		margin-top: 1.25rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		line-height: 1.9;
 		letter-spacing: 0.04em;
@@ -278,7 +278,7 @@
 		display: inline-block;
 		margin-top: 1rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -316,7 +316,7 @@
 		margin-bottom: 0.4rem;
 	}
 	.teaser p {
-		font-size: 13px;
+		font-size: var(--text-ui);
 		color: var(--muted);
 	}
 	footer {
@@ -325,7 +325,7 @@
 		padding: 2rem;
 		border-top: 1px solid var(--border);
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		letter-spacing: 0.05em;
 		line-height: 2;

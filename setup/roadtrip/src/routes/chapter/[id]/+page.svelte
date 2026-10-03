@@ -264,7 +264,7 @@
 	}
 	.back {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -284,7 +284,7 @@
 	}
 	.eyebrow {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.22em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -298,7 +298,7 @@
 	}
 	.sub {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -312,7 +312,7 @@
 	}
 	.span {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		letter-spacing: 0.06em;
 		color: var(--muted);
 		margin-top: 1rem;
@@ -391,14 +391,14 @@
 	}
 	.s-state {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.1em;
 		color: var(--muted);
 		margin-left: 8px;
 	}
 	.s-meta {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.04em;
 		color: var(--muted);
 		margin-top: 4px;
@@ -428,7 +428,7 @@
 	}
 	.l {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -449,7 +449,7 @@
 	}
 	.m-l {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -462,7 +462,7 @@
 	}
 	.m-v {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		text-align: right;
 		font-variant-numeric: tabular-nums;
@@ -473,18 +473,18 @@
 		padding-left: 1.1rem;
 	}
 	.side-where {
-		font-size: 14px;
+		font-size: var(--text-md);
 		color: var(--cream);
 	}
 	.side-note {
-		font-size: 13px;
+		font-size: var(--text-ui);
 		line-height: 1.7;
 		opacity: 0.88;
 		margin-top: 6px;
 	}
 	.side-ev {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		color: var(--muted);
 		margin-top: 8px;
 	}
@@ -508,12 +508,12 @@
 		align-items: baseline;
 	}
 	.a-city {
-		font-size: 13px;
+		font-size: var(--text-ui);
 		color: var(--cream);
 	}
 	.a-v {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: var(--text-xs);
 		color: var(--muted);
 		font-variant-numeric: tabular-nums;
 	}

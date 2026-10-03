@@ -31,7 +31,7 @@
 	}
 	.lbl {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		display: flex;
 		justify-content: space-between;
@@ -52,7 +52,7 @@
 		background: rgba(212, 168, 67, 0.4);
 	}
 	.note {
-		font-size: 13px;
+		font-size: var(--text-ui);
 		color: var(--muted);
 		margin-top: 1rem;
 	}

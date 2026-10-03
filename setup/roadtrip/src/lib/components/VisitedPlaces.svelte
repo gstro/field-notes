@@ -51,7 +51,7 @@
 		flex-wrap: wrap;
 		gap: 1.1rem;
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		margin-bottom: 1.1rem;
 	}
@@ -106,7 +106,7 @@
 	}
 	.prov {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: var(--text-2xs);
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -114,13 +114,13 @@
 	}
 	.count {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		color: var(--muted);
 		font-variant-numeric: tabular-nums;
 	}
 	.caveat {
 		font-family: var(--font-mono);
-		font-size: 12px;
+		font-size: var(--text-sm);
 		line-height: 1.75;
 		letter-spacing: 0.03em;
 		color: var(--muted);

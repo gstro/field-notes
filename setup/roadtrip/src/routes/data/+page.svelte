@@ -198,7 +198,7 @@
 	}
 	.back {
 		font-family: var(--font-mono);
-		font-size: 10.5px;
+		font-size: 12px;
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -218,7 +218,7 @@
 	}
 	.eyebrow {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		letter-spacing: 0.22em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -254,7 +254,7 @@
 	}
 	.caveat {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		line-height: 1.7;
 		letter-spacing: 0.04em;
 		color: var(--muted);
@@ -269,7 +269,7 @@
 	}
 	.p-head {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		letter-spacing: 0.13em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -293,7 +293,7 @@
 	}
 	.p-l {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		letter-spacing: 0.09em;
 		text-transform: uppercase;
 		color: var(--muted);

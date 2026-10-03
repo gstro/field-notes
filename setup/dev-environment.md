@@ -125,7 +125,7 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 - **What:** `lighthouserc.json` starts `vite preview` and audits `/`, `/city/washington-dc`, `/chapter/west`, `/data`, `/colophon` and `/superlatives`. It asserts **accessibility, best-practices and SEO = 100**. Performance is recorded but not asserted (M39: 91–99 run-to-run noise).
 - **Use:** `npm run build && npm run lhci`. Reports go to `setup/roadtrip/.lighthouseci/` (gitignored). For a single page mid-session, the chrome-devtools MCP's `lighthouse_audit` is quicker.
 - **Rule (D29):** re-measure contrast changes; don't judge them from the CSS.
-- **Known failure (Oct 2026):** `/` fails best-practices on the `font-size` audit. Only 59.66% of its text is ≥12px, against Lighthouse's 60% bar. The small text is the 8–10px mono labels: `footer`, `.ch-cities`, `.map-legend`, `.label`, `.flag`. `/chapter/west` passes, but only just (61.67%). This reproduces locally and in the cloud. It's a type-scale decision waiting on you (manual-steps §8). Until it's settled, `npm run lhci` exits non-zero on that one assertion.
+- **Legible type (D31):** Lighthouse counts text ≥12px as legible and fails a page under 60%. Every sampled route is now 87–100% legible. Keep new small text at 10–12px (the D31 tier), not below.
 - **Not in CI** (R21). The live-URL run is a manual step (manual-steps §5).
 
 ### GitHub Actions CI + Dependabot

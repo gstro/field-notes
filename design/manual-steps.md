@@ -107,22 +107,10 @@ These are memory passes or exports — nothing in the codebase can generate them
   `m37-colophon.md:39,76`)
 - **`ConstellationMap` mobile treatment at 390px** — flagged as a D5-territory design
   question, not yet resolved. (`m11-site-quality.md:70`)
-- **Small mono labels vs. Lighthouse's legible-font-size bar** (found Oct 2026, M40 follow-up).
-  - **The finding:** on `/`, only 59.66% of text is ≥12px, against Lighthouse's 60% bar, so
-    the page fails best-practices.
-  - **The culprits:** the 8–10px IBM Plex Mono labels:
-    - `footer`, `.ch-cities`, `.map-legend` (10px);
-    - `.label`, `.flag` (8px).
-  - **Also at risk:** `/chapter/west` sits just over the bar at 61.67% (mostly `.caveat`,
-    10px).
-  - **How it showed up:** it reproduces locally and in the cloud, but M40's first Lighthouse
-    CI run on Sep 26 passed it. Because the score sits right at the threshold, it can flip
-    between runs.
-  - **The options:**
-    - bump the smallest label sizes (a type-scale change, so it's yours to make);
-    - or accept it and relax that one assertion in `lighthouserc.json` (record that as a
-      decision).
-  - Until it's decided, `npm run lhci` fails on that one assertion.
+- ~~**Small mono labels vs. Lighthouse's legible-font-size bar**~~ — **resolved Oct 2026,
+  [D31](decision-log.md#d31-small-text-tier-shifted-up-for-legibility)**: the sub-12px tier
+  shifted up by about 2px. `/` went from 59.66% to 91.38% legible text, and every sampled
+  route is 100 on best-practices again.
 - Unendorsed feature ideas (scrollytelling, a 1–5 rating scale, soundtrack modules, etc.) live
   in `design/roadmap.md` — nothing there needs a decision until you promote one into the plan.
 
@@ -147,11 +135,11 @@ These steps live in vendor UIs that only you can reach. Background and troublesh
       - The `visual-check` skill: no overflow at 390px, and the reduced-motion guards on `/`
         are present.
       - Lighthouse with the cert flag: a11y and SEO are 100 everywhere, and best-practices is
-        100 everywhere except `/`'s `font-size`, which is a real issue (§8).
-- [ ] **One more cloud check, after the M40 cert follow-up lands on `main`:** run
-      `npm run build && npm run lhci` with no extra flags. That confirms the hook's
-      `LHCI_COLLECT__SETTINGS__CHROME_FLAGS` export takes effect. The only failure should be
-      `/` `font-size`.
+        100 everywhere except `/`'s `font-size`, since fixed by D31.
+- [x] **Cloud `npm run lhci` with no extra flags (after the cert follow-up):** the hook's
+      `CHROME_PATH` and `LHCI_COLLECT__SETTINGS__CHROME_FLAGS` exports took effect,
+      `errors-in-console` passed everywhere, and Google Fonts loaded. The only failure was the
+      `/` `font-size` issue that D31 fixed.
 - [ ] **Branch protection on `main`** (GitHub → Settings → Branches): require the `CI /
       validate` check before merging.
 - [ ] **VS Code:** accept the workspace's recommended extensions prompt (Svelte, ESLint,

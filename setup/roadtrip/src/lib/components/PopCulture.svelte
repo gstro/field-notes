@@ -57,14 +57,14 @@
 	}
 	.correction .title {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
 	}
 	.pilgrim {
 		font-family: var(--font-mono);
-		font-size: 8.5px;
+		font-size: 10px;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		padding: 1px 6px;

@@ -50,7 +50,7 @@
 	}
 	.l {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		letter-spacing: 0.15em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -59,7 +59,7 @@
 	}
 	.flag {
 		font-family: var(--font-mono);
-		font-size: 8px;
+		font-size: 10px;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: var(--muted);

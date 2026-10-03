@@ -68,7 +68,7 @@
 	}
 	.group-label {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		color: var(--burnt-light);
@@ -79,7 +79,7 @@
 	}
 	.cat {
 		font-family: var(--font-mono);
-		font-size: 9px;
+		font-size: 11px;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -102,7 +102,7 @@
 	}
 	.sources-label {
 		font-family: var(--font-mono);
-		font-size: 9px;
+		font-size: 11px;
 		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		color: var(--burnt-light);

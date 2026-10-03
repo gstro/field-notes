@@ -96,14 +96,14 @@
 	}
 	.n {
 		font-family: var(--font-mono);
-		font-size: 11.5px;
+		font-size: 12px;
 		color: var(--cream);
 		text-align: right;
 		font-variant-numeric: tabular-nums;
 	}
 	.pct {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		color: var(--muted);
 		text-align: right;
 		font-variant-numeric: tabular-nums;
@@ -118,7 +118,7 @@
 	}
 	.note {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		line-height: 1.75;
 		letter-spacing: 0.03em;
 		color: var(--muted);
@@ -130,7 +130,7 @@
 			gap: 0.5rem;
 		}
 		.label {
-			font-size: 11.5px;
+			font-size: 12px;
 		}
 	}
 </style>

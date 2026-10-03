@@ -73,7 +73,7 @@
 	}
 	.l {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		letter-spacing: 0.11em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -81,7 +81,7 @@
 	}
 	.d {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		color: var(--muted);
 		margin-top: 3px;
 	}

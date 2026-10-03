@@ -66,7 +66,7 @@
 		flex-wrap: wrap;
 		gap: 1.2rem;
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		color: var(--muted);
 		margin-bottom: 1.5rem;
 	}
@@ -99,12 +99,15 @@
 	}
 	.label {
 		font-family: var(--font-mono);
-		font-size: 9px;
+		font-size: 11px;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		color: var(--muted);
 		text-align: center;
-		min-height: 2.1em;
+		/* Reserve exactly two lines so a wrapping label ("Museums & history" at a
+		   narrow column) doesn't push its plot below the rest of the row. */
+		line-height: 1.4;
+		min-height: 2.8em;
 	}
 	.plot {
 		position: relative;
@@ -144,7 +147,7 @@
 	   Text wears text tokens — the coloured dot beside it carries identity. */
 	.vals {
 		font-family: var(--font-mono);
-		font-size: 11px;
+		font-size: 12px;
 		color: var(--cream);
 		display: flex;
 		align-items: baseline;
@@ -154,6 +157,6 @@
 	.arrow {
 		color: var(--muted);
 		opacity: 0.6;
-		font-size: 9px;
+		font-size: 11px;
 	}
 </style>

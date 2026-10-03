@@ -31,7 +31,7 @@
 	}
 	.lbl {
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		color: var(--muted);
 		display: flex;
 		justify-content: space-between;

@@ -79,7 +79,7 @@
 	}
 	.hit-sub {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: var(--muted);
@@ -132,7 +132,7 @@
 		flex-wrap: wrap;
 		gap: 1rem;
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		color: var(--muted);
 	}
 	.legend span {

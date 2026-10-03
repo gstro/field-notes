@@ -87,7 +87,7 @@
 		flex-wrap: wrap;
 		gap: 1.2rem;
 		font-family: var(--font-mono);
-		font-size: 10px;
+		font-size: 12px;
 		color: var(--muted);
 		margin-bottom: 1.5rem;
 	}
@@ -151,7 +151,7 @@
 	.arrow {
 		color: var(--muted);
 		opacity: 0.6;
-		font-size: 10px;
+		font-size: 12px;
 		margin: 0 2px;
 	}
 	/* The track is its own flex child so the fill is always an exact percentage
@@ -180,14 +180,14 @@
 		width: 4.6em;
 		text-align: right;
 		font-family: var(--font-mono);
-		font-size: 10.5px;
+		font-size: 12px;
 		color: var(--cream);
 		font-variant-numeric: tabular-nums;
 		white-space: nowrap;
 	}
 	.gloss {
 		font-family: var(--font-mono);
-		font-size: 9.5px;
+		font-size: 11px;
 		letter-spacing: 0.05em;
 		color: var(--muted);
 		margin-top: 8px;

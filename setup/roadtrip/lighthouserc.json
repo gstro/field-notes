@@ -1,0 +1,27 @@
+{
+	"ci": {
+		"collect": {
+			"startServerCommand": "npm run preview -- --port 4173 --strictPort",
+			"startServerReadyPattern": "4173",
+			"url": [
+				"http://localhost:4173/",
+				"http://localhost:4173/city/washington-dc",
+				"http://localhost:4173/chapter/west",
+				"http://localhost:4173/data",
+				"http://localhost:4173/colophon",
+				"http://localhost:4173/superlatives"
+			],
+			"numberOfRuns": 1,
+			"settings": { "chromeFlags": "--headless=new --no-sandbox" }
+		},
+		"assert": {
+			"assertions": {
+				"categories:accessibility": ["error", { "minScore": 1 }],
+				"categories:best-practices": ["error", { "minScore": 1 }],
+				"categories:seo": ["error", { "minScore": 1 }],
+				"categories:performance": "off"
+			}
+		},
+		"upload": { "target": "filesystem", "outputDir": ".lighthouseci" }
+	}
+}

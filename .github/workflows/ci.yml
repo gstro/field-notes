@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: setup/roadtrip
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: setup/roadtrip/.nvmrc
+          cache: npm
+          cache-dependency-path: setup/roadtrip/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - name: svelte-check (pages + city JSON vs types.ts)
+        run: npm run check
+      - name: Prettier + ESLint
+        run: npm run lint
+      - name: JSON Schema is up to date with types.ts
+        run: npm run schemas && git diff --exit-code schemas/
+      - name: Static build (prerenderer fails on broken links)
+        run: npm run build

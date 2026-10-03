@@ -1,26 +1,36 @@
 :root {
-  --burnt: #C85A00;
-  --burnt-light: #E8722A;
-  --gold: #D4A843;
-  --cream: #F5EDD8;
-  --dark: #111009;
-  --dark2: #1C1A12;
-  --dark3: #252318;
-  --muted: #8A8270;
-  --border: rgba(196, 160, 80, 0.18);
-  --green: #5DBF82;
-  --blue: #5AAFE0;
+	--burnt: #c85a00;
+	--burnt-light: #e8722a;
+	--gold: #d4a843;
+	--cream: #f5edd8;
+	--dark: #111009;
+	--dark2: #1c1a12;
+	--dark3: #252318;
+	--muted: #8a8270;
+	--border: rgba(196, 160, 80, 0.18);
+	--green: #5dbf82;
+	--blue: #5aafe0;
 
-  --font-display: 'Playfair Display', serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-  --font-body: 'IBM Plex Sans', sans-serif;
+	--font-display: 'Playfair Display', serif;
+	--font-mono: 'IBM Plex Mono', monospace;
+	--font-body: 'IBM Plex Sans', sans-serif;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 body {
-  background: var(--dark);
-  color: var(--cream);
-  font-family: var(--font-body);
-  font-weight: 300;
-  line-height: 1.7;
+	background: var(--dark);
+	color: var(--cream);
+	font-family: var(--font-body);
+	font-weight: 300;
+	line-height: 1.7;
 }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+a:focus-visible,
+button:focus-visible {
+	outline: 2px solid var(--gold);
+	outline-offset: 3px;
+}

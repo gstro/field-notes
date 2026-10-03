@@ -1,0 +1,12 @@
+{
+	"eslint.workingDirectories": ["setup/roadtrip"],
+	"prettier.prettierPath": "setup/roadtrip/node_modules/prettier",
+	"[svelte]": { "editor.defaultFormatter": "svelte.svelte-vscode" },
+	"[typescript][javascript][css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+	"json.schemas": [
+		{
+			"fileMatch": ["/setup/roadtrip/src/lib/data/cities/*.json"],
+			"url": "./setup/roadtrip/schemas/city.schema.json"
+		}
+	]
+}

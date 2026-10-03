@@ -8,8 +8,9 @@ of leaving a new one-off "manual pass" note buried in a milestone doc.
 ## 1. Env vars and secrets — there are none
 
 Nothing to place, nothing to rotate. Confirmed by search: no `.env*` file exists, and no code
-references `import.meta.env`, `$env/`, `process.env`, or `PUBLIC_`. There's no `.github/`
-directory, so no CI and no repo secrets either. `.gitignore` already has the standard
+references `import.meta.env`, `$env/`, `process.env`, or `PUBLIC_`. CI
+(`.github/workflows/ci.yml`, [D30](decision-log.md#d30-dev-environment-lintformat-ci-generated-json-schema-committed-agent-config))
+needs no repo secrets either. `.gitignore` already has the standard
 `.env`/`.env.*` rules staged (`setup/roadtrip/.gitignore:16-19`) in case one is ever needed —
 nothing currently uses them.
 
@@ -108,3 +109,31 @@ These are memory passes or exports — nothing in the codebase can generate them
   question, not yet resolved. (`m11-site-quality.md:70`)
 - Unendorsed feature ideas (scrollytelling, a 1–5 rating scale, soundtrack modules, etc.) live
   in `design/roadmap.md` — nothing there needs a decision until you promote one into the plan.
+
+## 9. Dev environment (M40, one-time)
+
+Everything in-repo is committed ([D30](decision-log.md#d30-dev-environment-lintformat-ci-generated-json-schema-committed-agent-config)).
+These steps live in vendor UIs that only you can reach. Background and troubleshooting are in
+[`setup/dev-environment.md`](../setup/dev-environment.md).
+
+- [ ] **Claude Code on the web environment** (claude.ai/code → environment settings).
+      Set network access to **Custom**, tick "include default allowed domains," and add:
+      - `svelte.dev`: the Svelte MCP's `list-sections`/`get-documentation` fetch docs from it
+        at runtime (checked in the `@sveltejs/mcp@0.1.26` bundle). `svelte-autofixer` works
+        without it.
+      - Only if the first session shows Chrome is missing: the host your setup script
+        downloads Chrome from (see the next item).
+- [ ] **Setup script** (same dialog). It's optional, and only needed if the first cloud
+      session shows no Chrome for the chrome-devtools MCP or a Node older than 22.12. The
+      candidate script is in `setup/dev-environment.md` § Cloud.
+- [ ] **First cloud session smoke test.** Open a session on this repo and ask Claude to:
+      1. Run `check-tools`, and confirm that Node is ≥22.12 and whether Chrome is present.
+      2. Run `/mcp`, and confirm that `svelte` and `chrome-devtools` are connected.
+      3. Run `gh auth status` to see whether the `gh` CLI is authenticated in the cloud.
+      4. Run the `validate` skill.
+- [ ] **Branch protection on `main`** (GitHub → Settings → Branches): require the `CI /
+      validate` check before merging.
+- [ ] **VS Code:** accept the workspace's recommended extensions prompt (Svelte, ESLint,
+      Prettier, EditorConfig).
+- [ ] **Optional, local only:** `git config blame.ignoreRevsFile .git-blame-ignore-revs` so
+      local `git blame` skips the Prettier sweep. GitHub already does this.

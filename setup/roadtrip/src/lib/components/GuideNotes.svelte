@@ -19,7 +19,9 @@
 		statusNotes: City['statusNotes'];
 	} = $props();
 
-	const has = $derived(Boolean(scopeDecision) || honestGaps.length > 0 || statusNotes.length > 0 || sources.length > 0);
+	const has = $derived(
+		Boolean(scopeDecision) || honestGaps.length > 0 || statusNotes.length > 0 || sources.length > 0
+	);
 </script>
 
 {#if has}
@@ -54,14 +56,56 @@
 {/if}
 
 <style>
-	.guide-notes { font-size: 13px; }
-	.scope { color: var(--muted); margin-bottom: 1.25rem; }
-	.group { margin-bottom: 1.5rem; }
-	.group-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--burnt-light); margin-bottom: 0.75rem; }
-	.entry { margin-bottom: 0.85rem; }
-	.cat { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.15rem; }
-	.text { color: var(--cream); opacity: 0.9; }
-	.caveat { color: var(--cream); opacity: 0.9; margin-bottom: 0.6rem; }
-	.sources { font-size: 12px; color: var(--muted); margin-top: 0.5rem; }
-	.sources-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--burnt-light); margin-right: 0.4em; }
+	.guide-notes {
+		font-size: 13px;
+	}
+	.scope {
+		color: var(--muted);
+		margin-bottom: 1.25rem;
+	}
+	.group {
+		margin-bottom: 1.5rem;
+	}
+	.group-label {
+		font-family: var(--font-mono);
+		font-size: 10px;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+		color: var(--burnt-light);
+		margin-bottom: 0.75rem;
+	}
+	.entry {
+		margin-bottom: 0.85rem;
+	}
+	.cat {
+		font-family: var(--font-mono);
+		font-size: 9px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--gold);
+		display: block;
+		margin-bottom: 0.15rem;
+	}
+	.text {
+		color: var(--cream);
+		opacity: 0.9;
+	}
+	.caveat {
+		color: var(--cream);
+		opacity: 0.9;
+		margin-bottom: 0.6rem;
+	}
+	.sources {
+		font-size: 12px;
+		color: var(--muted);
+		margin-top: 0.5rem;
+	}
+	.sources-label {
+		font-family: var(--font-mono);
+		font-size: 9px;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--burnt-light);
+		margin-right: 0.4em;
+	}
 </style>

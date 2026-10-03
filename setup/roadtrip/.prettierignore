@@ -1,0 +1,10 @@
+build/
+.svelte-kit/
+node_modules/
+.lighthouseci/
+package-lock.json
+# Hand-aligned data files: column-aligned rows (cityIndex.json) and generated
+# output (cities/*.json from tools/ingest-guides.mjs). Reformatting them would
+# bury every future data diff under whitespace churn.
+src/lib/data/
+schemas/

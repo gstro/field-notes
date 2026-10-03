@@ -36,34 +36,110 @@
 	</ul>
 
 	<p class="caveat">
-		Ranked by direction requests — the only measure of emphasis the export carries, and
-		truncated to roughly the top ten per city, so this is where the days went <em>most</em>,
-		not everywhere. Provenance is matched after the fact, not recorded at the time: the
-		export has no per-item save timestamps and the lists were edited during the trips, so a
-		place saved while standing in it cannot be told from one saved before leaving.
+		Ranked by direction requests — the only measure of emphasis the export carries, and truncated to
+		roughly the top ten per city, so this is where the days went <em>most</em>, not everywhere.
+		Provenance is matched after the fact, not recorded at the time: the export has no per-item save
+		timestamps and the lists were edited during the trips, so a place saved while standing in it
+		cannot be told from one saved before leaving.
 		<b>“On my own list” is therefore an upper bound, and “found there” a floor.</b>
 	</p>
 {/if}
 
 <style>
-	.legend { display: flex; flex-wrap: wrap; gap: 1.1rem; font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-bottom: 1.1rem; }
-	.legend span { display: inline-flex; align-items: center; gap: 6px; }
-	.key { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
-	.places { list-style: none; display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-	.place { background: var(--dark2); display: grid; grid-template-columns: 10px 1fr auto auto; gap: 0.7rem; align-items: baseline; padding: 0.62rem 0.9rem; }
-	.dot { width: 8px; height: 8px; border-radius: 50%; align-self: center; }
+	.legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.1rem;
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--muted);
+		margin-bottom: 1.1rem;
+	}
+	.legend span {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.key {
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	.places {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+		background: var(--border);
+		border: 1px solid var(--border);
+		border-radius: 4px;
+		overflow: hidden;
+	}
+	.place {
+		background: var(--dark2);
+		display: grid;
+		grid-template-columns: 10px 1fr auto auto;
+		gap: 0.7rem;
+		align-items: baseline;
+		padding: 0.62rem 0.9rem;
+	}
+	.dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		align-self: center;
+	}
 	/* D11's status colours: the off-guide blue finally carries something. */
-	.p-guide { background: var(--gold); }
-	.p-own { background: var(--muted); }
-	.p-found { background: var(--blue); }
-	.name { font-size: 13.5px; color: var(--cream); }
-	.prov { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
-	.count { font-family: var(--font-mono); font-size: 10px; color: var(--muted); font-variant-numeric: tabular-nums; }
-	.caveat { font-family: var(--font-mono); font-size: 10px; line-height: 1.75; letter-spacing: 0.03em; color: var(--muted); margin-top: 1rem; }
-	.caveat b { color: var(--cream); font-weight: 400; }
-	.caveat em { font-style: normal; color: var(--cream); }
+	.p-guide {
+		background: var(--gold);
+	}
+	.p-own {
+		background: var(--muted);
+	}
+	.p-found {
+		background: var(--blue);
+	}
+	.name {
+		font-size: 13.5px;
+		color: var(--cream);
+	}
+	.prov {
+		font-family: var(--font-mono);
+		font-size: 8.5px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--muted);
+		white-space: nowrap;
+	}
+	.count {
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--muted);
+		font-variant-numeric: tabular-nums;
+	}
+	.caveat {
+		font-family: var(--font-mono);
+		font-size: 10px;
+		line-height: 1.75;
+		letter-spacing: 0.03em;
+		color: var(--muted);
+		margin-top: 1rem;
+	}
+	.caveat b {
+		color: var(--cream);
+		font-weight: 400;
+	}
+	.caveat em {
+		font-style: normal;
+		color: var(--cream);
+	}
 	@media (max-width: 560px) {
-		.place { grid-template-columns: 10px 1fr auto; }
-		.prov { grid-column: 2 / -1; }
+		.place {
+			grid-template-columns: 10px 1fr auto;
+		}
+		.prov {
+			grid-column: 2 / -1;
+		}
 	}
 </style>

@@ -6,8 +6,14 @@
 	let { mix }: { mix: { trip1: Record<string, number>; trip2: Record<string, number> } } = $props();
 
 	const LABELS: Record<string, string> = {
-		books: 'Books', museums_history: 'Museums & history', records_music: 'Record stores',
-		food: 'Food', coffee: 'Coffee', outdoors: 'Outdoors', horror_occult: 'Horror & occult', film: 'Film'
+		books: 'Books',
+		museums_history: 'Museums & history',
+		records_music: 'Record stores',
+		food: 'Food',
+		coffee: 'Coffee',
+		outdoors: 'Outdoors',
+		horror_occult: 'Horror & occult',
+		film: 'Film'
 	};
 
 	// The two trips' category sets don't align — trip 1 has `film` and no
@@ -55,22 +61,99 @@
 </div>
 
 <style>
-	.legend { display: flex; flex-wrap: wrap; gap: 1.2rem; font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-bottom: 1.5rem; }
-	.legend span { display: inline-flex; align-items: center; gap: 6px; }
-	.key { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-	.t1 { background: var(--gold); }
-	.t2 { background: var(--burnt); }
-	.slopes { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 1.1rem; }
-	.slope { display: flex; flex-direction: column; align-items: center; }
-	.label { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: center; min-height: 2.1em; }
-	.plot { position: relative; width: 100%; height: 78px; margin: 8px 0; }
-	svg { width: 100%; height: 100%; display: block; }
-	.conn { stroke: var(--muted); stroke-width: 2; opacity: 0.35; vector-effect: non-scaling-stroke; }
-	.dot { position: absolute; width: 9px; height: 9px; border-radius: 50%; margin-top: -4.5px; }
-	.d1 { left: 0; margin-left: -4.5px; background: var(--gold); }
-	.d2 { right: 0; margin-right: -4.5px; background: var(--burnt); }
+	.legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.2rem;
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--muted);
+		margin-bottom: 1.5rem;
+	}
+	.legend span {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.key {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	.t1 {
+		background: var(--gold);
+	}
+	.t2 {
+		background: var(--burnt);
+	}
+	.slopes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
+		gap: 1.1rem;
+	}
+	.slope {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.label {
+		font-family: var(--font-mono);
+		font-size: 9px;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--muted);
+		text-align: center;
+		min-height: 2.1em;
+	}
+	.plot {
+		position: relative;
+		width: 100%;
+		height: 78px;
+		margin: 8px 0;
+	}
+	svg {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	.conn {
+		stroke: var(--muted);
+		stroke-width: 2;
+		opacity: 0.35;
+		vector-effect: non-scaling-stroke;
+	}
+	.dot {
+		position: absolute;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		margin-top: -4.5px;
+	}
+	.d1 {
+		left: 0;
+		margin-left: -4.5px;
+		background: var(--gold);
+	}
+	.d2 {
+		right: 0;
+		margin-right: -4.5px;
+		background: var(--burnt);
+	}
 	/* Every value is direct-labelled, so nothing is reachable by colour alone.
 	   Text wears text tokens — the coloured dot beside it carries identity. */
-	.vals { font-family: var(--font-mono); font-size: 11px; color: var(--cream); display: flex; align-items: baseline; gap: 5px; font-variant-numeric: tabular-nums; }
-	.arrow { color: var(--muted); opacity: 0.6; font-size: 9px; }
+	.vals {
+		font-family: var(--font-mono);
+		font-size: 11px;
+		color: var(--cream);
+		display: flex;
+		align-items: baseline;
+		gap: 5px;
+		font-variant-numeric: tabular-nums;
+	}
+	.arrow {
+		color: var(--muted);
+		opacity: 0.6;
+		font-size: 9px;
+	}
 </style>

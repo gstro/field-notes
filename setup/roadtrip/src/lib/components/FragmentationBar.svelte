@@ -1,9 +1,11 @@
 <script lang="ts">
-	let { population }: { population: { cityProper: number | null; metro: number | null } } = $props();
+	let { population }: { population: { cityProper: number | null; metro: number | null } } =
+		$props();
 	const fmt = (n: number) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)}M` : `${Math.round(n / 1e3)}k`);
 	const pct = $derived(
 		population.cityProper && population.metro
-			? Math.round((population.cityProper / population.metro) * 100) : null
+			? Math.round((population.cityProper / population.metro) * 100)
+			: null
 	);
 </script>
 
@@ -22,11 +24,40 @@
 {/if}
 
 <style>
-	.bars { display: flex; flex-direction: column; gap: 1.1rem; }
-	.lbl { font-family: var(--font-mono); font-size: 10px; color: var(--muted); display: flex; justify-content: space-between; margin-bottom: 5px; }
-	.track { height: 14px; background: var(--dark3); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; }
-	.fill { height: 100%; background: var(--burnt); }
-	.fill.metro { background: rgba(212,168,67,0.4); }
-	.note { font-size: 13px; color: var(--muted); margin-top: 1rem; }
-	.note b { color: var(--burnt-light); font-weight: 500; }
+	.bars {
+		display: flex;
+		flex-direction: column;
+		gap: 1.1rem;
+	}
+	.lbl {
+		font-family: var(--font-mono);
+		font-size: 10px;
+		color: var(--muted);
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5px;
+	}
+	.track {
+		height: 14px;
+		background: var(--dark3);
+		border: 1px solid var(--border);
+		border-radius: 2px;
+		overflow: hidden;
+	}
+	.fill {
+		height: 100%;
+		background: var(--burnt);
+	}
+	.fill.metro {
+		background: rgba(212, 168, 67, 0.4);
+	}
+	.note {
+		font-size: 13px;
+		color: var(--muted);
+		margin-top: 1rem;
+	}
+	.note b {
+		color: var(--burnt-light);
+		font-weight: 500;
+	}
 </style>

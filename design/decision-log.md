@@ -35,6 +35,7 @@ Endorsed decisions with rationale. The index is for targeted lookup; full ration
 | [D27](#d27-chapter-aggregates-name-what-they-count-and-are-never-re-derived) | Chapter aggregates name what they count, and are never re-derived | Final (M4a, Aug 2026) |
 | [D28](#d28-four-of-the-unmapped-guide-fields-added-the-rest-stay-out) | Four of the unmapped guide fields added (`sources`, `scopeDecision`, `honestGaps`, `statusNotes` + `popCulture.correctionNote`); the rest stay out | Final (M38, Sep 2026) |
 | [D29](#d29-no-opacity-multiplier-on---muted-text) | No opacity multiplier on `--muted` text, anywhere | Final (M39, Sep 2026) |
+| [D30](#d30-dev-environment-lintformat-ci-generated-json-schema-committed-agent-config) | Dev environment: lint/format, CI, generated JSON Schema, committed agent config | Final (M40, Sep 2026) |
 
 ## Decisions
 
@@ -224,6 +225,27 @@ A Lighthouse accessibility sweep ([M39](m39-lighthouse-hygiene.md)) found six co
 **Rule: `--muted` text never carries an additional opacity.** Extra de-emphasis, where wanted, comes from something that doesn't touch text contrast — a border style, a *dark* background fill (never a fill in `--muted` itself — see below), or in one case (`PopCulture`'s un-visited filmed-location entries) nothing at all: the existing "Visited" pilgrim badge already carries that distinction, so the opacity dim was redundant as well as non-compliant and was removed outright rather than replaced.
 
 One collision this surfaced: `st-skipped` and `st-unknown` (`RecommendationList.svelte`) now share the same text color and, before this fix, were told apart largely by the opacity fade the removed comment called out ("fainter than skipped"). Checked against the full corpus — `planned-skipped` currently has **zero** occurrences across all 787 recommendations, so the collision is theoretical today, not a live regression; D21 marks trip-2 attendance as provisional pending a memory-based reconstruction pass that will eventually populate it. `st-unknown` was given a background fill so the two stay distinct once that data lands, kept alongside its existing dotted border. **First attempt used a `--muted`-tinted fill and it regressed the exact bug this decision exists to prevent**: `--muted` on `--dark2` is only 4.57:1 against a 4.5:1 floor, and any warm/light fill color pulls the effective background toward the text color, which *reduces* contrast — the margin has no headroom for that. Re-measuring with Lighthouse (not just re-reading the CSS) caught it immediately. The fix uses `rgba(0,0,0,0.18)` instead — black moves the effective background the opposite direction and *raises* contrast (4.57:1 → 4.75:1) while still reading as a visually distinct, more "recessed" badge.
+
+### D30 — Dev environment: lint/format, CI, generated JSON Schema, committed agent config
+
+Set up in [M40](m40-dev-environment.md) so that people and Claude Code agents, working locally or in Claude Code on the web, run the same checks. None of it adds a runtime dependency (D7/D25 hold): everything is a devDependency, a config file, or an `npx` pin.
+
+- **ESLint (flat config, `eslint-plugin-svelte` v3) + Prettier (`prettier-plugin-svelte`)**, run by `npm run lint`/`format`. This reverses CLAUDE.md's "there are no linters." The Svelte parser config is inline in `eslint.config.js`, because R12 keeps `svelte.config.js` out. Three rules are off, each with its reason recorded in the config:
+  - `no-navigation-without-resolve`: there's no base path, and the prerender crawler already fails the build on broken links.
+  - `require-each-key`: every list is static, prerendered JSON.
+  - `no-useless-mustaches`: `{' '}` is the whitespace idiom Prettier emits itself.
+- **Formatting sweep, and what stays out of it.** The one-time Prettier sweep landed as its own commit, listed in `.git-blame-ignore-revs`. It was checked by comparing all 22 prerendered pages before and after. **Data JSON under `src/lib/data/` is excluded from Prettier** so its hand-aligned rows keep producing clean data diffs.
+- **`schemas/city.schema.json` is generated from `City` in `types.ts`** by `ts-json-schema-generator` and wired to VS Code's `json.schemas`, so hand data entry (manual-steps §7) gets autocomplete and inline errors. The data files **never carry a `$schema` key**, because svelte-check types the JSON imports. `types.ts` is the source of truth, and CI fails if the generated schema drifts from it.
+- **GitHub Actions CI** runs `check`, `lint`, schema drift and `build` on every PR and on pushes to `main`. It needs no secrets. Dependabot opens grouped, monthly updates.
+- **Lighthouse CI** is committed (`lighthouserc.json`, `npm run lhci`) but run on demand, not in CI (see [R21](rejection-log.md#r21-playwright-test-suite-devcontainer-lighthouse-in-ci)). It asserts accessibility, best-practices and SEO at 100 on the six M39 routes. Performance isn't asserted, because of M39's run-to-run noise.
+- **Agent config is committed at the repo root**, because that is what cloud sessions load:
+  - `.mcp.json`: the Svelte MCP and the chrome-devtools MCP (browser verification over CDP, the method M1.1 settled on).
+  - `.claude/settings.json`: a permissions allowlist, plus a SessionStart hook that runs `npm ci` only when `CLAUDE_CODE_REMOTE=true`.
+  - `.claude/skills/`: `validate`, `city-data-edit`, `lighthouse`, `visual-check`.
+  - `.claude/commands/next-task.md`.
+
+  Plugins aren't used as the primary path because cloud sessions don't load them.
+- **`engines.node` raised to `>=22.12.0`.** Node 20 is end-of-life, the schema generator needs 22, and the cloud image defaults to 22.
 
 | # | Question | Decide by |
 |---|---|---|

@@ -1,14 +1,17 @@
 export type TripId = 'west' | 'nola' | 'south';
 
 export type RecStatus =
-	| 'attended' | 'planned-skipped' | 'off-guide-discovery'
-	| 'closed-on-arrival' | 'unverified'
+	| 'attended'
+	| 'planned-skipped'
+	| 'off-guide-discovery'
+	| 'closed-on-arrival'
+	| 'unverified'
 	// trip-1 retroactive semantics — never visually conflate with the above
-	| 'attended-anyway' | 'retroactive-recommendation';
+	| 'attended-anyway'
+	| 'retroactive-recommendation';
 
 export type CitedSource =
-	| 'atlasobscura' | 'tasteatlas' | 'eater' | 'timeout'
-	| 'web-search' | 'local-tip' | 'self';
+	'atlasobscura' | 'tasteatlas' | 'eater' | 'timeout' | 'web-search' | 'local-tip' | 'self';
 
 // The guides' cross-cutting interest axis, orthogonal to the 10 categories.
 // Typed as a union rather than `string[]` so a guide inventing a ninth value
@@ -16,8 +19,7 @@ export type CitedSource =
 // the failure mode M3 hit when DC's vocabulary diverged unnoticed. Display
 // labels live in registry.ts (INTEREST_TAGS).
 export type InterestTag =
-	| 'i-food' | 'i-drinks' | 'i-books' | 'i-punk'
-	| 'i-diy' | 'i-political' | 'i-horror' | 'i-bees';
+	'i-food' | 'i-drinks' | 'i-books' | 'i-punk' | 'i-diy' | 'i-political' | 'i-horror' | 'i-bees';
 
 export interface Citation {
 	source: CitedSource;
@@ -86,7 +88,13 @@ export interface City {
 	fingerprint: Record<string, number | null>;
 	recommendations: Recommendation[];
 	popCulture: {
-		filmedHere: { title: string; year: number | null; locationVisited: boolean | null; visitNote: string; photoId: string | null }[];
+		filmedHere: {
+			title: string;
+			year: number | null;
+			locationVisited: boolean | null;
+			visitNote: string;
+			photoId: string | null;
+		}[];
 		bornHere: { name: string; relevance: string; note: string }[];
 		// M38: the guide's own flag on the single most commonly assumed pop-culture
 		// tie that turned out to be wrong (e.g. Napoleon Dynamite ~ Boise). Distinct
@@ -101,7 +109,12 @@ export interface City {
 	spend: {
 		total: number | null;
 		byCategory: Record<string, number | null>;
-		lodging: { name: string | null; cost: number | null; nights: number | null; note: string } | null;
+		lodging: {
+			name: string | null;
+			cost: number | null;
+			nights: number | null;
+			note: string;
+		} | null;
 	} | null;
 	photos: { hero: string | null; gallery: string[]; serialSubjects: Record<string, string | null> };
 	// M38: three of the guide fields M3 inventoried as unmapped (design/m3-guide-ingest.md),

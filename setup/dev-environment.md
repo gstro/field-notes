@@ -33,13 +33,13 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 | Node | 24 via fnm (`.nvmrc`) | 22 preinstalled (must be ≥22.12; `engine-strict`) | 24 via `setup-node` + `.nvmrc` |
 | Dependency install | you run `npm ci` | SessionStart hook runs it | workflow step |
 | `check` / `lint` / `build` / `schemas` | ✅ | ✅ | ✅ (all four + schema-drift check) |
-| `npm run lhci` | ✅ uses installed Chrome | ⚠️ needs Chrome (setup script) | — not run (R21) |
+| `npm run lhci` | ✅ uses installed Chrome | ⚠️ Playwright Chromium via the hook's `CHROME_PATH` (not yet run in cloud) | — not run (R21) |
 | Svelte MCP: `svelte-autofixer` | ✅ | ✅ offline | — |
 | Svelte MCP: docs tools | ✅ | ⚠️ needs `svelte.dev` on a Custom allowlist | — |
-| chrome-devtools MCP | ✅ | ⚠️ needs Chrome (setup script) | — |
+| chrome-devtools MCP | ✅ | ⚠️ Playwright Chromium + `--no-sandbox` via the wrapper (not yet run in cloud) | — |
 | Project skills / commands / hook | ✅ | ✅ loaded from repo | — |
 | Svelte Claude plugin (optional) | ✅ if you install it | ❌ plugins don't load in cloud | — |
-| `gh` CLI | ✅ (authenticated) | ⚠️ unverified; `gh auth status` | built-in `GITHUB_TOKEN` |
+| GitHub access | `gh` CLI (authenticated) | ✅ built-in GitHub MCP; `gh` not needed | built-in `GITHUB_TOKEN` |
 | VS Code JSON Schema validation | ✅ | n/a | — |
 
 ⚠️ = works once the one-time step in manual-steps §9 is done. Until then the rest of the environment still works; only that tool is missing.
@@ -91,7 +91,7 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
   - `list-sections` and `get-documentation`: current Svelte 5 and SvelteKit docs.
   - `svelte-autofixer`: static analysis that flags Svelte 4 idioms, rune misuse and a11y issues in a component. Run it repeatedly until it comes back clean.
   - `playground-link`: builds a shareable playground link.
-- **Use (agents):** run `svelte-autofixer` on every `.svelte` file you create or change. Use `get-documentation` before writing unfamiliar runes or SvelteKit APIs rather than recalling them from memory; runes mode is forced, so Svelte 4 syntax fails.
+- **Use (agents):** run `svelte-autofixer` on every `.svelte` file you create or change. It reports "Each block should have a key" on most of this site's `{#each}` loops. That's expected: ESLint's `require-each-key` rule is off for the same reason (static prerendered lists, D30), so ignore that one suggestion. Use `get-documentation` before writing unfamiliar runes or SvelteKit APIs rather than recalling them from memory; runes mode is forced, so Svelte 4 syntax fails.
 - **Use (people):** in a Claude session, "check this component with svelte-autofixer" or "look up the `$derived.by` docs".
 - **Cloud:** `svelte-autofixer` works offline. The two docs tools fetch from `svelte.dev` at runtime, so add that host to the environment's Custom allowlist (manual-steps §9).
 - **Optional extra, local only:** the Svelte Claude Code plugin bundles this same MCP server plus Svelte skills and a `svelte-file-editor` subagent. It doesn't load in cloud sessions, which is why the repo relies on `.mcp.json`. To install it:
@@ -115,7 +115,10 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
   3. Resize to 390px and measure overflow.
   4. Audit the stylesheets for unguarded animations.
   5. Take a screenshot.
-- **Cloud:** needs a Chrome binary. Run `check-tools` in the first session; if Chrome is missing, use the setup script below.
+- **Launch:** `.mcp.json` starts it through `.claude/scripts/chrome-devtools-mcp.sh`.
+  - **Locally,** that's the plain server and your installed Chrome.
+  - **In the cloud,** the wrapper points it at Playwright's Chromium and adds `--no-sandbox`, because the session runs as root. Otherwise the first browser call fails with "Could not find Google Chrome executable for channel 'stable'."
+  - To bump the version, edit the pin inside the wrapper.
 
 ### Lighthouse CI
 
@@ -156,7 +159,7 @@ Everything is at the repo root, so it loads in both local and cloud sessions.
 - **Use:**
   - `gh pr create`, `gh pr checks`, `gh pr view --comments`
   - `gh run view --log-failed` to read a CI failure
-- **Cloud:** GitHub domains are on the default allowlist and git pushes go through the session's GitHub integration. Whether the `gh` CLI itself is authenticated there is **unverified**; run `gh auth status` in the first session (manual-steps §9).
+- **Cloud:** don't use `gh` there. The session's built-in GitHub MCP (`mcp__github__*`) covers PRs, issues, CI status and logs, and it's verified working. `gh` would need a `GH_TOKEN`, and nothing in the repo needs one.
 
 ### Repo data tools (`tools/*.mjs`)
 
@@ -176,19 +179,25 @@ They're outside ESLint's scope (it lints `setup/roadtrip` only). New scripts can
 
 ## Cloud: Claude Code on the web
 
-1. **Environment** (once, at claude.ai/code): network **Custom**, with "include default allowed domains" ticked, plus `svelte.dev`. If you use the setup script below, also add `dl.google.com`.
-2. **Setup script** (only if `check-tools` shows no Chrome, or Node older than 22.12). This is a candidate, not yet tested in the cloud image. It runs as root before the session and is cached:
-   ```bash
-   #!/bin/bash
-   set -e
-   if ! command -v google-chrome >/dev/null; then
-     curl -fsSLo /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-     apt-get update && apt-get install -y /tmp/chrome.deb
-   fi
-   ```
-   Node: the image's Node 22 is enough as long as it's ≥22.12. If it isn't, install 24 from `nodejs.org`, which is on the default allowlist.
-3. **Every session:** the SessionStart hook installs dependencies, and `.mcp.json`, the skills and the settings load from the repo. Check with `/mcp` the first time.
-4. **Not available in cloud:** plugins, and MCP servers added with `--scope user|local`. Anything the project needs must be committed at the repo root.
+What a session actually showed (Oct 2026, verified in a real session):
+
+| | Cloud image |
+|---|---|
+| Node | v22.22.0, which meets the ≥22.12 floor |
+| Browser | no Google Chrome; **Playwright's Chromium** at `/opt/pw-browsers/chromium-*/chrome-linux/chrome` |
+| User | root, so Chrome needs `--no-sandbox` |
+| GitHub | the session's built-in **GitHub MCP** (`mcp__github__*`) covers PRs, issues and CI; git push goes through the session's own remote |
+
+1. **Environment** (once, at claude.ai/code): set network to **Custom**, tick "include default allowed domains," and add `svelte.dev`. **You don't need a setup script or a `GH_TOKEN`**:
+   - Chromium is already in the image.
+   - The `gh` CLI isn't used anywhere in this repo.
+   - A stale `GH_TOKEN` only makes `gh` print an "invalid token" error. Delete it from the environment settings.
+2. **Every session:** the SessionStart hook does two things:
+   - installs dependencies;
+   - exports `CHROME_PATH` (the Playwright Chromium) so `npm run lhci` can find a browser.
+
+   The chrome-devtools MCP is launched through `.claude/scripts/chrome-devtools-mcp.sh`, which adds `--executablePath <that Chromium>` and `--chrome-arg=--no-sandbox` only when they're needed. Locally it runs the plain server. `.mcp.json`, the skills and the settings load from the repo.
+3. **Not available in cloud:** plugins, and MCP servers added with `--scope user|local`. Anything the project needs must be committed at the repo root.
 
 ---
 
@@ -216,8 +225,10 @@ They're outside ESLint's scope (it lints `setup/roadtrip` only). New scripts can
 
 | Symptom | Fix |
 |---|---|
-| `npm ci` fails with `EBADENGINE` | Node is below 22.12; run `fnm use`, or see the cloud setup script |
+| `npm ci` fails with `EBADENGINE` | Node is below 22.12; run `fnm use` (locally) |
+| cloud chrome-devtools: "Could not find Google Chrome" or "running as root" | `.mcp.json` must launch through `.claude/scripts/chrome-devtools-mcp.sh`, not plain `npx` |
+| `gh`: "The token in GH_TOKEN is invalid" (cloud) | delete `GH_TOKEN` from the environment settings; use the GitHub MCP |
 | `build` fails with `404 /city/<slug>` | a new link points at a city with no JSON; render it as "data pending" |
 | CI fails at "JSON Schema is up to date" | run `npm run schemas` and commit |
-| MCP shows "failed" in `/mcp` | cloud: check the allowlist or Chrome; local: `npx -y chrome-devtools-mcp@1.10.1 --help` to see the error |
+| MCP shows "failed" in `/mcp` | cloud: check the allowlist (`svelte.dev`); local: `bash .claude/scripts/chrome-devtools-mcp.sh </dev/null` to see the error |
 | ESLint complains about `svelte.config.js` | don't create it; parser options are inline in `eslint.config.js` |

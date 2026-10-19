@@ -58,6 +58,7 @@
       "estCost": "$0-40",
       "bestTimeOfDay": "Afternoon; evening for events",
       "durationMin": 60,
+      "district": "Inman Park",
       "rating": null,
       "note": "Atlanta's most acclaimed general independent bookstore -- deep first-edition and signed-copy inventory, and one of the city's steadiest author-event calendars.",
       "verifiedOpen": null
@@ -88,6 +89,7 @@
       "estCost": "$0-35",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Decatur",
       "rating": null,
       "note": "The South's oldest independent feminist bookstore, now partnered with Agnes Scott College; anchors Charis Circle, its nonprofit arm running queer, feminist, and social-justice programming.",
       "verifiedOpen": null
@@ -113,6 +115,7 @@
       "estCost": "$0-30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Sweet Auburn",
       "rating": null,
       "note": "Described as 'a cross between a store and a reading room,' focused on rare and classic Black publications, opened 2018 a few blocks from the Sweet Auburn corridor -- a living counterpoint to the district's erased commercial history.",
       "verifiedOpen": null
@@ -138,6 +141,7 @@
       "estCost": "$0-30",
       "bestTimeOfDay": "Check socials -- see status note",
       "durationMin": 45,
+      "district": "Upper Westside",
       "rating": null,
       "note": "Horror, mystery, and occult specialist with a Southern Gothic aesthetic; started as a mobile shop out of a converted hearse before a planned Upper Westside storefront. Call ahead -- the brick-and-mortar opening was slated for summer 2026, right around this visit window.",
       "verifiedOpen": null
@@ -163,6 +167,7 @@
       "estCost": "$0-30",
       "bestTimeOfDay": "Evening for a reading group",
       "durationMin": 45,
+      "district": "Peoplestown",
       "rating": null,
       "note": "Speculative fiction and unconventional nonfiction, hosting 'Weird Girl LitFic' book clubs, gaming meetups, and anti-imperialist reading groups -- as close as this guide's mandatory infoshop search came to finding a dedicated radical-political storefront in Atlanta proper.",
       "verifiedOpen": null
@@ -188,6 +193,7 @@
       "estCost": "$8-35",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "New and used vinyl heavy on indie, alternative, and underground genres, plus comics and merch -- the anchor record store of L5P's DIY-adjacent commercial strip.",
       "verifiedOpen": null
@@ -212,6 +218,7 @@
       "estCost": "$8-30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Old Fourth Ward",
       "rating": null,
       "note": "Explicitly caters to punk, hardcore, indie, and alternative collectors with buy/sell/trade and band merch, near the MLK National Historical Park.",
       "verifiedOpen": null
@@ -236,6 +243,7 @@
       "estCost": "$5-25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Little Five Points",
       "rating": null,
       "note": "Long-running used-vinyl mainstay across rock, rap, and country at genuinely affordable prices -- an L5P institution since the neighborhood's punk-scene heyday.",
       "verifiedOpen": null
@@ -260,6 +268,7 @@
       "estCost": "$5-40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Jazz, blues, indie, alt-rock, and hip-hop with a reputation for rare used finds; the Athens, GA sister store is where R.E.M.'s Peter Buck famously worked before forming the band.",
       "verifiedOpen": null
@@ -284,6 +293,7 @@
       "estCost": "$5-30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Little Five Points",
       "rating": null,
       "note": "Neo-soul, acid jazz, and hip-hop specialist rounding out the L5P record-store crawl with a genre focus the punk-leaning shops don't cover.",
       "verifiedOpen": null
@@ -309,6 +319,7 @@
       "estCost": "$4-7",
       "bestTimeOfDay": "Late morning",
       "durationMin": 45,
+      "district": "Clarkston",
       "rating": null,
       "note": "Nonprofit coffee shop and job-training program for refugees, based in Clarkston -- often called the most diverse square mile in America thanks to decades of refugee resettlement. A short drive out of downtown but the single strongest match in this guide for the leftist-politics/community-organizing interest.",
       "verifiedOpen": null
@@ -333,6 +344,7 @@
       "estCost": "$4-8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Atlanta-based roaster built on direct-trade relationships with Rwandan coffee farmers -- a rare farmer-direct-sourcing story for a mid-size regional roaster rather than a boutique single-shop operation.",
       "verifiedOpen": null
@@ -357,6 +369,7 @@
       "estCost": "$4-8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Atlanta-grown specialty roaster with a plant-forward pastry case alongside dialed-in espresso.",
       "verifiedOpen": null
@@ -381,6 +394,7 @@
       "estCost": "$4-7",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Batdorf & Bronson's Atlanta cafe inside Krog Street Market -- pair with a walk through the Krog Street Tunnel a block away.",
       "verifiedOpen": null
@@ -406,6 +420,7 @@
       "estCost": "$3-6",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Little Five Points",
       "rating": null,
       "note": "L5P coffeehouse institution with the neighborhood's scruffy, unhurried DIY character intact.",
       "verifiedOpen": null
@@ -430,6 +445,7 @@
       "estCost": "$4-10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Summerhill",
       "rating": null,
       "note": "Small, quiet bakeshop known for large fruit tarts and savory quiches -- the fruit-forward pick of the bakery list.",
       "verifiedOpen": null
@@ -454,6 +470,7 @@
       "estCost": "$5-15",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Upper Westside",
       "rating": null,
       "note": "Anne Quatrano's market-cafe, well known citywide for its giant black-and-white cookies, crispy chicken biscuit, and solid croissant program.",
       "verifiedOpen": null
@@ -478,6 +495,7 @@
       "estCost": "$4-10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Poncey-Highland",
       "rating": null,
       "note": "Fresh fruit- and vegetable-infused baking -- strawberry brioche tarts and shishito-pepper scones push past the standard croissant-and-muffin case.",
       "verifiedOpen": null
@@ -502,6 +520,7 @@
       "estCost": "$4-12",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Morningside",
       "rating": null,
       "note": "Longtime Atlanta institution -- cinnamon twists, opera cakes, and full prepared-foods counters, a fixture since the 1990s.",
       "verifiedOpen": null
@@ -526,6 +545,7 @@
       "estCost": "$4-10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Inman Park",
       "rating": null,
       "note": "The city's deepest gluten-free pastry case -- funfetti donuts and blueberry cheesecake pop tarts -- for anyone traveling with dietary restrictions.",
       "verifiedOpen": null
@@ -550,6 +570,7 @@
       "estCost": "$10-16",
       "bestTimeOfDay": "Lunch or dinner",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "A burger served on a sliced, sugar-glazed donut (usually a Krispy Kreme) in place of a bun -- invented at Mulligan's Bar and named for R&B singer Luther Vandross. TasteAtlas's single Atlanta-exclusive dish entry.",
       "verifiedOpen": null
@@ -574,6 +595,7 @@
       "estCost": "$16-25",
       "bestTimeOfDay": "Lunch",
       "durationMin": 90,
+      "district": null,
       "rating": null,
       "note": "Atlanta's 'dining room' since 1945 -- a Southern-cafeteria institution serving fried chicken, potlikker, and a table-side cup of tea (a house custom).",
       "verifiedOpen": null
@@ -598,6 +620,7 @@
       "estCost": "$8-14",
       "bestTimeOfDay": "Lunch, any day",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "World's largest drive-in, open since 1928, famous for the counter-staff call-and-response ('What'll ya have?') and the Frosted Orange milkshake alongside the chili dog and onion rings.",
       "verifiedOpen": null
@@ -622,6 +645,7 @@
       "estCost": "$15-22",
       "bestTimeOfDay": "Lunch",
       "durationMin": 60,
+      "district": "Buckhead",
       "rating": null,
       "note": "An old-Atlanta ladies-who-lunch institution on the Atlanta History Center grounds; the frozen fruit salad and chicken salad plate is a genuinely regional specialty, not a dish you'll find framed this way elsewhere.",
       "verifiedOpen": null
@@ -646,6 +670,7 @@
       "estCost": "$6-10",
       "bestTimeOfDay": "Late spring through summer, when Georgia peaches are in season",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Georgia is the Peach State for a reason; a proper peach cobbler at the tail end of a Southern-buffet meal is the fruit-interest pick for this category.",
       "verifiedOpen": null
@@ -670,6 +695,7 @@
       "estCost": "$8-12/bar",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Atlanta bean-to-bar chocolate maker; shelf-stable bars travel and mail well.",
       "verifiedOpen": null
@@ -694,6 +720,7 @@
       "estCost": "$8-18",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Atlanta-made pickled vegetables and cocktail bitters -- a jarred condiment gift with a genuinely local production story.",
       "verifiedOpen": null
@@ -718,6 +745,7 @@
       "estCost": "$6-10",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Atlanta-founded jarred pasta sauce and mustard company -- shelf-stable, easy to mail.",
       "verifiedOpen": null
@@ -742,6 +770,7 @@
       "estCost": "$10-20/jar",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Bee Downtown places managed hives on corporate rooftops (Delta's Atlanta HQ among them) and sells the resulting honey at retail -- a direct hit for the bees interest.",
       "verifiedOpen": null
@@ -766,6 +795,7 @@
       "estCost": "$35-55/bottle",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Atlanta craft distillery's flagship bourbon and rye line -- bottled, giftable, and tied to an in-city tasting-room visit (see Category 10-adjacent whiskey note).",
       "verifiedOpen": null
@@ -791,6 +821,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Morning",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Once 'the richest Negro street in the world' (Fortune, 1956); Dr. King's birth home, Ebenezer Baptist Church, and his tomb anchor the district, which the Downtown Connector freeway split in half in the mid-20th century. This guide's cross-trip thread anchor.",
       "verifiedOpen": null
@@ -816,6 +847,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Daylight, dry weather (trail floods)",
       "durationMin": 90,
+      "district": null,
       "rating": null,
       "note": "A folk-art trail built from salvaged doll parts, bones, and industrial debris found in and around the wetland -- genuine outsider art, unofficial and ever-changing.",
       "verifiedOpen": null
@@ -840,6 +872,7 @@
       "estCost": "Free grounds / tours vary",
       "bestTimeOfDay": "Late afternoon",
       "durationMin": 90,
+      "district": null,
       "rating": null,
       "note": "Atlanta's oldest public park and 48-acre Victorian cemetery; Margaret Mitchell and golfer Bobby Jones are buried here. The 'Capturing the Spirit of Oakland' theatrical Halloween tours are a 20-plus-year tradition, though outside a May visit window.",
       "verifiedOpen": null
@@ -865,6 +898,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Golden hour",
       "durationMin": 30,
+      "district": "Cabbagetown / Reynoldstown / Inman Park",
       "rating": null,
       "note": "A constantly repainted street-art tunnel connecting Cabbagetown to Inman Park/Reynoldstown -- appears in Baby Driver and is a working canvas rather than a museum piece, so it looks different every visit.",
       "verifiedOpen": null
@@ -889,6 +923,7 @@
       "estCost": "Free-$5 parking at some units",
       "bestTimeOfDay": "Morning, before summer crowds",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "A chain of river-corridor park units through metro Atlanta with hiking, shoals swimming, and summer tubing -- the natural-attraction balance-rule pick, and genuinely close enough to be a half-day trip rather than a detour.",
       "verifiedOpen": null
@@ -913,6 +948,7 @@
       "estCost": "~$25-30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Billed as the world's first hip-hop museum, founded out of T.I.'s trap-music roots; recognized by National Geographic as one of the best musical landmarks in the Deep South. Not a core-interest match but a genuinely distinctive, only-in-Atlanta pop-culture stop.",
       "verifiedOpen": null
@@ -937,6 +973,7 @@
       "estCost": "~$21",
       "bestTimeOfDay": "Midday",
       "durationMin": 120,
+      "district": "Downtown",
       "rating": null,
       "note": "Pairs the American civil rights movement with a global human-rights gallery; the lunch-counter simulation exhibit is the standout for the political-history thread, and it sits a short walk from the World of Coca-Cola if you want the postcard stop too.",
       "verifiedOpen": null
@@ -961,6 +998,7 @@
       "estCost": "$15-40",
       "bestTimeOfDay": "Night",
       "durationMin": 240,
+      "district": "Downtown",
       "rating": null,
       "note": "Atlanta's best-known rock club since 1989, split into three named rooms (Heaven, Hell, Purgatory) that let it run multiple bills a night across metal, punk, and touring indie acts.",
       "verifiedOpen": null
@@ -985,6 +1023,7 @@
       "estCost": "$8-20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "East Atlanta Village",
       "rating": null,
       "note": "Confirmed active DIY-leaning punk/metal/hardcore booking (EYEHATEGOD, Voivod, Kylesa, Profanatica have all played recently) inside a small East Atlanta Village room -- the closest match in this guide to a genuine underground show space.",
       "verifiedOpen": null
@@ -1009,6 +1048,7 @@
       "estCost": "$5-15",
       "bestTimeOfDay": "Night",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "L5P dive institution since the early '90s, complete with an Elvis shrine in the basement chapel -- rockabilly, garage, and punk-adjacent bookings in the neighborhood that produced Black Lips and the Nu-South garage scene.",
       "verifiedOpen": null
@@ -1033,6 +1073,7 @@
       "estCost": "$10-20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "East Atlanta Village",
       "rating": null,
       "note": "Restaurant-venue combo that's been an indie/punk mainstay since the early 2000s, a short walk from 529 -- the two anchor an East Atlanta Village show-going night.",
       "verifiedOpen": null
@@ -1058,6 +1099,7 @@
       "estCost": "Free entry-$10",
       "bestTimeOfDay": "Night",
       "durationMin": 120,
+      "district": "West End",
       "rating": null,
       "note": "Community bar and DIY show space inside Cabbagetown, the historic mill-village neighborhood next to Oakland Cemetery -- low-key and community-run rather than a booking-agency room.",
       "verifiedOpen": null
@@ -1083,6 +1125,7 @@
       "estCost": "$5-40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Little Five Points",
       "rating": null,
       "note": "A cavernous vintage/retro/oddity emporium and L5P landmark since the 1980s -- the single best browse-for-a-weird-gift stop in the city.",
       "verifiedOpen": null
@@ -1108,6 +1151,7 @@
       "estCost": "$5-100+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 90,
+      "district": null,
       "rating": null,
       "note": "A sprawling antiques-and-oddities warehouse that doubles as an event space; browsing here is closer to an Atlas Obscura outing than a shopping trip.",
       "verifiedOpen": null
@@ -1132,6 +1176,7 @@
       "estCost": "$8-40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Local-artist gallery-shop in L5P selling prints, apparel, and small goods made by Atlanta makers rather than mass-market tourist stock.",
       "verifiedOpen": null
@@ -1156,6 +1201,7 @@
       "estCost": "$15-50",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 15,
+      "district": null,
       "rating": null,
       "note": "Museum-branded apparel and merch that reads as a genuinely Atlanta-specific souvenir rather than a generic tourist tee.",
       "verifiedOpen": null
@@ -1181,6 +1227,7 @@
       "estCost": "$5-30",
       "bestTimeOfDay": "Paired with the Sweet Auburn visit",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Civil-rights-history postcards, prints, and books that make a more meaningful souvenir than a generic magnet, sold on-site at the historical park.",
       "verifiedOpen": null
@@ -1205,6 +1252,7 @@
       "estCost": "Membership-based; open-house nights typically free to visit",
       "bestTimeOfDay": "Check calendar for open build nights",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Self-described as the largest hackerspace on the East Coast -- roughly 5,500 sq ft with a wood shop, metal shop, CNC router, CO2 laser cutter, and a 16-student classroom. Confirmed active via Hackaday coverage.",
       "verifiedOpen": null
@@ -1229,6 +1277,7 @@
       "estCost": "Membership + class fees",
       "bestTimeOfDay": "Check class calendar",
       "durationMin": 180,
+      "district": "Decatur",
       "rating": null,
       "note": "Nonprofit community makerspace with a tool library and regular classes -- a more approachable, less industrial counterpart to Freeside for a short-notice visit.",
       "verifiedOpen": null
@@ -1253,6 +1302,7 @@
       "estCost": "Free (student-run; public access varies)",
       "bestTimeOfDay": "Weekday, by advance arrangement",
       "durationMin": 60,
+      "district": "Georgia Tech",
       "rating": null,
       "note": "One of the largest student-run makerspaces in the country -- 3D printing, laser cutting, electronics benches -- but it's primarily built for enrolled students, so public/visitor access needs confirming ahead of time rather than assuming a walk-in tour.",
       "verifiedOpen": null
@@ -1278,6 +1328,7 @@
       "estCost": "Tasting flights typically $15-25",
       "bestTimeOfDay": "Buckhead location: Friday 3-8pm tours/tastings",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Not electronics, but included here as the whiskey/bourbon-and-craft-production stop this itinerary would otherwise miss -- three Atlanta tasting rooms making Fiddler Bourbon, Resurgens Rye, and other in-house spirits.",
       "verifiedOpen": null

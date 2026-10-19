@@ -515,6 +515,12 @@
         "categoryNum": {
           "type": "number"
         },
+        "district": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "durationMin": {
           "type": [
             "number",
@@ -584,6 +590,7 @@
         "estCost",
         "bestTimeOfDay",
         "durationMin",
+        "district",
         "rating",
         "note",
         "verifiedOpen"

@@ -58,6 +58,7 @@
       "estCost": "$0–35",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "The only full-service independently owned new-book store in Charlotte, running since 1977, with a classic layout and staff picks that lean literary.",
       "verifiedOpen": null
@@ -83,6 +84,7 @@
       "estCost": "$0–25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Camp North End",
       "rating": null,
       "note": "Charlotte's newest used bookstore (opened Feb 2020), tucked inside a co-working space at Camp North End — the same former Ford/missile-plant complex anchoring this guide's DIY thread. Community-building focus, local author sections.",
       "verifiedOpen": null
@@ -108,6 +110,7 @@
       "estCost": "$1–20",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Cozy used-book shop in a strip mall with a resident cat and unexpected sections — a paranormal romance shelf and an aviation exhibit among them.",
       "verifiedOpen": null
@@ -139,6 +142,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Morning or early afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "A fundraising arm of Charlotte's Habitat for Humanity — an enormous used-book selection, locally roasted Magnolia Coffee Company coffee, and local pastries, all proceeds going to the nonprofit.",
       "verifiedOpen": null
@@ -164,6 +168,7 @@
       "estCost": "$10–50",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Dilworth",
       "rating": null,
       "note": "Gift-shop/bookstore hybrid open 35+ years, voted Charlotte Magazine's Best Local Gift Shop 26 years running; cookbooks, puzzles, and a genuinely curated local-artisan section.",
       "verifiedOpen": null
@@ -189,6 +194,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Afternoon; check for in-stores",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Nearly two decades in, Charlotte's flagship indie shop — indie rock, punk, metal, jazz, soul, and rap across every format, a dedicated Local Music section, and Record Store Day openings at 8am.",
       "verifiedOpen": null
@@ -214,6 +220,7 @@
       "estCost": "$5–35",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Independent shop on the Plaza Midwood/NoDa corridor with a strong collector following (4.6★ across 600+ reviews).",
       "verifiedOpen": null
@@ -239,6 +246,7 @@
       "estCost": "$3–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Camp North End",
       "rating": null,
       "note": "Records-and-comics shop inside Camp North End — another anchor point on this guide's maker/DIY thread through the former Ford/missile-plant complex.",
       "verifiedOpen": null
@@ -264,6 +272,7 @@
       "estCost": "$5–35",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Wide-genre shop — punk sits alongside hip-hop, jazz, blues, and metal — with a full RSD program; the owner is also a published author, a nice literature crossover.",
       "verifiedOpen": null
@@ -288,6 +297,7 @@
       "estCost": "$10–50",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Matthews",
       "rating": null,
       "note": "Collector-focused shop just outside the city proper (4.9★); the highest-rated of the metro's independent stores.",
       "verifiedOpen": null
@@ -312,6 +322,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "NoDa",
       "rating": null,
       "note": "Long-running NoDa institution since 2000, roasting on site; the anchor cafe of Charlotte's original arts district.",
       "verifiedOpen": null
@@ -337,6 +348,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Enderly Park",
       "rating": null,
       "note": "Neighborhood-first roaster-cafe in West Charlotte with an explicit community mission, a few blocks from The Milestone Club on the same road.",
       "verifiedOpen": null
@@ -362,6 +374,7 @@
       "estCost": "$4–9",
       "bestTimeOfDay": "Morning or afternoon",
       "durationMin": 45,
+      "district": "Camp North End",
       "rating": null,
       "note": "Specialty roaster with a full food program and natural wine list, sitting inside Camp North End — a third DIY-thread anchor in the complex.",
       "verifiedOpen": null
@@ -388,6 +401,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Coffee-and-culture shop on the historically Black Beatties Ford Rd corridor, doubling as a Black-culture archive with vintage magazines on display.",
       "verifiedOpen": null
@@ -412,6 +426,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "LoSo",
       "rating": null,
       "note": "Flagship roastery that supplies several other counters around the city (including Not Just Coffee) — worth visiting the source.",
       "verifiedOpen": null
@@ -436,6 +451,7 @@
       "estCost": "$4–12",
       "bestTimeOfDay": "Morning, or late night at the 24-hour location",
       "durationMin": 45,
+      "district": "NoDa",
       "rating": null,
       "note": "Charlotte's best-known French bakery, open since 2008 in NoDa with a round-the-clock location downtown; the salted caramel brownie is the standing order. Confirm current hours before a late visit.",
       "verifiedOpen": null
@@ -460,6 +476,7 @@
       "estCost": "$5–15",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Classically trained French pastry chef; kouign-amann and gem-like viennoiserie alongside a full bistro menu.",
       "verifiedOpen": null
@@ -484,6 +501,7 @@
       "estCost": "$2–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Charlotte's first Latin bakery, 27 years running — conchas, tortas, and polvorones.",
       "verifiedOpen": null
@@ -508,6 +526,7 @@
       "estCost": "$5–12",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Long-fermented, high-hydration sourdough program; the country loaf sells out.",
       "verifiedOpen": null
@@ -532,6 +551,7 @@
       "estCost": "$3–10",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "New York-Italian bakery with cannoli, pistachio cheesecake, and seven-layer cookies.",
       "verifiedOpen": null
@@ -556,6 +576,7 @@
       "estCost": "$8–15",
       "bestTimeOfDay": "Lunch",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Charlotte's fried-chicken institution since 1962 — cash only, to-go only, no seating, and a citywide reputation few chains have matched. Confirm current hours/status locally, as this run could not independently re-verify.",
       "verifiedOpen": null
@@ -580,6 +601,7 @@
       "estCost": "$12–22",
       "bestTimeOfDay": "Lunch or early dinner",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Pork shoulder, vinegar-pepper-and-tomato sauce — the western North Carolina style, at a Charlotte-founded barbecue restaurant group.",
       "verifiedOpen": null
@@ -604,6 +626,7 @@
       "estCost": "$4–8 as a breakfast side",
       "bestTimeOfDay": "Breakfast",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Fried pig-liver-and-cornmeal loaf, a Piedmont/western NC breakfast staple. No single Charlotte flagship venue was confirmed this run — ask for it at any old-school Charlotte diner or meat-and-three; it's a regional dish rather than a destination-restaurant one.",
       "verifiedOpen": null
@@ -628,6 +651,7 @@
       "estCost": "$3–6",
       "bestTimeOfDay": "Anytime",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Slaw, onion, and chili-topped hot dog, a Carolinas-wide standard. Best found at Charlotte's classic diners and drive-ins rather than one single destination — an honest regional-dish entry rather than a padded restaurant pick.",
       "verifiedOpen": null
@@ -652,6 +676,7 @@
       "estCost": "$6–12",
       "bestTimeOfDay": "Anytime",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Wafer-thin molasses-ginger cookie, the state's best-known baked regional dish. The flagship bakery (Dewey's) is in Winston-Salem, not Charlotte, but the cookies are sold at NC grocers and specialty shops here, and they ship nationwide — flagged honestly as out-of-city origin rather than presented as Charlotte-made.",
       "verifiedOpen": null
@@ -676,6 +701,7 @@
       "estCost": "$6–20",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": "Dilworth",
       "rating": null,
       "note": "Shelf-stable local brands including Queen City Crunch, Chapel Hill Toffee, and Iva Jeans Fudge — all mailable, all local-maker-branded rather than generic.",
       "verifiedOpen": null
@@ -701,6 +727,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "Any open hours",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Nonprofit food-hall-and-incubator that's launched 175+ small businesses, 80% women-owned and 60% minority-owned — jams, sauces, and specialty goods change with the vendor roster.",
       "verifiedOpen": null
@@ -725,6 +752,7 @@
       "estCost": "$15–35",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Ships nationwide and sold at NC grocers in Charlotte; the most shippable version of the state's signature baked good, though the bakery itself is in Winston-Salem.",
       "verifiedOpen": null
@@ -749,6 +777,7 @@
       "estCost": "$16–22/bag",
       "bestTimeOfDay": "Morning",
       "durationMin": 15,
+      "district": null,
       "rating": null,
       "note": "Both roast in-house and sell retail bags built for shipping — the simplest mailable gift on this list.",
       "verifiedOpen": null
@@ -774,6 +803,7 @@
       "estCost": "$8–18/jar",
       "bestTimeOfDay": "Saturday market hours",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "No single flagship apiary brand was confirmed this run; Charlotte’s weekend farmers markets, including the Regional Farmers Market and 7th Street Market vendor rotation, are the reliable place to find jarred local honey.",
       "verifiedOpen": null
@@ -799,6 +829,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": "Uptown",
       "rating": null,
       "note": "A nine-story parking structure rigged so it can be played like an instrument — exactly the kind of hidden-infrastructure oddity that rewards a slow walk-through.",
       "verifiedOpen": null
@@ -829,6 +860,7 @@
       "estCost": "Free (Gantt Center admission ~$9)",
       "bestTimeOfDay": "Morning",
       "durationMin": 120,
+      "district": "Second Ward",
       "rating": null,
       "note": "Brooklyn was Charlotte's Black business, church, and school district — home to the city's first Black school, its only Black high school until 1969, an AME Zion publishing house, and a full commercial strip — razed almost entirely under 1960s urban renewal. The Green park and the Harvey B. Gantt Center for African-American Arts + Culture (2009) now sit on and near the site; Brooklyn Village Ave (renamed from Stonewall St, 2022) marks the ongoing redevelopment reckoning.",
       "verifiedOpen": null
@@ -853,6 +885,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Daytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "The joint grave of Daisy and Violet Hilton, conjoined-twin vaudeville stars who spent their final years in Charlotte — sideshow history with a real dark-Americana pull.",
       "verifiedOpen": null
@@ -878,6 +911,7 @@
       "estCost": "Membership/rental fees",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "A nonprofit video store with 30,000+ titles and a mission of supporting independent filmmakers since 1982 — exactly the kind of rare-horror/cult-film deep shelf that doesn't survive most cities' streaming era. Verify current hours before visiting.",
       "verifiedOpen": null
@@ -908,6 +942,7 @@
       "estCost": "Free to walk; venue prices vary",
       "bestTimeOfDay": "Afternoon into evening",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "A 76-acre former Ford Model T plant and WWII-era missile factory, now Charlotte's densest cluster of maker/creative tenants — That's Novel Books, Hardy Boys Records, HEX Coffee, the Dorothy Counts mural, and rotating art installations all sit inside it. The single best orientation stop for this guide's DIY and political threads at once.",
       "verifiedOpen": null
@@ -932,6 +967,7 @@
       "estCost": "$60–100+ for activity passes; free to walk the trails",
       "bestTimeOfDay": "Morning",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Class III–IV whitewater rafting on a man-made river channel, plus zip-lining and 45+ miles of trails along the Catawba — the natural-attraction balance-rule pick for a city that otherwise reads entirely urban.",
       "verifiedOpen": null
@@ -956,6 +992,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "A scented city-block rose garden built on a former industrial site in 1976, with a vintage coal train car as a leftover artifact — a real pollinator draw in the middle of the city.",
       "verifiedOpen": null
@@ -980,6 +1017,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Daytime",
       "durationMin": 15,
+      "district": null,
       "rating": null,
       "note": "A gravestone carved with an elephant, marking a man killed by one — pure Atlas Obscura dark-oddity material.",
       "verifiedOpen": null
@@ -1004,6 +1042,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Charlotte's legendary DIY room, running since 1969 — Nirvana, Black Flag, and R.E.M. all played here early in their careers, and the graffiti-and-sticker-covered walls carry decades of the scene's own tagging. Check the current show calendar; venue ownership/booking has shifted more than once over its long run.",
       "verifiedOpen": null
@@ -1028,6 +1067,7 @@
       "estCost": "$10–20",
       "bestTimeOfDay": "Night (most shows 18+)",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Punk, post-punk, and experimental-leaning club running since 2007, with multi-band bills most nights and a karaoke night as its lone concession to normalcy.",
       "verifiedOpen": null
@@ -1052,6 +1092,7 @@
       "estCost": "$15–35",
       "bestTimeOfDay": "Night",
       "durationMin": 240,
+      "district": "South End",
       "rating": null,
       "note": "Mid-size room in Historic South End that books touring punk, metal, and indie packages; verify current booking calendar.",
       "verifiedOpen": null
@@ -1077,6 +1118,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "NoDa",
       "rating": null,
       "note": "Listening-room-style venue in NoDa with a songwriter-forward booking style that skews indie rather than hardcore; verify current booking calendar.",
       "verifiedOpen": null
@@ -1101,6 +1143,7 @@
       "estCost": "$10–20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Bar-venue booking heavy roots rock and rock acts (King Cackle among them) — a smaller, scrappier room rounding out the scene.",
       "verifiedOpen": null
@@ -1126,6 +1169,7 @@
       "estCost": "$10–50",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Dilworth",
       "rating": null,
       "note": "26 straight years as Charlotte Magazine's Best Local Gift Shop — handpicked local-maker goods rather than mass tourist product.",
       "verifiedOpen": null
@@ -1151,6 +1195,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": "Camp North End",
       "rating": null,
       "note": "Local-author and zine sections make this a better book-shaped souvenir stop than a generic gift shop.",
       "verifiedOpen": null
@@ -1175,6 +1220,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Afternoon/evening; seasonal markets (e.g. Mistletoe Market) add vendors",
       "durationMin": 45,
+      "district": "Camp North End",
       "rating": null,
       "note": "Retail tenants and pop-up artisan markets rotate through the complex; not a single fixed shop, but reliably the most locally made merchandise in one place.",
       "verifiedOpen": null
@@ -1200,6 +1246,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Any open hours",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "175+ small businesses incubated here since opening, 80% women-owned, 60% minority-owned — handmade goods change with the vendor roster rather than sitting static on a rack.",
       "verifiedOpen": null
@@ -1230,6 +1277,7 @@
       "estCost": "$10–40",
       "bestTimeOfDay": "Pair with a museum visit",
       "durationMin": 20,
+      "district": "Second Ward",
       "rating": null,
       "note": "Books, prints, and art tied directly to the museum's African-American arts and culture mission — a souvenir with a direct line back to the Brooklyn/Second Ward thread anchor next door.",
       "verifiedOpen": null
@@ -1254,6 +1302,7 @@
       "estCost": "Included with museum admission (~$22)",
       "bestTimeOfDay": "Midday",
       "durationMin": 60,
+      "district": "Uptown",
       "rating": null,
       "note": "A hands-on maker studio on Level 3 — design, build, and tinker with real tools. Not electronics-specific and not a walk-in-anytime hackerspace, but the closest thing Charlotte has to a public maker lab.",
       "verifiedOpen": null
@@ -1278,6 +1327,7 @@
       "estCost": "Membership/lease-based",
       "bestTimeOfDay": "Weekday business hours",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Camp North End leases creative/maker workspace inside the former missile plant, but this is general creative-studio space, not a dedicated electronics shop or hackerspace — included as the closest adjacent option, flagged honestly as not the real thing.",
       "verifiedOpen": null

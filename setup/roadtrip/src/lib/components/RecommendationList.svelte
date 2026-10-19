@@ -13,6 +13,11 @@
 	);
 	const dur = (m: number | null) =>
 		m == null ? null : m >= 60 ? `${(m / 60).toFixed(m % 60 ? 1 : 0)} hr` : `${m} min`;
+	// Joined rather than templated so a missing leading field can't leave a dangling "·".
+	const meta = (r: Recommendation) =>
+		[r.district, r.estCost, dur(r.durationMin), r.bestTimeOfDay && `best at ${r.bestTimeOfDay}`]
+			.filter(Boolean)
+			.join(' · ');
 </script>
 
 {#each grouped as [catNum, recs]}
@@ -27,13 +32,7 @@
 							>{STATUS_META[r.status]?.label ?? r.status}</span
 						>
 					</div>
-					<p class="meta">
-						{#if r.estCost}{r.estCost}{/if}
-						{#if dur(r.durationMin)}
-							· {dur(r.durationMin)}{/if}
-						{#if r.bestTimeOfDay}
-							· best at {r.bestTimeOfDay}{/if}
-					</p>
+					{#if meta(r)}<p class="meta">{meta(r)}</p>{/if}
 					{#if r.note}<p class="note">{r.note}</p>{/if}
 					<p class="sources">
 						{#each r.source.citedFrom as c}

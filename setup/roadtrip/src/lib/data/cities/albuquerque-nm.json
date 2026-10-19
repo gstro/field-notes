@@ -59,6 +59,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Daily 10am–6pm; evenings for author events",
       "durationMin": 60,
+      "district": "North Valley",
       "rating": null,
       "note": "Independent since 1984 in the North Valley; runs a Horror Book Club alongside Sci-Fi/Fantasy, Romance and Queer book clubs, and has hosted Poet Laureate Joy Harjo for its Leopold Lecture series.",
       "verifiedOpen": null
@@ -83,6 +84,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Nob Hill",
       "rating": null,
       "note": "New-and-used shop in Nob Hill with a curated emphasis on local New Mexico authors.",
       "verifiedOpen": null
@@ -112,6 +114,7 @@
       "estCost": "$0–25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Northeast Heights",
       "rating": null,
       "note": "Operating since 1981; new and used books, magazines, cards and gifts -- one of the city's longest-running independents.",
       "verifiedOpen": null
@@ -136,6 +139,7 @@
       "estCost": "$0–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Carries local authors and New Mexico-focused titles alongside a strong rare/collectible case within its general used stock.",
       "verifiedOpen": null
@@ -166,6 +170,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Check social media for current pop-up location/hours",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "The mandatory secondary-search-pass find: an anarchist/mutual-aid free lending library project documented by the Anarres Project for Alternative Futures (UNM). Operates as a pop-up rather than a fixed storefront -- itself the honest finding, see the gap note below.",
       "verifiedOpen": null
@@ -190,6 +195,7 @@
       "estCost": "$8–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Widely cited as the city's best overall selection -- near-mint originals across genres in a modest storefront.",
       "verifiedOpen": null
@@ -215,6 +221,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Named after the Misfits' horror-punk anthem 'Astro Zombies' -- the pedigree is built into the sign. Cool murals, knowledgeable staff, and a comic-book selection alongside the vinyl.",
       "verifiedOpen": null
@@ -240,6 +247,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon/evening",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Eclectic stock from classic rock to indie, and one of the few ABQ shops that hosts live in-store sets.",
       "verifiedOpen": null
@@ -264,6 +272,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Cozy listening area and staff who are genuinely enthusiastic about deep-catalog questions.",
       "verifiedOpen": null
@@ -288,6 +297,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Booth-style vinyl nook inside a larger antiques mall on old Route 66 -- easy to pair with a Nob Hill stroll.",
       "verifiedOpen": null
@@ -312,6 +322,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning; Friday for public cupping",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Food & Wine named it New Mexico's best coffee shop in 2022; founder Paul Gallegos has roasted for nearly 30 years, and Friday cupping sessions are open to anyone.",
       "verifiedOpen": null
@@ -336,6 +347,7 @@
       "estCost": "$4–7",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Direct farmer relationships and single-origin espresso since 2014; the cold brew is widely called the city's best.",
       "verifiedOpen": null
@@ -361,6 +373,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Downtown",
       "rating": null,
       "note": "A bright, plant-filled community 'third space' with rotating local art; the Red Chile Mocha and Aztec Latte both lean into New Mexico flavor instead of a generic syrup menu.",
       "verifiedOpen": null
@@ -386,6 +399,7 @@
       "estCost": "$5–9",
       "bestTimeOfDay": "Morning/brunch",
       "durationMin": 45,
+      "district": "North Valley",
       "rating": null,
       "note": "Albuquerque's first combined roaster-cafe-bakery (2015); the coffee-and-cocktail-style menu (Coffee and Tonic) is worth the detour off the tourist core.",
       "verifiedOpen": null
@@ -411,6 +425,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning for coffee; Thu–Mon evening for the natural wine bar",
       "durationMin": 60,
+      "district": "Nob Hill",
       "rating": null,
       "note": "Fully traceable, specialty-grade coffee by day; the same room converts into a natural wine bar Thursday through Monday nights.",
       "verifiedOpen": null
@@ -435,6 +450,7 @@
       "estCost": "$3–15",
       "bestTimeOfDay": "Anytime -- the Cookie/Bread ATM runs 24/7",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Fifty-plus years deep: biscochitos (the official state cookie), green chile bread, and an in-house coffee roastery. The 24/7 vending machine out front means there's no bad time to show up.",
       "verifiedOpen": null
@@ -464,6 +480,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning, before sellout",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Walk-up window bakery with two James Beard 'Outstanding Bakery' nominations; the green chile croissant is the one to chase.",
       "verifiedOpen": null
@@ -493,6 +510,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Nob Hill",
       "rating": null,
       "note": "James Beard semi-finalist for Outstanding Bakery; a serious sourdough program in a cozy Nob Hill room.",
       "verifiedOpen": null
@@ -517,6 +535,7 @@
       "estCost": "$2–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Vietnamese-French bakery -- pandan cake, sesame balls, pate chaud, banh mi -- and a 2025 James Beard 'Outstanding Baker' nominee.",
       "verifiedOpen": null
@@ -542,6 +561,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Weekend mornings only -- limited hours, sells out fast",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "The name alone earns the occult tag. Limited weekend hours and a reputation for selling out fast, so arrive early.",
       "verifiedOpen": null
@@ -566,6 +586,7 @@
       "estCost": "$10–16",
       "bestTimeOfDay": "Lunch",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "New Mexico's defining sandwich since the 1950s -- roasted green chile and melted American cheese on a charbroiled patty.",
       "verifiedOpen": null
@@ -590,6 +611,7 @@
       "estCost": "$6–10",
       "bestTimeOfDay": "Any hour -- open late, across from UNM",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Eggs, bacon, potato and chile in a flour tortilla, at a round-the-clock institution across from campus.",
       "verifiedOpen": null
@@ -614,6 +636,7 @@
       "estCost": "$6–10",
       "bestTimeOfDay": "Lunch",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Pork-and-green-chile stew with fresh tortillas on the side; order it alongside the burrito to cover both Frontier classics in one stop.",
       "verifiedOpen": null
@@ -639,6 +662,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Dinner",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Fried-dough pillows drizzled with honey -- the direct bees/food crossover pick, at the huge patio restaurant Bryan Cranston recommends to visiting fans.",
       "verifiedOpen": null
@@ -663,6 +687,7 @@
       "estCost": "$2–6",
       "bestTimeOfDay": "Anytime",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "New Mexico's official state cookie -- lard-based, anise-and-cinnamon -- at the panaderia most locals point to first.",
       "verifiedOpen": null
@@ -688,6 +713,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Daytime, pair with the historic farm grounds",
       "durationMin": 30,
+      "district": "Los Ranchos",
       "rating": null,
       "note": "Farm-produced lavender honey (plain or creamed) and green chile jam -- the strongest bees/food crossover gift in the metro, though technically in neighboring Los Ranchos rather than Albuquerque proper.",
       "verifiedOpen": null
@@ -712,6 +738,7 @@
       "estCost": "$3–70",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Craft bean-to-bar chocolate with a genuinely New Mexican variety: a green chile biscochito bar alongside peppermint crunch.",
       "verifiedOpen": null
@@ -736,6 +763,7 @@
       "estCost": "$10–40 (gift baskets to $175)",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Fire-roasted Hatch green chile, red chile sauce, and a Hatch green chile bloody mary mix -- built specifically for mailing.",
       "verifiedOpen": null
@@ -760,6 +788,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Anytime",
       "durationMin": 15,
+      "district": null,
       "rating": null,
       "note": "Piñon and Mexican-spiced-chocolate flavored roasts in shelf-stable gift sets -- the classic 'take New Mexico home in a bag' pick.",
       "verifiedOpen": null
@@ -784,6 +813,7 @@
       "estCost": "$30–55/bottle",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Albuquerque's first distillery; a bottle to go is the whiskey/bourbon-interest mailable pick, alongside on-site tastings and tours.",
       "verifiedOpen": null
@@ -808,6 +838,7 @@
       "estCost": "Free (small vehicle fee at Boca Negra Canyon)",
       "bestTimeOfDay": "Early morning, before the heat",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "One of the largest petroglyph sites in North America -- three main canyon trail systems (Boca Negra, Rinconada, Piedras Marcadas) carved by Ancestral Puebloans and early Spanish settlers 400-700 years ago. A 1990s fight over a proposed road through Piedras Marcadas/Boca Negra is the anchor for this guide's radical-political-geography thread.",
       "verifiedOpen": null
@@ -833,6 +864,7 @@
       "estCost": "~$18–24",
       "bestTimeOfDay": "Midday",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Sixteen indoor exhibit areas covering the Manhattan Project, the Cold War, and civilian nuclear power, plus a 9-acre outdoor Heritage Park with a B-29 and a submarine sail. The official atomic museum of the United States, and directly tied to the federal-land-use thread behind this guide's analytical anchor.",
       "verifiedOpen": null
@@ -858,6 +890,7 @@
       "estCost": "Free (reservation-based tour)",
       "bestTimeOfDay": "Weekday, advance reservation required",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "A pseudo-steampunk electromagnetic-pulse weapons research facility, and the world's largest wood-and-glue structure. Sits on active Sandia National Labs-adjacent land, so it's a scheduled-tour stop, not a walk-up one -- confirm availability before planning around it.",
       "verifiedOpen": null
@@ -882,6 +915,7 @@
       "estCost": "Free to view / dinner reservation to dine",
       "bestTimeOfDay": "Evening (it's a supper club)",
       "durationMin": 30,
+      "district": "Los Ranchos",
       "rating": null,
       "note": "A genuine tombstone for the show's fictional protagonist, installed at a real Los Ranchos supper club -- one of the odder pieces of Breaking Bad pilgrimage geography.",
       "verifiedOpen": null
@@ -911,6 +945,7 @@
       "estCost": "Free lobby / ticketed for shows",
       "bestTimeOfDay": "Evening for a show; daytime to view the lobby",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "A 1927 Pueblo Deco downtown theater, said to be haunted by the ghost of a six-year-old boy killed in a 1951 boiler explosion -- staff reportedly still leave donuts out for him.",
       "verifiedOpen": null
@@ -935,6 +970,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Anytime during daylight/campus hours",
       "durationMin": 15,
+      "district": "UNM campus",
       "rating": null,
       "note": "An abstract, acoustically tuned walk-through sculpture on the UNM campus, with a plaque declaring it the literal center of the universe.",
       "verifiedOpen": null
@@ -959,6 +995,7 @@
       "estCost": "~$35 round trip",
       "bestTimeOfDay": "Late afternoon for sunset",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "The longest aerial tramway in the Americas and the world's third-longest single span; a 15-minute ride climbs 3,819 feet to a 10,378-foot summit with mountain-bike and ski access depending on season.",
       "verifiedOpen": null
@@ -983,6 +1020,7 @@
       "estCost": "$10–20 tasting",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Albuquerque's first distillery; book a tasting and tour for the whiskey/bourbon-interest activity pick.",
       "verifiedOpen": null
@@ -1012,6 +1050,7 @@
       "estCost": "$20–45",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Downtown",
       "rating": null,
       "note": "The city's best-known mid-size touring room downtown; punk, metal and indie routing regularly stops here.",
       "verifiedOpen": null
@@ -1041,6 +1080,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Downtown",
       "rating": null,
       "note": "A longtime DIY-adjacent punk/indie stalwart; books a heavy local and touring punk/hardcore lineup.",
       "verifiedOpen": null
@@ -1065,6 +1105,7 @@
       "estCost": "$10–20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Downtown",
       "rating": null,
       "note": "Bar venue with a steady punk/indie booking calendar.",
       "verifiedOpen": null
@@ -1090,6 +1131,7 @@
       "estCost": "Free–$15",
       "bestTimeOfDay": "Evening",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Started 2016 as a library/gallery/queer-educational space explicitly conceived as 'a queer space that isn't a bar'; expanded into live shows while keeping its community-education focus.",
       "verifiedOpen": null
@@ -1115,6 +1157,7 @@
       "estCost": "Free–$10 donation",
       "bestTimeOfDay": "Check socials for shows -- no fixed public hours",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "A DIY warehouse space named alongside the (now-closed) Tannex and Corpus Arts as part of ABQ's underground circuit -- the least documented of the three, so confirm it's still active before planning around it.",
       "verifiedOpen": null
@@ -1144,6 +1187,7 @@
       "estCost": "$12–35",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Hand screen-printed Albuquerque and New Mexico designs on dish towels and totes -- about as far from a mass-market magnet as a souvenir gets.",
       "verifiedOpen": null
@@ -1173,6 +1217,7 @@
       "estCost": "$5–15",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": "Old Town",
       "rating": null,
       "note": "An Old Town candy shop that became an accidental Breaking Bad landmark.",
       "verifiedOpen": null
@@ -1197,6 +1242,7 @@
       "estCost": "$10–200+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Handcrafted jewelry, pottery and woven rugs bought directly from Native artists -- pair with a walk through the Cultural Center itself.",
       "verifiedOpen": null
@@ -1221,6 +1267,7 @@
       "estCost": "$10–100+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Fine art and punched-tin craft -- a traditional New Mexican technique applied to frames and candle holders you won't find at an airport gift shop.",
       "verifiedOpen": null
@@ -1245,6 +1292,7 @@
       "estCost": "$15–60",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 20,
+      "district": "Old Town",
       "rating": null,
       "note": "Handcrafted wooden puzzles, including Albuquerque-themed designs -- a genuinely different souvenir category.",
       "verifiedOpen": null
@@ -1269,6 +1317,7 @@
       "estCost": "Free open house / membership for regular access",
       "bestTimeOfDay": "Wednesday 7–9pm",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "Nonprofit 501(c)3 hackerspace with a weekly public open house; welding intro classes plus general tinkering and citizen-science projects.",
       "verifiedOpen": null
@@ -1293,6 +1342,7 @@
       "estCost": "Weekly/monthly/semi-annual/annual membership tiers; workshops don't require membership",
       "bestTimeOfDay": "Mon–Thu 10am–8:30pm, Fri–Sat 10am–6pm",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "CNM Ingenuity-run makerspace: wood and metal shops, CNC, laser cutters, 3D printers, screen printing and wide-format digital printing, open to beginners.",
       "verifiedOpen": null
@@ -1322,6 +1372,7 @@
       "estCost": "Varies by repair/part",
       "bestTimeOfDay": "Weekday afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Full-service guitar repair and customization shop -- the closest ABQ gets to a dedicated gear-tinkering destination in the absence of a synth-specific boutique.",
       "verifiedOpen": null
@@ -1351,6 +1402,7 @@
       "estCost": "~$12 general admission",
       "bestTimeOfDay": "Weekday midday, less crowded",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "Hands-on science-museum tinkering space -- more family-oriented than a true hackerspace, but it's where a lot of Albuquerque's maker culture starts.",
       "verifiedOpen": null

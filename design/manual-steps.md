@@ -90,7 +90,7 @@ These are memory passes or exports — nothing in the codebase can generate them
 | Trip-2 attendance reconstruction from memory + photos + calendar/ticket emails (D21) | Moves trip-2 statuses off provisional | `implementation-plan.md:28,69` |
 | Fingerprint scoring session, all 18 cities in one sitting (D12) | Calibration drift across sessions would corrupt the overlay comparisons | `decision-log.md:95,221` (O4) |
 | Whole-city qualitative fields: `vibeWord`, `fingerprint`, `favorites`, `fieldNotes`, `wouldILiveHere` | Currently empty/null across every city | `implementation-plan.md:7` |
-| Neighbourhood/address accuracy review, ~552 unverified values | Unblocks rendering `district`/`address` (M5f found 6 of 22 hand-checked DC values wrong; machine guides carry the same risk at ~25× the volume) | `decision-log.md:217` |
+| ~~Neighbourhood/address accuracy review~~ | **`district` done in [M41](m41-district-review.md)** — a check of public facts, not a memory pass, so it was mis-filed here. `address` stays deferred (D33). What's left for you is in §8. | `m41-district-review.md` |
 | Colophon "things I wish I'd captured" text | Ready and waiting for your words | `m37-colophon.md:13` |
 
 ## 8. Decisions waiting on you
@@ -105,6 +105,7 @@ These are memory passes or exports — nothing in the codebase can generate them
 - **Whether to render the saved-list overlap** (217 recs / 189 venues as of the 15-city
   corpus) — computed and documented, sitting unrendered. (`implementation-plan.md:80`,
   `m37-colophon.md:39,76`)
+- **The M41 note conflicts.** 21 recommendation notes make a geographic claim the district review contradicted. Some recs aren't in their page's city at all: Mid City Ballroom (Baton Rouge) on New Orleans's page, Sugaree's (New Albany) on Jackson's, and Videri (a Raleigh maker the note calls an Atlanta one). Each one could be rewritten, excluded as in M5f, or left alone. (`m41-district-review.md`; `jq '.reviews | with_entries(select(.value.noteConflict))' data/district-review.json`)
 - **`ConstellationMap` mobile treatment at 390px** — flagged as a D5-territory design
   question, not yet resolved. (`m11-site-quality.md:70`)
 - **The three un-tokenized text sizes** ([D32](decision-log.md#d32-type-scale-tokens-for-small-and-ui-text)).

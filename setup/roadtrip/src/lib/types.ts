@@ -60,6 +60,10 @@ export interface Recommendation {
 	estCost: string;
 	bestTimeOfDay: string;
 	durationMin: number | null;
+	// D33: the neighbourhood, carried only once a review pass has checked it against a
+	// named source (data/district-review.json). null = unreviewed, not-a-neighbourhood,
+	// or unverifiable — never the guide's raw value.
+	district: string | null;
 	rating: boolean | null; // binary would-return signal (D18); null = unrated
 	note: string;
 	verifiedOpen: boolean | null;

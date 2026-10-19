@@ -58,6 +58,7 @@
       "estCost": "$0–35",
       "bestTimeOfDay": "Evening for an event",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Phoenix's flagship indie since 1974, with the First Draft Book Bar inside and 300+ author events a year -- the anchor of the local book scene.",
       "verifiedOpen": null
@@ -88,6 +89,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "English/Spanish bookstore that's evolved into a gallery and workshop space as much as a bookstore -- a genuine community and cultural hub.",
       "verifiedOpen": null
@@ -118,6 +120,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Open daily 9am–5pm",
       "durationMin": 45,
+      "district": "Eastlake Park",
       "rating": null,
       "note": "Eastlake Park's Black- and activist-owned bookstore, café, and poetry/jazz events space -- a direct hit for the leftist-politics and literature interests.",
       "verifiedOpen": null
@@ -143,6 +146,7 @@
       "estCost": "$2–15",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Phoenix's closest living equivalent to an infoshop: a zine distro carrying DIY punk and political zine culture, one of the few surviving pieces of the city's radical-space infrastructure.",
       "verifiedOpen": null
@@ -167,6 +171,7 @@
       "estCost": "$10–30",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": "Scottsdale",
       "rating": null,
       "note": "Mystery, thriller, and horror-adjacent genre specialist operating since 1989, with autographed first editions and imports.",
       "verifiedOpen": null
@@ -191,6 +196,7 @@
       "estCost": "$5–35",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "The well-known anchor of Phoenix vinyl, on Camelback for decades, with a dedicated Arizona-artists section and deep DIY-scene ties.",
       "verifiedOpen": null
@@ -215,6 +221,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Punk-specialty shop in Tempe with strong jazz, country, reggae, and rock depth alongside the punk bins.",
       "verifiedOpen": null
@@ -239,6 +246,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": "Tempe",
       "rating": null,
       "note": "The largest new-and-used vinyl selection anywhere in the Valley.",
       "verifiedOpen": null
@@ -263,6 +271,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "DJ-oriented shop in the Grand Avenue arts corridor covering hip-hop, jazz, electronic, soul, indie rock, and international.",
       "verifiedOpen": null
@@ -287,6 +296,7 @@
       "estCost": "$4–25",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Used vinyl since 1982, with strong comedy, soundtrack, and international-record selections.",
       "verifiedOpen": null
@@ -311,6 +321,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "The well-known anchor of Phoenix specialty coffee, with a 'seed to cup' sourcing philosophy across six Valley locations.",
       "verifiedOpen": null
@@ -335,6 +346,7 @@
       "estCost": "$4–7",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": "Roosevelt Row",
       "rating": null,
       "note": "Roosevelt Row institution -- locally sourced coffee plus 25+ loose-leaf teas.",
       "verifiedOpen": null
@@ -365,6 +377,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Garfield District roaster known for its prickly-pear espresso tonic -- also the bean supplier for The Trunk Space's espresso bar, a direct line into the DIY venue scene.",
       "verifiedOpen": null
@@ -389,6 +402,7 @@
       "estCost": "$4–7",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Family-owned and -operated for 10+ years, with locations in Melrose and Arcadia.",
       "verifiedOpen": null
@@ -413,6 +427,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": "Uptown",
       "rating": null,
       "note": "Arcadia café known for its Prickly Pear Blend and Ponderosa Blend, plus a strong snacks-and-cocktails program.",
       "verifiedOpen": null
@@ -437,6 +452,7 @@
       "estCost": "$4–9",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "The well-known pick: classic French butter croissants laminated into 55 paper-thin layers.",
       "verifiedOpen": null
@@ -461,6 +477,7 @@
       "estCost": "$5–9",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Pine Nut Cream Croissant made with Sonora heritage wheat flour and piñon frangipane -- the most locally-rooted pastry in the city.",
       "verifiedOpen": null
@@ -485,6 +502,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Sourdough-forward bakery; the pain au chocolat runs dual chocolate batons through sourdough laminated dough.",
       "verifiedOpen": null
@@ -509,6 +527,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Butter, chocolate, and pistachio croissants on Indian School Road.",
       "verifiedOpen": null
@@ -533,6 +552,7 @@
       "estCost": "$5–9",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Chocolate almond croissant built on browned butter, cognac syrup, almond cream, and Valrhona dark chocolate.",
       "verifiedOpen": null
@@ -557,6 +577,7 @@
       "estCost": "$12–18",
       "bestTimeOfDay": "Lunch",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Phoenix's own origin claim: Woody Johnson says he accidentally invented it in 1946 at Woody's El Nido, which became Macayo's Mexican Kitchen by 1952 -- Tucson's El Charro Café disputes the claim.",
       "verifiedOpen": null
@@ -581,6 +602,7 @@
       "estCost": "$9–14",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "James Beard Award–winning Fry Bread House, founded by Tohono O'odham Nation members, celebrated for exceptionally light fry bread.",
       "verifiedOpen": null
@@ -605,6 +627,7 @@
       "estCost": "$12–18",
       "bestTimeOfDay": "Brunch",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Lo Lo's Chicken and Waffles is a genuine Phoenix institution for the dish.",
       "verifiedOpen": null
@@ -629,6 +652,7 @@
       "estCost": "$10–15",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Chino Bandido's Chinese/Mexican fusion menu turns up on TasteAtlas's Phoenix dish list -- a genuine only-here oddity.",
       "verifiedOpen": null
@@ -653,6 +677,7 @@
       "estCost": "$4–7",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Bacon-wrapped, bean-and-tomato-topped hot dog on a bolillo bun; Phoenix reportedly had more vendors than Tucson at its 2009 peak, though no single restaurant dominates the way El Charro does for chimichangas -- best hunted from a cart.",
       "verifiedOpen": null
@@ -677,6 +702,7 @@
       "estCost": "$8–16",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Handmade gourmet popcorn in Southwest-inspired flavors including prickly pear and jalapeño.",
       "verifiedOpen": null
@@ -701,6 +727,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": "Queen Creek",
       "rating": null,
       "note": "Olive oils, vinegars, and specialty items like jalapeño-stuffed olives and mesquite-smoked oil from the state's only commercial olive mill.",
       "verifiedOpen": null
@@ -726,6 +753,7 @@
       "estCost": "$8–18",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Jams, syrups, candies, and drinks made from the prickly pear cactus, with a distinctive berry-watermelon flavor.",
       "verifiedOpen": null
@@ -750,6 +778,7 @@
       "estCost": "$8–14",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Stone-milled flours from heritage wheat varieties grown in Buckeye, Arizona.",
       "verifiedOpen": null
@@ -774,6 +803,7 @@
       "estCost": "$8–16",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Raw honey from desert wildflowers and mesquite flour with a caramel-like sweetness -- a direct hit for the beekeeping interest.",
       "verifiedOpen": null
@@ -798,6 +828,7 @@
       "estCost": "Free to view exterior",
       "bestTimeOfDay": "Anytime",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "18-room fortress hand-built by Boyce Luther Gulley over 15 years from salvaged stone, adobe, and railroad ties, reportedly held together partly with goat milk.",
       "verifiedOpen": null
@@ -823,6 +854,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": "Sunnyslope",
       "rating": null,
       "note": "Grover Cleveland Thompson's outsider-art rock garden, built 1952-74 using shards of Fiestaware.",
       "verifiedOpen": null
@@ -847,6 +879,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Dusk",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "An abandoned storm drain hosting 10,000-20,000 Mexican free-tailed bats emerging at dusk, May through October.",
       "verifiedOpen": null
@@ -869,6 +902,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Morning",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "One of the largest municipal parks in the US -- the well-known natural-attraction pick, anchored by the Hidden Valley Trail.",
       "verifiedOpen": null
@@ -898,6 +932,7 @@
       "estCost": "Free (exterior; community space, not a museum)",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Where Cesar Chavez held his 24-day fast in 1972 protesting a bill restricting farmworker collective bargaining -- and where Dolores Huerta coined \"Sí, se puede.\" A landmark of Southwest labor organizing.",
       "verifiedOpen": null
@@ -927,6 +962,7 @@
       "estCost": "$5–15",
       "bestTimeOfDay": "Night",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "All-ages DIY venue that launched Andrew Jackson Jihad -- Sean Bonnette's tattooed street address inspired a dozen imitators among the venue's community.",
       "verifiedOpen": null
@@ -951,6 +987,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Punk and hardcore specialist with a dedicated basement 'Underground' room alongside the main floor.",
       "verifiedOpen": null
@@ -980,6 +1017,7 @@
       "estCost": "$8–15",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Well-known/must-see indie/alt room with strong Arizona-band support; tickets rarely rise above $10.",
       "verifiedOpen": null
@@ -1004,6 +1042,7 @@
       "estCost": "Free–$10",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Tempe",
       "rating": null,
       "note": "Tempe dive-bar rock room known for frequently free shows.",
       "verifiedOpen": null
@@ -1028,6 +1067,7 @@
       "estCost": "$10–20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Downtown",
       "rating": null,
       "note": "Described by local press as the 'gold standard' of Arizona venues -- consistently low ticket prices, strong sound, outdoor event space.",
       "verifiedOpen": null
@@ -1052,6 +1092,7 @@
       "estCost": "$10–60",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Well-known/must-see indie gift gallery stocking Arizona artisans working in wood, fiber, and ceramic.",
       "verifiedOpen": null
@@ -1076,6 +1117,7 @@
       "estCost": "$20–150",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": "Paradise Valley",
       "rating": null,
       "note": "Hand-cast bronze and ceramic wind-bells from architect Paolo Soleri's studio -- a direct link to the utopian, outsider-architecture Arcosanti project in the desert north of the city.",
       "verifiedOpen": null
@@ -1100,6 +1142,7 @@
       "estCost": "$8–40",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Upscale downtown gift shop with a strong local-goods and design-object selection.",
       "verifiedOpen": null
@@ -1125,6 +1168,7 @@
       "estCost": "$15–40",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Locally screen-printed Arizona-pride apparel; limited-release designs benefit local charities.",
       "verifiedOpen": null
@@ -1149,6 +1193,7 @@
       "estCost": "$10–100+",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Authentic, handmade items directly supporting Indigenous artists -- a souvenir that's also a direct economic contribution.",
       "verifiedOpen": null
@@ -1173,6 +1218,7 @@
       "estCost": "Donation-based membership",
       "bestTimeOfDay": "Check open hours/calendar",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Arizona's original hackerspace, operating since 2009 on open-source principles -- 3,200 sq ft with 3D printers, laser cutters, and electronics workbenches; membership runs on a donation model, not a subscription.",
       "verifiedOpen": null
@@ -1197,6 +1243,7 @@
       "estCost": "$80/mo + $25 initiation",
       "bestTimeOfDay": "Check membership hours",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Downtown Phoenix community makerspace tied to GateWay Community College; general membership is $80/month plus a $25 initiation fee, with reservable equipment across textiles, wood, metal, and electronics.",
       "verifiedOpen": null

@@ -58,6 +58,7 @@
       "estCost": "$0–35",
       "bestTimeOfDay": "Evening if there's a reading",
       "durationMin": 60,
+      "district": "Downtown Arts District",
       "rating": null,
       "note": "Downtown's flagship indie bookstore, Las Vegas Weekly's 2025 Readers' Choice Best Bookstore — literary fiction, poetry, deep Nevada-authors section, Onyx Coffee Lab built in, 2-4 events weekly.",
       "verifiedOpen": null
@@ -82,6 +83,7 @@
       "estCost": "$1–20",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Warehouse-style used bookstore, 60,000+ books at $1–5, sourced via estate sales and a walk-in buying program — genuine treasure-hunt browsing.",
       "verifiedOpen": null
@@ -106,6 +108,7 @@
       "estCost": "$5–60+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Small, tightly curated used shop — literary fiction, poetry, rare and signed first editions.",
       "verifiedOpen": null
@@ -131,6 +134,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": "Fruit Loop",
       "rating": null,
       "note": "Vegas's only gay-owned LGBTQ+ retail bookstore since 1993 — part bookshop, part community fixture, queer fiction alongside its adult-shop inventory.",
       "verifiedOpen": null
@@ -155,6 +159,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Weekday afternoon",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Academic used-book shop near UNLV — textbooks, scholarly presses, discount research texts. Modest fifth pick, included for completeness.",
       "verifiedOpen": null
@@ -185,6 +190,7 @@
       "estCost": "$10–50",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "The museum's in-house record shop, punk vinyl tied to the archive, plus rare demos pressed exclusively on the shop's own TPRM ODs label.",
       "verifiedOpen": null
@@ -210,6 +216,7 @@
       "estCost": "$8–30",
       "bestTimeOfDay": "Evening",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "A working part of the local music ecosystem downtown, with an in-store studio hosting live sessions, tied into East Fremont's smaller venues.",
       "verifiedOpen": null
@@ -234,6 +241,7 @@
       "estCost": "$5–35",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Punk/metal specialist since 1998, blending records with band shirts, patches, and scene ephemera — built by lifers, not trend forecasters.",
       "verifiedOpen": null
@@ -259,6 +267,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Metal/horror/sci-fi specialist carrying extreme metal, underground shirts, and tapes not always available online.",
       "verifiedOpen": null
@@ -283,6 +292,7 @@
       "estCost": "$10–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "A three-floor operation for serious crate-diggers — the broad, well-known pick alongside the punk/metal specialists above.",
       "verifiedOpen": null
@@ -308,6 +318,7 @@
       "estCost": "$5–14",
       "bestTimeOfDay": "Morning",
       "durationMin": 60,
+      "district": "Fremont East",
       "rating": null,
       "note": "Downtown's hybrid café-marketplace — pour-over and Japanese iced coffee, plus an honey toast and elevated brunch program.",
       "verifiedOpen": null
@@ -332,6 +343,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Arts District",
       "rating": null,
       "note": "A no-pretense specialty roaster — smooth espresso, strong cold brew and cortado program.",
       "verifiedOpen": null
@@ -356,6 +368,7 @@
       "estCost": "$5–10",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Chinatown",
       "rating": null,
       "note": "A discreet, minimally signed Korean-inspired café with vintage décor, lavender latte and matcha affogato, real pastry program.",
       "verifiedOpen": null
@@ -380,6 +393,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Dog-friendly, mismatched-furniture neighborhood shop in East Vegas — house chai, vegan pastry case.",
       "verifiedOpen": null
@@ -405,6 +419,7 @@
       "estCost": "$5–9",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "A themed South Vegas café (butterbeer latte, lavender latte) that leans into novelty without sacrificing the coffee.",
       "verifiedOpen": null
@@ -429,6 +444,7 @@
       "estCost": "$2–8/item",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Operating since 1959 — cannoli filled to order, sfogliatelle, Italian cookies, the city's default custom-cake maker. Not casino-owned.",
       "verifiedOpen": null
@@ -453,6 +469,7 @@
       "estCost": "$3–8/item",
       "bestTimeOfDay": "Morning, Tue–Sun",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Paris-trained pastry chef, kouign-amann/canelé/opera cake — reportedly where hotel pastry chefs go on their own days off.",
       "verifiedOpen": null
@@ -477,6 +494,7 @@
       "estCost": "$6–12/item",
       "bestTimeOfDay": "Early morning, 7am open",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Naturally leavened 24-hour sourdough with no commercial yeast, plus weekend sourdough cinnamon rolls — sells out by 1pm.",
       "verifiedOpen": null
@@ -506,6 +524,7 @@
       "estCost": "$2–4/item",
       "bestTimeOfDay": "~3pm fresh batches",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Hong Kong-style BBQ pork buns, egg tarts, pineapple buns — time it around the fresh-batch window.",
       "verifiedOpen": null
@@ -530,6 +549,7 @@
       "estCost": "$3–8/item",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Japanese shokupan milk bread, curry buns, melon pan, matcha croissants. Closed Wednesdays.",
       "verifiedOpen": null
@@ -554,6 +574,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Invented by Golden Gate owner Italo Ghelfi in 1959 as a 50¢ loss-leader inspired by San Francisco's Fisherman's Wharf. Discontinued 2017, briefly revived 2019, now lives at owner Derek Stevens' Circa Resort.",
       "verifiedOpen": null
@@ -578,6 +599,7 @@
       "estCost": "$60–90",
       "bestTimeOfDay": "Dinner, reservation recommended",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "Open since 1958, the Rat Pack's steakhouse of choice — aged prime filet in a mid-century dining room.",
       "verifiedOpen": null
@@ -602,6 +624,7 @@
       "estCost": "$12–18",
       "bestTimeOfDay": "24 hrs — late night or brunch",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "A since-1972 retro Vegas diner landmark — vanilla-cinnamon French toast, fresh fruit, whipped cream, blueberry syrup, sunken fire-pit lounge.",
       "verifiedOpen": null
@@ -626,6 +649,7 @@
       "estCost": "$8–14",
       "bestTimeOfDay": "Late night",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Tijuana-style al pastor tacos, hand-pressed tortillas, house salsas — the late-night Vegas standard.",
       "verifiedOpen": null
@@ -651,6 +675,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Lunch",
       "durationMin": 90,
+      "district": "Filipino Town",
       "rating": null,
       "note": "Clark County's officially designated Filipinotown, reflecting roughly 250,000 Filipino residents in the valley — one of the densest, least-touristed food scenes in the city.",
       "verifiedOpen": null
@@ -675,6 +700,7 @@
       "estCost": "$12–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Henderson",
       "rating": null,
       "note": "Handmade chocolates from a Henderson factory with an attached cactus garden — genuinely locally made, not a Strip gift-shop label.",
       "verifiedOpen": null
@@ -699,6 +725,7 @@
       "estCost": "$8–15",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Nevada jerky maker since 2004, no preservatives — an easy, genuinely shelf-stable mailable gift.",
       "verifiedOpen": null
@@ -723,6 +750,7 @@
       "estCost": "$8–18/jar",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Raw honey from Sierra Nevada apiaries — the direct bees-interest pick.",
       "verifiedOpen": null
@@ -748,6 +776,7 @@
       "estCost": "$8–14",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Black woman-owned artisanal spice-blend maker — a distinctive mailable gift beyond the generic Vegas hot sauce.",
       "verifiedOpen": null
@@ -772,6 +801,7 @@
       "estCost": "$25–40/bottle",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": "Downtown",
       "rating": null,
       "note": "100-proof corn moonshine distilled in-house at The Underground, the museum's working speakeasy/distillery exhibit, sold retail through local liquor stores since 2019.",
       "verifiedOpen": null
@@ -797,6 +827,7 @@
       "estCost": "~$20–30",
       "bestTimeOfDay": "Evening for the light show",
       "durationMin": 90,
+      "district": null,
       "rating": null,
       "note": "A boneyard of ~250 vintage casino signs dating to the 1930s; the salvaged La Concha Motel lobby is now the visitor center. 'Brilliant!' relights unlit signs after dark.",
       "verifiedOpen": null
@@ -827,6 +858,7 @@
       "estCost": "$8–15/drink",
       "bestTimeOfDay": "Early evening",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Opened 1954, popularly claimed as the oldest freestanding bar in Vegas. Scorsese's Casino crew used the garage next door as a production studio.",
       "verifiedOpen": null
@@ -857,6 +889,7 @@
       "estCost": "$5–20 in quarters",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "Nonprofit, volunteer-run hands-on museum with 700+ playable machines at 25¢ a pop; excess revenue goes to the Salvation Army. Founder Tim Arnold has collected since 1972.",
       "verifiedOpen": null
@@ -886,6 +919,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Golden hour",
       "durationMin": 45,
+      "district": "Ivanpah Valley",
       "rating": null,
       "note": "Ugo Rondinone's Day-Glo stacked-boulder land art installation — $3.5M, one of the largest US land-art works completed in the last 40 years, extended through May 2027.",
       "verifiedOpen": null
@@ -915,6 +949,7 @@
       "estCost": "~$20/vehicle",
       "bestTimeOfDay": "Early morning",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Sandstone walls up to 3,000 ft, a 13-mile scenic loop, hiking and rock climbing. The Killers publicly opposed development here in 2017.",
       "verifiedOpen": null
@@ -939,6 +974,7 @@
       "estCost": "~$20",
       "bestTimeOfDay": "Morning",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "180 acres on Las Vegas's original water source — desert-sustainability demonstration site, botanical gardens, wetland trails, opened 2007.",
       "verifiedOpen": null
@@ -968,6 +1004,7 @@
       "estCost": "Free (context visit)",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Founded 1935, now Nevada's largest union at 60,000 members — 'America's greatest modern labor success story' per The New Republic, and the single most concrete leftist political anchor in the city.",
       "verifiedOpen": null
@@ -993,6 +1030,7 @@
       "estCost": "~$35 ($20 NV residents)",
       "bestTimeOfDay": "Midday",
       "durationMin": 150,
+      "district": "Downtown",
       "rating": null,
       "note": "Housed in the city's actual 1933 federal courthouse, with the restored Kefauver hearing courtroom and a working in-house speakeasy/distillery.",
       "verifiedOpen": null
@@ -1018,6 +1056,7 @@
       "estCost": "Free entry, $5–10 drinks",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Founded 1992 by P Moss in the old Fruit Loop district; no-cover punk, garage, ska, surf, and psychobilly every night, a Bourdain favorite.",
       "verifiedOpen": null
@@ -1042,6 +1081,7 @@
       "estCost": "~$28–40",
       "bestTimeOfDay": "Afternoon; evening for the bar",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Founded 2023 by NOFX's Fat Mike and Lisa Brownlee, governed by a 10-person collective incl. Pat Smear and Tony Hawk; playable-instrument Jam Room, chapel, Triple Down dive bar built in.",
       "verifiedOpen": null
@@ -1067,6 +1107,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Fremont East",
       "rating": null,
       "note": "Books electronic/glitch/experimental lineups alongside standard rock bills; one of Punk Rock Bowling's official venue stages.",
       "verifiedOpen": null
@@ -1091,6 +1132,7 @@
       "estCost": "$15–35",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Fremont East",
       "rating": null,
       "note": "A mid-size downtown room, one of Punk Rock Bowling's core venues — verify current booking calendar before visiting.",
       "verifiedOpen": null
@@ -1116,6 +1158,7 @@
       "estCost": "Festival passes vary",
       "bestTimeOfDay": "Late May",
       "durationMin": null,
+      "district": "Downtown",
       "rating": null,
       "note": "Founded 1999 by Youth Brigade's Stern brothers (BYO Records); Memorial Day weekend, 8,000-10,000/day across downtown venues. Falls outside this trip's Oct window — scene-context citation, not a bookable activity.",
       "verifiedOpen": null
@@ -1140,6 +1183,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Postcards and magnets designed from the museum's own vintage sign collection — genuinely tied to Vegas's specific visual heritage.",
       "verifiedOpen": null
@@ -1164,6 +1208,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "First Friday evening",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Wes Myles's 1998 warehouse conversion that founded the Arts District; galleries inside sell local-artist prints and small-run goods, especially on First Friday.",
       "verifiedOpen": null
@@ -1188,6 +1233,7 @@
       "estCost": "$5–35",
       "bestTimeOfDay": "",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Patches, pins, and postcards designed in-house, tied to the museum's flyer-art aesthetic.",
       "verifiedOpen": null
@@ -1212,6 +1258,7 @@
       "estCost": "$10–30",
       "bestTimeOfDay": "",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Nevada-author titles and small literary prints — a better souvenir than a shot glass.",
       "verifiedOpen": null
@@ -1236,6 +1283,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Desert-themed, native-seed-packet, education-nonprofit-adjacent gifts tied to the preserve's sustainability mission.",
       "verifiedOpen": null
@@ -1260,6 +1308,7 @@
       "estCost": "Membership-based; open houses often free",
       "bestTimeOfDay": "Check event calendar",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "Las Vegas's community hackerspace/makerspace — member-run space for hackers, makers, and inventors with an explicit mentorship culture; check their Discord for current open hours.",
       "verifiedOpen": null
@@ -1284,6 +1333,7 @@
       "estCost": "N/A — closed",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": "Arts District",
       "rating": null,
       "note": "Not a current pick — flagged for context only. A nationally known vintage guitar shop (an authenticated 1963 Hendrix Strat passed through here) that relocated to the Arts District in 2011 and closed in 2019.",
       "verifiedOpen": null

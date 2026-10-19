@@ -58,6 +58,7 @@
       "estCost": "$0–40",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": "French Quarter",
       "rating": null,
       "note": "William Faulkner lived here in 1925 while writing his first novel; now a small shop specializing in Southern literary classics and rare first editions.",
       "verifiedOpen": null
@@ -84,6 +85,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Morning",
       "durationMin": 60,
+      "district": "Marigny",
       "rating": null,
       "note": "Black-owned bookstore and coffee shop built around social justice and Black authors, with a packed author-events calendar and a small in-house recording studio.",
       "verifiedOpen": null
@@ -109,6 +111,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "7th Ward",
       "rating": null,
       "note": "Decades-old Black-owned institution on Bayou Road's historic Black business corridor — African-centered titles, gifts, and deep community standing.",
       "verifiedOpen": null
@@ -140,6 +143,7 @@
       "estCost": "Free/donation",
       "bestTimeOfDay": "Check socials — no fixed hours",
       "durationMin": 30,
+      "district": "Bywater",
       "rating": null,
       "note": "Mandatory infoshop pick: volunteer-run anarchist lending library and zine archive (3,000+ titles, plus the Above Ground Zine Library), now housed inside the CANOA arts/music venue.",
       "verifiedOpen": null
@@ -166,6 +170,7 @@
       "estCost": "Free browse",
       "bestTimeOfDay": "Verify hours ahead",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Radical, anarchist, and feminist bookstore and zine shop sharing space with Sisters in Christ Records and Mae's Guitars.",
       "verifiedOpen": null
@@ -195,6 +200,7 @@
       "estCost": "$10–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": "Marigny",
       "rating": null,
       "note": "The city's essential local-music specialist — deep jazz, brass band, R&B, and Mardi Gras Indian catalog, with a crate-digging vinyl room upstairs.",
       "verifiedOpen": null
@@ -224,6 +230,7 @@
       "estCost": "$10–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Bywater",
       "rating": null,
       "note": "Two floors of new and used vinyl, CDs, and 45s, a bit off the tourist track and locally called \"the best record store in town.\"",
       "verifiedOpen": null
@@ -254,6 +261,7 @@
       "estCost": "$10–30",
       "bestTimeOfDay": "Weekday afternoon (limited hours)",
       "durationMin": 45,
+      "district": "7th Ward",
       "rating": null,
       "note": "Opened 2007 on the Bayou Road Black business corridor, a serious crate-digger favorite with strong reggae and international selections.",
       "verifiedOpen": null
@@ -284,6 +292,7 @@
       "estCost": "$10–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Uptown",
       "rating": null,
       "note": "Metal-leaning vinyl curation, sharing its space with Rank & File Books.",
       "verifiedOpen": null
@@ -308,6 +317,7 @@
       "estCost": "$10–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": "Lower Garden District",
       "rating": null,
       "note": "A small shop with a tightly curated, well-loved selection on Magazine St.",
       "verifiedOpen": null
@@ -333,6 +343,7 @@
       "estCost": "$5–10",
       "bestTimeOfDay": "Early morning or late night",
       "durationMin": 30,
+      "district": "French Quarter",
       "rating": null,
       "note": "Chicory café au lait and sugar-dusted beignets since 1862 — the essential New Orleans coffee stop.",
       "verifiedOpen": null
@@ -357,6 +368,7 @@
       "estCost": "$5–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Local roaster working ethically sourced single-origin coffee.",
       "verifiedOpen": null
@@ -383,6 +395,7 @@
       "estCost": "$5–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Marigny",
       "rating": null,
       "note": "Cross-listed with Bookstores — coffee program plus a small in-house recording studio in a Black-owned, social-justice-minded space.",
       "verifiedOpen": null
@@ -408,6 +421,7 @@
       "estCost": "$5–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Lower Garden District",
       "rating": null,
       "note": "The Bywater's independent-spirit coffee anchor, a neighborhood mainstay for coffee-with-food.",
       "verifiedOpen": null
@@ -437,6 +451,7 @@
       "estCost": "$5–9",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Warehouse District",
       "rating": null,
       "note": "Dialed-in espresso bar frequently praised by Eater and Thrillist.",
       "verifiedOpen": null
@@ -461,6 +476,7 @@
       "estCost": "$5–12",
       "bestTimeOfDay": "Early morning",
       "durationMin": 30,
+      "district": "French Quarter",
       "rating": null,
       "note": "Classic French-technique pastry shop, laminated dough done right.",
       "verifiedOpen": null
@@ -485,6 +501,7 @@
       "estCost": "$6–15",
       "bestTimeOfDay": "Morning — sells out",
       "durationMin": 45,
+      "district": "Marigny",
       "rating": null,
       "note": "Its Croissant City Classic King Cake won the Times-Picayune's 2025 king cake bracket over 320,000 votes cast; also known for the cro madame.",
       "verifiedOpen": null
@@ -515,6 +532,7 @@
       "estCost": "$6–14",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Bywater",
       "rating": null,
       "note": "Long Carnival-season king cake lines, Breakfast Gumbo, and community-minded owners active in mutual aid.",
       "verifiedOpen": null
@@ -539,6 +557,7 @@
       "estCost": "$10–20/cake",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "New Orleans East",
       "rating": null,
       "note": "Vietnamese-American bakery with a dominant king cake reputation citywide; a drive from the core.",
       "verifiedOpen": null
@@ -563,6 +582,7 @@
       "estCost": "$5–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Uptown",
       "rating": null,
       "note": "Croissants and sweet breads with lines that back up the quality claim.",
       "verifiedOpen": null
@@ -593,6 +613,7 @@
       "estCost": "$12–16 (quarter is plenty)",
       "bestTimeOfDay": "Lunch",
       "durationMin": 30,
+      "district": "French Quarter",
       "rating": null,
       "note": "Invented here in 1906 by Sicilian grocer Salvatore Lupo; the round Italian loaf stacked with cured meats, cheese, and olive salad that judges every muffuletta after it.",
       "verifiedOpen": null
@@ -618,6 +639,7 @@
       "estCost": "$20–30",
       "bestTimeOfDay": "Lunch",
       "durationMin": 60,
+      "district": "Tremé",
       "rating": null,
       "note": "Restaurant helmed for decades by \"Queen of Creole Cuisine\" Leah Chase, and a real civil rights-era meeting place beyond its food.",
       "verifiedOpen": null
@@ -647,6 +669,7 @@
       "estCost": "$16–21",
       "bestTimeOfDay": "Evening",
       "durationMin": 45,
+      "district": "Central Business District",
       "rating": null,
       "note": "Rye whiskey, Peychaud's Bitters, and absinthe — America's oldest cocktail, official cocktail of New Orleans since 2008.",
       "verifiedOpen": null
@@ -671,6 +694,7 @@
       "estCost": "$16–20",
       "bestTimeOfDay": "Dinner",
       "durationMin": 30,
+      "district": "French Quarter",
       "rating": null,
       "note": "Tableside flambé dessert invented at Brennan's in 1951 by chef Paul Blangé, still the house signature.",
       "verifiedOpen": null
@@ -700,6 +724,7 @@
       "estCost": "$20–28",
       "bestTimeOfDay": "Dinner",
       "durationMin": 45,
+      "district": "Uptown",
       "rating": null,
       "note": "Head-on shrimp in a rich black-pepper butter sauce, invented here in the mid-1950s and, despite the name, entirely unrelated to barbecue.",
       "verifiedOpen": null
@@ -724,6 +749,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "The hot sauce locals actually reach for over Tabasco, made in New Orleans since the 1920s.",
       "verifiedOpen": null
@@ -748,6 +774,7 @@
       "estCost": "$10–15",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "The bitters that built the Sazerac, invented by a French Quarter apothecary — a cocktail-themed gift with a direct whiskey-history tie.",
       "verifiedOpen": null
@@ -777,6 +804,7 @@
       "estCost": "$5–10 each",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Shelf-stable Creole and Cajun seasoning blends that are genuine kitchen staples here, not tourist product.",
       "verifiedOpen": null
@@ -801,6 +829,7 @@
       "estCost": "$10–15/jar",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Urban beekeeper Shae Thomas harvests directly from hives in the Gentilly Woods neighborhood — genuinely in-city honey, not regional.",
       "verifiedOpen": null
@@ -825,6 +854,7 @@
       "estCost": "$3–6/box",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Gumbo, jambalaya, and red beans & rice packaged as shelf-stable mixes since 1889.",
       "verifiedOpen": null
@@ -850,6 +880,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Tremé",
       "rating": null,
       "note": "Where enslaved and free Black New Orleanians gathered on Sundays to play music, dance, and trade — the literal birthplace of the rhythms that became jazz.",
       "verifiedOpen": null
@@ -874,6 +905,7 @@
       "estCost": "$15–20",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": "French Quarter",
       "rating": null,
       "note": "Oddities collection including Dr. Kevorkian's Thanatron — the city's most concentrated horror/occult stop.",
       "verifiedOpen": null
@@ -904,6 +936,7 @@
       "estCost": "Free–$20 (guided)",
       "bestTimeOfDay": "Morning — better light, fewer crowds",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Anne Rice's resting place and the real-world set for jazz-funeral scenes in Interview with the Vampire and American Horror Story: Coven.",
       "verifiedOpen": null
@@ -933,6 +966,7 @@
       "estCost": "$14–18/drink",
       "bestTimeOfDay": "Evening",
       "durationMin": 45,
+      "district": "French Quarter",
       "rating": null,
       "note": "The only rotating bar in the city, spinning since 1949, and the birthplace of the rye-whiskey Vieux Carré cocktail.",
       "verifiedOpen": null
@@ -957,6 +991,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Morning — cooler, more wildlife",
       "durationMin": 180,
+      "district": "Marrero",
       "rating": null,
       "note": "26,000 free, boardwalked acres of bayou, swamp, and marsh 25 minutes south of downtown — alligators and free ranger-led tours included.",
       "verifiedOpen": null
@@ -988,6 +1023,7 @@
       "estCost": "Free/donation",
       "bestTimeOfDay": "Evening for shows",
       "durationMin": 120,
+      "district": "Lower 9th Ward",
       "rating": null,
       "note": "Mutual-aid free store, skate rink, and punk show venue named for the Black Panther chairman — explicitly \"the only all-ages venue in Greater New Orleans.\"",
       "verifiedOpen": null
@@ -1012,6 +1048,7 @@
       "estCost": "$10–20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "St. Roch",
       "rating": null,
       "note": "Bar/venue self-described by regulars as a \"hardcore metal/punk refuge.\"",
       "verifiedOpen": null
@@ -1036,6 +1073,7 @@
       "estCost": "$10–20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Freret",
       "rating": null,
       "note": "Booking venue that's a longtime scene favorite among local punk and indie writers.",
       "verifiedOpen": null
@@ -1060,6 +1098,7 @@
       "estCost": "$10–15",
       "bestTimeOfDay": "Night",
       "durationMin": 120,
+      "district": "Bywater",
       "rating": null,
       "note": "Dive-bar institution with a long-running punk and garage booking history.",
       "verifiedOpen": null
@@ -1084,6 +1123,7 @@
       "estCost": "$15–20",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Baton Rouge",
       "rating": null,
       "note": "Hosts touring hardcore/metal DIY bills, often presented by Louisiana Hardcore; the city's DIY show calendar and booking collective (Belly Up) live at noladiy.org alongside the Free Store.",
       "verifiedOpen": null
@@ -1108,6 +1148,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "\"Where locals shop local\" — stationery and magnets by New Orleans artist Kristin Malone, plus local jewelry and ceramics.",
       "verifiedOpen": null
@@ -1132,6 +1173,7 @@
       "estCost": "$10–40",
       "bestTimeOfDay": "Evening",
       "durationMin": 45,
+      "district": "Marigny",
       "rating": null,
       "note": "Frenchmen St alley market of independent local artists and artisans — prints, jewelry, and NOLA-pun T-shirts.",
       "verifiedOpen": null
@@ -1156,6 +1198,7 @@
       "estCost": "$20–100+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Outsider folk art from the artist behind the citywide \"Be Nice Or Leave\" signs — a genuinely only-in-New-Orleans souvenir.",
       "verifiedOpen": null
@@ -1180,6 +1223,7 @@
       "estCost": "$10–40",
       "bestTimeOfDay": "Evening",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Open-air market of local prints and crafts alongside the live-music strip.",
       "verifiedOpen": null
@@ -1204,6 +1248,7 @@
       "estCost": "$10–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": "French Quarter",
       "rating": null,
       "note": "Local prints gallery, including posters from Barkus, the city's dog Mardi Gras parade.",
       "verifiedOpen": null
@@ -1234,6 +1279,7 @@
       "estCost": "Membership varies",
       "bestTimeOfDay": "Weekday evenings",
       "durationMin": 120,
+      "district": "Broadmoor",
       "rating": null,
       "note": "Queer-led, female-founded cooperative makerspace with 24/7 member access and open community classes.",
       "verifiedOpen": null
@@ -1264,6 +1310,7 @@
       "estCost": "$0–500+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Post-Katrina (2005) shop stocking guitars, amps, and Eurorack modular synthesizers — the closest thing here to a dedicated synth shop, with proceeds supporting youth music programs.",
       "verifiedOpen": null
@@ -1288,6 +1335,7 @@
       "estCost": "Free–$25 class fees",
       "bestTimeOfDay": "Weekday",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "Laser cutters, CNC routers, a vinyl cutter, and 3D printers, open to community members and small businesses, not just students.",
       "verifiedOpen": null
@@ -1312,6 +1360,7 @@
       "estCost": "$20–150+",
       "bestTimeOfDay": "Weekday",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Full-service guitar repair and luthier shop doing everything from restringing to electronics work and full restorations.",
       "verifiedOpen": null
@@ -1336,6 +1385,7 @@
       "estCost": "Membership-based",
       "bestTimeOfDay": "Weekday",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "General wood/auto/metal makerspace with classes — honest evidence that the city's maker scene leans fabrication over electronics.",
       "verifiedOpen": null

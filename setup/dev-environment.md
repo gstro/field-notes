@@ -59,7 +59,7 @@ Open the repo root in VS Code and accept the recommended extensions. Run `claude
 | Script | What it does | When |
 |---|---|---|
 | `dev` | Vite dev server with HMR | interactive work |
-| `check` | `svelte-kit sync` + `svelte-check`; validates pages **and** every city JSON against `types.ts` | after any code or data change |
+| `check` | `svelte-kit sync` + `svelte-check`, then `scripts/check-city-data.ts`; validates pages **and** every city JSON against `types.ts` (via the generated `schemas/city.schema.json`, since the lazy city glob hides the JSON from TypeScript — M41) | after any code or data change |
 | `lint` | `prettier --check .`, `eslint .`, then the type-scale guard (`scripts/check-type-scale.ts`, D32) | before committing |
 | `format` | `prettier --write .` | fixing lint's formatting half |
 | `build` | full static prerender; **fails on any broken internal link** | before committing; this is what Vercel runs |

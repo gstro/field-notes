@@ -695,7 +695,7 @@
       "estCost": "$8-12/bar",
       "bestTimeOfDay": "",
       "durationMin": null,
-      "district": "Raleigh, NC",
+      "district": null,
       "rating": null,
       "note": "Atlanta bean-to-bar chocolate maker; shelf-stable bars travel and mail well.",
       "verifiedOpen": null

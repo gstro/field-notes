@@ -105,7 +105,7 @@ These are memory passes or exports — nothing in the codebase can generate them
 - **Whether to render the saved-list overlap** (217 recs / 189 venues as of the 15-city
   corpus) — computed and documented, sitting unrendered. (`implementation-plan.md:80`,
   `m37-colophon.md:39,76`)
-- **The M41 note conflicts.** 21 recommendation notes make a geographic claim the district review contradicted. Three recs aren't in their page's city at all: Videri (Raleigh) on Atlanta's page, Mid City Ballroom (Baton Rouge) on New Orleans's, and Sugaree's (New Albany) on Jackson's. Each one could be rewritten, excluded as in M5f, or left alone. (`m41-district-review.md`; `jq '.reviews | with_entries(select(.value.noteConflict))' data/district-review.json`)
+- **The M41 note conflicts.** 21 recommendation notes make a geographic claim the district review contradicted. Some recs aren't in their page's city at all: Mid City Ballroom (Baton Rouge) on New Orleans's page, Sugaree's (New Albany) on Jackson's, and Videri (a Raleigh maker the note calls an Atlanta one). Each one could be rewritten, excluded as in M5f, or left alone. (`m41-district-review.md`; `jq '.reviews | with_entries(select(.value.noteConflict))' data/district-review.json`)
 - **`ConstellationMap` mobile treatment at 390px** — flagged as a D5-territory design
   question, not yet resolved. (`m11-site-quality.md:70`)
 - **The three un-tokenized text sizes** ([D32](decision-log.md#d32-type-scale-tokens-for-small-and-ui-text)).

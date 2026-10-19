@@ -551,7 +551,7 @@
       "estCost": "$3–10",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
-      "district": "Plaza Midwood",
+      "district": null,
       "rating": null,
       "note": "New York-Italian bakery with cannoli, pistachio cheesecake, and seven-layer cookies.",
       "verifiedOpen": null

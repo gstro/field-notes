@@ -158,13 +158,14 @@ A possible `detours` field is open question O5.
   "status": "attended",
   "interestTags": ["radical-politics", "bookstores"],
   "estCost": "$20-40", "bestTimeOfDay": "afternoon", "durationMin": 60,
-  "rating": null, "note": "", "verifiedOpen": true
+  "district": null, "rating": null, "note": "", "verifiedOpen": true
 }
 ```
 
 - `status` enum — trip 2 (sourced-curated): `attended` · `planned-skipped` · `off-guide-discovery` · `closed-on-arrival` · `unverified`; trip 1 (retro-guided): `attended-anyway` · `retroactive-recommendation`. **The two trip-1 values are provenance markers, not outcome claims** — `retroactive-recommendation` means "the retro guide picked this; visit status unknown," and `attended-anyway` is a confirmed-visited floor, not a rate (D3, redefined M3.5). Semantics and the never-conflate rule: D3.
 - `source.citedFrom` is an array of `{ source, label, url }` (D19, M2) — one URL per citation, not one shared per recommendation. `source` is the enum: `atlasobscura` · `tasteatlas` · `eater` · `timeout` · `web-search` · `local-tip` · `self` (D4). `label` carries the real publication name when known; falls back to the enum's display label. Off-guide discoveries use `local-tip` or `self`. Where a per-item citation isn't recoverable from source material, it's `{ source: 'web-search', label: null, url: null }` — never invented.
 - This one `status` field powers the waffle charts, the guide hit-rate **floor**, off-guide discovery highlights, and the closures ledger (Proof Bakeshop, Hodgepodge, Switched On, Ipanema — the displacement story is content, not just a data-quality footnote). It does **not** power the comparison thesis: that comes from `perCityAdherence` in `data/maps-trip-analysis-public.json`, computed from the full pre-sanitization corpus (D22). Deriving a thesis rate by counting statuses is what produced M3's `0 / N` defect.
+- `district` is the neighbourhood, carried only from a reviewed entry in `data/district-review.json` (D33, M41); `null` means unreviewed, not a neighbourhood, or unverifiable. Never the guide's raw value. `address` is not in the schema (deferred, D28/D33).
 - `rating` stays null pending O3.
 
 **Pop culture:**

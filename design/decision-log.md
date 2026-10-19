@@ -305,12 +305,13 @@ It's a small TypeScript script run with Node's built-in type stripping, so it ad
 
 Supersedes D28's deferral for `district` only. `Recommendation` gains `district: string | null`, and its sole source is `data/district-review.json`: a per-rec verdict (`confirmed` / `corrected` / `not-a-district` / `unverified`) with one line of named evidence. Only `confirmed` and `corrected` carry a value. The ingest never reads the guide's own `district`, and it fails if a guide rec has one with no review, so new or regenerated guides can't leak unreviewed values. This is D19's rule applied to a fact about the world: a value the site can't cite doesn't render.
 
-The first pass (M41) reviewed all 451 guide values. 287 render (247 confirmed, 40 corrected) and 164 render nothing. The corrections bear out M5f's warning at scale. Full findings are in [`m41-district-review.md`](m41-district-review.md).
+The first pass (M41) reviewed all 451 guide values. 284 render (246 confirmed, 38 corrected) and 167 render nothing. The corrections bear out M5f's warning at scale. Full findings are in [`m41-district-review.md`](m41-district-review.md).
 
 **Corollaries:**
 - **`noteConflict` is flagged, not acted on.** A review that finds a note's geographic claim contradicted records it in the manifest. Rewriting the note or excluding the rec is a content call, the same class as M5f's exclusions, and it's the user's.
-- **Out-of-city venues carry the municipality**, even when that puts "Raleigh, NC" on Atlanta's page. The true location renders. Whether the rec belongs on that page is a separate question.
+- **Out-of-city venues carry the municipality**, even when that puts "Baton Rouge" on New Orleans's page. (A product bought at local shops carries nothing, since the maker's town isn't where you'd go.) The true location renders. Whether the rec belongs on that page is a separate question.
 - **`address` stays deferred.** Venues move, and several in this very sample did, so an address is a more perishable claim than a neighbourhood. It would need its own currency rule, not just a one-time check.
+- **`ajv` is now a dev dependency**, despite D25/D32's preference for none. `npm run check` had silently stopped validating city JSON in M1.1, because the lazy glob hides it from TypeScript. Validating against the already-generated `schemas/city.schema.json` (D30) is the least-code way to make the documented gate true again, and a hand-rolled JSON Schema validator would be worse.
 
 | # | Question | Decide by |
 |---|---|---|

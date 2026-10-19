@@ -244,9 +244,9 @@
   },
   "atlanta/videri-chocolate": {
    "guideValue": "West Midtown",
-   "verdict": "corrected",
-   "value": "Raleigh, NC",
-   "evidence": "operator site (viderichocolatefactory.com): 327 W Davie St, Raleigh, NC; no Atlanta location or connection",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (viderichocolatefactory.com): 327 W Davie St, Raleigh, NC; no Atlanta location or connection — [M41 consolidation] reclassified: a gifts pick bought at local shops, so the maker's home town is not where you'd go; sales-channel rule, as bottled-comeback-sauce",
    "noteConflict": "Note calls Videri an 'Atlanta bean-to-bar chocolate maker'; it is based in Raleigh, NC"
   },
   "atlanta/beautiful-briny-sea": {
@@ -599,7 +599,7 @@
    "guideValue": "The Bench",
    "verdict": "confirmed",
    "value": "The Bench",
-   "evidence": "mycoffeeexplorer.com Boise guide: Primal at 20 N Latah St, 'on Latah Street on the Bench'"
+   "evidence": "visitboise.com listing: 20 N Latah St, Boise 83706 — on the Bench; idahonews.com (CBS2) also places it on N Latah. A second counter inside Meriwether Cider downtown (downtownboise.org) is not the guide's pick"
   },
   "boise/neckar-coffee": {
    "guideValue": "Downtown",
@@ -765,9 +765,9 @@
   },
   "charlotte/villanis-bakery": {
    "guideValue": "Plaza Midwood",
-   "verdict": "confirmed",
-   "value": "Plaza Midwood",
-   "evidence": "Wayward Blog: 'Plaza Midwood area bakery', 901 Pecan Ave 28205; cathzine: Plaza Midwood-Elizabeth area (Hoodline/Yelp-based roundup lists it under Chantilly; it sits where the three meet)"
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "[M41 consolidation] demoted from confirmed: 901 Pecan Ave is placed in Chantilly by one listing and 'between Elizabeth and Plaza Midwood' by others (WBTV, Hoodline) — sources conflict on the neighbourhood"
   },
   "charlotte/paper-skyscraper-foods": {
    "guideValue": "Dilworth",
@@ -1626,7 +1626,7 @@
    "guideValue": "Classen Curve",
    "verdict": "corrected",
    "value": "Midtown",
-   "evidence": "visitokc.com Midtown district page lists Commonplace Books among Midtown's shops; not among Classen Curve tenants on classencurve.com (partial directory)"
+   "evidence": "TravelOK listing + Mountains & Plains bookstore directory: 1325 N Walker Ave, Suite 138 — Midtown (Visit OKC's Midtown page also lists it)"
   },
   "oklahoma-city/39th-street-records": {
    "guideValue": "39th Street District",
@@ -2367,9 +2367,9 @@
   },
   "salt-lake-city/ritual-chocolate": {
    "guideValue": "Sold at Caputo's and other SLC specialty shops (made in Heber City, UT)",
-   "verdict": "corrected",
-   "value": "Heber City",
-   "evidence": "operator site (ritualchocolate.com): factory & cafe 2175 W 3000 S, Heber City; Park City cafe closed 2023 (townlift.com). Guide value was a retail-outlet list"
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (ritualchocolate.com): factory & cafe 2175 W 3000 S, Heber City; Park City cafe closed 2023 (townlift.com). Guide value was a retail-outlet list — [M41 consolidation] reclassified: a gifts pick bought at local shops, so the maker's home town is not where you'd go; sales-channel rule, as bottled-comeback-sauce"
   },
   "salt-lake-city/sugar-house-park-joe-hill": {
    "guideValue": "Sugar House",
@@ -2436,7 +2436,7 @@
    "guideValue": "Natchitoches, LA (~70 mi south -- day trip)",
    "verdict": "confirmed",
    "value": "Natchitoches, LA",
-   "evidence": "64parishes.org (Natchitoches Meat Pies): dish originates in and is identified with Natchitoches, a separate city ~70 mi from Shreveport"
+   "evidence": "64parishes.org (Natchitoches Meat Pies, fetched): the pie 'has been associated with Louisiana's oldest permanent European settlement since at least the mid-nineteenth century'; Natchitoches is a separate city ~70 mi from Shreveport"
   },
   "shreveport/natchitoches-meat-pies-to-go-gift": {
    "guideValue": "Natchitoches, LA (day trip) or shipped direct",

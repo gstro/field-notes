@@ -2,14 +2,16 @@
 
 Per-milestone doc. Closes the `district` half of the deferral [D28](decision-log.md#d28-four-of-the-unmapped-guide-fields-added-the-rest-stay-out) left open: *"Revisit once neighbourhood accuracy has a review pass, the way M5f gave DC's citations one."* This is that pass. `address` stays deferred ([D33](decision-log.md#d33-district-renders-only-through-a-review-manifest-address-stays-out)).
 
-**451 guide `district` values reviewed. 287 now render; 164 render nothing.** Every rendered value was checked against a named source. No raw guide value reaches the page.
+**451 guide `district` values reviewed. 284 now render; 167 render nothing.** Every rendered value cites a named source. No raw guide value reaches the page. The strength of that source varies, and the evidence line says what it was: a handful rest on one listing, or were placed by address.
+
+451 is every non-null guide `district` in the corpus, New Orleans included. The "552" in D28 and the old manual-steps row counted recs with the key present, nulls included, across M3's 14 cities. Nothing was skipped: the ingest guard fails on any guide value without a review, and it passes.
 
 | verdict | count | renders |
 |---|---|---|
-| `confirmed` — the guide was right | 247 | the value, lightly normalized |
-| `corrected` — real venue, different neighbourhood | 40 | the corrected value |
-| `not-a-district` — the guide value isn't a neighbourhood | 96 | nothing |
-| `unverified` — couldn't be placed against a source | 68 | nothing |
+| `confirmed` — the guide was right | 246 | the value, lightly normalized |
+| `corrected` — real venue, different neighbourhood | 38 | the corrected value |
+| `not-a-district` — the guide value isn't a neighbourhood | 98 | nothing |
+| `unverified` — couldn't be placed against a source | 69 | nothing |
 
 The other 336 of the 787 recommendations had no guide `district` to review and stay `null`. That includes all 32 additive DC restorations (D24), which M5f verified for citation, not neighbourhood.
 
@@ -37,6 +39,8 @@ The other 336 of the 787 recommendations had no guide `district` to review and s
 
 ### Normalization rules (`not-a-district`)
 
+These values carry nothing *unless the reviewer independently placed the venue in a neighbourhood*. In that case the verdict is `corrected` and the neighbourhood carries. The Las Vegas, Phoenix and Jackson batches did this: "The Mob Museum" became Downtown, "Fremont St & 6th St" became Fremont East, and "N 32nd St, Arcadia" became Uptown. The DC, OKC and Birmingham batches read the rule more strictly and nulled bare-street values even with a placement in hand (DC's "14th Street NW" for Som Records and Black Cat). Their coverage is conservative, not wrong. A retry pass could lift it.
+
 - **Ruled out:**
   - the bare city name ("Boise", "Jackson")
   - "Multiple locations"
@@ -45,11 +49,15 @@ The other 336 of the 787 recommendations had no guide `district` to review and s
   - sales channels
   - chains where the pick isn't one specific location
 - **Out-of-city venues carry the municipality:** Tempe, Garden City, Homewood, Los Ranchos, Ridgeland, Heber City.
-- **One override at consolidation:** `albuquerque/indian-pueblo-store` came back `confirmed` as "Indian Pueblo Cultural Center". It was reclassified to match the host-venue rule applied everywhere else.
+- **Overrides at consolidation**, each marked `[M41 consolidation]` in its evidence line:
+  - `albuquerque/indian-pueblo-store`: came back `confirmed` as "Indian Pueblo Cultural Center". Reclassified as `not-a-district` under the host-venue rule.
+  - `salt-lake-city/ritual-chocolate` ("Sold at Caputo's…") and `atlanta/videri-chocolate`: gifts picks bought at local shops. They came back `corrected` to the maker's home town (Heber City, Raleigh), which isn't where you'd go to buy them. Reclassified as `not-a-district` under the sales-channel rule.
+  - `charlotte/villanis-bakery`: demoted from `confirmed` to `unverified`, because a spot-check found sources placing 901 Pecan Ave in Chantilly as well as Plaza Midwood.
+  - Three thinly sourced confirmations were re-checked and their evidence strengthened: Shreveport's Natchitoches meat pie (64parishes.org, now actually fetched), Commonplace Books (TravelOK), and Primal Coffee (visitboise.com).
 
 ## What was wrong
 
-**40 corrections.** Some only narrow a compound value ("Sweet Auburn / Old Fourth Ward" → "Sweet Auburn"). Many are a different neighbourhood outright, which is M5f's 27% finding repeated at scale:
+**38 corrections.** Some only narrow a compound value ("Sweet Auburn / Old Fourth Ward" → "Sweet Auburn"). Many are a different neighbourhood outright, which is M5f's 27% finding repeated at scale:
 
 | rec | guide said | actually |
 |---|---|---|
@@ -63,12 +71,11 @@ The other 336 of the 787 recommendations had no guide `district` to review and s
 | oklahoma-city — Beer City Music Hall | Farmers Market District | Iron Works District |
 | shreveport — Fatty Arbuckle's | Red River District | Highland (moved) |
 
-**Three corrections are out of town entirely, and the city page now says so:**
-- **Videri Chocolate** is listed on Atlanta's page but is in Raleigh, NC.
+**Two corrections are out of town entirely, and the city page now says so:**
 - **Mid City Ballroom** is listed on New Orleans's page but is in Baton Rouge.
 - **Sugaree's Bakery** is listed on Jackson's page but is in New Albany, MS.
 
-Rendering the true location is correct under D19. Whether those recs belong on those pages at all is a separate question, flagged below and not acted on.
+Rendering the true location is correct under D19. Whether those recs belong on those pages at all is a separate question, flagged below and not acted on. (Videri Chocolate, a Raleigh maker listed as an Atlanta one, renders no district: it's a gifts pick bought at local shops. Its note conflict stands.)
 
 ## ⚠️ 21 notes contradict the true location — flagged, not fixed
 
@@ -114,6 +121,7 @@ The fix makes the documented gate true, rather than rewriting four docs to say i
 ## Verified during implementation
 
 - `npm run check`: 0 errors, and the city data check passes on 15 files.
+- **ajv added as a dev dependency.** D25 and D32 favoured adding no dependencies. ajv is dev-only, it validates against a schema the repo already generates (D30), and hand-rolling a JSON Schema validator would be worse. It's recorded as a D33 corollary.
 - `npm run lint` passes, and so does `npm run build`, with all pages prerendered.
 - `npm run schemas`: the regenerated schema is committed, so CI's drift check stays green.
 - The city JSON diff is additive only. The one new line per rec is `district`; every other field is byte-identical, and `citySummary.json` is unchanged.
@@ -128,5 +136,5 @@ The fix makes the documented gate true, rather than rewriting four docs to say i
 - **`address`** stays out (D33). It's a more perishable claim than neighbourhood: venues move, and several did in this very sample.
 - Retrying the 68 unverified values.
 - **User's call:**
-  - the 21 note conflicts and the 3 out-of-town recs;
+  - the 21 note conflicts and the 2 out-of-town recs, plus Videri;
   - the closures noticed in passing.

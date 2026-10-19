@@ -54,6 +54,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Afternoon; evening for Queer Lit Book Club",
       "durationMin": 45,
+      "district": "Avondale",
       "rating": null,
       "note": "An intersectional feminist bookstore running the Queer Lit Book Club and the Alabama Books to Prisons program — the closest thing Birmingham has to a politically-organized infoshop, which is the finding itself (see honest gap below).",
       "verifiedOpen": null
@@ -78,6 +79,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Afternoon; evening for events",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Opened December 2019 as a self-described 'community for authors and readers'; featured in the New York Times, Garden & Gun, and Book Riot, with a steady book-club and author-event calendar.",
       "verifiedOpen": null
@@ -103,6 +105,7 @@
       "estCost": "$5–100+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": "Downtown",
       "rating": null,
       "note": "Rare and antique books alongside the in-store 'Museum of Fond Memories' — vintage magazines, posters, and oddities. Owner Jim Reed hosts the Red Clay Diary podcast. Atlas Obscura-listed.",
       "verifiedOpen": null
@@ -127,6 +130,7 @@
       "estCost": "$0–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Homewood",
       "rating": null,
       "note": "Established 1972, relocated into a larger two-story space on 18th Street; membership discount program, author talks, book clubs, and children's story time.",
       "verifiedOpen": null
@@ -152,6 +156,7 @@
       "estCost": "$15–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Every single book in the store is signed by its author; runs a Signed First Editions Club with a curated annual selection — an unusually specific curatorial identity.",
       "verifiedOpen": null
@@ -182,6 +187,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "New and used vinyl with an explicit punk/hardcore section alongside blues, funk, jazz, and metal; staff-picks culture and Seasick Exclusives limited variants give it real DIY-scene credibility.",
       "verifiedOpen": null
@@ -211,6 +217,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Longstanding independent buy/sell/trade shop, a practical first stop if you're carrying records to sell as well as buy.",
       "verifiedOpen": null
@@ -235,6 +242,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Polished downtown espresso/drip bar sourcing from Montgomery-based Prevail Coffee Roasters — the most consistently top-rated coffee stop in the city.",
       "verifiedOpen": null
@@ -259,6 +267,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": "Avondale",
       "rating": null,
       "note": "Multi-roaster program (Proud Mary, Thankfully, Junto) with a pastry case supplied by Last Call Baking Co. — pairs naturally with the Avondale record/venue corridor.",
       "verifiedOpen": null
@@ -289,6 +298,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning, paired with Kelly Ingram Park and the Institute",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Black-owned coffee shop operating inside the restored A.G. Gaston Motel; the signature Room 30 latte is named for the SCLC's operational headquarters room during the 1963 campaign, bombed by white supremacists on May 10, 1963.",
       "verifiedOpen": null
@@ -313,6 +323,7 @@
       "estCost": "$5–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Specialty roaster with a Black Sesame Date Latte as its signature order — opened its cafe in 2022.",
       "verifiedOpen": null
@@ -338,6 +349,7 @@
       "estCost": "$4–7",
       "bestTimeOfDay": "Early morning",
       "durationMin": 30,
+      "district": "Homewood",
       "rating": null,
       "note": "Fluid-bed-roasted beans with a road-cycling community built into the shop's identity — the kind of independent, single-purpose roaster the traveler's coffee interest is built for.",
       "verifiedOpen": null
@@ -362,6 +374,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning, before the almond croissants sell out",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Founded 2013 by Kristen Hall; the almond croissant is the best-seller and widely cited as the city's benchmark. Also serves Domestique-roasted coffee.",
       "verifiedOpen": null
@@ -391,6 +404,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Owner Chanah Willis calls the butter croissant 'the lifeblood' of the shop; the canelé is the other order worth the trip. Its work also supplies Punch Love Coffee's pastry case.",
       "verifiedOpen": null
@@ -415,6 +429,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Operating since 1985, adjoining the Chez Lulu café; ham-and-cheese croissants, tartes, and decorated shortbread, plus made-to-order Lane Cakes.",
       "verifiedOpen": null
@@ -439,6 +454,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning — sells out",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Opened 2022 by Wim Miree (20+ years at Continental Bakery). The laminated cinnamon roll, built on croissant dough, is the reason to show up early.",
       "verifiedOpen": null
@@ -464,6 +480,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "A combined café and bookstore built around the 'Breakup Cookie,' with baristas doubling as informal reader's-advisory staff.",
       "verifiedOpen": null
@@ -488,6 +505,7 @@
       "estCost": "$10–18",
       "bestTimeOfDay": "Lunch",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "A mayonnaise-and-vinegar-based barbecue sauce distinctive to north/central Alabama, applied to smoked chicken — the single most identifiable regional dish on this leg of the trip.",
       "verifiedOpen": null
@@ -514,6 +532,7 @@
       "estCost": "$6–12/slice; $45+ whole cake",
       "bestTimeOfDay": "Anytime; order ahead for a whole cake",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "A bourbon-soaked coconut-custard layer cake invented by Emma Rylander Lane of Clayton, AL, and immortalized in Harper Lee's To Kill a Mockingbird — a literature/bourbon/pastry triple match.",
       "verifiedOpen": null
@@ -544,6 +563,7 @@
       "estCost": "$8–14",
       "bestTimeOfDay": "Lunch or dinner",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Alabama's oldest continuously operating restaurant (est. 1907, Bessemer, just southwest of Birmingham proper) serves a straightforwardly excellent version of the dish that gave Flagg's novel its title.",
       "verifiedOpen": null
@@ -568,6 +588,7 @@
       "estCost": "$14–22",
       "bestTimeOfDay": "Dinner",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Buttermilk-soaked, cornmeal-dredged catfish is one of TasteAtlas's top-rated Alabama dishes, typically served with hush puppies and coleslaw.",
       "verifiedOpen": null
@@ -592,6 +613,7 @@
       "estCost": "$10–15",
       "bestTimeOfDay": "Lunch",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "The vegetable-forward Southern cafeteria format at its most iconic Birmingham address — a rotating steam-table of a dozen-plus vegetable sides against one meat, cash-and-carry.",
       "verifiedOpen": null
@@ -616,6 +638,7 @@
       "estCost": "$6–18",
       "bestTimeOfDay": "Saturday market morning",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Locally sourced honey from Vincent, AL, sold at Birmingham's Pepper Place Market and area specialty shops — the direct hit on the traveler's bee interest.",
       "verifiedOpen": null
@@ -640,6 +663,7 @@
       "estCost": "$8–14",
       "bestTimeOfDay": "Saturday market morning",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Small-batch bean-to-bar chocolate maker based in Birmingham; bars, pastries, and truffles sold at pop-up events.",
       "verifiedOpen": null
@@ -664,6 +688,7 @@
       "estCost": "$6–10",
       "bestTimeOfDay": "Anytime",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Farm-to-table white barbecue sauce and hot sauces made with locally sourced produce — a shelf-stable extension of the Alabama-white-sauce dish pick above.",
       "verifiedOpen": null
@@ -688,6 +713,7 @@
       "estCost": "$8–20",
       "bestTimeOfDay": "Anytime",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Alabama-grown pecans — plain, roasted, salted, chocolate-covered, or brittle — the closest thing to a fruit/produce-native mailable gift the region offers.",
       "verifiedOpen": null
@@ -712,6 +738,7 @@
       "estCost": "$5–8",
       "bestTimeOfDay": "Anytime",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Jarred, shelf-stable spicy pickle chips built on a 90-year-old Alabama recipe — an easy, sturdy thing to mail.",
       "verifiedOpen": null
@@ -736,6 +763,7 @@
       "estCost": "Free (donations); guided tour ~$10",
       "bestTimeOfDay": "Weekday mornings for guided tours",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "The organizational headquarters of the Birmingham civil rights movement, where the September 15, 1963 Klan bombing killed Addie Mae Collins, Carole Robertson, Cynthia Wesley, and Denise McNair. National Historic Landmark, UNESCO tentative World Heritage list. Still an active congregation — confirm tour access doesn't conflict with services.",
       "verifiedOpen": null
@@ -760,6 +788,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Morning, paired with the church and Institute",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "The staging ground for the 1963 Children's Crusade, where Bull Connor's police turned firehoses and dogs on child demonstrators — images that helped force passage of the Civil Rights Act of 1964. The Four Spirits sculpture (2013) commemorates the bombing victims; a 'Freedom Walk' loop moves visitors through Kaskey and James Drake installations.",
       "verifiedOpen": null
@@ -790,6 +819,7 @@
       "estCost": "~$15",
       "bestTimeOfDay": "Midday",
       "durationMin": 120,
+      "district": null,
       "rating": null,
       "note": "Smithsonian affiliate opened 1992; self-directed permanent exhibit walks a Birmingham-specific account of the 1963 campaign, including an Oral History Project and the Congressional Gold Medal awarded in 2013 for the bombing victims. Part of the Birmingham Civil Rights National Monument (designated 2017). Alicia's Coffee Shop, a few blocks away in the A.G. Gaston Motel, is the natural coffee pairing.",
       "verifiedOpen": null
@@ -825,6 +855,7 @@
       "estCost": "Free (museum); event tickets vary",
       "bestTimeOfDay": "Late afternoon / golden hour, or night for ghost tours",
       "durationMin": 90,
+      "district": null,
       "rating": null,
       "note": "Operating 1882–1971, the nation's only 20th-century blast-furnace site preserved as a museum; local ghost lore (a worker reportedly fell into a furnace, giving rise to 'The Ghost in the Sloss Furnaces,' 1987) plus night tours feed the horror/occult interest, while the site's role hosting Furnace Fest — a hardcore/metalcore festival — ties it directly to the punk interest too.",
       "verifiedOpen": null
@@ -849,6 +880,7 @@
       "estCost": "$6–9 (tower observation deck extra)",
       "bestTimeOfDay": "Sunset for the skyline view",
       "durationMin": 90,
+      "district": null,
       "rating": null,
       "note": "The world's largest cast-iron statue, built for the 1904 St. Louis World's Fair to represent Birmingham's iron industry before being relocated home — the city's most recognizable icon and an observation-deck skyline view worth the ticket.",
       "verifiedOpen": null
@@ -873,6 +905,7 @@
       "estCost": "Free (walking)",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Birmingham's Jim Crow-era Black business, entertainment, and professional district (1908–1941), listed on the National Register in 1982. The Colored Masonic Temple (1922) and the Alabama Penny Savings Bank / Pythian Temple still stand as 'the only place left in the city which tells the story of the Jim Crow years in Birmingham.' Red Mountain Makers (this guide's Category 10 pick) now occupies 810 4th Ave N, inside the district's footprint.",
       "verifiedOpen": null
@@ -897,6 +930,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Morning",
       "durationMin": 120,
+      "district": "South East Lake",
       "rating": null,
       "note": "1,038 acres of reclaimed iron-ore and limestone mining land with 14+ miles of trails, fossil beds, and a LEED-certified visitor center housing native raptors and reptiles — the natural-attraction balance pick, and genuinely in-city rather than a drive-out.",
       "verifiedOpen": null
@@ -921,6 +955,7 @@
       "estCost": "Free grounds access most days; game tickets vary",
       "bestTimeOfDay": "Weekday, or the annual Rickwood Classic",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Opened 1910, the oldest professional baseball park still standing in the country; former home of the Negro League's Birmingham Black Barons (Willie Mays's first pro team, 1948). MLB played its first-ever regular-season Alabama game here in June 2024.",
       "verifiedOpen": null
@@ -945,6 +980,7 @@
       "estCost": "$5 annual membership + door",
       "bestTimeOfDay": "Late night (opens 2pm, music from ~10pm)",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "'Birmingham's Dirty Little Secret' — a 21+ private club running for over 30 years, booking blues, punk, emo, metal, and everything between, functionally the city's most durable DIY-adjacent stage.",
       "verifiedOpen": null
@@ -969,6 +1005,7 @@
       "estCost": "$10–30",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "Avondale",
       "rating": null,
       "note": "Larger-capacity Avondale room used by DIY Birmingham for bigger punk and dance-adjacent bills; anchors the Avondale nightlife corridor alongside Punch Love Coffee and Avondale Brewing.",
       "verifiedOpen": null
@@ -994,6 +1031,7 @@
       "estCost": "Weekend pass varies",
       "bestTimeOfDay": "Fall (dates vary year to year)",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Founded 2000 by Takehold Records' Chad Johnson, dormant 2004–2018, revived 2019 and running through 2024 with 2025 return announced; a hardcore/metalcore/post-hardcore festival staged inside the blast-furnace ruins. Confirm current-year dates before planning around it.",
       "verifiedOpen": null
@@ -1019,6 +1057,7 @@
       "estCost": "Free–$10",
       "bestTimeOfDay": "Check socials for bills",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Grassroots collective explicitly organized to 'break out of the social and economic hierarchies of the traditional music industry,' booking punk, hardcore, emo, shoegaze, industrial/noise, EBM/techno, and metal shows at The Firehouse, Saturn, and house shows citywide.",
       "verifiedOpen": null
@@ -1043,6 +1082,7 @@
       "estCost": "$5–15",
       "bestTimeOfDay": "Night, check DIY Birmingham calendar",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "DIY Birmingham's primary all-ages show venue — the genuine house-show-adjacent stage underneath the bigger Saturn/Sloss bills.",
       "verifiedOpen": null
@@ -1068,6 +1108,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Vintage-style 'Greetings from Birmingham' postcards, a B-Ham magnet, and a Vulcan sticker alongside honey, BBQ sauces, pickles, pottery, and books — the closest thing Birmingham has to a one-stop mailable-souvenir shop.",
       "verifiedOpen": null
@@ -1092,6 +1133,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Paired with the tower visit",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "On-site shop for Birmingham's iron-statue icon — cast-iron-themed goods tie directly back to the city's founding industry.",
       "verifiedOpen": null
@@ -1117,6 +1159,7 @@
       "estCost": "$5–50",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": "Downtown",
       "rating": null,
       "note": "Vintage Birmingham postcards, magazines, and ephemera inside the shop's in-house nostalgia museum — a more meaningful souvenir than a rack magnet.",
       "verifiedOpen": null
@@ -1141,6 +1184,7 @@
       "estCost": "$5–15",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 20,
+      "district": "Morris Avenue",
       "rating": null,
       "note": "Fresh roasted and boiled peanuts since 1907, sold from a historic Morris Avenue storefront — an edible souvenir with more local specificity than a magnet.",
       "verifiedOpen": null
@@ -1165,6 +1209,7 @@
       "estCost": "Membership-based; tours by appointment",
       "bestTimeOfDay": "By appointment",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Creative-workspace makerspace with ceramics, screen printing, stained glass, woodworking, and digital-tools studios; 24/7 coworking access for members.",
       "verifiedOpen": null
@@ -1190,6 +1235,7 @@
       "estCost": "Tiered membership (Maker-level limited hours; Keyholder 24/7)",
       "bestTimeOfDay": "Weekend afternoon open hours",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "7,800 sq ft volunteer-run nonprofit hackerspace with a dedicated electronics lab plus metal, wood, and textile shops. Sits at 810 4th Avenue North — physically inside the Fourth Avenue Historic District footprint, an organic link between the DIY-electronics and civil-rights-history threads.",
       "verifiedOpen": null
@@ -1219,6 +1265,7 @@
       "estCost": "Varies ($50–$2,000+)",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Musician-owned shop trading in vintage guitars, amps, and pedals — the closest Birmingham-area analogue to a dedicated gear/pedal shop for the traveler's synth/DIY-electronics interest.",
       "verifiedOpen": null

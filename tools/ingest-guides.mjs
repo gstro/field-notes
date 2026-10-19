@@ -145,6 +145,7 @@ function transformAdditive(entry, cityId) {
 		estCost: stripPlaceholder(entry.estCost),
 		bestTimeOfDay: stripPlaceholder(entry.bestTimeOfDay),
 		durationMin: entry.durationMin,
+		district: null, // D33: restored venues weren't in the district review pass
 		rating: null,
 		note: entry.note,
 		verifiedOpen: null
@@ -256,6 +257,30 @@ function parseDurationMin(duration) {
 	return null;
 }
 
+// D33: a guide's `district` is carried only through the review manifest. The
+// raw guide value is never read here — M5f found 6 of 22 hand-checked DC
+// neighbourhoods wrong, so an unreviewed value is exactly what D19 exists to
+// keep off the page. Keyed `${guideSlug}/${recId}`; only `confirmed` and
+// `corrected` verdicts carry a value. See design/m41-district-review.md.
+const DISTRICT_REVIEW = JSON.parse(readFileSync(join(ROOT, 'data/district-review.json'), 'utf8')).reviews;
+const DISTRICT_VERDICTS = new Set(['confirmed', 'corrected', 'not-a-district', 'unverified']);
+
+function reviewedDistrict(rec, guide) {
+	const key = `${guide.slug}/${rec.id}`;
+	const review = DISTRICT_REVIEW[key];
+	if (!review) {
+		if (rec.district) throw new Error(`district-review.json: no review for ${key} (guide says "${rec.district}")`);
+		return null;
+	}
+	if (!DISTRICT_VERDICTS.has(review.verdict)) throw new Error(`district-review.json: ${key} bad verdict "${review.verdict}"`);
+	const carries = review.verdict === 'confirmed' || review.verdict === 'corrected';
+	if (carries !== (typeof review.value === 'string' && review.value.length > 0)) {
+		throw new Error(`district-review.json: ${key} verdict "${review.verdict}" disagrees with value ${JSON.stringify(review.value)}`);
+	}
+	if (!review.evidence) throw new Error(`district-review.json: ${key} has no evidence`);
+	return carries ? review.value : null;
+}
+
 function transformRecommendation(rec, guide) {
 	const categoryNum = CATEGORY_TO_NUM[rec.category];
 	if (!categoryNum) {
@@ -273,6 +298,7 @@ function transformRecommendation(rec, guide) {
 		estCost: stripPlaceholder(rec.cost),
 		bestTimeOfDay: stripPlaceholder(rec.bestTime),
 		durationMin: parseDurationMin(rec.duration),
+		district: reviewedDistrict(rec, guide),
 		rating: null, // D18 — nothing in the guides records a would-return signal
 		note: NOTE_REDACTIONS[`${guide.slug}/${rec.id}`] ?? rec.note ?? '',
 		verifiedOpen: null // do NOT infer from verificationFlag (source confidence, not open/closed)

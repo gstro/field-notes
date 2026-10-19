@@ -59,6 +59,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": "Trolley Square",
       "rating": null,
       "note": "Running since 1929 (as Zion's Bookstore, then Sam Weller's); Sam Weller stocked contraband Henry Miller and D.H. Lawrence for customers who asked, and the store now runs a standing 'Banned! from Utah Schools' display case -- literary-freedom politics built into the shelving.",
       "verifiedOpen": null
@@ -88,6 +89,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon; evening for a reading",
       "durationMin": 45,
+      "district": "15th & 15th",
       "rating": null,
       "note": "SLC's other long-running community-anchor indie -- packed events calendar, staff-pick culture, and the kind of shop the Guardian has written up for how it operates differently from a standard indie.",
       "verifiedOpen": null
@@ -114,6 +116,7 @@
       "estCost": "$10–500+",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "Ken Sanders co-owned the 1970s countercultural shop The Cosmic Aeroplane before opening this ABAA rare-book operation in 1997 -- deep stock in Western Americana, rare and esoteric volumes, and counterculture ephemera; a Salt Lake institution for collectors of the strange and the political alike.",
       "verifiedOpen": null
@@ -139,6 +142,7 @@
       "estCost": "$5–25",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Genre specialist focused on sci-fi, fantasy, and horror, with an on-site cafe -- the direct hit for the horror-and-occult reading interest.",
       "verifiedOpen": null
@@ -163,6 +167,7 @@
       "estCost": "Free / donation",
       "bestTimeOfDay": "Evening for a reading or discussion",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Mandatory radical/infoshop search result: a nine-plus-year anarchist community space hosting radical dialog, readings, and performances -- not a retail bookstore, but the closest thing SLC has to an infoshop, and explicitly welcomes LGBTQ+, anticapitalist, and countercultural community.",
       "verifiedOpen": null
@@ -187,6 +192,7 @@
       "estCost": "$10–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Maven District",
       "rating": null,
       "note": "Iconic metal-and-punk vinyl, patches, and merch shop operating since 1987 -- the well-known/must-see anchor of SLC's heavy-music retail scene.",
       "verifiedOpen": null
@@ -212,6 +218,7 @@
       "estCost": "$5–35",
       "bestTimeOfDay": "Check calendar for an in-store",
       "durationMin": 45,
+      "district": "Downtown",
       "rating": null,
       "note": "Psych, punk, garage, electronic, and local pressings, plus a real DIY-scene tie: hosts Bandemonium (musicians randomly re-shuffled into new bands) and touring acts like Soft Kill and Cool Ghouls.",
       "verifiedOpen": null
@@ -236,6 +243,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 45,
+      "district": "Sugar House",
       "rating": null,
       "note": "'Raw, loud, and unapologetically punk' since the 1980s -- a hard-to-find-underground-music specialist that doubles as a skate shop and gathering point for the city's punk/hardcore community.",
       "verifiedOpen": null
@@ -260,6 +268,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 60,
+      "district": "Maven District",
       "rating": null,
       "note": "Deep breadth-and-depth general vinyl, CD, and tape stock spanning new releases and classics -- a longstanding SLC institution.",
       "verifiedOpen": null
@@ -285,6 +294,7 @@
       "estCost": "$5–30",
       "bestTimeOfDay": "Afternoon",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Part barbershop, part art gallery, part record cave -- an eclectic hybrid shop whose name alone is a direct hit for the horror/occult interest.",
       "verifiedOpen": null
@@ -309,6 +319,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Established 1981, the pioneer of specialty coffee in a state where coffee is culturally uncommon -- Visit Utah compares its local role to Starbucks in Seattle. The single strongest 'unique because of the surrounding culture' pick in this list.",
       "verifiedOpen": null
@@ -338,6 +349,7 @@
       "estCost": "$4–9",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Major local roaster operating out of a renovated warehouse, emphasizing responsibly sourced beans across several SLC locations.",
       "verifiedOpen": null
@@ -362,6 +374,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Maven District",
       "rating": null,
       "note": "Third-wave espresso and pour-over pairing with fresh pastries in an atmospheric downtown space.",
       "verifiedOpen": null
@@ -391,6 +404,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Neighborhood specialty spot with a community-oriented, no-frills vibe -- a regular on locals' shortlists.",
       "verifiedOpen": null
@@ -420,6 +434,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Morning or late afternoon",
       "durationMin": 45,
+      "district": "9th & 9th",
       "rating": null,
       "note": "Long-running indie community hangout in the 9th & 9th district, the kind of shop with regulars who've been coming for decades.",
       "verifiedOpen": null
@@ -449,6 +464,7 @@
       "estCost": "$4–14",
       "bestTimeOfDay": "Morning, before the case sells out",
       "durationMin": 45,
+      "district": "Central City",
       "rating": null,
       "note": "James Beard-recognized baker famous for kouign-amann ('kouing aman') -- the well-known/must-eat pastry stop in the city, and it also ships nationwide via Goldbelly if you can't make it in person.",
       "verifiedOpen": null
@@ -473,6 +489,7 @@
       "estCost": "$4–12",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Central City",
       "rating": null,
       "note": "A decades-old Sugar House institution -- handcrafted cakes, cookies, and eclairs, the kind of place locals order birthday cakes from generation after generation.",
       "verifiedOpen": null
@@ -497,6 +514,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Modern, minimalist bakery known for almond, bacon-and-egg, and ham-and-cheese croissants plus lemon tarts and morning buns.",
       "verifiedOpen": null
@@ -521,6 +539,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Cuban-inspired pastry program (guava, passion fruit, Opera cake) that's also notably gluten-free friendly -- the most distinctive technique angle in this category.",
       "verifiedOpen": null
@@ -545,6 +564,7 @@
       "estCost": "$4–10",
       "bestTimeOfDay": "Morning",
       "durationMin": 30,
+      "district": "Downtown",
       "rating": null,
       "note": "French-leaning downtown bakery known for strawberry croissants in a photogenic blue-and-white space.",
       "verifiedOpen": null
@@ -569,6 +589,7 @@
       "estCost": "$1–4 add-on",
       "bestTimeOfDay": "Lunch",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "The ketchup-and-mayo condiment invented in Salt Lake City in the 1950s -- the single most SLC-coded thing to order, best tried at Hires Big H, a since-1959 drive-in institution.",
       "verifiedOpen": null
@@ -593,6 +614,7 @@
       "estCost": "$8–13",
       "bestTimeOfDay": "Lunch",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "A beef patty topped with pastrami, cheese, and fry sauce on a sesame bun -- popularized at Crown Burgers.",
       "verifiedOpen": null
@@ -617,6 +639,7 @@
       "estCost": "$6–12",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "A cheesy potato casserole with a cornflake topping, traditionally served at LDS funeral luncheons and now a year-round comfort dish across Utah restaurants.",
       "verifiedOpen": null
@@ -642,6 +665,7 @@
       "estCost": "$12–20/lb",
       "bestTimeOfDay": "Anytime",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "An award-winning espresso-and-lavender-rubbed cheddar from Beehive Cheese Co. -- one of TasteAtlas's top-rated Utah cheeses, and a direct hit for both the coffee and bee interests via the maker's own name.",
       "verifiedOpen": null
@@ -666,6 +690,7 @@
       "estCost": "$4–8",
       "bestTimeOfDay": "Anytime",
       "durationMin": 15,
+      "district": null,
       "rating": null,
       "note": "A whimsically named pasta salad (acini di pepe, egg yolks, whipped cream, optional pineapple/marshmallow) that TasteAtlas rates among the region's most divisive dishes -- worth trying purely for the novelty.",
       "verifiedOpen": null
@@ -690,6 +715,7 @@
       "estCost": "$30+",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "SLC's essential gourmet deli/market ships curated boxes of cheeses, oils, vinegars, and specialty meats -- the well-known/must-see one-stop for mailable local flavor.",
       "verifiedOpen": null
@@ -714,6 +740,7 @@
       "estCost": "$8–20/jar",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Beekeeper-owned shop selling truly local raw honey from backyard and small-batch Wasatch Front apiaries, plus propolis, pollen, beeswax, and miniature gift-favor jars -- the most literal bee-interest pick in the whole guide.",
       "verifiedOpen": null
@@ -739,6 +766,7 @@
       "estCost": "$12–20/lb",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Same espresso-lavender cheddar as the dish pick above -- shelf-stable enough (vacuum-sealed) to travel well as a mailed gift; Caputo's ships it.",
       "verifiedOpen": null
@@ -763,6 +791,7 @@
       "estCost": "$8–14/bottle",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Small-batch four-pepper salsa and a spicy Bloody Mary mix, handcrafted locally and sold through farmers markets and Etsy -- easy to mail.",
       "verifiedOpen": null
@@ -787,6 +816,7 @@
       "estCost": "$8–14/bar",
       "bestTimeOfDay": "",
       "durationMin": null,
+      "district": "Heber City",
       "rating": null,
       "note": "Small-batch bean-to-bar craft chocolate from just outside the metro, with rotating single-origin bars including an El Salvadoran-espresso pairing -- ships and mails well.",
       "verifiedOpen": null
@@ -812,6 +842,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Daylight",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "A free outsider-art garden built mid-20th-century by Thomas Battersby Child Jr. -- 12 sculptures and 70+ inscribed stones blending Mormon scripture, poetry, and literary texts, tucked behind a Chuck-a-Rama parking lot.",
       "verifiedOpen": null
@@ -841,6 +872,7 @@
       "estCost": "Free (donation appreciated)",
       "bestTimeOfDay": "Wednesday evening (tour night)",
       "durationMin": 60,
+      "district": null,
       "rating": null,
       "note": "A religious sect founded in 1975 blending science-fiction cosmology and Egyptian polytheism, practicing modern mummification, with public tours by appointment on Wednesday evenings -- as strange and occult-adjacent a stop as this guide gets.",
       "verifiedOpen": null
@@ -865,6 +897,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Daylight",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "A tombstone inscribed 'Victim of the Beast 666' in the largest municipally owned cemetery in the U.S. -- Lilly died of natural causes, but her husband believed government conspiracy killed her.",
       "verifiedOpen": null
@@ -889,6 +922,7 @@
       "estCost": "~$16 general admission (village); monument grounds free",
       "bestTimeOfDay": "Midday",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "The well-known/must-see anchor of SLC pioneer history -- marks where Brigham Young reportedly declared 'this is the right place' in 1847, with a living-history pioneer village on the grounds.",
       "verifiedOpen": null
@@ -913,6 +947,7 @@
       "estCost": "Day-use entry fee (~$15/vehicle)",
       "bestTimeOfDay": "Morning for bison activity; sunset for lake views",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "The natural-attraction balance pick: a free-roaming bison and pronghorn herd on an island in the Great Salt Lake, plus hiking, cycling, and internationally certified dark-sky stargazing, about 40 minutes from downtown.",
       "verifiedOpen": null
@@ -942,6 +977,7 @@
       "estCost": "Free",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": "Sugar House",
       "rating": null,
       "note": "A public park built on the site of the former Sugar House Prison, where Wobbly songwriter Joe Hill was executed by firing squad in 1915 after a controversial trial. In 2023 the Central Utah Federation of Labor (AFL-CIO) unveiled a monument near the execution site -- this guide's analyticalThread anchor.",
       "verifiedOpen": null
@@ -966,6 +1002,7 @@
       "estCost": "$12–25",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "SLC's longest-running all-ages venue, open since 1999 -- a converted garage that's launched Death Cab for Cutie, Phoebe Bridgers, Mitski, and Japanese Breakfast on the way up.",
       "verifiedOpen": null
@@ -990,6 +1027,7 @@
       "estCost": "$10–25",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": null,
       "rating": null,
       "note": "Long-running indie/punk-leaning bar venue, a core stop on SLC's local and touring circuit.",
       "verifiedOpen": null
@@ -1014,6 +1052,7 @@
       "estCost": "$15–35",
       "bestTimeOfDay": "Night",
       "durationMin": 180,
+      "district": "The Gateway",
       "rating": null,
       "note": "A larger historic concert hall near the old Rio Grande railroad depot, booking rock, metal, and hardcore-adjacent touring acts alongside bigger indie names.",
       "verifiedOpen": null
@@ -1039,6 +1078,7 @@
       "estCost": "Free / donation",
       "bestTimeOfDay": "Evening",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "Same space as the bookstores-category pick — its 'performances' programming crosses into DIY show territory, making it SLC's clearest example of a venue doubling as explicit political community space.",
       "verifiedOpen": null
@@ -1064,6 +1104,7 @@
       "estCost": "Free (in-store)",
       "bestTimeOfDay": "Check calendar",
       "durationMin": 120,
+      "district": "Downtown",
       "rating": null,
       "note": "Same shop as the records-category pick — its in-store sets and Bandemonium nights are the city's most direct record-store-as-venue tie.",
       "verifiedOpen": null
@@ -1088,6 +1129,7 @@
       "estCost": "$5–20",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "The official downtown visitor-center shop carries stickers, magnets, and pins designed by local Utah artist Ashley Collett -- a locally-designed alternative to generic tourist-shop magnets.",
       "verifiedOpen": null
@@ -1113,6 +1155,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "A curated Utah-themed gift shop (name notwithstanding) featuring local vendors and artists — postcards, prints, honey, and topographic-patch apparel emphasizing locally-designed goods over mass-produced tourist product.",
       "verifiedOpen": null
@@ -1138,6 +1181,7 @@
       "estCost": "$5–40",
       "bestTimeOfDay": "Anytime",
       "durationMin": 30,
+      "district": null,
       "rating": null,
       "note": "Same barbershop/gallery/record-cave hybrid as the records pick — its gallery side sells local art and prints with more edge than a standard magnet rack.",
       "verifiedOpen": null
@@ -1163,6 +1207,7 @@
       "estCost": "$5–20",
       "bestTimeOfDay": "Anytime",
       "durationMin": 15,
+      "district": "Trolley Square",
       "rating": null,
       "note": "Same shop as the bookstores pick — postcards and totes tied to its 'Banned! from Utah Schools' display make for a souvenir with a literal political statement attached.",
       "verifiedOpen": null
@@ -1187,6 +1232,7 @@
       "estCost": "$4–20",
       "bestTimeOfDay": "Anytime",
       "durationMin": 20,
+      "district": null,
       "rating": null,
       "note": "Same shop as the mailable-gifts pick — miniature honey jars and beeswax candles double as the most literal bee-themed souvenir in the city.",
       "verifiedOpen": null
@@ -1211,6 +1257,7 @@
       "estCost": "Membership-based",
       "bestTimeOfDay": "Check open hours / open house",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "The city's flagship community makerspace -- 3D printing, laser cutting, woodworking, and electronics under one roof, with regular open houses and Meetup-listed events.",
       "verifiedOpen": null
@@ -1235,6 +1282,7 @@
       "estCost": "Membership-based",
       "bestTimeOfDay": "Check open hours",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "A hackerspace with a strong cybersecurity/electronics-hacking bent -- meetups, workshops, and open lab nights for hardware and software tinkerers alike.",
       "verifiedOpen": null
@@ -1259,6 +1307,7 @@
       "estCost": "Varies (gear purchase)",
       "bestTimeOfDay": "Wed–Fri 12–6pm, Sat 12–5pm (per shop's own site — see status note)",
       "durationMin": 45,
+      "district": null,
       "rating": null,
       "note": "Self-described 'SLC's only synth shop' -- Eurorack modular, drum machines, and effects pedals, authorized dealer for Moog/Korg/Novation, with occasional community meetups and classes.",
       "verifiedOpen": null
@@ -1283,6 +1332,7 @@
       "estCost": "Ticketed",
       "bestTimeOfDay": "Early August (annual, ~18 years running)",
       "durationMin": null,
+      "district": null,
       "rating": null,
       "note": "SLC's annual flagship maker event -- 500+ local makers, food vendors, and performers; not a fixed space, but the clearest single snapshot of the city's DIY/maker culture in one place.",
       "verifiedOpen": null

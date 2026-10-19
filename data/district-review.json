@@ -1,0 +1,2732 @@
+{
+ "note": "D33 district review (M41). Keyed `<guideSlug>/<recId>`. tools/ingest-guides.mjs carries `value` into Recommendation.district ONLY for verdict confirmed|corrected; not-a-district and unverified render nothing. guideValue is the raw guide string, kept for audit, never rendered. evidence names the source checked (URLs verified but not carried, per the corpus-wide url:null invariant). noteConflict flags a note whose geographic claim the true location contradicts — flagged, not acted on. See design/m41-district-review.md.",
+ "reviews": {
+  "albuquerque/bookworks": {
+   "guideValue": "North Valley",
+   "verdict": "confirmed",
+   "value": "North Valley",
+   "evidence": "Poets & Writers / KRQE listings: 4022 Rio Grande Blvd NW, 87107, north of Griegos Rd — inside the North Valley; placed by address"
+  },
+  "albuquerque/organic-books": {
+   "guideValue": "Nob Hill",
+   "verdict": "confirmed",
+   "value": "Nob Hill",
+   "evidence": "abq.news local shopping guide: 'Nob Hill's home-grown, family-owned bookstore Organic Books (111 Carlisle Blvd. SE)'"
+  },
+  "albuquerque/page-1-books": {
+   "guideValue": "Eastside",
+   "verdict": "corrected",
+   "value": "Northeast Heights",
+   "evidence": "bookshop.org / NewPages listings: 5850 Eubank Blvd NE, 87111 (Eubank & Academy) — inside the Northeast Heights; placed by address"
+  },
+  "albuquerque/cutbow-coffee-roasters": {
+   "guideValue": "Near Old Town",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (cutbowcoffee.com): 1208 Rio Grande Blvd NW, 'just north of Historic Old Town' — guide's 'Near Old Town' is relative position, not a neighbourhood; no source names the neighbourhood"
+  },
+  "albuquerque/humble-coffee": {
+   "guideValue": "Nob Hill & Downtown",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "visitalbuquerque.org lists two locations (Nob Hill, 4200 Lomas NE; Downtown, Central Ave NW); pick is the chain, not one location"
+  },
+  "albuquerque/zendo-coffee": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "tablejourney.com (aggregator) and joe.coffee listings: 413 2nd St SW, downtown near the convention center; placed by address"
+  },
+  "albuquerque/trifecta-coffee": {
+   "guideValue": "North Valley",
+   "verdict": "confirmed",
+   "value": "North Valley",
+   "evidence": "ediblenm.com: 413 Montaño Rd NE, described as Trifecta's 'North Valley site'"
+  },
+  "albuquerque/little-bear-coffee": {
+   "guideValue": "Nob Hill",
+   "verdict": "confirmed",
+   "value": "Nob Hill",
+   "evidence": "visitalbuquerque.org listing (Little Bear Coffee and Wine Bar): 3123 Central Ave NE Ste D, Nob Hill — the location that runs the LBPM wine bar"
+  },
+  "albuquerque/ihatov-bread-coffee": {
+   "guideValue": "Nob Hill",
+   "verdict": "confirmed",
+   "value": "Nob Hill",
+   "evidence": "abq.news 'Ihatov brings heartfelt bakes to Nob Hill'; HappyCow gives 3400 Central Ave SE"
+  },
+  "albuquerque/los-poblanos-lavender-honey": {
+   "guideValue": "Los Ranchos (edge of metro)",
+   "verdict": "confirmed",
+   "value": "Los Ranchos",
+   "evidence": "operator site (lospoblanos.com): Farm Shop at 4803 Rio Grande Blvd NW, Los Ranchos de Albuquerque — separate village"
+  },
+  "albuquerque/grave-of-walter-white": {
+   "guideValue": "Vernon's Speakeasy, Los Ranchos",
+   "verdict": "confirmed",
+   "value": "Los Ranchos",
+   "evidence": "atlasobscura.com / newmexicomagazine.org: headstone on the wall by Vernon's at the Village Shops at Los Ranchos, 6855 Fourth St NW, Los Ranchos de Albuquerque"
+  },
+  "albuquerque/center-of-the-universe": {
+   "guideValue": "UNM campus",
+   "verdict": "confirmed",
+   "value": "UNM campus",
+   "evidence": "campushistory.unm.edu / roadsideamerica.com: Bruce Nauman sculpture on the UNM campus between Mitchell and Ortega Halls"
+  },
+  "albuquerque/sunshine-theater": {
+   "guideValue": "Downtown, Central Ave",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (sunshinetheaterlive.com): 120 Central Ave, 87102 — downtown Central; placed by address"
+  },
+  "albuquerque/launchpad": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (launchpadrocks.com): 618 Central Ave SW, 87102 — downtown Central; placed by address"
+  },
+  "albuquerque/sister-abq": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (sisterthebar.com): 407 Central Ave NW, 87102 — downtown Central; placed by address"
+  },
+  "albuquerque/corpus-arts": {
+   "guideValue": "Downtown storefront",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "could not locate an operator site or listing with an address (corpusarts.org does not resolve); web search budget exhausted"
+  },
+  "albuquerque/the-candy-lady": {
+   "guideValue": "Old Town",
+   "verdict": "confirmed",
+   "value": "Old Town",
+   "evidence": "operator site (thecandylady.com): 424 San Felipe NW, 'in the heart of Albuquerque's Old Town'"
+  },
+  "albuquerque/indian-pueblo-store": {
+   "guideValue": "Indian Pueblo Cultural Center",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (indianpueblostore.com): 'Find our physical location at the Indian Pueblo Cultural Center', 2401 12th St NW (value is the host complex, not a residential neighbourhood) — [M41 consolidation] host venue, not a neighbourhood; reclassified to match Sloss Furnaces etc."
+  },
+  "albuquerque/puzzled-old-town": {
+   "guideValue": "Old Town",
+   "verdict": "confirmed",
+   "value": "Old Town",
+   "evidence": "operator site (puzzledabq.com) title: 'Puzzles, Brainteasers, Games & More in Old Town Albuquerque'"
+  },
+  "atlanta/a-cappella-books": {
+   "guideValue": "Inman Park",
+   "verdict": "confirmed",
+   "value": "Inman Park",
+   "evidence": "operator site (acappellabooks.com): 208 Haralson Ave NE, Inman Park"
+  },
+  "atlanta/charis-books": {
+   "guideValue": "Decatur",
+   "verdict": "confirmed",
+   "value": "Decatur",
+   "evidence": "operator site (charisbooksandmore.com): located in Decatur, GA, adjacent to the Agnes Scott College campus"
+  },
+  "atlanta/for-keeps-books": {
+   "guideValue": "Sweet Auburn / Old Fourth Ward",
+   "verdict": "corrected",
+   "value": "Sweet Auburn",
+   "evidence": "WABE / Atlanta Magazine: 171 Auburn Ave NE, Unit H1 (30303), in the historic Auburn Avenue (Sweet Auburn) neighborhood; west of the Downtown Connector, not Old Fourth Ward",
+   "noteConflict": "Note says it opened 'a few blocks from the Sweet Auburn corridor', but it sits on Auburn Avenue itself, inside Sweet Auburn"
+  },
+  "atlanta/grim-reader-bookshop": {
+   "guideValue": "Upper Westside",
+   "verdict": "confirmed",
+   "value": "Upper Westside",
+   "evidence": "AJC (2026): storefront planned for the Upper Westside; Secret Atlanta / WhatNow give 1082 Huff Rd NW, Suite C, in Blandtown (an Upper Westside neighbourhood)"
+  },
+  "atlanta/offbeat-books": {
+   "guideValue": "Peoplestown / Terminal South",
+   "verdict": "confirmed",
+   "value": "Peoplestown",
+   "evidence": "AJC (2026) and Rough Draft Atlanta: 1161 Ridge Ave SW in the Terminal South development, Peoplestown neighborhood"
+  },
+  "atlanta/criminal-records": {
+   "guideValue": "Little Five Points",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (criminalatl.com) returned 403; no independent source retrieved before the session's web-search budget ran out"
+  },
+  "atlanta/disorder-vinyl": {
+   "guideValue": "Edgewood Avenue, Old Fourth Ward",
+   "verdict": "confirmed",
+   "value": "Old Fourth Ward",
+   "evidence": "Urbanize Atlanta: moved from Summerhill to the Brown Hayes Department Store building at Edgewood Ave and Boulevard, Old Fourth Ward; AJC listing gives 467 Edgewood Ave SE"
+  },
+  "atlanta/waxn-facts": {
+   "guideValue": "Little Five Points",
+   "verdict": "confirmed",
+   "value": "Little Five Points",
+   "evidence": "operator site (waxnfacts.com): 432 Moreland Ave NE, Little 5 Points"
+  },
+  "atlanta/wuxtry-records": {
+   "guideValue": "Emory Village",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (wuxtryrecords.com): 2096 North Decatur Rd, Decatur mailing address 30033, near Emory Village; address alone does not clearly place it inside Emory Village or within Atlanta city limits"
+  },
+  "atlanta/moods-music": {
+   "guideValue": "Little Five Points",
+   "verdict": "confirmed",
+   "value": "Little Five Points",
+   "evidence": "Discover Atlanta vinyl guide: 1131 Euclid Ave NE; Rough Draft Atlanta (2024) places the store on Euclid Ave in Little Five Points"
+  },
+  "atlanta/refuge-coffee": {
+   "guideValue": "Clarkston, GA (metro Atlanta)",
+   "verdict": "confirmed",
+   "value": "Clarkston",
+   "evidence": "operator site (refugecoffeeco.com): Refuge Clarkston, 4170 E Ponce de Leon Ave NE, Clarkston, GA (other cafes in Decatur, Midtown, and Norcross)"
+  },
+  "atlanta/land-of-a-thousand-hills": {
+   "guideValue": "Atlanta metro (roastery + cafes)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (landofathousandhills.com): multi-location chain (Roswell, Midtown, Old Fourth Ward, Duluth, and other states); the pick names no single location"
+  },
+  "atlanta/condesa-coffee": {
+   "guideValue": "Multiple Atlanta locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (condesacoffee.com): Old Fourth Ward flagship plus Grant Park; the guide gives 'Multiple Atlanta locations'"
+  },
+  "atlanta/dancing-goats": {
+   "guideValue": "Krog Street Market, Inman Park",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "Krog District official directory (thekrogdistrict.com) lists no Dancing Goats; known locations (Atlanta Magazine, Midtown Alliance, Foursquare) are Decatur, Ponce City Market, Midtown, Buckhead, and Emory, with no Krog Street Market cafe found"
+  },
+  "atlanta/aurora-coffee": {
+   "guideValue": "Little Five Points",
+   "verdict": "confirmed",
+   "value": "Little Five Points",
+   "evidence": "Culture Trip / DiningOut guides: 468 Moreland Ave NE, Little Five Points flagship (since 1992); Patch: Virginia-Highland branch closed, L5P flagship continues"
+  },
+  "atlanta/little-tart-bakeshop": {
+   "guideValue": "Summerhill",
+   "verdict": "confirmed",
+   "value": "Summerhill",
+   "evidence": "AJC Summerhill food tour: 68 Georgia Ave SE, Summerhill (a second outpost is in the Krog Street Market directory)"
+  },
+  "atlanta/star-provisions": {
+   "guideValue": "Upper Westside",
+   "verdict": "confirmed",
+   "value": "Upper Westside",
+   "evidence": "operator site (starprovisions.com): now at 1460 Ellsworth Industrial Blvd, 30318 (the guide's Howell Mill address is outdated); placed by address in the Ellsworth Industrial/Huff Rd corridor of the Upper Westside"
+  },
+  "atlanta/colette-bakeshop": {
+   "guideValue": "Poncey-Highland",
+   "verdict": "confirmed",
+   "value": "Poncey-Highland",
+   "evidence": "DiningOut / Discover Atlanta: 636 N Highland Ave NE, Poncey-Highland"
+  },
+  "atlanta/alons-bakery": {
+   "guideValue": "Morningside",
+   "verdict": "confirmed",
+   "value": "Morningside",
+   "evidence": "The Infatuation (Alon's Morningside): 1394 N Highland Ave NE, Morningside; AJC agrees (opened 1992)"
+  },
+  "atlanta/hell-yeah-gluten-free": {
+   "guideValue": "Inman Park",
+   "verdict": "confirmed",
+   "value": "Inman Park",
+   "evidence": "The Infatuation / The Donut Whole: 900 DeKalb Ave NE, Inman Park (temporary pop-up also in the Atlanta Daily World Building, Sweet Auburn, per WhatNow)"
+  },
+  "atlanta/swan-coach-house-salad": {
+   "guideValue": "Buckhead",
+   "verdict": "confirmed",
+   "value": "Buckhead",
+   "evidence": "Tripleseat / BizBash venue listings: 3130 Slaton Dr NW, on the Atlanta History Center grounds in Buckhead"
+  },
+  "atlanta/videri-chocolate": {
+   "guideValue": "West Midtown",
+   "verdict": "corrected",
+   "value": "Raleigh, NC",
+   "evidence": "operator site (viderichocolatefactory.com): 327 W Davie St, Raleigh, NC; no Atlanta location or connection",
+   "noteConflict": "Note calls Videri an 'Atlanta bean-to-bar chocolate maker'; it is based in Raleigh, NC"
+  },
+  "atlanta/beautiful-briny-sea": {
+   "guideValue": "Sold at Ponce City Market / Krog Street Market",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "Atlanta Magazine: Atlanta maker (Old Fourth Ward studio, later a Grant Park facility); the guide value is a list of retail points, not a neighbourhood"
+  },
+  "atlanta/yo-mamas-sauces": {
+   "guideValue": "Atlanta-based, widely stocked",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "Tampa Bay Business & Wealth / 83 Degrees Media: Yo Mama's Foods is founded in and headquartered in Clearwater, FL; widely stocked product with no single location",
+   "noteConflict": "Note calls it 'Atlanta-founded'; the company was founded in and is based in Clearwater, FL"
+  },
+  "atlanta/bee-downtown-honey": {
+   "guideValue": "Corporate rooftop hives across metro Atlanta (Ponce City Market retail)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "Inc. / Hypepotamus: Durham, NC-based company running corporate hive programs in Raleigh-Durham and Atlanta; hives spread across metro sites"
+  },
+  "atlanta/asw-fiddler-bourbon": {
+   "guideValue": "The Battery ATL / Buckhead / West End tasting rooms",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (aswdistillery.com): several sites (Armour Dr in south Buckhead, ASW Exchange at Lee + White in West End, The Battery in Cobb County, plus an airport tasting room); no single location"
+  },
+  "atlanta/krog-street-tunnel": {
+   "guideValue": "Cabbagetown / Reynoldstown / Inman Park border",
+   "verdict": "confirmed",
+   "value": "Cabbagetown / Reynoldstown / Inman Park",
+   "evidence": "Wikipedia (Krog Street Tunnel): connects the Cabbagetown, Reynoldstown and Inman Park neighbourhoods under Hulsey Yard"
+  },
+  "atlanta/chattahoochee-river-nra": {
+   "guideValue": "Northwest Atlanta metro",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "NPS (nps.gov/chat): multi-unit river corridor park; Cochran Shoals has several entrances (Columns Dr, Sope Creek, Interstate North, Powers Island); the guide value is a regional descriptor, and the municipality was not confirmed"
+  },
+  "atlanta/trap-music-museum": {
+   "guideValue": "Atlanta",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (trapmusicmuseum.us): 630 Travis St NW; the guide value is the bare city name"
+  },
+  "atlanta/center-civil-human-rights": {
+   "guideValue": "Downtown, near Centennial Olympic Park",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (civilandhumanrights.org): 100 Ivan Allen Jr Blvd NW, 30313, Downtown, by Centennial Olympic Park; placed by address"
+  },
+  "atlanta/masquerade": {
+   "guideValue": "Underground Atlanta / Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (masqueradeatlanta.com): 75 Martin Luther King Jr Dr SW, 30303; closest parking is the Underground Atlanta deck (Downtown)"
+  },
+  "atlanta/529-venue": {
+   "guideValue": "East Atlanta Village",
+   "verdict": "confirmed",
+   "value": "East Atlanta Village",
+   "evidence": "operator site (529atlanta.com): bills itself as being in East Atlanta Village"
+  },
+  "atlanta/star-community-bar": {
+   "guideValue": "Little Five Points",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site was unreachable and no independent source was retrieved before the session's web-search budget ran out"
+  },
+  "atlanta/the-earl": {
+   "guideValue": "East Atlanta Village",
+   "verdict": "confirmed",
+   "value": "East Atlanta Village",
+   "evidence": "operator site (badearl.com): 488 Flat Shoals Ave, East Atlanta Village"
+  },
+  "atlanta/boggs-social-supply": {
+   "guideValue": "Cabbagetown",
+   "verdict": "corrected",
+   "value": "West End",
+   "evidence": "operator site (boggssocial.com): 1310 White St SW, 30310, 'west side, just off the Beltline'; placed by address in West End (near Lee + White)",
+   "noteConflict": "Note places it 'inside Cabbagetown... next to Oakland Cemetery'; it is on White St SW in West End, on the opposite side of town"
+  },
+  "atlanta/junkmans-daughter": {
+   "guideValue": "Little Five Points",
+   "verdict": "confirmed",
+   "value": "Little Five Points",
+   "evidence": "operator site (thejunkmansdaughter.com): 464 Moreland Ave NE, Little Five Points"
+  },
+  "atlanta/paris-on-ponce": {
+   "guideValue": "Poncey-Highland",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site and Atlas Obscura were unreachable (404/403); no source retrieved before the session's web-search budget ran out"
+  },
+  "atlanta/young-blood-boutique": {
+   "guideValue": "Little Five Points",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (youngbloodboutique.com) returns HTTP 402 (store possibly lapsed); no source confirms a current Little Five Points location"
+  },
+  "atlanta/trap-museum-gift-shop": {
+   "guideValue": "Atlanta",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (trapmusicmuseum.us): 630 Travis St NW; the guide value is the bare city name"
+  },
+  "atlanta/freeside-atlanta": {
+   "guideValue": "Metro Atlanta (check site for current location)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (freesideatlanta.org/contact): 3043 Commerce Way, Atlanta 30354; the guide value 'Metro Atlanta' is not a neighbourhood"
+  },
+  "atlanta/decatur-makers": {
+   "guideValue": "Decatur, GA",
+   "verdict": "confirmed",
+   "value": "Decatur",
+   "evidence": "operator site (decaturmakers.org): 605 W Ponce de Leon Ave, Decatur, GA 30030"
+  },
+  "atlanta/gt-invention-studio": {
+   "guideValue": "Georgia Tech campus, Midtown",
+   "verdict": "corrected",
+   "value": "Georgia Tech",
+   "evidence": "operator site (inventionstudio.gatech.edu): 2nd floor of the MRDC, 801 Ferst Dr NW, 30332, on the main Georgia Tech campus west of the Downtown Connector, not Midtown; placed by address"
+  },
+  "atlanta/asw-distillery-tour": {
+   "guideValue": "The Battery ATL / Buckhead / West End",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (aswdistillery.com): three sites (Armour Dr in south Buckhead, ASW Exchange in West End, The Battery at 900 Battery Ave in Cobb County); no single location",
+   "noteConflict": "Note calls these 'three Atlanta tasting rooms', but The Battery site is in Cobb County (Cumberland), outside Atlanta city limits"
+  },
+  "birmingham/burdock-book-collective": {
+   "guideValue": "Forest Park",
+   "verdict": "corrected",
+   "value": "Avondale",
+   "evidence": "operator site (burdockbookcollective.com): physical address 131 41st St S, 35222, 'currently selling books at Cha House'; placed in Avondale by address, a block from Saturn (200 41st St S, which saturnbirmingham.com places in Avondale)"
+  },
+  "birmingham/thank-you-books": {
+   "guideValue": "Crestwood",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (thankyoubooks.com) returned no content; web search budget exhausted, Crestwood location not confirmed"
+  },
+  "birmingham/jim-reed-books": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (jimreedbooks.com): 2021 Third Ave N, Birmingham 35203; placed Downtown by address"
+  },
+  "birmingham/little-professor-bookshop": {
+   "guideValue": "Homewood",
+   "verdict": "confirmed",
+   "value": "Homewood",
+   "evidence": "operator site (littleprofessorbookshop.com): 2738 18th St S, Homewood, AL 35209"
+  },
+  "birmingham/alabama-booksmith": {
+   "guideValue": "Homewood",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (alabamabooksmith.com): 2626 19th Place S, 'Birmingham, AL 35209' (mailing city); 35209 spans Homewood and Birmingham and no source names the municipality"
+  },
+  "birmingham/seasick-records": {
+   "guideValue": "Southside",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator domain seasickrecords.com does not resolve; web search budget exhausted, location not confirmed"
+  },
+  "birmingham/prevail-union": {
+   "guideValue": "Downtown",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (prevailunion.com) failed TLS handshake; web search budget exhausted, location not confirmed"
+  },
+  "birmingham/punch-love-coffee": {
+   "guideValue": "Avondale",
+   "verdict": "confirmed",
+   "value": "Avondale",
+   "evidence": "operator site (punchlovecoffee.com): 4000 3rd Ave S #103, Birmingham 35222; placed in Avondale by address (40th St S/3rd Ave S, by the 41st St S corridor)"
+  },
+  "birmingham/alicia-coffee-shop": {
+   "guideValue": "Civil Rights District (A.G. Gaston Motel)",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no operator site found (aliciascoffeeshop.com does not resolve); en.wikipedia.org (A. G. Gaston Motel) gives 1527 Fifth Ave N and mentions no coffee shop; existence/location not confirmed"
+  },
+  "birmingham/june-coffee": {
+   "guideValue": "Downtown",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no operator site found (junecoffee.com empty, junecoffeeroasters.com is an unrelated Athens cafe); location not confirmed"
+  },
+  "birmingham/domestique-dawn-patrol": {
+   "guideValue": "Homewood",
+   "verdict": "confirmed",
+   "value": "Homewood",
+   "evidence": "operator site (domestiquecoffee.com): Dawn Patrol by Domestique Coffee, 1724 27th Ct S, Homewood, AL 35209"
+  },
+  "birmingham/bandit-patisserie": {
+   "guideValue": "Downtown",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator domain banditpatisserie.com does not resolve; no source found, location not confirmed"
+  },
+  "birmingham/last-call-baking": {
+   "guideValue": "25th Street area",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value '25th Street area' is a bare street, not a neighbourhood; operator site (lastcallbakingco.com) shows no address"
+  },
+  "birmingham/continental-bakery": {
+   "guideValue": "English Village",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator/sibling sites failed (continentalbakery.com TLS error, chezlulu.net does not resolve); location not confirmed"
+  },
+  "birmingham/hello-bakery": {
+   "guideValue": "Crestline Gardens",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no operator site found with an address (hellobakery.com is a generic page with no location); location not confirmed"
+  },
+  "birmingham/church-street-coffee-books": {
+   "guideValue": "Mountain Brook",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no operator site found (churchstreetcoffee.com is an unrelated Stockton, CA roaster); location not confirmed"
+  },
+  "birmingham/bee-creek-farm-honey": {
+   "guideValue": "Pepper Place Market / specialty shops",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (Pepper Place Market / specialty shops) for a product made in Vincent, AL"
+  },
+  "birmingham/match-chocolate": {
+   "guideValue": "Birmingham-based; Pepper Place Market pop-ups",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is 'Birmingham-based' plus pop-up sales, not a neighbourhood"
+  },
+  "birmingham/alabama-sunshine-sauces": {
+   "guideValue": "Sold in Birmingham specialty shops (produced in Fayette, AL)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (specialty shops) for a product made in Fayette, AL"
+  },
+  "birmingham/priesters-pecans": {
+   "guideValue": "Available at Alabama Goods and specialty shops",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (Alabama Goods, specialty shops), not a place"
+  },
+  "birmingham/wickles-pickles": {
+   "guideValue": "Widely stocked in Birmingham grocers/specialty shops (Dadeville, AL)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (grocers/specialty shops) for a product made in Dadeville, AL"
+  },
+  "birmingham/fourth-avenue-historic-district": {
+   "guideValue": "1600–1800 blocks of 4th Ave N and 17th/18th St N",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a block description, not a neighbourhood; en.wikipedia.org (Fourth Avenue Historic District, Birmingham) confirms the 1600-1800 blocks of 4th Ave N and 300 blocks of 17th/18th Sts N",
+   "noteConflict": "note says Red Mountain Makers at 810 4th Ave N is 'inside the district's footprint', but 810 is about eight blocks west of the 1600-1800 blocks (address confirmed on redmountainmakers.org)"
+  },
+  "birmingham/ruffner-mountain-nature-preserve": {
+   "guideValue": "South East Lake",
+   "verdict": "confirmed",
+   "value": "South East Lake",
+   "evidence": "en.wikipedia.org (Ruffner Mountain Nature Preserve): in 'the City of Birmingham's historic South East Lake neighborhood'"
+  },
+  "birmingham/saturn": {
+   "guideValue": "Avondale",
+   "verdict": "confirmed",
+   "value": "Avondale",
+   "evidence": "operator site (saturnbirmingham.com): 200 41st St S, Birmingham 35222, described as in Avondale"
+  },
+  "birmingham/furnace-fest-sloss": {
+   "guideValue": "Sloss Furnaces",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Sloss Furnaces' is a venue/site name for an annual festival, not a neighbourhood; en.wikipedia.org (Sloss Furnaces): 1st Ave N at 32nd St"
+  },
+  "birmingham/jim-reed-books-ephemera": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (jimreedbooks.com): 2021 Third Ave N, Birmingham 35203; placed Downtown by address"
+  },
+  "birmingham/alabama-peanut-company": {
+   "guideValue": "Morris Avenue, Downtown",
+   "verdict": "confirmed",
+   "value": "Morris Avenue",
+   "evidence": "operator site (alabamapeanut.com): 2016 Morris Ave, Birmingham 35203, 'our flagship store in Downtown Birmingham'"
+  },
+  "birmingham/birmingham-music-exchange": {
+   "guideValue": "Irondale",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (bhammusicexchange.com) lists only phone/email and a Reverb shop, no address; Irondale not confirmed"
+  },
+  "boise/rediscovered-books": {
+   "guideValue": "Downtown Boise",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "downtownboise.org directory: 1576 W Grove St (moved summer 2025 from 180 N 8th St, per boisedev.com/kivitv.com, to the Linen District on Grove); both sites are in Downtown"
+  },
+  "boise/the-lit-room": {
+   "guideValue": "Garden City",
+   "verdict": "confirmed",
+   "value": "Garden City",
+   "evidence": "shelf-awareness.com (2025): The Lit Room operates inside Oldspeak at 3640 W Chinden Blvd, Garden City, ID"
+  },
+  "boise/cooks-and-books": {
+   "guideValue": "Meridian",
+   "verdict": "confirmed",
+   "value": "Meridian",
+   "evidence": "shelf-awareness.com and idahopress.com (2025): Cooks & Books at 2951 E Overland Rd Ste 110, Meridian, ID"
+  },
+  "boise/record-exchange": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "visitboise.com listing: 1105 W Idaho St; kivitv.com and idahobusinessreview.com describe it as downtown Boise"
+  },
+  "boise/modern-sounds-vinyl": {
+   "guideValue": "Boise",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; boisedev.com (2020): shop is at 556 S Vista Ave, Vista Plaza, Boise Bench"
+  },
+  "boise/jam-session-record-shop": {
+   "guideValue": "Main Street",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "web searches found no record shop by this name in Boise (only The Record Exchange, Modern Sounds, Record World); could not confirm it exists or where"
+  },
+  "boise/spin-records-boise": {
+   "guideValue": "Boise",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; only low-quality copied pages mention the Petaluma-to-Boise move, and no Boise address was found"
+  },
+  "boise/flying-m-coffee": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "downtownboise.org listing: 500 W Idaho St Ste 100, corner of 5th & Idaho, downtown"
+  },
+  "boise/primal-coffee": {
+   "guideValue": "The Bench",
+   "verdict": "confirmed",
+   "value": "The Bench",
+   "evidence": "mycoffeeexplorer.com Boise guide: Primal at 20 N Latah St, 'on Latah Street on the Bench'"
+  },
+  "boise/neckar-coffee": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "idahopress.com (Boise Weekly): 'Neckar Coffee opens long-awaited brick-and-mortar in downtown Boise'; visitboise.com: 117 S 10th St"
+  },
+  "boise/slow-by-slow-coffee-bar": {
+   "guideValue": "BoDo",
+   "verdict": "confirmed",
+   "value": "BoDo",
+   "evidence": "downtownboise.org directory: Slow by Slow, 405 S 8th St Ste 155, in BoDo"
+  },
+  "boise/certified-kitchen-and-bakery": {
+   "guideValue": "Hyde Park",
+   "verdict": "confirmed",
+   "value": "Hyde Park",
+   "evidence": "visitboise.com: 1511 N 13th St; local coverage (City Cast Boise and others) describes it as opened in Hyde Park"
+  },
+  "boise/bar-gernika-tongue-croquetas": {
+   "guideValue": "Basque Block",
+   "verdict": "confirmed",
+   "value": "Basque Block",
+   "evidence": "downtownboise.org: Bar Gernika at 202 S Capitol Blvd; hmdb.org marker and luxurytraveladvisor.com put it on the Basque Block"
+  },
+  "boise/boise-hot-sauce-co": {
+   "guideValue": "Meridian / online",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "boisedev.com (2024) confirms the Kempature208 line and the Meridian Wing-Off win, but gives no business location; 'Meridian / online' could not be confirmed"
+  },
+  "boise/freak-alley-gallery": {
+   "guideValue": "Downtown Boise",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "downtownboise.org and visitidaho.org: the alley between 8th and 9th and between Bannock and Idaho, downtown Boise"
+  },
+  "boise/basque-block": {
+   "guideValue": "Grove St, Downtown Boise",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "downtownboise.org and boisedev.com: Grove St between Capitol Blvd and 6th St, downtown Boise"
+  },
+  "boise/boise-river-greenbelt": {
+   "guideValue": "Along the Boise River",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "a 25-mile riverside path spanning the city (a route, not a neighbourhood)"
+  },
+  "boise/gentle-breeze-park": {
+   "guideValue": "Boise",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; cityofboise.org: the park is at 1100 W Bannock St (11th & Bannock), downtown"
+  },
+  "boise/the-shredder": {
+   "guideValue": "Boise",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; songkick.com/bandsintown.com venue listings (aggregators): 430 S 10th St"
+  },
+  "boise/neurolux": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "jambase.com and ticketing listings (aggregators): 111 N 11th St, within the downtown Boise core; placed by address"
+  },
+  "boise/shrine-social-club": {
+   "guideValue": "Boise",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; dice.fm and setlist.fm listings: 1118 W Idaho St (El Korah Shrine building)"
+  },
+  "boise/boise-bomb-bunker": {
+   "guideValue": "Boise",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; idahonews.com and idahoarchitectureproject.org confirm the 1961 bomb shelter now rented as band practice suites"
+  },
+  "boise/re-pop-gifts": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "idahopress.com (Boise Weekly) gift guide: 210 N 10th St, in the downtown core next to Freak Alley's 9th St end; placed by address"
+  },
+  "boise/idaho-vinyl-records-covers": {
+   "guideValue": "Antique World Mall",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no source found for a vendor called 'Idaho Vinyl Records'; Antique World Mall (4544 W Overland Rd, poyst.com/boisedev.com) is a building, not a neighbourhood"
+  },
+  "boise/up-makerspace": {
+   "guideValue": "Garden City",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no web source found for 'UP MakerSpace' in Garden City or the Boise area; the guessed operator domain does not resolve"
+  },
+  "boise/open-lab-idaho": {
+   "guideValue": "Boise",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; operator site (openlabidaho.org) confirms the makerspace but lists no address"
+  },
+  "charlotte/thats-novel-books": {
+   "guideValue": "Camp North End",
+   "verdict": "confirmed",
+   "value": "Camp North End",
+   "evidence": "Camp North End card directory (camp-north-end-nc.yiftee.com) and trustanalytica listing: 330 Camp Rd Ste B, Charlotte 28206, inside Camp North End"
+  },
+  "charlotte/paper-skyscraper-books": {
+   "guideValue": "Dilworth (plus 2 more locations)",
+   "verdict": "confirmed",
+   "value": "Dilworth",
+   "evidence": "WSOC-TV 2024 gift guide: 330 East Blvd; Axios Charlotte: flagship has been in Dilworth on East Blvd 30+ years (other shops Uptown and Davidson)"
+  },
+  "charlotte/hardy-boys-records-comics": {
+   "guideValue": "Camp North End",
+   "verdict": "confirmed",
+   "value": "Camp North End",
+   "evidence": "Camp North End card directory (camp-north-end-nc.yiftee.com): Hardy Boy Records, 701 Keswick Ave Ste 106, 28206; ma.to says shops at Camp North End and South End; music.nc.gov also lists a Mint Hill shop"
+  },
+  "charlotte/noble-records": {
+   "guideValue": "Charlotte metro (Matthews)",
+   "verdict": "confirmed",
+   "value": "Matthews",
+   "evidence": "music.nc.gov record-store directory and closo listing: 11500 E Independence Blvd, Matthews NC 28105 (separate municipality)"
+  },
+  "charlotte/smelly-cat-coffeehouse": {
+   "guideValue": "NoDa",
+   "verdict": "confirmed",
+   "value": "NoDa",
+   "evidence": "Hoodline NoDa roundup and WCNC: 514 E 36th St, NoDa"
+  },
+  "charlotte/enderly-coffee-co": {
+   "guideValue": "Enderly Park / West Charlotte",
+   "verdict": "confirmed",
+   "value": "Enderly Park",
+   "evidence": "Daily Coffee News (2018): cafe at 2620 Tuckaseegee Rd in the Enderly Park neighborhood, the source of its name"
+  },
+  "charlotte/hex-coffee": {
+   "guideValue": "Camp North End",
+   "verdict": "confirmed",
+   "value": "Camp North End",
+   "evidence": "Axios Charlotte / WCNC (2023): 201 Camp Rd #103, in Camp North End"
+  },
+  "charlotte/archive-clt": {
+   "guideValue": "Historic West End",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "QCity Metro: 2023 Beatties Ford Rd Ste D; Walk Score (aggregator) places that address in Lincoln Heights; could not confirm whether the Historic West End district extends this far up Beatties Ford Rd"
+  },
+  "charlotte/night-swim-coffee": {
+   "guideValue": "LoSo",
+   "verdict": "confirmed",
+   "value": "LoSo",
+   "evidence": "Daily Coffee News (2022): flagship roastery in lower South End on Old Pineville Rd; mycoffeeexplorer lists it under LoSo"
+  },
+  "charlotte/amelies-french-bakery": {
+   "guideValue": "NoDa (original location)",
+   "verdict": "confirmed",
+   "value": "NoDa",
+   "evidence": "WBTV / WCCB: original 2424 N Davidson St NoDa cafe closed Apr 2022; flagship reopened at 136 E 36th St, still NoDa"
+  },
+  "charlotte/villanis-bakery": {
+   "guideValue": "Plaza Midwood",
+   "verdict": "confirmed",
+   "value": "Plaza Midwood",
+   "evidence": "Wayward Blog: 'Plaza Midwood area bakery', 901 Pecan Ave 28205; cathzine: Plaza Midwood-Elizabeth area (Hoodline/Yelp-based roundup lists it under Chantilly; it sits where the three meet)"
+  },
+  "charlotte/paper-skyscraper-foods": {
+   "guideValue": "Dilworth",
+   "verdict": "confirmed",
+   "value": "Dilworth",
+   "evidence": "WSOC-TV: 330 East Blvd; Axios Charlotte: Dilworth flagship on East Blvd"
+  },
+  "charlotte/musical-parking-garage": {
+   "guideValue": "Uptown",
+   "verdict": "confirmed",
+   "value": "Uptown",
+   "evidence": "Atlas Obscura and Roadside America: Seventh Street Station garage, E 7th St just east of N College St, downtown/Uptown Charlotte"
+  },
+  "charlotte/brooklyn-second-ward": {
+   "guideValue": "Second Ward, Uptown",
+   "verdict": "confirmed",
+   "value": "Second Ward",
+   "evidence": "Wikipedia (Brooklyn, Charlotte; Harvey B. Gantt Center): Brooklyn occupied Second Ward; Gantt Center at 551 S Tryon opened 2009 in Second Ward on the Brooklyn site"
+  },
+  "charlotte/amos-southend": {
+   "guideValue": "South End",
+   "verdict": "confirmed",
+   "value": "South End",
+   "evidence": "AXS venue listing: 1423 S Tryon St 28203, back entrance on Bland St near the Bland St LYNX station, South End"
+  },
+  "charlotte/the-evening-muse": {
+   "guideValue": "NoDa",
+   "verdict": "confirmed",
+   "value": "NoDa",
+   "evidence": "Knight Foundation / Charlotte Magazine and venue listings: 3227 N Davidson St in NoDa"
+  },
+  "charlotte/paper-skyscraper-souvenirs": {
+   "guideValue": "Dilworth",
+   "verdict": "confirmed",
+   "value": "Dilworth",
+   "evidence": "WSOC-TV: 330 East Blvd; Axios Charlotte: Dilworth flagship on East Blvd"
+  },
+  "charlotte/thats-novel-souvenirs": {
+   "guideValue": "Camp North End",
+   "verdict": "confirmed",
+   "value": "Camp North End",
+   "evidence": "Camp North End card directory (camp-north-end-nc.yiftee.com): 330 Camp Rd, inside Camp North End"
+  },
+  "charlotte/camp-north-end-market": {
+   "guideValue": "Camp North End",
+   "verdict": "confirmed",
+   "value": "Camp North End",
+   "evidence": "Camp North End card directory (camp-north-end-nc.yiftee.com) lists retail tenants on the campus; Islands.com describes its shops and food stalls; the pick is the complex itself"
+  },
+  "charlotte/gantt-center-shop": {
+   "guideValue": "Second Ward, Uptown",
+   "verdict": "confirmed",
+   "value": "Second Ward",
+   "evidence": "Wikipedia (Harvey B. Gantt Center): 551 S Tryon St, opened 2009 in Second Ward on the former Brooklyn site"
+  },
+  "charlotte/discovery-place-thinker-space": {
+   "guideValue": "Uptown",
+   "verdict": "confirmed",
+   "value": "Uptown",
+   "evidence": "operator site (discoveryplace.org): Thinker Space is a permanent Level 3 makerspace at Discovery Place Science, the N Tryon St museum in Uptown"
+  },
+  "charlotte/camp-north-end-workstation": {
+   "guideValue": "Camp North End",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no source found for a 'WorkStation' offering at Camp North End; Bisnow covers creative office/coworking (Hygge) on the campus but not under this name"
+  },
+  "dallas/pan-african-connection": {
+   "guideValue": "South Dallas / Oak Cliff",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (panafricanconnection.com): 4466 S Marsalis Ave, Dallas 75216; no source names a neighbourhood, and the guide's 'South Dallas / Oak Cliff' could not be resolved to one"
+  },
+  "dallas/deep-vellum-books": {
+   "guideValue": "Deep Ellum",
+   "verdict": "confirmed",
+   "value": "Deep Ellum",
+   "evidence": "operator site (deepvellum.com): 3000 Commerce St, 'in the heart of Deep Ellum'"
+  },
+  "dallas/wild-detectives": {
+   "guideValue": "Bishop Arts",
+   "verdict": "confirmed",
+   "value": "Bishop Arts",
+   "evidence": "operator site (thewilddetectives.com): 314 W 8th St, Oak Cliff, 75208; placed in Bishop Arts by address (W 8th St by N Bishop Ave)"
+  },
+  "dallas/crow-hollow-bookshop": {
+   "guideValue": "Allen, TX (DFW metro, ~30 min north of downtown Dallas)",
+   "verdict": "confirmed",
+   "value": "Allen",
+   "evidence": "operator site (crowhollowbookshop.com): Allen, TX, on the back wall of Lone Star Mercantile"
+  },
+  "dallas/good-records": {
+   "guideValue": "East Dallas",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (goodrecords.com) failed TLS; en.wikipedia.org (Good Records) gives only 'Dallas'; web search budget exhausted, location not confirmed"
+  },
+  "dallas/top-ten-records": {
+   "guideValue": "Oak Cliff",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (toptenrecords.org) returned no content; no source found for the address"
+  },
+  "dallas/spinster-records": {
+   "guideValue": "Bishop Arts",
+   "verdict": "confirmed",
+   "value": "Bishop Arts",
+   "evidence": "operator site (spinsterrecords.com): 408 N Bishop Ave Suite 102, 'in the North Oak Cliff neighborhood'; address is in the Bishop Arts core"
+  },
+  "dallas/growl-records": {
+   "guideValue": "Arlington (DFW metro, ~25 min from downtown Dallas)",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "growlrecords.com is a parked domain page; web search budget exhausted, Arlington location not confirmed"
+  },
+  "dallas/full-city-rooster": {
+   "guideValue": "The Cedars",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (fullcityrooster.com) shows no address; The Cedars not confirmed"
+  },
+  "dallas/noble-coyote-coffee": {
+   "guideValue": "Fair Park",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (noblecoyote.com) shows no address; Fair Park not confirmed"
+  },
+  "dallas/houndstooth-coffee": {
+   "guideValue": "Henderson Ave / Sylvan Thirty",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value names two locations (Henderson Ave / Sylvan Thirty) of a multi-location chain; pick is not one specific shop"
+  },
+  "dallas/davis-street-espresso": {
+   "guideValue": "Bishop Arts",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (davisstreetespresso.com) returned no content; location not confirmed"
+  },
+  "dallas/kessler-baking-studio": {
+   "guideValue": "Bishop Arts",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (kesslerbakingstudio.com) shows no address; guide address 1129 N Beckley Ave not confirmed, and no source places it in Bishop Arts"
+  },
+  "dallas/dude-sweet-chocolate": {
+   "guideValue": "Bishop Arts / Trinity Groves",
+   "verdict": "confirmed",
+   "value": "Bishop Arts",
+   "evidence": "operator site (dudesweetchocolate.com): single listed shop at 336 W Eighth St, 75208 (no Trinity Groves location); placed in Bishop Arts by address, beside The Wild Detectives at 314 W 8th"
+  },
+  "dallas/freedmans-memorial": {
+   "guideValue": "Uptown / North Central Expressway at Lemmon Ave",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "could not retrieve a source for the memorial's location (Wikipedia pages not found, web search budget exhausted)"
+  },
+  "dallas/knights-of-pythias-temple": {
+   "guideValue": "Deep Ellum / Farmers Market edge",
+   "verdict": "confirmed",
+   "value": "Deep Ellum",
+   "evidence": "en.wikipedia.org (Knights of Pythias Temple, Dallas): 2551 Elm St, in the Deep Ellum neighborhood"
+  },
+  "dallas/texas-theatre-sight": {
+   "guideValue": "Oak Cliff",
+   "verdict": "confirmed",
+   "value": "Oak Cliff",
+   "evidence": "en.wikipedia.org (Texas Theatre): 231 W Jefferson Blvd, in the Oak Cliff neighborhood"
+  },
+  "dallas/traveling-man-sculptures": {
+   "guideValue": "Deep Ellum (DART Green Line, Deep Ellum Station)",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "could not retrieve a source for the sculptures' location (Wikipedia page not found, Deep Ellum article silent, web search budget exhausted)"
+  },
+  "dallas/outlaw-graves": {
+   "guideValue": "Crown Hill Memorial Park (Bonnie) / Western Heights Cemetery (Clyde), Dallas",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value names two separate cemeteries (Crown Hill / Western Heights); two-location pick, not one neighbourhood"
+  },
+  "dallas/white-rock-lake": {
+   "guideValue": "East Dallas",
+   "verdict": "confirmed",
+   "value": "East Dallas",
+   "evidence": "en.wikipedia.org (White Rock Lake): in northeast Dallas, 'east Dallas community'; dam and park run by the City of Dallas"
+  },
+  "dallas/meow-wolf-grapevine": {
+   "guideValue": "Grapevine, TX (DFW metro, ~35 min from downtown Dallas)",
+   "verdict": "confirmed",
+   "value": "Grapevine",
+   "evidence": "operator site (meowwolf.com): 3000 Grapevine Mills Pkwy Suite 253, Grapevine, TX 76051"
+  },
+  "dallas/three-links": {
+   "guideValue": "Deep Ellum",
+   "verdict": "confirmed",
+   "value": "Deep Ellum",
+   "evidence": "operator site (threelinksdeepellum.com): venue in Deep Ellum; street address not shown"
+  },
+  "dallas/club-dada": {
+   "guideValue": "Deep Ellum",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator domain clubdada.com now redirects to a GoDaddy for-sale page, possibly closed; current status/location not confirmed"
+  },
+  "dallas/growl-venue": {
+   "guideValue": "Arlington (DFW metro)",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "growlrecords.com is a parked domain page; web search budget exhausted, Arlington location not confirmed"
+  },
+  "dallas/double-wide": {
+   "guideValue": "Deep Ellum",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (double-wide.com) returned HTTP 522; location not confirmed"
+  },
+  "dallas/dallas-makerspace": {
+   "guideValue": "Carrollton (DFW metro, ~25 min from downtown Dallas)",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (dallasmakerspace.org) returned HTTP 403; Carrollton location not confirmed"
+  },
+  "dallas/tone-shop-guitars": {
+   "guideValue": "DFW metro (3 locations)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'DFW metro (3 locations)'; multi-location retailer, pick is not one specific shop"
+  },
+  "dallas/mouser-electronics": {
+   "guideValue": "Mansfield, TX (DFW metro)",
+   "verdict": "confirmed",
+   "value": "Mansfield",
+   "evidence": "en.wikipedia.org (Mouser Electronics): headquartered in Mansfield, Texas"
+  },
+  "jackson/coffee-prose-books": {
+   "guideValue": "Midtown",
+   "verdict": "confirmed",
+   "value": "Midtown",
+   "evidence": "visitjackson.com directory 'Coffee Prose - Midtown': 1619 N West St; Jackson Free Press describes it as opening in Jackson's Midtown neighborhood"
+  },
+  "jackson/offbeat-books": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "visitjackson.com directory (Offbeat Jxn): 109 N State St; Visit Jackson event listing places it in Downtown Jackson (moved from Midtown's Wesley Ave per Jackson Free Press 2014)"
+  },
+  "jackson/end-of-all-music-jxn": {
+   "guideValue": "Fondren, North State St",
+   "verdict": "confirmed",
+   "value": "Fondren",
+   "evidence": "visitjackson.com Fondren neighborhood page lists The End of All Music JXN at 3011 North State St; Oxford Eagle says it opened in Fondren in 2021"
+  },
+  "jackson/offbeat-records": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "visitjackson.com directory (Offbeat Jxn): 109 N State St, Downtown Jackson"
+  },
+  "jackson/morningbell-records": {
+   "guideValue": "Fondren / Duling Hall complex",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "Jackson Free Press listing marks Morningbell closed and gives a different later address (4760 I-55 N Frontage Rd); Oxford Eagle says it closed — no clear last location"
+  },
+  "jackson/bama-record-shop": {
+   "guideValue": "Jackson",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; no listing for a 'Bama Record Shop' found in Jackson Free Press or Visit Jackson coverage"
+  },
+  "jackson/rebop-record-shop": {
+   "guideValue": "Ridgeland (metro Jackson)",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no source found for a ReBop Record Shop in Ridgeland, MS (searches only surface ReBop in Worcester, MA and Jackson's closed Bebop)"
+  },
+  "jackson/native-coffee-co": {
+   "guideValue": "Belhaven",
+   "verdict": "confirmed",
+   "value": "Belhaven",
+   "evidence": "visitjackson.com Belhaven neighborhood page names Native Coffee Co., 1800 N State St"
+  },
+  "jackson/cups-espresso-cafe": {
+   "guideValue": "Fondren + multiple Jackson locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "visitjackson.com Fondren page lists four Cups locations (Fondren, Children's Hospital, Methodist Rehab, St. Dominic's); pick is the chain, not one location"
+  },
+  "jackson/urban-foxes-coffee": {
+   "guideValue": "Belhaven",
+   "verdict": "corrected",
+   "value": "Belhaven Heights",
+   "evidence": "visitjackson.com Belhaven Heights neighborhood page lists Urban Foxes at 826 North St (not on the Belhaven page); Wikipedia puts Belhaven Heights south of Fortification St"
+  },
+  "jackson/coffee-prose-coffee": {
+   "guideValue": "Midtown",
+   "verdict": "confirmed",
+   "value": "Midtown",
+   "evidence": "visitjackson.com directory 'Coffee Prose - Midtown': 1619 N West St"
+  },
+  "jackson/northshore-specialty-coffee": {
+   "guideValue": "The District at Eastover",
+   "verdict": "confirmed",
+   "value": "The District at Eastover",
+   "evidence": "visitjackson.com directory (Northshore Specialty Roasters Cafe): 120 District Blvd; Daily Coffee News reports the cafe opened at The District at Eastover"
+  },
+  "jackson/sugarees-bakery": {
+   "guideValue": "Jackson",
+   "verdict": "corrected",
+   "value": "New Albany",
+   "evidence": "foodnetwork.com listing and Goldbelly: Sugaree's Bakery is at 110 W Bankhead St, New Albany, MS — not in Jackson"
+  },
+  "jackson/campbells-bakery": {
+   "guideValue": "Fondren",
+   "verdict": "confirmed",
+   "value": "Fondren",
+   "evidence": "visitjackson.com Fondren page lists Campbell's Bakery at 3013 North State St; Mississippi Free Press says it opened in Fondren in 1962"
+  },
+  "jackson/just-vanilla-bake-shop": {
+   "guideValue": "Fondren",
+   "verdict": "confirmed",
+   "value": "Fondren",
+   "evidence": "visitjackson.com directory (Just Vanilla): 622 Duling Ave, in Duling Hall, Fondren; also listed on Visit Jackson Fondren page",
+   "noteConflict": "Note says to pair with a Morningbell Records browse in the same complex; Morningbell has closed (Oxford Eagle, Jackson Free Press)"
+  },
+  "jackson/broad-street-baking": {
+   "guideValue": "I-55 North, near Lemuria",
+   "verdict": "corrected",
+   "value": "Fondren",
+   "evidence": "visitjackson.com Fondren neighborhood page lists Broad Street Baking at 4465 I-55 Frontage Rd N, Banner Hall (same building as Lemuria)"
+  },
+  "jackson/urban-foxes-pastry": {
+   "guideValue": "Belhaven",
+   "verdict": "corrected",
+   "value": "Belhaven Heights",
+   "evidence": "visitjackson.com Belhaven Heights neighborhood page lists Urban Foxes at 826 North St"
+  },
+  "jackson/big-apple-inn-pig-ear": {
+   "guideValue": "Farish Street",
+   "verdict": "confirmed",
+   "value": "Farish Street",
+   "evidence": "Mississippi House resolution HC42 (2018) and atlasobscura.com: 509 N Farish St, within the Farish Street Historic District (bounded by Amite, Mill, Fortification, Lamar per Wikipedia)"
+  },
+  "jackson/bottled-comeback-sauce": {
+   "guideValue": "Mayflower Cafe / area grocers",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a product sold at a restaurant and 'area grocers' — not one location"
+  },
+  "jackson/mississippi-gift-company-sauces": {
+   "guideValue": "Greenwood (ships/delivers to Jackson)",
+   "verdict": "confirmed",
+   "value": "Greenwood",
+   "evidence": "operator site (themississippigiftcompany.com): fulfillment/retail center 'located in downtown Greenwood, Mississippi'"
+  },
+  "jackson/mississippi-civil-rights-museum": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (mcrm.mdah.ms.gov): 222 North St, Jackson 39201 — downtown by address, next to the state history museum; placed by address"
+  },
+  "jackson/farish-street-historic-district": {
+   "guideValue": "Farish Street",
+   "verdict": "confirmed",
+   "value": "Farish Street",
+   "evidence": "Wikipedia (Farish Street Neighborhood Historic District): district roughly bounded by Amite, Mill, Fortification and Lamar Sts",
+   "noteConflict": "Note lists Cathead Distillery among businesses keeping the Farish Street block alive; Cathead is at 422 S Farish St at Court St, outside the historic district (south of Amite St)"
+  },
+  "jackson/eudora-welty-house": {
+   "guideValue": "Belhaven",
+   "verdict": "confirmed",
+   "value": "Belhaven",
+   "evidence": "visitjackson.com Belhaven neighborhood page names Eudora Welty House and Garden, 1119 Pinehurst St"
+  },
+  "jackson/medgar-evers-home": {
+   "guideValue": "Elraine",
+   "verdict": "confirmed",
+   "value": "Elraine",
+   "evidence": "Wikipedia (Medgar and Myrlie Evers Home National Monument): 2332 Margaret Walker Alexander Dr, in the Elraine Subdivision; nps.gov places it in the Medgar Evers Historic District"
+  },
+  "jackson/mississippi-museum-of-art": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (msmuseumart.org): 380 S Lamar St, 'at the corner of Lamar and Court streets in downtown Jackson'"
+  },
+  "jackson/cathead-distillery-sight": {
+   "guideValue": "Farish Street",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "visitjackson.com directory: 422 South Farish St at Court St, under 'Making Their Place Downtown'; south of the Farish Street Historic District's Amite St boundary (Wikipedia)",
+   "noteConflict": "Note places it 'right on Farish Street' as a surviving business on the historic district's vacant street; it is on South Farish at Court St, outside the Farish Street Historic District (south of Amite St)"
+  },
+  "jackson/duling-hall": {
+   "guideValue": "Fondren",
+   "verdict": "confirmed",
+   "value": "Fondren",
+   "evidence": "visitjackson.com Fondren neighborhood page lists Duling Hall at 622 Duling Ave",
+   "noteConflict": "Note says Duling Hall shares the complex with Morningbell Records; Morningbell has closed (Oxford Eagle, Jackson Free Press)"
+  },
+  "jackson/hal-and-mals": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (halandmals.com): 200 Commerce St, Jackson 39201 — downtown by address; placed by address"
+  },
+  "jackson/f-jones-corner": {
+   "guideValue": "Farish Street",
+   "verdict": "confirmed",
+   "value": "Farish Street",
+   "evidence": "visitjackson.com directory: 303 N Farish St — inside the Farish Street Historic District (southern boundary Amite St, per Wikipedia); placed by address"
+  },
+  "jackson/sunflower-oven": {
+   "guideValue": "Jackson",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name; venue also reported permanently closed"
+  },
+  "jackson/css-jackson": {
+   "guideValue": "Jackson",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name"
+  },
+  "jackson/mississippi-crafts-center": {
+   "guideValue": "Ridgeland (metro Jackson)",
+   "verdict": "confirmed",
+   "value": "Ridgeland",
+   "evidence": "operator site (mscrafts.org): Craftsmen's Guild's craft center is 'located in Ridgeland, MS, near the scenic Natchez Trace Parkway'"
+  },
+  "jackson/eudora-welty-house-giftshop": {
+   "guideValue": "Belhaven",
+   "verdict": "confirmed",
+   "value": "Belhaven",
+   "evidence": "Wikipedia (Eudora Welty House): Education and Visitors Center is next door at 1109 Pinehurst St; Visit Jackson Belhaven page places the house (1119 Pinehurst) in Belhaven"
+  },
+  "jackson/civil-rights-museum-giftshop": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (mcrm.mdah.ms.gov): museum at 222 North St, Jackson 39201 — downtown by address; placed by address"
+  },
+  "jackson/offbeat-souvenirs": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "visitjackson.com directory (Offbeat Jxn): 109 N State St, Downtown Jackson"
+  },
+  "jackson/cathead-distillery-giftshop": {
+   "guideValue": "Farish Street",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "visitjackson.com directory: 422 South Farish St at Court St, listed as Downtown; outside the Farish Street Historic District (Amite St southern boundary, Wikipedia)"
+  },
+  "jackson/mississippi-light-collaborative": {
+   "guideValue": "Jackson",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name"
+  },
+  "las-vegas/the-writers-block": {
+   "guideValue": "Downtown Arts District",
+   "verdict": "confirmed",
+   "value": "Downtown Arts District",
+   "evidence": "pw.org bookstore listing + altaonline.com: 519 S 6th St Suite 100, in the downtown Arts District (Lucy building)"
+  },
+  "las-vegas/get-booked": {
+   "guideValue": "Paradise / Fruit Loop",
+   "verdict": "confirmed",
+   "value": "Fruit Loop",
+   "evidence": "timeout.com + outhistory.org: 4640 Paradise Rd (Paradise Plaza, at E Naples Dr), described as in the Fruit Loop; unincorporated Paradise, not City of Las Vegas"
+  },
+  "las-vegas/the-book-cellar": {
+   "guideValue": "Near UNLV",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no Las Vegas used bookstore by this name found in reviewjournal.com, UNLV, or bookstore-directory searches; may not exist or has closed"
+  },
+  "las-vegas/publicus": {
+   "guideValue": "Downtown / Fremont East",
+   "verdict": "confirmed",
+   "value": "Fremont East",
+   "evidence": "knpr.org Desert Companion + yourlittleblackbook.me: 1126 Fremont St, in the Fremont East District of Downtown"
+  },
+  "las-vegas/vesta-coffee-roasters": {
+   "guideValue": "Arts District + multiple locations",
+   "verdict": "confirmed",
+   "value": "Arts District",
+   "evidence": "reviewjournal.com (Neon): original cafe and on-site roastery at 1114 S Casino Center Blvd in the Arts District; other locations at W Sahara, Durango resort, Blue Diamond Rd"
+  },
+  "las-vegas/gabi-coffee-bakery": {
+   "guideValue": "Chinatown",
+   "verdict": "confirmed",
+   "value": "Chinatown",
+   "evidence": "reviewjournal.com (Neon): original Gabi at 5808 Spring Mountain Rd Suite 104, on the Chinatown strip (unincorporated Clark County, Las Vegas mailing address)"
+  },
+  "las-vegas/freeds-bakery": {
+   "guideValue": "Multiple locations, orig. West Charleston",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "reviewjournal.com + lasvegassun.com: multi-location (flagship 9815 S Eastern Ave, dessert shops incl. 10870 W Charleston in Summerlin); no source shows the 1959 original on West Charleston"
+  },
+  "las-vegas/chloe-patisserie": {
+   "guideValue": "Off Las Vegas Blvd",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "searches (lasvegasadvisor.com, frommers.com pastry roundups) find no Las Vegas patisserie by this name; only Chloe fashion boutiques"
+  },
+  "las-vegas/bread-and-butter-bakery": {
+   "guideValue": "Downtown",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no downtown bakery by this name found; reviewjournal.com documents a Bread & Butter bakery-cafe at 10940 S Eastern Ave, Henderson, but cannot confirm it is this pick or still open"
+  },
+  "las-vegas/great-buns-bakery": {
+   "guideValue": "Chinatown / Spring Mountain Rd",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "reviewjournal.com + frankiapp.com (aggregator): located at 3270 E Tropicana Ave at Pecos (plus an older W Sahara site), not Chinatown/Spring Mountain; no named neighbourhood source for the Tropicana site"
+  },
+  "las-vegas/kona-bakery": {
+   "guideValue": "West Sahara",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no Las Vegas bakery by this name found in reviewjournal.com or bakery-roundup searches"
+  },
+  "las-vegas/filipinotown-food": {
+   "guideValue": "Maryland Pkwy, Flamingo–Desert Inn",
+   "verdict": "corrected",
+   "value": "Filipino Town",
+   "evidence": "ktnv.com + fox5vegas.com: Clark County designated 'Filipino Town' cultural district on Maryland Pkwy between Flamingo and Desert Inn (official Oct 2025); guide value was a street range, district name substituted"
+  },
+  "las-vegas/ethel-m-chocolates": {
+   "guideValue": "Henderson factory",
+   "verdict": "confirmed",
+   "value": "Henderson",
+   "evidence": "wikipedia + roadsideamerica.com: factory and cactus garden at 2 Cactus Garden Dr, Henderson, NV 89014"
+  },
+  "las-vegas/mob-museum-moonshine": {
+   "guideValue": "The Mob Museum",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "wikipedia (Mob Museum): moonshine distilled in The Underground at 300 E Stewart Ave, Downtown Las Vegas; guide value was the venue name, not a district"
+  },
+  "las-vegas/seven-magic-mountains": {
+   "guideValue": "Ivanpah Valley, S. Las Vegas Blvd",
+   "verdict": "confirmed",
+   "value": "Ivanpah Valley",
+   "evidence": "sevenmagicmountains.com + clarkcountynv.gov: near Jean Dry Lake and I-15 in the Ivanpah Valley, ~10 mi south of Las Vegas Blvd/St Rose Pkwy; unincorporated Clark County"
+  },
+  "las-vegas/red-rock-canyon": {
+   "guideValue": "15 mi W of downtown",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "wikipedia: federal conservation area in unincorporated Clark County ~15 mi west of Las Vegas, outside any municipality; guide value is distance commentary"
+  },
+  "las-vegas/mob-museum": {
+   "guideValue": "Downtown, Stewart Ave",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "wikipedia (Mob Museum): 300 E Stewart Ave, Downtown Las Vegas, two blocks north of Fremont St"
+  },
+  "las-vegas/backstage-bar-billiards": {
+   "guideValue": "Fremont St & 6th St",
+   "verdict": "corrected",
+   "value": "Fremont East",
+   "evidence": "dice.fm + reviewjournal.com ('Fremont East rock club'): 601 E Fremont St at 6th; guide value was a bare intersection"
+  },
+  "las-vegas/fremont-country-club": {
+   "guideValue": "Downtown Fremont",
+   "verdict": "confirmed",
+   "value": "Fremont East",
+   "evidence": "tagvenue.com + vegas4locals.com: shares 601 E Fremont St with Backstage Bar, Fremont East district downtown; guide's 'Downtown Fremont' normalized"
+  },
+  "las-vegas/punk-rock-bowling-festival": {
+   "guideValue": "Downtown Las Vegas",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "lasvegasmagazine.com + dlvec.com: festival held at Downtown Las Vegas Events Center, 200 S 3rd St, with club shows at downtown venues"
+  },
+  "las-vegas/cowtown-guitars-historical": {
+   "guideValue": "Formerly 1331 S Commerce, Arts District",
+   "verdict": "confirmed",
+   "value": "Arts District",
+   "evidence": "wikipedia (Cowtown Guitars): last address 1331 S Commerce St in the downtown Arts District; closed 2019"
+  },
+  "new-orleans/faulkner-house-books": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "frenchquarter.com / ALA Literary Landmark: 624 Pirate's Alley beside St. Louis Cathedral, French Quarter"
+  },
+  "new-orleans/baldwin-and-co": {
+   "guideValue": "Marigny",
+   "verdict": "confirmed",
+   "value": "Marigny",
+   "evidence": "OffBeat ('Baldwin & Co. perks up the Marigny'): 1030 Elysian Fields at St. Claude, Marigny"
+  },
+  "new-orleans/community-book-center": {
+   "guideValue": "7th Ward",
+   "verdict": "confirmed",
+   "value": "7th Ward",
+   "evidence": "Axios New Orleans: 2523 Bayou Rd, 'longtime 7th Ward mainstay' on the Bayou Road Black-owned business strip"
+  },
+  "new-orleans/iron-rail-book-collective": {
+   "guideValue": "Bywater",
+   "verdict": "confirmed",
+   "value": "Bywater",
+   "evidence": "Wikipedia (Iron Rail Book Collective): as of Apr 2026 inside CANOA, 4210 St. Claude Ave, Bywater"
+  },
+  "new-orleans/rank-and-file-books": {
+   "guideValue": "Freret / Uptown",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no source found for a 'Rank & File Books' in New Orleans; Sisters in Christ's own pages (bandcamp, vianolavie) mention no co-tenant bookstore"
+  },
+  "new-orleans/louisiana-music-factory": {
+   "guideValue": "Marigny",
+   "verdict": "confirmed",
+   "value": "Marigny",
+   "evidence": "Wikipedia/OffBeat: 421 Frenchmen St since 2014; inside Marigny's City Planning Commission bounds (Esplanade–Press, river–St. Claude/Rampart); placed by address"
+  },
+  "new-orleans/euclid-records": {
+   "guideValue": "Bywater",
+   "verdict": "confirmed",
+   "value": "Bywater",
+   "evidence": "Loyola Maroon / The Vinyl Factory: 3301 Chartres St, 'independent Bywater jewel'"
+  },
+  "new-orleans/domino-sound-record-shack": {
+   "guideValue": "7th Ward",
+   "verdict": "confirmed",
+   "value": "7th Ward",
+   "evidence": "nolaplaces.com / Loyola Maroon: 2557 Bayou Rd, 'Seventh Ward' just off Broad St"
+  },
+  "new-orleans/sisters-in-christ-records": {
+   "guideValue": "Freret / Uptown",
+   "verdict": "corrected",
+   "value": "Uptown",
+   "evidence": "operator bandcamp (sistersinchrist.bandcamp.com): 5206 Magazine St; Via Nola Vie: corner of Dufossat & Magazine, Uptown — not Freret (only its early pop-up was in Gasa Gasa on Freret)"
+  },
+  "new-orleans/nola-mix-records": {
+   "guideValue": "Lower Garden District",
+   "verdict": "confirmed",
+   "value": "Lower Garden District",
+   "evidence": "The Vinyl Factory / OffBeat: 1522 Magazine St 70130; placed by address in the Lower Garden District"
+  },
+  "new-orleans/cafe-du-monde": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "operator site (cafedumonde.com): original French Market stand, 800 Decatur St; French Market lies in the French Quarter; placed by address"
+  },
+  "new-orleans/congregation-coffee-roasters": {
+   "guideValue": "Bywater / Marigny",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "Biz New Orleans / Garden & Gun: multi-location — Algiers Point (240 Pelican), Uptown (900 Jefferson at Magazine), planned 618 Conti, roastery 1746 Tchoupitoulas; none in Bywater or Marigny"
+  },
+  "new-orleans/baldwin-and-co-coffee": {
+   "guideValue": "Marigny",
+   "verdict": "confirmed",
+   "value": "Marigny",
+   "evidence": "OffBeat ('Baldwin & Co. perks up the Marigny'): 1030 Elysian Fields at St. Claude, Marigny"
+  },
+  "new-orleans/hivolt-coffee": {
+   "guideValue": "Bywater",
+   "verdict": "corrected",
+   "value": "Lower Garden District",
+   "evidence": "Sprudge: 1829 Sophie Wright Pl 70130, Lower Garden District (also Country Roads listing)",
+   "noteConflict": "note calls it 'the Bywater's' coffee anchor, but it is in the Lower Garden District"
+  },
+  "new-orleans/mammoth-espresso": {
+   "guideValue": "Warehouse District",
+   "verdict": "confirmed",
+   "value": "Warehouse District",
+   "evidence": "Sprudge: 821 Baronne St, in the 'Warehouse/Arts district'"
+  },
+  "new-orleans/croissant-dor-patisserie": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "Afar / Explore Louisiana: 617 Ursulines Ave, French Quarter"
+  },
+  "new-orleans/ayu-bakehouse": {
+   "guideValue": "Marigny",
+   "verdict": "confirmed",
+   "value": "Marigny",
+   "evidence": "Wikipedia / The Infatuation: 801 Frenchmen St across from Washington Square Park, inside Marigny CPC bounds; placed by address"
+  },
+  "new-orleans/bywater-bakery": {
+   "guideValue": "Bywater",
+   "verdict": "confirmed",
+   "value": "Bywater",
+   "evidence": "operator site (bywaterbakery.com): 3624 Dauphine St at Independence, 'heart of the Bywater neighborhood'"
+  },
+  "new-orleans/dong-phuong-bakery": {
+   "guideValue": "New Orleans East",
+   "verdict": "confirmed",
+   "value": "New Orleans East",
+   "evidence": "Wikipedia / Biz New Orleans: 14207 Chef Menteur Hwy, Little Vietnam section of New Orleans East"
+  },
+  "new-orleans/levee-baking-co": {
+   "guideValue": "Uptown",
+   "verdict": "confirmed",
+   "value": "Uptown",
+   "evidence": "operator site (leveebakingco.com): 3138 Magazine St, entrance on 9th St; Uptown Magazine corridor (Feastio calls it Irish Channel); placed by address"
+  },
+  "new-orleans/muffuletta-central-grocery": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "WWL-TV / Fox 8: 923 Decatur St, reopened Dec 2024 after Ida; French Quarter; placed by address"
+  },
+  "new-orleans/gumbo-dooky-chases": {
+   "guideValue": "Tremé",
+   "verdict": "confirmed",
+   "value": "Tremé",
+   "evidence": "Explore Louisiana / A Closer Walk: 2301 Orleans Ave, Tremé"
+  },
+  "new-orleans/sazerac-sazerac-bar": {
+   "guideValue": "Central Business District",
+   "verdict": "confirmed",
+   "value": "Central Business District",
+   "evidence": "enprimeurclub / SAH Archipedia: inside the Roosevelt Hotel, 130 Roosevelt Way, Central Business District"
+  },
+  "new-orleans/bananas-foster-brennans": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "Wikipedia (Brennan's) / frenchquarter.com: 417 Royal St, French Quarter"
+  },
+  "new-orleans/bbq-shrimp-pascals-manale": {
+   "guideValue": "Uptown",
+   "verdict": "confirmed",
+   "value": "Uptown",
+   "evidence": "Via Nola Vie / Explore Louisiana: 1838 Napoleon Ave at Dryades, Uptown"
+  },
+  "new-orleans/what-it-bees-like-honey": {
+   "guideValue": "Gentilly Woods",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "web searches (two attempts) found no source for the business or its hive locations"
+  },
+  "new-orleans/congo-square": {
+   "guideValue": "Tremé",
+   "verdict": "confirmed",
+   "value": "Tremé",
+   "evidence": "City of New Orleans (nola.gov): Congo Square in Louis Armstrong Park, 701 N. Rampart St, Tremé neighborhood"
+  },
+  "new-orleans/museum-of-death": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "Frommer's / Hyperallergic: 227 Dauphine St between Bienville & Iberville, French Quarter"
+  },
+  "new-orleans/rice-mausoleum-lafayette-cemetery": {
+   "guideValue": "Garden District",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "rec merges two sites: Lafayette Cemetery No. 1 is in the Garden District (Save Our Cemeteries), but the Rice family mausoleum is in Metairie Cemetery (Atlas Obscura; family statement), a separate cemetery",
+   "noteConflict": "note says Anne Rice's resting place is here, but she is interred in the Rice family mausoleum at Metairie Cemetery, not Lafayette No. 1"
+  },
+  "new-orleans/carousel-bar-hotel-monteleone": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "operator site (hotelmonteleone.com): 214 Royal St, 'An Elevated French Quarter Oasis'"
+  },
+  "new-orleans/jean-lafitte-barataria-preserve": {
+   "guideValue": "Marrero (Jefferson Parish)",
+   "verdict": "confirmed",
+   "value": "Marrero",
+   "evidence": "NPS (nps.gov/jela directions page): 'the Barataria Preserve in Marrero'"
+  },
+  "new-orleans/fred-hampton-free-store": {
+   "guideValue": "Lower 9th Ward",
+   "verdict": "confirmed",
+   "value": "Lower 9th Ward",
+   "evidence": "KFF Health News: store is in 'the Lower 9th Ward'; Verite News/LA Illuminator coverage of the former Family Dollar at 5523 St. Claude"
+  },
+  "new-orleans/siberia": {
+   "guideValue": "St. Roch",
+   "verdict": "confirmed",
+   "value": "St. Roch",
+   "evidence": "operator site (siberianola.com): 2227 St. Claude Ave; Punch (punchdrink.com) lists neighborhood as St. Roch (The Infatuation says Marigny)"
+  },
+  "new-orleans/gasa-gasa": {
+   "guideValue": "Freret",
+   "verdict": "confirmed",
+   "value": "Freret",
+   "evidence": "operator site (gasagasa.com) / noladiy.org: 4920 Freret St, on the Freret commercial corridor; placed by address; current operating status not confirmed"
+  },
+  "new-orleans/saturn-bar": {
+   "guideValue": "Bywater",
+   "verdict": "confirmed",
+   "value": "Bywater",
+   "evidence": "noladiy.org venue list: 3067 St. Claude Ave 70117, within Bywater's CPC bounds (Wikipedia: Press St/Homer Plessy Way to Industrial Canal, river to Florida Ave); placed by address"
+  },
+  "new-orleans/midcity-ballroom": {
+   "guideValue": "Mid-City",
+   "verdict": "corrected",
+   "value": "Baton Rouge",
+   "evidence": "noladiy.org venue list: MidCity Ballroom, 136 S. Acadian Thruway 70806, Baton Rouge; operator site (midcityballroom.com) uses a 225 Baton Rouge phone number",
+   "noteConflict": "venue is in Baton Rouge, not New Orleans — the guide lists it as a New Orleans pick"
+  },
+  "new-orleans/home-malone": {
+   "guideValue": "Uptown",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (homemalonenola.com): two locations — 629 N Carrollton Ave (Mid City) and 4610 Magazine St (Uptown); pick isn't one location"
+  },
+  "new-orleans/palace-market": {
+   "guideValue": "Marigny",
+   "verdict": "confirmed",
+   "value": "Marigny",
+   "evidence": "operator site (palacemarketnola.com): 619 Frenchmen St, inside Marigny CPC bounds; placed by address"
+  },
+  "new-orleans/frenchmen-art-bazaar": {
+   "guideValue": "Marigny",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (frenchmenartbazaar.com) gives no address; The Advocate/Afar list a similarly named 'Frenchmen Art Market' at 619 Frenchmen (Afar marks it closed) — identity and current location unclear"
+  },
+  "new-orleans/gallery-rinard": {
+   "guideValue": "French Quarter",
+   "verdict": "confirmed",
+   "value": "French Quarter",
+   "evidence": "operator site (galleryrinard.com): moved to 938 Royal St, 'in the French Quarter of New Orleans'"
+  },
+  "new-orleans/community-workshop-nola": {
+   "guideValue": "Bywater",
+   "verdict": "corrected",
+   "value": "Broadmoor",
+   "evidence": "Furniture Society (furnsoc.org) studio visit: 3142 Calhoun St 70125, 'the Broadmoor neighborhood'; 1201 Mazant St appears only as a venue for another group's tool workshops"
+  },
+  "new-orleans/nola-guitar-shop": {
+   "guideValue": "Behrman",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (nolaguitarshop.com): 3920 General De Gaulle Dr 70114 (Algiers, West Bank); no source names the neighborhood or confirms Behrman bounds"
+  },
+  "new-orleans/fablab-nola": {
+   "guideValue": "City Park",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "Delgado (dcc.edu): City Park campus at 615 City Park Ave, but no source found confirming FabLab is on that campus or that the site is in the 'City Park' neighborhood"
+  },
+  "oklahoma-city/literati-press": {
+   "guideValue": "Paseo Arts District",
+   "verdict": "confirmed",
+   "value": "Paseo Arts District",
+   "evidence": "thepaseo.org (Paseo Arts District) business directory lists Literati Press Comics & Novels at 3022 Paseo"
+  },
+  "oklahoma-city/commonplace-books": {
+   "guideValue": "Classen Curve",
+   "verdict": "corrected",
+   "value": "Midtown",
+   "evidence": "visitokc.com Midtown district page lists Commonplace Books among Midtown's shops; not among Classen Curve tenants on classencurve.com (partial directory)"
+  },
+  "oklahoma-city/39th-street-records": {
+   "guideValue": "39th Street District",
+   "verdict": "confirmed",
+   "value": "39th Street District",
+   "evidence": "visitokc.com vinyl-stores post lists 39th Street Records at 2131 NW 39th St; visitokc.com 39th Street District page defines the district along NW 39th west of Pennsylvania (The Lost Ogle 2023 gives 2124 NW 39th, same strip)"
+  },
+  "oklahoma-city/3-dachshunds": {
+   "guideValue": "OKC metro",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'OKC metro' is a metro-wide label, not a neighbourhood"
+  },
+  "oklahoma-city/bad-grannys-bazaar": {
+   "guideValue": "Plaza District",
+   "verdict": "confirmed",
+   "value": "Plaza District",
+   "evidence": "plazadistrict.org Plaza Business Alliance directory lists Bad Granny's Bazaar"
+  },
+  "oklahoma-city/zero-tolerance-siyo": {
+   "guideValue": "Britton District",
+   "verdict": "confirmed",
+   "value": "Britton District",
+   "evidence": "operator site (zerotolerancecoffee.com): SIYO coffee house at 919 W Britton Rd in 'Historic Britton'"
+  },
+  "oklahoma-city/elemental-coffee": {
+   "guideValue": "Midtown",
+   "verdict": "confirmed",
+   "value": "Midtown",
+   "evidence": "operator site (elementalcoffee.com, cafe page): 8th & Hudson, in 'the now bustling Midtown District'"
+  },
+  "oklahoma-city/clarity-coffee": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (claritycoffee.com): 431 W Main St Ste A, 73102 — central downtown by address (also has Wheeler and N Walker locations); placed by address"
+  },
+  "oklahoma-city/coffee-slingers": {
+   "guideValue": "Automobile Alley",
+   "verdict": "confirmed",
+   "value": "Automobile Alley",
+   "evidence": "operator site (coffeeslingers.com, contact page): '1015 N. Broadway in Automobile Alley'"
+  },
+  "oklahoma-city/prelude-coffee": {
+   "guideValue": "Downtown",
+   "verdict": "corrected",
+   "value": "Automobile Alley",
+   "evidence": "downtownokc.com coffee guide: 3 NE 8th St Ste 210, loft above the 8th Street Market, listed among Automobile Alley coffee shops"
+  },
+  "oklahoma-city/ganache-patisserie": {
+   "guideValue": "Chisholm Creek",
+   "verdict": "confirmed",
+   "value": "Chisholm Creek",
+   "evidence": "chisholmcreek.com dine directory lists Ganache Patisserie; operator site (ganacheokc.com) gives 13230 Pawnee Dr Ste 114 (guide's N Classen address is stale)"
+  },
+  "oklahoma-city/cattlemens-steakhouse": {
+   "guideValue": "Stockyards City",
+   "verdict": "confirmed",
+   "value": "Stockyards City",
+   "evidence": "operator site (cattlemensrestaurant.com): 1309 S Agnew, 'Located in Historic Stockyards City'"
+  },
+  "oklahoma-city/asian-district-pho": {
+   "guideValue": "N Classen Blvd, Asian District",
+   "verdict": "confirmed",
+   "value": "Asian District",
+   "evidence": "visitokc.com Asian District page: district along N Classen Blvd (Milk Bottle Building, 2426 N Classen), Vietnamese hub since the 1970s"
+  },
+  "oklahoma-city/okc-farmers-public-market-honey": {
+   "guideValue": "Farmers Market District",
+   "verdict": "confirmed",
+   "value": "Farmers Market District",
+   "evidence": "operator site (okcfarmersmarket.com): 311 S Klein Ave, Saturday market, located in 'the District'; okgazette.com calls the market the Farmers Market District's centerpiece"
+  },
+  "oklahoma-city/urban-agrarian": {
+   "guideValue": "Farmers Market District",
+   "verdict": "confirmed",
+   "value": "Farmers Market District",
+   "evidence": "okgazette.com: Urban Agrarian's 'Farmers Market District shop'; operator site (urbanagrarian.com) gives 1235 SW 2nd St"
+  },
+  "oklahoma-city/siyo-chocolate-bars": {
+   "guideValue": "Britton District",
+   "verdict": "confirmed",
+   "value": "Britton District",
+   "evidence": "operator site (zerotolerancecoffee.com): SIYO Coffee and Cacao at 919 W Britton Rd, 'Historic Britton'"
+  },
+  "oklahoma-city/tin-lizzies-mio": {
+   "guideValue": "Oklahoma City metro",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Oklahoma City metro' is the bare city/metro"
+  },
+  "oklahoma-city/okc-underground": {
+   "guideValue": "Downtown OKC, multiple entrances",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "Wikipedia (Oklahoma City Underground): pedestrian tunnel system in downtown's central business district, originally the Conncourse"
+  },
+  "oklahoma-city/factory-obscura-mixtape": {
+   "guideValue": "Automobile Alley",
+   "verdict": "confirmed",
+   "value": "Automobile Alley",
+   "evidence": "visitokc.com Automobile Alley page names Factory Obscura's Mix-Tape; operator site (factoryobscura.com): 25 NW 9th St, '9th Street in Automobile Alley'"
+  },
+  "oklahoma-city/deep-deuce": {
+   "guideValue": "NE 2nd St, Deep Deuce",
+   "verdict": "confirmed",
+   "value": "Deep Deuce",
+   "evidence": "Wikipedia (Deep Deuce): historic downtown neighborhood centered on NE 2nd St; visitokc.com Deep Deuce page covers Ellison and Christian"
+  },
+  "oklahoma-city/the-sanctuary-okc": {
+   "guideValue": "NW 10th St & May Ave",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a street intersection; okgazette.com places the venue in an antique strip at NW 10th & May Ave with Beloved Bones, no district named"
+  },
+  "oklahoma-city/tower-theatre-okc": {
+   "guideValue": "Uptown",
+   "verdict": "confirmed",
+   "value": "Uptown",
+   "evidence": "operator site (towertheatreokc.com): 425 NW 23rd St in the Uptown 23rd District"
+  },
+  "oklahoma-city/beer-city-music-hall": {
+   "guideValue": "Farmers Market District",
+   "verdict": "corrected",
+   "value": "Iron Works District",
+   "evidence": "travelok.com (state tourism) listing: 1141 NW 2nd St, 'downtown Oklahoma City's Iron Works District'; operator site confirms the NW 2nd St address — north of Main, not the Farmers Market District"
+  },
+  "oklahoma-city/dna-galleries": {
+   "guideValue": "Plaza District",
+   "verdict": "confirmed",
+   "value": "Plaza District",
+   "evidence": "operator site (dnagalleries.com): 1709 NW 16th St, 'historic 16th Street Plaza District'"
+  },
+  "oklahoma-city/shop-good": {
+   "guideValue": "Automobile Alley",
+   "verdict": "confirmed",
+   "value": "Automobile Alley",
+   "evidence": "operator site (shopgoodokc.com): 1007 N Broadway Ave, in Automobile Alley"
+  },
+  "oklahoma-city/paseo-arts-center-shop": {
+   "guideValue": "Paseo Arts District",
+   "verdict": "confirmed",
+   "value": "Paseo Arts District",
+   "evidence": "thepaseo.org: Paseo Arts & Creativity Center, 3024 Paseo"
+  },
+  "oklahoma-city/bad-grannys-bazaar-souvenirs": {
+   "guideValue": "Plaza District",
+   "verdict": "confirmed",
+   "value": "Plaza District",
+   "evidence": "plazadistrict.org Plaza Business Alliance directory lists Bad Granny's Bazaar"
+  },
+  "oklahoma-city/plenty-mercantile": {
+   "guideValue": "Automobile Alley",
+   "verdict": "confirmed",
+   "value": "Automobile Alley",
+   "evidence": "operator site (plentymercantile.com): flagship at 807 N Broadway Ave, in Automobile Alley"
+  },
+  "oklahoma-city/keeley-electronics": {
+   "guideValue": "Oklahoma City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name"
+  },
+  "oklahoma-city/co-laboratory-oklahoma": {
+   "guideValue": "Oklahoma City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name"
+  },
+  "oklahoma-city/innovation-studio-okc": {
+   "guideValue": "Oklahoma City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name"
+  },
+  "phoenix/palabras-bilingual-bookstore": {
+   "guideValue": "Roosevelt Row",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (palabrasbookstore.com): 906 W Roosevelt St, Unit 2, 85007 (inside Casa Caracol per phoenixnewtimes.com); no source names a neighbourhood"
+  },
+  "phoenix/grassrootz-bookstore": {
+   "guideValue": "Eastlake Park",
+   "verdict": "confirmed",
+   "value": "Eastlake Park",
+   "evidence": "operator site (grassrootzbookstore.com): 1145 E Washington St #200; calls itself 'Eastlake Park's Own' bookstore"
+  },
+  "phoenix/the-poisoned-pen": {
+   "guideValue": "Scottsdale",
+   "verdict": "confirmed",
+   "value": "Scottsdale",
+   "evidence": "operator site (poisonedpen.com): 4014 N Goldwater Blvd #101, Scottsdale, AZ 85251"
+  },
+  "phoenix/ghost-of-eastside-records": {
+   "guideValue": "Tempe",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no operator site resolved (ghostofeastside.com / ghostofeastsiderecords.com do not resolve); web search budget exhausted, location not confirmed"
+  },
+  "phoenix/zia-records": {
+   "guideValue": "Tempe",
+   "verdict": "confirmed",
+   "value": "Tempe",
+   "evidence": "operator site (ziarecords.com locations page): Mill Ave store at 3201 S Mill Ave, Tempe, AZ 85282 (one of several Valley stores)"
+  },
+  "phoenix/grand-avenue-records": {
+   "guideValue": "Grand Avenue Arts Corridor",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (grandavenuerecords.com) unreachable (TLS/socket errors); web search budget exhausted, location not confirmed"
+  },
+  "phoenix/cartel-coffee-labs": {
+   "guideValue": "Multiple locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Multiple locations'; multi-location chain, pick is not one specific shop"
+  },
+  "phoenix/songbird-coffee-tea-house": {
+   "guideValue": "Roosevelt Row, Downtown Phoenix",
+   "verdict": "confirmed",
+   "value": "Roosevelt Row",
+   "evidence": "operator site (songbirdcoffeehouse.com): 812 N 3rd St, 'on Roosevelt Row in Downtown Phoenix, part of the Roosevelt Row Arts District'"
+  },
+  "phoenix/xanadu-coffee": {
+   "guideValue": "Garfield District, Downtown Phoenix",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator domain xanaducoffee.com now 301-redirects to an unrelated restaurant site (zipkoreanbbq.com), possibly closed; no current location confirmed"
+  },
+  "phoenix/lola-coffee": {
+   "guideValue": "N 3rd Ave",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'N 3rd Ave' is a bare street; note itself describes multiple locations (Melrose, Arcadia)"
+  },
+  "phoenix/provision-coffee": {
+   "guideValue": "N 32nd St, Arcadia",
+   "verdict": "corrected",
+   "value": "Uptown",
+   "evidence": "operator site (provisioncoffee.com, 7th Street location page): 711 E Missouri Ave Ste 115, Phoenix 85014, 'an Uptown Phoenix bistro'; only location listed",
+   "noteConflict": "note calls it an 'Arcadia café', but the operator's only listed location is on 7th St/Missouri in Uptown Phoenix"
+  },
+  "phoenix/proof-bread": {
+   "guideValue": "Multiple locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Multiple locations'; multi-location bakery, pick is not one specific shop"
+  },
+  "phoenix/chaconne-patisserie": {
+   "guideValue": "Multiple locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Multiple locations'; pick is not one specific shop"
+  },
+  "phoenix/cactus-corn-popcorn": {
+   "guideValue": "cactuscorn.com, Chase Field",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (website, stadium concession), not a neighbourhood"
+  },
+  "phoenix/queen-creek-olive-mill": {
+   "guideValue": "Queen Creek (outer metro)",
+   "verdict": "confirmed",
+   "value": "Queen Creek",
+   "evidence": "operator site (queencreekolivemill.com contact page): 25062 S Meridian Rd, Queen Creek, AZ 85142"
+  },
+  "phoenix/prickly-pear-products": {
+   "guideValue": "Farmers markets, specialty shops",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (farmers markets, shops) for a product category, not a place"
+  },
+  "phoenix/hayden-flour-mills": {
+   "guideValue": "Specialty grocers",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Specialty grocers' is a sales channel, not a place"
+  },
+  "phoenix/desert-honey-mesquite": {
+   "guideValue": "Farmers markets, Agritopia",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (farmers markets, Agritopia) for a product category, not a place"
+  },
+  "phoenix/sunnyslope-rock-garden": {
+   "guideValue": "Sunnyslope",
+   "verdict": "confirmed",
+   "value": "Sunnyslope",
+   "evidence": "en.wikipedia.org (Sunnyslope, Phoenix): Grover Cleveland Thompson's rock garden at 10023 N 13th Place in Sunnyslope"
+  },
+  "phoenix/phoenix-bat-cave": {
+   "guideValue": "Arizona Canal Trail near 40th St & Camelback",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a trail/intersection description (Arizona Canal Trail near 40th St & Camelback), not a neighbourhood; atlasobscura.com blocked fetch"
+  },
+  "phoenix/the-trunk-space": {
+   "guideValue": "In transition — check current location",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "guide itself says 'in transition'; operator site (thetrunkspace.com) shows no address; no current location confirmed"
+  },
+  "phoenix/nile-theater": {
+   "guideValue": "Mesa",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (niletheater.com) returned errors/does not resolve; web search budget exhausted, Mesa location not confirmed from a source"
+  },
+  "phoenix/the-rebel-lounge": {
+   "guideValue": "Phoenix",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name 'Phoenix'; operator site (therebellounge.com) gives 2303 E Indian School Rd"
+  },
+  "phoenix/yucca-tap-room": {
+   "guideValue": "Tempe",
+   "verdict": "confirmed",
+   "value": "Tempe",
+   "evidence": "operator site (yuccatap.com): venue identified as Tempe, AZ via its ticketing/listing links; street address not shown"
+  },
+  "phoenix/crescent-ballroom": {
+   "guideValue": "Downtown Phoenix",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "operator site (crescentphx.com): 308 N 2nd Ave, Phoenix 85003; placed in Downtown by address"
+  },
+  "phoenix/practical-art": {
+   "guideValue": "Central Ave",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Central Ave' is a bare street; operator site did not resolve"
+  },
+  "phoenix/cosanti-originals": {
+   "guideValue": "Paradise Valley",
+   "verdict": "confirmed",
+   "value": "Paradise Valley",
+   "evidence": "operator site (cosanti.com) and en.wikipedia.org (Paolo Soleri): 6433 E Doubletree Ranch Rd, Paradise Valley, AZ"
+  },
+  "phoenix/phoenix-general": {
+   "guideValue": "Downtown Phoenix",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator domain phoenixgeneral.com now redirects to a domain-for-sale page (hugedomains.com), possibly closed; no current location confirmed"
+  },
+  "phoenix/state-forty-eight": {
+   "guideValue": "Multiple locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Multiple locations'; multi-location retailer, pick is not one specific shop"
+  },
+  "phoenix/heard-museum-shop": {
+   "guideValue": "Central Ave",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Central Ave' is a bare street; operator site (heard.org) gives 2301 N Central Ave"
+  },
+  "phoenix/phoenix-forge": {
+   "guideValue": "Downtown Phoenix",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (phoenixforge.org) is a placeholder 'New Project / Test' page with no address and no GateWay CC mention; location not confirmed"
+  },
+  "richmond/chop-suey-books": {
+   "guideValue": "Carytown",
+   "verdict": "confirmed",
+   "value": "Carytown",
+   "evidence": "rictoday.6amcity.com / wric.com: store (now rebranded Shelf Life Books) at 2913 W Cary St in Carytown; Carytown store became the only location"
+  },
+  "richmond/fountain-bookstore": {
+   "guideValue": "Shockoe Slip",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (fountainbookstore.com) and listings fetched returned no address; search budget exhausted before an independent source could place it"
+  },
+  "richmond/black-swan-books-music": {
+   "guideValue": "Carytown",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "richmondbizsense.com (2019): left 2601 W Main St (Fan, not Carytown) for Rosedale Ave; operator site (blackswanbooks.com) now lists 113 N Foushee St, 23220 — downtown (Monroe Ward); placed by address"
+  },
+  "richmond/bbgb-tales-for-kids": {
+   "guideValue": "Carytown",
+   "verdict": "confirmed",
+   "value": "Carytown",
+   "evidence": "shelf-awareness.com / richmondfamilymagazine.com listings: 3003 W Cary St, Carytown"
+  },
+  "richmond/steady-sounds-records": {
+   "guideValue": "Broad Street Arts District",
+   "verdict": "confirmed",
+   "value": "Broad Street Arts District",
+   "evidence": "richmondbizsense.com (2020): 322 W Broad St, Arts District (rvamag.com calls it Jackson Ward); store closed June 2020 — last location"
+  },
+  "richmond/vinyl-conflict": {
+   "guideValue": "Carytown",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "richmonder.org (Apr 2025): 300 E Grace St; rvamag.com #DOWNTOWNRVA profile places the shop downtown (moved from 324 S Pine St, Oregon Hill, in 2022)"
+  },
+  "richmond/plan-9-music": {
+   "guideValue": "Carytown",
+   "verdict": "confirmed",
+   "value": "Carytown",
+   "evidence": "richmonder.org (Apr 2025) and richmondbizsense.com: 3017 W Cary St, Carytown"
+  },
+  "richmond/black-swan-books-music-records": {
+   "guideValue": "Carytown",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "richmondbizsense.com (2019): left 2601 W Main St for Rosedale Ave; operator site (blackswanbooks.com) now lists 113 N Foushee St, 23220 — downtown (Monroe Ward); placed by address. Site lists no records/music category"
+  },
+  "richmond/lamplighter-coffee-roasters": {
+   "guideValue": "The Fan / Scott's Addition",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a multi-location roaster/cafe chain ('Multiple locations'); pick is not one specific location"
+  },
+  "richmond/blanchards-coffee-roasting": {
+   "guideValue": "Scott's Addition area",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "richmondbizsense.com (2019): cafe at 3121 W Broad St 'across from Scott's Addition', a second cafe planned on Forest Hill Ave, roastery at 1903A Westwood Ave; multi-site and the Broad St cafe is not shown to be inside Scott's Addition"
+  },
+  "richmond/rostovs-coffee-tea": {
+   "guideValue": "VCU / Fan District",
+   "verdict": "corrected",
+   "value": "Fan District",
+   "evidence": "birdhousefarmersmarket.org / styleweekly.com: 1618 W Main St, the Fan; 'VCU' part of the guide value not supported (and not Grace St as the guide address says)"
+  },
+  "richmond/crossroads-coffee-ice-cream": {
+   "guideValue": "Northside",
+   "verdict": "corrected",
+   "value": "Forest Hill",
+   "evidence": "operator site (crossroadsrva.com): 3600 Forest Hill Ave, 23225; richmondbizsense.com calls it the Forest Hill (Southside) location",
+   "noteConflict": "Note calls it a 'Northside neighborhood coffeehouse'; it is on Forest Hill Ave on the Southside."
+  },
+  "richmond/nile-ethiopian-coffeehouse": {
+   "guideValue": "Broad Street",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Broad Street' is a bare street; richmondmagazine.com (2023): Nile's last home was a Church Hill restaurant, closed Jan 2024 (now catering only)"
+  },
+  "richmond/sub-rosa-bakery": {
+   "guideValue": "Church Hill",
+   "verdict": "confirmed",
+   "value": "Church Hill",
+   "evidence": "12onyourside.com / rictoday.6amcity.com: Church Hill bakery at N 25th St & Jefferson Ave; reopened Dec 16, 2025 after Nov 2024 fire"
+  },
+  "richmond/wpa-bakery": {
+   "guideValue": "Church Hill / Scott's Addition",
+   "verdict": "corrected",
+   "value": "Forest Hill",
+   "evidence": "richmondbizsense.com (2020): closed Church Hill store at 2707 E Marshall St, consolidating into Forest Hill location at 3414 Semmes Ave; no Scott's Addition location found"
+  },
+  "richmond/sugar-and-twine": {
+   "guideValue": "Richmond",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name 'Richmond'"
+  },
+  "richmond/stellas-baklava": {
+   "guideValue": "The Fan",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "richmondmagazine.com: Stella's spans a restaurant (1012 Lafayette St) plus multiple Stella's Grocery markets; pick does not name one specific location"
+  },
+  "richmond/sally-bells-box-lunch": {
+   "guideValue": "Broad Street",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Broad Street' is a bare street with no district meaning"
+  },
+  "richmond/mama-js-soul-food": {
+   "guideValue": "Jackson Ward",
+   "verdict": "confirmed",
+   "value": "Jackson Ward",
+   "evidence": "southernfoodways.org / styleweekly.com: 415 N 1st St in Jackson Ward"
+  },
+  "richmond/zzq-brisket-brunswick-stew": {
+   "guideValue": "Scott's Addition",
+   "verdict": "confirmed",
+   "value": "Scott's Addition",
+   "evidence": "richmondmagazine.com / richmondbizsense.com: 3201 W Moore St, Scott's Addition"
+  },
+  "richmond/metzger-currywurst": {
+   "guideValue": "Church Hill",
+   "verdict": "confirmed",
+   "value": "Church Hill",
+   "evidence": "styleweekly.com / aaa.com: 801 N 23rd St, Church Hill (some sources say adjacent Union Hill)"
+  },
+  "richmond/perlys-pastrami": {
+   "guideValue": "Broad Street",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Broad Street' is a bare street; aaa.com / afar.com list Perly's at 111 E Grace St, downtown",
+   "noteConflict": "Note says 'on Broad St'; Perly's is at 111 E Grace St."
+  },
+  "richmond/virginia-peanuts": {
+   "guideValue": "citywide gift shops",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "product sold in gift shops citywide; guide value 'citywide gift shops' is not a neighbourhood"
+  },
+  "richmond/virginia-country-ham": {
+   "guideValue": "citywide gourmet shops",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "product sold in gourmet shops citywide (producer in Surry, VA); guide value 'citywide gourmet shops' is not a neighbourhood"
+  },
+  "richmond/whole-bean-coffee-gift": {
+   "guideValue": "citywide",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "product from two multi-location roasters; guide value 'citywide' is not a neighbourhood"
+  },
+  "richmond/local-rva-honey": {
+   "guideValue": "Carytown",
+   "verdict": "confirmed",
+   "value": "Carytown",
+   "evidence": "virginia.org / richmondbizsense.com: Ellwood Thompson's at 4 N Thompson St, at the west end of Carytown; placed by address"
+  },
+  "richmond/reservoir-distillery-bourbon": {
+   "guideValue": "Scott's Addition",
+   "verdict": "confirmed",
+   "value": "Scott's Addition",
+   "evidence": "rvamag.com ('Scott's Addition distillery') / richmondbizsense.com: 1800 Summit Ave"
+  },
+  "richmond/maggie-l-walker-nhs": {
+   "guideValue": "Jackson Ward",
+   "verdict": "confirmed",
+   "value": "Jackson Ward",
+   "evidence": "operator site (nps.gov/mawa): 600 N 2nd St, parking in the Jackson Ward neighborhood"
+  },
+  "richmond/poe-museum": {
+   "guideValue": "Shockoe Bottom",
+   "verdict": "confirmed",
+   "value": "Shockoe Bottom",
+   "evidence": "en.wikipedia.org (Edgar Allan Poe Museum): 1914 E Main St in the Shockoe Bottom neighborhood"
+  },
+  "richmond/evergreen-cemetery": {
+   "guideValue": "East End",
+   "verdict": "confirmed",
+   "value": "East End",
+   "evidence": "en.wikipedia.org (Evergreen Cemetery): 'historic African-American cemetery in the East End of Richmond'"
+  },
+  "richmond/belle-isle": {
+   "guideValue": "James River",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "en.wikipedia.org: island in the James River, part of James River Park System; 'James River' is a river, not a neighbourhood"
+  },
+  "richmond/hollywood-cemetery": {
+   "guideValue": "Oregon Hill",
+   "verdict": "confirmed",
+   "value": "Oregon Hill",
+   "evidence": "en.wikipedia.org (Hollywood Cemetery): 412 S Cherry St, in the Oregon Hill neighborhood"
+  },
+  "richmond/monument-avenue": {
+   "guideValue": "Museum District / Fan",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "Monument Ave is a multi-mile avenue running through both the Fan and the Museum District; a route, not a single neighbourhood"
+  },
+  "richmond/grand-kugel": {
+   "guideValue": "Scott's Addition area",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "en.wikipedia.org / smv.org: Kugel is at the Science Museum of Virginia, 2500 W Broad St; no source names its neighbourhood, and it sits across Broad St from Scott's Addition rather than in it"
+  },
+  "richmond/byrd-theatre": {
+   "guideValue": "Carytown",
+   "verdict": "confirmed",
+   "value": "Carytown",
+   "evidence": "operator site (byrdtheatre.org): 2908 W Cary St, Carytown"
+  },
+  "richmond/church-hill-buried-tunnel": {
+   "guideValue": "Church Hill",
+   "verdict": "confirmed",
+   "value": "Church Hill",
+   "evidence": "en.wikipedia.org (Church Hill Tunnel): runs ~4,000 ft beneath Church Hill; west portal off 18th St north of Marshall St"
+  },
+  "richmond/the-camel": {
+   "guideValue": "Broad Street",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Broad Street' is a bare street; operator site (thecamel.org) lists 1621 W Broad St"
+  },
+  "richmond/gwarbar": {
+   "guideValue": "Jackson Ward",
+   "verdict": "confirmed",
+   "value": "Jackson Ward",
+   "evidence": "operator site (gwarbar.com): 217 W Clay St, 23220 — inside Jackson Ward; placed by address"
+  },
+  "richmond/gallery5": {
+   "guideValue": "Broad Street Arts District",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (gallery5arts.org): 200 W Marshall St; en.wikipedia.org (Steamer Company Number 5) places it in Jackson Ward, but no source settles whether it also falls in the Broad Street Arts District"
+  },
+  "richmond/cobra-cabana": {
+   "guideValue": "Manchester",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no operator site reachable and search budget exhausted; could not confirm a Manchester address"
+  },
+  "richmond/get-tight-lounge": {
+   "guideValue": "Richmond",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is the bare city name 'Richmond'"
+  },
+  "richmond/quirk-gallery": {
+   "guideValue": "Broad Street Arts District",
+   "verdict": "confirmed",
+   "value": "Broad Street Arts District",
+   "evidence": "operator site (quirkhotels.com): Quirk Hotel, gallery off the lobby, 'in the heart of Richmond's Arts District' on Broad St"
+  },
+  "richmond/world-of-mirth": {
+   "guideValue": "Carytown",
+   "verdict": "confirmed",
+   "value": "Carytown",
+   "evidence": "operator site (worldofmirth.com): 3005 W Cary St, 23221 — in Carytown's W Cary St strip; placed by address"
+  },
+  "richmond/black-swan-postcards": {
+   "guideValue": "Carytown",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "richmondbizsense.com (2019): left 2601 W Main St for Rosedale Ave; operator site (blackswanbooks.com) now lists 113 N Foushee St, 23220 — downtown (Monroe Ward); placed by address"
+  },
+  "richmond/hackrva": {
+   "guideValue": "Dabney Road",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (hackrva.org): 2026-A Dabney Rd, 23230, 'Dabney Road area, near Top Golf'; could not confirm whether this industrial corridor is a neighbourhood or lies in Richmond vs Henrico County"
+  },
+  "richmond/vcu-da-vinci-center": {
+   "guideValue": "VCU / Monroe Park",
+   "verdict": "confirmed",
+   "value": "VCU / Monroe Park",
+   "evidence": "operator site (davincicenter.vcu.edu): 1229 W Broad St, on the Broad St edge of VCU's Monroe Park campus; placed by address"
+  },
+  "salt-lake-city/weller-book-works": {
+   "guideValue": "Trolley Square",
+   "verdict": "confirmed",
+   "value": "Trolley Square",
+   "evidence": "ilab.org listing + KSL/Deseret News 2012 coverage: Weller Book Works at 607 Trolley Square (600 S & 700 E)"
+  },
+  "salt-lake-city/kings-english-bookshop": {
+   "guideValue": "Sugar House / East Bench",
+   "verdict": "corrected",
+   "value": "15th & 15th",
+   "evidence": "visitutah.com / newpages.com: 1511 S 1500 E, in the 15th & 15th neighborhood across from Caputo's on 15th"
+  },
+  "salt-lake-city/ken-sanders-rare-books": {
+   "guideValue": "Salt Lake City (exact current address unconfirmed -- see status note)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name; operator site (kensandersbooks.com): now 209 E 500 S inside The Leonardo at Library Square"
+  },
+  "salt-lake-city/the-legendarium": {
+   "guideValue": "Salt Lake City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name; Salt Lake Tribune / visitutah.com: 349 E 900 S"
+  },
+  "salt-lake-city/heavy-metal-shop": {
+   "guideValue": "Downtown",
+   "verdict": "corrected",
+   "value": "Maven District",
+   "evidence": "operator site (heavymetalshop.com): 156 E 900 S #103; visitutah.com Maven District article names the shop as now in Maven (moved from downtown Exchange Place in 2023 per Salt Lake Tribune)"
+  },
+  "salt-lake-city/diabolical-records": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "Salt Lake Tribune 2023 + downtownslc.org: 238 S Edison St, an alley off Main between 200 and 300 South"
+  },
+  "salt-lake-city/raunch-records": {
+   "guideValue": "Sugar House",
+   "verdict": "confirmed",
+   "value": "Sugar House",
+   "evidence": "Salt Lake Tribune 2023 listing: 1119 E 2100 South; Sugar House commercial strip, placed by address"
+  },
+  "salt-lake-city/randys-record-shop": {
+   "guideValue": "9th & 9th",
+   "verdict": "corrected",
+   "value": "Maven District",
+   "evidence": "fox13now.com / ksl.com: 157 E 900 S; visitutah.com defines Maven as 900 South between State and 200 East — placed by address (9th & 9th is at 900 E)"
+  },
+  "salt-lake-city/la-barba": {
+   "guideValue": "Downtown",
+   "verdict": "corrected",
+   "value": "Maven District",
+   "evidence": "operator site (labarbacoffee.com/locations): only SLC cafe is 155 E 900 S, labelled Maven District (other location Draper); no Main St location",
+   "noteConflict": "note calls it a 'downtown space'; the only SLC cafe is on 900 South in the Maven District, south of downtown"
+  },
+  "salt-lake-city/coffee-garden": {
+   "guideValue": "9th & 9th",
+   "verdict": "confirmed",
+   "value": "9th & 9th",
+   "evidence": "Salt Lake Tribune 2022 / Utah Stories: 878 E 900 S, longtime fixture of the 9th and 9th neighborhood"
+  },
+  "salt-lake-city/les-madeleines": {
+   "guideValue": "Central Ninth",
+   "verdict": "corrected",
+   "value": "Central City",
+   "evidence": "Salt Lake Tribune / KSL 2022: last location 216 E 500 South, CLOSED Dec 30 2022; inside slc.gov Central City bounds (State–700 E, South Temple–900 S) — placed by address"
+  },
+  "salt-lake-city/mrs-backers-pastry-shop": {
+   "guideValue": "Sugar House",
+   "verdict": "corrected",
+   "value": "Central City",
+   "evidence": "operator site (mrsbackers.com): 434 E South Temple, 84111 (south side); slc.gov Central City runs State–700 E, South Temple–900 S — placed by address",
+   "noteConflict": "note calls it 'a decades-old Sugar House institution'; it is on South Temple, nowhere near Sugar House"
+  },
+  "salt-lake-city/tulie-bakery": {
+   "guideValue": "Salt Lake City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name; slc.gov: two locations (863 E 700 S near 9th & 9th, and 15th & 15th)"
+  },
+  "salt-lake-city/fillings-and-emulsions": {
+   "guideValue": "Salt Lake City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name; Deseret News 2025: storefront 1395 S 300 West"
+  },
+  "salt-lake-city/evas-bakery": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "SLUG Magazine / OpenTable: 155 S Main St at 200 S, near City Center TRAX"
+  },
+  "salt-lake-city/zs-hot-sauce": {
+   "guideValue": "Etsy / SLC farmers markets",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a sales channel (Etsy / farmers markets), not a place"
+  },
+  "salt-lake-city/ritual-chocolate": {
+   "guideValue": "Sold at Caputo's and other SLC specialty shops (made in Heber City, UT)",
+   "verdict": "corrected",
+   "value": "Heber City",
+   "evidence": "operator site (ritualchocolate.com): factory & cafe 2175 W 3000 S, Heber City; Park City cafe closed 2023 (townlift.com). Guide value was a retail-outlet list"
+  },
+  "salt-lake-city/sugar-house-park-joe-hill": {
+   "guideValue": "Sugar House",
+   "verdict": "confirmed",
+   "value": "Sugar House",
+   "evidence": "sugarhousepark.org + Salt Lake Tribune Nov 2023: Joe Hill monument unveiled in Sugar House Park on the former prison site"
+  },
+  "salt-lake-city/the-urban-lounge": {
+   "guideValue": "Salt Lake City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name; not further verified (search budget exhausted)"
+  },
+  "salt-lake-city/the-depot": {
+   "guideValue": "Near Rio Grande Depot",
+   "verdict": "corrected",
+   "value": "The Gateway",
+   "evidence": "operator site (depotslc.com): 13 N 400 West, shows booked into 2026; Ticketmaster venue guide: in the historic Union Pacific Depot at The Gateway",
+   "noteConflict": "note places it 'near the old Rio Grande railroad depot'; it occupies the Union Pacific Depot at The Gateway, about three blocks north of the Rio Grande Depot"
+  },
+  "salt-lake-city/diabolical-instores": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "same shop as diabolical-records — Salt Lake Tribune 2023: 238 S Edison St, downtown"
+  },
+  "salt-lake-city/salt-and-honey-market": {
+   "guideValue": "Salt Lake City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name"
+  },
+  "salt-lake-city/weller-banned-merch": {
+   "guideValue": "Trolley Square",
+   "verdict": "confirmed",
+   "value": "Trolley Square",
+   "evidence": "same shop as weller-book-works — ilab.org: 607 Trolley Square"
+  },
+  "salt-lake-city/make-salt-lake": {
+   "guideValue": "Salt Lake City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name"
+  },
+  "salt-lake-city/801-labs": {
+   "guideValue": "Salt Lake City",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is bare city name"
+  },
+  "shreveport/jelks-coffee-roasters": {
+   "guideValue": "Midtown",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "no operator site found (jelkscoffee.com does not resolve); only aggregator mycoffeeexplorer.com lists 3540 Youree Dr, which conflicts with the guide's W 61st St address; neighbourhood not placeable with confidence"
+  },
+  "shreveport/orlandeauxs-stuffed-shrimp": {
+   "guideValue": "Cross Lake",
+   "verdict": "confirmed",
+   "value": "Cross Lake",
+   "evidence": "64parishes.org and ktalnews.com: Orlandeaux's moved in 2021 into the former Smith's Cross Lake Inn (S Lakeshore Dr) on Cross Lake"
+  },
+  "shreveport/natchitoches-meat-pie-dish": {
+   "guideValue": "Natchitoches, LA (~70 mi south -- day trip)",
+   "verdict": "confirmed",
+   "value": "Natchitoches, LA",
+   "evidence": "64parishes.org (Natchitoches Meat Pies): dish originates in and is identified with Natchitoches, a separate city ~70 mi from Shreveport"
+  },
+  "shreveport/natchitoches-meat-pies-to-go-gift": {
+   "guideValue": "Natchitoches, LA (day trip) or shipped direct",
+   "verdict": "confirmed",
+   "value": "Natchitoches, LA",
+   "evidence": "goldbelly.com (Lasyone's Meat Pies listings): frozen pies from the Natchitoches restaurant ship nationwide; producers are Natchitoches-based"
+  },
+  "shreveport/ledbetter-heights-lead-belly-statue": {
+   "guideValue": "Ledbetter Heights (formerly St. Paul's Bottoms)",
+   "verdict": "corrected",
+   "value": "Downtown",
+   "evidence": "downtownshreveport.com (Downtown Development Authority) and nsula.edu folklife tour: statue at Texas & Marshall Sts in front of the downtown library; 64parishes.org puts Ledbetter Heights' east edge at Common St, so the statue is downtown, pointing toward the neighbourhood",
+   "noteConflict": "Note implies the statue sits within Ledbetter Heights ('the surrounding neighborhood'); it stands downtown, east of the neighbourhood's Common St edge"
+  },
+  "shreveport/robinson-film-center": {
+   "guideValue": "Downtown",
+   "verdict": "confirmed",
+   "value": "Downtown",
+   "evidence": "louisianatravel.com and downtownshreveport.com: 617 Texas St, downtown Shreveport 71101"
+  },
+  "shreveport/fatty-arbuckles": {
+   "guideValue": "Red River District",
+   "verdict": "corrected",
+   "value": "Highland",
+   "evidence": "shreveportbossieradvocate.com and 710keel.com: bar left its tiny Red River District space (450 Clyde Fant Pkwy) for 205 Wall St, the former Ernie's, in the Highland neighbourhood",
+   "noteConflict": "Note places it 'in the Red River District near the casinos'; it has moved to Highland"
+  },
+  "shreveport/the-string-shop": {
+   "guideValue": "Bossier City",
+   "verdict": "confirmed",
+   "value": "Bossier City",
+   "evidence": "ksla.com (Nov 2017): The String Shop on Benton Rd, central Bossier City, next to Tubbs Hardware; article reports it closing after 33 years, so it may no longer operate"
+  },
+  "washington-dc/politics-and-prose": {
+   "guideValue": "Chevy Chase (+ Union Market, The Wharf)",
+   "verdict": "confirmed",
+   "value": "Chevy Chase",
+   "evidence": "operator site (politics-prose.com): flagship 5015 Connecticut Ave NW (+ Wharf, Union Market); Wikipedia places flagship in Chevy Chase"
+  },
+  "washington-dc/kramerbooks": {
+   "guideValue": "Dupont Circle",
+   "verdict": "confirmed",
+   "value": "Dupont Circle",
+   "evidence": "Wikipedia (Kramers): 1517 Connecticut Ave NW, Dupont Circle (operator site gave no address)"
+  },
+  "washington-dc/solid-state-books": {
+   "guideValue": "H Street NE (+ 14th & S St NW)",
+   "verdict": "confirmed",
+   "value": "H Street NE",
+   "evidence": "AALBC/Shelf Awareness: 600 H St NE (Apollo building); AFRO headline: 'opens in historic H Street'"
+  },
+  "washington-dc/busboys-and-poets": {
+   "guideValue": "U Street / 14th & V",
+   "verdict": "confirmed",
+   "value": "U Street",
+   "evidence": "Wikipedia (Busboys and Poets): original location at 14th & V in the U Street Corridor; operator site lists '14th and V' among 8 locations"
+  },
+  "washington-dc/sankofa-books": {
+   "guideValue": "Georgia Ave / Howard University",
+   "verdict": "confirmed",
+   "value": "Georgia Ave / Howard University",
+   "evidence": "operator site (sankofa.com): 2714 Georgia Ave NW; Wikipedia (Haile Gerima): 'directly across the street from Howard University'"
+  },
+  "washington-dc/som-records": {
+   "guideValue": "14th Street NW",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value '14th Street NW' is a bare street; operator site: 1843 14th St NW 20009, no neighborhood named"
+  },
+  "washington-dc/byrdland-records": {
+   "guideValue": "Union Market",
+   "verdict": "confirmed",
+   "value": "Union Market",
+   "evidence": "operator site (byrdlandrecords.com): 1264 5th St NE, 'Open Now at Union Market!'"
+  },
+  "washington-dc/joint-custody": {
+   "guideValue": "U Street (+ Takoma)",
+   "verdict": "confirmed",
+   "value": "U Street",
+   "evidence": "operator site (jointcustodydc.com): 1530 U St NW (+ 6918 4th St NW, Takoma); placed by address"
+  },
+  "washington-dc/songbyrd-records": {
+   "guideValue": "Union Market",
+   "verdict": "confirmed",
+   "value": "Union Market",
+   "evidence": "operator site (songbyrddc.com): 540 Penn St NE, Union Market neighborhood; moved from Adams Morgan in 2021"
+  },
+  "washington-dc/crooked-beat-records": {
+   "guideValue": "Relocating to Del Ray, Alexandria, VA (formerly Adams Morgan, DC)",
+   "verdict": "confirmed",
+   "value": "Alexandria, VA",
+   "evidence": "operator site (crookedbeat.com): relocated to 2101-B Mt. Vernon Ave, Alexandria VA 22301, Del Ray"
+  },
+  "washington-dc/qualia-coffee": {
+   "guideValue": "Petworth",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator site (qualiacoffeeroasters.com): roaster selling via farmers markets/partners, lists no storefront; 3917 Georgia Ave cafe not confirmed open"
+  },
+  "washington-dc/compass-coffee": {
+   "guideValue": "Shaw (flagship) + multiple DC/Arlington locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "Wikipedia (Compass Coffee): ~20-store chain (original in Shaw), Ch. 11 Jan 2026, assets bid by Caffè Nero; pick is the brand, not one store"
+  },
+  "washington-dc/filter-coffeehouse": {
+   "guideValue": "Adams Morgan",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (filtercoffeehouse.com): locations in Foggy Bottom (1916 I St NW) and Dupont; no Adams Morgan location; pick isn't one specific shop"
+  },
+  "washington-dc/little-wild-things": {
+   "guideValue": "NoMa",
+   "verdict": "unverified",
+   "value": null,
+   "evidence": "operator domains (littlewildthings.com, littlewildthings.coffee) unreachable; a web search found no listing"
+  },
+  "washington-dc/big-bear-cafe": {
+   "guideValue": "Bloomingdale",
+   "verdict": "confirmed",
+   "value": "Bloomingdale",
+   "evidence": "Destination DC (washington.org): 'A staple of Bloomingdale, Big Bear Cafe'; 1700 1st St NW at R St"
+  },
+  "washington-dc/bread-furst": {
+   "guideValue": "Van Ness",
+   "verdict": "confirmed",
+   "value": "Van Ness",
+   "evidence": "operator site (breadfurst.com): 4434 Connecticut Ave NW, main bakery in Van Ness"
+  },
+  "washington-dc/seylou-bakery": {
+   "guideValue": "Shaw",
+   "verdict": "confirmed",
+   "value": "Shaw",
+   "evidence": "Feast and Field: Shaw, 'on the corner of N Street NW and historic Blagden Alley' (926 N St NW per Friends of Peirce Mill)"
+  },
+  "washington-dc/buttercream-bakeshop": {
+   "guideValue": "Shaw",
+   "verdict": "confirmed",
+   "value": "Shaw",
+   "evidence": "RAMW / DCist: 1250 9th St NW on Shaw's 9th Street corridor; PoPville reported it closing end of 2023 — last location"
+  },
+  "washington-dc/patisserie-poupon": {
+   "guideValue": "Georgetown",
+   "verdict": "confirmed",
+   "value": "Georgetown",
+   "evidence": "operator site (patisseriepoupon.com): 1645 Wisconsin Ave NW 20007, Georgetown (+ Baltimore)"
+  },
+  "washington-dc/dolcezza-gelato": {
+   "guideValue": "Dupont Circle (+ multiple DC locations)",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "operator site (dolcezzagelato.com): multiple locations incl. City Center DC (904 Palmer Alley) and Bethesda Row; pick isn't one location"
+  },
+  "washington-dc/ethiopian-dc": {
+   "guideValue": "U Street / Shaw ('Little Ethiopia')",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'U Street / Shaw (Little Ethiopia)' covers a dish pick spanning U Street/Shaw and Georgia Ave, not one venue"
+  },
+  "washington-dc/jumbo-slice": {
+   "guideValue": "Adams Morgan",
+   "verdict": "confirmed",
+   "value": "Adams Morgan",
+   "evidence": "Wikipedia (Jumbo slice): first DC jumbo-slice shops opened on 18th Street NW, Adams Morgan"
+  },
+  "washington-dc/mumbo-sauce-bottled": {
+   "guideValue": "Various DC grocers, Eastern Market",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Various DC grocers, Eastern Market': product sold at multiple retailers, not one venue"
+  },
+  "washington-dc/one-eight-distilling": {
+   "guideValue": "Ivy City",
+   "verdict": "confirmed",
+   "value": "Ivy City",
+   "evidence": "Wikipedia (Ivy City): One Eight at 1135 Okie St NE, Ivy City; operator domain now serves unrelated content, so current operating status unconfirmed"
+  },
+  "washington-dc/republic-restoratives-spirits": {
+   "guideValue": "Ivy City",
+   "verdict": "confirmed",
+   "value": "Ivy City",
+   "evidence": "operator site: 1369 New York Ave NE; Wikipedia (Ivy City) lists it there among Ivy City distilleries"
+  },
+  "washington-dc/local-honey-dc": {
+   "guideValue": "Eastern Market, area farmers markets",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Eastern Market, area farmers markets': citywide product from multiple beekeepers, not one venue"
+  },
+  "washington-dc/frederick-douglass-nhs": {
+   "guideValue": "Anacostia",
+   "verdict": "confirmed",
+   "value": "Anacostia",
+   "evidence": "NPS (nps.gov/frdo): 1411 W St SE, Cedar Hill estate in Anacostia"
+  },
+  "washington-dc/rock-creek-park": {
+   "guideValue": "NW DC, spanning from Georgetown to the Maryland line",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'NW DC, spanning from Georgetown to the Maryland line' (NPS, nps.gov/rocr): park spans many NW neighborhoods"
+  },
+  "washington-dc/watergate-complex": {
+   "guideValue": "Foggy Bottom",
+   "verdict": "confirmed",
+   "value": "Foggy Bottom",
+   "evidence": "Wikipedia (Watergate complex): 2650 Virginia Ave NW, Foggy Bottom; Kennedy Center is next door"
+  },
+  "washington-dc/u-street-black-broadway": {
+   "guideValue": "U Street NW",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'U Street NW' for a walking route along a corridor, not one venue"
+  },
+  "washington-dc/nine-thirty-club": {
+   "guideValue": "U Street",
+   "verdict": "confirmed",
+   "value": "U Street",
+   "evidence": "Wikipedia (9:30 Club): 815 V St NW, anchoring the U Street Corridor's eastern end"
+  },
+  "washington-dc/black-cat-dc": {
+   "guideValue": "14th Street NW",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value '14th Street NW' is a bare street; Wikipedia (Black Cat): 1811 14th St NW, Shaw/U Street neighborhood"
+  },
+  "washington-dc/songbyrd-venue": {
+   "guideValue": "Union Market",
+   "verdict": "confirmed",
+   "value": "Union Market",
+   "evidence": "operator site (songbyrddc.com): 540 Penn St NE, Union Market neighborhood"
+  },
+  "washington-dc/comet-ping-pong": {
+   "guideValue": "Chevy Chase",
+   "verdict": "confirmed",
+   "value": "Chevy Chase",
+   "evidence": "Wikipedia (Comet Ping Pong): 5037 Connecticut Ave NW, Chevy Chase neighborhood"
+  },
+  "washington-dc/rhizome-dc": {
+   "guideValue": "Takoma",
+   "verdict": "confirmed",
+   "value": "Takoma",
+   "evidence": "operator site (rhizomedc.org/about): '6950 Maple St NW, in the Takoma neighborhood'; still the active space — 7733 Alaska Ave (Shepherd Park per WTOP) under renovation as of Feb 2026"
+  },
+  "washington-dc/fort-reno-series": {
+   "guideValue": "Fort Reno Park, Tenleytown",
+   "verdict": "confirmed",
+   "value": "Tenleytown",
+   "evidence": "operator site (fortreno.com): Fort Reno Park, 4000 Chesapeake St NW; Wikipedia (Fort Reno Park): in Tenleytown"
+  },
+  "washington-dc/shop-made-in-dc": {
+   "guideValue": "Multiple DC locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value 'Multiple DC locations'; operator site (shopmadeindc.com) listed none specifically"
+  },
+  "washington-dc/salt-and-sundry": {
+   "guideValue": "Union Market",
+   "verdict": "confirmed",
+   "value": "Union Market",
+   "evidence": "Union Market District site (unionmarketdc.com): Salt & Sundry listed at 1309 5th St NE"
+  },
+  "washington-dc/eastern-market-vendors": {
+   "guideValue": "Capitol Hill",
+   "verdict": "confirmed",
+   "value": "Capitol Hill",
+   "evidence": "operator site (easternmarket-dc.org): 225 7th St SE, historic Capitol Hill; weekend outdoor arts/crafts market"
+  },
+  "washington-dc/hacdc": {
+   "guideValue": "Columbia Heights",
+   "verdict": "confirmed",
+   "value": "Columbia Heights",
+   "evidence": "operator site (hacdc.org): 3333 14th St NW Suite M110, nearest Metro Columbia Heights; Wikipedia: Tivoli Square building, Columbia Heights"
+  },
+  "washington-dc/dcpl-fab-lab": {
+   "guideValue": "MLK Memorial Library (901 G St NW) + several branch locations",
+   "verdict": "not-a-district",
+   "value": null,
+   "evidence": "guide value is a library building plus several branches (multi-location); MLK Library is 901 G St NW per Wikipedia"
+  },
+  "washington-dc/rhizome-dc-maker": {
+   "guideValue": "Takoma",
+   "verdict": "confirmed",
+   "value": "Takoma",
+   "evidence": "operator site (rhizomedc.org/about): '6950 Maple St NW, in the Takoma neighborhood'; 7733 Alaska Ave (Shepherd Park per WTOP) not yet open as of Feb 2026"
+  },
+  "washington-dc/chuck-levins": {
+   "guideValue": "Wheaton, MD (~20 min from downtown DC)",
+   "verdict": "confirmed",
+   "value": "Wheaton, MD",
+   "evidence": "Wheaton Urban District (wheatonmd.org) and NAMM: 11151 Veirs Mill Rd, Wheaton MD (postal address Silver Spring 20902 on chucklevins.com)"
+  }
+ }
+}
